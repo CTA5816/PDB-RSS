@@ -1,0 +1,25 @@
+name: Send MOTM email
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # every day at 12:00 UTC
+  workflow_dispatch:        # allow manual run
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send page via Email
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASS }}
+          subject: "Molecule of the Day"
+          to: youraddress@gmail.com
+          from: ${{ secrets.SMTP_USER }}
+          html_body: file://motm_pages/001-amyloid-fibrils.html
