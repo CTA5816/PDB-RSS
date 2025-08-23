@@ -11,6 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Pick today's file
+        id: pick
+        run: |
+          files=(motm_pages/*.html)
+          count=${#files[@]}
+          # day of year (1–366)
+          day=$(date +%j)
+          index=$(( (day - 1) % count ))
+          echo "FILE=${files[$index]}" >> $GITHUB_ENV
+          echo "Picked ${files[$index]}"
+
       - name: Send page via Email
         uses: dawidd6/action-send-mail@v6
         with:
