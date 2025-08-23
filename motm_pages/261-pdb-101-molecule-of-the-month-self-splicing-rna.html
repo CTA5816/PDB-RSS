@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Self-splicing RNA</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Self-splicing RNA" property="og:title"/>
+<meta content="Special sequences of RNA are able to splice themselves" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/65/1u6b.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/65" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Self-splicing RNA" name="twitter:title"/>
+<meta content="Special sequences of RNA are able to splice themselves" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/65/1u6b.gif" name="twitter:image"/>
+<meta content="Special sequences of RNA are able to splice themselves" name="description"/>
+<meta content="exon,intron,ribozyme,RNA splicing,1u6b,1mme" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 65
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 65 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Self-splicing RNA</h1>
+<p><i>Special sequences of RNA are able to splice themselves</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Self-splicing intron RNA. The two ends of the chain are shown in red and blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/65/1u6b.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Self-splicing intron RNA. The two ends of the chain are shown in red and blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/65/65-Self-SplicingRNA-1u6b.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nature is full of surprises, and you can be sure that once you think you understand something, Nature will come up with an exception. Twenty years ago, this was the case with enzymes. After decades of work, biochemists thought that proteins were the only molecules that catalyzed chemical reactions in the cell, so it came as a surprise when Thomas Cech and his coworkers discovered a natural RNA splicing reaction that occurs even when all of the proteins are removed. Since then, researchers have discovered many additional examples of <i>ribozymes</i>--RNA molecules that perform chemical tasks.</div>
+<h4>Excising Introns</h4>
+<div>In plants and animals, most RNA molecules are made as long precursors that need to be trimmed and reassembled to create the final active molecule. These precursor RNA molecules are composed of <i>exons</i>, which are the important parts, separated by <i>introns</i>, which must be removed. In most cases, the RNA is cut and spliced together by a spliceosome, a molecular machine composed of protein and RNA. In a few cases, however, the RNA can perform the splicing reaction on its own. The first example, discovered by Thomas Cech, was a ribosomal RNA found in a protozoan. Since then, hundreds of examples have been identified in genome sequences of many organisms. The example shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1u6b" target="_blank">1u6b <i class="fa fa-external-link"> </i></a></span>, is part of a bacterial transfer RNA that must be spliced before it can adopt its functional form. In the illustration, the large structure in green is the intron, which uses a GTP and two magnesium ions to remove itself. The two exons that will be spliced together are colored red and blue--note that only a small piece of each exon is included in the structure.</div>
+<h4>Ribozymes Everywhere</h4>
+<div>Once researchers started looking, ribozymes turned up everywhere. In some cases, they are built into RNA molecules and act upon themselves, as in the self-splicing introns. In other cases, ribozymes act on other RNA molecules, breaking and rejoining the phosphate bonds that hold the chains together. In some ribozymes, such as the spliceosome and ribonuclease P (which processes transfer RNA and other RNA molecules), the RNA works along with proteins to perform the reaction. Most ribozymes perform cutting and pasting reactions on RNA, however, the <a href="http://pdb101.rcsb.org/motm/10">ribosome</a> (which is thought to be a ribozyme) shows that RNA can also perform other reactions, such as the formation of peptide bonds in proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Hammerhead ribozyme, with the site of self-cleavage in red and pink." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/65/1mme.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Hammerhead ribozyme, with the site of self-cleavage in red and pink.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/65/65-Self-SplicingRNA-1mme.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Simplest Ribozyme</h4>
+<div>The hammerhead ribozyme (so named because diagrams of its nucleotide sequence look like a hammer) is the smallest natural ribozyme discovered so far. The example shown here is from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mme" target="_blank">1mme <i class="fa fa-external-link"> </i></a></span>. It performs a very simple reaction: the hydroxyl group colored red attacks the neighboring phosphate shown in orange and pink, breaking the RNA chain. The unusual surrounding loop structure holds this linkage in just the right position to promote the break. These types of "nucleolytic" ribozymes are used to solve a special problem encountered by organisms that have circular DNA. When RNA polymerase makes RNA from a DNA circle, it keeps going around and around, making copy after copy strung together in a long continuous strand. Ribozyme self-cleavage sites built into the RNA then break the long strand into smaller functional pieces.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/65/intron-rasmol.gif"/></div>
+<div>The self-splicing RNA in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1u6b" target="_blank">1u6b <i class="fa fa-external-link"> </i></a></span> has been caught in the middle of its splicing reaction. In this picture, the two exons are shown in red and blue, and part of the intron is shown in green. The rest of the intron (shown on the first page of this Molecule of the Month) is omitted. The reaction starts with one continuous piece of RNA. Imagine that the O3' end of the red exon is attached to the phosphate group circled at the top. Then, if you follow the chain, you go from red exon, through the green intron, and out the blue exon. The structure shows the molecule after the first cleavage has been made. The GTP has broken the chain between the intron and the exon in red, leaving the GTP attached to one end of the intron. At this point, the O3' atom of the red exon is perfectly placed to attack the phosphate at the end of the blue exon (lower circle). When that bond is made, the green intron will be released, and the red and blue exons will be spliced together. Notice that the short portion of the intron shown here, termed the "guide sequence," aligns the two exons perfectly next to one another. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking the accession codes here and picking one of the options for 3D viewing. When you look at this structure yourself, take a moment to play with coloring of chains, since the overall structure can be confusing. The exon colored red is chain D and exon colored blue is residue numbers 1-6 in chain C. Chain A is a protein that was used to assist in the crystallization, and everything else (chain B and the remainder of chain C) is the intron.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>T. R. Cech (2002) Ribozymes, the first 20 years. Biochemical Society Transactions 30, 1162-1166.</li>
+<li>J. A. Doudna and T. R. Cech (2002) The chemical repertoire of natural ribozymes. Nature 418, 222-228.</li>
+<li>D. M. J. Lilley (2003) The origins of RNA catalysis in ribozymes. Trends in Biochemical Sciences 28, 495-501. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_5">http://doi.org/10.2210/rcsb_pdb/mom_2005_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

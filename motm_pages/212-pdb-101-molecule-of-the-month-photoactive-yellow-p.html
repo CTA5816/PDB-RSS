@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Photoactive Yellow Protein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Photoactive Yellow Protein" property="og:title"/>
+<meta content="Researchers use synchrotrons and X-ray lasers to reveal the rapid processes of light sensing." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2pyp.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/207" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Photoactive Yellow Protein" name="twitter:title"/>
+<meta content="Researchers use synchrotrons and X-ray lasers to reveal the rapid processes of light sensing." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2pyp.jpg" name="twitter:image"/>
+<meta content="Researchers use synchrotrons and X-ray lasers to reveal the rapid processes of light sensing." name="description"/>
+<meta content="light sensing,chromophore,isomerization,photoreceptor,Laue crystallography,neutron diffraction,XFEL,serial femtosecond crystallography,SFX,x-ray,2pyp,2zoi,5hd3,5hdc,5hdd,5hds,4b9o,5hd5,1ts0" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 207
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 207 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Photoactive Yellow Protein</h1>
+<p><i>Researchers use synchrotrons and X-ray lasers to reveal the rapid processes of light sensing.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="This structure of photoactive yellow protein, solved by time-resolved Laue crystallography, includes a 50-50 mixture of the ground state (top) and the light-activated state (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2pyp.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>This structure of photoactive yellow protein, solved by time-resolved Laue crystallography, includes a 50-50 mixture of the ground state (top) and the light-activated state (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2pyp.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>When looking at proteins, much of the action happens at very small sizes and in very short times. This is particularly true of molecular reactions that involve light. Scientists have been inventing increasingly sensitive experimental ways to look at these tiny, speedy processes, and photoactive yellow protein (PYP) is one of the subjects they’ve been studying. PYP is a small, soluble protein found in purple sulfur bacteria, where it senses blue light. PYP is a perfect subject for study, since it forms large, stable crystals that diffract well, allowing us to get a detailed view of what is happening at the atomic level.</div>
+<h4>Sensing Light</h4>
+<div>The photocycle of PYP involves many separate, sequential steps that begin very quickly in femtoseconds, and end in about a second. A light-absorbing chromophore in the protein absorbs blue light and switches from a nearly straight (<i>trans</i>) conformation to a bent (<i>cis</i>) conformation in less than a picosecond. This conformational change is then thought to activate other sensing proteins in the bacterium, which control the direction that the bacterium is swimming. Finally, the chromophore shifts back to the straight conformation in about half a second, ready to sense another blue photon.</div>
+<h4>Seeing the Sensor</h4>
+<div>Because the light-activated state lasts for less than a second, it is tricky to observe by crystallography, so clever techniques like Laue diffraction need to be used. Usually, X-rays with a single wavelength are used for crystallography, and data is gathered by rotating the crystal and observing many diffraction patterns. In the Laue method, however, a stationary crystal is illuminated with synchrotron X-rays of many wavelengths at the same time. This produces a far more complicated diffraction pattern in which all spots diffract throughout the exposure, allowing collection of the data much more quickly. To determine the structure of PYP shown here (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pyp" target="_blank">2pyp</a>), a crystal was illuminated with blue light from a laser and then, after a time delay of several milliseconds, data was collected with a short burst of multi-wavelength X-rays. In this way, we can see how the chromophore and surrounding protein move after it absorbs light.<br/><br/> <i> The metric terminology for expressing shorter and shorter time intervals is commonly used when discussing these types of molecular transitions.<br/> millisecond = one thousandth of a second<br/> microsecond = one millionth of a second<br/> nanosecond = one billionth of a second<br/> picosecond = one trillionth of a second<br/> femtosecond = one quadrillionth of a second</i></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Location of hydrogen (white) and deuterium (turquoise) atoms in a neutron diffraction structure of PYP in deuterated water." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2zoi.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Location of hydrogen (white) and deuterium (turquoise) atoms in a neutron diffraction structure of PYP in deuterated water.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-2zoi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Looking at the Hydrogens</h4>
+<div>X-ray crystallographic structures of PYP have shown that the chromophore (<i>p</i>-coumaric acid, also known as 4'-hydroxycinnamic acid) is held tightly in the protein. It is covalently attached to a cysteine at one end, and it forms unusually short hydrogen bonds with two amino acids at the other end. To look at these hydrogen bonds more closely, researchers have used both X-ray diffraction and neutron diffraction to look at different aspects. X-ray crystallography sees the location of electrons in a structure, so it is useful for determining the location of heavier atoms, such as carbon, nitrogen and oxygen atoms. This is useful for measuring the length of hydrogen bonds, revealing that the two hydrogen bonds in PYP are among the shortest in the entire PDB archive. However, in most cases, X-ray crystallography doesn't allow us to observe the hydrogens directly. Neutrons, on the other hand, are diffracted by the nucleus of atoms, providing information on the location of hydrogen atoms. The PYP neutron diffraction structure (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zoi" target="_blank">2zoi</a>) revealed a very unusual arrangement, with a hydrogen atom shared between the chromophore and a glutamate. The researchers propose that this unusual interaction helps to stabilize the charged oxygen atom on the chromophore.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Snapshots of Photoactive Yellow Protein</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/207/207-Photoactive_Yellow_Protein-5hdc_JSmol.jpg"/></div>
+<p>Researchers are now developing ways to look at protein structures even faster. Currently, the fastest method is serial femtosecond crystallography. Tiny crystals of the protein are subjected to a very intense flash of x-rays from the Linac Coherent Light Source free-electron laser, which creates an instantaneous diffraction pattern and burns up the crystal in the process. Using this method, researchers have captured snapshots of PYP as the chromophore changes from <i>trans</i> to <i>cis</i> after absorbing light. The structure shown here was captured 100-400 femtoseconds after illumination. Click on the image here to view a movie of these amazing structures.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try searching for “serial femtosecond crystallography” to see other light-absorbing proteins that have been studied this way, including bacteriorhodopsin and photosystems. </li>
+<li>Many other sensing proteins have domains similar to PYP, collectively called “PAS” domains. For instance, try <a href="https://www.rcsb.org/alignment?request-body=eJyljrsOwjAMRf%2FFcxioBBLdED%2FQFVBVhcQtkfIoiSuoqvw7ThkQM5vj43tyF3hMGGeoFwgjmeBTGSPSFH2XkKFX2GlJEupe2oRZgAqe8EXl0AWNUMMoTXyahCDAId2DLsxLVxi5jbRm8MDJRHFSrEb%2B5boAeopzZ%2FgaqubccDqhRVVqFIFMs%2FvQI6MbDqXQutgKzurvs9rlLH59l%2F3pD98h55aV0Bu7dm3zGyS%2BZNM%3D&amp;response-body=eJzdVVuPqkgQ%2Fi88o%2Bkbl543ItBDGlgUwgk7mRhGOB4TxVnFszuZ%2BN%2B3GucC7qrnnH3b6APd1V9VddVXX79qq%2BbrVrt71Q6HVaXdaXzBCOcIjzh%2FqkaMMTwqK0RHJbV4RZ9suyJM07V9W7aHPZyf%2FBYloZd52lHXNnVbKlflerVsNnXTzjfbqoZDz%2BVq9%2BdqXwOwZ6vbb1sVst2Mul3lYlfvD%2BsWHD%2B8QozdYdEeYKtbAmb3Mu%2BSJEmRqCTqdb1oV9umC7p%2F2ZysDpie6uV8X%2F%2FRbWAdsNXnkhjHoz7097s5%2BQ%2F%2B%2BPH4qH%2BmO%2F%2B4Y5f3rl6CS3WHh2teiX1ar5qq%2Fku7o1zX1nWzbL%2FBt6nyvQw1zQHURp9Qdh1pkSHS%2FnGkNUBy%2BonE5DqUowEUI%2FMTa9%2BA8iEU96DEgi5cLTG%2BXOIbcc%2Baw3pIfB1Jh5c1cK%2BtN6CmcbE55EZ3OL5cJ3yDTRifgWkfjI%2BPwPV2Vzb7r9vdpmzfuY119Pb71y9oDRpjw%2BTIIpjqaIwwtkyOmU31ERpz2zIYJQQTOAxr2%2ByMFC4NK2YZnHDGof2wgm2DmpQCb9DJisEtMbAFbm2LM8RMmykLMhkzmWUT5ZWyMTUZIYatThI65owZyII%2F0Q0yxoRSbHO4PFY33B82m3L3opRgv9i%2Ba9D3cn0AQUNjE%2FjevjwrccuiUXdCU2V9O0DGxPg4MItSt29EY%2FJhg6If6mZRj1YV6MWqfdGUlDQgIc0cgq6qQz1X6rk%2F9bTpFHVdV%2B9GlRYImo4JVklDCxUSugWtUlxTq8X2e70rlxDuwaK6ZTye5Oot8kW1uiGBfYaQHqmNG%2FNg%2FvIkWZcnid4Qq%2BEQ2n3V4L%2BuOLcnybg%2BSbq2LJ9Pte4dQ%2BdS2q%2BX1Uv9zGags1r2r8wu47o0LwExJWdvQt%2FYT4f1WQXViLz73PFF6rmBF2ehIyPXFdPQFSHsOoH6ckUchNMidhxPuEEmZm4ip3kgZOz70s2dZJK5aeL5hZC%2B9ETupCIO4yzyvSLz3WIaZUkmc5nfR1I6YSrctPiS%2B7mc5d28%2FRiXhz36R%2FGvtHdISNp%2FPNF1qDGE2j8R1RwS8mceXvtsbPsPLzMu0bE%2F3cQ8Y4BlX%2BYVJ1dohQacGzJHBMksB96E0oWuZv50mvl5nrpOJhO3SIKocFJH%2BH4cZaLIUunluZjFk5kfTkUqMtdxPaBbMPOAdY6I42IiZkEYF1K6Ikv9L3EYZoGTBNL1UiHzUPqBiKa5l6fyPvOEIzsR%2Fp%2B%2FAMe%2FAQpLtqU%3D&amp;encoded=true"> comparing the structure of PYP to one of the light-sensing domains of phototropin, PDB entry 2z6c.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5hd3, 5hdc, 5hdd, 5hds, 5hd5: K Pande, CDM Hutchison, G Groenhof, A Aquila, JS Robinson, J Tenboer, S Basu, S Boutet, DP DePonte, M Liang, TA White, NA Zatsepin, O Yefanov, D Morozov, D Oberthuer, C Gati, G Subramanian, D James, Y Zhao, J Koralek, J Brayshaw, C Kupitz, C Conrad, S Roy-Chowdhury, JD Coe, M Metz, PL Xavier, TD Grand, JE Koglin, G Ketawala, R Fromme, V Srajer, R Henning, JCH Spence, A Ourmazd, P Schwander, U Weierstall, M Frank, P Fromme, A Barty, HN Chapman, K Moffat, JJ van Thor &amp; M Schmidt (2016) Femtosecond structural dynamics drives the trans/cis isomerization in photoactive yellow protein. Science 352, 725-729.</li>
+<li>4b9o: F Schotte, HS Cho, VRI Kaila, H Kamikubo, N Dashdorj, ER Henry, TJ Graber, R Henning, M Wulff, G Hummer, M Kataoka &amp; PA Anfinrud (2012) Watching a signaling protein function in real time via 100-ps time-resolved Laue crystallography. Proceedings of the National Academy of Science USA 109, 19256-19261.</li>
+<li>2zoi: S Yamaguchi, H Kamikubo, K Kurihara, R Kuroki, N Niimura, N Shimizu, Y Yamazaki &amp; M Kataoka (2009) Low-barrier hydrogen bond in photoactive yellow protein. Proceedings of the National Academy of Science USA 106, 440-444.</li>
+<li>1ts0: H Ihee, S Rajagopal, V Srajer, R Pahl, S Anderson, M Schmidt, F Schotte, PA Anfinrud, M Wulff &amp; K Moffat (2005) Visualizing reaction pathways in photoactive yellow protein from nanoseconds to seconds. Proceedings of the National Academy of Science USA 102, 7145-7150. </li>
+<li>S Anderson, S Crosson &amp; K Moffat (2004) Short hydrogen bonds in photoactive yellow protein. Acta Crystallographica D60, 1008-1016.</li>
+<li>2pyp: UK Genick, GEO Borgstahl, K Ng, Z Ren, C Pradervand, PM Burke, V Srajer, TY Teng, W Schildkamp, DE McRee, K Moffat &amp; ED Getzoff (1997) Structure of a protein photocycle intermediate by millisecond time-resolved crystallography. Science 275, 1471-1475.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_3">http://doi.org/10.2210/rcsb_pdb/mom_2017_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: PD-1 (Programmed Cell Death Protein 1)</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: PD-1 (Programmed Cell Death Protein 1)" property="og:title"/>
+<meta content="PD-1 and its ligands are a new target for cancer therapy" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-3bik_3bp5.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/204" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: PD-1 (Programmed Cell Death Protein 1)" name="twitter:title"/>
+<meta content="PD-1 and its ligands are a new target for cancer therapy" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-3bik_3bp5.jpg" name="twitter:image"/>
+<meta content="PD-1 and its ligands are a new target for cancer therapy" name="description"/>
+<meta content="PD-1,PD-L1,PD-L2,nobel,programmed cell death protein 1,immune system,T-cell,cancer,melanoma,pembrolizumab,checkpoint therapy,cancer therapy,melanoma,3bik,3bp5,5jxe,5dk3,5j89,4zqk" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 204
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 204 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: PD-1 (Programmed Cell Death Protein 1)</h1>
+<p><i>PD-1 and its ligands are a new target for cancer therapy</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Interaction of PD-1 with its ligands PD-L1 and PD-L2. The cell membranes are shown schematically in gray, and the portions of the proteins not included in the structure are also shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-3bik_3bp5.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Interaction of PD-1 with its ligands PD-L1 and PD-L2. The cell membranes are shown schematically in gray, and the portions of the proteins not included in the structure are also shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-3bik_3bp5.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our immune system walks a fine line: it needs to fight invaders, but without attacking our own cells in the process. Intelligence is a big part of this fight: <a href="https://pdb101.rcsb.org/motm/62">MHC</a> gathers information about infections and delivers it to <a href="https://pdb101.rcsb.org/motm/63">T-cell receptors</a> on the surface of protective cells in the immune system. But the response of the immune system to this information needs to be carefully balanced, so many other molecules tune the process, stimulating and inhibiting the action of MHC and T-cell receptors as necessary.</div>
+<h4>Inhibiting Immune Response</h4>
+<div>Several proteins act as checkpoints to slow down T-cells, making sure they are only active when needed. CTLA-4 acts as a checkpoint as T-cells are maturing, while they are still in lymph nodes, and PD-1 (programmed cell death protein 1) acts later, to control overactive T-cells throughout the body. Both are found on the surface of T-cells, and they perform their regulatory function when activated by other immune system cells.</div>
+<h4>Making Contact</h4>
+<div>PD-1 extends from the surface of T-cells, and interacts with two similar ligand proteins, PD-L1 and PD-L2, that are found on the surface of regulatory cells such as the cells that present antigens harvested from invaders. Structures have been obtained for the extracellular portions of these molecules, revealing that they all have a similar modular structure, composed of small domains similar in structure to the domains found in antibodies (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3bik" target="_blank">3bik</a> and <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3bp5" target="_blank">3bp5</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Interaction of PD-1 with the anti-cancer antibody pembrolizumab." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-5dk3_5jxe.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Interaction of PD-1 with the anti-cancer antibody pembrolizumab.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-5dk3_5jxe.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fighting Cancer</h4>
+<div>Cancer cells are adept at evading the immune system. Cancers such as melanomas are thought to do this by expressing PD-L1 on their surface, allowing them to trick the immune system by downregulating T-cells. New treatments have been developed that target these cancer cells by blocking the interaction of PD-1 and PD-L1, restoring T-cell function. The one shown here is pembrolizumab, an antibody that binds to PD-1 and blocks the site that PD-L1 binds (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5jxe" target="_blank">5jxe</a> and <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5dk3" target="_blank">5dk3</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>PD-L1 and Inhibitor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/204/203-PD1_Programmed_Cell_Death_Protein_1-4zrk_5j89.jpg"/></div>
+<p>Researchers are also trying to find small molecules that can be used to block the interaction between PD-1 and its ligand proteins. One of the first successes is shown here, the molecule BMS-202 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5j89" target="_blank">5j89</a>). It binds to PD-L1, causing it to dimerize. This blocks the site that normally binds to PD-1, as seen in the complex of human PD-1 with PD-L1 (PDB entry<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4zqk" target="_blank"> 4zqk</a>). To compare these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the Group Sequence view to see which portions of these molecules are included in the PDB entries—for instance, look at the entry for <a href="https://www.rcsb.org/groups/sequence/polymer_entity/Q02242"> mouse PD-1</a>.</li>
+<li>You can use Mol* to explore the interaction of ligands with proteins—<a href="https://www.rcsb.org/3d-view/5J89?preset=ligandInteraction&amp;label_asym_id=E">for instance, look at the interaction of BMS-202 with PD-L1</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>E. I. Buchbinder &amp; A. Desai (2016) CTLA-4 and PD-1 pathways: similarities, differences, and implications of their inhibition. American Journal of Clinical Oncology 39, 98-106.</li>
+<li>5jxe: Z. Na, S. P. Yeo, S. R. Bharath, M. W. Bowler, E. Balkc, C. I. Wang &amp; H. Song (2016) Structural basis for blocking PD-1-mediated immune suppression by therapeutic antibody pembrolizumab. Cell Research doi: 10.1038/cr.2016.77.</li>
+<li>5j89: K. M. Zak, P. Grudnik, K. Guzik, B. J. Zieba, B. Musielak, A. Domling, G. Dubin &amp; T. A. Holak (2016) Structural basis for small molecular targeting of the programmed death ligand 1 (PD-L1) Oncotarget 7, 30323-30335.</li>
+<li>5dk3: G. Scapin, X. Yang, W. W. Prosise, M. McCoy, P. Reichert, J. M. Johnston, R. S. Kashi &amp; C. Strickland (2015) Structure of full-length anti-PD1 therapeutic IgG4 antibody pembrolizumab. Nature Structural and Molecular Biology 22, 953-958.</li>
+<li>4zqk: K. M. Zak, R. Kitel, S. Przetocka, P. Golik, K. Guzik, B. Musielak, A. Domling, G. Dubin &amp; T. A. Holak (2015) Structure of the complex of human programmed death 1, PD-1, and its ligand PD-L1. Structure 23, 2341-2348.</li>
+<li>3bp5: E. Lazar-Molnar, Q. Yan, E. Cao, U. Ramagopal, S. G. Nathenson &amp; S. C. Almo (2008) Crystal structure of the complex between programmed death-1 (PD-1) and its ligand PD-L2. Proceedings of the National Academy of Science USA 105: 10483-10488.</li>
+<li>3bik: D. Y. Lin, Y. Tanaka, M. Iwasaki, A. G. Gittis, H. P. Su, B. Mikami, T. Okasaki, T. Honjo, N. Minato &amp; D. N. Garboczi (2008) The PD-1/PD-L1 complex resembles the antigen-binding Fv domains of antibodies and T cell receptors. Proceedings of the National Academy of Science USA 105, 3011-3016.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_12">http://doi.org/10.2210/rcsb_pdb/mom_2016_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

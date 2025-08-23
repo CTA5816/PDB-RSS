@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Oct and Sox Transcription Factors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Oct and Sox Transcription Factors" property="og:title"/>
+<meta content="Transcription factors decide when particular genes will be transcribed" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/112/1gt0_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/112" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Oct and Sox Transcription Factors" name="twitter:title"/>
+<meta content="Transcription factors decide when particular genes will be transcribed" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/112/1gt0_composite.jpg" name="twitter:image"/>
+<meta content="Transcription factors decide when particular genes will be transcribed" name="description"/>
+<meta content="nuclear reprogramming,octamer transcription factors,pluripotent stem cells,sox transcription factors,transcription factor complex,1gt0,1nkp,2ebt,1o4x" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 112
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 112 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Oct and Sox Transcription Factors</h1>
+<p><i>Transcription factors decide when particular genes will be transcribed</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Transcription factors Oct1 (turquoise) and Sox2 (blue) bound to a short piece of DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/112/1gt0_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transcription factors Oct1 (turquoise) and Sox2 (blue) bound to a short piece of DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/112/112-TranscriptionFactors_1gt0_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The development of a complete human being from a single cell is one of the great miracles of life. A human egg cell contains about 30,000 genes that encode proteins, and of these, about 3,000 of these genes encode transcription factors. Transcription factors determine when genes will be turned on and turned off, orchestrating the many processes involved in the development of an embryo and the many tasks performed by each cell after a child is born. Amazingly, there is only about 1 transcription factor for every 10 genes, posing a puzzle: how does this limited set of proteins control the many genes and processes that must be regulated?</div>
+<h4>Combinatorial Control</h4>
+<div>One of the answers to this question may be discovered by looking at the binding sites for transcription factors in the genome. Typical genes in our cells have extensive regulatory regions before and after the genes, sometimes 100,000 base pairs away, and occasionally even inside the genes. These regions act in many different ways, as enhancers, silencers, insulators, and promotors of the gene. Each gene is controlled by a combination of many transcription factors, which together form a consensus as to whether the gene will be expressed or not at any given time.</div>
+<h4>Choosing a Path</h4>
+<div>Oct4 and its cofactor Sox2 are at the center of a collection of transcription factors that control the first decisions in the development of an embryo. Oct4 is present in embryonic stem cells, and its levels drop when the cell starts to divide and differentiate into different types of cells. It has been called the "gatekeeper" of development, since it is necessary for maintaining the stem cell state. The structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gt0" target="_blank">1gt0 <i class="fa fa-external-link"> </i></a></span>, shows the DNA-binding portions of a similar protein, Oct1 (at the bottom in turquoise), and Sox2 (at the top in blue) bound to a short piece of DNA (in orange and pink).</div>
+<h4>Reprogramming</h4>
+<div>Unfortunately, once stem cells make their choices and differentiate into nerve cells or skin cells or other types of cells, they are normally unable to reverse their choices and become stem cells once again. If this were possible, however, it would be very useful: for instance, imagine taking a few skin cells from a patient with diabetes, and then changing these cells into pancreatic cells that can make insulin. Researchers have recently used Oct4 and Sox2 to make the first steps towards this amazing goal. By adding the genes for these proteins, along with a few other transcription factors, to skin cells, they were able to reprogram the cells into "pluripotent" stem cells that are able to form many other cell types.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="DNA-binding domain of Myc and Max bound to DNA (top)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/112/1nkp_2ebt.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA-binding domain of Myc and Max bound to DNA (top).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/112/112-TranscriptionFactors_1nkp_2ebt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Group Effort</h4>
+<div>The reprogramming of skin cells or other cells into stem cells requires a few helper proteins that relay the signal of Oct4 to the many genes that must be affected. The two proteins shown here--c-Myc (top) and Klf4 (bottom)--were used in the first successful reprogramming experiments. The DNA-binding portion of c-Myc is shown bound to a small piece of DNA along with its partner protein Max, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nkp" target="_blank">1nkp <i class="fa fa-external-link"> </i></a></span>. The DNA-binding portion of Klf transcription factors are composed of three zinc finger domains, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ebt" target="_blank">2ebt <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Oct and Sox Transcription Factors (PDB entries 1gt0 and 1o4x)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/112/1gt0_1o4x.jpg"/></div>
+<p>Combinatorial control, where several transcription factors bind together to control a gene, allows the same proteins to be used in different ways. This is shown in two structures of Oct1 and Sox2 bound to different pieces of regulatory DNA. In PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gt0" target="_blank">1gt0 <i class="fa fa-external-link"> </i></a></span> (left), the proteins are bound to the FGF4 enhancer DNA and the two proteins interact weakly through and extended tail of Sox2. In PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1o4x" target="_blank">1o4x <i class="fa fa-external-link"> </i></a></span> (right), the proteins are bound closer together on the Hoxb1regulatory sequence and they form a stronger interaction. In this way, the different spacing of the binding sites in the DNA can control the binding strength of the Oct and Sox complex. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers have used a variety of other transcription factors along with Oct4 and Sox2 for reprogramming cells, including Nanog and Lin-28. The DNA-binding portions of these proteins are available in the PDB. Can you find similarities and differences with the transcription factors shown here? </li>
+<li>Many DNA-binding proteins bend DNA when they bind. Can you find other examples in the PDB?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/recombinant-dna">Recombinant DNA</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. Levine and R. Tjian (2003) Transcription regulation and animal diversity. Nature 424, 147-151.</li>
+<li>W. Buitrago and D. R. Roop (2007) Oct-4: the almighty POUripotent regulator? Journal of Investigative Dermatology 127, 260-262.</li>
+<li>S. I. E. Guth and M. Wegner (2008) Having it both ways: Sox protein function between conservation and innovation. Cellular and Molecular Life Sciences 65, 3000-3018.</li>
+<li>Y.-H. Loh, J.-H. Ng and H.-H. Ng (2008) Molecular framework underlying pluripotency. Cell Cycle 7, 885-891.</li>
+<li>K. Hochedlinger and K. Plath (2009) Epigenetic reprogramming and induced pluripotency. Development 136, 509-523.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_4">http://doi.org/10.2210/rcsb_pdb/mom_2009_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

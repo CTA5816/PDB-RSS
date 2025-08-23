@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: DNA Helicase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: DNA Helicase" property="og:title"/>
+<meta content="DNA helicase pries apart the two strands in a DNA double helix, powered by ATP" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_4esv.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/168" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: DNA Helicase" name="twitter:title"/>
+<meta content="DNA helicase pries apart the two strands in a DNA double helix, powered by ATP" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_4esv.jpg" name="twitter:image"/>
+<meta content="DNA helicase pries apart the two strands in a DNA double helix, powered by ATP" name="description"/>
+<meta content="AAA+ proteins,DNA replication,DnaA,4esv,3r8f,4m4w" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 168
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 168 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: DNA Helicase</h1>
+<p><i>DNA helicase pries apart the two strands in a DNA double helix, powered by ATP</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DNA helicase pulling a single strand of DNA (orange) through the center." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_4esv.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA helicase pulling a single strand of DNA (orange) through the center.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_4esv.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Our genetic information is safely locked up inside the double helix of DNA. In order to use this information, the helix must be unwound to expose the bases, allowing <a href="https://pdb101.rcsb.org/motm/3"> polymerases </a> access to build complementary DNA or RNA strands. Unwinding of DNA is trickier than you might expect. The interaction between bases is quite strong and there are many, many of them, so it takes appreciable energy to separate the strands. This is the job of DNA helicases: they are enzymes that pull apart the two strands in a DNA double helix.</div>
+<h4>Replicative Helicases</h4>
+<div>The helicase shown here, from PDB entry <span class="rcsb_id_tag" title="DNA Helicase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4esv" target="_blank">4esv <i class="fa fa-external-link"> </i></a></span>, separates DNA strands during the replication of a bacterial genome. The chromosome is a circle and replication begins at one point on the circle (called the "origin") and proceeds in both directions, finishing on the opposite side. The helicase surrounds a single-stranded portion of the DNA (shown here in orange) and inches its way along the strand, separating the double helix as it goes. It uses ATP (shown in red) to power this motion.</div>
+<h4>Surrounding DNA</h4>
+<div>Replicative DNA helicases are members of a large class of protein engines that use ATP to push proteins or nucleic acids through a ring of protein subunits. These enzymes generally fall into two categories: the bacterial ones are similar to RecA, a protein involved in genetic recombination, and our replicative helicases are AAA+ ATPases, similar to the <a href="https://pdb101.rcsb.org/motm/80"> AAA+ proteases</a>. In both cases, the complex forms a ring of subunits that surround the single strand of DNA. The replicative helicase shown here is composed of six identical subunits that form a lockwasher-shaped complex, with the six subunits following the helix of the DNA trapped inside.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="DnaA proteins wrapped around a single strand of DNA (orange)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_3r8f_helix.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DnaA proteins wrapped around a single strand of DNA (orange).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_3r8f_helix.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Melting DNA</h4>
+<div>Two proteins assist the cellular replicative helicases in getting the whole process started. The first, known as an initiator, binds to the origin of replication and recruits the helicase to the proper location. DnaA, the initiator protein shown here (PDB entry <span class="rcsb_id_tag" title="DnaA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3r8f" target="_blank">3r8f <i class="fa fa-external-link"> </i></a></span>), also catalyzes the initial separation of the DNA strands. It forms a long helical assembly of subunits and is thought to perform two different tasks. Initially, the DNA double helix wraps around the outside, forming a superhelical structure next to a special sequence in the origin that is rich in AT-base pairs, and thus is more weakly bonded than most DNA regions. Then, DnaA binds to the AT-rich region, helping to melt the double helix by capturing and extending one of the strands, as seen in this structure.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>DNA Helicase and Loader (PDB entry 4m4w)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/168/168-DNAHelicase_4m4w_jmol.jpg"/></div>
+<p>A second protein, a helicase loader, assists the initiator and chaperones the replicative DNA helicase onto the single strand. The structure shown here (PDB entry <span class="rcsb_id_tag" title="DNA Helicase and Loader"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4m4w" target="_blank">4m4w <i class="fa fa-external-link"> </i></a></span>) includes DNA helicase (blue), a helicase loader (magenta) and a small domain from primase (green), the enzyme that will build the short RNA primer that gets replication started. This low-resolution structure was solved using atomic-resolution structures of the individual components, and shows an evocative gap in the ring of helicase subunits which may be site of entry of the single strand of DNA. To explore this structure in more detail, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several other structures of helicases bound to single-stranded DNA are available in the PDB, including the bacterial DNA helicase Rep that acts as a dimer (entry <span class="rcsb_id_tag" title="DNA Helicase">1uaa</span>).</li>
+<li>DnaA has a domain that binds to double-stranded DNA, wrapping it around the outside of the DnaA assembly. A structure of this domain bound to double-stranded DNA is available in PDB entry <span class="rcsb_id_tag" title="DnaA">1j1v</span>.</li>
+<li>The structure of the helicase loader DnaC is remarkably similar to the structure of DnaA, forming a similar helix of subunits. You can use the "Compare Structures" tool to overlap these two structures, in PDB entries <span class="rcsb_id_tag" title="DnaC">3ecc</span> and <span class="rcsb_id_tag" title="DnaA">3r8f</span>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>4m4w: B. Liu, W. K. Eliason &amp; T. A. Steitz (2013) Structure of a helicase-helicase loader complex reveals insights into the mechanism of bacterial primosome assembly. Nature Communications 4: 2495.</li>
+<li>4esv: O. Itsathitphaisarn, R. A. Wing, W. K. Eliason, J. Wang &amp; T. Steitz (2012) The hexameric helicase DnaB adopts a nonplanar conformation during translocation. Cell 151, 267-277.</li>
+<li>P. Soultanas (2012) Loading mechanisms of ring helicases at replication origins. Molecular Microbiology 84, 6-16.</li>
+<li>3r8f: K. E. Duderstadt, K. Chuang &amp; J. M. Berger (2011) DNA stretching by bacterial initiators promotes replication origin opening. Nature 478, 209-213.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_12">http://doi.org/10.2210/rcsb_pdb/mom_2013_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

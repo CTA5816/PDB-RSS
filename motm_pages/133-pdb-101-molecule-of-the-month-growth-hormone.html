@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Growth Hormone</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Growth Hormone" property="og:title"/>
+<meta content="Growth hormone brings together two copies of its cellular receptor" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/52/hormones.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/52" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Growth Hormone" name="twitter:title"/>
+<meta content="Growth hormone brings together two copies of its cellular receptor" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/52/hormones.gif" name="twitter:image"/>
+<meta content="Growth hormone brings together two copies of its cellular receptor" name="description"/>
+<meta content="growth hormone receptor complex,growth hormone receptor signaling pathway,human growth hormone,pituitary hormones,prolactin,1hgu,1n9d,1h02,3hhr,1hwh,1hwg" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 52
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 52 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Growth Hormone</h1>
+<p><i>Growth hormone brings together two copies of its cellular receptor</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Human growth hormone (top left), prolactin (top right), and insulin-like growth factor (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/52/hormones.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human growth hormone (top left), prolactin (top right), and insulin-like growth factor (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/52/52-GrowthHormone-hormones.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Growing Children and Adults</h4>
+<div>As children grow, their height, weight and strength increase. Numerous factors influence this growth, including the genetic makeup of the child, nutrition and environmental factors. Specific messengers released by the body also stimulate and regulate growth. Growth hormone is one key growth signal released from the pituitary, a pea-sized gland located at the base of the brain. Lack of this hormone in children can cause them to remain shorter than average, while in its excess they may grow taller than most. Growth hormone continues its work in adults, playing an important role in repair and maintenance of different tissues in the body.</div>
+<h4>Pituitary Hormones</h4>
+<div>The pituitary releases several hormones including growth hormone, prolactin and placental lactogen. These small protein hormones are similar in their sequence and structure and play crucial roles in growth, development and milk production. Two of these are shown here at the top: human growth hormone (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hgu" target="_blank">1hgu <i class="fa fa-external-link"> </i></a></span>) on the left and prolactin (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n9d" target="_blank">1n9d <i class="fa fa-external-link"> </i></a></span>) on the right. Despite their similarity, these hormones have small differences in the overall shape and surface features, allowing them to bind to specific targets to perform their own functions.</div>
+<h4>Promoting Growth</h4>
+<div>Growth hormone travels through the blood and stimulates the liver to produce a protein called insulin-like growth factor (IGF-1), shown at the bottom here using coordinates in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1h02" target="_blank">1h02 <i class="fa fa-external-link"> </i></a></span>. IGF-1 helps the cartilage cells located at the ends of long bones to multiply. In children, this leads to growth in the length of the bones and increases the child's height. By puberty, however, the cartilage at the ends of most long bones is converted to bone and subsequent action of growth hormone or IGF-1 usually cannot increase their length. IGF-1 also acts on immature muscle cells to increase muscle mass. Aside from these growth stimulating functions, growth hormone participates in regulating the body's metabolism. It acts on fat cells to reduce the amount of stored fats, promotes protein synthesis in cells and plays a role in regulating the sugar levels in the blood. Thus growth hormone has multiple effects on the overall form and function of a growing body.</div>
+<h4>Growth Hormone Supplements</h4>
+<div>Growth hormone was identified in the 1920s as a growth promoting factor. By mid to late 1980s scientists were able to produce this 191-residue protein hormone in bacteria using recombinant DNA technology. With the availability of large quantities of this recombinant hormone, therapeutic uses of growth hormone became possible. Children and adults with growth hormone deficiency can now be treated with growth hormone supplements. Also, patients suffering from diseases that lead to muscle wasting and weakness (like AIDS) also benefit from such supplements. However, in some cases these supplements are exploited to reverse symptoms of aging, to increase muscle mass in athletes and to increase the height of growing children. In the food industry, the cow and pig versions of this recombinant hormone protein are used to accelerate growth in farm animals. Although some concerns have been expressed regarding possible effects of consuming meat and milk from these animals, studies show that the growth hormone from these animals does not act on humans.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Receptor for growth hormone. The hormone is shown in red, and the portions of the receptor crossing the membrane, which are not included in the structure, are shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/52/3hhr-membrane.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Receptor for growth hormone. The hormone is shown in red, and the portions of the receptor crossing the membrane, which are not included in the structure, are shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/52/52-GrowthHormone-3hhr-membrane.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Growth Hormone in Action</h4>
+<div>Growth hormone (shown here in red) performs its multiple functions by binding to growth hormone receptors (shown here in blue and green) on its target organs and cells. These receptors have separate portions outside and inside the cell, connected by a helical stretch that passes through the cell membrane. Interestingly, growth hormone must bind to two receptor molecules simultaneously to mediate its function. The hormone binds on the outside of the cell, bringing two receptors together. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hhr" target="_blank">3hhr <i class="fa fa-external-link"> </i></a></span>, shown here, includes the extracellular portion of two receptors bound to growth hormone. When two receptors are brought together, interaction between the portions inside the cell (shown here schematically) triggers several enzymatic reactions and signaling processes that stimulate growth. Thus formation of this receptor dimer is crucial for growth hormone function. One of the major surprises from this crystal structure was the discovery that the two receptor molecules, which are structurally identical, bind to two structurally distinct sites on opposite sides of a single growth hormone molecule. As you might expect, the strength of binding at these two sites is also different.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/52/GH-rasmol.gif"/></div>
+<div>Two growth hormone receptors bind to the hormone one after the other. Binding to the first site forms an inactive intermediate complex. The assembly becomes functionally active only when the second receptor molecule binds at the second binding site on the other side of the hormone. Any factor that disrupts this assembly can block the hormone's function. For example, changing a single glycine at position 120 to arginine will block receptor binding at the second site. By comparing the altered hormone (shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hwh" target="_blank">1hwh <i class="fa fa-external-link"> </i></a></span>) with the normal hormone (shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hwg" target="_blank">1hwg <i class="fa fa-external-link"> </i></a></span>), you can see that the large side chain of arginine 120 cannot be accommodated when the second receptor binds. This residue clashes with tryptophan 104 of the receptor (shown as green spheres). Thus the altered hormone cannot form a functional complex with a second receptor and no longer promotes growth - in fact it suppresses growth.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Bristow, Adrian F. (1999) International Standards for Growth Hormone. <i>Hormone Research</i>, <b>51</b>, Supplement 1, 7.</li>
+<li>Kopchick, John J. (2003) History and Future of Growth Hormone Research. <i>Hormone Research</i>, <b>60</b>, Supplement 3, 103.</li>
+<li>Sundstrom M, Lundqvist T, Rodin J, Giebel LB, Milligan D, Norstedt G. (1996) Crystal structure of an antagonist mutant of human growth hormone, G120R, in complex with its receptor at 2.9 A resolution. <i>Journal of Biological Chemistry</i> <b>271</b>, 32197.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2004, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_4">http://doi.org/10.2210/rcsb_pdb/mom_2004_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

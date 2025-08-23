@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Proton-Gated Urea Channel</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Proton-Gated Urea Channel" property="og:title"/>
+<meta content="A channel that passes urea allows ulcer-producing bacteria to live in the stomach" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_3ux4.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/158" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Proton-Gated Urea Channel" name="twitter:title"/>
+<meta content="A channel that passes urea allows ulcer-producing bacteria to live in the stomach" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_3ux4.jpg" name="twitter:image"/>
+<meta content="A channel that passes urea allows ulcer-producing bacteria to live in the stomach" name="description"/>
+<meta content="Helicobacter pylori,stomach ulcer,urease,3ux4,1e9y" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 158
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 158 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Proton-Gated Urea Channel</h1>
+<p><i>A channel that passes urea allows ulcer-producing bacteria to live in the stomach</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Proton-gated urea channel viewed from outside the membrane. The channels are at the center of each of the six subunits, and the central hole is plugged by lipids (green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_3ux4.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Proton-gated urea channel viewed from outside the membrane. The channels are at the center of each of the six subunits, and the central hole is plugged by lipids (green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_3ux4.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>The acid in your stomach helps to digest food, but it also helps protect you from 
+bacterial infection. However, one type of bacteria, <i>Helicobacter pylori</i>, is able to live 
+in the acidic environment of the stomach. It is one of the most common bacterial 
+infections, found worldwide in half of the population. It causes a continued 
+inflammation of the stomach, which leads in some cases to stomach ulcers and 
+stomach cancer.</div>
+<h4>Acid and Base</h4>
+<div>Surprisingly, when this bacterium is cultured, it can't tolerate acid conditions, unless 
+it is also given urea at the same time. <i>Helicobacter pylori</i> uses urea, which is found 
+in low levels in stomach fluid, to neutralize any acid that leaks into the cell. Two 
+proteins cooperate in this process. First, a proton-gated urea channel, shown here 
+from PDB entry 
+<span class="rcsb_id_tag" title="Proton-Gated Urea Channel"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ux4" target="_blank">3ux4 <i class="fa fa-external-link"> </i></a></span>,
+opens when the environment becomes acidic, allowing 
+molecules of urea to enter the cell. Inside, the urea is broken down by urease 
+(described below) into carbon dioxide and ammonium ions, which neutralize the 
+acid.</div>
+<h4>Open and Closed</h4>
+<div>The proton-gated urea channel opens at pH below about 5.5-6.5. The channel is 
+composed of six identical subunits, each with its own channel running through the 
+center. The crystallographic structure also captured a plug of lipids (shown here in 
+green) that block the hole in the middle of the ring of six subunits, making sure that 
+the channels are the only way through the membrane.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The urease enzyme from Helicobacter pylori." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_1e9y.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The urease enzyme from Helicobacter pylori.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_1e9y.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Urease</h4>
+<div><i>Helicobacter pylori</i> also makes a large amount of the enzyme urease, which can 
+account for 10-15% of the total protein in the cell. This urease is a huge complex 
+built of twelve copies of two types of subunits, shown here from PDB entry
+<span class="rcsb_id_tag" title="Urease"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e9y" target="_blank">1e9y <i class="fa fa-external-link"> </i></a></span>.
+Each of the twelve active sites in the complex uses a pair of nickel ions to assist with 
+the urea-splitting reaction. </div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Proton-Gated Urea Channel (PDB entry 3ux4)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/158/158-ProtonGatedUreaChannel_3ux4_jmol.jpg"/></div>
+<p>Infection by <i>Helicobacter pylori</i> is currently difficult to fight, requiring treatment 
+with acid-blocking drugs and antibiotics. Researchers are using the 
+structures of proteins from this bacterium to design new drugs to fight infection. 
+The proton-gated urea channel is one key target, since it is a characteristic feature of 
+the bacterium. To take a closer look at this structure, and explore the structural 
+features that help it sense acid and pass urea, click on the image for an interactive 
+Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several other proteins from <i>Helicobacter pylori</i>, including an acid-sensing protein 
+(PDB entry 
+<span class="rcsb_id_tag" title="Chemoreceptor TlpB">3ub7</span>),
+are available for exploration in the PDB archive.</li>
+<li>Structures for several urea transporters are also available in the PDB, including 
+one similar to the one in our kidneys.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Strugatsky, R. McNulty, K. Munson, C.-K. Chen, S. M. Soltis, G. Sachs &amp;
+H. Luecke (2012) Structure of the proton-gated urea channel from the gastric
+pathogen <i>Helicobacter pylori</i> Nature 493, 255-258.</li>
+<li>G. Sachs, D. L. Weeks, K. Melchers &amp; D. R. Scott (2003) The gastric biology of 
+<i>Helicobacter pylori</i>. Annual Review of Physiology 65, 349-369.</li>
+<li>S. Suerbaum &amp; P. Michetti (2002) <i>Helicobacter pylori</i> infection. New England Journal 
+of Medicine 347, 1175-1186.</li>
+<li>D. L. Weeks &amp; G. Sachs (2001) Sites of pH regulation of the urea channel of 
+<i>Helicobacter pylori</i>. Molecular Microbiology 40, 1249-1259.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_2">http://doi.org/10.2210/rcsb_pdb/mom_2013_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

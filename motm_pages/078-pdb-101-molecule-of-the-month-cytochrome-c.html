@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cytochrome c</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cytochrome c" property="og:title"/>
+<meta content="Cytochrome c shuttles electrons during the production of cellular energy" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/36/3cyt-twoviews.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/36" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cytochrome c" name="twitter:title"/>
+<meta content="Cytochrome c shuttles electrons during the production of cellular energy" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/36/3cyt-twoviews.gif" name="twitter:image"/>
+<meta content="Cytochrome c shuttles electrons during the production of cellular energy" name="description"/>
+<meta content="cytochrome bc1,cytochrome oxidase,electron carrier activity,electron transport chain,heme binding,oxidation reduction,respiratory chain,3cyt,1kyo,1oco" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 36
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 36 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cytochrome c</h1>
+<p><i>Cytochrome c shuttles electrons during the production of cellular energy</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cytochrome c, with heme in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/36/3cyt-twoviews.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome c, with heme in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/36/36-Cytochromec-3cyt-twoviews.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Electricity is a common phenomenon in our modern world, powering everything from the lights in your room to the computer in front of you. Electricity is the flow of electrons within a conductive material, such as metal wires. These electrons flow in bulk, meandering from atom to atom along the wire. Cells also use electricity to power many processes, but the electrons move in a very different way. The electrons do not flow smoothly along a cell-sized wire. Instead, electrons are transported one at a time, jumping from protein to protein. In this way, the electrons may be picked up from one particular place and delivered exactly where they are needed.</div>
+<h4>Delivering Electrons</h4>
+<div>Cytochrome c, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cyt" target="_blank">3cyt <i class="fa fa-external-link"> </i></a></span>, is a carrier of electrons. Like many proteins that carry electrons, it contains a special prosthetic group that handles the slippery electrons. Cytochrome c contains a heme group with an iron ion gripped tightly inside, colored red here. The iron ion readily accepts and releases an electron. The surrounding protein creates the perfect environment for the electron, tuning how tightly it is held. As shown below, the protein also determines where cytochrome c fits into the overall cellular electronic circuit.</div>
+<h4>A Venerable Family</h4>
+<div>Cytochrome c is an ancient protein, developed early in the evolution of life. Since this essential protein performs a key step in the production of cellular energy, it has changed little in millions of years. So, you can look into yeast cells or plant cells or our own cells and find a very similar form of cytochrome c. If you look around the PDB, however, you can find a diverse collection of other electron carrier molecules. There are many variations on cytochrome c, which use heme and iron to carry electrons, but change the protein surrounding them to perform different jobs. Other carriers use other prosthetic groups to carry electrons, such as clusters of iron and sulfur (such as ferredoxin), brilliant blue copper ions (such as azurin and plastocyanin) or more exotic metal ions. Like cytochrome c, each of these proteins is a single connection in a cellular electronic circuit, transferring electrons from one point to another.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cytochrome c transfering electrons to cytochrome bc1 (left) and cytochrome c oxidase (right). The membrane is shown schematically in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/36/electron-transport.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome c transfering electrons to cytochrome bc1 (left) and cytochrome c oxidase (right). The membrane is shown schematically in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/36/36-Cytochromec-electron-transport.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cellular Circuits</h4>
+<div>Cytochrome c forms one connection in a hard-wired cellular electronic circuit. It transfers electrons at the last step in the production of cellular energy. These electrons are originally obtained through the breakdown of sugar, and end up being attached to oxygen to form water (this is the ultimate fate of the oxygen that we breathe). Cytochrome c transfers individual electrons between two large protein complexes, gathering electrons from <a class="mom_big" href="http://pdb101.rcsb.org/motm/137">cytochrome bc1</a> complex, shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kyo" target="_blank">1kyo <i class="fa fa-external-link"> </i></a></span>, and delivering them to <a class="mom_big" href="http://pdb101.rcsb.org/motm/5">cytochrome oxidase complex</a>, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oco" target="_blank">1oco <i class="fa fa-external-link"> </i></a></span>. These two complexes perform the heavy work of energy production. As electrons flow through their electron-carrying groups, shown in red, they pump protons across a membrane, shown schematically as the yellow stripe. These protons are then used to power production of ATP. Cytochrome c keeps the entire engine running smoothly, shuttling electrons from one complex to the other as needed.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/36/1kyo-rasmol.gif"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kyo" target="_blank">1kyo <i class="fa fa-external-link"> </i></a></span> gives a close-up view of how electrons are transferred between carriers inside cells. Electrons do not flow through a continuous wire, like in our familiar appliances. Instead, at these small distances electrons tunnel directly from one carrier to the next. This picture shows the complex of cytochrome c (at the top) and the large cytochrome bc1 complex, shown at the bottom. The protein chain in cytochrome c is shown in pink tubes and the protein chains in the bc1 complex are shown in yellow tubes. The hemes are shown with spheres at each atom, with the iron atoms in yellow. Notice how the heme group of cytochrome c is pushed close to a heme group in the bc1 complex. At this distance, electrons tunnel from one heme to the next in less than a millionth of a second. You can explore this structure in more detail by clicking on the accession code and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Richard E. Dickerson (1980): Cytochrome c and the Evolution of Energy Metabolism. <i>Scientific American</i> <b>242</b> (3), pp. 136-153.</li>
+<li>Christian Lange and Carola Hunte (2002): Crystal Structure of the Yeast Cytochrome bc1 Complex with its Bound Substrate Cytochrome c. <i>Proceedings of the National Academy of Science USA</i> <b>99</b>, pp. 2800-2805.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_12">http://doi.org/10.2210/rcsb_pdb/mom_2002_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

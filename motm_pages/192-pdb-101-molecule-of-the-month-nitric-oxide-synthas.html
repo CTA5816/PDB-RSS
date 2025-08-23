@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nitric Oxide Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nitric Oxide Synthase" property="og:title"/>
+<meta content="Nitric oxide gas is used as a rapid-acting hormone and as a powerful defense " property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_nNOS.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/133" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nitric Oxide Synthase" name="twitter:title"/>
+<meta content="Nitric oxide gas is used as a rapid-acting hormone and as a powerful defense " name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_nNOS.jpg" name="twitter:image"/>
+<meta content="Nitric oxide gas is used as a rapid-acting hormone and as a powerful defense " name="description"/>
+<meta content="cell signaling,heme,nitric oxide,pterin,soluble guanylate cyclase,1nod,1tll,2o60,2o0c,3et6,3hls,2p04,1nod,2nse,1om4,3e7t" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 133
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 133 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nitric Oxide Synthase</h1>
+<p><i>Nitric oxide gas is used as a rapid-acting hormone and as a powerful defense </i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Neuronal nitric oxide synthase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_nNOS.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Neuronal nitric oxide synthase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_nNOS.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Nitroglycerin is a powerful explosive, detonating when exposed to heat or pressure. The same molecule, however, 
+can save your life if you're experiencing a heart attack. A small dose of nitroglycerin will slowly break down 
+and release nitric oxide (NO), which then spreads to the muscle cells surrounding blood vessels, telling them 
+to relax. The curative properties of nitroglycerin have been used in this way for over a century, but 
+scientists have only recently revealed how NO performs its job. 
+</div>
+<h4>NO Problem</h4>
+<div>Nitric oxide is a colorless gas composed of a nitrogen atom and an oxygen atom. It is used in two ways in your body: 
+for signaling and for attack. It is produced continuously at low levels by cells, where it acts as a messenger, 
+controlling functions such as the contraction of muscle cells and growth of nerve cells. NO is particularly 
+effective as a messenger: it diffuses rapidly because it is such a small molecule, but stays relatively 
+localized because it is reactive and is rapidly inactivated. This reactivity is also used in the other 
+major function of NO. It is made in larger bursts by cells in the immune system to kill pathogens. 
+</div>
+<h4>NOS</h4>
+<div>Animal cells make three similar types of nitric oxide synthase (NOS), to produce NO for 
+these different functions. Neuronal NOS (shown here) and endothelial NOS continually 
+produce low levels of NO used for signaling. Inducible NOS, on the other 
+hand, makes large toxic bursts of NO to fight pathogens. All are complex 
+enzymes with many functional parts, and researchers have determined their structures by 
+breaking them into manageable pieces. The portion shown at the top 
+creates NO by adding oxygen to the amino acid arginine, using a heme group to assist
+with the reaction. It was the first
+portion to be studied by crystallography, first for inducible NOS
+(PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nod" target="_blank">1nod <i class="fa fa-external-link"> </i></a></span>)
+then for the neuronal version shown here (PDB entry 
+<span class="rcsb_id_tag title=">1om4</span>).
+The portion at the bottom (PDB entry 
+
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tll" target="_blank">1tll <i class="fa fa-external-link"> </i></a></span>)
+feeds electrons to the upper portion. The short segment connecting the two 
+halves binds to calmodulin (shown here in green, PDB entry 
+
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o60" target="_blank">2o60 <i class="fa fa-external-link"> </i></a></span>),
+which helps to control the flow of electrons.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Soluble guanylyl cyclase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_sGC.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Soluble guanylyl cyclase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_sGC.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Saying NO</h4>
+<div>The message carried by NO is received by soluble guanylate cyclase, a complex enzyme 
+that initiates a cascade of responses inside the cell. When it binds to a molecule of NO, it 
+becomes active and converts GTP into cyclic GMP. This molecule then acts as a second 
+messenger, activating kinases that then mobilize all of the molecules needed to perform 
+the desired physiological function. Like NOS, soluble guanylate cyclase is also a complex multi-domain
+ protein studied by crystallographers in parts. The NO-binding domain is shown at 
+the top (PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o0c" target="_blank">2o0c <i class="fa fa-external-link"> </i></a></span>)
+and the cyclase enzyme is shown at the bottom (PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3et6" target="_blank">3et6 <i class="fa fa-external-link"> </i></a></span>),
+and several other domains connect the two (PDB entries
+
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hls" target="_blank">3hls <i class="fa fa-external-link"> </i></a></span> and
+
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2p04" target="_blank">2p04 <i class="fa fa-external-link"> </i></a></span>).
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Nitric Oxide Synthase (PDB entries 1nod, 2nse, 1om4 and 3e7t)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/133/133-NitricOxideSynthase_NOS_jmol.jpg"/></div>
+<p>The three forms of NOS are very similar, but researchers are taking advantage of small 
+differences to create drugs to block one, but not the others. This would be very useful: for 
+instance, the inducible NOS plays a role in Parkinson's disease, Alzheimer's disease and 
+multiple sclerosis, so a drug that blocks it, but not the other forms of NOS, could be used 
+to help treat these diseases. Unfortunately, the active sites of the three forms are almost 
+identical, so researchers have been forced to design larger drugs that reach into areas that 
+show differences. To compare the structures of the catalytic domain of inducible NOS (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nod" target="_blank">1nod <i class="fa fa-external-link"> </i></a></span>),
+endothelial NOS (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2nse" target="_blank">2nse <i class="fa fa-external-link"> </i></a></span>),
+neuronal NOS (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1om4" target="_blank">1om4 <i class="fa fa-external-link"> </i></a></span>),
+and NOS with an inhibitor bound in the active site (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3e7t" target="_blank">3e7t <i class="fa fa-external-link"> </i></a></span>),
+click on the image for an interactive Jmol.
+</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Nitric oxide synthase is also made in some bacteria. You can compare the 
+structures of the bacterial enzymes with the mammalian enzymes using the 
+"Structure Comparison" tool at the PDB.</li>
+<li>Many structures of trial drugs bound to nitric oxide synthase are available in the 
+PDB. You can use the "Ligand Explorer" to examine the interaction of these 
+drugs with the enzyme and enzyme cofactors.
+</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Daff (2010) NO synthase: structures and mechanisms. Nitric Oxide 23, 1-11.</li>
+<li>B. R. Crane, J. Sudhamsu and B. A. Patel (2010) Bacterial nitric oxide synthases. Annual Review of Biochemistry 79, 445-470.</li>
+<li>C. Villanueva and C. Giulivi (2010) Subcellular and cellular locations of nitric oxide synthase isoforms as determinants of health and disease. Free Radical Biology and Medicine 49, 307-316.</li>
+<li>E. D. Garcin, A. S. Arvai, R. J. Rosenfeld, M. D. Kroeger, B. R. Crane, G. Andersson, G. Andrews, P. J. Hamley, P. R. Mallinder, D. J. Nicholls, S. A. St-Gallay, A. C. Tinker, N. P. Gensmantel, A. Mete, D. R. Cheshire, S. Connolly, D. J. Stuehr, S. Aberg, A. V. Wallace, J. A. Tainer and E. D. Getzoff (2009) Anchored plasticity opens doors for selective inhibitor design in nitric oxide synthase. Na</li>
+<li>T. L. Poulos (2006) Soluble guanylate cyclase. Current Opinion in Structural Biology 16, 736-743.</li>
+<li>H. Li and T. L. Poulos (2005) Structure-function studies on nitric oxide synthases. Journal of Inorganic Biochemistry 99, 293-305.</li>
+<li>D. J. Stuehr, C. C. Wei, J. Santolini, Z. Wang, M. Aoyagi and E. D. Getzoff (2004) Radical reactions of nitric oxide synthases. Biochemical Society Symposium 71, 39-49.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_1">http://doi.org/10.2210/rcsb_pdb/mom_2011_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

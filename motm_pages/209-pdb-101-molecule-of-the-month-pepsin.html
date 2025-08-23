@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Pepsin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Pepsin" property="og:title"/>
+<meta content="Pepsin digests proteins in strong stomach acid" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/12/pepsin-pepsinogen.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/12" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Pepsin" name="twitter:title"/>
+<meta content="Pepsin digests proteins in strong stomach acid" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/12/pepsin-pepsinogen.gif" name="twitter:image"/>
+<meta content="Pepsin digests proteins in strong stomach acid" name="description"/>
+<meta content="acid protease,aspartic endopeptidases,cathepsin,chymosin,digestion,endiothiapepsin,pepsinogen,proenzymes,proteolysis,5pep,3psg,5pep,5pep,4cms,1lyb,1hrn,4ape" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 12
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 12 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Pepsin</h1>
+<p><i>Pepsin digests proteins in strong stomach acid</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Pepsin (top) and pepsinogen (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/12/pepsin-pepsinogen.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Pepsin (top) and pepsinogen (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/12/12-Pepsin-pepsinogen.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Holiday Treats</h4>
+<div>During the holiday season, we often place greater demands on our digestive enzymes than at other times of the year. Our digestive system contains a host of tough, stable enzymes designed to seek out those rich holiday treats and break them into small pieces. Pepsin is the first in a series of enzymes that digest proteins. In the stomach, protein chains bind in the deep active site groove of pepsin, seen in the upper illustration (from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5pep" target="_blank">5pep <i class="fa fa-external-link"> </i></a></span>), and are broken into smaller pieces. Then, a variety of proteases and peptidases in the intestine finish the job. The small fragments--amino acids and dipeptides--are then absorbed by cells for use as metabolic fuel or construction of new proteins.</div>
+<h4>A Tricky Business</h4>
+<div>Enzymes that digest proteins pose a real challenge. The enzyme must be constructed inside the cell, but controlled in some manner so that it doesn't immediately start digesting the cell's own proteins. To solve this problem, pepsin and many other protein-cutting enzymes are created as inactive "proenzymes," which may then be activated once safely outside the cell. Pepsin is constructed with an extra 44 amino acids, shown in green in the lower illustration (from entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3psg" target="_blank">3psg <i class="fa fa-external-link"> </i></a></span>), which block the large active site groove and hobble the enzyme. In the stomach, this extraneous chain is clipped off and the enzyme begins its destructive campaign.</div>
+<h4>A Piece of Scientific History</h4>
+<div>For several reasons, digestive enzymes are attractive candidates for scientific study. They are easily isolated and present in large amounts in digestive juices. They are also extraordinarily stable, because they perform their jobs under the harsh conditions present in the digestive system. The reactions catalyzed by digestive enzymes are also easily followed: you can add them to a protein such as gelatin and watch it lose its gel-like consistency. In the 18th century, pepsin was the first enzyme to be discovered, and later, pepsin was the second enzyme to be crystallized (after urease). These crystals played an important role in showing that enzymes were proteins and that they had a defined structure. Today, the structure of pepsin, determined from similar crystals, is available in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5pep" target="_blank">5pep <i class="fa fa-external-link"> </i></a></span> and several others.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Acid proteases: pepsin (upper left), chymosin (upper right), cathepsin D (lower left), and endothiapepsin (lower right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/12/asp-proteases.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Acid proteases: pepsin (upper left), chymosin (upper right), cathepsin D (lower left), and endothiapepsin (lower right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/12/12-Pepsin-asp-proteases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Acid Proteases</h4>
+<div>Pepsin is one example of a group of enzymes termed "acid proteases." In the case of pepsin, this name is doubly appropriate. Pepsin works its best in strong hydrochloric acid. But the similarity with the other enzymes pictured here refers to a second type of acid. The active site of the acid proteases rely on two acidic aspartate amino acids, which activate a water molecule and use it to cleave protein chains. These aspartates are pictured on the next page. <br/><br/> The acid proteases have evolved to fill several functional roles in different organisms. Pepsin, shown at upper left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5pep" target="_blank">5pep <i class="fa fa-external-link"> </i></a></span>), is optimized for digestion of food in the acidic environment of the stomach. It is very promiscuous, cleaving proteins in many different places. Chymosin, shown at upper right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4cms" target="_blank">4cms <i class="fa fa-external-link"> </i></a></span>), is made by young calves to break down milk proteins. A purified form of chymosin, taken from calf stomach, has been used for centuries to curdle milk in the production of cheese. Cathepsin D, shown at lower left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lyb" target="_blank">1lyb <i class="fa fa-external-link"> </i></a></span>), digests proteins inside lysozomes, the tiny stomachs inside cells. Other cellular acid proteases, such as renin (not shown, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hrn" target="_blank">1hrn <i class="fa fa-external-link"> </i></a></span>), are designed to make very specific cuts in one particular protein, aiding in the maturation of a hormone or structural protein. Endothiapepsin, shown at lower right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ape" target="_blank">4ape <i class="fa fa-external-link"> </i></a></span>), is made by a fungus and excreted into the surrounding environment, breaking up the surrounding proteins and allowing the fungus to feed on the pieces.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Pepsin and Pepstatin</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/12/12-Pepsin-1pso_jmol.jpg"/></div>
+<p>Pepsin (PDB entry <a href="https://www.rcsb.org/structure/1pso" target="_blank">1pso</a>) uses a pair of aspartate residues to perform the protein cleavage reaction, shown here with red oxygen atoms. In an example of parallel evolution (where two organisms independently develop the same method for solving a problem), the mechanism is similar to that used by <a href="http://pdb101.rcsb.org/motm/6">HIV protease</a>. This structure also includes a non-cleavable inhibitor in the active site (shown in orange). It contains a hydroxyl group, shown here in purple, that mimics the place that water attaches during the cleavage reaction. Three crosslinks that strengthen the folded protein are also shown, formed between sulfur atoms (yellow) in cysteine. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1pso: Fujinaga, M., Chernaia, M.M., Tarasova, N.I., Mosimann, S.C., James, M.N. (1995) Crystal structure of human pepsin and its complex with pepstatin. Protein Sci. 4: 960-972</li>
+<li>1hrn: Tong, L., Pav, S., Lamarre, D., Pilote, L., LaPlante, S., Anderson, P.C., Jung, G. (1995) High resolution crystal structures of recombinant human renin in complex with polyhydroxymonoamide inhibitors. J.Mol.Biol. 250: 211-222</li>
+<li>1lyb: Baldwin, E.T., Bhat, T.N., Gulnik, S., Hosur, M.V., Sowder 2nd., R.C., Cachau, R.E., Collins, J., Silva, A.M., Erickson, J.W. (1993) Crystal structures of native and inhibited forms of human cathepsin D: implications for lysosomal targeting and drug design. Proc.Natl.Acad.Sci.USA 90: 6796-6800</li>
+<li>3psg: Hartsuck, J.A., Koelsch, G., Remington, S.J. (1992) The high-resolution crystal structure of porcine pepsinogen. Proteins 13: 1-25</li>
+<li>4cms: Newman, M., Safro, M., Frazao, C., Khan, G., Zdanov, A., Tickle, I.J., Blundell, T.L., Andreeva, N. (1991) X-ray analyses of aspartic proteinases. IV. Structure and refinement at 2.2 A resolution of bovine chymosin. J.Mol.Biol. 221: 1295-1309</li>
+<li>5pep: Cooper, J.B., Khan, G., Taylor, G., Tickle, I.J., Blundell, T.L. (1990) X-ray analyses of aspartic proteinases. II. Three-dimensional structure of the hexagonal crystal form of porcine pepsin at 2.3 A resolution. J.Mol.Biol. 214: 199-222</li>
+<li>4ape: Pearl, L., Blundell, T. (1984) The active site of aspartic proteinases. FEBS Lett. 174: 96-101</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_12">http://doi.org/10.2210/rcsb_pdb/mom_2000_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

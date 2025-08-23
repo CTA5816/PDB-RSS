@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glucansucrase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glucansucrase" property="og:title"/>
+<meta content="Bacteria adhere to our teeth by building sticky sugar chains" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aic.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/138" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glucansucrase" name="twitter:title"/>
+<meta content="Bacteria adhere to our teeth by building sticky sugar chains" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aic.jpg" name="twitter:image"/>
+<meta content="Bacteria adhere to our teeth by building sticky sugar chains" name="description"/>
+<meta content="biofilm,dental caries,GH70,glucan,glycosyl hydrolase,3aic,3aie,1smd,3hz3,3kll,teeth" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 138
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 138 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glucansucrase</h1>
+<p><i>Bacteria adhere to our teeth by building sticky sugar chains</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bacterial glucansucrase with a short glucan chain (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aic.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial glucansucrase with a short glucan chain (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aic.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>We brush our teeth twice a day with fluoride toothpaste, use mouthwash, limit sugars in our diet...and we still get cavities. Cavities are caused by bacteria that consume some of the sugar in our diet, ferment it, and then release acids. These acids eat away at the hard minerals in our teeth. It seems like it would be easy to brush these bacteria away, and get rid of them once and for all. However, they have a trick to avoid this.</div>
+<h4>Sticky Sugars</h4>
+<div>These bacteria use the enzyme glucansucrase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3aic" target="_blank">3aic <i class="fa fa-external-link"> </i></a></span>, to build long, sticky chains of sugars called glucans, using the sugar in our diet. These glucans glue the bacteria to the surfaces of our teeth, forming a biofilm that is difficult to remove. Researchers are currently using the structures of this enzyme to design inhibitors that will block its action, and thus remove this form of protection for the bacteria and ultimately protect us from tooth decay.</div>
+<h4>Growing Glucans</h4>
+<div>Glucansucrases perform two reactions. First, the enzyme takes sucrose and breaks it in half, forming glucose and fructose. The fructose is released, and the glucose is then added to the growing glucan chain. Glucansucrases are large proteins with many domains. These reactions are performed in the central portion of the enzyme, which is included in this structure. The enzyme also includes additional domains that anchor the enzyme to existing glucan chains.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Chain fold and domain structure of glucansucrase (left) and alpha-amylase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aie_1smd.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Chain fold and domain structure of glucansucrase (left) and alpha-amylase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3aie_1smd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Same, Only Different</h4>
+<div>When the amino acid sequences of glucansucrases were compared with other sugar-cutting enzymes, it was found that they are similar to <a href="https://pdb101.rcsb.org/motm/74">alpha-amylase,</a> but with a difference. The sequence is permuted, so that portions at the beginning of the glucansucrase chain are found in the middle of the amylase chain. When the structure was solved, this relationship was confirmed: the structures have a very similar folding of the chain, but the sequences are permuted. You can see this by comparing PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3aie" target="_blank">3aie <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1smd" target="_blank">1smd <i class="fa fa-external-link"> </i></a></span>. In the figure, the chains are colored from red at one end to blue at the other end. You can also look at the <a href="https://pdb101.rcsb.org/motm/124">Molecule of the Month on circular permutation</a> to see other examples.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glucansucrase (PDB entries 3hz3 and 3kll)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/138/138-Glucansucrase_3kll_jmol.jpg"/></div>
+<p>Structures have been solved for glucansucrase from two different bacteria: <i>Streptococcus mutans</i>, shown in the previous sections, and <i>Lactobacillus reuteri</i>, shown in the Jmol. The <i>Lactobacillus</i> enzyme has been studied in several ways. First, a mutant form was used to reveal the structure of the complex with sucrose; the mutation hobbles the enzyme so that it can't perform the cleavage reaction (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hz3" target="_blank">3hz3 <i class="fa fa-external-link"> </i></a></span>). Also, a complex with maltose was solved to get a view of how larger sugar chains may bind (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3kll" target="_blank">3kll <i class="fa fa-external-link"> </i></a></span>). The image here combines both structures to simulate how the enzyme might look in the middle of the reaction, when fructose is cleaved away, leaving a glucose ready to add to the glucan chain. Click on the image to see the two structures and this simulated complex.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>When you look at the complexes of glucansucrases with sugars, you will find that there are several sites outside of the active site where additional sugar molecules bind. Do you think that these may play a role in the function of the protein, or are they just artifacts of the experiment?</li>
+<li>You can use the "Compare Structures" tool to explore the circular permutation of glucansucrases and alpha-amylase. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>K. Ito, S. Ito, T. Shimamura, S. Weyand, Y. Kawarasaki, T. Misaka, K. Abe, T. Kobayashi, A. D. Cameron and S. Iwata (2011) Crystal structure of glucansucrase from the dental caries pathogen Streptococcus mutans. Journal of Molecular Biology 408, 177-186.</li>
+<li>A. Vujicic-Zagar, T. Pijning, S. Kralj, C. A. Lopez, W. Eeuwema, L. Dijkhuizen and B. W. Dijkstra (2010) Crystal structure of a 117 kDa glucansucrase fragment provides insight into evolution and product specificity of GH70 enzymes. Proceedings of the National Academy of Sciences USA 107, 21406-21411.</li>
+<li>J. D. B. Featherstone (2008) Dental caries: a dynamic disease process. Australian Dental Journal 53, 286-291. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_6">http://doi.org/10.2210/rcsb_pdb/mom_2011_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

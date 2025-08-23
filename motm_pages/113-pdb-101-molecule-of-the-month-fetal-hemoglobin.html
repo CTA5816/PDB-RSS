@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Fetal Hemoglobin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Fetal Hemoglobin" property="og:title"/>
+<meta content="Fetal hemoglobin allows a growing fetus to receive oxygen from their mother." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-1fdh_4hhb.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/257" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Fetal Hemoglobin" name="twitter:title"/>
+<meta content="Fetal hemoglobin allows a growing fetus to receive oxygen from their mother." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-1fdh_4hhb.jpg" name="twitter:image"/>
+<meta content="Fetal hemoglobin allows a growing fetus to receive oxygen from their mother." name="description"/>
+<meta content="Fetal Hemoglobin,Hemoglobin A,HPFH,Oxygen,Oxygen Transport,Pregnancy,Sickle Cell Anemia,2,3-DPG,1fdh,1b86,4hhb,6ki6" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 257
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 257 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Fetal Hemoglobin</h1>
+<p><i>Fetal hemoglobin allows a growing fetus to receive oxygen from their mother.</i></p>
+<div>
+<div><i>This article was written and illustrated by Candice Craig, Samantha Eng, Jenna Manzo, and Andrew Tkacenko as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021. </i></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Fetal hemoglobin (left, PDB ID 1fdh) and adult hemoglobin (right, PDB ID 4hhb). Alpha subunits are shown in pink, gamma subunits in orange, beta subunits in yellow, and hemes in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-1fdh_4hhb.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fetal hemoglobin (left, PDB ID <a href="https://www.rcsb.org/structure/1fdh" target="_blank">1fdh</a>) and <a href="https://pdb101.rcsb.org/motm/41">adult hemoglobin</a> (right, PDB ID <a href="https://www.rcsb.org/structure/4hhb" target="_blank">4hhb</a>). Alpha subunits are shown in pink, gamma subunits in orange, beta subunits in yellow, and hemes in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-1fdh_4hhb.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sharing Oxygen</h4>
+<div>Growing fetuses obtain oxygen and other essential nutrients from their mothers. This poses a special challenge. There needs to be a special mechanism to share oxygen from the mother’s blood to the fetus, or else the fetus will not receive enough for proper development. Fortunately, the fetus has something on its side–fetal hemoglobin! Fetal hemoglobin is the main oxygen-carrying protein in the red blood cells of human fetuses, and subtle differences between fetal hemoglobin and maternal hemoglobin enable the efficient exchange of oxygen from the mother to the fetus.</div>
+<h4>Essential Efficient Exchange</h4>
+<div>Fetal hemoglobin solves an essential dilemma: how is a hemoglobin molecule able to pass its oxygen to another hemoglobin molecule? Fetal hemoglobin achieves this feat by possessing a higher oxygen affinity than adult hemoglobin under normal, healthy conditions. During pregnancy, the mother's hemoglobin gives up oxygen, which crosses the placenta and is taken up by fetal hemoglobin. Fetal hemoglobin predominates during the last two trimesters of gestation, but by the end of the first year of life, our bodies make almost entirely adult hemoglobin and fetal hemoglobin is nearly absent.</div>
+<h4>Two Subunits Make One Big Difference</h4>
+<div>Both fetal and adult hemoglobin are composed of four subunits: both have two identical alpha subunits, but in fetal hemoglobin, the two beta subunits found in adult hemoglobin are replaced with two gamma subunits (shown here from PDB entries <a href="https://www.rcsb.org/structure/4hhb" target="_blank">4hhb</a> and <a href="https://www.rcsb.org/structure/1fdh" target="_blank">1fdh</a>). These gamma subunits give fetal hemoglobin its increased affinity for oxygen. Red blood cells and placental cells make a small organic phosphate molecule called 2,3-BPG (2,3-bisphosphoglycerate). 2,3-BPG binds to adult hemoglobin and reduces its oxygen affinity, but it doesn’t bind strongly to fetal hemoglobin. So, 2,3-BPG causes adult hemoglobin to release its oxygen, allowing fetal hemoglobin to capture it. These differences in oxygen affinity work together to pass oxygen from the mother to the fetus.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Silencer protein BCL11A bound to a segment of DNA from the region of the fetal hemoglobin gene that regulates transcription, shown from two angles (PDB ID 6ki6)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-6ki6_twoviews.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Silencer protein BCL11A bound to a segment of DNA from the region of the fetal hemoglobin gene that regulates transcription, shown from two angles (PDB ID <a href="https://www.rcsb.org/structure/6ki6" target="_blank">6ki6</a>).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-6ki6_twoviews.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Solution for Sickle Cell Anemia?</h4>
+<div>Fetal hemoglobin is also being tested as a treatment for sickle cell disease. Sickle cell disease is caused by a <a href="https://pdb101.rcsb.org/motm/41">mutation in the beta subunit</a> that causes hemoglobin to form fibers that distort red blood cells into an abnormal sickle shape. Since fetal hemoglobin lacks the beta subunit, it lacks the ability to acquire this disease mutation. So, infants that carry the sickle cell gene don’t suffer from the symptoms of sickle cell disease, since they are making mostly fetal hemoglobin, but they start having problems when their bodies switch to adult hemoglobin later in childhood.<br/><br/> A possible treatment was discovered by looking at individuals with a rare genetic condition: Hereditary Persistence of Fetal Hemoglobin. They naturally have higher levels of fetal hemoglobin even when they are adults, and individuals that also have the sickle cell mutation have less severe forms of the disease. Studies have shown that a level of about 20% fetal hemoglobin in the blood is enough to reduce the symptoms of sickle cell disease, so researchers are using gene therapy to increase the levels of fetal hemoglobin in people that carry the sickle cell mutation. The treatment suppresses a silencer of the fetal hemoglobin gene, BCL11A (shown here from PDB ID <a href="https://www.rcsb.org/structure/6ki6" target="_blank">6ki6</a>). This allows fetal hemoglobin to be made and has been recently shown to improve the prognosis of individuals with sickle cell disease.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Less 2,3-BPG for Me, Mom</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/257/257-Fetal_Hemoglobin-JSmol_Image.jpg"/></div>
+<p>In the absence of oxygen, 2,3-BPG fits snugly in the cavity between the two beta subunits of adult hemoglobin, as seen on the left from PDB ID <a href="https://www.rcsb.org/structure/1b86" target="_blank">1b86</a>, forming interactions between the negatively-charged phosphates and positively-charged amino acids (colored purple). In contrast, the gamma chains of fetal hemoglobin (shown on the right from PDB ID <a href="https://www.rcsb.org/structure/1fdh" target="_blank">1fdh</a>) contain several different amino acids (colored in mint green above) at critical locations that are necessary for interaction with 2,3-BPG. In addition, these amino acid alterations increase the distance between the positively-charged amino acids so that they are too far away to bind to 2,3-BPG. These differences allow 2,3-BPG to bind and regulate adult hemoglobin more strongly than fetal hemoglobin. In the placenta, where 2,3-BPG levels are high, fetal hemoglobin can bind oxygen more tightly than maternal hemoglobin. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The enzyme 2,3-bisphosphoglycerate mutase makes 2,3-BPG. The PDB archive includes several structures of the enzyme at different stages of the reaction, for example, in entry <a href="https://www.rcsb.org/structure/2h4z" target="_blank">2h4z</a>.</li>
+<li>Hemoglobin is highly regulated by other methods in addition to 2,3-BPG. For example, take a look at the Molecule of the Month article on <a href="https://pdb101.rcsb.org/motm/233">S-Nitrosylated Hemoglobin.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1b86: Richard, V., Dodson, G. G., Mauguen, Y. (1993) Human deoxyhaemoglobin-2,3-diphosphoglycerate complex low-salt structure at 2.5 A resolution. Journal of Molecular Biology. 233 (2):270-274.</li>
+<li>1fdh: Frier, J. A., Perutz, M. F. (1977) Structure of human foetal deoxyhaemoglobin. Journal of Molecular Biology 112: 97-112.</li>
+<li>4hhb: Fermi, G., Perutz, M. F., Shaanan, B., Fourme, R. (1984) The crystal structure of human deoxyhaemoglobin at 1.74 Å resolution. Journal of Molecular Biology, 175 (2):159-174.</li>
+<li>6ki6: Yang, Y., Xu, Z., He, C., Zhang, B., Shi, Y., Li, F. (2019) Structural insights into the recognition of γ-globin gene promoter by BCL11A. Cell Research, 29: 960-963.</li>
+<li>Adachi, K. Konitzer, P. Pang, J. Reddy, K.S. Surrey, S. (1997) Amino acids responsible for decreased 2,3-biphosphoglycerate binding to fetal hemoglobin. Blood, 90(8):2916-2920.</li>
+<li>Esrick, E. B., et al. (2021) Post-transcriptional genetic silencing of BCL11A to treat sickle cell disease. The New England Journal of Medicine 384, 205-215.</li>
+<li>McCarthy, E. (1943) The oxygen affinity of human maternal and foetal haemoglobin. The Journal of Physiology, 102(1), 55–61.</li>
+<li>Pritlove, D. C., Gu, M., Boyd, C. A. R., Randeva, H. S., Vatish, M. (2006) Novel placental expression of 2,3-bisphosphoglycerate mutase. Placenta 27, 924-927.</li>
+<li>Schechter, A. N. (2008) Hemoglobin Research and the origins of Molecular Medicine. Blood, 112 (10): 3927–3938.</li>
+<li>Tomita, S. (1981) Modulation of the oxygen equilibria of human fetal and adult hemoglobins by 2,3-Diphosphoglyceric Acid. The Journal of Biological Chemistry, 256: 9495-9500.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2021, Candice Craig, Samantha Eng, Jenna Manzo, Andrew Tkacenko, David S. Goodsell, Stephen K. Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_5">http://doi.org/10.2210/rcsb_pdb/mom_2021_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

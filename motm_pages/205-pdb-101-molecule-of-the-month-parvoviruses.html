@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Parvoviruses</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Parvoviruses" property="og:title"/>
+<meta content="Viruses that cause distemper are surrounded by an icosahedral capsid" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/125/1fpv_2cas.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/125" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Parvoviruses" name="twitter:title"/>
+<meta content="Viruses that cause distemper are surrounded by an icosahedral capsid" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/125/1fpv_2cas.jpg" name="twitter:image"/>
+<meta content="Viruses that cause distemper are surrounded by an icosahedral capsid" name="description"/>
+<meta content="canine parvovirus,feline distemper,fifth disease,parvovirus B19,viral emergence,1fpv,2cas,1s58,4dpv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 125
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 125 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Parvoviruses</h1>
+<p><i>Viruses that cause distemper are surrounded by an icosahedral capsid</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Capsids from feline panleukopenia virus (top) and canine parvovirus (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/125/1fpv_2cas.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Capsids from feline panleukopenia virus (top) and canine parvovirus (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/125/125-Parvoviruses_1fpv_2cas.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses are finely tuned to perform their deadly job. Many viruses are highly specific: they infect only a particular animal or plant, and may even only infect a few types of cells within their preferred hosts. However, viruses occasionally cross the line, and gain the ability to infect other hosts. This is often termed <i>viral emergence,</i> and has been sensationalized as a major threat to global health in books such as <i>The Hot Zone.</i> Fortunately, this type of switching occurs only rarely, but when it does, it can be a disaster. For instance, several of the largest historic pandemics of influenza have been caused by emergence of human viruses from bird viruses. An even more recent viral emergence has occurred in the parvoviruses, where a cat virus suddenly mutated and caused a global pandemic disease in dogs.</div>
+<h4>Distemper</h4>
+<div>Feline panleukopenia virus, shown here at the top from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fpv" target="_blank">1fpv <i class="fa fa-external-link"> </i></a></span>, is a tiny virus that causes feline distemper. It often attacks kittens, killing all of their white blood cells and also attacking cells in the intestine. If untreated, the disease is often fatal, either due to dehydration or secondary bacterial infection. Fortunately, an effective vaccine is available which largely protects the domestic cat population from this devastating disease.</div>
+<h4>Cats and Dogs</h4>
+<div>In the late 1970s, a pandemic swept the entire globe, infecting dogs with a similar disease. When researchers looked closer, they discovered a small virus, shown here at the bottom from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cas" target="_blank">2cas <i class="fa fa-external-link"> </i></a></span>. It is nearly identical to feline panleukopenia virus, with only a few changes in amino acids, and was named canine parvovirus. By careful study of dogs that had died in the preceding years, researchers were able to uncover the emergence and rapid evolution of this canine virus from the feline virus. It appears that a few small mutations suddenly allowed the virus to attack dog cells, and then the virus swept around the world, infecting dog populations.</div>
+<h4>Changing Hosts</h4>
+<div>Two mutations on the surface of these two viruses, shown on the bottom structure in blue and green, determine their targets for infection. Both viruses attach to the transferrin receptor on cell surfaces. This receptor normally picks up <a href="https://pdb101.rcsb.org/motm/35">transferrin,</a> a protein involved in iron transport, out of the blood and transports it inside the cell. The virus catches a ride on this receptor, using it to travel into the cell. The receptors in cat cells and dog cells are slightly different, and the two mutations on the viral surfaces match these differences perfectly.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Capsid of the human parvovirus B19." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/125/1s58.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Capsid of the human parvovirus B19.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/125/125-Parvoviruses_1s58.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Human Parvovirus</h4>
+<div>Many other examples of parvoviruses have been discovered, including several that infect human cells. The first human parvovirus that was discovered is the B19 virus, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1s58" target="_blank">1s58 <i class="fa fa-external-link"> </i></a></span>. It causes a childhood disease called "fifth disease," so called because it was the fifth disease that was discovered that causes a similar rash. Infection by B19 is widespread--by age 15 half of the population is typically infected, and most people will be infected sometime in their life. The symptoms are usually mild, often just showing a reddening of the skin, although it occasionally leads to more severe complications such as arthritis, especially for infections later in life.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Canine Parvovirus (PDB entry 4dpv)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/125/4dpv_jmol.jpg"/></div>
+<p>Parvovirus capsids are compact, altogether just a bit bigger than a ribosome (the term "parvum" means "small" in Latin). They are composed of 60 copies of a capsid protein, surrounding a single strand of DNA. The canine parvovirus structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4dpv" target="_blank">4dpv <i class="fa fa-external-link"> </i></a></span>, includes the entire structure, including proteins and DNA. The proteins are colored here in groups of five: five proteins that associate around a five-fold axis are colored white, five more are colored red, etc. Notice how the chains interlock, making a very sturdy protein shell. To see the DNA inside, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Can you find other examples of parvoviruses in the PDB? Are their structures similar to the feline, canine and human viruses shown here?</li>
+<li>The chains of parvoviruses capsid interlock with one another. Is this true of the chains of other virus capsids? What are some advantages and disadvantages of interlocking chains?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. G. Rossman, F. Arisaka, A. J. Battisti, V. D. Bowman, P. R. Chipman, A. Fokine, S. Hafenstein, S. Kanamaru, V. A. Kostyuchenko, V. V. Mesyanzhinov, M. M. Shneider, M. C. Morais, P. G. Leiman, L. M. Palermo, C. R. Parrish and C. Xiao (2007) From structure of the complex to understanding of the biology. Acta Crystallographica D63, 9-16.</li>
+<li>C. R. Parrish and Y. Kawaoka (2005) The origins of new pandemic viruses: the acquisition of new host ranges by canine parvovirus and influenza A viruses. Annual Review of Microbiology 59, 553-586.</li>
+<li>N. S. Young and K. E. Brown (2004) Parvovirus B19. New England Journal of Medicine 350: 586-597.</li>
+<li>K. Hueffer and C. R. Parrish (2003) Parvovirus host range, cell tropisn and evolution. Current Opinion in Microbiology 6, 392-398.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_5">http://doi.org/10.2210/rcsb_pdb/mom_2010_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

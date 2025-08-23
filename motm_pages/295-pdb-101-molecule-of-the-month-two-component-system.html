@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Two-component Systems</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Two-component Systems" property="og:title"/>
+<meta content="Bacteria respond to their environment with two-component sensing systems." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_2c2a_3by8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/190" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Two-component Systems" name="twitter:title"/>
+<meta content="Bacteria respond to their environment with two-component sensing systems." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_2c2a_3by8.jpg" name="twitter:image"/>
+<meta content="Bacteria respond to their environment with two-component sensing systems." name="description"/>
+<meta content="histidine kinase,sensing,Two-component systems,3by8,2c2a,1kgs,1gxp,1zes,3dge" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 190
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 190 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Two-component Systems</h1>
+<p><i>Bacteria respond to their environment with two-component sensing systems.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="This picture combines portions from two different bacterial two-component proteins. A sensory domain is shown at the top with bound citrate molecules in yellow, and a histidine kinase domain is shown at the bottom with ATP in red and the histidine in magenta. The bacterial membrane is shown schematically at center." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_2c2a_3by8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>This picture combines portions from two different bacterial two-component proteins. A sensory domain is shown at the top with bound citrate molecules in yellow, and a histidine kinase domain is shown at the bottom with ATP in red and the histidine in magenta. The bacterial membrane is shown schematically at center.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_2c2a_3by8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Bacteria live at the mercy of their environment, much more so than we do. Our bodies help to buffer changes in temperature or resources, and we can always pick up and walk away if things get really bad. Bacteria don't have these options. They are tiny and are subject to large changes in conditions in their local surroundings, so they often must make due with what they have. To do this, they build a collection of several dozen sensors that probe the local conditions and decide how best to respond.</div>
+<h4>Signaling with Two Components</h4>
+<div>In most cases, this sensory system is quite simple, comprised of two parts. The first component is a large sensor molecule. It includes a domain that senses something-- for instance, the one shown here (PDB entry <span class="rcsb_id_tag" title="Sensing domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3by8" target="_blank">3by8 <i class="fa fa-external-link"> </i></a></span>) senses small nutrients such as citrate. This is connected to a domain that includes a kinase (PDB entry <span class="rcsb_id_tag" title="Histidine kinase domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2c2a" target="_blank">2c2a <i class="fa fa-external-link"> </i></a></span>), that can phosphorylate a special histidine near the center of the protein. This phosphoryl group can then be passed to an aspartate on the second component, a "response regulator", which mobilizes the appropriate action in the cell. When the sensor is activated, it sends a signal through the molecule to the kinase domain, which then either increases or decreases the phosphorylation level of the response regulator and controls the adaptive responses.</div>
+<h4>Variations on a Theme</h4>
+<div>Looking at the two-component systems in bacterial cells, we find many different variations. All are built with a similar set of parts: an input sensor, an output response regulator, and the phosphorylation machinery that connects the two. But the details are often changed for particular needs. For instance, some are entirely inside the cell, and others have a sensor outside. Some have a separate response regulator that delivers the message throughout the cell, others have it built into the sensor chain. The mechanism for communicating between the sensor and the kinase is a great mystery, under intensive study. Some scientists propose a scissoring motion that propagates down the molecule, others propose a piston-like motion.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A response regulator in the inactive and active DNA-bound states. The aspartate that is phosphorylated is shown in mageta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_1kgs_1gxp_1zes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A response regulator in the inactive and active DNA-bound states. The aspartate that is phosphorylated is shown in mageta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_1kgs_1gxp_1zes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Regulating Response</h4>
+<div>Once the signal is received, a response regulator delivers the message inside the cell. In many cases, the response regulator is a DNA-binding protein. When the phosphate is added, the protein enhances its binding to DNA and modifies the transcription of appropriate genes for the response. For instance, PDB entry <span class="rcsb_id_tag" title="Response regulator"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kgs" target="_blank">1kgs <i class="fa fa-external-link"> </i></a></span> shows the inactive, unphosphorylated form of a response regulator and PDB entries <span class="rcsb_id_tag" title="Response regulator"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gxp" target="_blank">1gxp <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Response regulator"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1zes" target="_blank">1zes <i class="fa fa-external-link"> </i></a></span> show the active form of a similar regulator bound to DNA. Other regulators, however, act quite differently, binding to RNA, acting as enzymes, or binding to other proteins--whatever is needed to stimulate the best response.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Histidine Kinase and Response Regulator (PDB entry 3dge)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/190/190-TwoComponentSystems_3dge_JSmol.jpg"/></div>
+<p>PDB entry <span class="rcsb_id_tag" title="Two-component system"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3dge" target="_blank">3dge <i class="fa fa-external-link"> </i></a></span> captures the passing of the signal from the sensory protein to the response regulator. Two copies of the response regulator (green) are bound to the sensory protein (blue), placing the key aspartate on the regulator close to the key histidine on the sensory protein (both shown with atomic spheres). The structure also includes a sulfate ion (yellow) in the approximate position occupied by the phosphate that is normally transferred. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The sensory protein is very dynamic, flexing when it senses its appropriate target and allowing the kinase domain to phosphorylate the histidine. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4biv" target="_blank">4biv</a> captures this process: chain A has the kinase in an inactive conformation, and chain B has the kinase domain next to His248, ready to phosphorylate it.</li>
+<li>Because two-component system proteins are modular, scientists often break them into pieces when they determine atomic structures of them. You can use the Protein Feature View to see how these pieces fit into the whole protein sequence. For instance, look at the entry for the <a href="http://www.rcsb.org/pdb/protein/P0AFJ5"> response regulator protein PhoB.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. Gao &amp; A. M. Stock (2010) Molecular strategies for phosphorylation-mediated regulation of response regulator activity. Current Opinion in Microbiology 13, 160- 167.</li>
+<li>T. Krell, J. Lacal, A. Busch, H. Silva-Jimenez, M. E. Guazzaroni &amp; J. L. Ramos (2010) Bacterial sensor kinases: diversity in the recognition of environmental signals. Annual Review of Microbiology 64, 539-559.</li>
+<li>3dge: P. Casino, V. Rubio &amp; A. Marina (2009) Structural insight into partner specificity and phosphoryl transfer in two-component signal transduction. Cell 139, 325-336.</li>
+<li>R. Gao &amp; A. M. Stock (2009) Biological insights from structures of two-component proteins. Annual Review of Microbiology 63, 133-154.</li>
+<li>3by8: J. Cheung &amp; W. A. Hendrickson (2008) Crystal structures of C4-dicarboxylate ligand complexes with sensor domains of histidine kinases DcuS and DctB. Journal of Biological Chemistry 283, 30256-30265.</li>
+<li>1zes: P. Bachhawat, G. V. T. Swapna, G. T. Montelione &amp; A. M. Stock (2005) Mechanism of activation for transcription factor PhoB suggested by different modes of dimerization in the inactive and active states. Structure 13, 1353-1363.</li>
+<li>2c2a: A. Marina, C. D. Waldburger &amp; W. A. Hendrickson (2005) Structure of the entire cytoplasmic portion of a sensor histidine-kinase protein. EMBO Journal 24, 4247-4259.</li>
+<li>4biv: A. E. Mechaly, N. Sassoon, J. M. Betton &amp; P. M. Alzari (2014) Segmental helical motions and dynamical asymmetry modulate histidine kinase autophosphorylation. PLOS Biology 12, 1776.</li>
+<li>1gxp: A. G. Blanco, M. Sola, F. X. Gomis-Ruth &amp; M. Coll (2002) Tandem DNA recognition by PhoB, a two-component signal transduction transcriptional activator. Structure 10, 701-713.</li>
+<li>1kgs: D. R. Buckler, Y. Zhou &amp; A. M. Stock (2002) Evidence of intradomain and interdomain flexibility in an OmpR/PhoB homolog from Thermotoga maritima. Structure 10, 153-164.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_10">http://doi.org/10.2210/rcsb_pdb/mom_2015_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

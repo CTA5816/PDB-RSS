@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Plastic-eating Enzymes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Plastic-eating Enzymes" property="og:title"/>
+<meta content="Researchers are looking to Nature to find ways to dispose of discarded plastic." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/277/5xh3_6qga.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/277" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Plastic-eating Enzymes" name="twitter:title"/>
+<meta content="Researchers are looking to Nature to find ways to dispose of discarded plastic." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/277/5xh3_6qga.jpg" name="twitter:image"/>
+<meta content="Researchers are looking to Nature to find ways to dispose of discarded plastic." name="description"/>
+<meta content="Plastic,pollution,recycling,bioremediation,biotechnology,2zm0,5xh3,6qga,5y0m,7vve" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 277
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 277 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Plastic-eating Enzymes</h1>
+<p><i>Researchers are looking to Nature to find ways to dispose of discarded plastic.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="PETase enzyme degrades polyester plastic (PET) into monohydroxyethyl terephthalate (MHET). Then, MHETase enzyme degrades MHET into its constituents ethylene glycol (EG) and terephthalic acid (TPA)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/277/5xh3_6qga.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>PETase enzyme degrades polyester plastic (PET) into monohydroxyethyl terephthalate (MHET). Then, MHETase enzyme degrades MHET into its constituents ethylene glycol (EG) and terephthalic acid (TPA).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/277/5xh3_6qga.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Plastics have changed the world we live in. They provide a cheap and versatile way to create consumer products. But plastic has a severe downside. Most plastics in common use are highly stable chemical polymers, and when discarded, they persist in the environment for decades or perhaps even centuries. Widespread use of plastic presents an increasingly severe threat to the global environment and human health. Researchers are now looking for natural ways to recycle and degrade plastics to confront this challenge. Amazingly, some bacteria are ahead of us and have already evolved enzymes that can attack certain types of plastics.</div>
+<h4>Plastic Eaters</h4>
+<div>The two enzymes shown here, from PDB ID <a href="https://www.rcsb.org/structure/5xh3" target="_blank">5xh3</a> and <a href="https://www.rcsb.org/structure/6qga" target="_blank">6qga</a>, were found in a bacterium growing on plastic bottles in a recycling facility. Together, they break down polyethylene terephthalate (PET). This plastic is composed of two types of constituents connected by an ester linkage into long polymer chains. The PETase enzyme clips the polymer into manageable pieces and the MHETase enzyme (monohydroxyethyl terephthalate hydrolase) finishes the job by clipping the pieces into individual constituents. Other enzymes in the bacteria can then use these constituents as nutrients to support growth.</div>
+<h4>Recycling Plastic</h4>
+<div>Plastics pose several challenges for industrial-scale recycling. The bonds that hold the constituents together in plastic polymers—often esters and amides—are chemically stable. Fortunately, many types of enzymes excel at breaking these types of bonds, since they are also common connections that hold biological polymers together. However, plastics have a dense structure, with many polymer fibers packed tightly together, so it can be difficult for enzymes to access these chemical bonds. One way to help is to heat them up and soften the structure. Because of this, researchers are looking to engineer these natural enzymes to be more stable and work at elevated temperatures.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two enzymes that degrade nylon plastics, with engineered amino acids in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/277/5y0m_2zm0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two enzymes that degrade nylon plastics, with engineered amino acids in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/277/5y0m_2zm0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Eating Nylon</h4>
+<div>Discovery of plastic-eating enzymes has launched a search for new plastic-eating organisms. For example, screening of many bacteria lead to the discovery of the enzymes shown here, which can break down nylon plastics. Nylon is constructed with amide bonds similar to those that connect amino acids in proteins. As with the PET enzymes, nylon degradation is performed in two steps, with NylC breaking the nylon polymer into smaller pieces, and NylB totally degrading it into its constituents. The enzymes shown here, from PDB ID <a href="https://www.rcsb.org/structure/5y0m" target="_blank">5y0m</a> and <a href="https://www.rcsb.org/structure/2zm0" target="_blank">2zm0</a>, here have been engineered with a few amino acid changes that increase activity and heat stability.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Engineered PET Hydrolase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/277/7vve_jmol-jmol.jpg"/></div>
+<p>PDB ID <a href="https://www.rcsb.org/structure/7vve" target="_blank">7vve</a> includes an engineered PET-breaking enzyme with enhanced plastic-digesting ability and greater thermal stability. The structure includes MHET bound in the active site and reveals how several mutations can enhance the activity of the enzyme. Two neighboring positions are changed to cysteine, which together form a disulfide bridge that makes the enzyme more stable to heat. Two other changes reduce the size of amino acids flanking the active site, presumably making it more accessible to plastic polymer chains. The enzyme uses a classic serine-histidine-aspartate catalytic triad like those seen in <a href="https://pdb101.rcsb.org/motm/46">serine proteases</a>. In order to determine the structure with the plastic fragment bound in the active site, the serine was changed to alanine. To explore this structure in more detail and compare it with the wild type cutinase enzyme (PDB ID <a href="https://www.rcsb.org/structure/4eb0" target="_blank">4eb0</a>), click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many structures of engineered plastic-eating enzymes are available in the PDB archive. To find them, start with any structure of the enzyme and then use the “Find similar proteins by: Sequence” (in the “Macromolecules” section of each Structure Summary Page). The changes are typically minimal, so a 80% or 90% sequence identity will return a useful list.</li>
+<li>You can easily compare engineered structures and the wild type structures using the <a href="https://www.rcsb.org/alignment"> “Pairwise Structure Alignment” feature in the “Analyze” tab.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Chow, J., Perez-Garcia, P., Dierkes, R., Streit, W.R. (2022) Microbial enzymes will offer limited solutions to the global plastic pollution crisis. Microbial Biotechnology doi: 10.1111/1751-7915.14135</li>
+<li>7vve: Zeng, W., Li, X., Yang, Y., Min, J., Huang, J.-W., Liu, W., Niu, D., Yang, X., Han, X., Zhang, L., Dai, L., Chen, C.-C., Guo, R.-T. (2022) Substrate-Binding Mode of a Thermophilic PET Hydrolase and Engineering the Enzyme to Enhance the Hydrolytic Efficacy. ACS Catal 12: 3033-3040</li>
+<li>6qga: Palm, G.J., Reisky, L., Bottcher, D., Muller, H., Michels, E.A.P., Walczak, M.C., Berndt, L., Weiss, M.S., Bornscheuer, U.T., Weber, G. (2019) Structure of the plastic-degrading Ideonella sakaiensis MHETase bound to a substrate. Nat Commun 10: 1717</li>
+<li>5y0m: Negoro, S., Shibata, N., Lee, Y.H., Takehara, I., Kinugasa, R., Nagai, K., Tanaka, Y., Kato, D.I., Takeo, M., Goto, Y., Higuchi, Y. (2018) Structural basis of the correct subunit assembly, aggregation, and intracellular degradation of nylon hydrolase. Sci Rep 8: 9725-9725</li>
+<li>5xh3: Han, X., Liu, W., Huang, J.W., Ma, J., Zheng, Y., Ko, T.P., Xu, L., Cheng, Y.S., Chen, C.C., Guo, R.T. (2017) Structural insight into catalytic mechanism of PET hydrolase. Nat Commun 8: 2106-2106</li>
+<li>2zm0: Kawashima, Y., Ohki, T., Shibata, N., Higuchi, Y., Wakitani, Y., Matsuura, Y., Nakata, Y., Takeo, M., Kato, D., Negoro, S. (2009) Molecular design of a nylon-6 byproduct-degrading enzyme from a carboxylesterase with a beta-lactamase fold. FEBS J 276: 2547-2556</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_1">http://doi.org/10.2210/rcsb_pdb/mom_2023_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

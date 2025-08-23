@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Selenocysteine Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Selenocysteine Synthase" property="og:title"/>
+<meta content="Selenium is used in place of sulfur to build proteins for special tasks" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/104/104_3bc8_2yye.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/104" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Selenocysteine Synthase" name="twitter:title"/>
+<meta content="Selenium is used in place of sulfur to build proteins for special tasks" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/104/104_3bc8_2yye.jpg" name="twitter:image"/>
+<meta content="Selenium is used in place of sulfur to build proteins for special tasks" name="description"/>
+<meta content="selenocysteine,selenocysteine incorporation,selenocysteine synthase,selenophosphate synthetase,selenoproteins,selenotransferase activity,3bc8,2yye,1wb1,2uwm,1gp1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 104
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 104 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Selenocysteine Synthase</h1>
+<p><i>Selenium is used in place of sulfur to build proteins for special tasks</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Selenocysteine synthase (top) and selenophosphate synthase (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/104/104_3bc8_2yye.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Selenocysteine synthase (top) and selenophosphate synthase (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/104/104-SelenocysteineSynthase-3bc8_2yye.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>If you have visited your local health food store or looked closely at the ingredients in your daily multivitamin, you may have noticed that the element selenium is often listed as one of the beneficial supplements. Selenium is a double-edged sword, however. In general, selenium compounds are toxic and have an unpleasant garlicy odor, but in trace amounts, selenium is essential for our health. Selenium atoms are similar to sulfur atoms, with similar properties, except that selenium compounds tend to be more reactive. In a few specialized proteins, this extra reactivity is just what is needed. For instance, by using a selenium atom instead of sulfur, thioredoxin reductase improves its rate of catalysis by 100 times, and formate dehydrogenases act 300 times faster.</div>
+<h4>Selenocysteine and Selenomethionine</h4>
+<div>Proteins contain two types of amino acids with sulfur atoms, and both may be made in versions with selenium atoms. Selenomethionine is not made specifically by cells, but it is created occasionally by accident by the normal enzymes that make methionine. This is not a problem, however, since it is similar enough to normal methionine. It is, however, very useful to crystallographers to help with the determination of x-ray crystal structures, since it has more electrons than sulfur and is easily located in x-ray experiments. Selenocysteine, on the other hand, is more reactive than normal cysteine, and it is specifically added to special selenoproteins when it is needed.</div>
+<h4>Synthesis with Selenium</h4>
+<div>Quite surprisingly, cells modify their genetic code to add selenocysteine into their proteins. The basic genetic code used by all organisms on Earth specifies twenty amino acids, along with a few stop codons. In order to add a 21st amino acid to this code, cells reinterpret UGA stop codons in special cases. But this causes a problem: how does a cell know when to read UGA as "stop" and when to read it as "selenocysteine"? This is done by using a special signal sequence that is located after the UGA codon. In bacteria, this signal is immediately after the UGA codon, in the coding portion of the messenger RNA. In our cells, the signal is much further away at the end of the coding sequence. As shown on the next page, this sequence is recognized by a special elongation factor that delivers the selenocysteine tRNA to the ribosome at just the right moment.</div>
+<h4>Slippery Selenium</h4>
+<div>Since selenium and sulfur are so similar, cells must pay careful attention to how selenocysteine is attached to tRNA. They have to make sure that selenocysteine is not added to normal cysteine tRNA, otherwise selenocysteine might be added mistakenly in the wrong place. To solve this problem, selenocysteine tRNA is made in several steps. First, a serine is attached to the selenocysteine tRNA. Then, a second enzyme phosphorylates the serine, making it ready. Finally, the oxygen in the serine is swapped for selenium by the enzyme selenocysteine synthase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3bc8" target="_blank">3bc8 <i class="fa fa-external-link"> </i></a></span>. The small enzyme selenophosphate synthase, shown at the bottom from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2yye" target="_blank">2yye <i class="fa fa-external-link"> </i></a></span>, creates an activated form of selenium that is needed in this reaction. By using this stepwise process, none of the tRNA-charging enzymes are ever faced with the delicate task of differentiating cysteine from selenocysteine.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Elongation factor SelB (left) bound to a short piece of messenger RNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/104/104_1wb1_2uwm.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Elongation factor SelB (left) bound to a short piece of messenger RNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/104/104-SelenocysteineSynthase-1wb1_2uwm.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Specifying Selenium</h4>
+<div>Elongation factor SelB is the protein that decides when to add a selenocysteine at UGA codons instead of stopping. It recognizes a special "selenocysteine insertion sequence" that is found after the UGA codon and forms a distinctive hairpin loop in the messenger RNA. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1wb1" target="_blank">1wb1 <i class="fa fa-external-link"> </i></a></span>, shown on the left, shows the whole protein. The large portion at the top binds to GTP (shown in orange) and delivers the selenocysteine tRNA to the ribosome. It is similar to <a class="static" href="http://pdb101.rcsb.org/motm/81"> elongation factor Tu</a>, which delivers the twenty normal tRNA molecules to the ribosome. This is attached to a flexible tail that binds to the insertion sequence in the messenger RNA. The structure on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2uwm" target="_blank">2uwm <i class="fa fa-external-link"> </i></a></span>) includes this flexible tail of SelB along with a piece of the messenger RNA (in red and orange). The protein recognizes a guanine base that is flipped out in the loop, along with the overall shape of the hairpin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glutathione Peroxidase (PDB entry 1gp1)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/104/104_1gp1_jmol.jpg"/></div>
+<p>About 15 selenoproteins have been found in human cells. These include several deiodinase enzymes that are essential for the generation of thyroid hormones, several glutathione peroxidases that are important for the conversion and detoxification of compounds with reactive oxygen atoms, and several proteins of unknown function. The active site of glutathione peroxidase is shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gp1" target="_blank">1gp1 <i class="fa fa-external-link"> </i></a></span>. The picture shows two of the four identical active sites in the tetrameric enzyme. Each active site is composed of a selenocysteine amino acid (the selenium atoms are colored green) which is activated by a tryptophan and a glutamine (shown with atomic colors). In this crystal structure, the selenocysteine is highly oxidized, with two oxygen atoms (shown as small red spheres) bound to the selenium. In the normal catalytic cycle of the enzyme, it is thought that the selenium extracts one reactive oxygen from dangerous peroxides, and then uses water and glutathione to neutralize it. <br/><br/> This illustration was created with Jmol--you can see an interactive version of the structure by clicking on the image.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are several natural selenoproteins in the PDB, as well as many proteins with selenomethionine residues that were used in the crystallographic structure determination. Can you find some examples? </li>
+<li>SelB recognizes the special insertion sequence by forming specific contacts with a guanine base in the mRNA loop. Can you identify the amino acids that are important for this recognition?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>L. A. Wessjohann, A. Schneider, M. Abbas and W. Brandt (2007) Selinium in chemistry and biochemistry in comparison with sulfur. Biological Chemistry 388, 997-1006. </li>
+<li>S. Gromer, J. K. Eubel, B. L. Lee and J. Jacob (2005) Human selenoproteins at a glance. Cellular and Molecular Life Sciences 62, 2414-2437. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_8">http://doi.org/10.2210/rcsb_pdb/mom_2008_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

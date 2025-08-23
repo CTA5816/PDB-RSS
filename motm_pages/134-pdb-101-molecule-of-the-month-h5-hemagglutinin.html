@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: H5 Hemagglutinin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: H5 Hemagglutinin" property="og:title"/>
+<meta content="Sugar-binding protein on the surface of the H5N1 avian influenza virus" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/302/H5_1JSN_1RVT.png" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/302" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: H5 Hemagglutinin" name="twitter:title"/>
+<meta content="Sugar-binding protein on the surface of the H5N1 avian influenza virus" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/302/H5_1JSN_1RVT.png" name="twitter:image"/>
+<meta content="Sugar-binding protein on the surface of the H5N1 avian influenza virus" name="description"/>
+<meta content="influenza,bird flu,hemagglutinin" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 302
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 302 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: H5 Hemagglutinin</h1>
+<p><i>Sugar-binding protein on the surface of the H5N1 avian influenza virus</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Hemagglutinin trimers bound to sialic acid receptor analogs (orange) are shown from the top view and side views. Avian H5 is shown in purple, and human H1 is shown in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/302/H5_1JSN_1RVT.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Hemagglutinin trimers bound to sialic acid receptor analogs (orange) are shown from the top view and side views. Avian H5 is shown in purple, and human H1 is shown in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/302/H5_1JSN_1RVT.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Since it first emerged in 1996, H5N1 avian influenza (also known as "bird flu") has resulted in the death and culling of millions of birds across the globe, causing significant economic losses in the poultry industry and raising alarms about at-risk wild bird populations. Recent outbreaks have resulted in the illness of not just birds, but have also caused sickness in wild and domestic mammals.</div>
+<h4>An Assortment of Subtypes</h4>
+<div><a href="https://pdb101.rcsb.org/motm/76">Hemagglutinin</a> is a spike-shaped protein that, along with <a href="https://pdb101.rcsb.org/motm/113">neuraminidase</a>, covers the surface of influenza viruses. There are currently 18 known subtypes of hemagglutinin (H1 to H18), and 11 known subtypes of neuraminidase (N1 to N11). Different combinations of these proteins determine the viral subtype, such as H1N1 or H3N2. While humans are most often infected with viruses harboring H1, H2, or H3 hemagglutinins, birds can be infected by viruses expressing nearly any hemagglutinin subtype (with the exception of H17 and H18, which were isolated from bats). Only two hemagglutinin subtypes, H5 and H7, cause severe disease in birds, however.</div>
+<h4>Sugar Specificity</h4>
+<div>Influenza is able to enter and infect cells through the action of hemagglutinin, which recognizes and attaches to specific molecules on the cell surface. Most hemagglutinins have been found to target sialic acids, a family of nine-carbon sugar molecules that are commonly found at the tips of glycans, or sugar chains, that are attached to proteins and lipids on the cell surface. Sialic acid can be linked to glycans in different ways. The two most common linkage types are called α-2,3 and α-2,6 linkages. Avian influenza viruses, such as H5N1 or H7N9, are adapted to bind to α-2,3-linked sialic acid receptors, which are predominantly found in the respiratory and gastrointestinal tracts of birds. Avian H5 is shown in purple on the right (PDB ID <a href="https://www.rcsb.org/structure/1JSN">1JSN</a>). In humans, the majority of cells in the upper respiratory tract (nose, throat, and trachea) have α-2,6-linked sialic acid receptors. Human influenza viruses, such as H1N1 (H1 is shown in blue, PDB ID <a href="https://www.rcsb.org/structure/1RVT">1RVT</a>), are adapted to bind to these receptors, making them more easily transmissible among people.</div>
+<h4>Crossing the Species Barrier</h4>
+<div>Despite its preference for birds, H5N1 is known to infect humans and other mammals. These infections typically occur from direct contact with infected birds in crowded environments, such as in poultry farms or live bird markets. While human-to-human transmission of H5N1 is very rare and inefficient, numerous cases of transmission between mammals have recently been reported, including an outbreak of H5N1 in multiple dairy cattle farms across the United States. Research has shown that mammary glands of cows are rich in α-2,3-linked sialic acid receptors, allowing H5N1 to replicate and be released in milk, and potentially to be transmitted to other cows through contaminated milking equipment.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="ST3Gal1 (light green) and ST6Gal1 (dark green) are attached to the Golgi membrane (gray) through a flexible linker, which is drawn schematically here. ST3Gal1 is shown bound to a product molecule (dark orange) and an acceptor sugar (light orange). The catalytic base is highlighted in light green. ST6Gal1 is shown bound to a α-2,6-linked sialic acid (light orange)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/302/2WNB_6QVT.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ST3Gal1 (light green) and ST6Gal1 (dark green) are attached to the Golgi membrane (gray) through a flexible linker, which is drawn schematically here. ST3Gal1 is shown bound to a product molecule (dark orange) and an acceptor sugar (light orange). The catalytic base is highlighted in light green. ST6Gal1 is shown bound to a α-2,6-linked sialic acid (light orange).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/302/2WNB_6QVT.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Creating a Sugar-Coated Cell</h4>
+<div>How do sialic acids get added to cell surface molecules? This happens through the action sialyltransferases, enzymes that transfer sialic acid from donor molecules, such as CMP-sialic acid, to acceptor molecules, such as glycoproteins and glycolipids. Sialyltransferases, which are found on the membrane of the Golgi, are categorized into several subfamilies based on the type of glycosidic bond they form: α-2,3-sialyltransferases (such as ST3Gal1, PDB ID <a href="https://www.rcsb.org/structure/2WNB">2WNB</a>, shown in light green) add sialic acid to galactose residues via an α-2,3 linkage, while α-2,6-sialyltransferases (such as ST6Gal1, PDB ID <a href="https://www.rcsb.org/structure/6QVT">6QVT</a>, shown in dark green) attach sialic acid to galactose via an α-2,6 linkage. The abundance of cell surface sialylation, which is involved in diverse processes including cell recognition, signaling, and differentiation, makes it an ideal target for viruses.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Host Jumping</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/302/exploringStructure_labels-jmol.png"/></div>
+<p>Research has shown that a change in a single amino acid can result in H5 preferentially binding to human/mammalian (α-2,6 linked) receptors rather than avian (α-2,3-linked) receptors. Specifically, changing residue 226, which is normally a glutamine, to a leucine provides a more hydrophobic environment that favors binding to mammalian receptors. Take a look at the JSmol tab to compare how H5 (PDB IDs <a href="https://www.rcsb.org/structure/4K63" target="_blank">4K63</a> and <a href="https://www.rcsb.org/structure/4K64" target="_blank">4K64</a>) and mutant H5 (PDB IDs <a href="https://www.rcsb.org/structure/4K66" target="_blank">4K66</a> and <a href="https://www.rcsb.org/structure/4K67" target="_blank">4K67</a>) bind to avian and human receptors.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>After recognizing and binding to receptors on the cell surface, hemagglutinin attacks cells through several steps. Read more about it <a href="https://pdb101.rcsb.org/motm/76">here</a>.</li>
+<li>Learn about other components of influenza, and what a cross-section of a virus looks like <a href="https://pdb101.rcsb.org/sci-art/goodsell-gallery/influenza-virus">here</a>.</li>
+<li>Take a look at what an influenza vaccine looks like <a href="https://pdb101.rcsb.org/sci-art/goodsell-gallery/influenza-vaccine">here</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1JSN: Ha Y, Stevens DJ, Skehel JJ, Wiley DC. (2001) X-ray structures of H5 avian and H9 swine influenza virus hemagglutinins bound to avian and human receptor analogs. Proc Natl Acad Sci U S A. Sep 25;98(20):11181-6..</li>
+<li>1RVT: Gamblin SJ, Haire LF, Russell RJ, Stevens DJ, Xiao B, Ha Y, Vasisht N, Steinhauer DA, Daniels RS, Elliot A, Wiley DC, Skehel JJ. (2004) The structure and receptor binding properties of the 1918 influenza hemagglutinin. Science. Mar 19;303(5665):1838-42.</li>
+<li>2WNF: Rao FV, Rich JR, Rakić B, Buddai S, Schwartz MF, Johnson K, Bowe C, Wakarchuk WW, Defrees S, Withers SG, Strynadka NC. (2009) Structural insight into mammalian sialyltransferases. Nat Struct Mol Biol. Nov;16(11):1186-8.</li>
+<li>6QVT: Harrus D, Harduin-Lepers A, Glumoff T. (2020) Unliganded and CMP-Neu5Ac bound structures of human α-2,6-sialyltransferase ST6Gal I at high resolution. J Struct Biol. Nov 1;212(2):107628. </li>
+<li>4K63, 4K64, 4K66, 4K67: Zhang W, Shi Y, Lu X, Shu Y, Qi J, Gao GF. (2013) An airborne transmissible avian influenza H5 hemagglutinin seen at the atomic level. Science. 2013 Jun 21;340(6139):1463-7. </li>
+<li>Mair CM, Ludwig K, Herrmann A, Sieben C. (2013) Receptor binding and pH stability - how influenza A virus hemagglutinin affects host-specific virus infection. Biochim Biophys Acta. 2014 Apr;1838(4):1153-68. </li>
+<li>Caserta LC, Frye EA, Butt SL, Laverack M, Nooruzzaman M, Covaleda LM, Thompson AC, Koscielny MP, Cronk B, Johnson A, Kleinhenz K, Edwards EE, Gomez G, Hitchener G, Martins M, Kapczynski DR, Suarez DL, Alexander Morris ER, Hensley T, Beeby JS, Lejeune M, Swinford AK, Elvinger F, Dimitrov KM, Diel DG. (2024) Spillover of highly pathogenic avian influenza H5N1 virus to dairy cattle. Nature. Jul 25.</li>
+<li>Harduin-Lepers, A. (2023) The vertebrate sialylation machinery: structure-function and molecular evolution of GT-29 sialyltransferases. Glycoconj J 40, 473–492. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_2">http://doi.org/10.2210/rcsb_pdb/mom_2025_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

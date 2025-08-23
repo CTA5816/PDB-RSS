@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Eastern Equine Encephalitis Virus</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Eastern Equine Encephalitis Virus" property="og:title"/>
+<meta content="Infection by EEEV can cause severe neurological disease" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/306/6MX4.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/306" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Eastern Equine Encephalitis Virus" name="twitter:title"/>
+<meta content="Infection by EEEV can cause severe neurological disease" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/306/6MX4.jpg" name="twitter:image"/>
+<meta content="Infection by EEEV can cause severe neurological disease" name="description"/>
+<meta content="virus,encephalitis,EEEV" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 306
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 306 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Eastern Equine Encephalitis Virus</h1>
+<p><i>Infection by EEEV can cause severe neurological disease</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The surface of EEEV (6MX4) is coated in E1 (green) and E2 (yellow) proteins. A cross-section of the virus is shown below, with the membrane depicted in semi-transparent gray and capsid proteins shown in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/306/6MX4.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The surface of EEEV (<a href="https://www.rcsb.org/structure/6MX4" target="_blank">6MX4</a>) is coated in E1 (green) and E2 (yellow) proteins. A cross-section of the virus is shown below, with the membrane depicted in semi-transparent gray and capsid proteins shown in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/306/6MX4.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Eastern equine encephalitis virus (EEEV) and its closely-related cousins Western equine encephalitis virus (WEEV) and Venezuelan equine encephalitis virus (VEEV) are viruses that can cause swelling of the brain (encephalitis) or joints, paralysis, and other neurological conditions in mammals. The different equine encephalitis viruses are all zoonotic, meaning that can be transmitted between animals and humans. Although EEEV is named for its detrimental health impact on horses and livestock, it primarily circulates in passerine birds, which include common species such as robins and sparrows. In most birds, EEEV is able to proliferate while not causing any symptoms. Mosquitoes that feed on infected birds can pass the virus on to mammalian hosts, including humans. Most human infections in people will go unnoticed, but around 5% of cases result in symptoms.</div>
+<h4>Structural proteins</h4>
+<div>EEEV is a member of the Togavirus family of the alphavirus genus, a group of small membrane-enveloped viruses with a single-stranded RNA genome. On the viral surface, 240 transmembrane envelope glycoproteins called E1 (shown in green in the structure on the right, <a href="https://www.rcsb.org/structure/6MX4" target="_blank">6MX4</a>) and E2 (shown in yellow) pack tightly in a regular lattice, forming trimeric spikes. Inside the membrane, another 240 capsid proteins (shown in blue in the cross-section view) help to pack and protect the RNA genome. In addition to E1, E2 and capsid, EEEV includes two other structural proteins – 6K and TF – which play important roles in infection but are not shown in the illustration.</div>
+<h4> </h4>
+<div>Infection of cells by alphaviruses like EEEV rely on adhesive interactions between their surface glycoproteins and membrane proteins on the cell surface. After attaching to the cell, EEEV is internalized via endocytosis. The acidic environment of the endosome triggers a series of conformational changes in the envelope proteins that results in the fusion of the viral membrane with the endosome membrane. This fusion event releases the capsid with its genome cargo into the cytosol. Disassembly of the capsid releases the positive-sense viral RNA, which can then be directly read by ribosomes, leading to the production of viral proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Heparan sulfate (pink, 6ODF) and VLDLR (purple, 8UFC) can both act as receptors for EEEV (yellow/green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/306/receptors.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Heparan sulfate (pink, <a href="https://www.rcsb.org/structure/6ODF" target="_blank">6ODF</a>) and VLDLR (purple, <a href="https://www.rcsb.org/structure/8UFC" target="_blank">8UFC</a>) can both act as receptors for EEEV (yellow/green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/306/receptors.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Multiple modes of attachment</h4>
+<div>One of the features of EEEV that makes it so dangerous is its ability to infect a wide variety of cell types in diverse organisms, including birds, insects, and mammals. This ability to adapt to different hosts is thought to be due in part to the way that EEEV binds to receptors on the cell surface. While some viruses, such as <a href="https://pdb101.rcsb.org/motm/169">HIV</a>, appear to primarily bind to a specific cell surface protein, EEEV has been shown to be able to bind to several different molecules, including the very low density lipoprotein receptor (VLDLR), apolipoprotein E receptor 2 (ApoER2, also called LRP8), and heparan sulfate, a sugar that commonly decorates cell-surface proteins. Structures showing the binding of EEEV envelope proteins to heparan sulfate (pink, from <a href="https://www.rcsb.org/structure/6ODF" target="_blank">6ODF</a>) and VLDLR (purple, from <a href="https://www.rcsb.org/structure/8UFC" target="_blank">8UFC</a>) are shown in the illustration on the left. Researchers found that VLDLR, which has a long and flexible extracellular domain, can bind to EEEV envelope proteins in a variety of ways. Rather than relying on a single strong contact, attachment and subsequent infection by EEEV appears to require multiple weaker interactions between the virus and cell surface molecules. This strategy may allow EEEV to readily adapt to diverse hosts.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Compare how different cell surface molecules bind to EEEV</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/306/jmol_6ODF_8UFC-jmol.png"/></div>
+<p>Explore how different cell surface molecules, including heparan sulfate (<a href="https://www.rcsb.org/structure/6ODF" target="_blank">6ODF</a>) and the VLDL receptor (<a href="https://www.rcsb.org/structure/8UFC" target="_blank">8UFC</a>), bind to EEEV envelope proteins.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>EEEV and other alphaviruses are icosahedral viruses that exhibit T=4 symmetry. Learn more about <a href="https://pdb101.rcsb.org/motm/200">quasisymmetry</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li><a href="https://pdb101.rcsb.org/motm/6MX4">6MX4</a>: Hasan SS, Sun C, Kim AS, Watanabe Y, Chen CL, Klose T, Buda G, Crispin M, Diamond MS, Klimstra WB, Rossmann MG. Cryo-EM Structures of Eastern Equine Encephalitis Virus Reveal Mechanisms of Virus Disassembly and Antibody Neutralization. Cell Rep. 2018 Dec 11;25(11):3136-3147.</li>
+<li><a href="https://pdb101.rcsb.org/motm/6ODF">6ODF</a>: Chen CL, Hasan SS, Klose T, Sun Y, Buda G, Sun C, Klimstra WB, Rossmann MG. Cryo-EM structure of eastern equine encephalitis virus in complex with heparan sulfate analogues. Proc Natl Acad Sci U S A. 2020 Apr 21;117(16):8890-8899. </li>
+<li><a href="https://pdb101.rcsb.org/motm/8UFC">8UFC</a>: Adams LJ, Raju S, Ma H, Gilliland T Jr, Reed DS, Klimstra WB, Fremont DH, Diamond MS. Structural and functional basis of VLDLR usage by Eastern equine encephalitis virus. Cell. 2024 Jan 18;187(2):360-374.</li>
+<li>Clark LE, Clark SA, Lin C, Liu J, Coscia A, Nabel KG, Yang P, Neel DV, Lee H, Brusic V, Stryapunina I, Plante KS, Ahmed AA, Catteruccia F, Young-Pearse TL, Chiu IM, Llopis PM, Weaver SC, Abraham J. VLDLR and ApoER2 are receptors for multiple alphaviruses. Nature. 2022 Feb;602(7897):475-480.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_6">http://doi.org/10.2210/rcsb_pdb/mom_2025_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

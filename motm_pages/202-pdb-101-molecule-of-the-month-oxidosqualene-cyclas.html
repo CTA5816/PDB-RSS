@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Oxidosqualene Cyclase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Oxidosqualene Cyclase" property="og:title"/>
+<meta content="Oxidosqualine cyclase forms the unusual fused rings of cholesterol molecules" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/96/96_1w6k.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/96" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Oxidosqualene Cyclase" name="twitter:title"/>
+<meta content="Oxidosqualine cyclase forms the unusual fused rings of cholesterol molecules" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/96/96_1w6k.jpg" name="twitter:image"/>
+<meta content="Oxidosqualine cyclase forms the unusual fused rings of cholesterol molecules" name="description"/>
+<meta content="atorvastatin,cholesterol biosynthetic process,HMGhydroxymethylglutaryl-CoA synthase activity,lanosterol synthase activity,oxidosqualene cyclase activity,steroid biosynthetic process,1w6k,1hwk,1ump" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 96
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 96 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Oxidosqualene Cyclase</h1>
+<p><i>Oxidosqualine cyclase forms the unusual fused rings of cholesterol molecules</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Oxidosqalene cyclase with its product lanosterol." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/96/96_1w6k.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Oxidosqalene cyclase with its product lanosterol.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/96/96-OxidosqualeneCyclase-1w6k.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cholesterol has gained a bad reputation in recent years. It is absolutely essential in our lives: it is needed to keep our membranes fluid and it is the raw material used to build a host of important molecules such as vitamin D and steroid hormones. However, elevated levels of cholesterol (for instance from a fat-rich diet) have been linked to the formation of atherosclerosis and heart disease. Today, doctors suggest that a combination of a healthy low-fat diet and exercise will keep these two faces of cholesterol in balance.</div>
+<h4>Building Cholesterol</h4>
+<div>Cholesterol is a bulky lipid molecule, composed of four linked rings of carbon decorated with hydrogen atoms and a single oxygen atom. A collection of two dozen enzymes is needed to build cholesterol from simple starting compounds. The enzyme shown here, oxidosqualene cyclase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1w6k" target="_blank">1w6k <i class="fa fa-external-link"> </i></a></span>), performs the most complicated step in this process. It takes a long thin carbon chain, oxidosqualene, and folds it up, creating the four linked rings. The enzyme structure shown here has the final product lanosterol bound in the active site, shown here in white.</div>
+<h4>Greasy Substrates</h4>
+<div>Both oxidosqualene and lanosterol are mostly hydrocarbon, and thus are not very soluble in water. The enzyme solves this problem by sticking to the membrane in microsomes inside the cell. It then can pull oxidosqualene directly out of the membrane, and release lanosterol back there. The structure shown here includes several small lipids, shown in purple, bound on the side of the protein that sticks to the membrane. You can also see one of these lipids slipping up into a tunnel that leads into the active site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="HMG CoA reductase with Lipitor (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/96/96_1hwk.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>HMG CoA reductase with Lipitor (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/96/96-OxidosqualeneCyclase-1hwk.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Lowering Cholesterol </h4>
+<div>Currently, drugs that reduce levels of cholesterol in the blood are the some of the largest-selling drugs in the world. The most commonly-prescribed drugs are statins, which block the action of an enzyme that performs one of the first steps in cholesterol synthesis. The enzyme, HMG CoA reductase ( PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hwk" target="_blank">1hwk <i class="fa fa-external-link"> </i></a></span>), is shown here with atorvastatin (marketed as Lipitor) bound in its active sites. Researchers are now looking for other compounds to block different steps in the synthesis of cholesterol, such as the reaction performed by oxidosqualene cyclase.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/96/96_1ump-1w6k-rasmol.jpg"/></div>
+<div>You can see both the beginning and the end of the cyclization reaction in two structures, but you need to look at slightly different enzymes. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ump" target="_blank">1ump <i class="fa fa-external-link"> </i></a></span>, shown here on the left, is the bacterial enzyme squalene cyclase with a modified form of squalene bound in the active site. Notice how the enzyme forces the snaky molecule into a zig-zag shape. This arranges the chain perfectly, allowing an aspartate amino acid activated by a histidine (both at the top) to start a cascade of reactions that form the four linked rings. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1w6k" target="_blank">1w6k <i class="fa fa-external-link"> </i></a></span>, shown on the right, has the final product lanosterol bound to the human enzyme oxidosqualene cyclase. It also uses an aspartate amino acid to catalyze the reaction, but it is activated by two cysteines instead of a histidine. <br/><br/> These pictures were created with RasMol. To create similar pictures, you can click on the accession codes here and pick one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>K. U. Wendt (2005) Enzyme mechanisms for triterpene cyclization: new pieces of the puzzle. Angewandte Chemie International Edition 44, 3966-3971.</li>
+<li>M.W. Huff and D. E. Telford (2005) Lord of the rings: the mechanism for oxidosqualene:lanosterol cyclase becomes crystal clear. Trends in Pharmacological Science 26, 335-340.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_12">http://doi.org/10.2210/rcsb_pdb/mom_2007_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

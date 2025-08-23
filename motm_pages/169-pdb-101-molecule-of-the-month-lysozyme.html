@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Lysozyme</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Lysozyme" property="og:title"/>
+<meta content="Lysozyme attacks the cell walls of bacteria" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/9/2lyz.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/9" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Lysozyme" name="twitter:title"/>
+<meta content="Lysozyme attacks the cell walls of bacteria" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/9/2lyz.gif" name="twitter:image"/>
+<meta content="Lysozyme attacks the cell walls of bacteria" name="description"/>
+<meta content="antibiotic,cytolysis,defense response to bacterium,hydrolase activity acting on glycosyl bonds,peptidoglycan catabolic process,2lyz,1lyd,1l35,148l" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 9
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 9 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Lysozyme</h1>
+<p><i>Lysozyme attacks the cell walls of bacteria</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Lysozyme." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/9/2lyz.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lysozyme.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/9/9-Lysozyme-2lyz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Attacking Bacteria</h4>
+<div>Lysozyme protects us from the ever-present danger of bacterial infection. It is a small enzyme that attacks the protective cell walls of bacteria. Bacteria build a tough skin of carbohydrate chains, interlocked by short peptide strands, that braces their delicate membrane against the cell's high osmotic pressure. Lysozyme breaks these carbohydrate chains, destroying the structural integrity of the cell wall. The bacteria burst under their own internal pressure.</div>
+<h4>The First Antibiotic</h4>
+<div>Alexander Fleming discovered lysozyme during a deliberate search for medical antibiotics. Over a period of years, he added everything that he could think of to bacterial cultures, looking for anything that would slow their growth. He discovered lysozyme by chance. One day, when he had a cold, he added a drop of mucus to the culture and, much to his surprise, it killed the bacteria. He had discovered one of our own natural defenses against infection. Unfortunately, lysozyme is a large molecule that is not particularly useful as a drug. It can be applied topically, but cannot rid the entire body of disease, because it is too large to travel between cells. Fortunately, Fleming continued his search, finding a true antibiotic drug five years later: penicillin.</div>
+<h4>A Cellular Guardian</h4>
+<div>Lysozyme protects many places that are rich in potential food for bacterial growth. The lysozyme pictured here is from hen egg whites, where it serves to protect the proteins and fats that will nourish the developing chick. It was the first enzyme ever to have its structure solved--you can find it in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2lyz" target="_blank">2lyz <i class="fa fa-external-link"> </i></a></span>. Our tears and mucus contain lysozyme to resist infection of our exposed surfaces. Our blood is the worst place to have bacteria grow, as they would be delivered to all corners of the body. In the blood, lysozyme provides some protection, along with the more powerful methods employed by the immune system.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Lysozyme (left) and a form with an engineered disulfide linkage (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/9/mutant.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lysozyme (left) and a form with an engineered disulfide linkage (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/9/9-Lysozyme-mutant.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Molecular Laboratory</h4>
+<div>Lysozyme is a small, stable enzyme, making ideal for research into protein structure and function. Brian Matthews at the University of Oregon has performed a remarkable series of experiments, using lysozyme as the laboratory for study. He has performed hundreds of mutations on the lysozyme molecule made by a bacteriophage, changing one or more amino acids in the protein chain to a different one. He has studied the effect of removing large residues inside the protein, leaving a hole, or cramming a large amino acid inside, where it would not normally fit. He has attempted to create new active sites by creating new molecule-shaped pockets. Structures of hundreds of these mutant lysozymes are available at the PDB--so many, in fact, that lysozyme is the most common protein in the PDB. The example shown here is a mutant were two amino acids (shown in green) have been changed to cysteine, forming a new disulfide bridge (the two bright yellow atoms) in the mutant. The native enzyme, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lyd" target="_blank">1lyd <i class="fa fa-external-link"> </i></a></span>, is on the left and the mutant, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l35" target="_blank">1l35 <i class="fa fa-external-link"> </i></a></span>, is on the right.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Lysozyme Active Site</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/9/9-Lysozyme-148L_JSmol.jpg"/></div>
+<p>Lysozyme has a long active site cleft that binds to the bacterial carbohydrate chain. The structure shown here contains a piece of the bacterial cell wall, including two sugar rings and a short piece of the crosslinking peptide. Based on computer modeling, it has been proposed that lysozyme distorts the shape of one sugar ring in the chain, making it more easy to cleave (although other studies have proposed that different effects, like electrostatics, are more important). This structure, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=148l" target="_blank">148l <i class="fa fa-external-link"> </i></a></span>, shows what this distorted ring might look like. Normally, sugar rings adopt a zig-zag "chair" structure, like the purple-colored ring on the left. Compare this to the ring on the right, colored green, which is flattened into a less stable structure. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. Kuroki, L. H. Weaver &amp; B. W. Matthews (1993) A covalent enzyme-substrate intermediate with saccharide distortion in a mutant T4 lysozyme. Science 262, 2030-2033.</li>
+<li>1l35: P. E. Pjura, M. Matsumura, J. A. Wozniak &amp; B. W. Matthews (1990) Structure of a thermostable disulfide-bridge mutant of phage T4 lysozyme shows that an engineered cross-link in a flexible region does not increas the rigidity of the folded protein. Biochemistry 29, 2592-2598.</li>
+<li>1lyd: D. R. Rose, J. Phipps, J. Michniewicz, G. I. Birnbaum, F. R. Ahmed, A. Muir, W. F. Anderson &amp; S. Narang (1988) Crystal structure of T4-lysozyme generated from synthetic coding DNA in Escherichia coli. Protein Engineering 2, 277-282.</li>
+<li>2lyz: R. Diamond (1974) Real-space refinement of the structure hen egg-while lysozyme. Journal of Molecular Biology 82, 371-391.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_9">http://doi.org/10.2210/rcsb_pdb/mom_2000_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

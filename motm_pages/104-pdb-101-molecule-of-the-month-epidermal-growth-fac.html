@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Epidermal Growth Factor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Epidermal Growth Factor" property="og:title"/>
+<meta content="EGF is part of a family of proteins that controls aspects of cell growth and development" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/126/mom126_egfr.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/126" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Epidermal Growth Factor" name="twitter:title"/>
+<meta content="EGF is part of a family of proteins that controls aspects of cell growth and development" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/126/mom126_egfr.jpg" name="twitter:image"/>
+<meta content="EGF is part of a family of proteins that controls aspects of cell growth and development" name="description"/>
+<meta content="cancer,cell signaling,ErbB,HER,1egf,2gs6,1ptu,1xkk" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 126
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 126 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Epidermal Growth Factor</h1>
+<p><i>EGF is part of a family of proteins that controls aspects of cell growth and development</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Epidermal growth factor (red) and its receptor (blue). The inactive form (left) dimerizes when it binds to the hormone (right). The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/126/mom126_egfr.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Epidermal growth factor (red) and its receptor (blue). The inactive form (left) dimerizes when it binds to the hormone (right). The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/126/126-EpidermalGrowthFactor_EGFR.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>The cells in your body constantly communicate with each other, negotiating the transport and use of resources and deciding when to grow, when to rest, and when to die. Often, these messages are carried by small proteins, such as epidermal growth factor (EGF), shown here in red from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1egf" target="_blank">1egf <i class="fa fa-external-link"> </i></a></span>. EGF is a message telling cells that they have permission to grow. It is released by cells in areas of active growth, then is either picked up by the cell itself or by neighboring cells, stimulating their ability to divide. The message is received by a receptor on the cell surface, which binds to EGF and relays the message to signaling proteins inside the cell, ultimately mobilizing the processes needed for growth.</div>
+<h4>Domains and Dimers</h4>
+<div>The EGF receptor, shown here in blue, is a flexible protein with many moving parts, including a large extracellular portion, a section that crosses the cell membrane, a kinase domain and a long flexible tail. The portion facing outwards from the cell, shown at the top here, is composed of four articulated domains that recognize EGF. When EGF is not around, it folds back on itself, as shown in the structure on the left. Then, when EGF binds, the receptor opens up and binds to another copy of the receptor, forming the dimeric complex shown on the right. This brings together two copies of the kinase domain, shown at the bottom here. Since the kinase domains are close to one another, they can add phosphate groups to tyrosine amino acids on the long, flexible tails of the receptor (the tails are not seen in this structure, so they are shown here with dots). The phosphorylated tails then stimulate the signaling proteins inside the cell.</div>
+<h4>Structural Surprises</h4>
+<div>Since the EGF receptor is so flexible, it has been studied by breaking it into several pieces and studying each one separately. Consequently, several PDB files were needed to create this illustration, including <span class="rcsb_id_tag" title="">1nql</span>, <span class="rcsb_id_tag" title="">1ivo</span>, <span class="rcsb_id_tag" title="">2jwa</span>, <span class="rcsb_id_tag" title="">1m17</span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2gs6" target="_blank">2gs6 <i class="fa fa-external-link"> </i></a></span>. The structures of the different parts of the EGF receptor revealed several surprises. First of all, researchers found that EGF binds on either side of the receptor complex, not in the middle like other similar receptors. EGF appears to mold the receptor into the proper shape for dimerization, instead of acting like glue between the two chains. Also, careful analysis of the kinase domain showed that it is activated by association in an asymmetric head-to-tail fashion, in spite of the symmetric association of the extracellular portion.</div>
+<h4>Large Family</h4>
+<div>EGF and the EGF receptor are part of an extended family of proteins that together control aspects of cell growth and development. These include at least seven similar protein messages, such as transforming growth factor alpha and amphiregulin, and four receptors, collectively termed ErbB or HER receptors. These messages and receptors can mix and match, with different messages bringing together two identical receptors or two different receptors. In this way, a wide variety of messages may be carried by the system, tailored for the needs of each type of cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Protein tyrosine phosphatase 1B with a short phosphorylated peptide in the active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/126/mom126_1ptu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Protein tyrosine phosphatase 1B with a short phosphorylated peptide in the active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/126/126-EpidermalGrowthFactor_1ptu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Turning the Receptor Off</h4>
+<div>Of course, once a signal is sent through the EGF receptor, it eventually needs to be turned off. A separate enzyme performs this job by clipping off the phosphates that are added to the flexible tails of the receptor when it is activated. Protein tyrosine phosphatase 1B (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ptu" target="_blank">1ptu <i class="fa fa-external-link"> </i></a></span>) is shown here (in orange), with a small piece of a phosphorylated protein chain bound in the active site. The phosphorylated tyrosine is buried deep in the active site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<script>
+            for (var n = 0; n < 2; n++) {
+                jmols[n] = {};
+                jmols[n].loaded = false;
+            }
+          </script>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab-1" onclick="loadIframeById(1);">JSmol 1</a></li>
+<li><a data-toggle="tab" href="#tabs-3" id="jmol-tab-2" onclick="loadIframeById(2);">JSmol 2</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>EGF Receptor Kinase Domain with Lapatinib (PDB entry 1xkk)</h5>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(0);" src="https://cdn.rcsb.org/pdb101/motm/126/mom126_1xkk_jmol.jpg"/></div>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(1);" src="https://cdn.rcsb.org/pdb101/motm/126/mom126_1n8z_jmol.jpg"/></div>
+<p>The signal carried by EGF can be dangerous if used improperly. Many forms of cancer circumvent the normal EGF signaling process, giving themselves permission to grow without control. Because of this, drugs that block EGF signaling are effective for the treatment of cancer. Two examples are shown here. At the left, the drug lapatinib is bound in the kinase domain of the receptor, blocking the signal inside the cell (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xkk" target="_blank">1xkk <i class="fa fa-external-link"> </i></a></span>). It is very similar to the ATP used by the receptor, and binds tightly in the active site. Therapeutic antibodies are also used for cancer treatment. Herceptin is shown on the right bound to the extracellular domain of HER2/ErbB2 (PDB entry <span class="rcsb_id_tag" title="">1n8z</span>), and the antibody cetuximab bound to the EGF receptor may be found in PDB entry <span class="rcsb_id_tag rcsb_clickable rcsb_highlighted rcsb_ext_text" style="display: inline-block; border-bottom: 1px dotted rgb(100, 147, 194); cursor: pointer;" title="">1yy9</span>. To explore these structures in more detail, click on the images for an interactive Jmol image.</p>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe_1" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+<div class="tab-pane" id="tabs-3">
+<iframe frameborder="0" id="iframe_2" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Compare the mode of dimerization in the EGF receptor and the </li>
+<li><a href="https://pdb101.rcsb.org/motm/52">human growth hormone receptor</a>.</li>
+<li>EGF receptor and similar receptors are currently the targets of development of drugs </li>
+<li>for cancer therapy. Can you find other examples of structures in the PDB with drugs?</li>
+<li>Compare the mode of dimerization in the EGF receptor and the </li>
+<li><a href="http://www.pdb.org/pdb/static.do?p=education_discussion/molecule_of_the_month/pdb52_2.html"></a></li>
+<li>human growth hormone receptor.</li>
+<li>EGF receptor and similar receptors are currently the targets of development of drugs </li>
+<li>for cancer therapy. Can you find other examples of structures in the PDB with drugs?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. Lemmon (2009) Ligand-induced ErbB receptor dimerization. Experimental Cell Research 315, 638-648.</li>
+<li>R. Bose and X. Zhang (2009) The ErbB kinase domain: structural perspectives into kinase activation and inhibition. Experimental Cell Research 315, 649-658.</li>
+<li>K. M. Ferguson (2008) Structure-based view of epidermal growth factor receptor regulation. Annual Review of Biophysics 37, 353-373.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_6">http://doi.org/10.2210/rcsb_pdb/mom_2010_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          for (var i = 1; i <= jmols.length; i++) {
+              $('#iframe_' + i).load(function () {
+                  $(this).height($(this).contents().find('body').height() + 30);
+              });
+          }
+          
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Actinomycin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Actinomycin" property="og:title"/>
+<meta content="Some antibiotics attack cells by intercalating between the bases in a DNA double helix" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_173d_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/160" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Actinomycin" name="twitter:title"/>
+<meta content="Some antibiotics attack cells by intercalating between the bases in a DNA double helix" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_173d_composite.jpg" name="twitter:image"/>
+<meta content="Some antibiotics attack cells by intercalating between the bases in a DNA double helix" name="description"/>
+<meta content="cancer chemotherapy,DNA intercalation,topoisomerase,173d,1k4t,173d" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 160
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 160 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Actinomycin</h1>
+<p><i>Some antibiotics attack cells by intercalating between the bases in a DNA double helix</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Actinomycin intercalates between the bases in a DNA helix." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_173d_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Actinomycin intercalates between the bases in a DNA helix.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_173d_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Cells are master chemists, and many times the search for medical compounds begins by looking to nature. Many antibiotics have been found by studying the constant warfare between bacteria and fungi, and isolating the toxic molecules that they build to protect themselves. Actinomycin is the first natural antibiotic discovered that has anti-cancer activity. It was discovered in the bacterium Streptomyces antibioticus in 1940. Unfortunately, it is too toxic for general use, killing cancer cells but also poisoning the patient, but related molecules have subsequently been discovered, and are now widely used for cancer chemotherapy.</div>
+<h4>Intercalating into DNA</h4>
+<div>Early studies of actinomycin revealed that it intercalates into the DNA double helix. Actinomycin is composed of two parts: a flat ring (shown here in green) that resembles the DNA bases, and two cyclic peptides composed of unusual amino acids (shown here in blue). The flat ring intercalates between bases in the DNA double helix, and the cyclic peptides fit perfectly into the major groove of the DNA (PDB entry <span class="rcsb_id_tag" title="Actinomycin and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=173d" target="_blank">173d <i class="fa fa-external-link"> </i></a></span>). The result is a stable, but lethal, complex with the cell's genome.</div>
+<h4>Targeting Topoisomerases</h4>
+<div>Intercalating drugs are used for cancer chemotherapy because they poison cells that are rapidly dividing, like the cells in a growing tumor. Study of these drugs has revealed that <a href="https://pdb101.rcsb.org/motm/73"> topoisomerases</a> are the major site of action. Topoisomerases begin by breaking DNA, then they make a topological change such as relaxing supercoils or untangling strands, and finally they reconnect the DNA in its proper form. Intercalating drugs block the reconnection step, freezing the topoisomerase after it has broken the DNA. This is a disaster when the cell divides: when a replication fork reaches the site, a lethal double-strand break is formed as the replication machinery passes through the damaged DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Actinomycin (green) inhibiting a DNA topoisomerase (blue)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_1k4t.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Actinomycin (green) inhibiting a DNA topoisomerase (blue).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_1k4t.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Intercalators in Action</h4>
+<div>Many different intercalating molecules have been discovered, either in living organisms or designed by scientists. Based on their different sizes and shapes, they target different topoisomerases. Actinomycin blocks type II topoisomerases, which are involved with detangling DNA. The molecule shown here in green, topotecan, blocks type I topoisomerases, which are involved in relaxing superhelical stress (PDB entry <span class="rcsb_id_tag" title="Topoisomerase, DNA and Topotecan"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k4t" target="_blank">1k4t <i class="fa fa-external-link"> </i></a></span>). The structure captures the drug bound to DNA with one strand clipped, all bound inside the topoisomerase.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Actinomycin and DNA (PDB entry 173d)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/160/160-Actinomycin_173d_jmol.jpg"/></div>
+<p>Many intercalating molecules have no preference for a particular sequence of DNA, but actinomycin binds most strongly to GC steps. The structure of actinomycin with a short piece of DNA (PDB entry <span class="rcsb_id_tag" title="Actinomycin and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=173d" target="_blank">173d <i class="fa fa-external-link"> </i></a></span>) revealed the reason for this: the cyclic peptide portion of the molecule forms specific hydrogen bonds with the edges of the guanine bases. To take a closer look at this interaction, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures for many other DNA intercalating drugs are available in the PDB. You can start by searching for "anthracycline", the name of a large class of anticancer drugs.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Y. Pommier, E. Leo, H. Zhang &amp; C. Marchand (2010) DNA topoisomerases and their poisoning by anticancer and antibacterial drugs. Chemistry and Biology 17, 421- 433.</li>
+<li>U. Hollstein (1974) Actinomycin, chemistry and mechanism of action. Chemical Reviews 74, 625-652.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_4">http://doi.org/10.2210/rcsb_pdb/mom_2013_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hsp90</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hsp90" property="og:title"/>
+<meta content="Heat shock proteins ensure that proteins remain folded and active under harsh conditions" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/108/2cg9_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/108" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hsp90" name="twitter:title"/>
+<meta content="Heat shock proteins ensure that proteins remain folded and active under harsh conditions" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/108/2cg9_composite.jpg" name="twitter:image"/>
+<meta content="Heat shock proteins ensure that proteins remain folded and active under harsh conditions" name="description"/>
+<meta content="cancer chemotherapy,chaperonin,geldanamycin,HSP90 heat-shock proteins,molecular chaperone,protein folding chaperone,2cg9,2ioq,2cg9,2o1u,2o1v,1yet,1am1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 108
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 108 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hsp90</h1>
+<p><i>Heat shock proteins ensure that proteins remain folded and active under harsh conditions</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Hsp90 (blue) and cochaperone Sba1 (green), with bound ATP (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/108/2cg9_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Hsp90 (blue) and cochaperone Sba1 (green), with bound ATP (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/108/108-Hsp90-2cg9_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>When cells are challenged with extreme heat, they build a collection of protective proteins called heat shock proteins (typically abbreviated as "Hsp" with the approximate molecular weight afterwards). Many of these proteins are chaperones that work to keep cellular proteins folded and active when conditions get bad. They also play important roles in the normal life of the cell, helping proteins fold and limiting the dangerous aggregation of immature proteins. Some of these proteins, such as <a class="static" href="https://pdb101.rcsb.org/motm/32"> Hsp70 and Hsp60</a> are general chaperones. Hsp90, on the other hand, plays a more specific role.</div>
+<h4>Molecular Clientele</h4>
+<div>Hsp90 is a specialized chaperone that assists in the maturation of a select clientele of proteins. These proteins include over a hundred transcription factors and kinases, such as steroid receptors, mutant p53 protein, and the HER2 protein involved in breast cancer. So far, researchers have not discovered a unifying theme for this growing list of proteins, just that Hsp90 is essential for maintaining active forms of these proteins.</div>
+<h4>Collaborative Effort</h4>
+<div>The exact function of Hsp90 is also currently a mystery. Researchers don't know what it does in the maturation of its client proteins. They have discovered that it acts as part of a large complex of different chaperone proteins. Some of these chaperones deliver immature proteins to the complex, and others assist with folding. For instance, the complex shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cg9" target="_blank">2cg9 <i class="fa fa-external-link"> </i></a></span>) includes Hsp90, shown in blue and turquoise, and the co-chaperone molecule Sba1, shown in green. An ATP molecule (shown in red) assists with the functional cycle of the protein</div>
+<h4>Cancer Connection</h4>
+<div>Many of the client proteins serviced by Hsp90 are involved in cellular growth, making Hsp90 an attractive target for cancer chemotherapy. You might think that drugs that attack Hsp90 would be too toxic for use in therapy, since Hsp90 is essential in normal cells too. But it turns out that cancer cells rely on Hsp90 more heavily than normal cells, and respond more strongly to drugs that block Hsp90 function. For instance, the drug geldanamycin blocks the binding of ATP to Hsp90 in cancer cells, causing complexes of Hsp90 and misfolded proteins to accumulate. This stimulates the ubiquitin/proteosome system to destroy the proteins, ultimately killing the cancer cells by corrupting the signaling pathways that control growth.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Conformational changes of Hsp90." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/108/2cg9_2ioq.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Conformational changes of Hsp90.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/108/108-Hsp90-2cg9_2ioq.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Flexing Arms</h4>
+<div>Hsp90 undergoes large conformational changes during its functional cycle. The inactive form is opened up, as shown at the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ioq" target="_blank">2ioq <i class="fa fa-external-link"> </i></a></span>. Binding of ATP causes the molecule to close into the active form, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cg9" target="_blank">2cg9 <i class="fa fa-external-link"> </i></a></span>. Notice how the two little loops of protein clasp hands at the top of the molecule in the closed form. The ATP binding site is just below these loops, allowing it to control the large structural changes. Several different forms of Hsp90 are available in the PDB. The open structure is a bacterial form and the closed structure is from yeast. You can also look at a semi-closed structure of GRP94, a similar Hsp90 that is found in the endoplasmic reticulum (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o1u" target="_blank">2o1u <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o1v" target="_blank">2o1v <i class="fa fa-external-link"> </i></a></span>, not shown here).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HSP90 N-terminal Domain (PDB entries 1am1 and 1yet) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/108/108-Hsp90-1am1_1yet_jmol.jpg"/></div>
+<p>The first compound found to attack Hsp90 is a natural product called geldanamycin made by Streptomyces bacteria, shown here on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yet" target="_blank">1yet <i class="fa fa-external-link"> </i></a></span>. It binds in the ATP-binding site on Hsp90, blocking the binding of ATP and thus freezing the large conformational changes needed for function. The structure of ATP bound in this site is shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1am1" target="_blank">1am1 <i class="fa fa-external-link"> </i></a></span> (when you look at this structure yourself, note that only two of the three phosphates are included in the atomic coordinates; the third one is disordered). Unfortunately, geldanamycin is too toxic for use as an anticancer drug, but many better compounds have been developed since then. To explore this structure in more detail, click on the image to view an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Can you find other structures of Hsp90 with experimental drug molecules?</li>
+<li>Geldanamycin looks very different than ATP, but it turns out that it makes similar contacts with the protein binding site. Can you find the amino acids that directly interact with ATP and with geldanamycin? </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>L. H. Pearl, C. Prodromou and P. Workman (2008) The Hsp90 molecular chaperone: and open and shut case for treatment. Biochemical Journal 410, 439-453.</li>
+<li>D. B. Solit and G. Choisis (2008) Development and application of Hsp90 inhibitors. Drug Discovery Today 13, 38-43.</li>
+<li>S. K. Wandlinger, K. Richter and J. Buchner (2008) The Hsp90 chaperone machinery. Journal of Biological Chemistry 283, 18473-18477.</li>
+<li>L. H. Pearl and C. Prodromou (2006) Structure and mechanism of the Hsp90 molecular chaperone machinery. Annual Review of Biochemistry 75, 271-294.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_12">http://doi.org/10.2210/rcsb_pdb/mom_2008_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

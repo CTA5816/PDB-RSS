@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Aconitase and Iron Regulatory Protein 1</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Aconitase and Iron Regulatory Protein 1" property="og:title"/>
+<meta content="Aconitase performs a reaction in the citric acid cycle, and moonlights as a regulatory protein" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/89/89_2b3y-2ipy.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/89" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Aconitase and Iron Regulatory Protein 1" name="twitter:title"/>
+<meta content="Aconitase performs a reaction in the citric acid cycle, and moonlights as a regulatory protein" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/89/89_2b3y-2ipy.jpg" name="twitter:image"/>
+<meta content="Aconitase performs a reaction in the citric acid cycle, and moonlights as a regulatory protein" name="description"/>
+<meta content="aconitate hydratase,iron regulatory protein,regulation of iron transport,tricarboxylic acid cycle,2b3y,2ipy,1o9j,3cyt,2pgi,1c96,7acn" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 89
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 89 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Aconitase and Iron Regulatory Protein 1</h1>
+<p><i>Aconitase performs a reaction in the citric acid cycle, and moonlights as a regulatory protein</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Aconitase (top) and the same protein acting as an iron regulatory protein bound to part of a messenger RNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/89/89_2b3y-2ipy.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aconitase (top) and the same protein acting as an iron regulatory protein bound to part of a messenger RNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/89/89-AconitaseandIronRegulatoryProtein1-2b3y-2ipy.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Aconitase is an essential enzyme in the citric acid cycle and iron regulatory protein 1 interacts with messenger RNA to control the levels of iron inside cells. You might ask: what do these two proteins have in common? They were discovered and studied by different researchers, who gave them names that described their two very different functions. But surprisingly, when they looked at the amino acid sequence of these proteins, they turned out to be identical. The same protein is performing two very different jobs.</div>
+<h4>Aconitase...</h4>
+<div>The enzyme aconitase is a key player in the central pathway of energy production. As part of the <a href="http://pdb101.rcsb.org/motm/154">citric acid cycle</a>, it converts citrate into isocitrate. There is one form of aconitase in our mitochondria, which performs most of the conversion for the citric acid cycle, and a similar form in the cytoplasm that creates isocitrate for other synthetic tasks. The cytosolic form is shown here at the top, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2b3y" target="_blank">2b3y <i class="fa fa-external-link"> </i></a></span>. It is composed of a single protein chain that folds into several domains (the domains are colored slightly different shades of blue here). The domains close like a nutcracker around the active site, which contains an iron-sulfur cluster that assists with the reaction.</div>
+<h4>...or Iron Regulatory Protein 1</h4>
+<div>The cytosolic form of aconitase also acts as iron regulatory protein 1. The lower structure, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ipy" target="_blank">2ipy <i class="fa fa-external-link"> </i></a></span>, shows how it performs this entirely different function. The iron-sulfur cluster in aconitase is unstable and must be replaced occasionally when it falls out. When iron levels in the cell get low, there isn't enough iron to regenerate the cluster, and the protein shifts to its second function. The protein opens up and grips hairpin loops in a few specific messenger RNA molecules. These include a hairpin at the start of the messenger RNA for <a class="static" href="http://pdb101.rcsb.org/motm/35">ferritin</a>, and five similar hairpins at the end of messenger RNA for the transferrin receptor. When the iron regulatory protein 1 binds, it inhibits the formation of ferritin, so that less iron is locked up in storage, and it enhances construction of the transferrin receptor, so the cell can pick up more <a class="static" href="http://pdb101.rcsb.org/motm/35">transferrin</a> out of the blood, and with it, more iron.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Several moonlighting proteins: retinal dehydrogenase/eta-crystallin (left), cytochrome c (top right), and phosphoglucose isomerase/neuroleukin (bottom right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/89/89_moonlighting.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Several moonlighting proteins: retinal dehydrogenase/eta-crystallin (left), cytochrome c (top right), and phosphoglucose isomerase/neuroleukin (bottom right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/89/89-AconitaseandIronRegulatoryProtein1-moonlighting.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Moonlighting Proteins</h4>
+<div>Many other proteins lead double lives, performing two entirely different functions. Three examples are shown here. The enzyme retinal dehydrogenase, which converts light- sensing retinal into the regulatory molecule retinoic acid, is shown on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1o9j" target="_blank">1o9j <i class="fa fa-external-link"> </i></a></span>), with the cofactor NADH in green. Its second job is to modify the consistency and absorbance of eye lenses, where it is called <a href="http://pdb101.rcsb.org/motm/127">eta-crystallin</a>. <a class="static" href="http://pdb101.rcsb.org/motm/36">Cytochrome c</a> (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cyt" target="_blank">3cyt <i class="fa fa-external-link"> </i></a></span>) is shown at upper right in red. It performs a familiar role in energy production, ferrying electrons in the mitochondria. But when the cell is damaged, cytochrome c spills out into the cytoplasm and performs its second job as part of the <a href="http://pdb101.rcsb.org/motm/177">apoptosome</a>: it starts a cascade of responses that ultimately lead to programmed cell death (apoptosis). The third moonlighting protein shown here is phosphoglucose isomerase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pgi" target="_blank">2pgi <i class="fa fa-external-link"> </i></a></span>), one of the ten enzymes that perform <a href="http://pdb101.rcsb.org/motm/50">glycolysis</a>. It is also secreted outside cells, where it acts as a cellular messenger with several names: neuroleukin, autocrine mobility factor, and differentiation and maturation mediator. The names give you an idea of the specific messages it carries from cell to cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/89/89_aconitase-rasmol.jpg"/></div>
+<div>Aconitase performs a classic stereospecific reaction that is often used as an example in biochemistry textbooks. It extracts a hydroxyl group and a specific hydrogen atom from citrate, and replaces them in a geometrically precise way to form isocitrate. This process is revealed in two crystal structures, but you need to use a little imagination when you look at them, since the crystal structures do not contain the hydrogen atom positions. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c96" target="_blank">1c96 <i class="fa fa-external-link"> </i></a></span>, shown on the left, has citrate bound in the active site. In the normal form of the enzyme, the oxygen atom shown in pink will be extracted by the iron sulfur cluster and a hydrogen atom will be extracted by a serine at the top (both of these reactions are shown with green arrows). This structure, however, has mutated the serine to alanine, so the oxygen atom in the serine is missing. In the second step of the reaction, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=7acn" target="_blank">7acn <i class="fa fa-external-link"> </i></a></span>, the molecule flips upside down (notice the different location of the labels A-B-C) and the hydrogen and hydroxyl are added back in different places to form isocitrate. <br/><br/> These illustrations were created with RasMol. You can create similar illustrations by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. J. Artymiuk and J. Green (2006) The double life of aconitase. Structure 14, 2-4.</li>
+<li>T. A. Rouault (2006) The role of iron regulatory proteins in mammalian iron homeostasis and disease. Nature Chemical Biology 2, 406-414.</li>
+<li>C. J. Jeffery (2004) Molecular mechanisms of multitasking: recent crystal structures of moonlighting proteins. Current Opinion in Structural Biology 14, 663-668.</li>
+<li>S. D. Copley (2003) Enzymes with extra talents: moonlighting functions and catalytic promiscuity. Current Opinion in Chemical Biology 7, 265-272.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_5">http://doi.org/10.2210/rcsb_pdb/mom_2007_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

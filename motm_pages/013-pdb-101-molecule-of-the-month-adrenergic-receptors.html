@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Adrenergic Receptors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Adrenergic Receptors" property="og:title"/>
+<meta content="Adrenaline stimulates a G-protein-coupled receptor, priming us for action" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/100/100_2rh1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/100" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Adrenergic Receptors" name="twitter:title"/>
+<meta content="Adrenaline stimulates a G-protein-coupled receptor, priming us for action" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/100/100_2rh1.jpg" name="twitter:image"/>
+<meta content="Adrenaline stimulates a G-protein-coupled receptor, priming us for action" name="description"/>
+<meta content="adrenaline,epinephrin,G-protein coupled receptor activity,signal transduction,2rh1,2rh1,1f88,2r4r" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 100
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 100 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Adrenergic Receptors</h1>
+<p><i>Adrenaline stimulates a G-protein-coupled receptor, priming us for action</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Adrenergic receptor with carazolol." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/100/100_2rh1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Adrenergic receptor with carazolol.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/100/100-AdrenergicReceptors-2rh1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our bodies have many built-in defenses. Our immune system prowls through the body looking for infections by viruses and bacteria. Our blood is filled with molecules that form clots at the first sign of damage. Our nervous system is also hard-wired with instinctive defenses that stand ready to protect us in times of danger. You have probably experienced one of these defenses yourself--when you are startled or scared by an impending danger, you will feel a rush of energy flowing through your body. This has been termed the "flight or fight" response--your body is mobilizing its many resources to make you ready either to run away from danger, or stay and fight.</div>
+<h4>A Cascade of Response</h4>
+<div>The small hormone adrenaline, also known as epinephrine, is the messenger that tells cells to ready themselves in danger. It is released into the blood from the adrenal glands, which are situated on top of the kidneys. Then it spreads through the blood to cells throughout the body, where it is sensed by adrenergic receptors on the cell surface. When the adrenergic receptor is stimulated by adrenaline, it passes the message inside the cell to a G-protein. The G-protein then relays the message to a variety of other signaling enzymes, such as adenylyl cyclase, that amplify and spread the message through the cell. To see some of the structures involved in this signaling cascade, take a look at the earlier <a class="static" href="https://pdb101.rcsb.org/motm/58">Molecule of the Month on G-proteins</a>.</div>
+<h4>Feel the Rush</h4>
+<div>When the body is flooded with adrenaline, we focus all of our energy on the danger at hand. Defensive functions are activated, such as increasing the heart rate and providing more sugar in the blood. Normal housekeeping functions, such as digestion, are temporarily halted as we respond to the challenge. This requires different cells to respond differently to adrenaline--heart cells need to be activated, but cells in the digestive system need to wait for a better time to do their jobs. To orchestrate this range of responses, human cells build nine different types of adrenergic receptors, each with a slightly different effect. The one shown here, the beta-2 adrenergic receptor (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2rh1" target="_blank">2rh1 <i class="fa fa-external-link"> </i></a></span>), stimulates cells to increase energy production and utilization. Other types of adrenergic receptors are inhibitory, slowing the use of energy. By expressing one type or another on their surfaces, different cells tailor their responses to adrenaline, making themselves ready for an emergency.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Backbone representation of adrenergic receptor (left) and rhodopsin (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/100/100_backbone.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Backbone representation of adrenergic receptor (left) and rhodopsin (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/100/100-AdrenergicReceptors-backbone.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Receptors Everywhere</h4>
+<div>The adrenergic receptors are part of a large class of similar proteins, collectively known as G-protein-coupled receptors, often abbreviated GPCR. These receptors play many diverse and important roles in human health. By some estimates, there are almost a thousand different types in the human genome, including hundreds of receptors for taste and smell. Many widely-used drugs, such as Prozac, Claritin, and Zoloft, act by binding to proteins involved in GPCR signaling. In spite of their importance, they have been extraordinarily difficult to study, since they are normally buried inside a membrane. For many years, the structure of rhodopsin was the only structure available for this class of proteins, and many studies have been performed using rhodopsin as the starting point for structural study of other receptors. This is a successful approach because the receptors are all very similar. They are composed of one chain that snakes back and forth across the membrane seven times. For this reason, they are occasionally also called serpentine receptors. The meandering path of the protein chain is shown here for two GPCR structures: the adrenergic receptor (left, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2rh1" target="_blank">2rh1 <i class="fa fa-external-link"> </i></a></span>) and rhodopsin (right, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f88" target="_blank">1f88 <i class="fa fa-external-link"> </i></a></span>). This illustration was created with the <a class="static" href="http://mgltools.scripps.edu/packages/pmv">Python Molecule Viewer</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>beta2-Adrenergic Receptor (PDB entry 2rh1)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/100/100-Adrenergic_Receptors-2rh12r4r-rasmol.jpg"/></div>
+<p>To solve the structure of the adrenergic receptor, researchers had to do some unusual things. Since it is normally buried in a cell membrane, it is difficult to crystallize in purified form. Different approaches were taken for two structures. In one case, shown on the left from PDB <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2rh1" target="_blank">2rh1 <i class="fa fa-external-link"> </i></a></span>, the protein was engineered to insert lysozyme in the middle of the chain. The fused protein chain folds normally, with the lysozyme portion hanging off the bottom of the receptor. In the other case, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2r4r" target="_blank">2r4r <i class="fa fa-external-link"> </i></a></span>, an antibody was discovered that binds to the receptor, and the complex of receptor with antibody was crystallized. In both cases, the extra protein -- lysozyme or antibody -- helped create the many protein-protein contacts needed for a stable crystal. You can click on the image to explore the lysozyme chimera in more detail. <br/><br/></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D.M. Rosenbaum, V. Cherezov, M.A. Hanson, S.G. Rasmussen, F.S. Thian, T.S. Kobilka, H.J. Choi, X.J. Yao, W.I. Weis, R.C. Stevens, and</li>
+<li>B.K. Kobilka (2007) GPCR engineering yields high-resolution structural insights into beta2-adrenergic receptor function. Science. 318(5854): 1266-73.</li>
+<li>K. M. Small, D. W. McGraw and S. B. Liggett (2003) Pharmacology and physiology of human adrenergic receptor polymorphisms. Annual Review of Pharmacology and Toxicology 43, 381-411.</li>
+<li>S. Takeda, S. Kadowaki, T. Haga, H. Takaesu and S. Mitaku (2002) Identification of G protein-coupled receptor genes from the human genome sequence. FEBS Letters 520, 97- 101.</li>
+<li>G. Milligan, P. Svoboda and C. M. Brown (1994) Why are there so many adrenoreceptor subtypes? Biochemical Pharmacology 48, 1059-1071.</li>
+<li>An interesting short paper about controversy with the names "adrenaline" versus "epinephrine": J. K. Aronson (2000) "Where name and image meet"--the argument for "adrenaline." British Medical Journal 320, 506-509.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_4">http://doi.org/10.2210/rcsb_pdb/mom_2008_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

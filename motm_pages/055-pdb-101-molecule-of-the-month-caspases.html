@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Caspases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Caspases" property="og:title"/>
+<meta content="Caspases disassemble proteins during the process of programmed cell death" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/56/caspases.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/56" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Caspases" name="twitter:title"/>
+<meta content="Caspases disassemble proteins during the process of programmed cell death" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/56/caspases.gif" name="twitter:image"/>
+<meta content="Caspases disassemble proteins during the process of programmed cell death" name="description"/>
+<meta content="apoptosis,cysteine-type endopeptidase,programmed cell death,regulation of apoptosis,1ice,1nw9,1pau,1v0d,1c9f,1k88,1f1j" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 56
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 56 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Caspases</h1>
+<p><i>Caspases disassemble proteins during the process of programmed cell death</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Caspase 1 (ICE, top), caspase 9 with inhibitor XAIP-BIR3 (center), and caspase 3 (apopain, bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/56/caspases.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Caspase 1 (ICE, top), caspase 9 with inhibitor XAIP-BIR3 (center), and caspase 3 (apopain, bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/56/56-Caspases-caspases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Billions of cells in your body will die in the next hour. This is entirely normal--the human body continually renews itself, removing obsolete or damaged cells and replacing them with healthy new ones. However, your body must do this carefully. If cells are damaged, like when you cut yourself, they may swell and burst, contaminating the surrounding area. The body responds harshly to this type of cell death, inflaming the area by rushing in blood cells to clean up the mess. To avoid this messy problem, your cells are boobytrapped with a method to die cleanly and quickly on demand. When given the signal, the cell will disassemble its own internal structure and fragment itself into small, tidy pieces that are readily consumed by neighboring cells. This process of controlled, antiseptic death is called apoptosis.</div>
+<h4>What Cells Must Die?</h4>
+<div>Apoptosis is used for many purposes. During the development of embryos, organs are shaped by building oversized structures and then pruning back the cells that aren't needed. For instance, during development of the nervous system, half of the neurons die, leaving the proper neural wiring. If you have watched a tadpole lose its tail, you have also seen apoptosis in action. When you are an adult, apoptosis continues its work as obsolete cells die and are replaced by new cells, particularly in organs with high turnover such as the bone marrow and intestines. Apoptosis protects us from cells damaged by radiation or infected by viruses--when detected, these rogue cells are told promptly to commit suicide. Apoptosis is also one of our major defenses against cancer, and deadly cancer cells often have mutations that disable their own apoptosis machinery.</div>
+<h4>The Executioner</h4>
+<div>Caspases are the executioners of apoptosis. Once activated by gatekeeper molecules such as <a href="http://pdb101.rcsb.org/motm/177">apoptosomes</a>, they chop up strategic proteins in the cell. The name refers to two properties of these enzymes. First, they are cysteine proteases that use the sulfur atom in cysteine to perform the cleavage reaction. Second, they cut proteins next to aspartate amino acids in their chains. They do not cut indiscriminately--instead, they are designed to make exactly the right cuts needed to disassemble the cell in an orderly manner.</div>
+<h4>Caspases in the PDB</h4>
+<div>Almost a dozen caspases have been discovered in human cells, each with a slightly different task. Structures of many of them are available in the PDB. Three are shown here. Caspase-1 (also known as interleukin-1beta-converting enzyme) was the first one discovered. It is not involved directly in apoptosis, but instead processes a cell signaling molecule in white blood cells. As with the other caspases, the active form is composed of two chains, each of which is cut into two pieces. The structure shown here at the top, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ice" target="_blank">1ice <i class="fa fa-external-link"> </i></a></span>, has small inhibitors bound in the two active sites, shown in green. Caspase-9 is shown at the center (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nw9" target="_blank">1nw9 <i class="fa fa-external-link"> </i></a></span>), bound to an inhibitory protein (shown in blue). The inhibitor holds it in an inactive form. When it is released, this caspase can link up with another and form the larger active complex. Caspase-9 is an initiator caspase--one that begins the process of apoptosis. It receives the message to begin work, becomes activated, and then makes a cut in the effector caspases, such as caspase-3 shown at the bottom (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pau" target="_blank">1pau <i class="fa fa-external-link"> </i></a></span>). Caspase-3, along with other effector caspases, then begin the heavy work of disassembling the cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Caspase-activated deoxyribonuclease." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/56/CAD.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Caspase-activated deoxyribonuclease.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/56/56-Caspases-CAD.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Helpers in Apoptosis</h4>
+<div>Caspases are designed to break proteins into bite-sized pieces, but the cell needs help to break down its other molecules. Cells also have a number of caspase-activated proteins to do this work. The one shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1v0d" target="_blank">1v0d <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c9f" target="_blank">1c9f <i class="fa fa-external-link"> </i></a></span>, is caspase-activated deoxyribonuclease. During apoptosis, caspases break up an inhibitory protein that binds to the two large domains at the bottom, creating the active form. DNA slides into the large groove at the top and the active site amino acids, shown here in green, clip it into small pieces.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/56/casp7-rasmol.gif"/></div>
+<div>As you might imagine, caspases are dangerous enzymes to have around, so they are created in the form of inactive proenzymes. The structure on the left, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k88" target="_blank">1k88 <i class="fa fa-external-link"> </i></a></span>, shows one example: procaspase-7. The active site contains a reactive cysteine, shown in yellow, and three basic amino acids (two arginines and a glutamate, shown in blue) that recognize the aspartate in the protein that is cleaved. As you can see, the procaspase is floppy and these four key amino acids are not assembled into a tight active site. When the caspase is activated, by making a few strategic cuts in the protein chain, the active site can form the proper conformation. The structure on the right, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f1j" target="_blank">1f1j <i class="fa fa-external-link"> </i></a></span>, shows active caspase-7 with a short protein chain bound in the active site. The structure catches the enzyme in the middle of its reaction. The cysteine is bound to the target protein chain, and the aspartate is nestled inside the three basic amino acids. <br/><br/> This picture was created using RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. W. Hetts (1998) To die or not to die: an overview of apoptosis and its role in disease. <i>Journal of the American Medical Society (JAMA)</i> <b>279</b>, 300-307.</li>
+<li>D. W. Nicholson and N. A. Thornberry (1997) Caspases: killer proteases. <i>Trends in Biochemical Sciences</i> <b>22</b>, 299-306.</li>
+<li>S. W. Fesik (2000) Insights into programmed cell death through structural biology. <i>Cell</i> <b>103</b>, 273-282.</li>
+<li>Y. Shi (2002) Mechanisms of caspase activation and inhibition during apotosis. <i>Molecular Cell</i> <b>9</b>, 459-470.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_8">http://doi.org/10.2210/rcsb_pdb/mom_2004_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

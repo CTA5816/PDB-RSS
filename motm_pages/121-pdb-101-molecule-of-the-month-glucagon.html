@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glucagon</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glucagon" property="og:title"/>
+<meta content="Glucagon triggers the release of glucose into the blood, to power cells throughout the body" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_glucagonreceptor.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/184" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glucagon" name="twitter:title"/>
+<meta content="Glucagon triggers the release of glucose into the blood, to power cells throughout the body" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_glucagonreceptor.jpg" name="twitter:image"/>
+<meta content="Glucagon triggers the release of glucose into the blood, to power cells throughout the body" name="description"/>
+<meta content="diabetes,G-protein-coupled receptor,glucagon receptor,glucose transport,GPCR,proglucagon,1gcn,4ers,4l6r,1gcn,3iol,2l63,1p8j,3iol" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 184
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 184 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glucagon</h1>
+<p><i>Glucagon triggers the release of glucose into the blood, to power cells throughout the body</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glucagon receptor, with glucagon in red. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_glucagonreceptor.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glucagon receptor, with glucagon in red. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_glucagonreceptor.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Too much glucose in the blood can lead to serious problems like diabetes, but too little glucose will also cause problems, starving cells throughout the body. Your body uses two main hormones, secreted by cells in the pancreas, to get the balance just right. Just after we eat, insulin is released, telling cells to take glucose out of the blood and store it for future use. Between meals, glucagon is released and has the opposite action, telling these same cells to release glucose for use in energy production and metabolism.</div>
+<h4>Glucagon GPCR</h4>
+<div>Glucagon (shown in red) is recognized by cells using a G-protein-coupled receptor (shown in blue). This receptor is a bit different than a typical GPCR, like the one that recognizes adrenaline. It has an extra domain on the outer side of the cell (shown at the top of the illustration here), which traps glucagon and delivers it to the membrane-spanning portion. When glucagon binds, it activates G-proteins inside the cell, starting off a cascade of responses that lead to release of glucose.</div>
+<h4>Dissecting a GPCR</h4>
+<div>Since the glucagon receptor has several moving parts, it has been a challenging target for structural study. The image shown here is a model of the whole complex built from several different PDB entries. Glucagon, which folds into a short alpha helix, is taken from a crystal structure of the isolated hormone, from PDB entry <span class="rcsb_id_tag" title="Glucagon"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gcn" target="_blank">1gcn <i class="fa fa-external-link"> </i></a></span>. The extracellular domain is taken from a structure bound to an antibody, from PDB entry <span class="rcsb_id_tag" title="Glucagon Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ers" target="_blank">4ers <i class="fa fa-external-link"> </i></a></span>. The signature 7-helix bundle of the membrane-spanning portion is taken from PDB entry <span class="rcsb_id_tag" title="Glucagon Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4l6r" target="_blank">4l6r <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Furin (top) and three hormones created from proglucagon (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_proglucagon.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Furin (top) and three hormones created from proglucagon (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_proglucagon.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Proglucagon</h4>
+<div>Glucagon is one of a collection of similar hormones that help manage metabolism. Several are built together as a longer protein, called proglucagon. Then, enzymes termed prohormone convertases clip it into the functional hormones. Three are shown here: glucagon (PDB entry <span class="rcsb_id_tag" title="Glucagon"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gcn" target="_blank">1gcn <i class="fa fa-external-link"> </i></a></span>), glucagon-like peptide 1 (PDB entry <span class="rcsb_id_tag" title="GLP-1"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iol" target="_blank">3iol <i class="fa fa-external-link"> </i></a></span>), and glucagon-like peptide 2 (PDB entry <span class="rcsb_id_tag" title="GLP-2"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2l63" target="_blank">2l63 <i class="fa fa-external-link"> </i></a></span>). The convertase shown here is furin (PDB entry <span class="rcsb_id_tag" title="Furin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1p8j" target="_blank">1p8j <i class="fa fa-external-link"> </i></a></span>), which is similar to the ones that process proglucagon.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>GLP-1 and Receptor (PDB entry 3iol)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/184/184-Glucagon_3iol_JSmol.jpg"/></div>
+<p>The extracellular domain of the glucagon receptor has the job of finding glucagon. It binds to one end of the short hormone helix, leaving the other end free to insert into a deep pocket in the transmembrane domain, activating the receptor. The structure shown here (PDB entry <span class="rcsb_id_tag" title="GLP-1 and Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iol" target="_blank">3iol <i class="fa fa-external-link"> </i></a></span>) shows the binding of GLP-1 to the extracellular domain of its receptor, which is quite similar to glucagon and its receptor. To explore this structure in more detail, click on the image for an interactive JSMol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several structures for isolated glucagon and modified forms of glucagon are available in the PDB, showing that it has a range of conformations in different environments. Try searching for "glucagon" to see a few of them.</li>
+<li>You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P01275">Group Sequence view</a> to explore different hormones created from proglucagon.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Bataille &amp; S. Dalle (2014) The forgotten members of the glucagon family. Diabetes Research and Clinical Practice 106, 1-10.</li>
+<li>K. Hollenstein, C. de Graaf, A. Bortolato, M. W. Wang, F. H. Marshall &amp; R. C. Stevens (2014) Insights into the structure of class B GPCRs. Trends in Pharmacological Sciences 35, 12-22.</li>
+<li>4l6r: F. Y. Siu, M. He, C. de Graaf, G. W. Han, D. Yang, Z. Zhang, C. Zhou, Q. Xu, D. Wacker, J. S. Joseph, W. Liu, J. Lau, V. Cherezov, V. Katritch, M. W. Wang &amp; R. C. Stevens (2013) Structure of the human glucagon class B G-protein-coupled receptor. Nature 499, 444-449.</li>
+<li>4ers: C. M. Koth, J. M. Murray, S. Mukund, A. Madjidi, A. Minn, H. J. Clark, T. Wong, V. Chiang, E. Luis, A. Estevez, J. Rondon, Y. Zhang, I. Hotzel &amp; B. B. Allan (2012) Molecular basis for negative regulation of the glucagon receptor. Proceedings of the National Academy of Science USA 109, 14393-14398.</li>
+<li>2l63: K. C. Venneti &amp; C. M. Hewage (2011) Conformational and molecular interaction studies of glucagon-like peptide-2 with its N-terminal extracellular receptor domain. FEBS Letters 585, 346-352.</li>
+<li>3iol: C. R. Underwood, P. Garibay, L. B. Knudsen, S. Hastrup, G. H. Peters, R. Rudolph &amp; S. Reedtz-Runge (2010) Crystal structure of glucagon-like peptide-1 in complex with the extracellular domain of the glucagon-like peptide-1 receptor. Journal of Biological Chemistry 285, 723-730.</li>
+<li>1p8j: S. Henrich, A. Cameron, G. P. Bourenkov, R. Kiefersauer, R. Huber, I. Lindberg, W. Bode &amp; M. E. Than (2003) The crystal structure of the proprotein processing proteinase furin explains its stringent specificity. Nature Structural Biology 10, 520- 526.</li>
+<li>1gcn: K. Sasaki, S. Dockerill, D. A. Adamiak, I. J. Tickle &amp; T. Blundell (1975) X-ray analysis of glucagon and its relationship to receptor binding. Nature 257, 751-757.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_4">http://doi.org/10.2210/rcsb_pdb/mom_2015_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

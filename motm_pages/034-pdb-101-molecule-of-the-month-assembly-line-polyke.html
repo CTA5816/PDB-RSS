@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Assembly Line Polyketide Synthases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Assembly Line Polyketide Synthases" property="og:title"/>
+<meta content="Large multienzyme complexes that synthesize diverse small molecules in a stepwise manner." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/301/Lsd14_labels.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/301" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Assembly Line Polyketide Synthases" name="twitter:title"/>
+<meta content="Large multienzyme complexes that synthesize diverse small molecules in a stepwise manner." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/301/Lsd14_labels.jpg" name="twitter:image"/>
+<meta content="Large multienzyme complexes that synthesize diverse small molecules in a stepwise manner." name="description"/>
+<meta content="antibiotic,7M7J,7M7F,7S6B" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 301
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 301 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Assembly Line Polyketide Synthases</h1>
+<p><i>Large multienzyme complexes that synthesize diverse small molecules in a stepwise manner.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Lsd14, an assembly line polyketide synthase (PDB 7S6B). The acyl carrier protein shown on the right was missing in the structure and is shown attached via a flexible linker to the ketoreductase' domain." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/301/Lsd14_labels.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lsd14, an assembly line polyketide synthase (PDB <a href="https://www.rcsb.org/structure/7S6B" target="_blank">7S6B</a>). The acyl carrier protein shown on the right was missing in the structure and is shown attached via a flexible linker to the ketoreductase' domain.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/301/Lsd14_labels.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Polyketide synthases (PKSs) are found in a variety of organisms, including bacteria, fungi, and plants, and are responsible for producing diverse bioactive natural compounds. Examples of medically important polyketides include antibiotics (erythromycin, tetracycline), immunosuppressants (rapamycin), cancer therapeutics (epothilone, doxorubicin), and antifungals (amphotericin B, avermectin).</div>
+<h4>Modular Megaenzymes</h4>
+<div>Some PKSs are especially large complexes that are made up of several modules. Each module is built from a number of distinct enzymatic domains that each play a role in the synthesis of a specific polyketide. Domains that are typically found in PKSs include an acyl carrier protein (ACP), which is responsible for "carrying" the growing polyketide to and from different domains, an acyltransferase (AT) domain that loads the extender unit, an acyl-CoA molecule, onto the ACP, and a ketosynthase (KS) domain, which catalyzes the growth of the polyketide chain through a condensation reaction. Additional domains, such as a ketoreductase (KR) domain can further modify the growing polyketide. These different domains can be seen in the PKS module Lsd14, which is involved in the synthesis of the antibiotic lasalocid A by the bacterium <i>Streptomyces lasalocidi</i> (PDB <a href="https://www.rcsb.org/structure/7S6B" target="_blank">7S6B</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="In the open state (PDB 7M7F), one ACP is seen bound to the ketosynthase (KS) domain of DEBS M1. In the closed state (PDB 7M7J ), the ACP domain is sterically blocked from binding at the KS site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/301/DEBS_labels.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>In the open state (PDB <a href="https://www.rcsb.org/structure/7M7F" target="_blank">7M7F</a>), one ACP is seen bound to the ketosynthase (KS) domain of DEBS M1. In the closed state (PDB <a href="https://www.rcsb.org/structure/7M7J" target="_blank">7M7J</a> ), the ACP domain is sterically blocked from binding at the KS site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/301/DEBS_labels.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Assembly Line Workers</h4>
+<div>Lsd14 is a member of a class of polyketide synthases called assembly line PKSs. In these large complexes, the growing polyketide chain is acted upon exactly once by each enzymatic domain in each module in a sequential manner. The ACP domain, which holds one end of the polyketide and moves to different positions in order to deliver it to the next domain or module, plays a central role in this tight choreography.</div>
+<h4>Maintaining Order</h4>
+<div>Recent structures of different assembly line PKS modules, including Lsd14 and a module of 6-deoxyerythronolide synthase (DEBS M1), which is shown on the left, have described how domains within a module are arranged in space. These structures have revealed an unexpectedly asymmetric dimeric structure with two separate "reaction chambers." The asymmetry (seen in the DEBS M1 open state, PDB <a href="https://www.rcsb.org/structure/7M7F" target="_blank">7M7F</a>, and in the Lsd14 structure above) suggests that only one side or reaction chamber of the PKS can be used at a time, which is thought to prevent a second round of polyketide growth by the same module. Conformational changes within the PKS module may also ensure that synthesis occurs in the correct order. In DEBS M1, a conformational switch in the AT domain, which is thought to be triggered by the condensation reaction in the KS domain, causes the module to enter a "closed" state (PDB <a href="https://www.rcsb.org/structure/7M7J" target="_blank">7M7J</a>) that blocks the ACP from rebinding to KS. Similarly, in Lsd14, different conformational states have been found to block specific catalytic sites, and is also thought to prevent the ACP from binding enzymatic domains in the incorrect order.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="row">
+<div class="col-sm-6">
+<div class="motm-video">
+<iframe allow="autoplay; fullscreen; clipboard-write" allowfullscreen="" frameborder="0" height="295" src="https://player.vimeo.com/video/1015958424?h=fcc561f181" width="563"></iframe>
+</div>
+</div>
+<div class="col-sm-6">
+<h4>Polyketide synthesis in action</h4>
+<div>The animation on the left depicts pikromycin PKS module 5 (PikAIII) from <i>Streptomyces venezuelae</i> (<a href="https://www.emdataresource.org/emdlist=DOI:10.1038/nature13423">EMDB 5647-5653</a>) and was created in collaboration with Georgios Skiniotis. Unlike Lsd14 or DEBS, described above, PikAIII is symmetric and is thought to be able to catalyze reactions in both reaction chambers at the same time. The first part of the animation shows how the ACP modules carry and deliver the polyketide chain (shown as a glowing dot) through a series of modules. The second part of the animation looks at a single module and describes the stepwise growth of the polyketide through the action of AT and KS.</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Differential Docking</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/301/jmolPreview.jpg"/></div>
+<p>As a polyketide goes through cycles of elongation, it is held by an acyl carrier protein that must recognize and dock at different enzymatic sites at different times. Studies of Lsd14 and other PKSs have shown how ACP (pink) docks to acyltransferase (shown in green on the left, PDB <a href="https://www.rcsb.org/structure/7S6B" target="_blank">7S6B</a>), as well as how ACP can then dock at ketosynthase (in teal, PDB <a href="https://www.rcsb.org/structure/7S6C" target="_blank">7S6C</a>) using a different interface.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>PKS proteins are part of a protein superfamily that includes fatty acid synthases. Like PKSs, fatty acid synthases also work in a modular way and employ ACPs to carry a growing molecule chain from one enzyme to another. Read more about them <a href="https://pdb101.rcsb.org/motm/90">here</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7S6B, 7S6C: Bagde, S.R., Mathews, I.I., Fromme, J.C., Kim, C.Y. (2021) Modular polyketide synthase contains two reaction chambers that operate asynchronously. Science 374: 723-729</li>
+<li>7M7F, 7M7J: Cogan, D.P., Zhang, K., Li, X., Li, S., Pintilie, G.D., Roh, S.H., Craik, C.S., Chiu, W., Khosla, C. (2021) Mapping the catalytic conformations of an assembly-line polyketide synthase module. Science 374: 729-734</li>
+<li>Soohoo AM, Cogan DP, Brodsky KL, Khosla C. (2024) Structure and Mechanisms of Assembly-Line Polyketide Synthases. Annu Rev Biochem. Aug;93(1):471-498</li>
+<li>Grininger M. (2023) Enzymology of assembly line synthesis by modular polyketide synthases. Nat Chem Biol. Apr;19(4):401-415</li>
+<li>Bagde SR, Kim CY. (2024) Architecture of full-length type I modular polyketide synthases revealed by X-ray crystallography, cryo-electron microscopy, and AlphaFold2. Nat Prod Rep. Mar 19</li>
+<li>Dutta S, Whicher JR, Hansen DA, Hale WA, Chemler JA, Congdon GR, Narayan AR, Håkansson K, Sherman DH, Smith JL, Skiniotis G. (2014) Structure of a modular polyketide synthase. Nature. Jun 26;510(7506):512-7</li>
+<li>Whicher JR, Dutta S, Hansen DA, Hale WA, Chemler JA, Dosey AM, Narayan AR, Håkansson K, Sherman DH, Smith JL, Skiniotis G. (2014) Structural rearrangements of a polyketide synthase module during its catalytic cycle. Nature. Jun 26;510(7506):560-4.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_1">http://doi.org/10.2210/rcsb_pdb/mom_2025_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

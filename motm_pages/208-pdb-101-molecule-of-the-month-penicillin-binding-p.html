@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Penicillin-binding Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Penicillin-binding Proteins" property="og:title"/>
+<meta content="Penicillin attacks the proteins that build bacterial cell walls" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/29/3pte.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/29" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Penicillin-binding Proteins" name="twitter:title"/>
+<meta content="Penicillin attacks the proteins that build bacterial cell walls" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/29/3pte.gif" name="twitter:image"/>
+<meta content="Penicillin attacks the proteins that build bacterial cell walls" name="description"/>
+<meta content="antibiotic resistance,antibiotics,beta-lactamase,cephalosporin,D-alanyl-D-alanine peptidase,penicillin,peptidoglycan,peptidoglycan biosynthetic process,3pte,3pte,4blm,1hvb" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 29
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 29 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Penicillin-binding Proteins</h1>
+<p><i>Penicillin attacks the proteins that build bacterial cell walls</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="D-alanyl-D-alanine peptidase, with a reactive serine amino acid in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/29/3pte.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>D-alanyl-D-alanine peptidase, with a reactive serine amino acid in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/29/29-Penicillin-bindingProteins-3pte.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Bacteria pose a continual threat of infection, both to humans and to other higher organisms. Thus, when looking for new ways to fight infection, it is often productive to look at how other plants, animals and fungi protect themselves. This is how penicillin was discovered. Through a chance observation in 1928, Alexander Fleming discovered that colonies of Penicillium mold growing in his bacterial cultures were able to stave off infection. With more study, he found that the mold was flooding the culture with a molecule that killed the bacteria, penicillin.</div>
+<h4>Magic Bullet</h4>
+<div>Penicillin and other beta-lactam antibiotics (named for an unusual, highly reactive lactam ring) are very efficient and have few side effects (apart from allergic reactions in some people). This is because the penicillin attacks a process that is unique to bacteria and not found in higher organisms. As an additional advantage, the enzymes attacked by penicillin are found on the outside of the cytoplasmic membrane that surrounds the bacterial cell, so the drugs can attack directly without having to cross this strong barrier.</div>
+<h4>Bursting Bacteria</h4>
+<div>When treated with low levels of penicillin, bacterial cells change shape and grow into long filaments. As the dosage is increased, the cell surface loses its integrity, as it puffs, swells, and ultimately ruptures. Penicillin attacks enzymes that build a strong network of carbohydrate and protein chains, called peptidoglycan, that braces the outside of bacterial cells. Bacterial cells are under high osmotic pressure; because they are concentrated with proteins, small molecules and ions are on the inside and the environment is dilute on the outside. Without this bracing corset of peptidoglycan, bacterial cells would rapidly burst under the osmotic pressure.</div>
+<h4>Blocking Construction</h4>
+<div>Penicillin is chemically similar to the modular pieces that form the peptidoglycan, and when used as a drug, it blocks the enzymes that connect all the pieces together. As a group, these enzymes are called penicillin-binding proteins. Some assemble long chains of sugars with little peptides sticking out in all directions. Others, like the D-alanyl-D-alanine carboxypeptidase/transpeptidase shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pte" target="_blank">3pte <i class="fa fa-external-link"> </i></a></span>), then crosslink these little peptides to form a two-dimensional network that surrounds the cell like a fishing net.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="D-alanyl-D-alanine peptidase (left) and beta-lactamase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/29/4blm-3pte.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>D-alanyl-D-alanine peptidase (left) and beta-lactamase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/29/29-Penicillin-bindingProteins-4blm-3pte.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Penicillin Resistance</h4>
+<div>Of course, bacteria are quick to fight back. Bacteria reproduce very quickly, with dozens of generations every day, so bacterial evolution is very fast. Bacteria have developed many ways to thwart the action of penicillin. Some change the penicillin-binding proteins in subtle ways, so that they still perform their function but do not bind to the drugs. Some develop more effective ways to shield the sensitive enzymes from the drug or methods to pump drugs quickly away from the cell. But the most common method is to create a special enzyme, a beta-lactamase (also called penicillinase) that seeks out the drug and destroys it. <br/><br/> Many beta-lactamases use the same machinery as used by the penicillin-binding proteins--so similar, in fact, than many researchers believe that the beta-lactamases were actually developed by evolutionary modification of penicillin-binding proteins. The penicillin-binding proteins, like the one shown on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pte" target="_blank">3pte <i class="fa fa-external-link"> </i></a></span>), use a serine amino acid in their reaction, colored purple here. The serine forms a covalent bond with a peptidoglycan chain, then releases it as it forms the crosslink with another part of the peptidoglycan network. Penicillin binds to this serine but does not release it, thus permanently blocking the active site. Beta-lactamases, like the one shown on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4blm" target="_blank">4blm <i class="fa fa-external-link"> </i></a></span>), have a similar serine in their active site pocket. Penicillin also binds to this serine, but is then released in an inactivated form. Other beta-lactamases do the same thing, but use a zinc ion instead of a serine amino acid to inactivate the penicillin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/29/1hvb.gif"/></div>
+<div>The PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hvb" target="_blank">1hvb <i class="fa fa-external-link"> </i></a></span> shows a penicillin-binding protein in action. The enzyme is a D-alanyl-D-alanine carboxypeptidase/transpeptidase that creates a crosslink between two chains in the peptidoglycan net. The structure contains a molecule specially designed by researchers to capture a snapshot of the process of crosslinking. Cephalosporin, a drug similar to penicillin, is bound directly to the serine in the active site. The drug is in the position normally occupied by one of the strands to be crosslinked, as indicated by the transparent dots that extend to the left. A little peptide has been attached to this drug in the position normally occupied by the other strand in the crosslink. This structure shows how the complex might look just after the crosslink is made. <br/><br/> This illustration was created with RasMol. You can create similar pictures by clicking on the accession codes above and choosing one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Kelley, J.A., Kuzin, A.P., Charlier, P. and Fonze, E. (1998) X-ray studies of enzymes that interact with penicillins. <i>Cell and Molecular Life Sciences</i> <b>54</b>, pp. 353-358.</li>
+<li>Waxman, D.J. and Strominger, J.L. (1983) Penicillin-binding proteins and the mechanism of action of beta-lactam antibiotics. <i>Annual Review of Biochemistry</i> <b>52</b>, pp. 825-869.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_5">http://doi.org/10.2210/rcsb_pdb/mom_2002_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

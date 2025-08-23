@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Photosystem I</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Photosystem I" property="og:title"/>
+<meta content="Photosystem I captures the energy in sunlight" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/22/1jb0.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/22" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Photosystem I" name="twitter:title"/>
+<meta content="Photosystem I captures the energy in sunlight" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/22/1jb0.gif" name="twitter:image"/>
+<meta content="Photosystem I captures the energy in sunlight" name="description"/>
+<meta content="chlorophyll binding,light reaction,light-harvesting complex,oxidation reduction,photosynthesis,photosystem,1jb0,1prc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 22
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 22 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Photosystem I</h1>
+<p><i>Photosystem I captures the energy in sunlight</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Photosystem I. The portion spanning the membrane is shown schematically with red lines." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/22/1jb0.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem I. The portion spanning the membrane is shown schematically with red lines.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/22/22-PhotosystemI-1jb0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Look around. Just about everywhere that you go, you will see something green. Plants cover the Earth, and their smaller cousins, algae and photosynthetic bacteria, can be found in nearly every corner. Everywhere, they are busy converting carbon dioxide into sugar, creating living organic molecules out of air using the energy of sunlight as power. This process, termed photosynthesis, provides the material foundation on which all life rests.</div>
+<h4>Capturing Light</h4>
+<div>At the center of photosynthesis is a class of proteins termed photosynthetic reaction centers. These proteins capture individual light photons and use them to provide power for building sugar. The example shown here is photosystem I (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jb0" target="_blank">1jb0 <i class="fa fa-external-link"> </i></a></span>), one of the two large reaction centers used in cyanobacteria, algae and plants. Photosystem I is a trimeric complex that forms a large disk. In cells, the complex floats in a membrane (the membrane is indicated by the two red lines in the lower picture) with the large flat faces exposed above and below the membrane.</div>
+<h4>Colorful Cofactors</h4>
+<div>Each of the three subunits of photosystem I is a complex of a dozen proteins, which together support and position over a hundred cofactors. Some of these cofactors, shown here in green and orange, are exposed around the edge of complex and many others are buried inside. Cofactors are small organic molecules that are used to perform chemical tasks that are beyond the capabilities of pure protein molecules. The cofactors in photosystem I include many small, brightly-colored molecules such as chlorophyll, which is bright green, and carotenoids, which are orange. The colors are, in fact, the reason that these molecules are useful: the colors are an indication that the cofactors absorb other colors strongly. For instance, chlorophyll absorbs blue and red light, leaving the beautiful greens for us to see. The energy from these absorbed colors is then captured to perform photosynthesis.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Electron transfer chain of photosystem I." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/22/1jb0-etc.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Electron transfer chain of photosystem I.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/22/22-PhotosystemI-1jb0-etc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Electron Transfer Chain</h4>
+<div>The heart of photosystem I is an electron transfer chain, a chain of chlorophyll (shown in green), phylloquinone (shown in orange) and three iron-sulfur clusters (yellow and red at the top). These cofactors convert the energy from light into energy that the cell can use. The two chlorophyll molecules at the bottom capture the light first. When they do, an electron is excited into a higher energy state. Normally this electron would quickly decay, releasing heat or releasing a new photon of slightly lower energy. But before this has a chance to happen, photosystem I passes this electron on, up the chain of cofactors. At the top, the electron is transferred to a small ferredoxin protein (not shown here), which then ferries it on to the other steps of photosynthesis. At the bottom, the hole left by this wandering electron is filled by an electron from another protein, plastocyanin. <br/><br/> This may seem rather mundane until you see the trick that the photosystem is performing. The proteins at both ends of this process, ferredoxin and plastocyanin, are carefully chosen. Because of the special design of their own cofactors, it is more difficult to add an electron to ferredoxin than it is to plastocyanin--normally, the flow would be in the opposite direction. But photosystem I uses the energy from light to energize the electron, moving it in a difficult direction. Then, since the electron is placed in such an energetic position, it can be used to perform unfavorable duties such as the production of sugar from carbon dioxide.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Photosystem I (left) and a bacterial photosynthetic reaction center (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/22/reaction-centers.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem I (left) and a bacterial photosynthetic reaction center (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/22/22-PhotosystemI-reaction-centers.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Photosynthetic Cousins</h4>
+<div>Different photosystems are used by different photosynthetic organisms. Higher plants, algae, and some bacteria have the photosystem I shown here and a second one termed <a href="http://pdb101.rcsb.org/motm/59">photosystem II</a>. Photosystem II uses water instead of plastocyanin as the donor of electrons to fill the hole left when the energized electron is passed up the chain. When it grabs electrons from a water molecule, photosystem II splits the water and releases oxygen gas. This reaction is the source of all of the oxygen that we breathe. Some photosynthetic bacteria contain a smaller photosynthetic reaction center, such as the one shown on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1prc" target="_blank">1prc <i class="fa fa-external-link"> </i></a></span>). As in photosystem I, a stack of chlorophyll and other cofactors transfer a light-energized electron up to an energetic electron carrier.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/22/1jb0-antenna.gif"/>
+<div class="img-caption"><a href="https://cdn.rcsb.org/pdb101/motm/22/22-PhotosystemI-1jb0-antenna.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Harvesting Light</h4>
+<div>Of course, plants do not rely on the slim chance of a photon running into one tiny chlorophyll molecule in the middle of the reaction center. As with all things in life, cells have found an even better way. Photosystem I, shown here looking from the top, contains an electron transfer chain, colored here in bright colors, at the center of each of the three subunits. Each one is surrounded by a dense ring of chlorophyll and carotenoid molecules that act as antennas. In this picture, the protein is transparent so that only the cofactors are seen. These antenna molecules each absorb light and transfer energy to their neighbors. Rapidly, all of the energy funnels into the three reaction centers, where is captured to create activated electrons.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Photosystem I Cofactors</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/22/jmol-jmol.jpg"/></div>
+<p>You can look at the many photosystem I cofactors of the electron transfer chain and the antenna in PDB entry <a href="https://www.rcsb.org/structure/1jb0" target="_blank">1jb0</a>. Only one of the three subunits is included in the file, but you will find that this is complicated enough. If you display only the cofactors, you will get a picture like the one shown here. The central path of electron transfer is shown with large spheres: chlorophyll is colored green to yellow, phylloquinone is orange and iron/sulfur clusters are red and yellow. In the surrounding antenna, shown with ball-and-stick, chlorophyll is green with magnesium in turquoise and beta-carotene is pink. Click on the JSmol tab to explore this structure in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Parag R. Chitnis (2001) Photosystem I: function and physiology. Annual Review of Plant Physiology and Plant Molecular Biology 52, 593-626.		</li>
+<li>Patrick Jordan, Petra Fromme, Horst Tobias Witt, Olaf Kuklas, Wolfram Saenger and Norbert Krauss (2001) Three-dimensional structure of cyanobacterial photosystem I at 2.5 A resolution. Nature 411, 909-917.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_10">http://doi.org/10.2210/rcsb_pdb/mom_2001_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

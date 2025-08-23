@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Voltage-gated Sodium Channels</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Voltage-gated Sodium Channels" property="og:title"/>
+<meta content="Voltage-gated sodium channels transmit signals in a wave through the nervous system." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6j8j_twoview.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/243" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Voltage-gated Sodium Channels" name="twitter:title"/>
+<meta content="Voltage-gated sodium channels transmit signals in a wave through the nervous system." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6j8j_twoview.jpg" name="twitter:image"/>
+<meta content="Voltage-gated sodium channels transmit signals in a wave through the nervous system." name="description"/>
+<meta content="nerves,axons,brain,action potential,nerve signaling,channels,6a95,6j8j,5vb8,6p6w" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 243
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 243 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Voltage-gated Sodium Channels</h1>
+<p><i>Voltage-gated sodium channels transmit signals in a wave through the nervous system.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Two views of a voltage-gated sodium channel. Voltage-sensing elements are shown in magenta, auxiliary subunits are shown in green, and the membrane is shown schematically in the lower image." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6j8j_twoview.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two views of a voltage-gated sodium channel. Voltage-sensing elements are shown in magenta, auxiliary subunits are shown in green, and the membrane is shown schematically in the lower image.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6j8j_twoview.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As I sit here writing this article, a flurry of signals is coursing through my nervous system, helping me sort out how to get this story started. The same thing is happening in your brain, as you read these words and make sense of them. Nerve impulses travel throughout nervous system at breakneck speed, carrying messages from cell to cell that together make up our thoughts and control our actions. Several different methods are used to transmit these messages. A complex machinery of neurotransmitters and receptors, such as <a href="https://pdb101.rcsb.org/motm/235">AMPA receptors</a>, pass messages across synapses from one cell to the next. Propagation of signals along the long axons of nerve cells is somewhat simpler, performed by voltage-gated sodium channels and a few helpers.</div>
+<h4>Signaling Wave</h4>
+<div>Axon membranes are filled with channels that open and close based on the voltage difference across the membrane. If the voltage difference is high, these channels are tightly closed, but when the voltage drops, they open briefly and allow sodium ions to pass across the membrane. A few simple steps are needed to send a signal. First, <a href="https://pdb101.rcsb.org/motm/118">ion pumps</a> build up an excess of sodium outside the cell, creating the voltage difference that keeps the channels shut. The signal is then triggered by other types of channels that allow sodium to cross back across the membrane and equalize the amounts on either side. This process reduces the voltage difference in the local area and causes nearby sodium channels to open. The voltage lowers around these channels, causing more channels further down the axon to open. Much like a stadium wave at a sporting event, a wave of channel opening spreads down the axon, ultimately reaching the next cell. Of course (as is often the case with biology), things aren’t quite this simple, and potassium channels and other proteins also help to refine the wave.</div>
+<h4>Sensing Voltage</h4>
+<div>Our voltage-gated sodium channels, such as the one shown here from PDB entry <a href="https://www.rcsb.org/structure/6j8j" target="_blank">6j8j</a>, are composed of a long protein chain that folds to form a pore through the membrane, with four voltage-sensing elements arrayed around the pore. A few additional subunits, shown here in green, tune the action of the channel. The voltage-sensing elements include a helical segment (much of which is in an unusual 3<sub>10</sub> conformation) that has several positively-charged arginine and lysine amino acids (shown in magenta), that respond to changes in local voltage and open and close the pore.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Voltage-gated sodium channel with tetrodotoxin (green at center) and a spider toxin (yellow). Voltage-sensing elements are shown in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6a95_green.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Voltage-gated sodium channel with tetrodotoxin (green at center) and a spider toxin (yellow). Voltage-sensing elements are shown in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-6a95_green.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Terrible Toxins</h4>
+<div>Sodium channels transmit all the messages between our brain and our muscles, so as you can imagine, they are susceptible targets for attack. Many animals make small toxins that block the action of these channels, causing paralysis. Two are shown here, in PDB entry <a href="https://www.rcsb.org/structure/6a95" target="_blank">6a95</a>. Tetrodotoxin, the lethal toxin found in pufferfish and a variety of other poisonous animals, binds in the middle and physically blocks the pore. On the other hand, the spider toxin (shown in yellow) binds to one of the voltage-sensing elements and corrupts its action, allowing the spider to paralyze its prey. These toxins aren't all terrible, however: they are giving us hints about how we might modify the action of sodium channels to block pain or other disorders.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Voltage-gated Sodium Channel</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/243/242-Voltagegated_Sodium_Channels-Nav_Jmol.jpg"/></div>
+<p>Researchers have recently captured open and closed snapshots of voltage gating, using a simpler bacterial form of the sodium channel. These channels are composed of four identical subunits that together form a structure similar to the one-chain version in our cells. The structures show that the voltage-sensing element moves as the voltage drops, tugging on a segment that connects to the central pore (PDB entries <a href="https://www.rcsb.org/structure/5vb8" target="_blank">5vb8</a>, <a href="https://www.rcsb.org/structure/6p6w" target="_blank">6p6w</a>). To explore this motion in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures of many other toxins, from spiders, scorpions, and other poisonous creatures, are available in the archive, including several structures of these toxins bound to voltage-gated sodium channels.</li>
+<li>Structures of voltage-gated channels for other types of ions are also available in the archive—how are they different and similar to the sodium channels?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6j8j: Shen, H., Liu, D., Wu, K., Lei, J., Yan, N. (2019) Structures of human Nav1.7 channel in complex with auxiliary subunits and animal toxins. Science 363: 1303-1308</li>
+<li>6p6w: Wisedchaisri, G., Tonggu, L., McCord, E., Gamal El-Din, T.M., Wang, L., Zheng, N., Catterall, W.A. (2019) Resting-State Structure and Gating Mechanism of a Voltage-Gated Sodium Channel. Cell 178: 993-1003</li>
+<li>Xu, L., Ding, X., Wang, T., Mou, S., Sun, H., Hou, T. (2019) Voltage-gated sodium channels: structures, functions, and molecular modeling. Drug Discov. Today 24, 1389-1397</li>
+<li>6a95:  Shen, H., Li, Z., Jiang, Y., Pan, X., Wu, J., Cristofori-Armstrong, B., Smith, J.J., Chin, Y.K.Y., Lei, J., Zhou, Q., King, G.F., Yan, N. (2018) Structural basis for the modulation of voltage-gated sodium channels by animal toxins. Science 362: eaau2596</li>
+<li>5vb8: Lenaeus, M.J., Gamal El-Din, T.M., Ing, C., Ramanadane, K., Pomes, R., Zheng, N., Catterall, W.A. (2017) Structures of closed and open states of a voltage-gated sodium channel. Proc. Natl. Acad. Sci. U.S.A. 114: E3051-E3060</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_3">http://doi.org/10.2210/rcsb_pdb/mom_2020_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

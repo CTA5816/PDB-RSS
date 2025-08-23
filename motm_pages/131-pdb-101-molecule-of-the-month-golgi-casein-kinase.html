@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Golgi Casein Kinase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Golgi Casein Kinase" property="og:title"/>
+<meta content="Casein and many other secreted proteins are phosphorylated by Golgi casein kinase" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/265/5yh2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/265" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Golgi Casein Kinase" name="twitter:title"/>
+<meta content="Casein and many other secreted proteins are phosphorylated by Golgi casein kinase" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/265/5yh2.jpg" name="twitter:image"/>
+<meta content="Casein and many other secreted proteins are phosphorylated by Golgi casein kinase" name="description"/>
+<meta content="casein,milk,kinase,Fam20C,nutrition,micelle,5yh2,2lid" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 265
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 265 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Golgi Casein Kinase</h1>
+<p><i>Casein and many other secreted proteins are phosphorylated by Golgi casein kinase</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Golgi casein kinase, with Fam20C in green, Fam20A in blue, and ATP in magenta. A dimer of the two proteins is shown here. The proteins further associate into a tetramer in the crystal, but the significance of this is still under study." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/265/5yh2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Golgi casein kinase, with Fam20C in green, Fam20A in blue, and ATP in magenta. A dimer of the two proteins is shown here. The proteins further associate into a tetramer in the crystal, but the significance of this is still under study.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/265/5yh2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Many early biomolecular discoveries were made using proteins that are easy to obtain and purify. For example, <a href="https://pdb101.rcsb.org/motm/142">the first structures of proteins</a> were determined using myoglobin from a particularly plentiful source (whale muscle), and hemoglobin, which is readily purified from blood. In the late 1800s, scientists discovered that casein, the most plentiful protein in milk, contains phosphorus. Subsequent research revealed that this phosphorus is part of phosphate groups attached to serine amino acids in the protein. Since then, many additional phosphoproteins have been discovered, along with a large collection of kinases that add phosphate groups to proteins and phosphatases that take them off.</div>
+<h4>Kinases Everywhere</h4>
+<div>If you search the PDB archive for “casein kinase,” you’ll get a list of many, many structures. The name of these kinases, however, is a bit of a misnomer. They’re called “casein kinases” because they were discovered through their ability to phosphorylate casein. However, for most of them, that’s not their major biological function. Rather, they play essential roles in signalling in the cell cytoplasm, so they typically never come into contact with casein as it is built and secreted by the Golgi. The actual kinase that phosphorylates milk casein was only discovered in 2012.</div>
+<h4>Authentic Casein Kinase</h4>
+<div>The Golgi casein kinase, shown here from PDB entry <a href="https://www.rcsb.org/structure/5yh2" target="_blank">5yh2</a>, adds phosphates to casein and also to many other types of secreted proteins. It is most active as a complex of two similar types of proteins. Fam20C is the catalytic subunit. It binds to casein and transfers a phosphate from ATP to the protein. Fam20A is not catalytically active, but it binds to Fam20C and makes it more active. For this reason, it is often called a "pseudokinase" because it's structurally similar to other kinases but isn't an enzyme. In addition, a third protein, Fam20B, is similar to these two, but adds phosphates to sugars.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="This illustration shows a cross section through a casein micelle (tan, lower center) and a fat globule (yellow, upper left). The micelle includes many unstructured alpha and beta casein chains interacting with small calcium phosphate nanoclusters (white), and kappa casein chains extending from the surface. The fat globule is surrounded by a multi-layered membrane with many embedded proteins, filled with fat molecules (yellow) and a few carotene molecules (orange). Whey proteins are shown in darker shades around the micelle. More information on this painting is available in the PDB-101 Gallery." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/265/2021CaseinMicelle_Key1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>This illustration shows a cross section through a casein micelle (tan, lower center) and a fat globule (yellow, upper left). The micelle includes many unstructured alpha and beta casein chains interacting with small calcium phosphate nanoclusters (white), and kappa casein chains extending from the surface. The fat globule is surrounded by a multi-layered membrane with many embedded proteins, filled with fat molecules (yellow) and a few carotene molecules (orange). Whey proteins are shown in darker shades around the micelle. More information on this painting is available in the <a href="https://pdb101.rcsb.org/sci-art/goodsell-gallery/casein-micelle-and-fat-globule-in-milk">PDB-101 Gallery</a>.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/265/2021CaseinMicelle.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Casein in Milk</h4>
+<div>Milk is a complex mixture of proteins, fats, and nutrients that provides everything that a growing infant needs. Most of the protein in cow’s milk is casein, whereas human milk has lesser amounts of casein. Casein chains are largely unstructured (so you won’t currently find any entries for casein the PDB archive) and are associated into large “micelles” in milk. Casein chains have regions that are highly phosphorylated, which associate with tiny mineral nanoclusters of calcium and phosphate in the micelle. The remaining portions of the casein chains are hydrophobic, and stick to each other. A specialized casein, called kappa-casein, coats the surface of the micelle. The outer portions of kappa-casein are negatively charged and glycosylated, which helps to make the whole micelle soluble.</div>
+<h4>Milk and Cheese</h4>
+<div>A few familiar properties of milk are due to the micellar structure of casein. The large micelles, along with the large fat globules, scatter light and consequently make milk opaque and white. Also, the process of making cheese relies on the structure of the micelle. Milk is treated with rennet, which has enzymes that clip off the extended regions of kappa-casein. The trimmed micelles are not nearly as soluble and aggregate into curds. The surrounding milk proteins then make up the liquid whey.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Phosphorylated Serine</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/265/2lid_jmol-jmol.jpg"/></div>
+<p>Golgi casein kinase tends to add phosphate groups at locations in proteins with a characteristic sequence motif: S-X-E, where “S” is the serine to which the phosphate will be added, “X” can be anything, and “E” is a glutamate. The enzyme also works well if a previously phosphorylated serine is in the “E” position. PDB ID <a href="https://www.rcsb.org/structure/2lid" target="_blank">2lid</a> includes an example of this motif with a phosphate added. The protein is vitellogenin, a highly phosphorylated protein that is found in egg yolks. The example shown here is a similar vitellogenin from a wasp. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can compare the structures of Fam20C (chain B in <a href="https://www.rcsb.org/structure/5yh3" target="_blank">5yh2</a>) and Fam20A (chain A in <a href="https://www.rcsb.org/structure/5yh3" target="_blank">5yh2</a>) using the <a href="https://www.rcsb.org/alignment">Pairwise Structure Alignment Tool</a>. Also try aligning Fam20B (chain A in <a href="https://www.rcsb.org/structure/5xoo" target="_blank">5xoo</a>).</li>
+<li>The PDB includes many structures of proteins with phosphorylated serine amino acids. To find them, look at the <a href="https://www.rcsb.org/ligand/SEP">page for phosphoserine (SEP)</a>, and click on "is present in a polymer sequence".</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Worby, C.A., Mayfield, J.E., Pollack, A.J., Dixon, J.E., Bannerjee, S. (2021) The ABCs of the atypical Fam20 secretory pathway kinases. J Biol Chem 296: 100267</li>
+<li>Roy, D., Ye, A., Moughan, P.J., Singh, H. (2020) Composition, structure, and digestive dynamics of milk from different species. Front. Nutrition 7: 577759</li>
+<li>5yh2: Zhang, H., Zhu, Q., Cui, J., Wang, Y., Chen, M.J., Guo, X., Tagliabracci, V.S., Dixon, J.E., Xiao, J.  (2018) Structure and evolution of the Fam20 kinases. Nat Commun 9: 1218-1218</li>
+<li>2lid: Havukainen, H., Underhaug, J., Wolschin, F., Amdam, G., Halskau, O. (2012) A vitellogenin polyserine cleavage site: highly disordered conformation protected from proteolysis by phosphorylation. J Exp Biol 215: 1837-184</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_1">http://doi.org/10.2210/rcsb_pdb/mom_2022_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

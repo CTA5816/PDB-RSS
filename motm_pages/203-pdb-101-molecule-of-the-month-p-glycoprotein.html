@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: P-glycoprotein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: P-glycoprotein" property="og:title"/>
+<meta content="P-glycoprotein pumps toxic molecules out of our cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/123/3g61_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/123" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: P-glycoprotein" name="twitter:title"/>
+<meta content="P-glycoprotein pumps toxic molecules out of our cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/123/3g61_composite.jpg" name="twitter:image"/>
+<meta content="P-glycoprotein pumps toxic molecules out of our cells" name="description"/>
+<meta content="cancer chemotherapy,membrane transport,multidrug resistance,P-glycoprotein,3g61,1bln,3g60" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 123
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 123 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: P-glycoprotein</h1>
+<p><i>P-glycoprotein pumps toxic molecules out of our cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="P-glycoprotein with a cyclic-peptide drug (red). The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/123/3g61_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>P-glycoprotein with a cyclic-peptide drug (red). The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/123/123-P-glycoprotein_3g61_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our environment is filled with toxic substances that attack our molecular machinery. Our cells protect themselves from these dangers in many ways. In some cases, they use enzymes to convert them into harmless compounds. In other cases, they sequester them safely out of the way. For others, cells build specialized pumps that find toxins and eject them outside, for safe disposal.</div>
+<h4>Clean Sweep</h4>
+<div>P-glycoprotein, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3g61" target="_blank">3g61 <i class="fa fa-external-link"> </i></a></span>, is the most common molecular pump protecting our cells from toxic molecules. It sits in the cell membrane and searches for foreign hydrophobic molecules. When it finds one, it grabs the molecule in a pocket deep within the protein, and then flips to a new conformation. The new conformation has an opening towards the outside of the cell, and the molecule is ejected. The whole process is powered by ATP to ensure that everything happens in a timely manner.</div>
+<h4>Powerful Pump</h4>
+<div>Of course, to be effective in its job, P-glycoprotein needs to be able to eject many different types of molecules. Scientists have found the P-glycoprotein pumps hundreds of different molecules, ranging is size from tens to hundreds of atoms. Most are hydrophobic and are normally found in the membrane. These include many toxic molecules, but also important drugs like cyclosporin and anticancer drugs. Thus, the action of P-glycoprotein can be both beneficial and harmful, protecting us from toxins but also reducing the effectiveness of the therapeutic drugs we take.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Antibody Fab fragments (yellow and orange) that bind to the extracellular portion of P-glycoprotein." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/123/3g61_1bln.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antibody Fab fragments (yellow and orange) that bind to the extracellular portion of P-glycoprotein.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/123/123-P-glycoprotein_3g61_1bln.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Blocking the Pump</h4>
+<div>Cancer cells in metastatic cancers are often particularly difficult to treat because they have become resistant to many different anticancer drugs. In some cases, these cells gain their multidrug resistance by building extra P-glycoprotein, which continually ejects the anticancer drugs out of the cancer cells. Researchers are working hard to find ways to block P-glycoprotein in cancer cells, to make them susceptible to treatment. One way is to use antibodies such as the ones shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bln" target="_blank">1bln <i class="fa fa-external-link"> </i></a></span>. They bind to small regions on P-glycoprotein (shown in green) and block the motions needed for pumping. Another approach is to find drugs that lodge in the active site of the protein, blocking its action from the inside.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>P-glycoprotein</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/123/3g60_3g61_jmol.jpg"/></div>
+<p>P-glycoprotein is composed of one long chain that folds into two similar halves. In these pictures, the first half of the protein is colored blue and the second half is colored green. A short segment of protein linking the two halves is not seen in this crystal structure, and is shown here with a dotted line in magenta. Notice how similar the two halves are, and how extensive the overlapping area is between the two halves. Researchers have proposed that a gene duplication occurred during the evolution of the protein to connect these two similar halves into one long protein. <br/><br/> Two separate structures of P-glycoprotein are shown here, PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3g60" target="_blank">3g60 <i class="fa fa-external-link"> </i></a></span> on the left and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3g61" target="_blank">3g61 <i class="fa fa-external-link"> </i></a></span> on the right, which were solved with two different drug molecules, shown here in red. Notice how they bind in slightly different locations in the large active site of the protein. You can click on the image above for an interactive jmol version.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Bacteria build many different types of pumps for ejecting toxic molecules. Can you find examples in the PDB? Do they use a similar scissor-like mechanism?</li>
+<li>Can you find other examples of possible gene duplications in the PDB?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. V. Ambudkar, S. Dey, C. A. Hrycyna, M. Ramachandra, I. Pastan and M. M. Gottesman (1999) Biochemical, cellular, and pharmacological aspects of the multidrug transporter. Annual Review of Pharmacology and Toxicology 39, 361-398.</li>
+<li>G. Szakacs, J. K. Paterson, J. A. Ludwig, C. Booth-Genthe and M. M. Gottesman (2006) Targeting multidrug resistance in cancer. Nature Reviews Drug Discovery 5, 219-234.</li>
+<li>M. Hennessy and J. P. Spiers (2007) A primer on the mechanics of P-glycoprotein the multidrug transporter. Pharmacological Research 55, 1-15.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_3">http://doi.org/10.2210/rcsb_pdb/mom_2010_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

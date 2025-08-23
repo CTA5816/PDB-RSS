@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Oligosaccharyltransferase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Oligosaccharyltransferase" property="og:title"/>
+<meta content="Oligosaccharyltransferase adds a protective coat of carbohydrates to proteins." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/266/6s7o.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/266" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Oligosaccharyltransferase" name="twitter:title"/>
+<meta content="Oligosaccharyltransferase adds a protective coat of carbohydrates to proteins." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/266/6s7o.jpg" name="twitter:image"/>
+<meta content="Oligosaccharyltransferase adds a protective coat of carbohydrates to proteins." name="description"/>
+<meta content="OST,oligosaccharyltransferase,glycosylation,protein synthesis,endoplasmic reticulum,ribosome,6fti,5ogl,6s7o" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 266
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 266 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Oligosaccharyltransferase</h1>
+<p><i>Oligosaccharyltransferase adds a protective coat of carbohydrates to proteins.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Oligosaccharyltransferase, with the end of a glycosylated lipid shown in yellow and the endoplasmic reticulum membrane shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/266/6s7o.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Oligosaccharyltransferase, with the end of a glycosylated lipid shown in yellow and the endoplasmic reticulum membrane shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/266/6s7o.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Almost all living cells are covered with a complex coating of carbohydrates. These carbohydrates are connected to the proteins and lipids that make up cell membranes. They are built of several types of simple sugars connected together in myriad different ways. This carbohydrate coating plays many essential roles in the life of the cell. Some are structural: for example, carbohydrates are bulky and form a protective shield that controls access to the cell surface. Secreted proteins, such as blood serum proteins, are often glycosylated, which improves their solubility and stability. Carbohydrates are also built with multiple shapes and sizes, and different organisms typically have their own distinctive collection of characteristic carbohydrates. The <a href="https://pdb101.rcsb.org/motm/156">ABO blood types</a> are a familiar example of personal variations in our own cell surface glycosylation, and in medical treatments such as blood transfusions, we have to avoid use of donors that are different than our own pattern of glycosylation.</div>
+<h4>Glycosylating Proteins</h4>
+<div>Most commonly, carbohydrates are attached to proteins in two ways: at the oxygen atom in serine or threonine (O-glycosylation), or to the nitrogen in asparagine (N-glycosylation). Oligosaccharyltransferases perform the N-glycosylation reaction. Our cells make two similar forms of this enzyme: OST-A (shown here from PDB entry <a href="https://www.rcsb.org/structure/6s7o" target="_blank">6s7o</a>) and OST-B (PDB entry <a href="https://www.rcsb.org/structure/6s7t" target="_blank">6s7t</a>, not shown). First, a collection of diverse enzymes construct the carbohydrate sugar-by-sugar on a lipid carrier. Then oligosaccharyltransferase, as the name implies, transfers the carbohydrate from the lipid to an asparagine amino acid on the protein. In our cells, this transfer occurs in the endoplasmic reticulum, and then the carbohydrate is further modified and trimmed by additional enzymes in the endoplasmic reticulum and Golgi before being transported to the cell surface or exported out of the cell.</div>
+<h4>Viruses and Glycans</h4>
+<div>We have a constant tug of war with viruses, fought around glycosylated proteins. Viruses need to find cells and infect them, and cell surface carbohydrates are one way that cells physically protect themselves from viruses. However, viruses have evolved to evade this protection. For example, influenza viruses use <a href="https://pdb101.rcsb.org/motm/76">hemagglutinin</a> molecules to recognize carbohydrates on cell surfaces and use them during infection. Our immune system is also caught up in this battle. The <a href="https://pdb101.rcsb.org/motm/143">intrinsic immune system</a> recognizes unfamiliar carbohydrates on pathogen surfaces, such as the unusual glycosylated lipids on bacterial surfaces. But life-threatening viruses like <a href="https://pdb101.rcsb.org/motm/169">HIV</a> and <a href="https://pdb101.rcsb.org/motm/246">SARS-CoV-2</a> coat themselves with human-like carbohydrates to help them evade our immune system.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complex of oligosaccharyltransferase with a ribosome, Sec61 protein-conducting channel, and TRAP (translocon-associated protein). This structure was determined by cryo-electron microscopy, and the atomic coordinates include only the central portion of the complex. The experimental map is shown for the rest of the molecule, taken from entry EMD-4316 at the EMDataResource." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/266/6FTI_density.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of oligosaccharyltransferase with a ribosome, Sec61 protein-conducting channel, and TRAP (translocon-associated protein). This structure was determined by cryo-electron microscopy, and the atomic coordinates include only the central portion of the complex. The experimental map is shown for the rest of the molecule, taken from entry <a href="https://www.emdataresource.org/EMD-4316">EMD-4316 at the EMDataResource</a>.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/266/6FTI_density.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>OST-A in Action</h4>
+<div>Oligosaccharyltransferase-A works with the protein synthesis machinery to add carbohydrates to proteins as they are built. The structure shown here (PDB entry <a href="https://www.rcsb.org/structure/6fti" target="_blank">6fti</a>) shows one step of the process, after the transfer reaction has been performed. A <a href="https://pdb101.rcsb.org/motm/121">ribosome</a> is building a protein chain, which is then transported into the endoplasmic reticulum by the protein-conducting channel Sec61. Oligosaccharyltransferase adds carbohydrates at appropriate asparagines in the new protein chain. It recognizes a distinctive signal in the protein sequence, adding carbohydrates at asparagines that don't have proline next in the chain, and have either serine or threonine two amino acids later in the chain.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Active Site of Bacterial Oligosaccharyltransferase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/266/5ogl_jmol_label-jmol.jpg"/></div>
+<p>By looking at a simpler bacterial oligosaccharyltransferase (PDB entry <a href="https://www.rcsb.org/structure/5ogl" target="_blank">5ogl</a>), we can see the details of the carbohydrate transfer reaction. The carbohydrate is attached to the lipid through pyrophosphate, which activates the carbohydrate for the chemical reaction. The enzyme positions the acceptor asparagine close to the carbohydrate. A nearby divalent metal ion is needed for binding the molecules and catalyzing the reaction between them. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many glycosylated protein structures are available in the PDB archive. To find N-glycosylated proteins, use the <a href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_polymer_struct_conn.role%22%2C%22operator%22%3A%22exact_match%22%2C%22negation%22%3Afalse%2C%22value%22%3A%22N-Glycosylation%22%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22label%22%3A%22text%22%7D%5D%7D%2C%22return_type%22%3A%22entry%22%2C%22request_info%22%3A%7B%22query_id%22%3A%22950d3b4ca2c9d9f3bef1d7cce0e3098f%22%7D%2C%22request_options%22%3A%7B%22pager%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%7D%7D">Advanced Search and choose Structure Attribute-&gt;Glycosylation Site-&gt; N-Glycosylation</a>.</li>
+<li>To learn more about carbohydrates and how to explore them in the PDB archive, take a look at the PDB-101 page <a href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/exploring-carbohydrates">Exploring Carbohydrates in the PDB</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6s7o: Ramirez, A.S., Kowal, J., Locher, K.P. (2019) Cryo-electron microscopy structures of human oligosaccharyltransferase complexes OST-A and OST-B. Science 366: 1372-1375</li>
+<li>6fti: Braunger, K., Pfeffer, S., Shrimal, S., Gilmore, R., Berninghausen, O., Mandon, E.C., Becker, T., Forster, F., Beckmann, R. (2018) Structural basis for coupling protein transport and N-glycosylation at the mammalian endoplasmic reticulum. Science 360: 215-219</li>
+<li>6ogl: Napiorkowska, M., Boilevin, J., Sovdat, T., Darbre, T., Reymond, J.L., Aebi, M., Locher, K.P. (2017) Molecular basis of lipid-linked oligosaccharide recognition and processing by bacterial oligosaccharyltransferase. Nat Struct Mol Biol 24: 1100-1106</li>
+<li>Varki, A. (2017) Biological roles of glycans. Glycobiology 27: 3-49</li>
+<li>Ohtsubo, K, Marth, J.D. (2006) Glycosylation in cellular mechanisms of health and disease. Cell 126: 855-867</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_2">http://doi.org/10.2210/rcsb_pdb/mom_2022_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

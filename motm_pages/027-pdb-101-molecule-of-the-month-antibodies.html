@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Antibodies</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Antibodies" property="og:title"/>
+<meta content="Antibodies search for foreign molecules in the blood" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/21/1igt.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/21" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Antibodies" name="twitter:title"/>
+<meta content="Antibodies search for foreign molecules in the blood" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/21/1igt.gif" name="twitter:image"/>
+<meta content="Antibodies search for foreign molecules in the blood" name="description"/>
+<meta content="catalytic antibody,Fab fragments,Fc fragments,immune system,immunoglobulin,molecular recognition,antibody,antibodies,1igt,1fdl,3hfl,3hfm,1c1e,1igy,1hzh" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 21
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 21 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Antibodies</h1>
+<p><i>Antibodies search for foreign molecules in the blood</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Antibody." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/21/1igt.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antibody.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/21/21-Antibodies-1igt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Watchdogs</h4>
+<div>Antibodies are our molecular watchdogs, waiting and watching for viruses, bacteria and other unwelcome visitors. Antibodies circulate in the blood, scrutinizing every object that they touch. When they find an unfamiliar, foreign object, they bind tightly to its surface. In the case of viruses, like <a href="https://pdb101.rcsb.org/motm/20">rhinovirus or poliovirus</a>, a coating of bound antibodies may be enough to block infection. Antibodies alone, however, are no match for bacteria. When antibodies bind to a bacterial surface, they act as markers alerting the other powerful defensive mechanisms available in the immune system.</div>
+<h4>Getting a Grip</h4>
+<div>Antibodies, and many of the other molecules used in the immune system, have a distinctive shape. Typically, they are composed of several flexible arms with binding sites at the end of each one. This makes perfect sense: since antibodies do not know in advance what attackers they might be fighting, they keep their options open. The flexible arms allow the binding sites to work together, grabbing with both arms onto targets with different overall shapes. The antibody shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1igt" target="_blank">1igt <i class="fa fa-external-link"> </i></a></span>, has two binding sites, at the tips of the two arms extending right and left at the top. Notice the thin, flexible chains that connect these arms to the central domain at the bottom. Some antibodies have longer flexible linkers connecting the arms together, allowing them even more latitude when finding purchase on a surface. Other antibodies have four or ten binding sites, so each contact can be weaker and still allow the whole antibody to bind firmly.</div>
+<h4>Power in Numbers</h4>
+<div>Your blood contains upwards of 100,000,000 different types of antibodies. Each type binds to a different target molecule. Remarkably, all of these antibodies are created before they ever see a virus or bacterium. You don't make a special antibody when a virus or bacterium infects your body. Instead, all of your antibodies are pre-fabricated, lying in wait until a virus or bacterium attacks. There are so many different kinds of antibodies that one or two are bound to be the right ones to fight the infection. <br/><br/> This amazingly huge collection of antibodies is created by recombination of genes in lymphocytes, the blood cells that make antibodies. Each lymphocyte creates a different type of antibody, based on how it has recombined its antibody genes. When an antibody encounters a virus or bacterium, the appropriate lymphocytes will multiply, flooding the blood with the particular antibodies needed to battle the invader. These lymphocytes may also make small adjustments on the antibodies they produce, tailoring their antibodies to bind more tightly and more specifically. </div>
+<h4>Antibody Structure</h4>
+<div>Antibodies are composed of four chains, two long heavy chains (colored red and orange) and two shorter light chains (yellow). The specific binding site is found at the tips of the two arms, in a pocket formed between the light and heavy chain. The binding site is composed of several loops in the protein chain that have very different lengths and amino acid composition. Differences in these "hypervariable loops" form the many types of pockets in different antibodies, each of which bind specifically to a different target. The rest of the antibody--the rest of the arms and the large constant domain that ties the two arms together--is relatively uniform in structure, providing a convenient handle when antibodies interact with the rest of the immune system.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Three antibody Fab fragments that bind to lysozyme (green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/21/hyhel-overlap.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three antibody Fab fragments that bind to lysozyme (green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/21/21-Antibodies-hyhel-overlap.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Attack From Many Angles</h4>
+<div>When a foreign molecule is found in the blood, many different antibodies may bind to it, attacking at different angles. Three different antibodies that bind to the protein lysozyme (in green at the center) are shown here. The crystal structures (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fdl" target="_blank">1fdl <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hfl" target="_blank">3hfl <i class="fa fa-external-link"> </i></a></span>, and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hfm" target="_blank">3hfm <i class="fa fa-external-link"> </i></a></span>) each include only one arm of the antibody (termed "Fab" for "antigen-binding fragment"), which has been separated from the antibody for ease in study. The rest of the antibody is indicated extending from the edges of the illustration. Notice that the antibodies pick entirely different binding sites on the small lysozyme molecule.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Fab fragment of a catalytic antibody that performs a Diels-Alder condensation reaction." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/21/1c1e.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fab fragment of a catalytic antibody that performs a Diels-Alder condensation reaction.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/21/21-Antibodies-1c1e-reaction.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Catalytic Antibodies</h4>
+<div>Researchers have used the incredible functional diversity of the immune system in a clever way: to design new enzymes. Enzymes work by easing molecules through a difficult chemical change. For instance, look at the Diels-Alder reaction shown here at the bottom of the illustration. The two molecules on the left come together, forming an unstable intermediate shown at the center in red. Then, the intermediate falls apart, releasing sulfur dioxide and forming the desired product, shown on the right. Enzymes act by stabilizing the intermediate, smoothing the path from start to finish. <br/><br/> To make an antibody into an enzyme, we need to find an antibody that stabilizes this intermediate transition state in a similar way. Researchers have done this by finding antibodies that bind to a molecule that mimics the transition state, like the one shown here in green. These antibody-enzymes are termed catalytic antibodies. The catalytic antibody shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c1e" target="_blank">1c1e <i class="fa fa-external-link"> </i></a></span>, performs the Diels-Alder condensation reaction shown in the diagram. This is significant because this type of reaction is not performed by any natural enzymes. Antibodies that perform a number of other cleavage and condensation reactions, including reactions that are impossible any other way, may be found in the PDB.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Antibody Flexibility</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/21/Antibody-jmol.jpg"/></div>
+<p>Six loops (yellow) at the tips of the Fab region (green) form the binding sites of antibodies, enabling each arm to selectively attach to a unique target. These loops are termed “hypervariable” loops because they have very different amino acid sequences. Antibodies are very flexible, allowing the two Fab arms to find neighboring sites on a target, such as the surface of a virus. This flexibility makes it difficult to study intact antibodies. Most of the hundreds of antibody structures available at the PDB are fragments of antibodies, typically of just the Fab arm with the specific binding pocket. Three examples of intact antibodies are shown here (PDB entries <a href="https://www.rcsb.org/structure/1igt" target="_blank">1igt</a>, <a href="https://www.rcsb.org/structure/1igy" target="_blank">1igy</a>, and <a href="https://www.rcsb.org/structure/1hzh" target="_blank">1hzh</a>). Notice how the Fab arms are joined to the Fc domain (blue) through flexible hinge regions (turquoise). In addition, antibodies are glycoproteins and incorporate carbohydrates (white) to stabilize the structure of the Fc and hinge regions.<br/><br/>Select the JSmol tab to explore these structures in an interactive view.<br/><br/><b>This JSmol was designed and illustrated by Xinyi Christine Zhang.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>David R. Davies &amp; Susan Chacko (1993): Antibody Structure. <i>Accounts of Chemical Research</i> <b>26</b>, pp. 421-427.</li>
+<li>Life, Death and the Immune System, a special issue of <i>Scientific American</i>, September 1993.		</li>
+<li>David R. Davies, Eduardo A. Padlan &amp; Steven Sheriff (1990): Antibody- Antigen Complexes. <i>Annual Review of Biochemistry</i> <b>59</b>, pp. 439-473.<br/></li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_9">http://doi.org/10.2210/rcsb_pdb/mom_2001_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

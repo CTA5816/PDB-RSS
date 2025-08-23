@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Phototropin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Phototropin" property="og:title"/>
+<meta content="Phototrophins sense the level of blue light, allowing plants to respond to changing environmental conditions" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_phototropin.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/183" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Phototropin" name="twitter:title"/>
+<meta content="Phototrophins sense the level of blue light, allowing plants to respond to changing environmental conditions" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_phototropin.jpg" name="twitter:image"/>
+<meta content="Phototrophins sense the level of blue light, allowing plants to respond to changing environmental conditions" name="description"/>
+<meta content="blue light sensing,chromophore,LOV domain,phototropism,plant biology,2z6c,4hhd,1atp,4gcz,4eeu,2pd7,3rh8,1g28,1jnu" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 183
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 183 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Phototropin</h1>
+<p><i>Phototrophins sense the level of blue light, allowing plants to respond to changing environmental conditions</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Phototropin protein, with chromophores in blue. Portions that are not included in the PDB entries are shown with schematic dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_phototropin.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phototropin protein, with chromophores in blue. Portions that are not included in the PDB entries are shown with schematic dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_phototropin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Scientists have known for many years that plants respond to light, growing toward sources of light and protecting themselves from light that is too harsh. In many of these cases, plants are responding to the level of blue light. Blue light has several advantages over other colors. It is among the most energetic of the visible colors, and thus can have a greater effect on chromophore molecules that absorb light. For plants that live in water, blue light also penetrates deeper than other colors. Plants, as well many other types of organisms, use sensor proteins to see the level of blue light and respond to it.</div>
+<h4>Seeing the Light</h4>
+<div>The light-sensing protein shown here is phototropin, found in many types of plants. It is important for responses that maximize the efficiency of photosynthesis, such as relocation of chloroplasts to optimal positions and expansion of leaves. Phototropin is composed of several domains. Two of these domains, termed "LOV" domains (short for "light, oxygen, or voltage"), hold flavin chromophores (shown in blue) that absorb blue light. These domains are connected to a serine-threonine kinase, which propagates the signal when the LOV domains are activated. There is not yet a structure of the entire protein, so the LOV domains are shown from PDB entries <span class="rcsb_id_tag" title="Phototropin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2z6c" target="_blank">2z6c <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Phototropin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4hhd" target="_blank">4hhd <i class="fa fa-external-link"> </i></a></span>, and the kinase domain is modeled on a similar kinase in PDB entry <span class="rcsb_id_tag" title="Serine-threonine kinase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1atp" target="_blank">1atp <i class="fa fa-external-link"> </i></a></span>.</div>
+<h4>Made with LOV</h4>
+<div>The light-sensing LOV domains are very modular, and scientists have engineered them in several ways, attaching them to other proteins and tuning the light that they absorb. For instance, the PDB includes a custom light sensor created by fusing a LOV domain with a different type of sensory kinase (PDB entry <span class="rcsb_id_tag" title="Engineered Light Sensor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4gcz" target="_blank">4gcz <i class="fa fa-external-link"> </i></a></span>) and an engineered LOV domain that improves the fluorescence, for use in labeling molecules in living cells (PDB entry <span class="rcsb_id_tag" title="phiLOV2.1"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4eeu" target="_blank">4eeu <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Vivid protein, with the chromophore in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_Vivid.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Vivid protein, with the chromophore in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_Vivid.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sending the Signal</h4>
+<div>When the flavin chromophore absorbs light, the surrounding protein passes the signal along, ultimately changing how the plant will respond. For phototropin, the signal is passed to the kinase domain, which modifies other signaling proteins in the cell. The details are still under study, but some clues to the signaling process have been uncovered in the blue-light sensor Vivid, which is found in fungi. It is simpler than phototropin, with only a single LOV domain. In the dark, it is a monomer, shown here from PDB entry <span class="rcsb_id_tag" title="Vivid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pd7" target="_blank">2pd7 <i class="fa fa-external-link"> </i></a></span>. When the chromophore absorbs light, it causes an alpha helix on the surface of the protein (shown in brighter colors here) to shift, causing the whole protein to dimerize, shown here from PDB entry <span class="rcsb_id_tag" title="Vivid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rh8" target="_blank">3rh8 <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Phototropin LOV2 Domain (PDB entries 1g28 and 1jnu)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/183/183-Phototropin_1g28_1jnu_JSmol.jpg"/></div>
+<p>Scientists have solved structures of the phototropin LOV domains, as well as other blue-light sensing proteins, in both the dark and after they absorb light. In phototropin, the photo-activated flavin reacts with a nearby cysteine amino acid, forming a covalent bond. This distorts the flavin ring, and also distorts the surrounding protein. The two structures are available in PDB entries <span class="rcsb_id_tag" title="Phototropin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1g28" target="_blank">1g28 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Phototropin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jnu" target="_blank">1jnu <i class="fa fa-external-link"> </i></a></span>. Click on the image to explore these structures in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are many other structures for proteins that sense blue light. To see other proteins like phototropin, try searching the PDB for "LOV," and to see other types of proteins, search for "cryptochrome" or "BLUF."</li>
+<li>Flavins are also used as electron-carrying cofactors in many enzymatic reactions. You can search for "FAD" to find examples in the PDB.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>K. S. Conrad, C. C. Manahan &amp; B. R. Crane (2014) Photochemistry of flavoprotein light sensors. Nature Chemical Biology 10, 801-809.</li>
+<li>4gcz: R. P. Diensthuber, M. Bommer, T. Gleichmann &amp; A. Moglich (2013) Full-length structure of a sensor histidine kinase pinpoints coaxial coiled coils as signal transducers and modulators. Structure 21, 1127-1136.</li>
+<li>4hhd: A. S. Halavaty &amp; K. Moffat (2013) Coiled-coil dimerization of the LOV2 domain of the blue-light photoreceptor phototropin 1 from Arabidopsis thaliana. Acta Crystallographica F69, 1316-1321.</li>
+<li>4eeu: J. M. Christie, K. Hitomi, A. S. Arvai, K. A. Hartfield, M. Mettlen, A. J. Pratt, J. A. Tainer &amp; E. D. Getzoff (2012) Structural tuning of the fluorescent protein iLOV for improved photostability. Journal of Biological Chemistry 287, 22295-22304.</li>
+<li>A. Losi and W. Gartner (2011) Old chromophores, new photoactivation paradigms, trendy applications: flavins in blue light-sensing photoreceptors. Photochemistry and Photobiology 87, 491-510.</li>
+<li>3rh8: A. T. Vaidya, C. H. Chen, J. C. Dunlap, J. J. Loros &amp; B. R. Crane (2011) Structure of a light-activated LOV protein dimer that regulates transcription. Science Signaling 4, ra50.</li>
+<li>2z6c: M. Nakasako, K. Zikihara, D. Matsuoka, H. Katsura &amp; S. Tokutomi (2008) Structural basis of the LOV1 dimerization of Arabidopsis phototropins 1 and 2. Journal of Molecular Biology 381, 718-733.</li>
+<li>2pd7: B. D. Zoltowski, C. Schwerdtfeger, J. Widom, J. J. Loros, A. M. Bilwes, J. C. Dunlap &amp; B. R. Crane. (2007) Conformational switching in the fungal light sensor Vivid. Science 316, 1054-1057.</li>
+<li>1jnu: S. Crosson &amp; K. Moffat (2002) Photoexcited structure of a plant photoreceptor domain reveals a light-driven molecular switch. The Plant Cell 14, 1067-1075.</li>
+<li>1g28: S. Crosson &amp; K. Moffat (2001) Structure of a flavin-binding plant photoreceptor domain: insights into light-mediated signal transduction. Proceedings of the National Academy of Sciences USA 98, 2995-3000.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_3">http://doi.org/10.2210/rcsb_pdb/mom_2015_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Zinc Fingers</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Zinc Fingers" property="og:title"/>
+<meta content="Zinc ions are used to strengthen small protein modules that recognize DNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/87/87_1tf6-1un6.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/87" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Zinc Fingers" name="twitter:title"/>
+<meta content="Zinc ions are used to strengthen small protein modules that recognize DNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/87/87_1tf6-1un6.jpg" name="twitter:image"/>
+<meta content="Zinc ions are used to strengthen small protein modules that recognize DNA" name="description"/>
+<meta content="DNA binding,regulation of transcription,zinc fingers,zinc ion binding,1tf6,1un6,2hgh,1y0j,1a1t,1joc,1znf,1zaa" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 87
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 87 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Zinc Fingers</h1>
+<p><i>Zinc ions are used to strengthen small protein modules that recognize DNA</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Zinc fingers from TFIIIA bound to DNA (left) and ribosomal RNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/87/87_1tf6-1un6.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Zinc fingers from TFIIIA bound to DNA (left) and ribosomal RNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/87/87-ZincFingers-1tf6-1un6.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As you are browsing through the proteins in the PDB, you may notice something: most proteins are big. They contain hundreds of amino acids, even though most of the work is often done by a few amino acids on one side. Why are proteins so big? One reason that proteins are so large is that they must self-assemble inside cells. Proteins are built as floppy chains that fold all by themselves (or with a little help from chaperones) into stable, compact structures. These folded structures are stabilized by hydrogen bonds, charge-charge interactions and hydrophobic forces between the different amino acids, which all line up like pieces in a jigsaw puzzle when the protein folds. A single hydrogen bond or a few charge pairs would not be enough, but a chain of hundreds of amino acids has hundreds of interactions that together glue the protein into a stable structure.</div>
+<h4>Small and Mighty</h4>
+<div>Our cells, on the other hand, often use a zinc atom to take a short cut. By arranging two cysteines and two histidines close to each other in a chain, a protein can grab a zinc ion and fold tightly around it. In these proteins, termed zinc fingers, a short chain of 20-30 amino acids is enough to create a solid, stable structure. Zinc fingers are so useful that they are found in thousands of our proteins, and are common in all plants and animals. Surprisingly, however, bacteria do not appear to take advantage of these little structures.</div>
+<h4>Sticky Fingers</h4>
+<div>Many zinc fingers play essential roles in DNA recognition. Zinc fingers were originally discovered in the transcription factor TFIIIA from frog eggs, which contains nine zinc fingers in a row. The two structures shown here capture pieces of this protein performing its functions. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tf6" target="_blank">1tf6 <i class="fa fa-external-link"> </i></a></span>, shown on the left, includes 6 of the zinc fingers (blue) bound to a long stretch of DNA (red). With this interaction, TFIIIA helps control the transcription of the gene for a ribosomal RNA. As shown on the right, TFIIIA also binds to the ribosomal RNA itself, as seen in the two PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1un6" target="_blank">1un6 <i class="fa fa-external-link"> </i></a></span> (pictured) and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hgh" target="_blank">2hgh <i class="fa fa-external-link"> </i></a></span>. These structures include 3 of the 9 zinc fingers (blue), along with a small piece of the ribosomal RNA (red). In the frog eggs, about 10 billion copies of this protein help to stabilize the many copies of RNA as the cell develops.</div>
+<h4>Modular Recognition</h4>
+<div>As you can see from these structures, the string of zinc fingers curls along the DNA or RNA strands, binding in the grooves and extending amino acids inwards to read the bases. A single zinc finger does not bind very tightly and can only recognize 2 or 3 base pairs. But when several are strung together, the group binds more tightly and can read longer DNA sequences. This modular approach is so appealing that researchers are currently trying to design artificial zinc fingers with different specificities. Then, by linking them up in the proper order, we could create a custom zinc finger protein to read any sequence that we desire.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Zinc fingers binding to other proteins (top left), to viral RNA (bottom left), and to lipids (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/87/87_zincfingers.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Zinc fingers binding to other proteins (top left), to viral RNA (bottom left), and to lipids (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/87/87-ZincFingers-zincfingers.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Jack of All Trades</h4>
+<div>Zinc fingers come in many shapes and sizes, but they all have one or more zinc atoms (shown here in green) gripped by a combination of four amino acids, either cysteine or histidine (shown on the next page). Zinc fingers perform many different jobs, as shown in these three sample structures. The complex at upper left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1y0j" target="_blank">1y0j <i class="fa fa-external-link"> </i></a></span>) shows zinc fingers from two longer proteins, GATA-1 (which contains two zinc fingers) and FOG-1 (which contains 9 zinc fingers). The specific interaction between these two zinc fingers plays an essential role in the development of blood cells. The HIV-1 nucleocapsid protein shown at lower left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a1t" target="_blank">1a1t <i class="fa fa-external-link"> </i></a></span>) contains two zinc fingers that grip the viral RNA during budding of the virus. The protein EEA1, shown at the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1joc" target="_blank">1joc <i class="fa fa-external-link"> </i></a></span>, contains two zinc fingers in each chain. It binds to a special lipid found in endosomes, and plays an essential role in transporting molecules to that cellular compartment.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/87/87_1znf-1zaa-rasmol.jpg"/></div>
+<div>When you go to the PDB to explore zinc fingers, try not to be overwhelmed: there are currently over a thousand structures containing all sorts of zinc fingers, knuckles, treble clefs, ribbons, and other fanciful folds. The structure shown here on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1znf" target="_blank">1znf <i class="fa fa-external-link"> </i></a></span>, shows a classic zinc finger. Since it's such a small structure, with only 25 amino acids, it's worth taking a closer look at what each part is doing. The two cysteines and two histidines are shown at the bottom, arranged in a tetrahedron around the zinc. Just above them, a phenylalanine and a leucine form a tiny hydrophobic core inside the small folded chain. The rest of the amino acids all face more-or-less outwards, and can be used for various functional tasks. For DNA binding proteins, the amino acids at the top of the alpha helix are typically used for recognition. This is shown on the structure at right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1zaa" target="_blank">1zaa <i class="fa fa-external-link"> </i></a></span>. It contains three linked zinc fingers bound to DNA. The amino acids shown in red extend towards the DNA and read the base sequence, as shown in the lower figure where the DNA is removed. <br/><br/> These pictures were created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. A. Wolfe, L. Nekludova and C. O. Pabo (1999) DNA recognition by Cys2His2 zinc finger proteins. Annual Review of Biophysics and Biomolecular Structure 3, 183-212.</li>
+<li>J. H. Laity, B. M. Lee and P. E. Wright (2001) Zinc finger proteins: new insights into structural and functional diversity. Current Opinion in Structural Biology 11, 39-46.</li>
+<li>J. M. Matthews and M. Sunde (2002) Zinc fingers--folds for many occasions. IUBMB Life 54, 351-355.</li>
+<li>S. S. Krishna, I. Majumdar and N. V. Grishin (2003) Structural classification of zinc fingers. Nucleic Acids Research 31, 532-550.</li>
+<li>R. Gamsjaeger, C. K. Liew, F. E. Loughlin, M. Crossley and J. P. Mackay (2007) Sticky fingers: zinc fingers as protein-recognition motifs. Trends in Biochemical Sciences 32, 63-70.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_3">http://doi.org/10.2210/rcsb_pdb/mom_2007_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

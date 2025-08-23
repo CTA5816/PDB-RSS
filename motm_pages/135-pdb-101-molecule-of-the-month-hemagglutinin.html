@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hemagglutinin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hemagglutinin" property="og:title"/>
+<meta content="Influenza virus binds to cells and infects them using hemagglutinin" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/76/76_1ruz.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/76" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hemagglutinin" name="twitter:title"/>
+<meta content="Influenza virus binds to cells and infects them using hemagglutinin" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/76/76_1ruz.gif" name="twitter:image"/>
+<meta content="Influenza virus binds to cells and infects them using hemagglutinin" name="description"/>
+<meta content="host cell surface receptor binding,influenza A virus,influenza subtypes,influenza vaccines,viral envelope,viral envelope fusion with host membrane,1ruz,1ruz,1rd8,1hge,1htm,1ibn,2vir,1qu1,1qfu" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 76
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 76 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hemagglutinin</h1>
+<p><i>Influenza virus binds to cells and infects them using hemagglutinin</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Influenza hemagglutinin. The portion spanning the membrane is not included in the structure and is shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/76/76_1ruz.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Influenza hemagglutinin. The portion spanning the membrane is not included in the structure and is shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/76/76-Hemagglutinin-1ruz-membrane.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Influenza virus is a dangerous enemy. Normally, the immune system fights off infections, eradicating the viruses and causing a few days of miserable flu symptoms. Yearly flu vaccines prime our immune system, making it ready to fight the most common strains of influenza virus. But once every couple of decades, a new strain of influenza appears that is far more pathogenic, allowing it to spread rapidly. This happened at the end of World War I, and the resultant pandemic killed over 20 million people, more than twice the number of people that were killed in the war.</div>
+<h4>Target and Attack</h4>
+<div>Hemagglutinin is one of the reasons that influenza virus is so effective. It is a spike-shaped protein that extends from the surface of the virus. In the active form, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ruz" target="_blank">1ruz <i class="fa fa-external-link"> </i></a></span>, hemagglutinin is composed of two different types of chains, shown in blue and orange. The blue chains are the targeting mechanism: they search for specific sugar chains on our cellular proteins. When they find the proper one, hemagglutinin binds to the cell and the orange chains initiate the attack, as shown on the next page. The name hemagglutinin refers to the ability of influenza to agglutinate red blood cells: the virus is covered with many hemagglutinin molecules, which together can glue many red blood cells together into a visible clump.</div>
+<h4>Stealthy Subtypes</h4>
+<div>The specificity, and thus the danger, of each strain of influenza virus depends on the particular type hemagglutinin that it carries. Over a dozen subtypes of hemagglutinin are known. Three of these (termed H1, H2, and H3) attack humans--they specialize in finding the particular sugars in our respiratory tract, so the infection occurs there when we get the flu. Other subtypes, such as H5, attack proteins in the digestive system of birds. Most of these are not dangerous to us, and do not typically threaten the lives of the birds, so they exist as an invisible reservoir of virus. A potential danger occurs when these different strains start trading genes. <br/><br/> The H5N1 avian influenza virus that is showing up in the news is decimating bird populations, but it is not currently a danger to us since it doesn't have the right hemagglutinin to attack human cells (the N1 designation refers to the subtype of a second virus protein: <a href="http://pdb101.rcsb.org/motm/113">neuraminidase</a>). However, there is the possibility that it could acquire a human-specific hemagglutinin, and then it could cause real problems. One way for this to happen involves pigs. Pigs are susceptible to viruses of several subtypes, both the types that attack birds and the types that attack us. If a single pig gets infected with two different viruses at the same time, the viruses can shuffle and trade genes during the infection. This could potentially be a way to construct a virus with the virulence of the bird virus, combined with the ability to attack human cells.</div>
+<h4>Deadly Agent</h4>
+<div>The hemagglutinin shown here is taken from an actual virus of the pandemic that killed so many people in 1918. The DNA encoding this hemagglutinin was isolated from preserved samples, and the hemagglutinin was made in the laboratory according to this genetic information. Two crystal structures were obtained, the active form shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ruz" target="_blank">1ruz <i class="fa fa-external-link"> </i></a></span>), and a precursor form in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rd8" target="_blank">1rd8 <i class="fa fa-external-link"> </i></a></span>. The protein is tethered to the virus membrane by a short segment of protein that is not seen in the crystal structure and is shown schematically here at the bottom.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Conformational changes in hemagglutinin that lead to membrane fusion." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/76/76_HA-action.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Conformational changes in hemagglutinin that lead to membrane fusion.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/76/76-Hemagglutinin-HA-action.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Hemagglutinin in Action</h4>
+<div>Hemagglutinin is a deadly molecular machine that targets and attacks cells. This occurs in several steps. First, the three binding sites at the top of the spike bind to sugars on cellular proteins, shown in green at the top left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hge" target="_blank">1hge <i class="fa fa-external-link"> </i></a></span>). Then, the whole virus is carried inside the cell into the endosome and the cell adds acid, which normally digests the stuff inside the endosome. But in the case of the virus, the acidic environment serves to arm the attack mechanism. In acid, hemagglutinin unfolds and then refolds into an entirely different shape. The portions shown in orange and red are normally folded against the protein, but in acid, they pop out and point upward, as shown in the center illustration (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1htm" target="_blank">1htm <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ibn" target="_blank">1ibn <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2vir" target="_blank">2vir <i class="fa fa-external-link"> </i></a></span>). The red portion, termed the fusion peptide, has a strong affinity for membranes, so it inserts into the cell membrane and locks the virus to the cell. Then, as shown on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qu1" target="_blank">1qu1 <i class="fa fa-external-link"> </i></a></span>), the yellow portions zip up the side of the protein, pulling the two membranes close together. Finally, the new conformation of hemagglutinin somehow causes the two membranes to fuse--that part is still not well understood--and the viral RNA flows into the cell, starting the process of infection.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/76/76_1qfu.gif"/></div>
+<div><a class="static" href="http://pdb101.rcsb.org/motm/21">Antibodies</a> are our first line of defense against influenza virus. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qfu" target="_blank">1qfu <i class="fa fa-external-link"> </i></a></span> shows how one antibody attacks hemagglutinin, blocking it so that it cannot bind to cell surfaces. The structure includes hemagglutinin, shown in blue and orange, and three copies of a Fab fragment of antibody (Fab fragments are one arm from the Y-shaped antibody). Of course, viruses find ways of evading attack by antibodies, creating new strains that infect us each year. One way is to mutate the location of carbohydrate chains on the hemagglutinin surface. Several of these carbohydrates are shown in green here. If the virus adds a new carbohydrate at the location that the antibody binds, the antibody will no longer be effective. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the PDB accession codes and picking one of the options for 3D viewing. Be sure to use the biological assembly file when you are looking at this hemagglutinin-antibody structure!</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>JJ Skehel and DC Wiley (2000) Receptor binding and membrane fusion in virus entry: the influenza hemagglutinin. Annual Review of Biochemistry 69, 521-569.</li>
+<li>RG Webster and EJ Walker (2003) Influenza. American Scientist 91(March-April), 122-129.</li>
+<li>TH Sollner (2004) Intracellular and viral membrane fusion: a uniting mechanism. Current Opinion in Cell Biology 16, 429-435.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_4">http://doi.org/10.2210/rcsb_pdb/mom_2006_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Inteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Inteins" property="og:title"/>
+<meta content="Inteins splice themselves out of larger protein chains" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/131/1jva.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/131" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Inteins" name="twitter:title"/>
+<meta content="Inteins splice themselves out of larger protein chains" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/131/1jva.jpg" name="twitter:image"/>
+<meta content="Inteins splice themselves out of larger protein chains" name="description"/>
+<meta content="biotechnology,extein,homing endonuclease,intein,protein splicing,1jva,1lws,1am2,1jva,1um2" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 131
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 131 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Inteins</h1>
+<p><i>Inteins splice themselves out of larger protein chains</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Yeast VMA1-derived homing endonuclease. The intein is shown and green, and the exteins are shown in red and blue. Only short portions of the exteins are included in the structure." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/131/1jva.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Yeast VMA1-derived homing endonuclease. The intein is shown and green, and the exteins are shown in red and blue. Only short portions of the exteins are included in the structure.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/131/131-Inteins_1jva.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>In most cases, each gene encodes a single protein, but cells have found ways around this 
+limitation. Viruses, with their tiny genomes, often contain genes that encode long 
+polyproteins, which are then chopped into a bunch of functional pieces by enzymes. 
+Inteins are another way that cells make several proteins from one gene. The first example 
+of an intein was discovered in the yeast vacuolar ATPase (shown here from PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jva" target="_blank">1jva <i class="fa fa-external-link"> </i></a></span>).
+The gene encodes the ATPase protein along with additional protein embedded in 
+the middle. This embedded protein is termed an <i>intein</i> (shown here in green), and the two 
+halves of the ATPase are termed <i>exteins</i> (shown here in red and blue--note that this 
+structure only includes a small portion of the exteins). When the protein is made, the 
+intein splices itself out of the chain and connects together the two exteins, creating the 
+functional ATPase.</div>
+<h4>Homing Endonucleases</h4>
+<div>Many inteins include two parts: a portion that splices the intein out of the overall protein 
+chain, and a portion that acts as a DNA-cutting enzyme. This enzyme is often termed a 
+<i>homing endonuclease</i> because it homes in on DNA that doesn't encode an intein. 
+Homing endonucleases act as selfish genetic elements, with an insidious method for propagating
+themselves between different copies of genes. They 
+don't attack genes that already encode inteins, but they cleave genes without them. Then, 
+the cell's normal repair mechanism will fix the break, but using the intein-including gene 
+as the template. So, when the damage is corrected, the gene is left with an intein. This 
+isn't a problem, though, since the intein will splice itself out of the protein when it's 
+made.
+</div>
+<h4>Inteins in the Lab</h4>
+<div>Inteins are modular protein splicing machines, and thus have been useful for biotechnology. 
+Working inteins have been isolated from cells, and then engineered into new proteins to create 
+self-splicing proteins for specific functions. For instance, engineered inteins have been used 
+to connect together peptides with different types of labels to assist with NMR experiments, or 
+to add non-natural amino acids to a protein, or even to connect proteins to quantum dots. 
+Inteins have also been used to connect the two ends of a chain, creating a cyclic protein. </div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A typical homing endonuclease intein bound to DNA (left) and a mini-intein (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/131/1lws_1am2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A typical homing endonuclease intein bound to DNA (left) and a mini-intein (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/131/131-Inteins_1lws_1am2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Large and Small</h4>
+<div>Not all inteins include a homing nuclease. Some forms, termed mini-inteins, include 
+only the splicing portion. Examples of each are shown here. On the left is a typical large 
+intein that includes a homing endonuclease, shown here spliced out of its protein and 
+bound to DNA (PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lws" target="_blank">1lws <i class="fa fa-external-link"> </i></a></span>).
+On the right is a mini-intein that is found in the gene for a mycobacterial gyrase (PDB entry 
+
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1am2" target="_blank">1am2 <i class="fa fa-external-link"> </i></a></span>).
+It includes just enough protein to perform the splicing reaction.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Inteins (PDB entries 1jva and 1um2)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/131/1jva_1um2_jmol.jpg"/></div>
+<p>Two structures of the vacuolar ATPase intein show the protein before and after its 
+splicing reaction. In both cases, a few of the catalytic amino acids were mutated to slow 
+the reaction, so that the structure could solved. PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jva" target="_blank">1jva <i class="fa fa-external-link"> </i></a></span>
+ (left) shows the intein (green) 
+before the reaction, with small segments of the exteins (red and blue) attached. PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1um2" target="_blank">1um2 <i class="fa fa-external-link"> </i></a></span> (right)
+is after the reaction, and the two exteins have been connected together. In the 
+actual protein, the exteins are much larger, and when joined they form part of a large 
+proton pump. To compare these two structures in more detail, click on the image for an 
+interactive Jmol.
+</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures are available for many different inteins. Can you find them in the 
+PDB? Do the structures include the homing endonuclease, or are they mini-inteins?</li>
+<li>Do the structures include portions of the exteins? Why is it difficult to determine 
+structures that include exteins?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Elleuche and S. Poggeler (2010) Inteins, valuable genetic elements in molecular 
+biology and biotechnology. Applied Microbiology and Biotechnology 87, 479-489.</li>
+<li>Y. Anraku and Y. Satow (2009) Reflections on protein splicing: structures, functions and
+mechanisms. Proceedings of the Japan Academy, Series B, 85, 409-421.</li>
+<li>Y. Anraku, R. Mizutani and Y. Satow (2005) Protein splicing: its discovery and structural 
+insight into novel chemical mechanisms. IUBMB Life 57, 563-574.
+</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_11">http://doi.org/10.2210/rcsb_pdb/mom_2010_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

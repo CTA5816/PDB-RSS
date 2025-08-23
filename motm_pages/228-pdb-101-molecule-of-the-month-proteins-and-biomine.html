@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Proteins and Biominerals</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Proteins and Biominerals" property="og:title"/>
+<meta content="Small biomineral crystals are used to build bone, eggshells and even tiny compasses." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-1q8h_4uxm.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/232" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Proteins and Biominerals" name="twitter:title"/>
+<meta content="Small biomineral crystals are used to build bone, eggshells and even tiny compasses." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-1q8h_4uxm.jpg" name="twitter:image"/>
+<meta content="Small biomineral crystals are used to build bone, eggshells and even tiny compasses." name="description"/>
+<meta content="biomineral,nanocrystal,magnetite,mineral,calcite,crystal,4uww,4jj0,2zib,1q8h" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 232
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 232 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Proteins and Biominerals</h1>
+<p><i>Small biomineral crystals are used to build bone, eggshells and even tiny compasses.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Two biomineralization proteins, with acidic amino acids in red and calcium ions in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-1q8h_4uxm.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two biomineralization proteins, with acidic amino acids in red and calcium ions in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-1q8h_4uxm.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>You might be surprised to hear that tooth enamel, the strongest material in our body, and eggshells, which must be fragile enough for baby birds to hatch, are both roughly 95% composed of mineral crystals. The different characteristics of these two biominerals are a consequence of the proteins that build these tiny crystals and the proteins that glue them together. Biomineralization proteins help construct cellular compartments that host growing minerals, transport ions into the compartments, nucleate growth of new crystals, and control the ratio of ions as the crystals grow. Proteins can even stabilize unusual crystal forms that would otherwise be unstable.</div>
+<h4>Beautiful Bone Structure</h4>
+<div>Osteocalcin, shown here from PDB entry <a href="https://www.rcsb.org/structure/1q8h" target="_blank">1q8h</a>, is the second most abundant protein in our bones (after collagen) and also acts as a hormone to promote bone growth. In bones, it binds to the surface of hydroxyapatite crystals, a mineral composed of calcium and phosphate. The structure reveals how this protein recognizes the inorganic mineral surface: it has a cluster of negatively-charged amino acids spaced at the right distance to recognize the calcium ions in the mineral crystal. Several calcium ions were seen in the crystal structure, showing this perfectly-matched spacing of amino acids to ions.</div>
+<h4>Ancient Eggshells</h4>
+<div>Eggshells contain calcite, a mineral form of calcium carbonate, with a matrix of protein sandwiched in between. Like osteocalcin, eggshell protein struthiocalcin (shown here from PDB entry <a href="https://www.rcsb.org/structure/4uww" target="_blank">4uww</a>) binds to the surface of the mineral crystals using an array of acidic amino acids that bind calcium, helping to direct crystal growth during the formation of the eggshell. Studies of ostrich egg fossils show that this interaction is so strong that fragments of the protein-mineral complex can last for millions of years. The folding pattern of struthiocalcin (termed C-type lectin) is similar to antifreeze proteins that bind to the surface of ice crystals (see, for example, PDB entry <a href="https://www.rcsb.org/structure/2zib" target="_blank">2zib</a>), and is thought to have evolved from a common ancestor.</div>
+<h4>Building Minerals</h4>
+<div>Based on insights from natural biomineralization proteins, scientists are designing short peptides to drive mineral synthesis in the laboratory. These peptides consist of a simple alpha helix or a beta strand with a repeated sequence of acidic amino acids, resembling the struthiocalcin mineral-binding surface. Researchers have successfully engineered peptides that can form vaterite, a calcium carbonate mineral form that is different than the calcite found in eggshell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Magnetochrome (MamP) with acidic amino acids in red and hemes in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-4jj0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Magnetochrome (MamP) with acidic amino acids in red and hemes in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-4jj0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Magnetic Minerals</h4>
+<div>Amazingly, bacteria, birds and other organisms grow tiny crystals of magnetite that can act as compass to sense the Earth’s magnetic field. Birds need this to guide their continent-spanning migrations, and anaerobic bacteria use it at a much more local level: away from the equator, the magnetic field points towards the poles and also downwards, so these bacteria use it to guide them down, away from oxygen at the surface of their local environment.<br/><br/> Magnetochrome or MamP, shown here from the PDB entry <a href="https://www.rcsb.org/structure/4jj0" target="_blank">4jj0</a>, builds perfect crystals of iron oxide. MamP is a modular protein composed of a central domain linked to two consecutive magnetochrome domains. The central domain brings together acidic glutamate amino acids to form a pocket where iron nucleation is initiated. The hemes in magnetochrome domains, which are similar to <a href="https://pdb101.rcsb.org/motm/36">cytochrome c</a>, shuttle electrons to switch the oxidation state of the iron atoms as they are combined with oxygen in the growing magnetite crystal.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Nanocrystal-binding Protein</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/232/231-Proteins_and_Biominerals-JSmol.jpg"/></div>
+<p>Scientists are mimicking the process of biomineralization as a strategy to produce precise nanocrystals, for use in engineered materials with tailored magnetic, optical, and medical properties. For example, the designed protein nvPizza2-S16H58 (PDB entry<a href="https://www.rcsb.org/structure/5chb" target="_blank"> 5chb </a>) sandwiches the smallest known nanocrystal, a precise 3D lattice consisting of 7 cadmium ions and 12 chloride ions. In the designed protein, the cadmium-chloride nanocrystal is coordinated by a set of symmetrically-positioned histidines extending inward from the propeller-shaped protein complex.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several other proteins assist with the formation of magnetite crystals. Try searching for “Magnetite” in the main <a href="http://www.rcsb.org">RCSB PDB website</a> to see them.</li>
+<li>Use the <a href="https://www.rcsb.org/alignment?request-body=eJyljrsOwjAMRf%2FFcxigTN1g4wNQJVBVhcQtkfIoiSuoqvw7ThkQM5vj43tyF3hMGGeoFwgjmeBTGSPSFH2XkKFX2GlJEupe2oRZgAqe8EXl0AWNUMMoTXyahCDAId2DLsxLVxi5jbRm8MDJRHFSrEb%2B5boAeopzZ%2Fga9uem4XRCi6rUKAKZZvehB0Y3HEqhdbEVnNXfZ7XLWfz4dpfT8Q9flXPLSuiNXbu2%2BQ0wp2Tq&amp;response-body=eJzdVW1zokgQ%2Fi98RmtegBnybQ4QKNAzwEl5qZTFKnGpUswp7K2V8r9fDyYRrSVkd78dfrGn%2B%2Bnu6ZdnXpSifNopdy9KXRcr5U7JtCdkGmQ5wE%2FmcqCZCA%2F4l2w1MLIlX8KZRhBVVOVQZVV9AHvrz%2FE0dBJHOanKNq8y6SrbFOtym5fVYrtb5WD0nBX7f4tDDsCWLq%2B%2B7mTIajtoTqWLfX6oNxU4fniBGPt6WdVw1IiA2R8XTZLaX2kqk8g3%2BbIqdmUT9HDcnrUCVF%2Fy9eKQ%2F9McYBWwq4tIyemkXvkjf%2Ft%2F%2FIY%2Fejo9qpd0F%2B93bPLe52twKe%2Fw8JFXchaLcpV%2FV%2B50Vdnk5br6qtxRTWbbDaT8CqnhCxSbH0MN%2FQpq8AuU9EBN4wqKEWll%2FDEUI3SDZRdsT1iMb7C4hSUU%2BvBhkc2uIhs9OTN6hWTmp2%2FL2BWS01Z79J4a6zd1wp%2BOapo30NZdcV97cHd7YHceYdarfVYennb7bVa9zTZW0evvh%2F%2BgMWhImWlwnTEdqwM05CY2EGMIaouGRDMYYdSUAoiMGdiAI4OAoOkEU8Y5JAYCNTVmGDq0AEkvOqLU1MEpAyUCN5QjXQPlkBuUIY0RzqUlNYbgToczqlOVGENsEqTDga6pA0KHGEZLJwghDsnKda6322x%2FlFRwWO7eSOhbtqmB0eAqUITjsyQ3qFudl8t8UKxg5YvqqMj6vhty%2Fd0yGQ8aV20DPNTIu0E0jm1FckkJHFIuIGixqvOFpM%2FD66yXDadu8tWbVuaFKVSYIpk1NFFCoV8AkFwgpeXuW77P1hDiwUSqiR7PhPWaeCdf9ZBgm3QuE8J66Irpv7xJ%2FNc3iXZvUs86fER0pAfKu5eQ6rIF6%2Bz5XOiWGboYNaVsF4vfpN0uB%2BnWmfymyFdZad1ArKG2sjU0cF07sKaBm4b2KHIn1tydj6K5E07TIBKOSK0o9iPhCi8Use8lseN4kfBFMPLj%2B7nnuQ589iz13XAUpZN4lorUt904CLx5LEIbvjl4DzxLzELbiWN3FMapPbFjy3WiiRj5VmAlolmlz02spnZUmfa8Odr18PzUA3v9qrcfWI3%2FzkundU0PNW%2FGsx2%2BdWl%2B22lsdHfaaz4RzqypcNMk9Nz7yBrNY0ckYpykdggNn1izSeC653bHoePch3M%2FsP2ZcH3ZZjcWVgCCSOM0sd1kOrPnUZJa0ySYTmw%2FjG3LGt%2BPEyFmMFipbYdTiBZ74M4SgRB%2BQ4z%2Fd1Y%2B%2FQeGaJTa&amp;encoded=true"> Pairwise Structure Alignment</a> tool to compare the similar structures of struthiocalcin and antifreeze proteins.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Lu, H., Lutz, H., Roeters, S.J., Hood, M.A., Schäfer, A., Muñoz-Espí, R., Berger, R., Bonn, M., Weidner, T. (2018) Calcium-Induced molecular rearrangement of peptide folds enables biomineralization of vaterite calcium carbonate. Journal of the American Chemical Society 140: 2793-2796.</li>
+<li>Demarchi, B., Hall,S., Roncal-Herrero, T., Freeman, C.L., Woolley, J., Crisp, M.K., Wilson, J., Fotakis, A., Fischer, R., Kessler, B.M., Rakownikow, R., Jersie-Christensen, J.V., Olsen, J., Haile, J., Thomas, C.W., Marean, J., Parkington, S., Presslee, J., Lee-Thorp, P., Ditchfield, J.F., Hamilton, M.W., Ward, C.M., Wang, M.D., Shaw, T., Harrison, M., Domínguez-Rodrigo, R., MacPhee, A., Kwekason, M., Ecker, L., Kolska Horwitz, M., Chazan, R., Kröger, J., Thomas-Oates, J.H., Harding, E., Cappellini, K., Penkman  Collins, M.J. (2016) Protein sequences bound to mineral surfaces persist into deep time. Elife 5: e17092.</li>
+<li>4uww: Ruiz-Arellano, R.R., Medrano, F.J.,  Moreno, A., Romero, A. (2015) Structure of struthiocalcin-1, an intramineral protein from Struthio camelus eggshell, in two crystal forms. Acta Crystallographica D Biological Crystallography 71: 809-818.</li>
+<li>5chb: Voet, A.R., Noguchi, H., Addy, C., Zhang, K.Y., Tame, J.R. (2015) Biomineralization of a Cadmium Chloride Nanocrystal by a Designed Symmetrical Protein. Angewandte Chemie International Edition English 54: 9857-9860.</li>
+<li>4jj0: Siponen, M.I., Legrand, P., Widdrat, M., Jones, S.R., Zhang, W.J., Chang, M.C., Faivre, D., Arnoux, P., Pignol, D. (2013) Structural insight into magnetochrome-mediated magnetite biomineralization. Nature 502: 681-684. </li>
+<li>2zib: Nishimiya, Y., Kondo, H.,  Takamichi, M., Sugimoto, H., Suzuki, M., Miura, A., Tsuda, S. (2008) Crystal structure and mutational analysis of Ca2+-independent type II antifreeze protein from longsnout poacher, Brachyopsis rostratus. Journal Molecular Biology 382: 734-746.</li>
+<li>1q8h: Hoang, Q.Q., Sicheri, F., Howard, A.J., Yang, D.S. (2003) Bone recognition mechanism of porcine osteocalcin from crystal structure. Nature 425: 977-980.</li>
+<li>Blakemore, R.P., Frankel, R.B., Kalmijn, A.J. (1980) South-seeking magnetotactic bacteria in the Southern Hemisphere. Nature 286: 384-385. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2019, Luigi Di Costanzo and David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_4">http://doi.org/10.2210/rcsb_pdb/mom_2019_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

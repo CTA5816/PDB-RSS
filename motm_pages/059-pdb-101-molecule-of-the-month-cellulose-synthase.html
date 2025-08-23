@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cellulose Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cellulose Synthase" property="og:title"/>
+<meta content="Plants build tough cellulose strands one sugar at a time." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-6wlb_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/254" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cellulose Synthase" name="twitter:title"/>
+<meta content="Plants build tough cellulose strands one sugar at a time." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-6wlb_composite.jpg" name="twitter:image"/>
+<meta content="Plants build tough cellulose strands one sugar at a time." name="description"/>
+<meta content="Cellulose,cellulose synthase complex,plants,cell wall,sucrose synthase,UDP-glucose,6wlb,2icy,3s27,4hg6" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 254
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 254 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cellulose Synthase</h1>
+<p><i>Plants build tough cellulose strands one sugar at a time.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="PDB entry 6wlb includes a trimer of cellulose synthase, which are arranged here based on electron micrographs of the entire rosette. Each subunit synthesizes a cellulose strand, shown here in tan." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-6wlb_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>PDB entry <a href="https://www.rcsb.org/structure/6wlb" target="_blank">6wlb</a> includes a trimer of cellulose synthase, which are arranged here based on electron micrographs of the entire rosette. Each subunit synthesizes a cellulose strand, shown here in tan.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-6wlb_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cellulose is the most abundant biopolymer on the Earth. If we look around, this is really no surprise, since we are surrounded by plants, and plant cells are themselves surrounded by a cell wall composed of cellulose. Cellulose is quite simple, belying its essential function in plant cell structure. It is composed of long chains of glucose, 500 to 15,000 glucose units long. These chains then associate side-by-side to form cable-like fibrils that are strong enough, when combined together, to build a delicate flower or a majestic redwood tree.</div>
+<h4>Building Fibrils</h4>
+<div>Cellulose synthase is a large protein complex found in the plant plasma membrane that constructs cellulose strands and fibrils. The complex is a large rosette with approximate 6-fold symmetry, composed of six trimers that most likely contain three slightly different forms of the enzyme. PDB entry <a href="https://www.rcsb.org/structure/6wlb" target="_blank">6wlb</a> includes a trimer of the enzyme from poplar trees. This structure helps to resolve a persistent mystery in cellulose biology: how many strands are bundled together to make up a cellulose fibril? The rosette structure gives an answer to this: since each subunit builds one strand in close proximity to the others, the final fibril likely includes 18 aligned strands.</div>
+<h4>Reinforcing the Wall</h4>
+<div>Cell walls are built much like reinforced concrete. Concrete walls are built by embedding tough iron reinforcing rods within a solid, but relatively brittle, matrix of concrete. Similarly, cellulose fibrils act as reinforcing rods that are embedded in a matrix of other proteins, such as xyloglucans and pectins, that together form a tough but adjustable cell wall.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Artistic conception of a plant cell wall. The plasma membrane is shown in green, with two cellulose synthase complexes building cellulose fibers (tan). Xyloglucans and pectins are in darker brown filling in the spaces between the cellulose fibers at the top, and a microtubule is shown running horizontally just under the membrane." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-2021PlantCellWall_800.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Artistic conception of a plant cell wall. The plasma membrane is shown in green, with two cellulose synthase complexes building cellulose fibers (tan). Xyloglucans and pectins are in darker brown filling in the spaces between the cellulose fibers at the top, and a microtubule is shown running horizontally just under the membrane.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-2021PlantCellWall_crop.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cellulose Synthase in Action</h4>
+<div>When we look closely at plant cell walls, we find that the cellulose fibrils usually have specific orientations. This orientation is controlled by <a href="https://pdb101.rcsb.org/motm/175">microtubules</a> inside the cells. The cellulose synthase complex includes several other proteins that interact with microtubules and guide the movement of the complex during synthesis, and the ultimate location of the cellulose fibril.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="UDP-glucose pyrophosphorylase (left) and sucrose synthase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-2icy_3s27.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>UDP-glucose pyrophosphorylase (left) and sucrose synthase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-2icy_3s27.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Building Blocks</h4>
+<div>Cellulose synthase uses an activated form of glucose, with the sugar attached to a UDP nucleotide, to build cellulose. Several enzymes have the task of creating this building block. UDP-glucose pyrophosphorylase, shown here from PDB entry <a href="https://www.rcsb.org/structure/2icy" target="_blank">2icy</a>, connects glucose-1-phosphate and UTP. Sucrose synthase, shown here from PDB entry <a href="https://www.rcsb.org/structure/3s27" target="_blank">3s27</a>, builds the molecule from sucrose and UDP. This is important because sucrose is the major sugar made in leaves, which is then provided to roots, stems, and other parts of the plant for energy and construction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Bacterial Cellulose Synthase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/254/254-Cellulose_Synthase-4hg6_jmol_label.jpg"/></div>
+<p>Some bacteria also build cellulose to help them form protective biofilms. The cellulose synthase shown here (PDB entry <a href="https://www.rcsb.org/structure/4hg6" target="_blank">4hg6</a>) is from a photosynthetic purple bacterium. Similarly to the plant enzyme, it is embedded in the cell membrane, using UDP-glucose from the cytoplasm and extruding cellulose outside the cell. This amazing structure includes a nascent strand of cellulose and a UDP molecule, capturing the complex just after a glucose has been removed from UDP-glucose and added to the growing strand. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Cellulose is extruded through a long tunnel in the bacterial enzyme. To see the interactions in this tunnel, take a look at the <a href="https://www.rcsb.org/3d-view/4HG6?preset=oligoInteraction&amp;sele=C"> "Oligosaccharides Interaction" display in Mol*</a>. A similar view is available <a href="https://www.rcsb.org/3d-view/6WLB?preset=oligoInteraction&amp;sele=D"> for the plant enzyme.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6wlb: Purushotham, P., Ho, R., Zimmer, J. (2020) Architecture of a catalytically active homotrimeric plant cellulose synthase complex. Science 369: 1089-1094</li>
+<li>Hofte, H., Voxeu, A. (2017) Plant cell walls. Curr. Biology 27, R865-R870</li>
+<li>4hg6: Morgan, J.L., Strumillo, J., Zimmer, J. (2012) Crystallographic snapshot of cellulose synthesis and membrane translocation. Nature 493: 181-186</li>
+<li>3s27: Zheng, Y., Anderson, S., Zhang, Y., Garavito, R.M. (2011) The Structure of Sucrose Synthase-1 from Arabidopsis thaliana and Its Functional Implications. J Biol Chem 286: 36108-36118</li>
+<li>Brett, C. T. (2010) Cellulose microfibrils in plants: synthesis, deposition and integration into the cell wall. Int. Rev. Cytology 199: 161-199.</li>
+<li>2icy: McCoy, J.G., Bitto, E., Bingman, C.A., Wesenberg, G.E., Bannen, R.M., Kondrashov, D.A., Phillips Jr., G.N. (2007) Structure and Dynamics of UDP-Glucose Pyrophosphorylase from Arabidopsis thaliana with Bound UDP-Glucose and UTP. J Mol Biol 366: 830-841</li>
+<li>Somerville, C. (2006) Cellulose synthesis in higher plants. Annu. Rev. Cell Dev. Biol. 22:53-78</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_2">http://doi.org/10.2210/rcsb_pdb/mom_2021_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Isocitrate Dehydrogenase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Isocitrate Dehydrogenase" property="og:title"/>
+<meta content="Atomic structures have revealed the catalytic steps of a citric acid cycle enzyme" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/129/pdb129-3blw_9icd.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/129" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Isocitrate Dehydrogenase" name="twitter:title"/>
+<meta content="Atomic structures have revealed the catalytic steps of a citric acid cycle enzyme" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/129/pdb129-3blw_9icd.jpg" name="twitter:image"/>
+<meta content="Atomic structures have revealed the catalytic steps of a citric acid cycle enzyme" name="description"/>
+<meta content="Citric Acid Cycle,Enzyme Catalysis,Isocitrate Dehydrogenase,3blw,9icd,3lcb,8icd,9icd,1ika,3icd,4icd,1ide,1idc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 129
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 129 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Isocitrate Dehydrogenase</h1>
+<p><i>Atomic structures have revealed the catalytic steps of a citric acid cycle enzyme</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Isocitrate dehydrogenase from yeast (top) and bacteria (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/129/pdb129-3blw_9icd.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Isocitrate dehydrogenase from yeast (top) and bacteria (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/129/129-IsocitrateDehydrogenase_3blw_9icd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Sugar tastes great. This should be no surprise, though, since glucose is the central fuel used by oxygen-breathing organisms. 
+Sugar is broken down in the central catabolic pathways of glycolysis and the citric acid cycle, and ultimately used to 
+construct ATP. The enzymes in these pathways systematically break down glucose molecules into their component parts, 
+capturing the energy of disassembly at each step. Isocitrate dehydrogenase performs the third reaction in the citric 
+acid cycle, which releases one of the carbon atoms as carbon dioxide. In the process, two hydrogens are also removed. 
+One of these, in the form of a hydride, is transferred to the carrier NAD (or NADP), and will be used later to power 
+the rotation of ATP synthase. 
+</div>
+<h4>Different Approaches to the Same Task</h4>
+<div>In our cells, this complicated reaction is performed by a complex enzyme, composed of 
+eight chains (the yeast enzyme is shown at the top from PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3blw" target="_blank">3blw <i class="fa fa-external-link"> </i></a></span>).
+Four catalytic 
+chains (colored turquoise here) perform the reaction, and four regulatory chains (colored 
+dark blue here) turn the enzyme on and off based on the levels of ATP and ADP in our 
+cells. Bacteria take a simpler approach. They build a smaller enzyme composed of two 
+identical chains, forming two identical active sites (PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=9icd" target="_blank">9icd <i class="fa fa-external-link"> </i></a></span>,
+shown at the 
+bottom). Our cells also build a small version of isocitrate dehydrogenase, which performs 
+this same reaction in the cell cytoplasm, intercoverting isocitrate and alpha-ketoglutarate 
+when they are needed for synthetic tasks.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Isocitrate dehydrogenase kinase/phosphatase (orange) bound to isocitrate dehydrogenase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/129/pdb129-3lcb.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Isocitrate dehydrogenase kinase/phosphatase (orange) bound to isocitrate dehydrogenase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/129/129-IsocitrateDehydrogenase_3lcb.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Control by Phosphorylation</h4>
+<div>The bacterial isocitrate dehydrogenase is not controlled by the levels of ATP and ADP 
+the way our mitochondrial enzyme is, but bacteria still need to be able to turn their 
+enzyme off when there is enough ATP. Bacteria regulate their isocitrate dehydrogenases 
+by adding a phosphate to the protein chain, which blocks the reaction. The enzyme 
+isocitrate dehydrogenase kinase/phosphatase (PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3lcb" target="_blank">3lcb <i class="fa fa-external-link"> </i></a></span>, shown here in orange)
+performs both reactions: 
+adding a phosphate to turn off the enzyme and removing it to activate the enzyme. It 
+decides which reaction is appropriate based on the level of AMP in the cell: when levels 
+are high, AMP binds to a regulatory site, activating the phosphate-removing machinery, otherwise it is 
+active as a phosphate-adding kinase.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Isocitrate Dehydrogenase (PDB entries 8icd, 9icd, 1ika, 3icd, 4icd, 1ide and 1idc )</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/129/pdb129-IDH_jmol.jpg"/></div>
+<p>Crystallographers have examined many steps in the reaction performed by isocitrate 
+dehydrogenase. The first structures studied the complex of the enzyme with each of its 
+separate substrates and products: isocitrate and magnesium
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=8icd" target="_blank">8icd <i class="fa fa-external-link"> </i></a></span>),
+NADP 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=9icd" target="_blank">9icd <i class="fa fa-external-link"> </i></a></span>),
+and alpha-ketoglutarate 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ika" target="_blank">1ika <i class="fa fa-external-link"> </i></a></span>),
+as well as the apo enzyme 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3icd" target="_blank">3icd <i class="fa fa-external-link"> </i></a></span>),
+and the inactive phosphorylated enzyme 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4icd" target="_blank">4icd <i class="fa fa-external-link"> </i></a></span>).
+To examine the details of the reaction itself, however, special experimental 
+techniques were used. By carefully synchronizing the addition of substrates to mutant 
+forms of the enzyme, and then using Laue diffraction to gather crystallographic data in 
+milliseconds, researchers were able observe the unstable intermediates in the reaction. 
+For instance, the Y160F mutant slows down the first step of the reaction 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ide" target="_blank">1ide <i class="fa fa-external-link"> </i></a></span>),
+so the structure 
+shows the bound complex of isocitrate, NADP and magnesium, caught before they have a 
+chance to react. The K230M mutant slows down the second step, revealing the structure 
+of the intermediate oxalosuccinate before it loses the carbon dioxide 
+(<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1idc" target="_blank">1idc <i class="fa fa-external-link"> </i></a></span>).
+Click on the image to 
+see an interactive Jmol of these structures.
+</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures are available for most of the enzymes in the citric acid cycle. Can you find 
+them in the PDB?</li>
+<li>Isocitrate dehydrogenase can distinguish between the two stereoisomers of isocitrate. It 
+does this by surrounding isocitrate and forming specific interactions with each of its 
+functional groups. Can you find the amino acids in the protein that are important for these 
+interactions? What role does the metal ion play? Be sure to use the biological unit when 
+you look at this interaction, since the active site is formed between the two subunits.
+</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. Zheng and Z. Jia (2010) Structure of the bifunctional isocitrate dehydrogenase 
+kinase/phosphatase. Nature 465, 961-965.</li>
+<li>A. B. Taylor, G. Hu, P. J. Hart and L. McAlister-Henn (2008) Allosteric motions in 
+structures of yeast NAD+-specific isocitrate dehydrogenase. Journal of Biological 
+Chemistry 283, 10872-10880.</li>
+<li>J. M. Bolduc, D. H. Dyer, W. G. Scott, P. Singer, R. M. Sweet, D. E. Koshland Jr. and B. 
+L. Stoddard (1995) Mutagenesis and Laue structure of enzyme intermediates: isocitrate 
+dehydrogenase. Science 268, 1312-1318.</li>
+<li>J. H. Hurley, A. M. Dean, D. E. Koshland Jr. and R. M. Stroud (1991) Catalytic 
+mechanism of NADP+-dependent isocitrate dehydrogenase: implications from the 
+structures of magnesium-isocitrate and NADP+ complexes. Biochemistry 30, 8671-8678.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_9">http://doi.org/10.2210/rcsb_pdb/mom_2010_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

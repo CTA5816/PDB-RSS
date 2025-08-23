@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: RAF Protein Kinases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: RAF Protein Kinases" property="og:title"/>
+<meta content="A single mutation in a RAF protein kinase can help transform a normal cell into a cancer cell." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-raf.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/195" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: RAF Protein Kinases" name="twitter:title"/>
+<meta content="A single mutation in a RAF protein kinase can help transform a normal cell into a cancer cell." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-raf.jpg" name="twitter:image"/>
+<meta content="A single mutation in a RAF protein kinase can help transform a normal cell into a cancer cell." name="description"/>
+<meta content="RAF,B-raf,BRAF,cancer,protein kinase,cellular signaling,SNP,single nucleotide polymorphism,3kud,1far,4mne,1uwh,3og7,4xv2,4xv1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 195
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 195 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: RAF Protein Kinases</h1>
+<p><i>A single mutation in a RAF protein kinase can help transform a normal cell into a cancer cell.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="RAS is shown in red, RAF in blue, and MEK in magenta. Pieces that are not included in the structures, including lipid groups attached to RAS and the flexible linkers between domains in RAF, are shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-raf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>RAS is shown in red, RAF in blue, and MEK in magenta. Pieces that are not included in the structures, including lipid groups attached to RAS and the flexible linkers between domains in RAF, are shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-raf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Sometimes a single change in a protein can have drastic consequences. These changes, or mutations, can be caused by a variation in one nucleotide in the gene, called a single nucleotide variant, or SNV. The SNV changes the amino acid encoded at that position in the gene, and a mutant protein is made. A perfect example is found in the gene for the signaling protein BRAF—a change of a single nucleotide can help transform a normal cell into a melanoma cancer cell.</div>
+<h4>Sending the Signal</h4>
+<div>The RAF proteins are important players in control of cellular growth. The signaling process starts when a receptor, such as the <a href="http://pdb101.rcsb.org/motm/52">growth hormone receptor</a>, is activated. The signal is then relayed from protein to protein inside the cells: from <a href="http://pdb101.rcsb.org/motm/148">RAS</a> to RAF to MEK and finally to ERK, which travels through the cell mobilizing the cellular machinery needed for growth. Many of these proteins are kinases, which add phosphoryl groups to the surface of the next protein in the chain, typically resulting in activation.</div>
+<h4>RAS to RAF</h4>
+<div>RAF protein kinases are complex molecules with several functional domains. Thus far, structural biologists have studied several of these domains. The RAS-binding domain of RAF binds to activated <a href="http://pdb101.rcsb.org/motm/148">RAS</a> (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3kud" target="_blank">3kud</a>). Since many copies of RAS are normally tethered to the inside of the cell membrane, this process brings several RAF proteins together, promoting dimerization--the activation signal for RAF. A second domain of RAF, termed the cysteine-rich domain (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1far" target="_blank">1far</a>), assists with the dimerization, possibly by interacting with the inner surface of the cell membrane.</div>
+<h4>RAF to MEK</h4>
+<div>The active RAF dimer then activates MEK by phosphorlating it. Another structure, available in the PDB, captures this process, with a dimer of the RAF kinase domain in the center and two copies of MEK bound on the outside (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4mne" target="_blank">4mne</a>). Flexible tethers connect the RAS-binding portions and the RAF-binding portions. Our cells build several similar forms of RAF, termed ARAF, BRAF, and CRAF, which work together, often forming heterodimers with two different forms bound together, to control the many different aspects of cell growth.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="BRAF kinase, with the domains of the enzyme in blue and green, the activation loop in pink, and a drug bound in the active site in magenta. The backbone is only shown for one of the two molecules in the active dimer." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-1uwj.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>BRAF kinase, with the domains of the enzyme in blue and green, the activation loop in pink, and a drug bound in the active site in magenta. The backbone is only shown for one of the two molecules in the active dimer.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-1uwj.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Oncogenic Mutation</h4>
+<div>A small loop in BRAF (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1uwh" target="_blank">1uwh</a>), termed the “activation loop,” is central to its signaling function. This loop is normally phosphorylated at several sites when activated, helping to stabilize the enzyme into the active shape. One particular amino acid within this loop (position number 600) is the site of an oncogenic mutation. When it is changed from valine to glutamate (referred to as the V600E mutation, with V for valine and E for glutamate), it shifts the resting position of this loop and renders the enzyme active all the time. This structural change allows cancer cells to grow without any of the normal controls. The mutation is the consequence of an SNV in the gene encoding RAF. Typically, this mutation is only found in malignant cells; not in the patient's normal tissues. The US FDA-approved drug Vermurafenib was specifically designed to target the V600E mutant form of RAF, which is found in about half of all cases of metastatic melanoma, a deadly skin cancer. Use of Vermurafenib is restricted to patients with melanomas that are proven to harbor the V600E mutation as judged by a companion diagnostic test developed in parallel with the drug.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>BRAF with Anticancer Drugs (PDB entries 4xv2, 3og7 and 4xv1)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/195/195-Raf_Protein_Kinases-3og7_JSmol.jpg"/></div>
+<p>Knowledge of the structure of mutated BRAF allowed researchers to design drugs to block it, thereby curbing the unnatural growth of cancer cells. These drugs work very well on some types of cancer, such as melanoma, but can actually promote growth in some other cancers. When researchers looked more deeply, they found that this was caused by an unusual interaction: sometimes BRAF and CRAF form a heterodimer, and the drug was only attacking BRAF. This challenge was overcome by using higher levels of drug to block both forms, and researchers are now working on second generation drugs that block RAF from dimerizing and becoming active. Take a look at the interactive JSmol to compare the structures of three drugs: Vemurafenib (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3og7" target="_blank">3og7</a>), Dabrafenib (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4xv2" target="_blank">4xv2</a>) and the experimental drug PLX7904 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4xv1" target="_blank">4xv1</a>).</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can used the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P15056">Group Sequence View for BRAF</a> to explore how the structures of RAF domains fit into the overall sequence of the protein.</li>
+<li>Many drugs that attack RAF proteins are designed to mimic ATP, since ATP is essential for the phosphorylation reaction. Try to identify the portions of the drugs in the JSmol that mimic the ATP base and the ATP phosphate.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>4xv1, 4xv2: C. Zhang, W. Spevak, Y. Zhang, E. A. Burton, Y. Ma, G. Habets, J. Zhang, J. Lin, T. Ewing, B. Matusow, G. Tsang, A. Marimuthu, H. Cho, G. Wu, W. Wang, D. Fong, H. Nguyen, S. Shi, P. Womack, M. Nespi, R. Shellooe, H. Carias, B. Powell, E. Light, L. Sanftner, J. Walters, J. Tsai, B. L. West, G. Visor, H. Rezaei, P. S. Lin, K. Nolop, P. N. Ibrahim, P. Hirth &amp; G. Bollag (2015) RAF inhibitors that evade paradoxical MAPK pathway activation. Nature 526, 583-586.</li>
+<li>4mne: J. R. Haling, J. Sudhamsu, I. Yen, S. Sideris, W. Sandoval, W. Phung, B. J. Bravo, A. M. Giannetti, A. Peck, A. Masselot, T. Morales, D. Smith, B. J. Brandhuber, S. G. Hymowitz &amp; S. Malek (2014) Structure of the BRAF-MEK complex reveals a kinase activity independent role for BRAF in MAPK signaling. Cancer Cell 26, 402-413.</li>
+<li>3og7: G. Bollag, P. Hirth, J. Tsai, J. Zhang, P. N. Ibrahim, H. Cho, W. Spevak, C. Zhang, Y. Zhang, G. Habets, E. A. Burton, B. Wong, G. Tsang, B. L. West, B. Powell, R. Shellooe, A. Marimuthu, H. Nguyen, K. Y. Zhang, D. R. Artis, J. Schlessinger, F. Su, B. Higgins, R. Iyer, K. D’Andrea, A. Koehler, M. Stumm, P. S. Lin, J. Grippo, I. Puzanov, K. B. Kim, A. Ribas, G. A. McArthur, J. A. Sosman, P. B. Chapman, K. T. Flaherty, X. Xu, K. L. Nathanson &amp; K. Nolop (2010) Clinical efficacy of a RAF inhibitor needs broad target blockade in BRAF-mutant melanoma. Nature 467, 596-599.</li>
+<li>3kud: D. Filchtinski, O. Sharabi, A. Ruppel, I. R. Vetter, C. Herrmann &amp; J. M. Shifman (2010) What make Ras an efficient molecular switch: a computational, biophysical, and structural study of Ras-GDP interactions with mutants of Raf. Journal of Molecular Biology 399, 422-435.</li>
+<li>1uwh: P. T. C. Wan, M. J. Garnett, S. M. Roe, S. Lee, D. Niculescu-Duvaz, V. M. Good, C. M. Jones, C. J. Marshall, D. Barford &amp; R. Marais (2004) Mechanism of activation of the Raf-Erk signaling pathway by oncogenic mutations of B-Raf. Cell 116, 855-867.</li>
+<li>C. Wellbrock, M. Karasarides &amp; R. Marais (2004) The Raf proteins take centre stage. Nature Reviews Molecular Cell Biology 5, 875-885.</li>
+<li>1far: H. R. Mott, J. W. Carpenter, S. Zhong, S. Ghosh, R. M. Bell &amp; S. L. Campbell (1996) The solution structure of the Raf-1 cysteine-rich domain: a novel ras and phospholipid binding site. Proceedings of the National Academy of Science USA 93, 8312-8317.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_3">http://doi.org/10.2210/rcsb_pdb/mom_2016_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

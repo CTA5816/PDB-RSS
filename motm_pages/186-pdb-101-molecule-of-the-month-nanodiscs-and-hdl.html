@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nanodiscs and HDL</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nanodiscs and HDL" property="og:title"/>
+<meta content="Nanodiscs conveniently package a small piece of membrane for experimental studies." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-4v6m.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/237" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nanodiscs and HDL" name="twitter:title"/>
+<meta content="Nanodiscs conveniently package a small piece of membrane for experimental studies." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-4v6m.jpg" name="twitter:image"/>
+<meta content="Nanodiscs conveniently package a small piece of membrane for experimental studies." name="description"/>
+<meta content="nanodisc,high density lipoprotein,HDL,apolipoprotein,cryoelectron microscopy,NMR spectroscopy,membrane protein,protein structure determination,cholesterol,4v6m,6clz" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 237
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 237 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nanodiscs and HDL</h1>
+<p><i>Nanodiscs conveniently package a small piece of membrane for experimental studies.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Structure of a ribosome (red and orange) synthesizing a new protein chain (magenta, still attached to a tRNA seen at the top), which is being transported through a nanodisc membrane (apolipoproteins in blue, lipids in white and red) by the secretory protein complex SecYE (green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-4v6m.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Structure of a ribosome (red and orange) synthesizing a new protein chain (magenta, still attached to a tRNA seen at the top), which is being transported through a nanodisc membrane (apolipoproteins in blue, lipids in white and red) by the secretory protein complex SecYE (green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-4v6m.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>We're in the middle of a revolution in structural biology, and nanodiscs are playing a supporting role. New developments in cryoelectron microscopy are allowing researchers to determine structures of molecular machines much larger and more complex than ever before. This includes the trickiest class of molecular machines, membrane-bound proteins, which are difficult to study because they need to be protected in a lipid environment. This is where nanodiscs are proving to be useful. They are composed of a tiny disc of lipids, just big enough to hold one copy of a membrane-protein of interest, surrounded by a stabilizing belt of proteins.</div>
+<h4>Good Cholesterol</h4>
+<div>Nanodiscs were engineered by looking to nature for inspiration. Cholesterol and other lipids are transported through our blood in small globules, surrounded and shaped by dedicated proteins called apolipoproteins. One particular class of these globules is termed "high-density lipoproteins" or “HDL”, since they contain a large percentage of protein and are denser than more lipid-rich varieties of lipoprotein particles. HDL particles are often termed "good cholesterol," since they are intimately involved with the transport of excess cholesterol to the liver, where it is removed from the blood stream. HDL has also been good for science, since one form of HDL has a disc-like shape that was the inspiration for engineering nanodiscs.</div>
+<h4>Nanodiscs Everywhere</h4>
+<div>If you search for nanodisc structures in the PDB archive, you'll find dozens of different examples. However, very few of them include coordinates for the actual nanodisc. That's because the lipids are very mobile, and researchers typically focus their attention on the protein, causing the surrounding lipids to blur out in the cryoEM map. The enormous structure shown here, which includes a ribosome secreting a newly-synthesized protein chain through the protein export channel SecYE, is an exception (PDB entry <a href="https://www.rcsb.org/structure/4v6m" target="_blank">4v6m</a>). The researchers used cryoelectron microscopy combined with molecular dynamics simulations to generate a structural model of the whole complex, including the nanodisc and its constituent lipids.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Membrane-binding domain of MT1-MMP (green) bound to a nanodisc." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-6clz.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Membrane-binding domain of MT1-MMP (green) bound to a nanodisc.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-6clz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nanodiscs and NMR</h4>
+<div>Since nanodiscs are small and soluble in water, they have also been a boon for structural biologists who use NMR to study proteins. The structure shown here (PDB entry <a href="https://www.rcsb.org/structure/6clz" target="_blank">6clz</a>) is the membrane-binding domain of MT1-MMP (membrane type 1 matrix metalloproteinase), a collagen-cutting enzyme that is needed to allow cells to migrate through existing extracellular matrix when new blood vessels are being built. This protein is also a target to fight cancer, since metastatic tumor cells often use this enzyme to spread. The structure allowed the researchers to explore two binding modes of the domain and their possible roles in regulating the action of the enzyme.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>MT1-MMP and nanodisc</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/237/237-Nanodiscs_and_HDL-6clz_jmol.jpg"/></div>
+<p>Nanodiscs are engineered by starting with natural apolipoproteins, then changing the length of the chain to surround a disc of a desired size. The engineered proteins are termed MSP (membrane scaffolding proteins), and like apolipoproteins, they form an alpha-helical structure that places an array of hydrophobic amino acids (shown here in white) on the inner surface of the ring. These amino acids stabilize the hydrophobic portions of the lipids in the membrane. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try searching for “nanodisc” at the <a href="https://www.emdataresource.org"> EMDataResource</a> to see the EM maps of these proteins, and notice that the nanodisc itself is often not well resolved.</li>
+<li>Try searching for “apolipoprotein” at the <a href="https://rcsb.org">main RCSB PDB website</a> to see some structures of these proteins when they are not bound to lipids.</li>
+<li>You can see a structure of the protein portion of a disc-shaped HDL in PDB entry <a href="https://www.rcsb.org/structure/2n5e" target="_blank">2n5e</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6clz: Marcink, T.C., Simoncic, J.A., An, B., Knapinska, A.M., Fulcher, Y.G., Akkaladevi, N., Fields, G.B., Van Doren, S.R. (2019) MT1-MMP Binds Membranes by Opposite Tips of Its beta Propeller to Position It for Pericellular Proteolysis. Structure 27: 281-292.e6.</li>
+<li>Denisov, I.G., Sligar, S.G. (2016) Nanodiscs for structural and functional studies of membrane proteins. Nature Structural and Molecular Biology 6, 481-486.</li>
+<li>4v6m: Frauenfeld, J., Gumbart, J., Sluis, E.O., Funes, S., Gartmann, M., Beatrix, B., Mielke, T., Berninghausen, O., Becker, T., Schulten, K., Beckmann, R. (2011) Cryo-EM structure of the ribosome-SecYE complex in the membrane environment. Nature Structural and Molecular Biology 18: 614-621.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_9">http://doi.org/10.2210/rcsb_pdb/mom_2019_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: AAA+ Proteases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: AAA+ Proteases" property="og:title"/>
+<meta content="AAA+ proteases are ATP-powered molecular motors that thread protein chains through a hole " property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/80/80_1yyf.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/80" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: AAA+ Proteases" name="twitter:title"/>
+<meta content="AAA+ proteases are ATP-powered molecular motors that thread protein chains through a hole " name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/80/80_1yyf.jpg" name="twitter:image"/>
+<meta content="AAA+ proteases are ATP-powered molecular motors that thread protein chains through a hole " name="description"/>
+<meta content="AAA+,heat-shock proteins,HslUV protease complex,proteolysis involved in cellular protein catabolic process,proteosome,threonine-type endopeptidase activity,1yyf,1yyf,1g3i,1svm,1r7r,1nsf,1d2n" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 80
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 80 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: AAA+ Proteases</h1>
+<p><i>AAA+ proteases are ATP-powered molecular motors that thread protein chains through a hole </i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="ATP-dependent protease HslV-HslU." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/80/80_1yyf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ATP-dependent protease HslV-HslU.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/80/80-AAA+Proteases-1yyf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>How would you make a protein cutting machine that would be safe to use inside a cell? Digestive proteases like <a class="static" href="http://pdb101.rcsb.org/motm/46">trypsin</a> and <a class="static" href="http://pdb101.rcsb.org/motm/12">pepsin</a> are small and efficient–they diffuse up to proteins and start cutting. This would never work inside a cell. The cell needs to have more control, so that only obsolete or damaged proteins are destroyed. The AAA+ proteases are one solution to this problem. They use two tricks to ensure that only certain proteins are destroyed. First, they hide the protein destruction machinery inside a closed container, and second, they use a special protein pump to feed proteins into this destruction chamber.</div>
+<h4>Heat Shock</h4>
+<div>Currently, the most complete structures of AAA+ proteases are for a bacterial protein called HslUV (short for Heat Shock Locus gene products U and V). One example is shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yyf" target="_blank">1yyf <i class="fa fa-external-link"> </i></a></span>. It is composed of two types of protein subunits. The protease subunits are arranged into a hollow barrel at the center, colored blue here. The active sites are hidden on the inside of the barrel. The AAA+ ATPase subunits, colored red and orange here, control the entry at either end of the complex. They form the pump that feeds proteins inside. HslUV is one of many heat shock proteins that are built when the cell heats up to dangerous levels. Heat can unfold proteins and cause unwanted aggregation, so a collection of heat shock chaperones and proteases are built to refold proteins into their proper form or dispose of heat-damaged proteins.</div>
+<h4>Proteasome</h4>
+<div>Our cells build a more complex version of HslUV: the <a class="static" href="http://pdb101.rcsb.org/motm/166">proteasome</a>. It has a larger destruction chamber at the center, composed of a stack of four ring-shaped protease complexes. At either end, there is a more complicated mechanism that looks for proteins attached to <a class="static" href="http://pdb101.rcsb.org/motm/60">ubiquitin</a>, and then uses a similar AAA+ ATPase to thread the protein into the chamber.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Diversity in AAA+ ATPases." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/80/80_AAAproteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Diversity in AAA+ ATPases.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/80/80-AAA+Proteases-AAAproteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>AAA+ ATPases</h4>
+<div>The protein pump in HslUV is a ring of six subunits surrounding a central channel. As seen in the two structures of HslUV shown here at the top (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yyf" target="_blank">1yyf <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1g3i" target="_blank">1g3i <i class="fa fa-external-link"> </i></a></span>), these rings undergo large changes in shape, powered by ATP. The similar protease ClpXP uses 30 to 80 ATP molecules (depending on how stable the protein is) to pull a chain of 100 amino acids through its central pore. Ring-shaped ATPases, termed AAA+ (ATPases Associated with cellular Activities), are very common in cells and are used for a variety of similar jobs. Several examples are available in the PDB, including part of the T antigen from simian virus 40 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1svm" target="_blank">1svm <i class="fa fa-external-link"> </i></a></span>), which unfolds DNA double helices, and p97 (PDB entry <a class="static" href="https://pdb101.rcsb.org/pdb/explore.do?structureId=1oz4">1oz4</a> or <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r7r" target="_blank">1r7r <i class="fa fa-external-link"> </i></a></span>) and NSF (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nsf" target="_blank">1nsf <i class="fa fa-external-link"> </i></a></span> or <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1d2n" target="_blank">1d2n <i class="fa fa-external-link"> </i></a></span>), which unfold protein complexes that are involved in membrane traffic. The motor protein dynein also relies on AAA+ ATPases to power its motion.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/80/80_1g3i-rasmol.jpg"/></div>
+<div>You can take a look at the different functional parts of an AAA+ protease in the PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1g3i" target="_blank">1g3i <i class="fa fa-external-link"> </i></a></span>. In the picture here, I have removed two of the six subunits in each ring to show the shape of the interior cavity. The AAA+ ATPase subunits are at the top and bottom in red, with the ATP shown in green. At the center is the protease cavity, shown in blue, with the catalytic amino acids (threonine 1 and lysine 33) in magenta. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing. Please note that you will need to look at the biological assembly file in several cases if you want to see the whole ring of proteins.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. I. Hanson and S&gt; W. Whiteheart (2005) AAA+ proteins: have engine, will work. Nature Reviews Molecular Cell Biology 6, 519-529.</li>
+<li>R. T. Sauer and others (2004) Sculpting the proteome with AAA+ proteases and disassembly machines. Cell 119, 9-18.</li>
+<li>A. N. Lupas and J. Martin (2002) AAA proteins. Current Opinion in Structural Biology 12, 746-753.</li>
+<li>T. Ogura and A. J. Wilkinson (2001) AAA+ superfamily ATPases: common structure--diverse function. Genes to Cells 6, 575-597.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_8">http://doi.org/10.2210/rcsb_pdb/mom_2006_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

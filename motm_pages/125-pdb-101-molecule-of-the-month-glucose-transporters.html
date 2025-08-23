@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glucose Transporters</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glucose Transporters" property="og:title"/>
+<meta content="Glucose transporters deliver glucose molecules one-by-one across cell membranes." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-4pyp_4zwc.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/208" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glucose Transporters" name="twitter:title"/>
+<meta content="Glucose transporters deliver glucose molecules one-by-one across cell membranes." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-4pyp_4zwc.jpg" name="twitter:image"/>
+<meta content="Glucose transporters deliver glucose molecules one-by-one across cell membranes." name="description"/>
+<meta content="glucose transport,type II diabetes,GLUT1,GLUT3,GLUT4,GLUT5,lactose transporter,LacY,symporter,antiporter,blood glucose,insulin,4pyp,4zwc,1pv6,1pw4,4ybq,4yb9,5eqi" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 208
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 208 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glucose Transporters</h1>
+<p><i>Glucose transporters deliver glucose molecules one-by-one across cell membranes.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="GLUT3 is shown on the left in the open outward conformation, and GLUT1 is shown on the right in an open inward conformation." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-4pyp_4zwc.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>GLUT3 is shown on the left in the open outward conformation, and GLUT1 is shown on the right in an open inward conformation.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-4pyp_4zwc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Glucose is the fuel that powers most of the biosphere. Plants build it using energy from the sun, store it in starches and use it to build their infrastructure of cellulose. The glucose we eat is broken down through <a href="https://pdb101.rcsb.org/motm/50">glycolysis</a> and used to power the many processes of our cells. Thus, it is essential to supply each of our cells with a steady stream of glucose. Glucose is delivered throughout the body by the blood, and each cell gathers what it needs using glucose transporters.</div>
+<h4>Shape Shifters</h4>
+<div>Glucose transporters manage the traffic of glucose across the cell's outer membrane. They act by alternating between two states. First, the transporter has an opening facing the outside of the cell, and it picks up a molecule of glucose. Then it shifts shape, and opens towards the inside, releasing glucose into the cell. Glucose transporters generally act passively: since glucose is rapidly phosphorylated by <a href="https://pdb101.rcsb.org/motm/50">hexokinase</a>, the concentration of free glucose in the cytoplasm is generally very low, and the higher concentration of glucose in the blood drives transport of glucose into the cell.</div>
+<h4>Transportation Specialists</h4>
+<div>The human genome encodes 14 similar transporters that deliver glucose and other sugars into different types of cells. For instance, GLUT1 (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4pyp" target="_blank">4pyp</a>) manages the basal levels of glucose uptake and is very common in red blood cells. GLUT2 helps control the flow of glucose in and out of liver cells, and pancreatic beta cells use it to monitor the level of glucose in the blood, releasing insulin when the level rises. Nerve cells in the brain require a constant supply of glucose, so they use GLUT3 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4zwc" target="_blank">4zwc</a>), a form that works well even when glucose levels are low. GLUT4 is activated by <a href="https://pdb101.rcsb.org/motm/14">insulin</a> and is used by fat and muscle cells to gather glucose after meals.</div>
+<h4>Diabetic Complications</h4>
+<div>When we eat a meal, insulin is released into the blood, telling cells that glucose is available. In response, fat and muscle cells move many GLUT4 transporters to their cell membranes, to gather a supply of glucose while it is plentiful. However, in people with type II diabetes, the body becomes resistant to the action of insulin—both in the production of insulin and in the sites where it acts. One consequence is that less GLUT4 is moved to the membranes of muscle cells after meals, so less glucose is taken up from the blood. This produces dangerously high levels of glucose in the blood, since our skeletal muscles normally consume the lion’s share of glucose.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="LacY transports lactose and hydrogen ions into the cell, and GlpT transports phosphate and glycerol-3-phosphate in opposite directions." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-1pv6_1pw4.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>LacY transports lactose and hydrogen ions into the cell, and GlpT transports phosphate and glycerol-3-phosphate in opposite directions.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-1pv6_1pw4.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Major Facilitators</h4>
+<div>The GLUT family is part of a larger group of transporters, collectively termed the <i>major facilitator superfamily</i>. They share a similar mechanism, with two domains that rock back and forth to transport molecules across membranes. Many, however, link transport of two different molecules, harnessing a large concentration gradient of one to power transport of the other. For instance, the bacterial <a href="https://pdb101.rcsb.org/motm/39">lactose permease</a> LacY (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pv6" target="_blank">1pv6</a>) uses a hydrogen ion gradient to power the transport of lactose. Both molecules move in the same direction into the cell, so LacY is named a <i>symporter.</i> On the other hand, GlpT (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pw4" target="_blank">1pw4</a>) is an <i>antiporter</i> that uses a gradient of phosphate ions to pump glycerol-3-phosphate in the opposite direction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glucose Transporters</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/208/208-Glucose_Transporters-GLUT_JSmol.jpg"/></div>
+<p>GLUT5, a fructose transporter (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ybq" target="_blank">4ybq</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4yb9" target="_blank">4yb9</a>), has been caught in both the outward open and inward open states. GLUT1 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5eqi" target="_blank">5eqi</a>) has also been studied in a complex with the inhibitor cytochalasin B, which freezes the transporter in one state and blocks transport. Unwanted inhibition of glucose transporters can be important in medicine—for example, HIV protease inhibitors block the action of GLUT4 and lead to side effects during treatment. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many structures of these types of transporters are available—try searching for “major facilitator” to see some of them.</li>
+<li>When you’re looking at these proteins or other membrane-bound proteins, you can highlight the membrane-spanning portion by displaying a molecular surface and coloring it by hydrophobicity.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5eqi: K Kapoor, JS Finer-Moore, BP Pedersen, L Caboni, A Waight, RC Hillig, P Bringmann, I Heisler, T Muller, H Siebeneicher &amp; RM Stroud (2016) Mechanism of inhibition of human glucose transporter GLUT1 is conserved between cytochalasin B and phenyalanine amides. Proceedings of the National Academy of Science USA 113, 4711-4716.</li>
+<li>EM Quistgaard, C Low, F Guettou &amp; P Norlund (2016) Understanding transport by the major facilitator superfamily (MFS): structures pave the way. Nature Reviews Molecular Cell Biology 17, 123-132.</li>
+<li>4zwc: D Deng, PC Sun, CY Yan, M Ke, X Jiang, L Xiong, W Ren, K Hirata, M Yamamoto, S Fan &amp; N Yan (2015) Molecular basis of ligand recognition and transport by glucose transporters. Nature 526, 391-396.</li>
+<li>4yb9, 4ybq: N Nomura, G Verdon, HJ Kang, T Shimamura, Y Nomura, Y Sonoda, SA Hussien, AA Qureshi, M Coincon, Y Sato, H Abe, Y Nakada-Nakura, T Hino, T Arakawa, O Kusano-Arai, H Iwanari, T Murata, T Kobayashi, T Hamakubo, M Kasahara, S Iwata &amp; D Drew (2015) Structure and mechanism of the mammalian fructose transporter GLUT5. Nature 526, 397-401.</li>
+<li>4pyp: D Deng, C Xu, PC Sun, JP Wu, CY Yan, MX Hu &amp; N Yan (2014) Crystal structure of the human glucose transporter GLUT1. Nature 510, 121-125.</li>
+<li>M Mueckler &amp; B Thorens (2013) The SLC2 (GLUT) family of membrane transporters. Molecular Aspects of Medicine 34, 121-138.</li>
+<li>JS Bogan (2012) Regulation of glucose transporter translocation in health and diabetes. Annual Review of Biochemistry 81, 507-532.</li>
+<li>1pv6: J Abramson, I Smirnova, V Kasho, G Verner, HR Kaback &amp; S Iwata (2003) Structure and mechanism of the lactose permease of Escherichia coli. Science 301, 610-615.</li>
+<li>1pw4: Y Huang, MJ Lemieux, J Song, M Auer &amp; DN Wang (2003) Structure and mechanism of the glycerol-3-phosphate transporter from Escherichia coli. Science 301, 616-620.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_4">http://doi.org/10.2210/rcsb_pdb/mom_2017_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

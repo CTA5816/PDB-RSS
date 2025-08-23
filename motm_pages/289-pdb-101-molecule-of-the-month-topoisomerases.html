@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Topoisomerases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Topoisomerases" property="og:title"/>
+<meta content="Topoisomerases untangle and reduce the tension of DNA strands in the cell" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/73/1a36.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/73" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Topoisomerases" name="twitter:title"/>
+<meta content="Topoisomerases untangle and reduce the tension of DNA strands in the cell" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/73/1a36.gif" name="twitter:image"/>
+<meta content="Topoisomerases untangle and reduce the tension of DNA strands in the cell" name="description"/>
+<meta content="anthracyclines,DNA gyrase,DNA supercoiling,DNA topoisomerase activity,DNA topological change,1a36,1bgw,1ei1,1a31" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 73
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 73 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Topoisomerases</h1>
+<p><i>Topoisomerases untangle and reduce the tension of DNA strands in the cell</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Class I topoisomerase bound to DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/73/1a36.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Class I topoisomerase bound to DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/73/73-Topoisomerases-1a36-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Each of your cells contains about 2 meters of <a href="http://pdb101.rcsb.org/motm/23">DNA</a>, all folded into the tiny space inside the nucleus, which is a million times smaller. As you might imagine, these long, thin strands can get tangled very easily in the busy environment of the nucleus. To make things even more complicated, DNA is a double helix, which must be unwound to access the genetic information. If you have ever tried to unravel the individual fibers in a piece of rope, you will understand the knotty problems that this can cause. To help with these problems, your cells build several different topoisomerase enzymes that untangle and relax DNA strands.</div>
+<h4>Relaxing DNA</h4>
+<div>Class I topoisomerases solve the problem of the tension caused during the winding and unwinding of DNA. One example is shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a36" target="_blank">1a36 <i class="fa fa-external-link"> </i></a></span>. It wraps around the DNA and makes a cut in one strand. Then, while holding onto the damaged spot, the enzyme allows the helix to spin, releasing any overwinding or underwinding. Once the DNA is relaxed, the topoisomerase reconnects the broken strand, restoring the DNA double helix.</div>
+<h4>Untangling DNA</h4>
+<div>Class II topoisomerases, shown on the next page, specialize in untangling DNA in the nucleus. For instance, when a cell is dividing, it needs to separate the two copies of each chromosome. During this process, portions of the two sister chromosomes may become looped around each other, getting hung up together as they are separated. Class II topoisomerase solves this problem by allowing one DNA helix to pass through the other one. It cuts both strands of one DNA double helix, keeping a firm grip on both halves. Then, it passes the other DNA through the gap, resolving the tangle. Finally, it reattaches the broken ends, restoring the DNA.</div>
+<h4>Toxins and Treatments</h4>
+<div>These processes of relaxing and untangling are essential for the proper maintenance of your DNA, so topoisomerases are sensitive targets for poisons. If topoisomerases are blocked, the cell will encounter problems during transcription of the DNA and during cell division. Cancer chemotherapy takes advantage of this, using drugs that block topoisomerases to kill rapidly-dividing cancer cells. For instance, the widely-used anthracycline drugs, like doxorubicin and daunorubicin, attack class II topoisomerases, and the plant toxin campothecin blocks the relaxing action of class I topoisomerases.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Class II topoisomerase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/73/1bgw-1ei1.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Class II topoisomerase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/73/73-Topoisomerases-1bgw-1ei1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Class II Topoisomerase</h4>
+<div>Class II topoisomerase performs the amazing feat of breaking a DNA double helix, passing another helix through the gap, and resealing the double helix behind it. The picture shown here is built from two PDB entries: <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bgw" target="_blank">1bgw <i class="fa fa-external-link"> </i></a></span> has the lower part of the topoisomerase, and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ei1" target="_blank">1ei1 <i class="fa fa-external-link"> </i></a></span> is a domain from a gyrase, which is similar to the upper part of the topoisomerase. The topoisomerase is thought to be a highly dynamic structure, with several gates for entry of DNA into the two DNA-sized holes. Two tyrosine amino acids, shown in red, cleave the DNA strands and form a covalent bond with them, holding them tightly until the DNA can be restored.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/73/1a31-rasmol.gif"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a31" target="_blank">1a31 <i class="fa fa-external-link"> </i></a></span> captures a class I topoisomerase in the middle of relaxing a strand of DNA. A tyrosine has broken one strand of the DNA, and formed a covalent bond to the phosphate group at the end of the broken strand. After the strands have spun a few times to release any tension, the enzyme will reform the broken bond in the DNA backbone. <br/><br/>This picture was created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. C. Wang (2002) Cellular roles of DNA topoisomerases: a molecular perspective. Nature Reviews Molecular and Cellular Biology 3, 430-440. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_1">http://doi.org/10.2210/rcsb_pdb/mom_2006_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

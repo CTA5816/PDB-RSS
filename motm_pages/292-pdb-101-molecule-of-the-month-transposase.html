@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Transposase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Transposase" property="og:title"/>
+<meta content="Transposases shift genes around in the genome" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/84/84_1muh-tube.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/84" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Transposase" name="twitter:title"/>
+<meta content="Transposases shift genes around in the genome" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/84/84_1muh-tube.jpg" name="twitter:image"/>
+<meta content="Transposases shift genes around in the genome" name="description"/>
+<meta content="DNA integration,DNA recombination,DNA transposable elements,integrase activity,transposase activity,transposition,1muh,1z1g,1mus" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 84
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 84 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Transposase</h1>
+<p><i>Transposases shift genes around in the genome</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Transposase Tn5 bound to the two ends of a transposon." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/84/84_1muh-tube.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transposase Tn5 bound to the two ends of a transposon.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/84/84-Transposase-1muh-tube.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>In the 1940's, Barbara McClintock discovered that the genome is a dynamic, changing place. She was studying maize, and she found that the beautiful mosaic colors of the kernels did not follow typical laws of inheritance. When she looked inside the cells, she found that the chromosomes changed shape, swapping pieces from one chromosome to the next. From this work, she found that the color changes were caused by the removal of a particular piece of DNA from the general area of the gene that caused the color, allowing the gene to be expressed and create pigments. She called this process transposition, where a piece of DNA is cut out of one place and pasted into another location.</div>
+<h4>Jumping Genes</h4>
+<div>Since then, transposing DNA has been found in organisms of all kinds. In our cells, it is normally a rare process, but careful analysis of our genome shows that fully 40 percent of the genome has moved around in the distant past. Bacteria have more active transposable elements, which shuttle genes for antibiotic resistance around. But by far the most active form of transposition is performed by retroviruses, such as HIV, that multiply by inserting themselves into the DNA, and then forcing the cell to make many new copies of their genetic information.</div>
+<h4>Cut-and-Paste</h4>
+<div>In the simplest cases, transposition needs only two things: a transposon (the DNA that moves), and a transposase (the enzyme that cuts out the DNA and moves it to a different place). The enzyme shown here is a bacterial transposase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1muh" target="_blank">1muh <i class="fa fa-external-link"> </i></a></span>) that moves a transposon called Tn5. The Tn5 transposon is a piece of DNA that includes several genes for antibiotic resistance, along with the gene needed to build the transposase itself. The crystal structure has caught the enzyme in the middle of the process of transposition. The process starts when two copies of enzyme bind to the DNA at the two ends of the transposon. Then, the two ends are brought together, closing the transposon into a big loop, and the transposase cuts the DNA at both ends. This is what we see in the structure: two copies of the enzyme holding the two severed ends of the DNA (note that the actual loop of DNA is much larger...5700 base pairs long). Finally, the enzymes find a new location on the DNA and reinsert the transposon.</div>
+<h4>Risky Business</h4>
+<div>Transposition is a double-edged sword, with benefits and dangers. Our DNA is filled with mobile DNA sequences, so there has obviously been a lot of action over the course of our evolution. Some people propose that mobile DNA is completely selfish--it starts hopping around the genome, copying itself, and there's no way for our cells to stop it. This is certainly the case with viruses like HIV--they selfishly use the cell as an incubator to reproduce, providing no benefit to the cell or to the infected person. However, mobile DNA is a slow but potent source of mutation, so it may have provided a method, over millions of years, to shuffle and rearrange the genome, providing the diversity that drives evolution. Our genome is currently filled with many old, inactive mobile elements, left as a legacy of our gradual evolution.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Lambda integrase bound to a DNA Holliday junction intermediate." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/84/84_1z1g-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lambda integrase bound to a DNA Holliday junction intermediate.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/84/84-Transposase-1z1g-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Tetrameric Transposase</h4>
+<div>Transposases use many different mechanisms for cutting and pasting DNA. This one, the lambda integrase from a bacteriophage (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1z1g" target="_blank">1z1g <i class="fa fa-external-link"> </i></a></span>), uses a more complex mechanism than the Tn5 transposase. This structure again catches the enzyme in the middle of its reaction, which involves an elaborate looping of DNA in and around the enzyme. In the process, an X-shaped Holliday junction is formed inside the enzyme, as shown in the lower illustration.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/84/84_1mus-rasmol.jpg"/></div>
+<div>Many transposases have a signature active site that includes three acidic amino acids, termed the DDE group. The active site of the Tn5 transposase is shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mus" target="_blank">1mus <i class="fa fa-external-link"> </i></a></span>. The DNA is shown at the top in spacefilling spheres, and the three acidic amino acids are shown with balls-and-sticks. The acidic amino acids hold two metal ions, shown here in green, that assist with the cleavage and reconnection reactions. <br/><br/> This illustration was created with RasMol. You can make similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>L. Haren, B. Ton-Hoang and M. Chandler (1999) Integrating DNA: transposases and retroviral integrases. Annual Review of Microbiology 53, 245-281.</li>
+<li>Mobile DNA II, edited by N. L. Craig and others, ASM Press, 2002.</li>
+<li>M. J. Curcio and K. M. Derbyshire (2003) The ins and outs of transposition: from mu to kangaroo. Nature Reviews, Molecular and Cellular Biology 4, 1-13.</li>
+<li>M. Steiniger-White, I. Rayment and W. S. Reznikoff (2004) Structure/function insights into Tn5 transposition. Current Opinion in Structural Biology 14, 50-57.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_12">http://doi.org/10.2210/rcsb_pdb/mom_2006_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

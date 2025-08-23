@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Elongation Factors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Elongation Factors" property="og:title"/>
+<meta content="Protein synthesis requires the assistance of several elongation factors that guide each step" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/81/81_1ttt.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/81" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Elongation Factors" name="twitter:title"/>
+<meta content="Protein synthesis requires the assistance of several elongation factors that guide each step" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/81/81_1ttt.jpg" name="twitter:image"/>
+<meta content="Protein synthesis requires the assistance of several elongation factors that guide each step" name="description"/>
+<meta content="peptide elongation factor G,peptide elongation factor Ts,peptide elongation factor Tu,transfer RNA,translation elongation factor activity,1ttt,1efu,1dar,1eft,1tui,1n0u,1n0v" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 81
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 81 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Elongation Factors</h1>
+<p><i>Protein synthesis requires the assistance of several elongation factors that guide each step</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Elongation factor Tu with transfer RNA (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/81/81_1ttt.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Elongation factor Tu with transfer RNA (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/81/81-ElongationFactors-1ttt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>At first glance, we might think that cells are primarily protein synthesis factories. Over half of the molecular machinery in a typical bacterial cell is dedicated to building new proteins. These include the <a class="STATIC" href="http://pdb101.rcsb.org/motm/23">DNA</a> and messenger RNA, which provide the instructions, <a class="STATIC" href="http://pdb101.rcsb.org/motm/15">transfer RNA,</a> which performs the translation of this information, and <a class="STATIC" href="http://pdb101.rcsb.org/motm/10">ribosomes,</a> which do the major construction work. Protein synthesis also requires a flurry of protein factors to orchestrate each step. These include initiation factors that get it all started, release factors that finish each chain, and elongation factors that assist the many steps between the beginning and the end.</div>
+<h4>Terrific Trio</h4>
+<div>Three types of elongation factors are built, in more-or-less similar form, by all living things. These are termed EF-Tu, EF-Ts, and EF-G. As with much of molecular biology, however, there are also other names for each of these, coined over the many years that researchers have been studying these molecules. So, in eukaryotes, you will see these three factors called EF-1A, EF-1B, and EF-2, often with an extra "e" in front, like eEF-1A, and sometimes with Greek letters. So, as you explore these molecules yourself, don't be surprised if the names change.</div>
+<h4>Special Delivery</h4>
+<div>EF-Tu, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ttt" target="_blank">1ttt <i class="fa fa-external-link"> </i></a></span>, performs the important job of shepherding each transfer RNA to the ribosome, powered by a molecule of GTP. EF-Tu is the most plentiful protein in bacterial cells—typically there will be enough that every tRNA may be matched with one. It binds to a tRNA after the proper amino acid has been attached to it. Then, the complex docks into the active site of the ribosome. When the tRNA anticodon matches up correctly with the mRNA codon, a signal from the ribosome causes EF-Tu to change shape and the molecule of GTP is cleaved. This causes EF-Tu to let go of the tRNA and leave, allowing the tRNA to enter into the reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="EF-Tu (blue) and EF-Ts (green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/81/81_1efu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>EF-Tu (blue) and EF-Ts (green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/81/81-ElongationFactors-1efu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Recycling Factors</h4>
+<div>Once EF-Tu has completed its job, the spent GDP must be pried out of its active site, so that a fresh GTP can bind. EF-Ts performs this task. It binds to the GDP form of EF-Tu and distorts it, destabilizing the binding of GDP and its accompanying magnesium ion. The structure shown here is from bacteria (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1efu" target="_blank">1efu <i class="fa fa-external-link"> </i></a></span>), with EF-Ts in green at the bottom and a molecule of EF-Tu in blue at the top.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="EF-G (left) compared with EF-Tu and tRNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/81/81_1dar-1ttt.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>EF-G (left) compared with EF-Tu and tRNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/81/81-ElongationFactors-1dar-1ttt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Moving On</h4>
+<div>After the ribosome has attached the amino acid to the growing chain, it needs to shift the tRNA molecules, ejecting the spent one and creating room for the next one to bind. EF-G performs this task. As you can see from this structure of a bacterial EF-G (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dar" target="_blank">1dar <i class="fa fa-external-link"> </i></a></span>, on the left), it is very similar in shape to the complex of EF-Tu and tRNA. Powered by GTP, EF-G binds to the ribosome, ejects the tRNA, and shifts the mRNA by one codon. As shown in the next page, this may involve a large change in shape.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/81/81_EF-rasmol.jpg"/></div>
+<div>As is often the case with proteins that use GTP or ATP, elongation factors undergo large changes in shape while performing their jobs. You can see the GTP-powered motion of EF-Tu by comparing PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1eft" target="_blank">1eft <i class="fa fa-external-link"> </i></a></span>, which has a GTP-like molecule bound, and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tui" target="_blank">1tui <i class="fa fa-external-link"> </i></a></span>, which has GDP bound. EF-2 (the yeast version of EF-G) also changes shape, as seen in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n0u" target="_blank">1n0u <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n0v" target="_blank">1n0v <i class="fa fa-external-link"> </i></a></span>. One has sordarin (an antifungal drug) bound, and the other has nothing bound to it. Notice how the large domain at the bottom swings from one structure to the next. In electron micrographic studies of ribosome function, a similar shape change has been observed. <br/><br/> These illustrations were created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>G. R. Andersen, P. Nissen and J. Nyborg (2003) Elongation factors in protein biosynthesis. Trends in Biochemical Sciences 28, 434-441.</li>
+<li>I. M. Krab and A. Parmeggiani (2002) Mechanisms of eEF-Tu, a pioneer GTPase. Progress in Nucleic Acids Research 71, 513-551.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_9">http://doi.org/10.2210/rcsb_pdb/mom_2006_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

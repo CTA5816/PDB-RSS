@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Dengue Virus</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Dengue Virus" property="og:title"/>
+<meta content="Atomic structures of dengue virus are giving new hope for creation of a vaccine" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/103/103_1k4r-1ok8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/103" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Dengue Virus" name="twitter:title"/>
+<meta content="Atomic structures of dengue virus are giving new hope for creation of a vaccine" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/103/103_1k4r-1ok8.jpg" name="twitter:image"/>
+<meta content="Atomic structures of dengue virus are giving new hope for creation of a vaccine" name="description"/>
+<meta content="dengue hemorrhagic fever,dengue vaccines,dengue virus,icosahedral viral capsid,viral capsid,viral entry into host cell,dengue fever,dengue fever virus,1k4r,1ok8,1l9k,2j7w,2vbc,2r6p,1n6g,1p58" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 103
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 103 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Dengue Virus</h1>
+<p><i>Atomic structures of dengue virus are giving new hope for creation of a vaccine</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Dengue virus capsid (top) and the conformation of the envelope glycoprotein involved in membrane fusion." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/103/103_1k4r-1ok8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Dengue virus capsid (top) and the conformation of the envelope glycoprotein involved in membrane fusion.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/103/103-DengueVirus-1k4r.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Dengue virus is a major threat to health in tropical countries around the world. It is limited primarily to the tropics because it is transmitted by a tropical mosquito, but even with this limitation, 50-100 million people are infected each year. Most infected people experience dengue fever, with terrible headaches and fever and rashes that last a week or two. In some cases, however, the virus weakens the circulatory system and can lead to deadly hemorrhaging. Researchers are now actively studying the virus to try to develop drugs to cure infection, and vaccines to block infection before it starts.</div>
+<h4>The Dengue Virus Genome</h4>
+<div>Dengue virus is a small virus that carries a single strand of RNA as its genome. The genome encodes only ten proteins. Three of these are structural proteins that form the coat of the virus and deliver the RNA to target cells, and seven of them are nonstructural proteins that orchestrate the production of new viruses once the virus gets inside the cell. The outermost structural protein, termed the envelope protein, is shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k4r" target="_blank">1k4r <i class="fa fa-external-link"> </i></a></span>. The virus is enveloped with a lipid membrane, and 180 identical copies of the envelope protein are attached to the surface of the membrane by a short transmembrane segment. The job of the envelope protein is to attach to a cell surface and begin the process of infection.</div>
+<h4>A Deadly Switch</h4>
+<div>In the infectious form of the virus, the envelope protein lays flat on the surface of the virus, forming a smooth coat with icosahedral symmetry. However, when the virus is carried into the cell and into lysozomes, the acidic environment causes the protein to snap into a different shape, assembling into trimeric spike, as shown at the bottom from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ok8" target="_blank">1ok8 <i class="fa fa-external-link"> </i></a></span>. Several hydrophobic amino acids at the tip of this spike, colored bright red here, insert into the lysozomal membrane and cause the virus membrane to fuse with lysozome. This releases the RNA into the cell and infection starts. The <a class="static" href="https://pdb101.rcsb.org/motm/76">hemagglutinin</a> protein on the surface of influenza virus plays a similar role, but the two proteins use entirely different mechanisms to perform a similar task.</div>
+<h4>The Hunt for a Dengue Vaccine</h4>
+<div>A dengue vaccine has proven difficult to develop, in part because there are four major subtypes of dengue virus, each with slightly different viral proteins. Many researchers currently believe that the deadly dengue hemorrhagic disease is caused when a person is infected with one subtype, and then infected later by a second subtype. The antibodies, and immunity, gained from the first infection appear to assist with the infection by the second subtype, instead of providing a general immunity to all subtypes. This means that an effective vaccine will have to stimulate protective antibodies against all four types at once, a feat that has not yet been achieved.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Nonstructural proteins NS5 (left) and NS3 (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/103/103_nonstructuralproteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nonstructural proteins NS5 (left) and NS3 (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/103/103-DengueVirus-nonstructuralproteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Building New Viruses</h4>
+<div>Dengue virus also makes several proteins that create new viruses once it is inside a cell. Two of the major ones are shown here. Both are multifunctional proteins with several enzymes strung together. The one on the left, NS5 from PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l9k" target="_blank">1l9k <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2j7w" target="_blank">2j7w <i class="fa fa-external-link"> </i></a></span>, contains a methyltransferase and a polymerase, and the one on the right, NS3 from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2vbc" target="_blank">2vbc <i class="fa fa-external-link"> </i></a></span>, contains a protease and a helicase. Each of these enzymes performs a different part of the life cycle. The polymerase builds new RNA strands based on the viral RNA, the helicase helps to separate these strands, and the methyltransferase adds methyl groups to the end of them, protecting the RNA strands and coaxing the cell's ribosomes to create viral proteins based on them. The viral proteins are created in one long polyprotein chain, which is finally clipped into the functional units by the protease. The little chain colored blue is a portion of another viral protein, NS2B, that assists with the protease activity.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Dengue Virus with Antibodies (PDB entry 2r6p) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/103/103-Dengue_Virus-2r6p-jmol.jpg"/></div>
+<p>Cryoelectron microscopy has been used to study many aspects of the life cycle of the dengue virus. In these structures, a low resolution image of virus, not quite detailed enough to see atoms, is obtained by the electron microscope, and then atomic structures of the individual pieces are fit into the image to generate the final model. The one shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2r6p" target="_blank">2r6p <i class="fa fa-external-link"> </i></a></span>, shows the envelope protein on the surface of the virus (in white) with many antibody Fab fragments (in blue) bound to the viral proteins. By looking carefully at this structure, researchers have discovered that the antibodies distort the arrangement of the envelope proteins, blocking their normal action in infection. Other dengue virus structures in the PDB include immature forms of the virus (for instance, in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n6g" target="_blank">1n6g <i class="fa fa-external-link"> </i></a></span>) and structures that include the membrane-spanning portions of the viral coat (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1p58" target="_blank">1p58 <i class="fa fa-external-link"> </i></a></span>). To take a close-up look at the interaction of these antibodies with the virus, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The dengue virus is surrounded by 180 copies of the envelope protein. Many other viruses are surrounded by capsids composed of many identical proteins, and these often appear in multiples of 60, such as 180, 240 or 420 copies. What is significant about these numbers? Can you find examples of each in the PDB? </li>
+<li>Dengue virus is a member of a family of flaviviruses that are spread by ticks and mosquitoes. Other examples include yellow fever virus and West Nile virus. Looking at the structures in the PDB, can you see similarities in the proteins made by these viruses? </li>
+<li>Dengue virus replicates in the cytoplasm of infected cells, without entering the nucleus. Can you think of any problems this might cause, and how the dengue virus solves them with its ten viral proteins? </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Mukhopadhyay, R. J. Kuhn and M. G. Rossmann (2005) A structural perspective of the Flavivirus life cycle. Nature Reviews Microbiology 3, 13-22. </li>
+<li>S. S. Whitehead, J. E. Blaney, A. P. Durbin and B. R. Murphy (2007) Prospects for a dengue virus vaccine. Nature Reviews Microbiology 5, 518-528. </li>
+<li>S. B. Halstead (2007) Dengue. Lancet 370, 1644-1652. </li>
+<li>R.-F. Qi, L. Zhang and C.-W. Chi (2008) Biological characteristics of dengue virus and potential targets for drug design. Acta Biochimica et Biophysica Sinica 40, 91-101. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_7">http://doi.org/10.2210/rcsb_pdb/mom_2008_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

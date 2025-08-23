@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cytochrome c Oxidase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cytochrome c Oxidase" property="og:title"/>
+<meta content="Cytochrome oxidase extracts energy from food using oxygen" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/5/1oco.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/5" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cytochrome c Oxidase" name="twitter:title"/>
+<meta content="Cytochrome oxidase extracts energy from food using oxygen" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/5/1oco.gif" name="twitter:image"/>
+<meta content="Cytochrome oxidase extracts energy from food using oxygen" name="description"/>
+<meta content="aerobic respiration,electron carrier activity,electron transport chain,oxidative phosphorylation,respiratory chain,1oco,1qle" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 5
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 5 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cytochrome c Oxidase</h1>
+<p><i>Cytochrome oxidase extracts energy from food using oxygen</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cytochrome c oxidase. The portion spanning the membrane is shown schematically with green lines." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/5/1oco.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome c oxidase. The portion spanning the membrane is shown schematically with green lines.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/5/5-CytochromecOxidase-1oco.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Oxygen and Life</h4>
+<div>Oxygen is an unstable molecule. If given a chance, it will break apart and combine with other molecules. This is the process of oxidation, seen in our familiar world as the rusting of iron in cars and nails. But, surprisingly, the unusual electronic properties of oxygen molecules make this reaction very slow. So, paper doesn't spontaneously burn up--flames must be kindled.<br/><br/> All animals and plants, and many microorganisms, use the instability of oxygen to power the processes of life. The molecules in food are oxidized and the energy is used to build new molecules, to swim or crawl, and to reproduce. Food is not oxidized in a fiery flame, however. It is oxidized in many slow steps, each carefully controlled and designed to capture as much useable energy as possible.<br/><br/> Cytochrome c oxidase controls the last step of food oxidation. At this point, the atoms themselves have all been removed and all that is left are a few of the electrons from the food molecules. Cytochrome c oxidase, shown here, takes these electrons and attaches them to an oxygen molecule. Then, a few hydrogen ions are added as well, forming two water molecules.</div>
+<h4>Charging the Battery</h4>
+<div>The reaction of oxygen and hydrogen to form water is a favorable process, releasing a good deal of energy. In our familiar world, hydrogen and oxygen combine explosively, which is the reason that dirigibles are filled with helium instead of hydrogen. In our cells, however, the energy is carefully harnessed by cytochrome c oxidase to charge a battery, or perhaps more correctly, to charge a capacitor.<br/><br/> Cytochrome c oxidase is a membrane protein. In the picture, notice the region between the green lines. Most of the surface atoms there are carbon (white) and sulfur (yellow). In the cell, these atoms are buried inside a membrane. Notice that the regions at the top and bottom are covered with charged oxygen and nitrogen atoms, colored bright red and blue here. These regions, which prefer a watery environment, stick out on opposite faces of the membrane. This arrangement is perfect for the job performed by cytochrome c oxidase, which uses the reaction of oxygen to water to power a molecular pump. As oxygen is consumed, the energy is stored by pumping hydrogen ions from one side of the membrane to the other. Later, the energy can be used to build ATP or power a motor by letting the hydrogen ions seep back across the membrane.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bovine (left) and bacterial (right) cytochrome c oxidase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/5/cytox_composite.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bovine (left) and bacterial (right) cytochrome c oxidase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/5/5-CytochromecOxidase-cytox_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Evolution of an Enzyme</h4>
+<div>Oxygen is consumed in special compartments inside our cells, termed mitochondria. When looking in the electron microscope, mitochondria bear an uncanny resemblance to simple bacteria. Today, many biologists believe that mitochondria are actually the result of a bacterial invasion sometime in the distant past. A bacterium squeezed inside another cell, but didn't kill the cell in the process. Instead they lived peacefully together. When the cell divided, the bacteria inside did too, so both daughter cells had bacterial invaders as well. Over many generations, the two became totally dependent on one another. The bacteria inside specialized on energy production and the cell provided protection and nutrients. Today, these bacteria are our mitochondria. <br/><br/> Evidence of this symbiotic relationship is found in cytochrome c oxidase. The enzyme from mammals is very complex, composed of 13 separate protein chains (the cow enzyme is shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oco" target="_blank">1oco <i class="fa fa-external-link"> </i></a></span>). Three large chains at the core of the enzyme, colored yellow, orange and red here, perform most of the work. Around this are ten smaller chains, colored in greens and blues.</div>
+<div>If we look at the cytochrome c oxidase made by a bacterium, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qle" target="_blank">1qle <i class="fa fa-external-link"> </i></a></span> shown here on the right, it is much simpler. It is composed of only four chains. Three are similar to the core chains in our enzyme, colored yellow, orange, and red. One additional small chain can just be seen poking out the bottom here, in blue. Notice how similar this enzyme is to the core of the mammalian enzyme, shown on the left.<br/><br/></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cytochrome c oxidase colored to show the different protein subunits." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/5/1oco_subunit.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome c oxidase colored to show the different protein subunits.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/5/5-CytochromecOxidase-1oco_subunit.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Our Mitochondrial Enzyme</h4>
+<div>This similarity is compelling, but the story is even more interesting. Our mitochondria actually contain all of the machinery needed to build their own proteins--they have DNA, ribosomes, and everything. In our cells, the three core subunits of cytochrome c oxidase are built inside our mitochondria, but the remaining ten small chains are built outside in the cytoplasm and then added to the mitochondria later. So, our mitochondria build a bacteria-like enzyme, which our cells then decorate with other proteins to customize its function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/5/1oco_activesite.gif"/></div>
+<div>Cytochrome c oxidase uses several metal ions to shuffle electrons onto oxygen molecules. Two copper atoms, shown in green at the top, are thought to be the port for entry. This is denoted as site "A" and is very close to the region that binds to cytochrome c (not shown), the small protein that delivers electrons to cytochrome c oxidase. The oxygen molecule itself binds lower, in the middle of the enzyme. The oxygen is pinioned between a heme iron atom (shown in yellow) and another copper atom, denoted as site "B." A second heme group, off to the left in this picture, assists in the transfer of electrons. The structure shown here, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oco" target="_blank">1oco <i class="fa fa-external-link"> </i></a></span>, has a carbon monoxide molecule bound in the active site, blocking the binding of oxygen and poisoning function of the enzyme.<br/><br/> This picture was created in RasMol by drawing a backbone for the protein atoms and spacefilling spheres for all non-protein atoms. You can create similar pictures by going to PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oco" target="_blank">1oco <i class="fa fa-external-link"> </i></a></span> and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_5">http://doi.org/10.2210/rcsb_pdb/mom_2000_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

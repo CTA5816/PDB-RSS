@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Click Chemistry</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Click Chemistry" property="og:title"/>
+<meta content="A modular approach to chemistry simplifies the construction of complex protein-targeting molecules." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/276/1q83_figure.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/276" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Click Chemistry" name="twitter:title"/>
+<meta content="A modular approach to chemistry simplifies the construction of complex protein-targeting molecules." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/276/1q83_figure.jpg" name="twitter:image"/>
+<meta content="A modular approach to chemistry simplifies the construction of complex protein-targeting molecules." name="description"/>
+<meta content="Click chemistry,Nobel Prize,inhibitor,drug design,inhibitor,structure-guided drug design,drug,triazole,combinatorial chemistry,1q83,1q84,3cyu,5eih" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 276
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 276 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Click Chemistry</h1>
+<p><i>A modular approach to chemistry simplifies the construction of complex protein-targeting molecules.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The two precursor molecules at left bind to neighboring subsites in the enzyme acetylcholinesterase. This places them in the proper orientation to click together into a powerful inhibitor, as seen at right." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/276/1q83_figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The two precursor molecules at left bind to neighboring subsites in the enzyme acetylcholinesterase. This places them in the proper orientation to click together into a powerful inhibitor, as seen at right.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/276/1q83_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>By understanding the structure of proteins and nucleic acids, we gain the ability to control them, by blocking them with inhibitors or modifying them with non-natural chemical groups. This is the basis of structure-guided drug discovery, which has led to the discovery of many important therapeutics in current use. One of the great challenges, however, is that biomolecules have complex shapes and the molecules that bind to them need to have similarly unusual geometries. This year, the Nobel Prize in Chemistry was awarded to three researchers who spearheaded a modular approach to chemistry that helps researchers synthesize diverse molecules with desired shapes and properties.</div>
+<h4>Molecular Legos</h4>
+<div>Click chemistry allows researchers to build custom molecules by connecting modular precursors. The trick to making these connections is to find chemical groups that are normally unreactive, but can be "clicked" together under the right conditions. The Sharpless and Mendal laboratories independently discovered that compounds with an azide group could be connected to compounds with an alkyne group using copper as a catalyst. When they react, these two chemical groups form a characteristic five-membered triazole ring connecting the two molecules.</div>
+<h4>Let the Enzyme Choose</h4>
+<div>Amazingly, the Sharpless lab showed that an enzyme could perform this same reaction without the need for copper. The two molecules both bind to the protein, bringing the azide and alkyne groups in close proximity and promoting reaction. In their classic experiment, they added many pairs of precursors with azide or alkyne groups to the enzyme <a href="https://pdb101.rcsb.org/motm/54">acetylcholinesterase</a>, and found that the enzyme connected only the best one. Using this approach, the enzyme created an inhibitor that binds more tightly than any other previously known non-covalent inhibitor, as seen in the compound shown here from PDB ID <a href="https://www.rcsb.org/structure/1q83" target="_blank">1q83</a>. Reactions like this are also being performed inside living cells, to connect probes and sensors to cellular proteins. The Bertozzi lab has developed a collection of cell-friendly click reactions, for example, by removing the need for toxic copper catalysts by embedding the alkyne inside a strained molecular ring.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A biosensor created by clicking together a cryptophane molecule that traps xenon (in green) to a molecule that binds specifically to the enzyme carbonic anhydrase II (magenta). Two additional substituents are also added to the cryptophane by click chemistry near the top." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/276/3cyu_crop.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A biosensor created by clicking together a cryptophane molecule that traps xenon (in green) to a molecule that binds specifically to the enzyme carbonic anhydrase II (magenta). Two additional substituents are also added to the cryptophane by click chemistry near the top.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/276/3cyu_crop.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Exotic Constructions</h4>
+<div>Click chemistry has become a central tool in the synthetic chemistry toolbox. It is widely used for combinatorial chemistry, where many modular components are connected in multiple configurations and all rapidly tested for potency. It is also being used in a targeted way, allowing researchers to make their molecular dreams a reality. The molecule shown here (PDB ID <a href="https://www.rcsb.org/structure/3cyu" target="_blank">3cyu</a>) is designed to be a biosensor. The spherical cryptophane at the top, which has the alkyne half of the click reaction, traps a xenon atom that may be useful as a contrast agent for MRI. The azide portion shown at the bottom is a molecule that binds specifically to the target enzyme: <a href="https://pdb101.rcsb.org/motm/49">carbonic anhydrase II</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Click Chemistry Enzyme Inhibitor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/276/1q84_1q83_jmol-jmol.jpg"/></div>
+<p>Click chemistry between azide and alkyne precursors can generate two slightly different triazoles, <i>anti</i> and <i>syn</i>, depending on how they line up next to each other during the reaction. When catalyzed by copper, most of the triazoles have the <i>anti</i> configuration, with the two connected precursors extending in opposite directions from the five-membered ring (PDB ID <a href="https://www.rcsb.org/structure/1q84" target="_blank">1q84)</a>. However, in the acetylcholinesterase-catalyzed reaction described above, the precursors mostly align side-by-side to form the <i>syn</i> triazole (PDB ID <a href="https://www.rcsb.org/structure/1q83" target="_blank">1q83)</a>. As expected, biochemical testing showed that this <i>syn</i> compound binds more tightly to the enzyme than the <i>anti</i> compound. To explore these two structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many click chemistry inhibitors are included in the PDB archive. You can use the <a href="https://www.rcsb.org/chemical-sketch">Chemical Sketch Tool</a> in Advanced Search to find them. For example, try searching with the SMILES string CN1C=C(C)N=N1.</li>
+<li>You can see alkyne and azide precursors bound to acetylcholinesterase in PDB ID <a href="https://www.rcsb.org/structure/5eih" target="_blank">5eih</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3cyu: Aaron, J.A., Chambers, J.M., Jude, K.M., Di Costanzo, L., Dmochowski, I.J., Christianson, D.W. (2008) Structure of a 129Xe-cryptophane biosensor complexed with human carbonic anhydrase II. J Am Chem Soc 130: 6942-6943</li>
+<li>Prescher, J.A., Bertozzi, C.R. (2005) Chemistry in living systems. Nat Chem Biol. 1: 13-21</li>
+<li>1q83, 1q84: Bourne, Y., Kolb, H.C., Radic, Z., Sharpless, K.B., Taylor, P., Marchot, P. (2004) Freeze-frame inhibitor captures acetylcholinesterase in a unique conformation. Proc Natl Acad Sci U S A 101: 1449-1454</li>
+<li>Kolb, H.C., Sharpless, K.B. (2003) The growing impact of click chemistry on drug discovery. Drug Discov Today 8:1128-1137</li>
+<li>Lewis, W.G., Green, L.G., Grynszpan, F., Radic, Z., Carlier, P.R., Taylor, P., Finn, M.G., Sharpless, K.B. (2002) Click chemistry in situ: Acetylcholinesterase as a reaction vessel for the selective assembly of a femtomolar inhibitor from an array of building blocks. Angew Chem Int Ed 41: 1053-1057</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_12">http://doi.org/10.2210/rcsb_pdb/mom_2022_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

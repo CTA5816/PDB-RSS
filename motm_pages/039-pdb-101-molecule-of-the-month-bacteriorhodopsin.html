@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Bacteriorhodopsin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Bacteriorhodopsin" property="og:title"/>
+<meta content="Bacteriorhodopsin pumps protons powered by green sunlight" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/27/1fbb-twoviews.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/27" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Bacteriorhodopsin" name="twitter:title"/>
+<meta content="Bacteriorhodopsin pumps protons powered by green sunlight" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/27/1fbb-twoviews.gif" name="twitter:image"/>
+<meta content="Bacteriorhodopsin pumps protons powered by green sunlight" name="description"/>
+<meta content="light stimulus,photoreceptor activity,phototransduction,proton transport,retinal,rhodopsin,1fbb,1e12,1h68,1jgj,1fbb,1f88,1c3w,1dze" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 27
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 27 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Bacteriorhodopsin</h1>
+<p><i>Bacteriorhodopsin pumps protons powered by green sunlight</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bacteriorhodopsin, with the chromophore in lighter blue. The portion that spans the membrane is shown schematically in the lower illustration with green lines." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/27/1fbb-twoviews.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacteriorhodopsin, with the chromophore in lighter blue. The portion that spans the membrane is shown schematically in the lower illustration with green lines.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/27/27-Bacteriorhodopsin-1fbb-twoviews.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Sunlight powers the biological world. Through photosynthesis, plants capture sunlight and build sugars. These sugars then provide all of the starting materials for our growth and energy needs. As seen in the Molecule of Month last October, photosynthesis requires a complex collection of molecular antennas and photosystems. However, some archaebacteria have found a simpler solution to capturing sunlight.</div>
+<h4>A Light-driven Pump</h4>
+<div>Bacteriorhodopsin is a compact molecular machine that pumps protons across a membrane powered by green sunlight. It is built by halophilic (salt loving) bacteria, found in high-temperature brine pools. They use sunlight to pump protons outwards across their cell membranes, making the inside 10,000-fold more alkaline than the outside. These protons are then allowed to flow back inwards through another protein, ATP synthase, building much of the ATP that powers the cell.</div>
+<h4>Capturing Light</h4>
+<div>Bacteriorhodopsin, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fbb" target="_blank">1fbb <i class="fa fa-external-link"> </i></a></span>, is composed of three protein chains. It is found embedded in dense arrays in the membranes of the bacteria. The area spanning the membrane is shown in the lower picture between the two green lines. At the heart of each protein chain is a molecule of retinal, which is bound deep inside the protein and connected through a lysine amino acid. In these pictures, one of the three protein chains is shown in blue and the retinal molecule, which is buried inside, is shown in white. Retinal contains a string of carbons that strongly absorb light. When a photon is absorbed, it causes a change in the conformation of the molecule. In bacteriorhodopsin, this is a change from a straight form to a bent form, as shown on a later page. This change in shape powers the pumping of protons.</div>
+<h4>Many Uses</h4>
+<div>The capturing of light is so useful that these salt-loving archaebacteria actually build four different types of rhodopsins. Bacteriorhodopsin is used to generate energy. Halorhodopsin, which may be seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e12" target="_blank">1e12 <i class="fa fa-external-link"> </i></a></span>, is also a pump that funnels chloride ions instead of protons. It is in charge of keeping the internal concentration of chloride at high levels that match the salty conditions outside the cell. The other two rhodopsins are sensory rhodopsins, such as the ones in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1h68" target="_blank">1h68 <i class="fa fa-external-link"> </i></a></span> or <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jgj" target="_blank">1jgj <i class="fa fa-external-link"> </i></a></span>. These rhodopsins sense bluish light and send signals to the cell to move, finding an area with more useful, greenish light. All four of these rhodopsins are built along similar lines, with a retinal molecule securely held inside a compact container of protein.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacteriorhodopsin (left) and rhodopsin (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/27/two-rhodopsins.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacteriorhodopsin (left) and rhodopsin (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/27/27-Bacteriorhodopsin-two-rhodopsins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Seeing Light</h4>
+<div>We also build several forms of rhodopsin and use them in our eyes for seeing light. As in bacteriorhodopsin, our rhodopsin also contains a molecule of retinal. (Bacteriorhodopsin is shown on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fbb" target="_blank">1fbb <i class="fa fa-external-link"> </i></a></span>, and rhodopsin from cows is shown on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f88" target="_blank">1f88 <i class="fa fa-external-link"> </i></a></span>). Retinal is made in our bodies from retinol, or vitamin A, which is essential in the diet, since we cannot synthesize vitamin A on our own. When it absorbs a photon, the retinal in rhodopsin changes shape from bent to straight--just the opposite of retinal in bacteriorhodopsin! This change of shape then pushes the surrounding protein into a slightly different shape, which is sensed by proteins inside the cell. Then, the message is passed through a cascade of proteins, each sending the message to the next, finally launching a nerve signal to the brain. The process is so sensitive that the eye can sense as few as 5 photons.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/27/twostates.gif"/></div>
+<div>Many structures of bacteriorhodopsin are available in the PDB, showing many of the steps in the process of absorbing light and pumping protons. Two snapshots are shown here. The structure on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c3w" target="_blank">1c3w <i class="fa fa-external-link"> </i></a></span>, is in the ground state, before it has absorbed light. The retinal (the long molecule in white crossing through the center) is in the straight <i>trans</i> form, as shown by the little zig-zag yellow lines. The structure on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dze" target="_blank">1dze <i class="fa fa-external-link"> </i></a></span>, shows the molecule after absorbing light. Notice that the retinal now has a bent <i>cis</i> shape at the site indicated by the yellow lines. This new shape has changed the orientation of the nitrogen at the end of the retinal, indicated by the yellow N. It has also shifted the position of several protein amino acids that are along the pathway of proton transfer, indicated by the numbers. In particular, notice the large shift of arginine 82 at the bottom. Researchers are working to discover how these changes in shape power the transfer of a proton from the top to the bottom, through the middle of bacteriorhodopsin and across the archaebacterial membrane. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the accession codes above and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Ulrich Haupts, Jorg Tittor and Dieter Oesterhelt (1999) Closing in on Bacteriorhodopsin: Progress in Understanding the Molecule. <i>Annual Review of Biophysics and Biomolecular Structure</i> <b>28</b>, pp. 367-399.</li>
+<li>Werner Kuhlbrandt (2000) News and Views: Bacteriorhodopsin--the Movie. <i>Nature</i> <b>406</b>, pp. 569-570.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_3">http://doi.org/10.2210/rcsb_pdb/mom_2002_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

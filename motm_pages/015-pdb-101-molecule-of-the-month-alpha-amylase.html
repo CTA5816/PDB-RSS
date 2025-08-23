@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Alpha-amylase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Alpha-amylase" property="og:title"/>
+<meta content="Amylases digest starch to produce glucose" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/74/74_1ppi.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/74" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Alpha-amylase" name="twitter:title"/>
+<meta content="Amylases digest starch to produce glucose" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/74/74_1ppi.gif" name="twitter:image"/>
+<meta content="Amylases digest starch to produce glucose" name="description"/>
+<meta content="alpha-amylase activity,amylase,biotechnology,carbohydrate catabolic process,digestive enzyme,pancreatic enzyme,1ppi,1smd,1hny,2taa,1dog,4xia" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 74
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 74 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Alpha-amylase</h1>
+<p><i>Amylases digest starch to produce glucose</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Alpha-amylase with a short chain of sugars (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/74/74_1ppi.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Alpha-amylase with a short chain of sugars (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/74/74-alpha-Amylase-1ppi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Glucose is a major source of energy in your body, but unfortunately, free glucose is relatively rare in our typical diet. Instead, glucose is locked up in many larger forms, including lactose and sucrose, where two small sugars are connected together, and long chains of glucose like starches and glycogen. One of the major jobs of digestion is to break these chains into their individual glucose units, which are then delivered by the blood to hungry cells throughout your body.</div>
+<h4>Attacking Starch</h4>
+<div>Alpha-amylase begins the process of starch digestion. It takes starch chains and breaks them into smaller pieces with two or three glucose units. Two similar types of amylase are made in your body--one is secreted in saliva, where it starts to break down starch grains as you chew, and the other is secreted by the pancreas, where it finishes its job. Then, these little pieces are broken into individual glucose units by a collection of enzymes that are tethered to the walls of the intestine.</div>
+<h4>Amylase in Action</h4>
+<div>Since amylase needs to perform its job in the unpleasant environment of the intestine, it is a small, stable enzyme resistant to unfavorable conditions. The amylase shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ppi" target="_blank">1ppi <i class="fa fa-external-link"> </i></a></span>) is made by the pancreas in pigs. A small chain of five sugars (colored yellow) is bound in the active site, which is found in a large cleft on the enzyme. Structures for the two human enzymes (which look very similar) are available in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1smd" target="_blank">1smd <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hny" target="_blank">1hny <i class="fa fa-external-link"> </i></a></span>. As you look through the PDB, you will also find many structures of alpha-amylases and other starch-digesting enzymes from bacteria and plants.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Taka-amylase A (left), glucoamylase (center), and D-xylose isomerase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/74/74_industrial.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Taka-amylase A (left), glucoamylase (center), and D-xylose isomerase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/74/74-alpha-Amylase-industrial.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Industrial Strength</h4>
+<div>Alpha-amylase is used in large quantities in the production of high fructose corn syrup, a mixture of sugars created from corn that is similar in taste and sweetness to the sucrose obtained from sugar beets and sugar cane. The process requires three steps, each performed by a different enzyme. Amylase performs the first step of breaking starch into small pieces. Bacterial amylases, like the one shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2taa" target="_blank">2taa <i class="fa fa-external-link"> </i></a></span>, are typically used since they are easy to obtain in large quantities. The second step is performed by a fungal glucoamylase, shown here in the center from PDB entry<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dog" target="_blank"> 1dog <i class="fa fa-external-link"> </i></a></span>. It breaks the small chains into individual glucose units. Unfortunately, glucose does not have a particularly palatable taste, so a third step must be added. This is performed by glucose isomerase, also known as xylose isomerase, as shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4xia" target="_blank">4xia <i class="fa fa-external-link"> </i></a></span>. This enzyme converts some of the glucose into fructose, creating a tasty mixture that is used to sweeten everything from soft drinks to power bars. However, this cheap and widely available sweetener may come with some disadvantages: a quick search on the WWW will reveal a whirlwind of controversy about the role of high fructose corn syrup in obesity and diabetes.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Amylase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/74/74-Alphaamylase-amylase.jpg"/></div>
+<p>The active site of alpha-amylase contains a trio of acidic groups (colored white and red) that do most of the work. In the amylase shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ppi" target="_blank">1ppi <i class="fa fa-external-link"> </i></a></span>), glutamate 233, aspartate 197, and aspartate 300 work together to cleave the connection between two sugars in a starch chain. This structure contains a short chain of five sugar units (colored yellow and orange) bound in the active site. The site of cleavage is shown in blue. A calcium ion, shown as the large red sphere in the background, is found nearby where it stabilizes the structure of the enzyme. A chloride ion, shown as a green sphere, is bound underneath the active site in many amylases, where it may assist the reaction. Click on this image to explore the structure in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>E. A. MacGregor, S. Janecek and B. Svensson (2001) Relationship of sequence and structure to specificity in the alpha-amylase family of enzymes. Biochimica et Biophysica Acta 1546, 1-20.</li>
+<li>J. E. Nielsen and T. V. Borchert (2000) Protein engineering of bacterial alpha-amylases. Biochimica et Biophysica Acta 1543, 253-274.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_2">http://doi.org/10.2210/rcsb_pdb/mom_2006_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

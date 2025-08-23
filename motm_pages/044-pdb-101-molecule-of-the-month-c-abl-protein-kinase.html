@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: c-Abl Protein Kinase and Imatinib </title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: c-Abl Protein Kinase and Imatinib " property="og:title"/>
+<meta content="Protein kinases are being targeted by new anti-cancer drugs" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/283/Figure1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/283" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: c-Abl Protein Kinase and Imatinib " name="twitter:title"/>
+<meta content="Protein kinases are being targeted by new anti-cancer drugs" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/283/Figure1.jpg" name="twitter:image"/>
+<meta content="Protein kinases are being targeted by new anti-cancer drugs" name="description"/>
+<meta content="c-abl,bcr-abl,Philadelphia chromosome,chronic myeloid leukemia,CML,cancer,oncogene,oncogenesis,chemotherapy,imatinib,protein kinase,tyrosine kinase" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 283
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 283 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: c-Abl Protein Kinase and Imatinib </h1>
+<p><i>Protein kinases are being targeted by new anti-cancer drugs</i></p>
+<div>
+<div><i>This article was written and illustrated by Allison Abel, Darlene R. Malave-Ramos, Bhavya Soni, Christopher Thai and Amy Wu-Wu as part of a <a href="https://iqb.rutgers.edu/node/263">week-long boot camp</a> for undergraduate and graduate students hosted by the Rutgers Institute for Quantitative Biomedicine. The article is presented as part of the 2023-2024 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Computed structure model of the entire c-Abl protein. The cap region, SH3 and SH2 regulatory domains, and kinase domains form a well-structured complex on one end of c-Abl. In cells, a myristoyl group is attached to the free end of the cap region. A large intrinsically disordered region connects to the F-actin binding domain at the other end of the chain." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/283/Figure1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Computed structure model of the entire c-Abl protein. The cap region, SH3 and SH2 regulatory domains, and kinase domains form a well-structured complex on one end of c-Abl. In cells, a myristoyl group is attached to the free end of the cap region. A large intrinsically disordered region connects to the F-actin binding domain at the other end of the chain.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/283/Figure1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Protein kinases were initially dismissed as targets for cancer chemotherapy. It was well understood that they would make excellent targets since they play significant roles in almost all aspects of cell function, are tightly regulated, and any alterations to their regulation contribute to the development of cancer and other diseases. However, there are many types of kinases in our cells that are all structurally similar and have similar binding sites for ATP. It was long thought that these similarities would inevitably lead to off-target binding and hence side effects for any drugs targeting the active site of these kinases.</div>
+<h4>Structures Open the Door</h4>
+<div>Fortunately, structural biology proved these initial reservations to be false. As structures of protein kinases were determined, it was found that their ATP-binding pockets had large enough differences that facilitated the structure-guided discovery and development of selective drugs. The anti-cancer drug <i>imatinib</i> was the breakthrough success. Since then, great strides have been made toward the successful development of selective small-molecule inhibitors for various protein kinases, many being the products of structure-guided drug discovery.</div>
+<h4>Disordered Yet Not Dysfunctional</h4>
+<div>c-Abl, the target of imatinib, is a tyrosine kinase that selectively transfers phosphate groups from ATP to tyrosine. As seen in the computed structure model for the full-length protein (PDB entry <a href="https://www.rcsb.org/structure/AF_AFP00519F1" target="_blank">AF_AFP00519F1</a>), it is complex with several functional parts. Two regions have stable folded structures and have been studied in detail by x-ray crystallography and NMR spectroscopy: the kinase and regulatory domains (PDB ID <a href="https://www.rcsb.org/structure/1opl" target="_blank">1opl</a>) and the F-actin binding domain (PDB ID <a href="https://www.rcsb.org/structure/1zzp" target="_blank">1zzp</a>). They are connected by a long intrinsically disordered segment that ties together these two regions but still allows a lot of flexibility. Finally, there is a short flexible tail at one end, termed the cap region, that is attached to a myristoyl group. The cap region acts as a locking mechanism for the protein, regulating its function. In the inactive state, this myristoyl group binds to a pocket in the kinase domain and induces a conformational change that tightly packs the kinase and regulatory domains together and inhibits catalytic activity. To activate the protein, external cellular signals interact with c-Abl’s regulatory domains and release the myristoyl group from the kinase domain, exposing the active site and allowing phosphorylation of specific substrates.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="In the normal protein, binding of the myristoyl group to the kinase domain inhibits the activity of the protein until it is needed. Bcr-Abl lacks this autoinhibitory myristoyl group and is continually active. ATP is shown in green bound in the active site of the kinase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/283/1opk_Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>In the normal protein, binding of the myristoyl group to the kinase domain inhibits the activity of the protein until it is needed. Bcr-Abl lacks this autoinhibitory myristoyl group and is continually active. ATP is shown in green bound in the active site of the kinase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/283/1opk_Figure2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Cancerous Combination</h4>
+<div>Genetic abnormalities affecting the c-Abl tyrosine kinase are linked to chronic myelogenous leukemia (CML), a cancer of immature cells in the bone marrow. The cause of CML is a genetic aberration known as the Philadelphia chromosome, formed when a portion of chromosome 9 trades places with a portion of chromosome 22. This balanced translocation of genetic material results in the fusion of the <i>c-abl</i> and <i>bcr</i> genes, which then produces a different protein, called Bcr-Abl. Since it doesn’t include the autoinhibitory cap region and myristoyl group, the mutated tyrosine kinase is constitutively active and does not require activation by the normal cellular signals. Thus, Bcr-Abl allows for continuous cell division. Bcr-Abl also prevents apoptosis, a natural process where a cell induces its own death to prevent accumulation of cancerous cells. The buildup of immature and partially functional blood cells caused by Bcr-Abl have devastating effects on individuals diagnosed with CML, eventually progressing to an acute leukemic condition known as blast phase. Treatment with imatinib or one of the other Bcr-Abl inhibitors approved by the United States Food and Drug Administration has dramatically improved ten-year survival to approximately 85%. Many individuals with CML can now live life-spans nearly as long as those of normal healthy adults.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>c-Abl and c-Kit</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/283/JmolFigure-jmol.jpg"/></div>
+<p>Imatinib blocks the ATP-binding site of the c-Abl kinase domain, stopping its action. Several regions in the kinase are important for its function and inhibition by imatinib, as seen in structures of the kinase with ADP (PDB ID <a href="https://www.rcsb.org/structure/2g2i" target="_blank">2g2i</a>) and with imatinib (PDB ID <a href="https://www.rcsb.org/structure/2hyy" target="_blank">2hyy</a>). The “activation loop” closes over the active site and controls access, and is regulated by a tyrosine that may be phosphorylated. The “gatekeeper” threonine, the “DFG Motif”, and several hydrogen bonding amino acids (not shown) are involved in specific interactions with imatinib, helping make the drug more selective. However, the drug is not perfectly selective, but fortuitously this could be turned to advantage. Imatinib also inhibits c-Kit (PDB ID <a href="https://www.rcsb.org/structure/1t46" target="_blank">1t46</a>), an oncoprotein tyrosine kinase that causes gastrointestinal stromal tumors (GIST). c-Kit and c-Abl are closely related kinases, allowing imatinib to be effective against both. To explore these structures in further detail, click on the JSmol tab.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>To take a closer look at the kinase and regulatory domains, visit the annotated visualization in the <a href="https://www.rcsb.org/3d-sequence/1OPL?asymId=A"> 3D Protein Structure View.</a></li>
+<li>Imatinib is effective against a range of kinases, including the spleen tyrosine kinase (Syk), which is involved in immunoreceptor signaling in hematopoietic cells.  Imatinib inhibits Syk in an unusually compact U-shaped conformation, as seen in PDB ID <a href="https://www.rcsb.org/structure/1xbb" target="_blank">1xbb</a>. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Cohen, P., Cross, D., &amp; Jänne, P. A. (2021) Kinase drug discovery 20 years after imatinib: progress and future directions. Nat Rev Drug Discovery 20, 551–569. </li>
+<li>Westbrook, J. D., Soskind, R., Hudson, B. P., &amp; Burley, S. K. (2020) Impact of the Protein Data Bank on antineoplastic approvals. Drug Discovery Today, 25, 837–850. </li>
+<li>Reckel, S., Gehin, C., Tardivon, D., Georgeon, S., Kükenshöner, T., Löhr, F., Koide, A., Buchner, L., Panjkovich, A., Reynaud, A., Pinho, S., Gerig, B., Svergun, D., Pojer, F., Güntert, P., Dötsch, V., Koide, S., Gavin, A. C., &amp; Hantschel, O. (2017) Structural and functional dissection of the DH and PH domains of oncogenic Bcr-Abl tyrosine kinase. Nat Commun 8, 1–14.</li>
+<li>Hari, S. B., Perera, B. G. K., Ranjitkar, P., Seeliger, M. A., &amp; Maly, D. J. (2013) Conformation-selective inhibitors reveal differences in the activation and phosphate-binding loops of the tyrosine kinases Abl and Src. ACS Chem Biol 8, 2734–2743. </li>
+<li>2HYY: Cowan-Jacob, S. W., Fendrich, G., Floersheimer, A., Furet, P., Liebetanz, J., Rummel, G., Rheinberger, P., Centeleghe, M., Fabbro, D., &amp; Manley, P. W. (2006) Structural biology contributions to the discovery of drugs to treat chronic myelogenous leukaemia. Acta Cryst D Biol Crystallog 63, 80–93.</li>
+<li>2G2I: Levinson, N. M., Kuchment, O., Shen, K., Young, M. A., Koldobskiy, M., Karplus, M., Cole, P. A., &amp; Kuriyan, J. (2006) A src-like inactive conformation in the ABL tyrosine kinase domain. PLoS Biol 4, e144.</li>
+<li>Nagar, B., Hantschel, O., Seeliger, M., Davies, J. M., Weis, W. I., Superti-Furga, G., &amp; Kuriyan, J. (2006) Organization of the SH3-SH2 unit in active and inactive forms of the c-Abl tyrosine kinase. Molecular Cell 21, 787–798. </li>
+<li>1ZZP: Hantschel, O., Wiesner, S., Güttler, T., Mackereth, C. D., Rix, L. L., Mikes, Z., Dehne, J., Görlich, D., Sattler, M., &amp; Superti-Furga, G. (2005) Structural basis for the cytoskeletal association of Bcr-Abl/c-Abl. Mol Cell 19, 461–473.</li>
+<li>1XBB: Atwell, S., Adams, J. M., Badger, J., Buchanan, M. D., Feil, I. K., Froning, K. J., Gao, X., Hendle, J., Keegan, K., Leon, B. C., Müller-Dieckmann, H. J., Nienaber, V. L., Noland, B. W., Post, K., Rajashankar, K. R., Ramos, A., Russell, M., Burley, S. K., &amp; Buchanan, S. G. (2004) A novel mode of Gleevec binding is revealed by the structure of spleen tyrosine kinase. J Biol Chem 279, 55827–55832. </li>
+<li>1T46: Mol, C. D., Dougan, D. R., Schneider, T. R., Skene, R. J., Kraus, M. L., Scheibe, D. N., Snell, G. P., Zou, H., Sang, B.-C., &amp; Wilson, K. P. (2004) Structural basis for the autoinhibition and STI-571 inhibition of c-kit tyrosine kinase. J Biol Chem 279, 31655–31663.</li>
+<li>1OPL: Nagar, B., Hantschel, O., Young, M. A., Scheffzek, K., Veach, D., Bornmann, W., Clarkson, B., Superti-Furga, G., &amp; Kuriyan, J. (2003) Structural basis for the autoinhibition of c-Abl tyrosine kinase. Cell 112, 859–871. </li>
+<li>Xun, Z., Saghi, G., Harvey, L., Malashkevich, V. N., &amp; Kim, P. S. (2002) Structure of the Bcr-Abl oncoprotein oligomerization domain. Nat Struct Biol  9, 117–120. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2023, Allison Abel, Darlene R. Malave-Ramos, Bhavya Soni, Christopher Thai, Amy Wu-Wu, David S. Goodsell and Stephen K. Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_7">http://doi.org/10.2210/rcsb_pdb/mom_2023_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

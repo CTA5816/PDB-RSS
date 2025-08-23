@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Capturing Beta-Lactamase in Action</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Capturing Beta-Lactamase in Action" property="og:title"/>
+<meta content="Researchers visualize the mechanism of antibiotic resistance" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/307/BlaC_CEF.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/307" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Capturing Beta-Lactamase in Action" name="twitter:title"/>
+<meta content="Researchers visualize the mechanism of antibiotic resistance" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/307/BlaC_CEF.jpg" name="twitter:image"/>
+<meta content="Researchers visualize the mechanism of antibiotic resistance" name="description"/>
+<meta content="antibiotic,XFEL,beta lactamase" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 307
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 307 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Capturing Beta-Lactamase in Action</h1>
+<p><i>Researchers visualize the mechanism of antibiotic resistance</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Mycobacterium tuberculosis β-lactamase BlaC forms a tetramer. Only two of the subunits (light blue) were observed to catalyze β-lactam cleavage. Two molecules of the β-lactam antibiotic ceftriaxone are bound in the active site, but only one of them (shown in brighter pink) is cleaved. Insets on the right side show snapshots prior to addition of the antibiotic (6B5X), 100 ms after antibiotic is mixed (6B68) and 500 ms after mixing (6B69). Between 100 and 500 ms, the lactam ring is cleaved." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/307/BlaC_CEF.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i><i>Mycobacterium tuberculosis</i> β-lactamase BlaC forms a tetramer. Only two of the subunits (light blue) were observed to catalyze β-lactam cleavage. Two molecules of the β-lactam antibiotic ceftriaxone are bound in the active site, but only one of them (shown in brighter pink) is cleaved. Insets on the right side show snapshots prior to addition of the antibiotic (<a href="https://www.rcsb.org/structure/6B5X" target="_blank">6B5X</a>), 100 ms after antibiotic is mixed (<a href="https://www.rcsb.org/structure/6B68" target="_blank">6B68</a>) and 500 ms after mixing (<a href="https://www.rcsb.org/structure/6B69" target="_blank">6B69</a>). Between 100 and 500 ms, the lactam ring is cleaved.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/307/BlaC_CEF.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Around 75% of antibiotics in use today are based on β-lactams, a group that includes penicillins, cephalosporins, and carbapenems, and which all include a characteristic 4-membered lactam ring. These antibiotics are effective because they resemble the natural substrates of proteins responsible for remodeling bacterial cell walls. When cell wall enzymes bind to β-lactam-based drugs, it blocks them from binding their normal substrates, halting cell wall formation and ultimately leading to cell death. However, bacteria have developed resistance through a family of proteins called β-lactamases, which work by binding to β-lactam-based molecules and cleaving the lactam ring, rendering the antibiotics ineffective.</div>
+<h4>New technologies enable visualization of atomic-scale details of reactions as they occur</h4>
+<div>To design better drugs, it is essential to understand how β-lactamases work. This is challenging, however, because the cleavage reaction occurs very rapidly and is difficult to capture using standard structural techniques. In X-ray crystallography, crystallized proteins are exposed to X-ray beams to capture a diffraction pattern, which can be used to determine molecular structures. These X-rays tend to be continuous and of relatively low-intensity, allowing a crystal to be exposed to the X-ray beam for an extended period of time while data is collected. A newer technique, serial femtosecond crystallography (SFX), utilizes X-ray free-electron lasers (XFELs) to deliver short, intense X-ray pulses to samples, capturing diffraction patterns just before the samples are destroyed.</div>
+<h4> </h4>
+<div>Small crystals can be used for SFX, enabling researchers to rapidly introduce small chemicals (such as antibiotics) to the protein crystals in specially designed diffusive mixers. These small molecules can then diffuse into the protein crystals and trigger a reaction. Using this new method, called mix-and-inject-serial-crystallography (MISC), a reaction can be observed at high resolution by injecting the crystal mixture into the XFEL beam at different times after mixing.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Antibiotic resistance in action</h4>
+<div>In 2018, researchers designed a MISC experiment to see if they could capture the action of a β-lactamase at an XFEL source. In this experiment, tiny protein crystals of the <i>Mycobacterium tuberculosis</i> β-lactamase BlaC were mixed with the antibiotic ceftriaxone just before exposure to X-ray pulses. Data collected at 30 milliseconds, 100 milliseconds, 500 milliseconds, and 2 seconds after mixing revealed that the cleavage reaction primarily occurs between 100 and 500 milliseconds. The reaction involves a nucleophilic attack by a β-lactamase serine, which opens the β-lactam ring and forms a covalently-bonded intermediate before the β-lactam is hydrolyzed and released. Within 2 seconds, the enzyme has already bound to a new antibiotic. As shown on the right, BlaC crystallizes as a tetramer (<a href="https://www.rcsb.org/structure/6B68" target="_blank">6B68</a>) made up of four copies of the enzyme. Interestingly, only two of the four enzymes were observed to catalyze the cleavage reaction during the course of the experiment.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Sulbactam (yellow) is a β-lactamase inhibitor. It is able to bind in the active site and covalently bond to the catalytic serine, preventing BlaC from binding and cleaving new antibiotic substrates. The topmost light blue subunit is shown as semi-transparent to better visualize sulbactam binding." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/307/BlaC_sublactam.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Sulbactam (yellow) is a β-lactamase inhibitor. It is able to bind in the active site and covalently bond to the catalytic serine, preventing BlaC from binding and cleaving new antibiotic substrates. The topmost light blue subunit is shown as semi-transparent to better visualize sulbactam binding.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/307/BlaC_sublactamtif.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Capturing the action of inhibitors</h4>
+<div>Mix-and-inject serial crystallography has also been used to study inhibition of β-lactamases by so-called suicide substrate inhibitors, which irreversibly bind to β-lactamases and block their activity. Inhibition of BlaC by one such drug, called sulbactam, was recently studied. As shown on the left, the process of inhibition begins with the formation of a noncovalent enzyme-inhibitor complex in the active site (30 ms, <a href="https://www.rcsb.org/structure/8EBR" target="_blank">8EBR</a>). Mirroring the reaction with ceftriaxone, this is followed by a nucleophilic attack by the catalytically active serine. In this case, however, this results in a covalently bound acyl-enzyme intermediate which renders the enzyme inactive (240 ms, <a href="https://www.rcsb.org/structure/8EC4" target="_blank">8EC4</a>). Sulbactam, which is smaller in size than antibiotics like ceftriaxone, was observed in the active site of all four BlaC subunits. In the two light blue subunits, however, the reaction occurs so quickly that a pre-catalyzed sulbactam substrate was not observed. In the dark blue subunits, the reaction proceeded slowly enough for researchers to observe sulbactam binding before catalysis. Sulbactam and similar inhibitors have been approved by the United States Food and Drug Administration for use in fixed-dose combinations with previously approved β-lactam antibiotics (e.g. sulbactam plus ampicillin, know as unasyn).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>See β-lactamase in action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/307/jmol-jmol.jpg"/></div>
+<p>In this series of snapshots taken at different timepoints, the binding of an antibiotic (ceftriaxone) and subsequent cleavage of the β-lactam ring is revealed at atomic resolution. The catalytic serine of the enzyme is shown in yellow. In pink is the inactivated antibiotic, and in purple is a second antibiotic molecule that is in position to bind to the active site once it is emptied. Click over to the JSmol tab to view an animation of the structures.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Learn about a different β-lactamase, the <a href="https://pdb101.rcsb.org/motm/187">New Delhi Metallo-beta-lactamase</a></li>
+<li>Read more about <a href="https://pdb101.rcsb.org/learn/structural-biology-highlights/superbugs-and-antibiotic-resistance"> superbugs and antibiotic resistance</a>.</li>
+<li>Different antibiotics have different ways of attacking microbes. Many bacterial antibiotics attack cell walls, like <a href="https://pdb101.rcsb.org/motm/29">penicillin</a>  and <a href="https://pdb101.rcsb.org/motm/192">vancomycin</a>. Some anti-fungals, however, like <a href="https://pdb101.rcsb.org/motm/160">actinomycin</a> target DNA.</li>
+<li>Time-resolved crystallography techniques have also been used to capture light activatable proteins, such as <a href="https://pdb101.rcsb.org/motm/207">photoactive yellow protein</a>. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6B5X, 6B68, 6B69: Olmos JL Jr, Pandey S, Martin-Garcia JM, Calvey G, Katz A, Knoska J, Kupitz C, Hunter MS, Liang M, Oberthuer D, Yefanov O, Wiedorn M, Heyman M, Holl M, Pande K, Barty A, Miller MD, Stern S, Roy-Chowdhury S, Coe J, Nagaratnam N, Zook J, Verburgt J, Norwood T, Poudyal I, Xu D, Koglin J, Seaberg MH, Zhao Y, Bajt S, Grant T, Mariani V, Nelson G, Subramanian G, Bae E, Fromme R, Fung R, Schwander P, Frank M, White TA, Weierstall U, Zatsepin N, Spence J, Fromme P, Chapman HN, Pollack L, Tremblay L, Ourmazd A, Phillips GN Jr, Schmidt M.  (2018) Enzyme intermediates captured “on the fly” by mix-and-inject serial crystallography. BMC Biol 16, 59.</li>
+<li>8EBI, 8EBR, 8EC4: Malla TN, Zielinski K, Aldama L, Bajt S, Feliz D, Hayes B, Hunter M, Kupitz C, Lisova S, Knoska J, Martin-Garcia JM, Mariani V, Pandey S, Poudyal I, Sierra RG, Tolstikova A, Yefanov O, Yoon CH, Ourmazd A, Fromme P, Schwander P, Barty A, Chapman HN, Stojkovic EA, Batyuk A, Boutet S, Phillips GN Jr, Pollack L, Schmidt M. (2023) Heterogeneity in M. tuberculosis β-lactamase inhibition by Sulbactam. Nat Commun 14, 5507.</li>
+<li>Calvey GD, Katz AM, Schaffer CB, Pollack L. Mixing injector enables time-resolved crystallography with high hit rate at X-ray free electron lasers. Struct Dyn. 2016 Aug 29;3(5):054301.</li>
+<li>Wiedorn, M.O., Oberthür, D., Bean, R. et al. (2018) Megahertz serial crystallography. Nat Commun 9, 4025.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_7">http://doi.org/10.2210/rcsb_pdb/mom_2025_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

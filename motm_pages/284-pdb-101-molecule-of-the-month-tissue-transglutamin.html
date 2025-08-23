@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Tissue Transglutaminase and Celiac Disease</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Tissue Transglutaminase and Celiac Disease" property="og:title"/>
+<meta content="Tissue transglutaminase staples proteins together by forming a chemical crosslink." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-2q3z_3ly6.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/209" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Tissue Transglutaminase and Celiac Disease" name="twitter:title"/>
+<meta content="Tissue transglutaminase staples proteins together by forming a chemical crosslink." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-2q3z_3ly6.jpg" name="twitter:image"/>
+<meta content="Tissue transglutaminase staples proteins together by forming a chemical crosslink." name="description"/>
+<meta content="transglutaminase,crosslinking,celiac disease,MHC,HLA,T-cell receptor,gliadin,gluten,2q3z,3ly6,1s9v,5ks9,1n73,refactory celiac disease,rare disease" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 209
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 209 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Tissue Transglutaminase and Celiac Disease</h1>
+<p><i>Tissue transglutaminase staples proteins together by forming a chemical crosslink.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Tissue transglutaminase in the active (left) and GTP-bound inactive (right) conformations. An inhibitor that mimics gluten is shown in yellow and GTP is shown in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-2q3z_3ly6.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Tissue transglutaminase in the active (left) and GTP-bound inactive (right) conformations. An inhibitor that mimics gluten is shown in yellow and GTP is shown in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-2q3z_3ly6.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Tissues of our body, such as skin, muscle and hair, need to have the distinctive properties to suit their function, such as elasticity, strength, and resilience. These types of properties are tuned by crosslinking specific proteins to form a network that can withstand chemical degradation or mechanical stress. Cells use transglutaminases to form these specific crosslinks between proteins. For example, keratinocyte transglutaminase works with several other transglutaminases to form highly crosslinked networks that provide strength to skin, hair and nails. Tissue transglutaminase takes a gentler approach to strengthen interactions of proteins involved in the cytoskeleton and cellular adhesion.</div>
+<h4>Protein Stapler</h4>
+<div>Tissue transglutaminase, also known as transglutaminase 2, is a protein stapler that links two proteins together. In its active conformation (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2q3z" target="_blank">2q3z</a>), it has enough room to bind to two proteins. The enzyme then aligns a glutamine on one protein with a lysine on the other and chemically joins the tips of the two side chains. The resulting covalent bond is similar to the peptide bond found in protein backbones. When this stapling function is not required, several allosteric mechanisms are used to inactivate transglutaminase. For example, binding of GTP folds the enzyme into a compact, inactive form, as shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ly6" target="_blank">3ly6</a>.</div>
+<h4>Food Glue</h4>
+<div>Transglutaminases play essential roles in most of our cells, but they’ve also become indispensable tools in biotechnology, with applications ranging from cosmetics to the food industry. For example, a small bacterial transglutaminase is used to improve the texture of imitation crabmeat, hot dogs, sausages, and many other meat products. Widespread use of transglutaminase has also inspired the creativity of chefs, allowing them to do fanciful things such as making pasta from shrimp. They add powdered transglutaminase to the meat mixture, wrap the whole thing tightly in plastic wrap, and let that ferment until the desired consistency is reached.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Deaminated gluten peptides (yellow, with deaminated glutamine in green) are displayed by HLA (orange and pink) and recognized by T-cell receptors (blue)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-1s9v_5ks9.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Deaminated gluten peptides (yellow, with deaminated glutamine in green) are displayed by HLA (orange and pink) and recognized by T-cell receptors (blue).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-1s9v_5ks9.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Celiac Disease</h4>
+<div>Tissue transglutaminase also performs a slightly different reaction on single proteins, removing a molecule of ammonia from glutamine to form glutamic acid. This deamination reaction has been linked to celiac disease, a common inflammatory disorder that damages the small intestine and causes a variety of debilitating symptoms. Celiac disease is particularly prevalent in Western countries that are major consumers of foods containing gluten, a mixture of proteins found in wheat and grains. Gluten is rich in glutamine, and tissue transglutaminase in the digestive system converts some of this glutamine to glutamic acid. Patients with celiac disease have special <a href="https://pdb101.rcsb.org/motm/62">MHC proteins</a> (known as HLA-DQ2 or DQ8) in the mucosa of their small intestine that recognize the deaminated gluten and incorrectly treat it as a danger, launching an inappropriate immune response. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1s9v" target="_blank">1s9v</a> shows a deaminated gluten peptide being displayed by HLA-DQ2, and PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5ks9" target="_blank">5ks9</a> shows how the a gluten/HLA-DQ8 complex is recognized by a <a href="https://pdb101.rcsb.org/motm/63">T-cell receptor</a> isolated from a celiac disease patient. Although many aspects of celiac disease are still not fully understood, including the mechanism of transglutaminase activation, researchers are studying the structures of both the transglutaminase and the HLA/gluten/TCR complex as possible targets for medical intervention.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Crosslinked fibrin</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/209/209-Tissue_Transglutaminase_and_Celiac_Disease-1n73_JSmol.jpg"/></div>
+<p>Factor XIII is a transglutaminase that crosslinks <a href="https://pdb101.rcsb.org/motm/83">fibrin</a> in blood clots, forming an insoluble network that blocks blood loss at wounds. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n73" target="_blank">1n73</a>) includes the ends of two molecules of lamprey fibrin, which assemble head-to-head in the fibrin fiber and is made even stronger by two crosslinks between lysine and glutamine. This network is so strong that another enzyme, plasmin, is needed to chop up the fibrin proteins as the wound heals. To explore this crosslinked structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures of other transglutaminases, including Factor XIII, are available in the PDB archive—try searching for “transglutaminase”. </li>
+<li>Many transglutaminases have a requirement for calcium ions, but the role of calcium is still not well understood. Try searching for structures of transglutaminase 3 to see some current research on the topic.</li>
+<li>Cells use many other types of crosslinks to strengthen protein complexes. For example, <a href="https://pdb101.rcsb.org/motm/21">antibodies</a> are strengthened by linkages between cysteine amino acids, and penicillin targets <a href="https://pdb101.rcsb.org/motm/29">crosslinking enzymes</a> that build a network of peptides that protect bacteria.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5ks9:  J Petersen, Y Kooy-Winkelaar, KL Loh, M Tran, J van Bergen, F Koning, J Rossjohn &amp; HH Reid (2016) Diverse T cell receptor gene usage in HLA-DQ8-associated celiac disease converges into a consensus binding solution. Structure 24, 1643-1657. </li>
+<li>M Kieliszek &amp; A Misiewicz (2014) Microbial transglutaminase and its application in the food industry. A review. Folia Microbiologica 59, 241-250.</li>
+<li>L Eckhart, S Lippens, E Tschachler &amp; W Declercq (2013) Cell death by cornification. Biochimica et Biophysica Acta 1833, 3471-3480.</li>
+<li>A Di Sabatino, A Vanoli, P Giuffrida, O Luinetti, E Solcia &amp; GR Corazza (2012) The function of tissue transglutaminase in celiac disease. Autoimmunity Reviews 11, 746-753. </li>
+<li>V Abadie, LM Sollid , LB Barreiro &amp; Jabri B (2011) Integration of genetic and immunological insights into a model of celiac disease pathogenesis. Annual Review of Immunology 29, 493-525. </li>
+<li>3ly6: BG Han, JW Cho, YD Cho, KC Jeong, SY Kim &amp; BI Lee (2010) Crystal structure of human transglutaminase 2 in complex with adenosine triphosphate. International Journal of Biological Macromolecules 47, 190-195.</li>
+<li>2q3z: DM Pinkas, P Strop, AT Brunger &amp; C Khosla (2007) Transglutaminase 2 undergoes a large conformational change upon activation. PLoS Biology 5, e327.</li>
+<li>1s9v: CY Kim, H Quarsten, E Bergseng, C Khosla &amp; LM Sollid (2004) Structural bais for HLA-DQ2-mediated presentation of gluten epitopes in celiac disease. Proceedings of the National Academy of Science USA 101, 4175-4179.</li>
+<li>M Griffin, R Casadio &amp; CM Bergamini (2002) Transglutaminases: Nature’s biological glues. Biochemical Journal 368, 377-396.</li>
+<li>1n73: Z Yang, L Pandi &amp; RF Doolittle (2002) The crystal structure of fragment double-D from cross-linked lamprey fibrin reveals isopeptide linkages across an unexpected D-D interface. Biochemistry 41, 15610-15617.</li>
+<li>C Kuraishi, K Yamazaki &amp; Y Susa (2001) Transglutaminase: its utilization in the food industry. Food Reviews International 17, 221-246.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2017, Luigi Di Costanzo, David S. Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_5">http://doi.org/10.2210/rcsb_pdb/mom_2017_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

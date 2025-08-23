@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glutathione Transferases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glutathione Transferases" property="og:title"/>
+<meta content="Glutathione transferase tags toxic molecules, making them easy to recognize and remove." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3gss.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/212" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glutathione Transferases" name="twitter:title"/>
+<meta content="Glutathione transferase tags toxic molecules, making them easy to recognize and remove." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3gss.jpg" name="twitter:image"/>
+<meta content="Glutathione transferase tags toxic molecules, making them easy to recognize and remove." name="description"/>
+<meta content="glutathione transferase,glutathione S-transferase,cancer,detoxification,malaria,pesticide,DDT,3gss,3zml,3zmk,3pgt,3csh" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 212
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 212 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glutathione Transferases</h1>
+<p><i>Glutathione transferase tags toxic molecules, making them easy to recognize and remove.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Top: glutathione transferase, with glutathione in red and  a toxic molecule in purple. Bottom: glutathione is built of three amino acids." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3gss.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Top: glutathione transferase, with glutathione in red and  a toxic molecule in purple. Bottom: glutathione is built of three amino acids.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3gss.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cells are filled with a confusing jumble of small molecules. Sometimes dangerous molecules get introduced in the mix, and cells need a way to find and remove them. In a first line of defense, enzymes like <a href="https://pdb101.rcsb.org/motm/82">cytochrome p450</a> modify slippery carbon-rich toxins, making them more soluble. In a second line of defense, the glutathione transferases attach a convenient handle to unwanted molecules, which is then recognized by the cell’s export machinery.</div>
+<h4>Molecular Handle</h4>
+<div>The trick to making a useful molecular handle is two-fold. First, the handle needs to recognizable, and recognizably different from other molecules in the cell. Glutathione is composed of three familiar amino acids: a glutamate, a cysteine and a glycine. But it won’t be confused with normal peptides because the glutamate is attached in an unusual way, forming the covalent bond through its sidechain. Second, a molecular handle needs an easy chemical way to attach it to other molecules. Glutathione has a sulfur atom at the center (part of the cysteine) that is easily activated and attached to a variety of different molecules.</div>
+<h4>Working Together</h4>
+<div>A collection of just over 20 glutathione transferases work together to scour each cell for toxins. The one shown here is one of the best studied, termed hGSTP1-1 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3gss" target="_blank">3gss</a>). These twenty enzymes protect us from many different perils, including toxins made by bacteria and fungi, reactive molecules formed during the cooking of food or smoking, and a variety of environmental pollutants. Because of this, each glutathione transferase typically recognizes a variety of foreign molecules, attaching them all to glutathione. This job is so important that in some cells, such as liver cells, glutathione transferase can make up 10% of the total protein content of the cell!</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Wild type (left) and DDT-resistant mutant (right) forms of mosquito glutathione transferase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3zml_3zmk.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Wild type (left) and DDT-resistant mutant (right) forms of mosquito glutathione transferase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-3zml_3zmk.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Mosquitoes and DDT</h4>
+<div>The process of detoxification can lead to an arms race, where defenses battle with attackers. An example has recently been studied with mosquitoes that carry malaria in Africa. DDT is widely used to control mosquitoes, but DDT-resistant mosquitoes appear in regions of heavy pesticide use. Looking inside these mosquitoes, one of the ways they become resistant is by building a mutant glutathione transferase. Ironically, the mutant replaces a single leucine with a larger phenylalanine, but the change causes a slight refolding of the protein that creates a larger active site that fits the bulky DDT molecule (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3zml" target="_blank">3zml</a> and <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3zmk" target="_blank">3zmk</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glutathione Transferase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/212/212-Glutathione_Transferases-JSMol.jpg"/></div>
+<p>Glutathione transferases also play a central role in detoxification of drugs. The three structures shown here, all of the same enzyme, show some of the things that can happen. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pgt" target="_blank">3pgt</a> captures the enzyme as it is detoxifying a potent carcinogen. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3csh" target="_blank">3csh</a> shows the enzyme attaching glutathione to an anti-cancer drug, reducing its effectiveness. To counteract this and make the drug effective for a longer time, inhibitor molecules like that in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3gss" target="_blank">3gss</a> can be administered along with the drug to inhibit the action of the enzymes. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many structures of different glutathione transferases have been determined and deposited in the PDB archive. Try searching for “glutathione transferase” to see them.</li>
+<li>These enzymes typically have two domains: one that binds to glutathione and one that interacts with the target molecule. When you’re exploring the structure of the enzymes, try looking at a ribbon or backbone diagram to see the two domains.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3zmk, 3zml: JM Riveron, C Yunta, SS Ibrahim, R Djouaka, H Irving, BD Menze, HM Ismail, J Hemingway, H Ranson, A Albert &amp; CS Wondji (2014) A single mutation in the GSTe2 gene allows tracking of metabolically based insecticide resistance in a major malaria vector. Genome Biology 15, R27.</li>
+<li>PG Board &amp; D Menon (2013) Glutathione transferases, regulators of cellular metabolism and physiology. Biochimica et Biophysica Acta 1830, 3267-3288.</li>
+<li>B Wu &amp; D Dong (2012) Human cytosolic glutathione transferases: structure, function, and drug discovery. Trends in Pharmacological Sciences 33, 656-668.</li>
+<li>A Oakley (2011) Glutathione transferases: a structural perspective. Drug Metabolism Reviews 43, 138-151.</li>
+<li>3csh: LJ Parker, S Ciccone, LC Italiano, A Primavera, AJ Oakley, CJ Morton, NC Hancock, M Lo Bello &amp; MW Parker (2008) The anti-cancer drug chlorambucil as a substrate for the human polymorphic enzyme glutathione transferase P1-1: kinetic properties and crystallographic characterization of allelic variants. Journal of Molecular Biology 380, 131-144.</li>
+<li>JD Hayes, JU Flanagan &amp; IR Jowsey (2005) Glutathione transferases. Annual Review of Pharmacology and Toxicology 45, 51-88.</li>
+<li>3pgt: X Ji, J Blaszczyk, B Xiao, R O’Donnell, X Hu, C Herzog, SV Singh &amp; P Zimniak (1999) Structure and function of residue 104 and water molecules in the xenobiotic substrate-binding site in human glutathione S-transferase P1-1. Biochemistry 38, 10231-10238.</li>
+<li>3gss: AJ Oakley, J Rossjohn, M Lo Bello, AM Caccuri, G Federici &amp; MW Parker (1997) The three-dimensional structure of the human Pi class glutathione transferase P1-1 in complex with the inhibitor ethacrynic acid and its glutathione conjugate. Biochemistry 36, 576-585</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_8">http://doi.org/10.2210/rcsb_pdb/mom_2017_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

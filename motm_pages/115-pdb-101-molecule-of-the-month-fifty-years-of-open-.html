@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Fifty Years of Open Access to PDB Structures </title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Fifty Years of Open Access to PDB Structures " property="og:title"/>
+<meta content="The Protein Data Bank is celebrating its golden anniversary!" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/262/1970s.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/262" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Fifty Years of Open Access to PDB Structures " name="twitter:title"/>
+<meta content="The Protein Data Bank is celebrating its golden anniversary!" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/262/1970s.jpg" name="twitter:image"/>
+<meta content="The Protein Data Bank is celebrating its golden anniversary!" name="description"/>
+<meta content="structural biology,PDB50,2mbn,6tna,1ana,2tbv,2brd,4v4q,1rvq,7cgo,1mbn" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 262
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 262 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Fifty Years of Open Access to PDB Structures </h1>
+<p><i>The Protein Data Bank is celebrating its golden anniversary!</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="By the end of the 1970s, structures were available in the PDB archive for proteins, nucleic acids, and polysaccharides. Hemoglobin (red, PDB ID 2dhb), transfer RNA (blue, PDB ID 6tna), and agarose (green, PDB ID 1aga) are shown here." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/262/1970s.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>By the end of the 1970s, structures were available in the PDB archive for proteins, nucleic acids, and polysaccharides. Hemoglobin (red, PDB ID <a href="https://www.rcsb.org/structure/2dhb" target="_blank">2dhb</a>), transfer RNA (blue, PDB ID <a href="https://www.rcsb.org/structure/6tna" target="_blank">6tna</a>), and agarose (green, PDB ID <a href="https://www.rcsb.org/structure/1aga" target="_blank">1aga</a>) are shown here.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/262/1970s.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The Protein Data Bank began as a community-driven effort by crystallographers who wanted to share their work, and has since grown into a Global Archive managed by the Worldwide PDB partnership that ensures free access to curated biomolecular structures from laboratories around the world. In the past 50 years, the PDB archive has spurred growth and innovation in numerous fields, including discovery of effective pharmaceuticals to improve our health and prediction of the folding of proteins into functional structures. The PDB also provides a profound atomic-level understanding of the fundamental mechanisms of biology and evolution, for use in research and education. To help celebrate this milestone of 50 years of service, I have chosen PDB entries from each decade that exemplify the many, many fascinating structures that are available in the PDB archive. I invite you to spend some time exploring the archive to find some of your own favorites.</div>
+<h4>Structural Biology Begins</h4>
+<div>The first decade of the PDB was in the golden era of structural biology. The first protein structures had been determined in the 1960s, and the field rapidly expanded based on the experimental techniques developed for those landmark structures. The PDB was launched in 1971 with <a href="https://pdb101.rcsb.org/motm/142">pioneering protein structures</a>, giving the first glimpses of how polypeptide chains fold into defined, hierarchical 3D shapes. By the end of the first decade, structures were available in the PDB archive for all three common types of biopolymers: proteins, nucleic acids, and polysaccharides. With these structures, scientists laid the groundwork for atomic understanding of biomolecular structure, protein folding, enzyme catalysis, and genetic information transfer.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The structure of tomato bushy stunt virus (PDB ID 2tbv) showed how 180 copies of a single type of protein could assemble into a spherical capsid with icosahedral symmetry. The proteins adopt slightly different local structures depending on where they are: those around the five-fold axes are in yellow and those around the three-fold axes are in red and orange." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/262/2tbv.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The structure of tomato bushy stunt virus (PDB ID <a href="https://www.rcsb.org/structure/2tbv" target="_blank">2tbv</a>) showed how 180 copies of a single type of protein could assemble into a spherical capsid with icosahedral symmetry. The proteins adopt slightly different local structures depending on where they are: those around the five-fold axes are in yellow and those around the three-fold axes are in red and orange.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/262/2tbv.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Terrible Beauty</h4>
+<div>The second decade showed continued expansion of tools for X-ray crystallography and some of the first structures determined by solution NMR, leading to an explosion of new structures. We also got our first views of the <a href="https://pdb101.rcsb.org/browse/viruses">atomic structures of viruses</a>, building on advances in technology and taking advantage of their intrinsic symmetry. Capsid structures of icosahedral viruses like tomato bushy stunt virus (shown here) and the human pathogens <a href="https://pdb101.rcsb.org/motm/20">poliovirus and rhinovirus</a> revealed the atomic basis of the theory of <a href="https://pdb101.rcsb.org/motm/200">quasisymmetry</a> and provided important insights into the molecular basis of vaccine action. Near the end of the decade, structures of <a href="https://pdb101.rcsb.org/motm/6">HIV protease</a> helped change <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV infection</a> from a deadly danger into a manageable chronic disease. Today, structural biology remains an essential tool to fight existing and emerging viral pathogens.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The structure of bacteriorhodopsin (magenta, PDB ID 2brd) was determined using electron crystallography from arrays of the protein in membranes. Lipids are shown in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/262/2brd.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The structure of bacteriorhodopsin (magenta, PDB ID <a href="https://www.rcsb.org/structure/2brd" target="_blank">2brd</a>) was determined using electron crystallography from arrays of the protein in membranes. Lipids are shown in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/262/2brd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Elusive Membrane Channels</h4>
+<div>The third decade of the PDB began with the first structure of a membrane-spanning protein, the light-driven proton pump <a href="https://pdb101.rcsb.org/motm/27">bacteriorhodopsin</a>. Membrane proteins are notoriously fickle, and the structure was the result of decades of work that yielded increasingly detailed views of the protein arrayed in membranes. Building on this success, many additional structures of membrane-spanning proteins soon followed and were made available in the PDB archive. Today, scientists have an extensive toolbox for determining structures of these challenging proteins, for example, isolating them in <a href="https://pdb101.rcsb.org/motm/237">nanodiscs</a> and determining structures using cryoelectron microscopy (cryoEM).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two structures are combined to give a view of an entire bacterial ribosome: a crystallographic structure of the large (blue) and small (green) subunits (PDB ID 4v4q) and an NMR structure of the flexible protein stalk that is involved with gathering translation factors and tRNA (PDB ID 1rqv)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/262/4v4q_1rqu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two structures are combined to give a view of an entire bacterial ribosome: a crystallographic structure of the large (blue) and small (green) subunits (PDB ID <a href="https://www.rcsb.org/structure/4v4q" target="_blank">4v4q</a>) and an NMR structure of the flexible protein stalk that is involved with gathering translation factors and tRNA (PDB ID <a href="https://www.rcsb.org/structure/1rqv" target="_blank">1rqv</a>).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/262/4v4q_1rqu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Ribosomes Revealed</h4>
+<div>In the fourth decade of the PDB, a culmination of experimental advances allowed determination of the long-sought structure of <a href="https://pdb101.rcsb.org/motm/121">ribosomes</a>. Ground-breaking structures of the <a href="https://pdb101.rcsb.org/motm/10">large and small subunits</a> opened the door, and structures of ribosomes with translation factors, transfer RNA, messenger RNA, and other translational machinery soon followed, filling out the atomic details of the process of protein synthesis. In addition, numerous structures revealed the action of <a href="https://pdb101.rcsb.org/motm/146">antibiotic drugs that target bacterial ribosomes</a>. The story is far from over, however, and a continuing tidal wave of structures is revealing the many fascinating aspects of ribosome action, assembly and evolution. For example, recent structures of the <a href="https://pdb101.rcsb.org/motm/253">expressome</a> show how one bacterial mega-machine performs the entire process of transcription and translation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="CryoEM structure of portions of a bacterial flagellar motor (PDB ID 7cgo). The MS ring (orange) transmits torque to the rod and hook (blue) from the force-generating portion of the motor (not included in the structure), and the LP ring (green and yellow) acts as a bushing." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/262/7cgo.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>CryoEM structure of portions of a bacterial flagellar motor (PDB ID <a href="https://www.rcsb.org/structure/7cgo" target="_blank">7cgo</a>). The MS ring (orange) transmits torque to the rod and hook (blue) from the force-generating portion of the motor (not included in the structure), and the LP ring (green and yellow) acts as a bushing.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/262/7cgo.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>New Ways of Seeing Molecules</h4>
+<div>Many new experimental techniques have provided new views of the biomolecular world in the most recent decade of the PDB. Techniques like XFEL capture movies of molecular machines, for example revealing the nanoscale motions of <a href="https://pdb101.rcsb.org/motm/210">riboswitches</a> and watching <a href="https://pdb101.rcsb.org/motm/207">chromophores as they absorb light</a>. Solid state NMR reveals elusive targets like <a href="https://pdb101.rcsb.org/motm/189">amyloid fibers</a>. Integrative techniques give views of assemblies of unprecedented size and complexity, such as the <a href="https://pdb101.rcsb.org/motm/205">nuclear pore complex</a>. But arguably the most impactful advance has been the recent resolution revolution in cryoEM, which has put all manner of hitherto intractable molecular assemblies within reach. It's impossible to pick one structure to exemplify this booming field, but my current favorite is the structure shown here of the rotor and bushing portions of a bacterial flagellar motor. It provides a tantalizing glimpse of this showpiece of molecular evolution, and given the burgeoning pace of cryoEM research, an atomic-scale view of entire assembly is likely not far behind.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Experimental and Predicted Structures of Myoglobin</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/262/AF-mb-jmol.jpg"/></div>
+<p>As I write this article, the structural biology community is being transformed by the recent successes of AlphaFold2 and RoseTTAFold, which show a quantum leap in success rates for protein structure prediction. The example shown here is an easy one: the structure of human myoglobin predicted by AlphaFold2 (blue) is almost identical to the historic structure of whale myoglobin from Kendrew's laboratory (green, PDB ID <a href="https://www.rcsb.org/structure/1mbn" target="_blank">1mbn</a>) and later structures of human myoglobin (click on the image for an interactive JSmol). Of course, there's only one reason that this structure is easy to predict: all predictive methods build on decades of structures available in the PDB archive. These predictive methods are a triumph of clever computing. They are also a triumph for the tens of thousands of researchers who have contributed to the PDB archive. The breadth of structural knowledge that is encompassed by their entries, and their willingness to make their structures freely available in the archive, made all this possible. <br/><br/> The same is true for the fields of drug discovery and development, vaccine development, enzyme engineering, bionanotechnology, and dozens more--all build on this goldmine of structural data to understand the basic principles of biomolecules, then apply them for new, breakthrough goals. Today, building on an explosion of new structure-determination techniques, the archive continues to grow rapidly. Who knows what will be possible? Exciting times are certainly ahead for the next 50 years of the PDB!</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>If you want to learn more about the history of the PDB, take a look at this <a href="https://www.rcsb.org/pages/about-us/history">Timeline of PDB History</a>. </li>
+<li>Many <a href="https://www.rcsb.org/pages/pdb50">publications and educational materials celebrating the PDB50 anniversary</a> are available on the RCSB PDB website.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/pdb-data">PDB Data</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Berman, H.M. (2021) Synergies between the Protein Data Bank and the community. Nat Struct Mol Biol 28: 400-401</li>
+<li>7cgo: Tan, J., Zhang, X., Wang, X., Xu, C., Chang, S., Wu, H., Wang, T., Liang, H., Gao, H., Zhou, Y., Zhu, Y. (2021) Structural basis of assembly and torque transmission of the bacterial flagellar motor. Cell 184: 2665-2679.e19</li>
+<li>wwPDB consortium (2019) Protein Data Bank: the single global archive for 3D macromolecular structure data. Nucl Acids Res 47: D520-D528</li>
+<li>Goodsell, D.S., Burley, S.K., Berman, H.M. (2013) Revealing structural views of biology. Biopolymers 99: 817-824</li>
+<li>4v4q: Schuwirth, B.S., Borovinskaya, M.A., Hau, C.W., Zhang, W., Vila-Sanjurjo, A., Holton, J.M., Cate, J.H. (2005) Structures of the bacterial ribosome at 3.5 A resolution. Science 310: 827-834</li>
+<li>1rqv: Bocharov, E.V., Sobol, A.G., Pavlov, K.V., Korzhnev, D.M., Jaravine, V.A., Gudkov, A.T., Arseniev, A.S. (2004) From structure and dynamics of protein L7/L12 to molecular switching in ribosome. J Biol Chem 279: 17697-17706</li>
+<li>2brd: Grigorieff, N., Ceska, T.A., Downing, K.H., Baldwin, J.M., Henderson, R. (1996) Electron-crystallographic refinement of the structure of bacteriorhodopsin. J Mol Biol 259: 393-421</li>
+<li>2tbv: Hopper, P., Harrison, S.C., Sauer, R.T. (1984) Structure of tomato bushy stunt virus. V. Coat protein sequence determination and its structural implications. J Mol Biol 177: 701-713</li>
+<li>6tna: Sussman, J.L., Holbrook, S.R., Warrant, R.W., Church, G.M., Kim, S.H.(1978) Crystal structure of yeast phenylalanine transfer RNA. I. Crystallographic refinement. J Mol Biol 123: 607-630</li>
+<li>1aga: Arnott, S., Fulmer, A., Scott, W.E., Dea, I.C., Moorhouse, R., Rees, D.A. (1974) The agarose double helix and its function in agarose gel structure. J Mol Biol 90: 269-284</li>
+<li>Crystallography: Protein Data Bank. (1971) Nature New Biology 233: 223</li>
+<li>2dhb: Bolton, W., Perutz, M.F. (1970) Three dimensional fourier synthesis of horse deoxyhaemoglobin at 2.8 Angstrom units resolution. Nature 228: 551-552</li>
+<li>1mbn: Watson, H.C. (1969) The stereochemistry of the protein myoglobin. Prog Stereochem 4: 299</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_10">http://doi.org/10.2210/rcsb_pdb/mom_2021_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

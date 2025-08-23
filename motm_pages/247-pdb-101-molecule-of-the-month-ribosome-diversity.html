@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ribosome Diversity</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ribosome Diversity" property="og:title"/>
+<meta content="By comparing the structures of ribosomes from different organisms, we can explore the evolution of life." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/295/ribosomes.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/295" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ribosome Diversity" name="twitter:title"/>
+<meta content="By comparing the structures of ribosomes from different organisms, we can explore the evolution of life." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/295/ribosomes.jpg" name="twitter:image"/>
+<meta content="By comparing the structures of ribosomes from different organisms, we can explore the evolution of life." name="description"/>
+<meta content="ribosome,evolution,initiation factor,translation,protein synthesis,5lmv,8oz0,1fjg,6tmf,6rw4,5mmj,5a2q,8auv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 295
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 295 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ribosome Diversity</h1>
+<p><i>By comparing the structures of ribosomes from different organisms, we can explore the evolution of life.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Small ribosomal subunits from diverse organisms and organelles. Ribosomal RNA is in light blue and proteins are in darker blue. The illustrations show the face of the subunit that interacts with the large ribosomal subunit." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/295/ribosomes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Small ribosomal subunits from diverse organisms and organelles. Ribosomal RNA is in light blue and proteins are in darker blue. The illustrations show the face of the subunit that interacts with the large ribosomal subunit.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/295/ribosomes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The first atomic structures of <a href="https://pdb101.rcsb.org/motm/10">ribosomes</a>, determined in 2000, revealed the details of biological protein synthesis. The small ribosomal subunit manages messenger RNA, pairing it with the appropriate <a href="https://pdb101.rcsb.org/motm/15">transfer RNA</a> molecules and matching codons with anticodons. The large ribosomal subunit connects the amino acids carried by transfer RNAs into a new protein chain. In the 25 years since then, thousands of additional structures of ribosomes have been determined, elucidating many of the <a href="https://pdb101.rcsb.org/motm/121">steps of protein synthesis</a>. These structures also allow us to compare structures of ribosomes from different organisms.</div>
+<h4>Evolving Complexity</h4>
+<div>Since all living organisms need to have functional ribosomes, ribosome structures are useful for studying molecular evolution, allowing us to compare and contrast them across all the kingdoms of life. The image included here shows the small ribosomal subunit from several different organisms. Bacteria have relatively simple structures. The bacterial small subunit (PDB ID <a href="https://www.rcsb.org/structure/1fjg" target="_blank">1fjg</a>) includes one RNA strand 1522 nucleotides in length and 20 proteins. Similarly, the archaeal small subunit (PDB ID <a href="https://www.rcsb.org/structure/6tmf" target="_blank">6tmf</a>) has a small RNA strand with 1485 nucleotides and 29 proteins. However, the human and plant small subunits (PDB ID <a href="https://www.rcsb.org/structure/5a2q" target="_blank">5a2q</a> and <a href="https://www.rcsb.org/structure/8auv" target="_blank">8auv</a>) have evolved a more complex structure, with RNA strands with over 1800 nucleotides and more than 30 proteins.</div>
+<h4>Working Together</h4>
+<div>Mitochondria and chloroplasts make their own ribosomes, which are different from the ribosomes in the cytoplasm of plants, animals, and fungi. Both organelles are believed to have evolved from bacteria that became symbiotic residents in the cytoplasms of the progenitors of modern eukaryotic cells. The structure of chloroplast ribosomes is one piece of evidence supporting this <i>endosymbiotic hypothesis.</i> The chloroplast small ribosomal subunit (PDB ID <a href="https://www.rcsb.org/structure/5mmj" target="_blank">5mmj</a>) is similar to its bacterial counterpart, with a short RNA chain with 1491 nucleotides and 25 proteins. The structure of the mitochondrial small subunit (PDB ID <a href="https://www.rcsb.org/structure/6rw4" target="_blank">6rw4</a>) shows that mitochondrial ribosomes have diverged significantly from their putative bacterial antecedent, with an even shorter RNA chain with only 955 nucleotides and more proteins than a typical bacterial ribosome.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Translation initiation complexes, with small ribosomal subunits in blue, initiator transfer RNA in yellow, and initiation factors in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/295/Initiation.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Translation initiation complexes, with small ribosomal subunits in blue, initiator transfer RNA in yellow, and initiation factors in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/295/Initiation.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Initiation Complexity</h4>
+<div>The increased complexity of eukaryotes is also seen in the many proteins that assist ribosomes in the process of protein synthesis. For example, the two structures shown here (PDB ID <a href="https://www.rcsb.org/structure/5lmv" target="_blank">5lmv</a> and <a href="https://www.rcsb.org/structure/8oz0" target="_blank">8oz0</a>) show the proteins that orchestrate initiation of protein synthesis. Together, they help capture a messenger RNA and align an initiator transfer RNA at the start codon of translation. Bacterial cells only require three initiation factor proteins to accomplish this task, but eukaryotes require about 20.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ribosomal RNA</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/295/jmol-jmol.jpg"/></div>
+<p>This interactive view compares ribosomal RNA from bacterial and human small subunits (PDB ID <a href="https://www.rcsb.org/structure/1fjg" target="_blank">1fjg</a> and <a href="https://www.rcsb.org/structure/5a2q" target="_blank">5a2q</a>). Notice that there is a similar core for both of them, which performs the basic tasks of bringing together the messenger and transfer RNAs. The human RNA includes many extensions around this core, producing a larger and more complex ribosomal subunit. To explore these structures in more detail, click on the JSmol tab.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Similar trends are seen for the large ribosomal subunits. For example, you can compare the full ribosome structure of <i>Escherichia coli</i> bacteria (PDB ID <a href="https://www.rcsb.org/structure/4v4a" target="_blank">4v4a</a>) and humans (PDB ID <a href="https://www.rcsb.org/structure/4v6x" target="_blank">4v6x</a>).</li>
+<li>The RNA alignment shown in the JSmol was done using the free online server <a href="https://zhanggroup.org/RNA-align"> RNA-align</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>8oz0: Brito Querido, J., Sokabe, M., Diaz-Lopez, I., Gordiyenko, Y., Fraser, C.S., Ramakrishnan, V. (2024) The structure of a human translation initiation complex reveals two independent roles for the helicase eIF4A. Nat Struct Mol Biol 31: 455-464</li>
+<li>8auv: Smirnova, J., Loerke, J., Kleinau, G., Schmidt, A., Burger, J., Meyer, E.H., Mielke, T., Scheerer, P., Bock, R., Spahn, C.M.T., Zoschke, R. (2023) Structure of the actively translating plant 80S ribosome at 2.2 angstrom resolution. Nat Plants 9: 987-1000</li>
+<li>6rw4: Khawaja, A., Itoh, Y., Remes, C., Spahr, H., Yukhnovets, O., Hofig, H., Amunts, A., Rorbach, J. (2020) Distinct pre-initiation steps in human mitochondrial translation. Nat Commun 11: 2932-2932</li>
+<li>6tmf: Nurenberg-Goloub, E., Kratzat, H., Heinemann, H., Heuer, A., Kotter, P., Berninghausen, O., Becker, T., Tampe, R., Beckmann, R. (2020) Molecular analysis of the ribosome recycling factor ABCE1 bound to the 30S post-splitting complex. EMBO J 39: e103788</li>
+<li>5mmj: Bieri, P., Leibundgut, M., Saurer, M., Boehringer, D., Ban, N. (2017) The complete structure of the chloroplast 70S ribosome in complex with translation factor pY. EMBO J 36: 475-486</li>
+<li>5lmv:Hussain, T., Llacer, J.L., Wimberly, B.T., Kieft, J.S., Ramakrishnan, V.(2016)  Large-scale movements of IF3 and tRNA during bacterial translation initiation. Cell 167: 133-144.e13</li>
+<li>5a2q: Quade, N., Boehringer, D., Leibundgut, M., Van Den Heuvel, J., Ban, N. (2015) Cryo-EM structure of hepatitis C virus Ires bound to the human ribosome at 3.9 Angstrom Resolution. Nat Commun 6: 7646</li>
+<li>1fjg: Carter, A.P., Clemons Jr., W.M., Brodersen, D.E., Morgan-Warren, R.J., Wimberly, B.T., Ramakrishnan, V. (2000) Functional insights from the structure of the 30S ribosomal subunit and its interactions with antibiotics. Nature 407: 340-348</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2024, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2024_7">http://doi.org/10.2210/rcsb_pdb/mom_2024_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

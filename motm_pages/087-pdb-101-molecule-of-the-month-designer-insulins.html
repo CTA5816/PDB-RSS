@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Designer Insulins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Designer Insulins" property="og:title"/>
+<meta content="Engineered insulins have been developed to improve treatment of diabetes" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-1trz.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/194" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Designer Insulins" name="twitter:title"/>
+<meta content="Engineered insulins have been developed to improve treatment of diabetes" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-1trz.jpg" name="twitter:image"/>
+<meta content="Engineered insulins have been developed to improve treatment of diabetes" name="description"/>
+<meta content="insulin,diabetes mellitus,hormone,protein design,quaternary structure,1trz,4iyf,4ajx,1lph,4gbc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 194
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 194 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Designer Insulins</h1>
+<p><i>Engineered insulins have been developed to improve treatment of diabetes</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Insulin is stored within specialized pancreatic cells as a hexameric complex (left). It is active as a monomer (right) when binding to its receptors. The A-chain is shown in green and the B-chain in blue, with disulfide linkages in yellow. Zinc ions (magenta) and protein-protein interactions stabilize the hexamer." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-1trz.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Insulin is stored within specialized pancreatic cells as a hexameric complex (left). It is active as a monomer (right) when binding to its receptors. The A-chain is shown in green and the B-chain in blue, with disulfide linkages in yellow. Zinc ions (magenta) and protein-protein interactions stabilize the hexamer.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-1trz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>A century ago, people with diabetes mellitus had no good options for treatment and the medical condition was invariably fatal. The discovery of <a href="https://pdb101.rcsb.org/motm/14">insulin</a> dramatically reversed this grim reality, and today, insulin therapy allows those with diabetes to manage their disease and thereby minimize the deleterious impact of elevated blood sugar levels, while living long and productive lives. The first preparations of insulin were extracted from livestock (cattle or pigs). Today, insulin is created by bioengineered bacteria that manufacture pure human insulin. The structure shown here, from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1trz" target="_blank">1trz</a>, was determined using the first recombinant human insulin, marketed as Humulin.</div>
+<h4>Tuning the Treatment</h4>
+<div>When recombinant human insulin is injected under the skin, it lowers blood sugar levels rapidly, but its effects wear off in a matter of a few hours. This approach to controlling blood sugar works well immediately after eating, but cells in our bodies also fuel themselves between meals by mobilizing glycogen stored in muscles and the liver. Under normal circumstances, the pancreas continually secretes low levels of insulin, to control blood sugar levels when we are fasting. Soon after recombinant human insulin was approved by the US Food and Drug Administration, scientists began trying to create another genetically modified form of insulin that acts over longer times, to help provide basal blood sugar control.</div>
+<h4>Long-acting Insulin</h4>
+<div>The trick to creating long-acting insulin was inspired by our knowledge of its structure. Insulin is stored in the pancreas as a hexameric complex, which then falls apart to form the active monomer when it is released into the blood stream and binds to <a href="https://pdb101.rcsb.org/motm/182">insulin receptors</a>, which are found on the surface of most cells in the human body. To make a long-acting molecule we need to slow the appearance of the active monomer. The first successful approach combines insulin with a fish protein, protamine, to create a heterogeneous complex that slowly dissolves in the blood. Researchers then designed new insulins that do a similar thing. They added two arginine amino acids, and later changed an asparagine to glycine, to change the chemical character of the insulin. The final result is glargine (Lantus ®) (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4iyf" target="_blank">4iyf</a>), a long-acting insulin that is less soluble at the normal pH of the body, forming aggregates that slowly release the active monomer.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Degludec is a designer insulin with a long hydrocarbon chain (pink) attached at the C-terminus of each B-chain. These chains are apparently quite mobile and only two of the six are localized enough to be resolved in the crystallographic structure: one seen here on the right side of each hexamer, and the other hidden in this view." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-4ajx.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Degludec is a designer insulin with a long hydrocarbon chain (pink) attached at the C-terminus of each B-chain. These chains are apparently quite mobile and only two of the six are localized enough to be resolved in the crystallographic structure: one seen here on the right side of each hexamer, and the other hidden in this view.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-4ajx.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Tailoring Interactions</h4>
+<div>Long-acting insulins have also been created by attaching long hydrocarbon chains to the hormone. This modification brings together several hexamers, forming an aggregate of insulin hexamers that slowly dissolves in the blood. They also stabilize interactions with the blood protein <a href="http://pdb101.rcsb.org/motm/37">serum albumin</a>, which further extends the action of this designer insulin. The structure shown here is that of degludec (Tresiba ®) (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ajx" target="_blank">4ajx</a>). In this crystal form, one of the hydrocarbon chains bridges two hexamers, giving a hint for how these designer hormones might form higher order aggregates after they are injected under the skin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Fast-acting Insulin (PDB entries 1tyl, 1lph, 4gbc)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/194/194-Designer_Insulins-1tyl_1lph_JSmol.jpg"/></div>
+<p>Long-acting insulins are combined with fast-acting insulins that are used immediately after meals. The molecular trick to creating a fast-acting insulin is to destabilize the insulin hexamer, so it falls apart rapidly when it enters the bloodstream. The first fast-acting design, lispro (Humalog ®), involved the tiniest of changes in the molecule, reversing the order of two residues near the C-terminus of the B-chain. This change weakens the interaction between insulin monomers, making the mutant hexamer 200 times less stable than the native form (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lph" target="_blank">1lph</a>). Further study of the insulin structure showed that addition of a charged amino acid in the same location achieves the same outcome, yielding the fast-acting insulin aspart (Novolog ®) (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4gbc" target="_blank">4gbc</a>). To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can build a paper model of insulin—the <a href="https://cdn.rcsb.org/pdb101/learn/resources/insulin-activity-assets/insulin-activity.pdf">template</a> and an <a href="http://pdb101.rcsb.org/learn/paper-models/insulin">activity page</a> are available on PDB-101.</li>
+<li>Surprisingly, small preservative molecules like phenol and cresol play an important role in insulin therapy, stabilizing the hexamer until it reaches the bloodstream. Many of the structures of insulin in the PDB archive include several of these molecules, stabilizing the interactions between the chains in the hexamer.</li>
+<li>Researchers are also looking for ways to design ultra-stable insulin molecules that have only a single chain. Look, for example, at PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2jzq" target="_blank">2jzq</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. Pettus, T. S. Cavaiola, W. V. Tamborlane &amp; S. Edelman (2015) The past, present, and future of basal insulins. Diabetes/Metabolism Research and Reviews, DOI 10.1002/dmrr.2763.</li>
+<li>R. Hilgenfeld, G. Seipke, H. Berchtold &amp; D. R. Owens (2014) The evolution of insulin glargine and its continuing contribution to diabetes care. Drugs 74, 911-927.</li>
+<li>4gbc: L. C. Palmieri, M. P. Favero-Retto, D. Lourenco &amp; L. M. T. R. Lima (2013) A T3R3 hexamer of the human insulin variant B28Asp. Biophysical Chemistry 173, 1-7.</li>
+<li>4ajx: D. B. Steensgaard, G. Schluckebier, H. M. Strauss, M. Norrman, J. K. Thomsen, A. V. Friderichsen, S. Havenlund &amp; I. Jonassen (2012) Ligand-controlled assembly of hexamers, dihexamers, and linear multihexamer structures by the engineered acylated insulin degludec. Biochemistry 52, 295-309.</li>
+<li>1lph: E. Ciszak, J. M. Beals, B. H. Frank, J. C. Baker, N. D. Carter &amp; G. D. Smith (1995) Role of C-terminal B-chain residues in insulin assembly: the structure of hexameric LysB28ProB29-human insulin. Structure 3, 615-622.</li>
+<li>1trz: Ciszak, E. &amp; G. D. Smith (1994) Crystallographic evidence for dual coordination around zinc in the T3R3 human insulin hexamer. Biochemistry 33, 1512-1517.</li>
+<li>1tyl: G. D. Smith &amp; E. Ciszak (1994) The structure of a complex of hexameric insulin and 4’-hydroxyacetanilide. Proceedings of the National Academy of Sciences USA 91, 8851-8855.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2016, David S. Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_2">http://doi.org/10.2210/rcsb_pdb/mom_2016_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

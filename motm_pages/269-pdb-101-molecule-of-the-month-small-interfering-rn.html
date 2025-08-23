@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Small Interfering RNA (siRNA)</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Small Interfering RNA (siRNA)" property="og:title"/>
+<meta content="Our cells continually look for pieces of double-stranded RNA, a possible sign of viral infection" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/98/98_siRNA.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/98" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Small Interfering RNA (siRNA)" name="twitter:title"/>
+<meta content="Our cells continually look for pieces of double-stranded RNA, a possible sign of viral infection" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/98/98_siRNA.jpg" name="twitter:image"/>
+<meta content="Our cells continually look for pieces of double-stranded RNA, a possible sign of viral infection" name="description"/>
+<meta content="argonaute protein,dicer enzyme,RNA interference,RNA silencing,small interfering RNA,2ffl,2f8s,1u04,1r9f,1si3" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 98
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 98 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Small Interfering RNA (siRNA)</h1>
+<p><i>Our cells continually look for pieces of double-stranded RNA, a possible sign of viral infection</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Small interfering RNA (top left), dicer (top right), and argonaute (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/98/98_siRNA.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Small interfering RNA (top left), dicer (top right), and argonaute (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/98/98-SmallInterferingRNA-siRNA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Double-stranded RNA is often a sign of trouble. Our <a href="http://pdb101.rcsb.org/motm/15">transfer RNA</a> and <a href="http://pdb101.rcsb.org/motm/121">ribosomes</a> do contain little hairpins that are double-stranded, but most of the free forms of RNA, messenger RNA molecules in particular, are single strands. Many viruses, however, form long stretches of double-stranded RNA as they replicate their genomes. When our cells find double-stranded RNA, it is often a sign of an infection, and they mount a vigorous response that often leads to death of the entire cell. However, plant and animal cells also have a more targeted defense that attacks the viral RNA directly, termed RNA interference.</div>
+<h4>Running Interference</h4>
+<div>RNA interference starts with a long double-stranded RNA, such as the ones formed as viruses replicate. The protein dicer, shown here at the top in blue from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ffl" target="_blank">2ffl <i class="fa fa-external-link"> </i></a></span>, cuts this RNA into small, distinctive pieces called small interfering RNA (siRNA), shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2f8s" target="_blank">2f8s <i class="fa fa-external-link"> </i></a></span>. Each siRNA is about 21 base pairs long and has a distinctive overhang of two base pairs on each strand, and a left-over phosphate at the other end of each strand. This makes them easy to recognize. In the dicer protein, notice how the four manganese ions (in magenta) are arranged. They are thought to make two offset cuts in the RNA double helix, forming the overhang.</div>
+<h4>The Argonaute</h4>
+<div>The siRNA molecules made by dicer are picked up by argonaute proteins and used to destroy any other viral RNA that is floating around. The argonaute protein, shown here at the bottom from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1u04" target="_blank">1u04 <i class="fa fa-external-link"> </i></a></span>, strips away one strand from the siRNA, and then looks for any messenger RNA that matches it. If it finds some, it cleaves the RNA, destroying it. In this way, the cell removes any messenger RNA that is the same as the original double-stranded piece found by dicer. (A piece of trivia: the argonaute protein was discovered in a mutant plant that was shaped like the spiral shells of marine argonauts.)</div>
+<h4>A Sea of Small RNA</h4>
+<div>In the years since the discovery of RNA interference, researchers have found that this process is far more widespread than we might expect, and that small pieces of RNA play many functional roles. A similar class of molecules, termed microRNA, are created in the nucleus from the normal RNA of the cell. These are also processed by dicer and are used to modulate the use of our normal messenger RNA, by pairing with the RNA and blocking its use. They also find complementary sequences in the DNA genome, modifying the properties of the chromosomes by changing the levels of methylation or histone binding.</div>
+<h4>Interfering RNA in Science</h4>
+<div>Plant and animal cells are prepackaged with this machinery for destroying specific RNA strands, and scientists have taken full advantage of it. It is now possible to synthesize a non-natural interfering RNA, then insert it into a cell and destroy any messenger RNA that we desire. This is a fast and easy way to determine the function of a gene: you destroy most of the messenger RNA using a custom interfering RNA, thus slowing production of the protein, and see what goes wrong. Medical researchers are also trying to use these small RNA molecules to fight disease, for instance, using them to knock out cancer genes.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Viral suppressor protein p19 bound to siRNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/98/98_1r9f.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Viral suppressor protein p19 bound to siRNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/98/98-SmallInterferingRNA-1r9f.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Viruses Fight Back</h4>
+<div>Viruses are tricky and rarely sit still when they are being attacked. They have found ways to fight back against RNA interference. The protein shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r9f" target="_blank">1r9f <i class="fa fa-external-link"> </i></a></span>) is a suppressor protein made by tomato bushy stunt virus. It binds to siRNA and blocks its use for destruction of viral messenger RNA. Notice how the protein (in blue) acts like a ruler, stacking on each end of the siRNA (in orange and red). In this way, it seeks out and blocks only small pieces of RNA that are the right length to be siRNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Recognition of siRNA (PDB entry 1si3)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/98/98_1si3-rasmol.jpg"/></div>
+<p>The siRNA molecules made by dicer are easy to recognize: they are a uniform length, and they have an unusual overhang of bases at each end. The structure shown in blue here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1si3" target="_blank">1si3 <i class="fa fa-external-link"> </i></a></span>, is the "PAZ" domain used by many proteins to recognize the ends of siRNA (a small piece of an siRNA is shown in orange). Notice how the overhanging bases bind into a small pocket, and the exposed base at the end of the shorter strand is covered by a little shelf of protein. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>L. Peters and G. Meister (2007) Argonaute proteins: mediators of RNA silencing. Molecular Cell 26, 611-623.</li>
+<li>L. Aagaard and J. L. Rossi (2007) RNAi therapeutics: principles, prospects and challenges. Advanced Drug Delivery Reviews 59, 75-86.</li>
+<li>D. J. Patel, J. B. Ma, Y. R. Yan, K. Ye, Y. Pei, V. Kuryavyi, L. Malinina, G. Meister and T. Tuschl (2006) Structure biology of RNA silencing and its functional implications. Cold Spring Harbor Symposia on Quantitative Biology 71, 81-93.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_2">http://doi.org/10.2210/rcsb_pdb/mom_2008_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

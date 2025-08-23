@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vacuolar ATPase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vacuolar ATPase" property="og:title"/>
+<meta content="Two linked molecular motors are used to pump protons across membranes." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-5vox.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/219" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vacuolar ATPase" name="twitter:title"/>
+<meta content="Two linked molecular motors are used to pump protons across membranes." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-5vox.jpg" name="twitter:image"/>
+<meta content="Two linked molecular motors are used to pump protons across membranes." name="description"/>
+<meta content="Vacuolar ATPase,ATP synthase,V-ATPase,molecular motors,proton pumps,ATP,5vox,5ara,5gar,5voy,5voz" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 219
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 219 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vacuolar ATPase</h1>
+<p><i>Two linked molecular motors are used to pump protons across membranes.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Vacuolar ATPase. The membrane is shown schematically in gray. This entry also includes a bacterial inhibitory protein, which is not shown in this illustration." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-5vox.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Vacuolar ATPase. The membrane is shown schematically in gray. This entry also includes a bacterial inhibitory protein, which is not shown in this illustration.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-5vox.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>We normally think of acids as being dangerously corrosive, but cells use carefully controlled acidity for a variety of useful things. For example, our cells use special receptors to gather molecules like LDL (low density lipoprotein) from the blood, and then after they are drawn inside in vesicles, they are released by acidifying the vesicle. Lysosomes are acidified to help break down damaged or obsolete molecules. Acidity is also occasionally useful outside cells. For example, bone cells use acid to break down and remodel our mineral-rich bones.</div>
+<h4>Proton Pump</h4>
+<div>One way that cells control acidity is to use pumps to increase the concentration of protons (hydrogen ions) in a compartment. The vacuolar ATPase (V-ATPase) is an ATP-powered proton pump composed of two rotary motors, as shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5vox" target="_blank">5vox</a>. The portion at the top (shown in pink) is an ATP-driven motor that turns an axle (shown in dark blue). This then turns a second motor (light blue and magenta) that pumps protons across the membrane. The remaining protein chains (shown in orange) hold the whole complex together and make sure that the rotation of one motor is used to power the rotation of the other.</div>
+<h4>Regulating Acidity</h4>
+<div>Of course, cells need to control these pumps, to make sure that they don’t over-acidify cellular compartments. Amazingly, V-ATPase is regulated by breaking the complex in half when it is not needed. The ATP-powered motor separates from the proton pumping motor, stopping the process. Then, when they are needed again, they are reconnected and pumping restarts.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three rotary ATPases." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-ATPases.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three rotary ATPases.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-ATPases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Rotary Motors</h4>
+<div>These types of linked rotary motors have proven very useful, and are built in several varieties. V-ATPases are made by eukaryotic cells and are used to control acidity. <a href="https://pdb101.rcsb.org/motm/72">ATP synthase</a> (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5ara" target="_blank">5ara</a>) is found in our mitochondria and also in bacteria, and is used for the opposite function: using a flow of protons through the membrane-bound portion to build ATP. V/A-ATPases (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5gar" target="_blank">5gar</a>) have a variety of functions, as proton pumps or ATP generators. As an additional twist, some of these rotary pumps use sodium ions instead of protons.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>V-ATPase in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/219/219-Vacuolar_ATPase-vATPase_JSmol.jpg"/></div>
+<p>V-ATPases are complex molecular machines with many moving parts, so they have proven difficult to study. Currently, the most complete structures have been obtained by <a href="http://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure">cryoelectron microscopy</a>. The one shown here is from yeast, and researchers determined structures for three different rotational states of the complex (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5vox" target="_blank">5vox</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5voy" target="_blank">5voy</a> &amp; <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5voz" target="_blank">5voz</a>). The image shown here is looking at the molecule from the bottom, showing rotation of the proton-pumping portion. To see the rotation of the whole molecule, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try comparing the number of subunits in the ring of V-ATPases, V/A-ATPases and ATP synthase. What does this tell you about the number of protons needed for each ATP that is broken down or built by the molecule?</li>
+<li>Atomic structures have been determined for many fragments of V-ATPases, which were then used to help build the low-resolution models obtained from cryoelectron microscropy. You can search for “V-ATPase” to look at some of these atomic structures.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5vox, 5voy, 5voz: J Zhao, K Beyrakhova, Y Liu, CP Alvarez, SA Bueler, L Xu, C Xu, MT Boniecki, V Kanelis, ZQ Luo, M Cygler &amp; JL Rubinstein (2017) Molecular basis for the binding and modulation of V-ATPase by a bacterial effector protein. PLoS Pathogens 13, e1006394.</li>
+<li>5gar: DG Schep, J Zhao &amp; JL Rubinstein (2017) Models for the a subunits of the Thermus thermophilus V/A-ATPase and Saccharomyces cerevisiae V-ATPase enzymes by cryo-EM and evolutionary covariance. Proceedings of the National Academy of Science USA 113, 3245-3250.</li>
+<li>5ara: A Zhou, A Rohou, DG Schep, JV Bason, MG Montgomery, JE Walker, N Grigorieff &amp; JL Rubinstein (2015) Structure and conformational states of the bovine mitochondrial ATP synthase by cryo-EM. Elife 4, e10180.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2018, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2018_3">http://doi.org/10.2210/rcsb_pdb/mom_2018_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

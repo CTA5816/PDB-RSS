@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Src Tyrosine Kinase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Src Tyrosine Kinase" property="og:title"/>
+<meta content="Growth signaling proteins play an important role in the development of cancer" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/43/2src.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/43" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Src Tyrosine Kinase" name="twitter:title"/>
+<meta content="Growth signaling proteins play an important role in the development of cancer" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/43/2src.gif" name="twitter:image"/>
+<meta content="Growth signaling proteins play an important role in the development of cancer" name="description"/>
+<meta content="cancer,intracellular signaling cascade,protein kinase activity,proto-oncogene proteins,signal transduction,2src,2hck,1opl,2src" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 43
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 43 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Src Tyrosine Kinase</h1>
+<p><i>Growth signaling proteins play an important role in the development of cancer</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Src tyrosine kinase, with the phosphorylated tyrosine in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/43/2src.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Src tyrosine kinase, with the phosphorylated tyrosine in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/43/43-SrcTyosineKinase-2src.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Your body is a democratic nation of cells. Each cell is an individual with its own needs, but all of your cells work together to keep you alive. As you might imagine, this requires an incredible amount of cooperation. Cells are in constant communication to inform their neighbors of their needs and future plans. They send messages to each other, passing hormones and chemokines and other molecular messages from cell to cell. These messages are received by proteins in the cell membrane, which transmit the signal inside. There, a bewilderingly complex collection of proteins relays the message to all of the appropriate places inside the cell.</div>
+<h4>The Job of Src</h4>
+<div>The Src protein, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2src" target="_blank">2src <i class="fa fa-external-link"> </i></a></span>, is a signaling protein that specializes in messages that control the growth of cells. It sits just inside the cell membrane, where it assists in the passing of signals from various protein receptors to the proteins that turn "on" the engines of protein synthesis and cellular growth. Src is a tyrosine kinase, so it relays its messages by adding phosphate groups to special tyrosine amino acids in protein chains. It adds phosphate groups to a wide variety of proteins that control cellular structure, cell communication, and cellular growth, turning them "on" and releasing them to perform their individual tasks.</div>
+<h4>Redundancy</h4>
+<div>A lot of redundancy is built into this complex signaling system. Researchers have discovered hundreds of protein tyrosine kinases, several of which are nearly identical to Src. In fact, when researchers block the action of Src protein in laboratory animals, there is relatively no effect. Other similar proteins appear to be able to fill in for the lost function. A few similar proteins are available in the PDB, including the Hck protein, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hck" target="_blank">2hck <i class="fa fa-external-link"> </i></a></span>, and the Abl protein, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1opl" target="_blank">1opl <i class="fa fa-external-link"> </i></a></span>. Normally, these proteins oversee a flurry of crossing messages, and we live, grow, and heal according to schedule. In many cases, loss of function has a relatively small effect, however, if the protein is made too active, the result is disaster.</div>
+<h4>The <i>src</i> Oncogene</h4>
+<div>The DNA that encodes the Src protein is known as an oncogene, because it is a gene that is intimately connected with the development of cancer. The <i>src</i> oncogene was discovered because of this link with cancer: researchers found that the Rous sarcoma virus, which causes tumors in chickens, injects a protein similar to the normal form of Src, called v-Src (for "viral Src"). v-Src, in contrast to the cellular c-Src, is always active. It continually adds phosphate groups to the many proteins serviced by Src, sending a constant, unwavering signal to grow. This leads to cancer, as cells grow without control into tumors. <br/><br/> Mutations in the normal form of Src, and mutations in other similar oncogene proteins, are often found in human cancers, if the mutations change the protein into a form that is continually active. Currently, researchers are looking for ways to stop these rogue kinases and restore the normal limits on growth. The drug Gleevec is a notable success. It blocks the action of the Abl protein, and is effective for the treatment of cancers where this protein is mutated.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Active (left) and inactive (right) conformations of src tyrosine kinase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/43/2src-mechanism.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Active (left) and inactive (right) conformations of src tyrosine kinase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/43/43-SrcTyrosineKinase-2src-mechanism.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Many Moving Parts</h4>
+<div>Src undergoes a large articulated motion when it turns "on" and "off." The crystal structure, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2src" target="_blank">2src <i class="fa fa-external-link"> </i></a></span>, shows the inactive form. The protein opens up, as shown on the left, to form the active protein. The Src protein is composed of a string of functional parts connected together in a single protein chain. Walking from one end of the chain to the other, it is composed of an anchoring segment (not seen in the crystal structure), an SH3 domain, an SH2 domain, a flexible linker, a kinase domain, and a final tail. <br/><br/> Each of these parts is essential for the function. Look first at the active form on the left. The SH3 domain has a little groove that grabs protein chains, positioning them close enough to the kinase domain to allow the addition of phosphate groups. The ATP shown here in red provides the phosphate groups. The inactive form, shown on the right, is shut down in a clever way. It folds tightly upon itself, using the short linker to block the SH3 domain so that it cannot bind to other proteins. The key to the transition is a tyrosine in the tail, colored blue here. When this tyrosine is phosphorylated, it binds in the SH2 domain, gluing the whole complex shut. When the phosphate is removed, the tail is released and the whole molecule opens up, unblocking the SH3 binding site and allowing access to the kinase active site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/43/2src-1opl.gif"/></div>
+<div>When exploring oncogene proteins, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2src" target="_blank">2src <i class="fa fa-external-link"> </i></a></span> is a good place to start. This is the inactive form of Src, folded into a tight ball. The structure has a nucleotide bound in the kinase active site (shown in red here), and the key tyrosine (number 527 in the chain, seen here on the right side of the molecule) has a phosphate attached. You can also look at the Hck protein, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hck" target="_blank">2hck <i class="fa fa-external-link"> </i></a></span>, which is almost identical to Src. A fragment of the Abl protein, which at full-length is much larger than Src and Hck, is also available in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1opl" target="_blank">1opl <i class="fa fa-external-link"> </i></a></span>. It is slightly different than Src and Hck, and doesn't use a tail to stabilize the closed form. This structure includes a drug molecule in the active site (shown in red here) and a lipid bound in a deep pocket (shown in gray). <br/><br/> These images were created with RasMol. You can create similar images by clicking on the accession code above and then choosing one of the options for 3D viewing. Note that the 2hck and 1opl structures each have two separate chains: you will want to look at only chain A in each case.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. T. Brown and J. A. Cooper (1996) Regulation, Substrates and Functions of Src. Biochimica et Biophysica Acta 1287, 121-149. </li>
+<li>C. L. Abram and S. A. Courtneidge (2000) Src Family Tyrosine Kinases and Growth Factor Signaling. Experimental Cell Research 254, 1-13.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_7">http://doi.org/10.2210/rcsb_pdb/mom_2003_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

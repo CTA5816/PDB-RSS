@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Messenger RNA Capping</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Messenger RNA Capping" property="og:title"/>
+<meta content="Messenger RNA molecules are capped with an inverted nucleotide" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_3kyh_1ri1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/145" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Messenger RNA Capping" name="twitter:title"/>
+<meta content="Messenger RNA molecules are capped with an inverted nucleotide" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_3kyh_1ri1.jpg" name="twitter:image"/>
+<meta content="Messenger RNA molecules are capped with an inverted nucleotide" name="description"/>
+<meta content="Capping,Decapping,Messenger RNA,Transcription,3kyh,1ri1,2qkm,1st0,1ckm,1ckn,1cko" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 145
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 145 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Messenger RNA Capping</h1>
+<p><i>Messenger RNA molecules are capped with an inverted nucleotide</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Messenger RNA capping enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_3kyh_1ri1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Messenger RNA capping enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_3kyh_1ri1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>In our cells, transcription is not just a simple process of reading DNA and building a complimentary RNA strand. Almost immediately after RNA polymerase begins, the cell is making changes. When the mRNA is only about 30 nucleotides long, the cell makes its first change: it connects a guanosine nucleotide to the end. This "cap" is unusual in several respects: the guanine base is methylated, the connection is formed of three phosphates instead of the normal single phosphate, and the orientation of the nucleotide is opposite from the normal nucleotide-to-nucleotide connection. This unusual structure protects the RNA from enzymes that digest nucleic acids, and also provides a recognizable signal to the molecules that use mRNA. Later, the cell will make additional changes to the growing mRNA, adding a string of adenosine nucleotides at the other end, and then splicing out the regions that don't encode proteins.</div>
+<h4>Putting on the Cap</h4>
+<div>Messenger RNA caps are made in three steps, each performed by a different enzyme. The brand-new mRNA has three phosphates at the end, so the first step is to clip off one. Then, the second enzyme attaches GMP to the new diphosphate end, creating the unusual triphosphate linkage and reversed orientation. Finally, a third enzyme methylates the guanine base, making it even more recognizable. Amazingly, these enzymes are bound to a long phosphorylated tail on RNA polymerase, so they are held in exactly the right place for modifying a new mRNA as it is transcribed.</div>
+<h4>Capping in Action</h4>
+<div>All three enzymes are shown here. The complex shown here at the top is from yeast (PDB entry <span class="rcsb_id_tag" title="Capping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3kyh" target="_blank">3kyh <i class="fa fa-external-link"> </i></a></span>), and includes the first two enzymes. The two subunits at the center (in blue) perform the trimming reaction, and the two subunits on either side (in green) perform the nucleotide transfer. In our own cells, one long protein chain with two connected enzymes performs these two reactions. The lower enzyme (PDB entry <span class="rcsb_id_tag" title="Capping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ri1" target="_blank">1ri1 <i class="fa fa-external-link"> </i></a></span>) performs the methylation reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Messenger RNA decapping enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_2qkm_1st0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Messenger RNA decapping enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_2qkm_1st0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Taking the Cap Off</h4>
+<div>When cells are done with their mRNA, they need to recycle them. To do this, they need to remove the cap, so that the RNA-digesting enzymes can get to work. Two decapping enzymes are shown here. On the left is Dcp1/Dcp2 (PDB entry <span class="rcsb_id_tag" title="Decapping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2qkm" target="_blank">2qkm <i class="fa fa-external-link"> </i></a></span>), an enzyme complex that recognizes old or obsolete mRNA and clips off the cap, allowing access to enzymes that chew away nucleotides from the end. A "scavenger" decapping enzyme is shown on the right (PDB entry <span class="rcsb_id_tag" title="Decapping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1st0" target="_blank">1st0 <i class="fa fa-external-link"> </i></a></span>). It removes the cap from RNA that has been chopped into pieces by <a href="https://pdb101.rcsb.org/motm/86">exosomes.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Chlorella virus capping enzyme (PDB entries 1ckm, 1ckn and 1cko)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/145/145-MessengerRNACapping_1ckm_jmol.jpg"/></div>
+<p>The GMP-adding enzyme opens and closes during its complicated reaction. It performs the reaction in two steps. First it finds a molecule of GTP, closes around it, and attaches the nucleotide to one of its own lysine amino acids. Then, it opens up and releases the pyrophosphate that it removed from GTP, and closes around the end of the mRNA, performing the nucleotide-transfer reaction. After these two steps it opens back up to release the capped mRNA. Researchers have captured a viral form of the enzyme in several of these steps (PDB entries <span class="rcsb_id_tag" title="Capping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ckm" target="_blank">1ckm <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="Capping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ckn" target="_blank">1ckn <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Capping Enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cko" target="_blank">1cko <i class="fa fa-external-link"> </i></a></span>). Click on the image to see an interactive Jmol that shows the structures.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>PDB entries (<a href="https://www.rcsb.org/structure/3rtx" target="_blank">3rtx</a> and <a href="https://www.rcsb.org/structure/1p16" target="_blank">1p16</a>) show a small portion of the C-terminal tail of RNA polymerase bound to a capping enzyme. The ligand in PDB entry <a href="https://www.rcsb.org/structure/1cko" target="_blank">1cko</a> is an analogue of the capped mRNA. Take a close look at the structure and determine what part of the ligand is the added nucleotide, and what part represents the mRNA.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. Ghosh and C. D. Lima (2010) Enzymology of RNA cap synthesis. Wiley Interdisciplinary Reviews</li>
+<li>of RNA 1, 152-172.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_1">http://doi.org/10.2210/rcsb_pdb/mom_2012_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

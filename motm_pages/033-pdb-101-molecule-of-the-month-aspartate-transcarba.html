@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Aspartate Transcarbamoylase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Aspartate Transcarbamoylase" property="og:title"/>
+<meta content="Key biosynthetic enzymes are regulated by their ultimate products through allosteric motions." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-5at1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/215" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Aspartate Transcarbamoylase" name="twitter:title"/>
+<meta content="Key biosynthetic enzymes are regulated by their ultimate products through allosteric motions." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-5at1.jpg" name="twitter:image"/>
+<meta content="Key biosynthetic enzymes are regulated by their ultimate products through allosteric motions." name="description"/>
+<meta content="allosteric regulation,pyrimidine synthesis,enzyme action,enzyme regulation,biosynthetic pathway,5at1,5dou,4c6i,5g1n,4fyw,1d09" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 215
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 215 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Aspartate Transcarbamoylase</h1>
+<p><i>Key biosynthetic enzymes are regulated by their ultimate products through allosteric motions.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Aspartate transcarbamylase, with catalytic subunits in red, regulatory subunits in blue, and CTP in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-5at1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aspartate transcarbamylase, with catalytic subunits in red, regulatory subunits in blue, and CTP in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-5at1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cells often use assembly lines to create essential molecules like amino acids and nucleotides. An ordered pathway of enzymes work together, each making a specific chemical change to construct complex molecules from available starting materials. These assembly lines are usually carefully regulated, so that molecules are only made when they are needed. Often, this regulation occurs without a lot of administrative overhead—typically, the first enzyme in line will sense the current amount of the final product, and if there is enough, it shuts itself down, halting the whole assembly line. This has been termed “feedback inhibition,” and study of the enzyme aspartate transcarbamylase helped reveal how it’s done.</div>
+<h4>Two States</h4>
+<div>Aspartate transcarbamylase (ATCase) performs an early step in the production of pyrimidine rings, which are used to build nucleotides in DNA and RNA. Early studies found that <i>Escherichia coli</i> ATCase is regulated by the level of CTP, a nucleotide with a pyrimidine ring. Based on biochemical data, researchers proposed a model with two states: a “tense” T state that is inactive, and a “relaxed” R state that can perform the reaction. The structure revealed that ATCase is a large complex, with six catalytic chains arranged in the center, surrounded by three pairs of regulatory chains. The whole complex is usually in the inactive state, but the catalytic chains are cooperative: as with the cooperativity of the four chains of <a href="https://pdb101.rcsb.org/motm/41">hemoglobin</a>, binding of starting materials to a few active sites stabilizes the R state, making the whole complex more active. When CTP levels are high, however, it binds to the regulatory chains, stabilizing the inactive T state, as seen in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5at1" target="_blank">5at1</a>).</div>
+<h4>Choosing the Control Point</h4>
+<div>Regulated enzymes usually perform the first step that is unique to a pathway. The synthesis of pyrimidines starts one step earlier than ATCase, when the enzyme carbamoyl-phosphate synthase (CPSase) creates carbamoyl phosphate from several common cellular building blocks. However, this carbamoyl phosphate is also used to make the amino acid arginine. Some bacteria only make one form of CPSase, so it’s not the best enzyme to regulate, so pyrimidine synthesis is regulated by the second enzyme in the pathway, ATCase, which is only used to build pyrimidines. Our cells, however, have two different CPSases, one for pyrimidine synthesis and one involved in arginine synthesis. So in our cells, CPSase is the enzyme that regulates the synthesis of pyrimidines.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three functional domains in CAD have been studied separately by x-ray crystallography by cutting the protein into pieces. In the intact protein, they are connected by flexible linkers, and come together to form a huge hexameric complex." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-CAD.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three functional domains in CAD have been studied separately by x-ray crystallography by cutting the protein into pieces. In the intact protein, they are connected by flexible linkers, and come together to form a huge hexameric complex.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-CAD.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Our Pyrimidine Factory</h4>
+<div>In animal cells, ATCase is part of a large multifunctional protein, called “CAD”. Three steps of pyrimidine synthesis are performed by this huge complex. Two enzymes in glutamine-dependent carbamoyl-phosphate synthase (GLNase and CPSase) together create carbamoyl phosphate, ATCase connects it to aspartate, and dihydroorotase (DHOase) closes it into a ring that will be become the pyrimidine base (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5dou" target="_blank">5dou</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4c6i" target="_blank">4c6i</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5g1n" target="_blank">5g1n</a>). The CPSase shown here is the one involved in arginine synthesis, which is similar to the CAD CPSase. Bacteria also have all of these enzymes, but they are typically made as individual proteins that perform their tasks separately. Notice that the human ATCase portion includes only catalytic subunits, without the regulatory subunits found in the bacterial enzyme complex.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Aspartate Transcarbamoylase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/215/215-Aspartate_Transcarbamoylase-ATCase_JSmol.jpg"/></div>
+<p>Dozens of structures of ATCase have been determined, capturing the enzyme in both the T and R states, and with a variety of substrates and inhibitors. Two are shown here, showing the amazing allosteric motion that occurs when the enzyme is activated. The T state structure (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4fyw" target="_blank">4fyw</a>) has CTP bound and the R state structure (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1d09" target="_blank">1d09</a>) has an inhibitor bound in the active site that looks much like the substrates. To explore these two structures in more detail, click on the image for an interactive JSmol. You can also see artistic renderings of the states of ATCase in the <a href="http://pdb101.rcsb.org/geis-archive/gallery/rcsb-0004-atcase">Geis Archive</a>.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many variations on ATCase and the other enzymes of pyrimidine synthesis have been observed in different organisms. For instance, take a look at PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3d6n" target="_blank">3d6n</a> for an example of a complex that includes both ATCase and DHOase.</li>
+<li>Many other enzyme pathways are controlled by this type of allosteric regulation. For instance, take a look at <a href="https://pdb101.rcsb.org/motm/50">phosphofructokinase</a>, which controls breakdown of sugar through <a href="https://pdb101.rcsb.org/motm/50">glycolysis</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M Moreno-Morcillo, A Grande-Garcia, A Ruiz-Ramos, F del Cano-Ochoa, J. Boskovic &amp; S Ramon-Maiques (2017) Structural insight into the core of CAD, the multifunctional protein leading de novo pyrimidine biosynthesis. Structure 25, 912-923.</li>
+<li>5g1n: A Ruiz-Ramos, A Velazquez-Campoy, A Grande-Garcia, M Moreno-Morcillo &amp; S Ramon-Maiques (2016) Structure and functional characterization of human aspartate transcarbamylase, the target of the anti-tumoral drug PALA. Structure 24, 1081-1094.</li>
+<li>5dou: S de Cima, LM Polo, C Diez-Fernandez, AI Martinez, J Cervera, I Fita &amp; V Rubio (2015) Structure of human carbamoyl phosphate synthase: deciphering the on/off switch of human ureagenesis. Scientific Reports 5, 16950.</li>
+<li>4c6i: A Grande-Garcia, N Lallous, C Diaz-Tejada &amp; S Ramon-Maiques (2014) Structure, functional characterization and evolution of the dihydroorotase domain of human CAD. Structure 22, 185-198.</li>
+<li>4fyw: GM Cockrell &amp; ER Kantrowitz (2012) Metal ion involvement in the allosteric mechanism of Escherichia coli aspartate transcarbamoylase. Biochemistry 51, 7128-7137.</li>
+<li>WN Lipscomb &amp; ER Kantrowitz (2011) Structure and mechanisms of Escherichia coli aspartate transcarbamylase. Accounts of Chemical Research 45, 444-453.</li>
+<li>1d09: L Jin, B Stec, WN Lipscomb &amp; ER Kantrowitz (1999) Insights into the mechanisms of catalysis and heterotropic regulation of Escherichia coli aspartate transcarbamoylase based upon a structure of the enzyme complexed with the bisubstrate analogue N-phosphonacetyl-L-aspartate at 2.1 A. Proteins 37, 729-742.</li>
+<li>5at1: RC Stevens, JE Gouaux &amp; WN Lipscomb (1990) Structural consequences of effector binding to the T state of aspartate carbamoyltransferase: crystal structures of the unligated and ATP- and CTP-complexed enzymes at 2.6-A resolution. Biochemistry 29, 7691-7701.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_11">http://doi.org/10.2210/rcsb_pdb/mom_2017_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

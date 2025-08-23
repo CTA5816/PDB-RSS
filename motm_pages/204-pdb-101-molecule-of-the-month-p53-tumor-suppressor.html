@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: p53 Tumor Suppressor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: p53 Tumor Suppressor" property="og:title"/>
+<meta content="p53 tumor suppressor protects the body from DNA damage and cancer" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/31/p53-unbound.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/31" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: p53 Tumor Suppressor" name="twitter:title"/>
+<meta content="p53 tumor suppressor protects the body from DNA damage and cancer" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/31/p53-unbound.gif" name="twitter:image"/>
+<meta content="p53 tumor suppressor protects the body from DNA damage and cancer" name="description"/>
+<meta content="cancer,carcinogenesis,regulation of transcription,transcription factor,tumor suppressor protein,1olg,1tup,1ycq,1tup,1olg,1ycq" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 31
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 31 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: p53 Tumor Suppressor</h1>
+<p><i>p53 tumor suppressor protects the body from DNA damage and cancer</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="p53 tumor supressor. Flexible portions of the molecule that are not included in the structures are shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/31/p53-unbound.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>p53 tumor supressor. Flexible portions of the molecule that are not included in the structures are shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/31/31-p53TumorSuppressor-p53-unbound.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Guardian of the Cell</h4>
+<div>Our cells face many dangers, including chemicals, viruses, and ionizing radiation. If cells are damaged in sensitive places by these attackers, the effects can be disastrous. For instance, if key regulatory elements are damaged, the normal controls on cell growth may be blocked and the cell will rapidly multiply and grow into a tumor. p53 tumor suppressor is one of our defenses against this type of damage. p53 tumor suppressor is normally found at low levels, but when DNA damage is sensed, p53 levels rise and initiate protective measures. p53 binds to many regulatory sites in the genome and begins production of proteins that halt cell division until the damage is repaired. Or, if the damage is too severe, p53 initiates the process of programmed cell death, or apoptosis, which directs the cell to commit suicide, permanently removing the damage.</div>
+<h4>Structures by Parts</h4>
+<div>p53 tumor suppressor is a flexible molecule composed of four identical protein chains. Flexible molecules are difficult to study by x-ray crystallography because they do not form orderly crystals, and if they do crystallize, the experimental images are often blurry. So, p53 has been studied in parts, by removing the flexible regions and solving structures of the pieces that form stable structures. Three of these compact, globular portions, termed "domains", have been studied. At the center of p53 is a tetramerization domain (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg" target="_blank">1olg <i class="fa fa-external-link"> </i></a></span>) that ties the four chains together. A long flexible region in each chain then connects to the second stable domain: a large DNA-binding domain (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tup" target="_blank">1tup <i class="fa fa-external-link"> </i></a></span>) that is rich in arginine residues that interact with DNA. This domain recognizes specific regulatory sites on the DNA. The third stable domain studied thus far is the transactivation domain (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ycq" target="_blank">1ycq <i class="fa fa-external-link"> </i></a></span>), found near the end of each arm, that activates the DNA-reading machinery.</div>
+<h4>p53 and Cancer</h4>
+<div>As you might guess from its name, p53 tumor suppressor plays a central role in the protection of your body from cancer. Cancer cells typically contain two types of mutations: mutations that cause uncontrolled growth and multiplication of cells, and other mutations that block the normal defenses that protect against unnatural growth. p53 is in this second category and mutations in the p53 gene contribute to about half of the cases of human cancer. Most of these are missense mutations, changing the information in the DNA at one position and causing the cell to build p53 with an error, swapping an incorrect amino acid at one point in the protein chain. In these mutants, the normal function of p53 is blocked and the protein is unable to stop multiplication in the damaged cell. If the cell has other mutations that cause uncontrolled growth, the cell will develop into a tumor.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Model of p53 tumor suppressor bound to DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/31/p53-bound.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Model of p53 tumor suppressor bound to DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/31/31-p53TumorSuppressor-p53-bound.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Embracing DNA</h4>
+<div>p53 tumor suppressor binds to DNA using all four of its arms. The typical binding site for the whole molecule is composed of three parts: a specific binding site for two p53 domains, a variable stretch of 0 to 13 base pairs, and a second specific binding site for the other two p53 domains. In the picture shown here (constructed from PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tup" target="_blank">1tup <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg" target="_blank">1olg <i class="fa fa-external-link"> </i></a></span>and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ycq" target="_blank">1ycq <i class="fa fa-external-link"> </i></a></span>), two p53 domains are bound near the top of the DNA strand and two are bound at an identical site near the bottom. The tetramerization domain is behind the helix, tying all four chains together, and the four transactivation domains extend along the DNA helix, ready to activate neighboring proteins involved in reading the DNA. The flexible chains that connect all four arms together allow p53 to bind to many different variants of this binding site, allowing it to regulate transcription at many places in the genome.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/31/p53_JSmol-jmol.jpg"/></div>
+<p>Leading cancer-causing mutations in p53 disrupt its ability to bind to DNA. PDB entry <a href="https://www.rcsb.org/structure/3TS8" target="_blank">3ts8</a> shows a tetramer of human p53 bound to a DNA substrate. The most common mutations occur in arginine 248 (shown in red). This key amino acid stabilizes DNA by binding to nucleotides within DNA’s minor groove. Additional mutations can be found in arginines 175, 249, 273, 282, and glycine 245. These amino acids (shown in pink) either interact directly with DNA, or help position other DNA-interacting residues.<br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>B. Vogelstein, D. Lane, A.J. Levine (2000): Surfing the p53 network. <i>Nature</i> <b>408</b>, pp. 307-310.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_7">http://doi.org/10.2210/rcsb_pdb/mom_2002_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

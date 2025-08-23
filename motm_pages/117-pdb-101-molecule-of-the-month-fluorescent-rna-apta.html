@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Fluorescent RNA Aptamers</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Fluorescent RNA Aptamers" property="og:title"/>
+<meta content="RNA aptamers are being engineered to track molecules inside living cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-4kzd.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/229" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Fluorescent RNA Aptamers" name="twitter:title"/>
+<meta content="RNA aptamers are being engineered to track molecules inside living cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-4kzd.jpg" name="twitter:image"/>
+<meta content="RNA aptamers are being engineered to track molecules inside living cells" name="description"/>
+<meta content="fluorescence,aptamer,SELEX,quadruplex,RNA,fluorophore,green fluorescent protein,6db8,6c63,5bjp,4kzd,4ts2" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 229
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 229 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Fluorescent RNA Aptamers</h1>
+<p><i>RNA aptamers are being engineered to track molecules inside living cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Spinach fluorescent aptamer, with RNA in light orange and fluorophore in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-4kzd.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Spinach fluorescent aptamer, with RNA in light orange and fluorophore in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-4kzd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Scientists are constantly looking for new tools to explore cells in greater and greater detail. <a href="https://pdb101.rcsb.org/motm/42">Green fluorescent protein</a> is an example of a tool that opened entirely new doors. With it, we can tag specific proteins and then watch what they are doing inside living cells. Recently, scientists have been developing a new tool that allows us to watch RNA in a similar way. RNA itself is not fluorescent, so the trick is to design a short RNA that can bind to a fluorophore (a small fluorescent molecule) and enhance its fluorescence. Then, we can engineer this RNA into a natural RNA, such as a ribosome. When the fluorophore is added to the cell, it binds to the modified ribosome and we can watch where it goes.</div>
+<h4>Evolving Aptamers</h4>
+<div>SELEX (systematic evolution of ligands by exponential enrichment) has been used to discover these useful fluorophore-binding RNA molecules. The process begins mixing a fluorophore with many random RNA sequences, and then isolating any that bind. These are then randomly modified, and the best ones again selected. After several more rounds of modification and selection, an “aptamer” is found that binds to the fluorophore and enhances its fluorescence. The aptamer shown here, named “Spinach”, was discovered by this process using a flourophore similar to the one in green fluorescent protein.</div>
+<h4>Structure Challenges</h4>
+<div>The Spinach aptamer is a long hairpin, with an intricately-folded section at the center that surrounds the fluorophore. RNA is always difficult to crystalize, so two tricks were used to determine its structure. In PDB entry <a href="https://www.rcsb.org/structure/4kzd" target="_blank">4kzd</a> (shown in the illustration), the loop at one end was engineered to bind to an antibody, which assists with forming a stable crystal lattice. In PDB entry <a href="https://www.rcsb.org/structure/4ts2" target="_blank">4ts2</a> (shown in the JSmol below), the loop was clipped off, making it easier for the molecules to pack end-to-end in to form a crystal.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three fluorescent aptamers, with RNA in light orange and pink, and fluorophores in bright colors." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-fluorescent_aptamers.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three fluorescent aptamers, with RNA in light orange and pink, and fluorophores in bright colors.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-fluorescent_aptamers.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Aptamer Palette</h4>
+<div>Other fluorescent aptamers have been discovered, in a rainbow of colors. This is very useful since it allows us to tag several different types of RNA molecules in one cell, using different colors to distinguish them. Also, techniques like FRET can be used to monitor distances between different flourophores in living cells. Three examples are shown here: the yellow Corn aptamer (PDB entry <a href="https://www.rcsb.org/structure/5bjp" target="_blank">5bjp</a>), orange Mango-II (PDB entry <a href="https://www.rcsb.org/structure/6c63" target="_blank">6c63</a>), and red DIR2s (PDB entry <a href="https://www.rcsb.org/structure/6db8" target="_blank">6db8</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Spinach Fluorescent RNA Aptamer</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/229/229-Fluorescent_RNA_AptamersSpinach_fluorescent_aptamer_with_RNA_in_light_orange_and_fluorophore_in_green-JSmol.jpg"/></div>
+<p>The Spinach aptamer surrounds its fluorophore, forming a rigid pocket that enhances the fluorescence of the molecule. One face of the fluorophore is packed against a G-quadruplex (colored pink), and the other face is covered by a nucleotide base triplet (colored magenta). An additional guanine (white) interacts with the edge of the fluorophore and positions it in the pocket. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>To see the packing of spinach aptamers in the crystal lattice, choose <i>3D View: Structure</i> at the main RCSB site and choose the options for <i>Unit Cell</i> or <i>Supercell</i> in the <i>Assembly</i> menu.</li>
+<li>Most of these aptamers have a G-quadruplex that packs against the fluorophore—as you’re exploring these structures, try to follow how the RNA chain folds to position the four guanines in the proper orientation.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/bioluminescence-and-fluorescence">Bioluminescence and Fluorescence</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Trachman, R. J., Truong, L., Ferr&amp;eacute-D’Amaré, A. R. (2017) Structural principles of fluorescent RNA aptamers. Trends Pharmacol. Sci. 38: 928-939.</li>
+<li>6db8: Shelke, S.A., Shao, Y., Laski, A., Koirala, D., Weissman, B.P., Fuller, J.R., Tan, X., Constantin, T.P., Waggoner, A.S., Bruchez, M.P., Armitage, B.A., Piccirilli, J.A. (2018) Structural basis for activation of fluorogenic dyes by an RNA aptamer lacking a G-quadruplex motif. Nat. Commun 9: 4542-4542.</li>
+<li>6c63: Trachman 3rd., R.J., Abdolahzadeh, A., Andreoni, A., Cojocaru, R., Knutson, J.R., Ryckelynck, M., Unrau, P.J., Ferr&amp;eacute-D'Amaré, A.R. (2018) Crystal structures of the Mango-II RNA aptamer reveal heterogeneous fluorophore binding and guide engineering of variants with improved selectivity and brightness. Biochemistry 57: 3544-3548.</li>
+<li>5bjp: Warner, K.D., Sjekloca, L., Song, W., Filonov, G.S., Jaffrey, S.R., Ferr&amp;eacute-D'Amaré, A.R. (2017) A homodimer interface without base pairs in an RNA mimic of red fluorescent protein. Nat. Chem. Biol. 13: 1195-1201.</li>
+<li>4kzd: Huang, H., Suslov, N.B., Li, N.S., Shelke, S.A., Evans, M.E., Koldobskaya, Y., Rice, P.A., Piccirilli, J.A. (2014) A G-quadruplex-containing RNA activates fluorescence in a GFP-like fluorophore. Nat. Chem. Biol. 10: 686-691.</li>
+<li>4ts2: Warner, K.D., Chen, M.C., Song, W., Strack, R.L., Thorn, A., Jaffrey, S.R., Ferr&amp;eacute-D'Amaré, A.R. (2014) Structural basis for activity of highly efficient RNA mimics of green fluorescent protein. Nat. Struct. Mol. Biol. 21: 658-663.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_1">http://doi.org/10.2210/rcsb_pdb/mom_2019_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vancomycin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vancomycin" property="og:title"/>
+<meta content="The antibiotic vancomycin blocks the construction of bacterial cell walls." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-1fvm.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/192" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vancomycin" name="twitter:title"/>
+<meta content="The antibiotic vancomycin blocks the construction of bacterial cell walls." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-1fvm.jpg" name="twitter:image"/>
+<meta content="The antibiotic vancomycin blocks the construction of bacterial cell walls." name="description"/>
+<meta content="antibiotic resistance,glycopeptide antibiotics,resistance evolution,vancomycin,1fvm,3se7,1e4e,2dln" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 192
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 192 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vancomycin</h1>
+<p><i>The antibiotic vancomycin blocks the construction of bacterial cell walls.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="This structure includes vancomycin (blue) and a short analogue of a bacterial peptidoglycan chain (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-1fvm.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>This structure includes vancomycin (blue) and a short analogue of a bacterial peptidoglycan chain (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-1fvm.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Much of our current arsenal of antibiotics is borrowed from the world's true experts in infection control: bacteria and fungi. These organisms protect themselves with a bewildering collection of exotic chemical weapons, evolved to attack weak points in their competitors. Many of these antibiotic compounds, such as penicillin, attack enzymes, blocking their action and ultimately killing the infecting bacterium. Vancomycin, on the other hand, attacks the thing being built by a bacterial enzyme.</div>
+<h4>Blocking Construction</h4>
+<div>Bacteria build a sturdy cell wall composed of sugar chains crosslinked by short peptides, forming a network called peptidoglycan. This network is built in many steps, laying down the sugar chains and building the peptide connectors. Vancomycin acts near the end of this process. One end of the crosslinking peptide has two alanine amino acids (more specifically, D-alanines, with stereochemistry opposite from the normal L-alanines). To form the crosslink, the final alanine is popped off, and the peptide is attached to a neighboring peptide. As shown here in PDB entry <span class="rcsb_id_tag" title="Vancomycin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fvm" target="_blank">1fvm <i class="fa fa-external-link"> </i></a></span>, vancomycin binds tightly to this D-alanine-D-alanine peptide, blocking the ability to form the crosslink.</div>
+<h4>Positive and Negative</h4>
+<div>Only some bacteria are susceptible to vancomycin. Bacteria such as <i>Staphylococcus</i> have a thick layer of peptidoglycan that surrounds the cell, and are termed gram positive because of the way this peptidoglycan takes up crystal violet stain when observed in the microscope. Vancomycin is effective for blocking formation of this type of cell wall and is currently used as a last resort antibiotic for persistent infections by these bacteria. Gram negative bacteria such as <i>Escherichia coli</i>, on the other hand, build their peptidoglycan beneath an outer membrane, where it is protected from this stain and from attack by vancomycin. So, smaller antibiotics like penicillin are needed to get inside in these bacteria.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="VanA reconstructed from a 30,000 year old bacterium, with bound ATP in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-3se7.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>VanA reconstructed from a 30,000 year old bacterium, with bound ATP in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-3se7.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Ancient Resistance</h4>
+<div>Bacteria become resistant to vancomycin by getting rid of its target. The protein VanA, with the help of two other proteins, adds a lactate group instead of alanine to the end of the peptidoglycan chain. This works just as well for the crosslinking, but is not susceptible to the antibiotic. The structure shown here is VanA from an ancient bacterium, recreated from DNA from 30,000 year old permafrost sediments (PDB entry <span class="rcsb_id_tag" title="VanA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3se7" target="_blank">3se7 <i class="fa fa-external-link"> </i></a></span>). Surprisingly, it is very similar to VanA made by modern bacteria, showing that this war of antibiotics and resistance began long before medical science discovered the utility of antibiotics. You can compare the ancient and modern proteins using the <a href="http://www.rcsb.org/pdb/workbench/showPrecalcAlignment.do?action=pw_fatcat&amp;name1=1E4E.A&amp;name2=3SE7.A"> Structure Comparison Tool.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>VanA and D-alanine-D-alanine Ligase (PDB entries 1e4e and 2dln)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/192/192-Vancomycin-1e4e_2dln_JSmol.jpg"/></div>
+<p>We can learn about the evolution of VanA by looking at other bacterial proteins. VanA is a D-alanine-D-lactate ligase, indicating that it adds lactate to the growing peptidoglycan chain. The enzyme that makes the normal peptidoglycan is a D-alanine-D-alanine ligase, which adds alanine to the chain. Comparing the two structures, from PDB entries <span class="rcsb_id_tag" title="VanA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e4e" target="_blank">1e4e <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="D-alanine-D-alanine ligase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dln" target="_blank">2dln <i class="fa fa-external-link"> </i></a></span>, shows that they are quite similar, providing evidence that the enzyme providing resistance evolved from the normal enzyme. To explore these two structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can explore a variety of similar antibiotics and the enzymes involved in synthesizing them by searching for "glycopeptide antibiotics."</li>
+<li>You can look at the VanX protein in PDB entry <span class="rcsb_id_tag" title="VanX">1r44</span>, which is also needed for resistance against vancomycin. It is a small enzyme that breaks down any D-alanine-D-alanine peptides that may be present in the cell wall, making room for VanA to build its modified peptides.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3se7: V. M. D'Costa, C. E. King, L. Kalan, M. Morar, W. W. L. Sung, C. Schwarz, D. Froese, G. Zazula, F. Calmels, R. Debruyne, G. B. Golding, H. N. Poinar &amp; G. D. Wright (2011) Antibiotic resistance is ancient. Nature 477, 457-461.</li>
+<li>1fvm: Y. Nitanai, T. Kikuchi, K. Kakoi, S. Hanamaki, I. Fujisawa &amp; K. Aoki (2009) Crystal structures of the complexes between vancomycin and cell-wall precursor analogs. Journal of Molecular Biology 385, 1422-1432.</li>
+<li>1e4e: D. I. Roper, T. Huyton, A. Vagin &amp; G. Dodson (2000) The molecular basis of vancomycin resistance in clinically relevant Enterococci: crystal structure of D-alanyl-D-lactate ligase (VanA). Proceedings of the National Academy of Sciences USA 97, 8921-8925.</li>
+<li>2dln: C. Fan, P. C. Moews, C. T. Walsh &amp; J. R. Knox (1994) Vancomycin resistance: structure of D-alanine:D-alanine ligase at 2.3 A resolution. Science 266, 439-443.</li>
+<li>J. C. J. Barna &amp; D. H. Williams (1984) The structure and mode of action of glycopeptide antibiotics of the vancomycin group. Annual Reviews of Microbiology 38, 339-357.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_12">http://doi.org/10.2210/rcsb_pdb/mom_2015_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

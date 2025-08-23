@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Carbon Capture Mechanisms</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Carbon Capture Mechanisms" property="og:title"/>
+<meta content="Scientists are studying cyanobacteria to improve the productivity of agricultural crops" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/297/BicA.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/297" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Carbon Capture Mechanisms" name="twitter:title"/>
+<meta content="Scientists are studying cyanobacteria to improve the productivity of agricultural crops" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/297/BicA.jpg" name="twitter:image"/>
+<meta content="Scientists are studying cyanobacteria to improve the productivity of agricultural crops" name="description"/>
+<meta content="photosynthesis,carbon dioxide,carbon fixation,CO2,bicarbonate,carbon capture,agriculture,food,climate change,environment,transporter,carboxysome,Rubisco,carbonic anhydrase,respiratory enzyme,cyanobacteria,7egl,7cyf,8thm,7yyo,6tjv,6ki1,6ki2" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 297
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 297 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Carbon Capture Mechanisms</h1>
+<p><i>Scientists are studying cyanobacteria to improve the productivity of agricultural crops</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bicarbonate transporter BicA. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/297/BicA.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bicarbonate transporter BicA. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/297/BicA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Modern agriculture employs many methods to increase the amount of crops that are grown, for use as food and as raw material for generating biofuels. Agricultural improvements include good nutrition, methods to fight pests and disease, and ensuring that there is enough water. However, to support the growing world population and to fight the accumulation of carbon dioxide causing climate change, we need additional ways to enhance agricultural productivity. Scientists are looking to the basic mechanisms of photosynthesis to see if there is room for improvement. One way to supercharge photosynthesis is to ensure that there is plenty of carbon dioxide available.</div>
+<h4>Carbon Experts</h4>
+<div>Cyanobacteria are experts at capturing carbon dioxide for use in photosynthesis. These simple photosynthetic bacteria arose very early in the evolution of life, and have had to face continually dwindling sources of carbon dioxide as the environment of the Earth changed over millennia. Today, cyanobacteria and other phytoplankton fix roughly half of the carbon dioxide on the Earth, and they do so with remarkable efficiency. One way they do this is by selectively transporting carbon dioxide to <a href="https://pdb101.rcsb.org/motm/11">Rubisco</a>, the enzyme that fixes carbon, using several complementary molecular mechanisms. These mechanisms can increase the concentration of carbon dioxide by a thousand times around the active site of Rubisco. Researchers are currently working to add these same mechanisms to crop plants to improve productivity.</div>
+<h4>Bicarbonate Transport</h4>
+<div>The first carbon-capture mechanism used by cyanobacteria is simple: they transport bicarbonate directly into the cell. In lakes and oceans, much of the carbon dioxide reacts with water molecules to form soluble bicarbonate ions. Bicarbonate transporters traffic these bicarbonate ions into the cytoplasm, later to be converted back to carbon dioxide. Cyanobacteria utilize several types of bicarbonate transporters. BicA, shown here from PDB ID <a href="https://www.rcsb.org/structure/6ki1" target="_blank">6ki1</a> and <a href="https://www.rcsb.org/structure/6ki2" target="_blank">6ki2</a>, and SbtA, shown in the interactive JSMol below, both use sodium ions to power the transport.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="(Left) Slice from an electron tomogram of a carboxysome. (Right) Atomic structures of Rubisco and carbonic anhydrase from cyanobacterial carboxysomes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/297/carboxysome.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Left) Slice from an electron tomogram of a carboxysome. (Right) Atomic structures of Rubisco and carbonic anhydrase from cyanobacterial carboxysomes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/297/carboxysome.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Containing Carbon</h4>
+<div>Cyanobacteria use carboxysomes to concentrate carbon dioxide near the enzymes that use it. Carboxysomes are large protein shells similar to virus capsids, as seen in the electron tomogram at <a href="https://www.emdataresource.org/EMD-14377"> EMDB ID 14377. </a>The inside is packed with Rubisco (PDB ID <a href="https://www.rcsb.org/structure/7yyo" target="_blank">7yyo</a>), carbonic anhydrase (PDB ID <a href="https://www.rcsb.org/structure/8thm" target="_blank">8thm</a>), and several other enzymes needed to keep everything functional. When bicarbonate enters the carboxysome, it’s rapidly converted to carbon dioxide by carbonic anhydrase. Rubisco is positioned nearby, ready to fix the carbon dioxide before it diffuses away.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="NDH-1MS with the CO2-concentrating module in magenta. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/297/6tjv.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>NDH-1MS with the CO<sub>2</sub>-concentrating module in magenta. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/297/6tjv.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Carbon Capture</h4>
+<div>Cyanobacteria also use a modified version of the NDH-1 respiratory complex to trap carbon inside the cell. NDH-1MS (PDB ID <a href="https://www.rcsb.org/structure/6tjv" target="_blank">6tjv</a>) has a CO<sub>2</sub>-concentrating module that acts as a carbonic anhydrase, converting carbon dioxide to bicarbonate. Carbon dioxide passes freely through cellular membranes, but bicarbonate doesn’t cross as well. So NDH-1MS converts carbon dioxide to bicarbonate, trapping it inside the cell. The bicarbonate can then diffuse into carboxysomes and be converted back to carbon dioxide for use in photosynthesis.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Bicarbonate Transporter</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/297/SbtAB_JSmol-jmol.jpg"/></div>
+<p>Bicarbonate transporters are regulated to provide the proper amount of carbon to the photosynthetic machinery. The cyanobacterial transporter SbtA is regulated by the associated protein SbtB. As seen in PDB ID <a href="https://www.rcsb.org/structure/7egl" target="_blank">7egl</a> at the top, when bicarbonate is needed, a loop in SbtB is disordered, leaving the transport channel in SbtA open and available for passage. However, when AMP binds to SbtB (bottom, PDB ID <a href="https://www.rcsb.org/structure/7cyf" target="_blank">7cyf</a> or <a href="https://www.rcsb.org/structure/7egk" target="_blank">7egk</a>), this T-loop binds to SbtA and blocks the action of the channel. To explore these two structures in more detail, click on the JSmol tab for an interactive view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The full atomic structure of carboxysomes is still under study, but you can look at the structure of one vertex in PDB ID <a href="https://www.rcsb.org/structure/8wxb" target="_blank">8wxb</a> and a mini-carboxysome in PDB ID <a href="https://www.rcsb.org/structure/8b12" target="_blank">8b12</a>.</li>
+<li>Higher plants don’t have these carbon capture mechanisms, but green algae do. For example, look at PDB ID <a href="https://www.rcsb.org/structure/6bhp" target="_blank">6bhp</a> to see an algal channel that is thought to transport carbon dioxide.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7yyo: Evans, S.L., Al-Hazeem, M.M.J., Mann, D., Smetacek, N., Beavil, A.J., Sun, Y., Chen, T., Dykes, G.F., Liu, L.N., Bergeron, J.R.C. (2023) Single-particle cryo-EM analysis of the shell architecture and internal organization of an intact alpha-carboxysome. Structure 31: 677-688</li>
+<li>7egl: Fang, S., Huang, X., Zhang, X., Zhang, M., Hao, Y., Guo, H., Liu, L.N., Yu, F., Zhang, P. (2021) Molecular mechanism underlying transport and allosteric inhibition of bicarbonate transporter SbtA. Proc Natl Acad Sci U S A 118: e2101632118</li>
+<li>7cyf: Liu, X.Y., Hou, W.T., Wang, L., Li, B., Chen, Y., Chen, Y., Jiang, Y.L., Zhou, C.Z. (2021) Structures of cyanobacterial bicarbonate transporter SbtA and its complex with PII-like SbtB. Cell Discov 7: 63-63</li>
+<li>6tjv: Schuller, J.M., Saura, P., Thiemann, J., Schuller, S.K., Gamiz-Hernandez, A.P., Kurisu, G., Nowaczyk, M.M., Kaila, V.R.I. (2020) Redox-coupled proton pumping drives carbon concentration in the photosynthetic complex I. Nat Commun 11: 494-494</li>
+<li>6ki1, 6ki2: Wang, C., Sun, B., Zhang, X., Huang, X., Zhang, M., Guo, H., Chen, X., Huang, F., Chen, T., Mi, H., Yu, F., Liu, L.N., Zhang, P. (2019) Structural mechanism of the active bicarbonate transporter from cyanobacteria. Nat Plants 5: 1184-1193</li>
+<li>Ort, D.R., Merchant, S.S., Alric, J., Barkan, A., Blankenship, R.E., Bock, R., Croce, R., Hanson, M.R., Hibberd, J.M., Long, S.P., Moore, T.A., Moroney, J., Niyogi, K.K., Parry, M.A., Peralta-Yahya, P.P., Prince, R.C., Redding, K.E., Spalding, M.H., van Wijk, K.J., Vermaas, W.F., von Caemmerer S., Weber A.P., Yeates T.O., Yuan J.S., Zhu, X.G. (2015) Redesigning photosynthesis to sustainably meet global food and bioenergy demand. Proc Natl Acad Sci USA 112: 8529-8536.</li>
+<li>Rae, B.D., Long, B.M., Badger, M.R., Price, G.D. (2013). Functions, compositions, and evolution of the two types of carboxysomes: polyhedral microcompartments that facilitate CO2 fixation in cyanobacteria and some proteobacteria. Microbio Mol Biol Rev 77: 357–379</li>
+<li>Badger, M.R., Price, G.D. (2003) CO2 concentrating mechanisms in cyanobacteria: molecular components, their diversity and evolution. J Exper Botany 54: 609–622</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2024, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2024_9">http://doi.org/10.2210/rcsb_pdb/mom_2024_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Major Histocompatibility Complex</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Major Histocompatibility Complex" property="og:title"/>
+<meta content="MHC displays peptides on the surfaces of cells, allowing the immune system to sense the infection inside" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/62/Figure1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/62" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Major Histocompatibility Complex" name="twitter:title"/>
+<meta content="MHC displays peptides on the surfaces of cells, allowing the immune system to sense the infection inside" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/62/Figure1.jpg" name="twitter:image"/>
+<meta content="MHC displays peptides on the surfaces of cells, allowing the immune system to sense the infection inside" name="description"/>
+<meta content="antigen processing and presentation,cellular immunity,immune response,major histocompatibility complex,T-cell activation,MHC,1hsa,1hsa,1dlh,1tcr,1igt,2hla,2vaa,2vab,1hhg,1hhh,1hhi,1hhj,1hhk" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 62
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 62 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Major Histocompatibility Complex</h1>
+<p><i>MHC displays peptides on the surfaces of cells, allowing the immune system to sense the infection inside</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Major histocompatibility complex, with a displayed peptide in red. The portion crossing the membrane is not included in the structure and is shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/62/Figure1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Major histocompatibility complex, with a displayed peptide in red. The portion crossing the membrane is not included in the structure and is shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/62/62-MajorHistocompatibilityComplex-1hsa.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses are insidious enemies, so we must have numerous defenses against them. <a href="http://pdb101-beta.rcsb.org/motm/21">Antibodies</a> are our first line of defense. Antibodies bind to viruses, mobilizing blood cells to destroy them. But what happens if viruses slip past this defense and get inside a cell? Then, antibodies have no way of finding them and the viruses are safe...but not quite. <br/><br/> Each cell has a second line of defense that it uses to signal to the immune system when something goes wrong inside. Cells continually break apart a few of their old, obsolete proteins and display the pieces on their surfaces. The small peptides are held in MHC, the major histocompatibility complex, which grips the peptides and allow the immune system to examine them. In this way, the immune system can monitor what is going on inside the cell. If all the peptides displayed on the cell surface are normal, the immune system leaves the cell alone. But if there is a virus multiplying inside the cell, many of the MHC molecules carry unusual peptides from viral proteins, and the immune system kills the cell.</div>
+<h4>Displaying Peptides</h4>
+<div>Like many proteins used in the immune system, MHC is composed of several functional parts connected by flexible joints. The structure shown here, PDB ID <a href="https://www.rcsb.org/structure/1hsa" target="_blank">1hsa</a>, only shows the part found on the outside of the cell. The large chain colored orange has a groove at the top, which binds to the peptide, colored red. A smaller chain, colored pink, stabilizes the structure. In the whole protein, the orange chain extends down and crosses the cell membrane at the bottom, attaching the protein to the surface of the cell. This portion of the molecule, however, is too flexible for study by x-ray crystallography and was removed for the analysis.</div>
+<h4>MHC in Action</h4>
+<div>Our itchy reaction to poison ivy is caused by the MHC system. The resins on poison ivy leaves react with proteins in the skin. These poisoned cells then break the proteins into pieces and display them using MHC molecules. The itchy rash is caused when the immune system attacks the problem. Even more serious, MHC is the cause of tissue rejection during skin grafts and organ grafts. This is how the protein got its name: the term histocompatibility refers to the difficulty of finding compatible grafts between a donor and a patient. Each person has their own collection of MHC molecules. There are hundreds of different kinds, but each person only has four types (two from each parent). If you graft a piece of skin that has a different collection of MHC types, they will trigger the immune system to destroy the cells. So the trick is to find a compatible donor, such as a relative, who has a similar collection of MHC molecules.</div>
+<h4>The Cancer Connection</h4>
+<div>There is growing evidence that the MHC system is also important in the natural fight against cancer in your body. Cancer cells, like normal cells, display pieces of their own proteins on their surface. So, if any of these proteins carry recognizable cancer mutations, this provides a signal to the immune system that something is wrong.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Class I (left) and class II (right) MHC." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/62/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Class I (left) and class II (right) MHC.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/62/62-MajorHistocompatibilityComplex-1hsa-1dlh.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Types and Terminology</h4>
+<div>Two major types of MHC are used in your body. Class I MHC is found on the surface of most cells, where it protects us from viral infection. An example is shown on the left, from PDB ID <a href="https://www.rcsb.org/structure/1hsa" target="_blank">1hsa</a>. Class II MHC, on the other hand, is found in specialized antigen-presenting cells that have the job of picking up proteins around the body and stimulating the immune system when they find a strange peptide to display. Like class I MHC, class II MHC is found tethered to the cell surface and it has a pocket that displays small peptides. It is different, however, in a few details. Both chains of class II MHC have portions that cross the membrane and the binding site is formed in a groove between the two chains. An example is shown here on the right from PDB ID <a href="https://www.rcsb.org/structure/1dlh" target="_blank">1dlh</a>. As is often the case in science, there is also some terminology to watch out for: human MHC molecules are often named HLA, for human leucocyte antigen.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="(Left) Cartoon representation of an Ig domain, with a central cystine crosslink in spheres. (Right) Cartoon representation of Ig domains in proteins of the immune system." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/62/Figure3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Left) Cartoon representation of an Ig domain, with a central cystine crosslink in spheres. (Right) Cartoon representation of Ig domains in proteins of the immune system.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/62/Figure3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Family of Folds</h4>
+<div>Many immune system proteins are built of a similar folding unit, composed of a sandwich of beta sheets (shown with blocky arrows in cartoon diagrams) locked together with a disulfide bridge between two cysteine amino acids in the center. This common domain structure shows up again and again as you look through the immune system proteins in the PDB. Three examples are shown here: the T-cell receptor (PDB ID <a href="https://www.rcsb.org/structure/1tcr" target="_blank">1tcr</a>) which has four of these domains; an antibody (PDB ID <a href="https://www.rcsb.org/structure/1igt" target="_blank">1igt</a>) with 12 of these domains; and MHC (PDB ID <a href="https://www.rcsb.org/structure/2hla" target="_blank">2hla</a>) with two of these domains. The similarity of the amino acids that form these tight units indicates that many immune system proteins have evolved from a similar ancestor protein.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>MHC I with Viral Peptides</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/62/jmol-jmol.jpg"/></div>
+<p>The entire MHC system poses a problem: each cell has thousands of different peptides to display, but each cell only builds a few types of MHC. The solution to this dilemma was revealed in the early structures of MHC with different peptides. The two structures shown here, PDB ID <a href="https://www.rcsb.org/structure/2vaa" target="_blank">2vaa</a> and <a href="https://www.rcsb.org/structure/2vab" target="_blank">2vab</a><span class="rcsb_id_tag" title="">, have peptides from two different viruses bound to the same MHC. Another similar series can be found in PDB entries <a href="https://www.rcsb.org/structure/1hhg" target="_blank">1hhg</a>, <a href="https://www.rcsb.org/structure/1hhh" target="_blank">1hhh</a>, <a href="https://www.rcsb.org/structure/1hhi" target="_blank">1hhi</a>, <a href="https://www.rcsb.org/structure/1hhj" target="_blank">1hhj</a> and <a href="https://www.rcsb.org/structure/1hhk" target="_blank">1hhk</a>. Looking at these structures, you can see that the peptides (red), which are nine amino acids long, are held in a similar extended conformation in a groove between two long alpha helices. The structures revealed that the protein primarily grips the ends of the peptide, leaving most of the variable portions of the peptide exposed on the surface. Click on the image to view an interactive JSmol. In addition, you can explore how the immune system recognizes these exposed portions of the peptides in the <a href="http://pdb101.rcsb.org/motm/63">Molecule of the Month on T-cell receptors</a>.</span></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Sell (2001) Immunology, Immunopathology and Immunity. ASM Press, Washington, D. C.</li>
+<li>K. Natarajan, H. Li, R. A. Mariuzza and D. H. Margulies (1999) MHC Class I Molecules, Structure and Function. Reviews in Immunogenetics 1, 32-46.</li>
+<li>I. A. York and K. L. Rock (1996) Antigen Processing and Presentation by the Class I Major Histocompatibility Complex. Annual Review of Immunology 14, 369-396.</li>
+<li>M. Matsumura, D. H. Fremont, P. A. Peterson and I. A. Wilson (1992) Emerging Principles for the Recognition of Peptide Antigens by MHC Class I Molecules. Science 257, 927-934.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_2">http://doi.org/10.2210/rcsb_pdb/mom_2005_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

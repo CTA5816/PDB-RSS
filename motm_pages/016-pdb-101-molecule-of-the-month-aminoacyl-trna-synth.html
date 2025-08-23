@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Aminoacyl-tRNA Synthetases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Aminoacyl-tRNA Synthetases" property="og:title"/>
+<meta content="Aminoacyl-tRNA synthetases ensure that the proper amino acids are used to build proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/16/1asz.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/16" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Aminoacyl-tRNA Synthetases" name="twitter:title"/>
+<meta content="Aminoacyl-tRNA synthetases ensure that the proper amino acids are used to build proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/16/1asz.gif" name="twitter:image"/>
+<meta content="Aminoacyl-tRNA synthetases ensure that the proper amino acids are used to build proteins" name="description"/>
+<meta content="aminoacyl-tRNA ligase,protein synthesis,protein translation,transfer RNA,translation fidelity,tRNA aminoacylation,1asz,1set,1asz,1ffy,1gax,1euq,1eiy,1qf6,1ffy,1gtr" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 16
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 16 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Aminoacyl-tRNA Synthetases</h1>
+<p><i>Aminoacyl-tRNA synthetases ensure that the proper amino acids are used to build proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Aspartyl-tRNA synthetase (blue and green) bound to tRNA (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/16/1asz.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aspartyl-tRNA synthetase (blue and green) bound to tRNA (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/16/16-Aminoacyl-tRNASynthetases-1asz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>When a ribosome pairs a "CGC" tRNA with "GCG" codon, it expects to find an alanine carried by the tRNA. It has no way of checking; each tRNA is matched with its amino acid long before it reaches the ribosome. The match is made by a collection of remarkable enzymes, the aminoacyl-tRNA synthetases. These enzymes charge each tRNA with the proper amino acid, thus allowing each tRNA to make the proper translation from the genetic code of DNA into the amino acid code of proteins. For more information on tRNA, see the <a href="http://pdb101.rcsb.org/motm/15">previous Molecule of the Month</a>.</div>
+<h4>Twenty Flavors</h4>
+<div>Most cells make twenty different aminoacyl-tRNA synthetases, one for each type of amino acid. These twenty enzymes are widely different, each optimized for function with its own particular amino acid and the set of tRNA molecules appropriate to that amino acid. The one shown here, which charges aspartic acid onto the proper tRNA (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1asz" target="_blank">1asz <i class="fa fa-external-link"> </i></a></span>), is a dimer of two identical subunits (colored blue and green, the two tRNA molecules are colored red). Others are small monomers or large monomers, or dimers, or even tetramers of one or more different types of subunits. Some have wildly exotic shapes, such as the serine enzyme (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1set" target="_blank">1set <i class="fa fa-external-link"> </i></a></span>). The structures of nearly all of these different enzymes are available in the PDB.</div>
+<h4>Finding the Proper Mate</h4>
+<div>As you might expect, many of these enzymes recognize their tRNA molecules using the anticodon. But this may not be possible in some cases. Take serine, for instance. Six different codons specify serine, so seryl-tRNA synthetase must recognize six tRNA molecules with six different anticodons, including AGA and GCU, which are entirely different from one another. So, tRNA molecules are also recognized using segments on the acceptor end and bases elsewhere in the molecule. One base in particular, number 73 in the sequence, seems to play a pivotal role in many cases, and has been termed the discriminator base. In other cases, however, it is completely ignored. Note also that each enzyme must recognize its own tRNA molecules, but at the same time, it must not bind to any of the other ones. So, each tRNA has a set of positive interactions that match up the proper tRNA with the proper enzyme, and a set of negative interactions that block binding of improper pairs. For instance, the aspartyl-tRNA synthetase shown here (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1asz" target="_blank">1asz <i class="fa fa-external-link"> </i></a></span>) recognizes the discriminator base and 4 bases around the anticodon. But, one other base, guanine 37, is not used in binding, but must be methylated to ensure that the tRNA does not bind improperly to the arginyl-tRNA synthetase.</div>
+<h4>Surprises from Genome Analyses</h4>
+<div>Recent analyses of entire genomes revealed a big surprise: some organisms don't have genes for all twenty aminoacyl-tRNA synthetases. They do, however, use all twenty amino acids to construct their proteins. The solution to this paradox revealed, as is often the case in living cells, that more complex mechanisms are used. For instance, some bacteria do not have an enzyme for charging glutamine onto its tRNA. Instead, a single enzyme adds glutamic acid to all of the glutamic acid tRNA molecules <i>and</i> to all of the glutamine tRNA molecules. A second enzyme then converts the glutamic acid into glutamine on the latter tRNA molecules, forming the proper pair.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Aminoacyl-tRNA synthetases, with bound tRNA in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/16/aaRS.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aminoacyl-tRNA synthetases, with bound tRNA in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/16/16-Aminoacyl-tRNASynthetases-aaRS.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Different Approaches to the Same Problem</h4>
+<div>In this picture, five complexes of an aminoacyl-tRNA synthetase with tRNA are shown, aligned so that the tRNA molecules (shown in red) are in the same orientation. Notice that the enzymes approach the tRNA from different angles. The isoleucine (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ffy" target="_blank">1ffy <i class="fa fa-external-link"> </i></a></span>), valine (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gax" target="_blank">1gax <i class="fa fa-external-link"> </i></a></span>) and glutamine (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1euq" target="_blank">1euq <i class="fa fa-external-link"> </i></a></span>) enzymes cradle the tRNA, gripping the anticodon loop (at the bottom in each tRNA), and placing the amino-acid acceptor end of the tRNA in the active site (at the top right in each tRNA). These all share a similar protein framework, known as "Type I," approaching the tRNA similarly and adding the amino acid to the last 2' hydroxyl group in the tRNA. The phenylalanine (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1eiy" target="_blank">1eiy <i class="fa fa-external-link"> </i></a></span>) and threonine (entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qf6" target="_blank">1qf6 <i class="fa fa-external-link"> </i></a></span>) enzymes are part of a second class of enzymes, known as "Type II." They approach the tRNA from the other side, and add the amino acid to the other free hydroxyl on the last tRNA base.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>High Fidelity</h4>
+<div>Aminoacyl-tRNA synthetases must perform their tasks with high accuracy. Every mistake they make will result in a misplaced amino acid when new proteins are constructed. These enzymes make about one mistake in 10,000. For most amino acids, this level of accuracy is not too difficult to achieve. Most of the amino acids are quite different from one another, and, as mentioned before, many parts of the different tRNA are used for accurate recognition. But in a few cases, it is difficult to choose just the right amino acids and these enzymes must resort to special techniques. <br/><br/> Isoleucine is a particularly difficult example. It is recognized by an isoleucine-shaped hole in the enzyme, which is too small to fit larger amino acids like methionine and phenylalanine, and too hydrophobic to bind anything with polar sidechains. But, the slightly smaller amino acid valine, different by only a single methyl group, also fits nicely into this pocket, binding instead of isoleucine in about 1 in 150 times. This is far too many errors, so corrective steps must be taken. Isoleucyl-tRNA synthetase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ffy" target="_blank">1ffy <i class="fa fa-external-link"> </i></a></span>) solves this problem with a second active site, which performs an editing reaction. Isoleucine does not fit into this site, but errant valine does. The mistake is then cleaved away, leaving the tRNA ready for a properly-placed isoleucine amino acid. This proofreading step improves the overall error rate to about 1 in 3,000.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Catalytic and editing sites of isoleucyl-tRNA synthetase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/16/1ffy.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Catalytic and editing sites of isoleucyl-tRNA synthetase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/16/16-Aminoacyl-tRNASynthetases-1ffy.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Information on Aminoacyl-tRNA Synthetases</h4>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glutaminyl-tRNA synthetase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/16/Glutaminyl-tRNA synthetase-jmol.jpg"/></div>
+<p>These enzymes are not gentle with tRNA molecules. The structure of glutaminyl-tRNA synthetase with its tRNA (PDB ID <a href="https://www.rcsb.org/structure/1gtr" target="_blank">1gtr</a>) is a good example. The enzyme (shown in red) firmly grips the anticodon loop (shown in yellow), spreading the three bases widely apart for better recognition. At the other end, the enzyme unpairs one base at the beginning of the chain, seen curving upward here, and kinks the long acceptor end of the chain into a tight hairpin, seen here curving downward. This places the 2' hydroxyl on the last nucleotide in the active site, where ATP (colored white) and the amino acid (not present in this structure) are bound. <br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Xinyi Christine Zhang.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Michael Ibba and Dieter Soll (2000) Aminoacyl-tRNA Synthesis. Annual Review of Biochemistry 69, 617-650.</li>
+<li>John G. Arnez and Dino Moras (1997) Structural and Functional Considerations of the Aminoacylation Reaction. Trends in Biochemical Sciences 22, 211-216.			</li>
+<li>Stephen Cusak (1995) Eleven Down and Nine to Go. Nature Structural Biology 2, 824-831.		</li>
+<li>Jonathan J. Burbaum and Paul Schimmel (1991) Structural Relationships and the Classification of Aminoacyl-tRNA Synthetases. Journal of Biological Chemistry 266, 16965-16968.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_4">http://doi.org/10.2210/rcsb_pdb/mom_2001_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

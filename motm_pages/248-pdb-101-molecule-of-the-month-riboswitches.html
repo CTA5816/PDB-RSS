@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Riboswitches</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Riboswitches" property="og:title"/>
+<meta content="Special sequences of messenger RNA can bind to regulatory molecules and affect synthesis of proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/130/mom130-1u8d.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/130" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Riboswitches" name="twitter:title"/>
+<meta content="Special sequences of messenger RNA can bind to regulatory molecules and affect synthesis of proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/130/mom130-1u8d.jpg" name="twitter:image"/>
+<meta content="Special sequences of messenger RNA can bind to regulatory molecules and affect synthesis of proteins" name="description"/>
+<meta content="aptamer,metabolite,riboswitch,ribozyme,RNA structure,1u8d,2qbz,3irw,3iwn,2z75,1y27,1y26" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 130
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 130 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Riboswitches</h1>
+<p><i>Special sequences of messenger RNA can bind to regulatory molecules and affect synthesis of proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Aptamer domain of a guanine riboswitch." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/130/mom130-1u8d.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aptamer domain of a guanine riboswitch.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/130/130-Riboswitches_1u8d.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Why use two or more molecules when one will do? In our own cells, protein synthesis is controlled by thousands of regulatory proteins, which work together to decide when a particular protein will be made. Bacteria are masters of economy, however, and in some cases, they have figured out a way for messenger RNA to control itself, without the need for help by proteins.</div>
+<h4>Self Control</h4>
+<div>Riboswitches are regulatory elements built directly into a messenger RNA. For instance, the riboswitch shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1u8d" target="_blank">1u8d <i class="fa fa-external-link"> </i></a></span>) senses the level of purine bases, binding tightly to guanine, hypoxanthine and xanthine. This riboswitch is part of the messenger RNA that encodes enzymes that transport and metabolize purines. So, when purine bases are prevalent, they bind to the riboswitch and slow down the production of the proteins when they're not needed.</div>
+<h4>Flipping the Switch</h4>
+<div>Riboswitches use several tricks to perform their function. First, the folded riboswitch is stabilized by the ligand molecule, so the cell can sense the level of this ligand by seeing if the riboswitch is folded around it. Second, part of the riboswitch is used to control the expression of the messenger RNA. When the small molecule is bound, this "switching" sequence (shown here in pink) is locked in the folded riboswitch. But when the ligand is not available, the switching sequence is released. This switching sequence then typically forms part of an alternative riboswitch conformation that regulates transcription or protein synthesis, enhancing the production of proteins in some cases, and inhibiting it in others.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Riboswitch domains that bind to magnesium ions (left), the nucleotide c-di-GMP (center), and glucosamine-6-phosphate (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/130/mom130-riboswitches.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Riboswitch domains that bind to magnesium ions (left), the nucleotide c-di-GMP (center), and glucosamine-6-phosphate (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/130/130-Riboswitches_riboswitches.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Riboswitches Everywhere</h4>
+<div>Many riboswitches have been found in bacteria, as well as a few in plants and fungi. These sense the levels of many different types of molecules, including purines, amino acids, vitamins, and cofactors. A few unusual examples are shown here. On the left is a riboswitch that senses the levels of magnesium ions, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2qbz" target="_blank">2qbz <i class="fa fa-external-link"> </i></a></span>. In the center is a riboswitch that senses c-di-GMP (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3irw" target="_blank">3irw <i class="fa fa-external-link"> </i></a></span> or <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iwn" target="_blank">3iwn <i class="fa fa-external-link"> </i></a></span>), a nucleotide molecule that is used as a second messenger the way that cyclic AMP is used in our cells. On the right is a riboswitch that senses the level of glucosamine 6-phosphate, and then turns into a ribozyme that cleaves itself (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2z75" target="_blank">2z75 <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Purine-binding Riboswitches (PDB entries 1y26 and 1y27)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/130/mom130-1y26_1y27_jmol.jpg"/></div>
+<p>Riboswitches are remarkably specific for their preferred ligands, rivaling proteins for their strength and selectivity. Two similar riboswitches are shown here, one specific for guanine and the other specific for adenine (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1y27" target="_blank">1y27 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1y26" target="_blank">1y26 <i class="fa fa-external-link"> </i></a></span>). They have virtually identical nucleotide sequences, and fold into a virtually identical shape. The nucleotide at position 74 is the key to specificity: it forms a typical Watson-Crick base pair with the ligand, and discriminates between adenine and guanine. To take a closer look at this base pairing, click on the images here for an interactive Jmol image.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are structures of many different riboswitches in the PDB. Can you find other examples?</li>
+<li>Riboswitches recognize their ligands using only the four types of bases found in RNA. Try looking closely at these structures to discover how different riboswitches recognize their different ligands. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. Serganov (2009) The long and short of riboswitches. Current Opinion in Structural Biology 19, 251-259.</li>
+<li>M. D. Dambach and W. C. Winkler (2009) Expanding roles for metabolite-sensing regulatory RNAs. Current Opinion in Microbiology 12, 161-169.</li>
+<li>R. K. Montange and R. T. Batey (2008) Riboswitches: Emerging themes in RNA structure and function. Annual Review of Biophysics 37, 117-133.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_10">http://doi.org/10.2210/rcsb_pdb/mom_2010_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: PDB Pioneers</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: PDB Pioneers" property="og:title"/>
+<meta content="A dozen historic structures set the foundation for the PDB archive" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_oxygencarrier.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/142" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: PDB Pioneers" name="twitter:title"/>
+<meta content="A dozen historic structures set the foundation for the PDB archive" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_oxygencarrier.jpg" name="twitter:image"/>
+<meta content="A dozen historic structures set the foundation for the PDB archive" name="description"/>
+<meta content="Protein Crystallography,Protein Data Bank,Structural Biology,globin,1mbn,2dhb,2lhb,1lyz,3cpa,1sbt,2cha,9pap,4pti,6ldh,4rxn,1cyo" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 142
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 142 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: PDB Pioneers</h1>
+<p><i>A dozen historic structures set the foundation for the PDB archive</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Structures of oxygen-carrying proteins were some of the first structures available in the PDB." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_oxygencarrier.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Structures of oxygen-carrying proteins were some of the first structures available in the PDB.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_oxygencarrier.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Structural biology was born in 1958 with John Kendrew's atomic structure of myoglobin, and in the following decade, the field grew rapidly. By the early 1970's, there were a dozen atomic structures of proteins, and researchers were discovering that they had a goldmine of information. However, the coordinate files for these structures are quite large, and in the days before the internet, it was difficult for individual researchers to share these large files with the growing number of interested structural biologists around the world. The Protein Data Bank archive was created to solve this problem. Depositors would send their coordinates to the PDB, who would then mail them to interested users. To celebrate the 40th anniversary of the PDB, you can explore the historic protein structures that inspired the creation of the archive.</div>
+<h4>Carrying Oxygen</h4>
+<div>John Kendrew's structure of <a href="http://pdb101.rcsb.org/motm/1">myoglobin</a> (<span class="rcsb_id_tag" title="Myoglobin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mbn" target="_blank">1mbn <i class="fa fa-external-link"> </i></a></span>) revealed the folding of protein chains for the first time, as well as showing how protein chains interact with prosthetic groups and with ligands. Max Perutz's structure of <a href="http://pdb101.rcsb.org/motm/41">hemoglobin</a> (<span class="rcsb_id_tag" title="Hemoglobin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dhb" target="_blank">2dhb <i class="fa fa-external-link"> </i></a></span>) extended this story, showing how four similar chains can associate and regulate the binding of ligands through small changes in shape. The early PDB also included one additional protein from this family. A hemoglobin from lamprey (<span class="rcsb_id_tag" title="Hemoglobin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2lhb" target="_blank">2lhb <i class="fa fa-external-link"> </i></a></span>), which is intermediate between myoglobin and hemoglobin, regulates its action by transitioning between monomers and dimers.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The first enzyme structures in the PDB archive." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_enzymes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The first enzyme structures in the PDB archive.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_enzymes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Enzyme Active Sites</h4>
+<div>The early PDB also included several structures of enzymes, revealing how protein chains fold to form chemical catalysts. DC Phillips' structure of <a href="http://pdb101.rcsb.org/motm/9">lysozyme </a> (<span class="rcsb_id_tag" title="Lysozyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lyz" target="_blank">1lyz <i class="fa fa-external-link"> </i></a></span>), solved in 1965 and added to the PDB in 1975, revealed that enzymes have a form-fitting active site, and with some careful modeling, his group proposed that lysozyme distorts its substrate, making it easier to cleave. Several protein-cutting enzymes were included on the PDB magnetic tapes, including carboxypeptidase (<span class="rcsb_id_tag" title="Carboxypeptidase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cpa" target="_blank">3cpa <i class="fa fa-external-link"> </i></a></span>), subtilisin (<span class="rcsb_id_tag" title="Subtilisin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sbt" target="_blank">1sbt <i class="fa fa-external-link"> </i></a></span>), chymotrypsin (<span class="rcsb_id_tag" title="Chymotrypsin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cha" target="_blank">2cha <i class="fa fa-external-link"> </i></a></span>), and papain (<span class="rcsb_id_tag" title="Papain "><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=9pap" target="_blank">9pap <i class="fa fa-external-link"> </i></a></span>), as well as a small inhibitory protein, pancreatic trypsin inhibitor (<span class="rcsb_id_tag" title="Pancreatic trypsin inhibitor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4pti" target="_blank">4pti <i class="fa fa-external-link"> </i></a></span>). The largest structure in the early PDB was the oligomeric enzyme lactate dehydrogenase (<span class="rcsb_id_tag" title="Lactate dehydrogenase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6ldh" target="_blank">6ldh <i class="fa fa-external-link"> </i></a></span>), composed of four chains with a groundbreaking 334 amino acids each.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Rubredoxin and cytochrome b5 were some of the first structures in the PDB." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_electroncarrier.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Rubredoxin and cytochrome b5 were some of the first structures in the PDB.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/142/142-PDBPioneers_electroncarrier.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Electron Transport</h4>
+<div>Two protein structures included in the early PDB, rubredoxin (<span class="rcsb_id_tag" title="Rubredoxin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4rxn" target="_blank">4rxn <i class="fa fa-external-link"> </i></a></span>) and cytochrome b5 (<span class="rcsb_id_tag" title="Cytochrome b5"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cyo" target="_blank">1cyo <i class="fa fa-external-link"> </i></a></span>), revealed how proteins carry the smallest cargo: individual electrons. Both proteins use an iron atom to carry the electron, but they do this in different ways. Rubredoxin traps the iron ion in a cage of four sulfur atoms, provided by cysteine amino acids from the protein chain. Cytochrome b5, on the other hand, uses a heme group to position its iron atom in the proper place.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Pioneering Protein Structures</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/142/142-PDB_Pioneers-1mbn_jmol.jpg"/></div>
+<p>Many of the PDB files for these pioneering structures have been modified and improved over the past 40 years, but you can still find all of them in the database. Of course, today you don't have to wait for them to arrive in the mail: you can just download them from the internet, or use the Jmol image included here to flip through all of them. When you're browsing, notice that these proteins are small and compact, and they are also fairly plentiful proteins. These things made these early structures possible, because the first techniques of protein crystallography required lots of purified protein and lots of stable crystals. Today, sophisticated crystallization techniques and very bright synchrotron X-ray sources allow researchers to solve structures of much larger and more complex molecules, using much less material. <br/><br/> These early structures gave the first view of each protein, but they only provide a single snapshot of the protein. In each case, later structures fill out the biological story of how the protein works. You can find additional structures in the PDB that show the effect of mutations, ligand and inhibitor binding, motion of the protein, and other aspects of their function. For instance, you might look for structures that show features outlined in the "Topics for Further Discussion" below.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Find structures that show the allosteric motion of hemoglobin.</li>
+<li>Find structures that show the differences between hemoglobins from different organisms.</li>
+<li>Find structures that show the the binding of pancreatic trypsin inhibitor to trypsin.</li>
+<li>Find structures that show the the effect of mutations in lysozyme.</li>
+<li>Find structures that show the binding of the cofactor NADH to lactate dehydrogenase.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. C. Kendrew, G. Bodo, H. M. Dintzis, R. G. Parrish, H. Wyckoff &amp; D. C. Phillips (1958) A three-dimensional model of the myoglobin molecule obtained by x-ray analysis. Nature 181, 662-666.</li>
+<li>C. C. F. Blake, D. F. Koenig, G. A. Mair, A. C. T. North, D. C. Phillips &amp; V. R. Sarma (1965) Structure of hen egg-white lysozyme, a three-dimensional Fourier synthesis at 2 Angstroms resolution. Nature 206, 757-761.</li>
+<li>W. Bolton &amp; M. F. Perutz (1970) Three dimensional Fourier synthesis of horse deoxyhaemoglobin at 2.8 Angstrom units resolution. Nature 228, 551-2.</li>
+<li>F. C. Bernstein, T. F. Koetzle, G. J. B. Williams, E. F. Meyer Jr., M. D. Brice, J. R. Rogers, O. Kennard, T. Shimanouchi &amp; M. Tasumi (1977) The Protein Data Bank: a computer-based archival format for macromolecular structures. Journal of Molecular Biology 112: 535-542</li>
+<li>H. M. Berman (2008) The Protein Data Bank: a historical perspective. Acta Crystallographica Section A 64, 88-95.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_10">http://doi.org/10.2210/rcsb_pdb/mom_2011_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Photosynthetic Supercomplexes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Photosynthetic Supercomplexes" property="og:title"/>
+<meta content="Light is captured by huge supercomplexes of photosystems and antenna systems." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5xnl.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/244" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Photosynthetic Supercomplexes" name="twitter:title"/>
+<meta content="Light is captured by huge supercomplexes of photosystems and antenna systems." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5xnl.jpg" name="twitter:image"/>
+<meta content="Light is captured by huge supercomplexes of photosystems and antenna systems." name="description"/>
+<meta content="photosystem,photosynthesis,chlorophyll,energy,sunlight,antenna,5xnl,5zji,6kac,6kad,6nwa" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 244
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 244 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Photosynthetic Supercomplexes</h1>
+<p><i>Light is captured by huge supercomplexes of photosystems and antenna systems.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Photosystem II supercomplex from pea plants. The photosystem is in green, LHCII in yellow and minor antenna complexes in blue. The many cofactors are in bright green and red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5xnl.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem II supercomplex from pea plants. The photosystem is in green, LHCII in yellow and minor antenna complexes in blue. The many cofactors are in bright green and red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5xnl.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Several recent experimental advances have opened a new window on the detailed mechanisms of light capture during photosynthesis. Electron microscopy of chloroplast membranes revealed that photosystems are at the center of large supercomplexes, arrayed closely together and surrounded by antenna systems. Scientists are now developing new, gentler ways to coax these supercomplexes out of living cells, so that they don't break up in the process. Then, new techniques of single particle cryoelectron microscopy allow researchers to observe images of many, many copies of these purified supercomplexes, and combine these images to determine a detailed structure.</div>
+<h4>Super Complexes</h4>
+<div>Photosynthetic supercomplexes are composed of photosystems, which do the heavy lifting of the photosynthetic energy transformations, surrounded by antenna complexes, which harvest light and funnel energy into the photosystems. Light-harvesting complex II (LHCII) is a major antenna complex for plants and green algae--it is a triangular assembly of proteins filled with light-absorbing cofactors like chlorophyll and carotenoids. Several minor antenna complexes help to link LHCII with the photosystem. The supercomplex shown here (PDB entry <a href="https://www.rcsb.org/structure/5xnl" target="_blank">5xnl</a>) is <a href="https://pdb101.rcsb.org/motm/59">PSII</a> from pea plants.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Low light (left) and high light (right) forms of a photosystem II supercomplex from algae." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-6kad_6kac.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Low light (left) and high light (right) forms of a photosystem II supercomplex from algae.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-6kad_6kac.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Adjusting the Antenna</h4>
+<div>Plants and algae continually customize their supercomplexes to make most efficient use of the available light. For example, <a href="https://pdb101.rcsb.org/motm/59">PSII</a> is most efficient with red light, and <a href="https://pdb101.rcsb.org/motm/22">PSI</a> is most efficient with light that is pushed more towards far-red. Also, plants need to protect their photosystems from damage when there is too much light. Plant and algal cells dynamically shift the location of antenna complexes based on the amount and type of light that is available. These two structures (PDB entries <a href="https://www.rcsb.org/structure/6kac" target="_blank">6kac</a> and <a href="https://www.rcsb.org/structure/6kad" target="_blank">6kad</a>) show two forms of a photosystem from green algae, one with many antenna complexes for conditions with low light, and one with fewer for bright light.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Photosystem I supercomplexes from pea plants (top) and cyanobacteria (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5zji_6nwa.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem I supercomplexes from pea plants (top) and cyanobacteria (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5zji_6nwa.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>PSI Supercomplexes</h4>
+<div>Photosystem I (PSI) commonly forms supercomplexes with two types of light-harvesting complexes. PDB entry <a href="https://www.rcsb.org/structure/5zji" target="_blank">5zji</a> shows the supercomplex from maize plants. Four light-harvesting complex I (LHCI) molecules line one side of the photosystem. If light conditions are right for <a href="https://pdb101.rcsb.org/motm/22">PSI</a>, LHCII is also bound in the supercomplex, as seen here. Looking at other photosynthetic organisms, there are many variations on this theme. One of the largest supercomplexes is found in cyanobacteria, the most ancient photosynthetic organisms. Under stressed conditions, such as when they are starved for iron, cyanobacterial PSI forms a huge supercomplex with a trimer of the photosystem surrounded by one or two rings of antenna complexes (PDB entry <a href="https://www.rcsb.org/structure/6nwa" target="_blank">6nwa</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Photosystem II Supercomplex</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/244/244-Photosynthetic_Supercomplexes-5xnl_jmol.jpg"/></div>
+<p>Light-harvesting complexes are filled with light-absorbing cofactors, with just barely enough protein to hold them all together. In this image (PDB entry <a href="https://www.rcsb.org/structure/5xnl" target="_blank">5xnl</a>), the protein chains are shown with a backbone representation to make it easier to see all the cofactors arrayed inside. Chlorophylls are shown in bright green, and other colored cofactor molecules, like lutein and beta-carotene, are shown in pink. To explore this structure in more detail, click on the image for an interactive jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can explore the structures of the many cofactors in these complexes in the "Small Molecules" section of each PDB entry page.</li>
+<li>Take a look at the cryoEM data for these structures at the EMDataResource--there is a link at the top of each PDB entry page.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6kac, 6kad: Sheng, X., Watanabe, A., Li, A., Kim, E., Song, C., Murata, K., Song, D., Minagawa, J., Liu, Z. (2019) Structural insight into light harvesting for photosystem II in green algae. Nat.Plants 5: 1320-1330</li>
+<li>6nwa: Toporik, H., Li, J., Williams, D., Chiu, P.L., Mazor, Y. (2019) The structure of the stress-induced photosystem I-IsiA antenna supercomplex. Nat.Struct.Mol.Biol. 26: 443-449</li>
+<li>5zji: Pan, X., Ma, J., Su, X., Cao, P., Chang, W., Liu, Z., Zhang, X., Li, M. (2018) Structure of the maize photosystem I supercomplex with light-harvesting complexes I and II. Science 360: 1109-1113</li>
+<li>5xnl: Su, X., Ma, J., Wei, X., Cao, P., Zhu, D., Chang, W., Liu, Z., Zhang, X., Li, M. (2017) Structure and assembly mechanism of plant C2S2M2-type PSII-LHCII supercomplex. Science 357: 815-820</li>
+<li>Dudkina, N.V., Folea, I.M., Boekema, E.J. (2015) Towards a structural and functional characterization of photosynthetic and mitochondrial supercomplexes. Micron 72, 39-51.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_4">http://doi.org/10.2210/rcsb_pdb/mom_2020_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

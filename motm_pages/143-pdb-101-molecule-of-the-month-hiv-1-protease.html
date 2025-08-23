@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: HIV-1 Protease</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: HIV-1 Protease" property="og:title"/>
+<meta content="Atomic structures of HIV protease have been used to design powerful drugs for HIV therapy" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/6/3hvp.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/6" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: HIV-1 Protease" name="twitter:title"/>
+<meta content="Atomic structures of HIV protease have been used to design powerful drugs for HIV therapy" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/6/3hvp.gif" name="twitter:image"/>
+<meta content="Atomic structures of HIV protease have been used to design powerful drugs for HIV therapy" name="description"/>
+<meta content="AIDS,aspartic-type endopeptidase activity,HIV,human immunodeficiency virus,protease inhibitors,viral procapsin maturation,viral reproduction,7hvp,1hsg,1hxb,1hxw,1ohr" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 6
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 6 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: HIV-1 Protease</h1>
+<p><i>Atomic structures of HIV protease have been used to design powerful drugs for HIV therapy</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="HIV protease." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/6/3hvp.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>HIV protease.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/6/6-HIV-1Protease-3hvp.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Target for AIDS Therapy</h4>
+<div>Drugs that attack HIV-1 protease are one of the triumphs of modern medicine. The AIDS epidemic started a few short decades ago--before that, HIV was unknown. These drugs demonstrate the powerful tools that medical science has to combat a new disease. Already, researchers have discovered a panel of effective drugs which slow the growth of the virus to a standstill. Important problems still remain, however. In particular, an effective vaccine against HIV is not available. But today, HIV-infected individuals have potent options for treatment.</div>
+<h4>Attacking HIV</h4>
+<div>HIV-1 protease performs an essential step in the life cycle of HIV. Like many viruses, HIV makes many of its proteins in one long piece, with several proteins strung together. HIV-1 protease has the job of cutting this long "polyprotein" into the proper protein-sized pieces. The timing of this step is critical. The intact polyprotein is necessary early in the life cycle, when it assembles the immature form of the virus. Then, the polyprotein must be cut into the proper pieces to form the mature virus, which can then infect a new cell. The cleavage reactions must be timed perfectly, allowing the immature virus to assemble properly before the polyprotein is broken. Because of its sensitive and essential function, HIV-1 protease is an excellent target for drug therapy. Drugs bind tightly to the protease, blocking its action, and the virus perishes because it is unable to mature into its infectious form.</div>
+<h4>An Enzyme Under Scrutiny</h4>
+<div>The atomic structure of HIV-1 protease has made much of this work possible. The first structures were reported in 1989. A decade later, over one hundred structures are available in the PDB, including several genetic strains of the enzyme, complexes of the enzyme with many different drugs and inhibitors, and dozens of mutant enzymes. Hundreds more are stored in the proprietary databases of pharmaceutical companies, where they are used to test and refine new drug candidates. Overall, HIV-1 protease is now one of the best-studied enzymes known to medicine. It is an enigmatic enzyme, however, that still hides many of its secrets.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/6/7hvp_activesite.gif"/>
+<div class="img-caption"><a href="https://cdn.rcsb.org/pdb101/motm/6/6-HIV-1Protease-7hvp_activesite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Small But Effective Enzyme</h4>
+<div>HIV-1 protease is a small enzyme, composed of two identical protein chains, each only 99 amino acids long. The two chains assemble to form a long tunnel, seen here from the side, covered by two flexible protein "flaps." The flaps open up and the enzyme wraps around a protein chain, closing and holding it tightly in the tunnel. The active site is at the center of the tunnel, where a water molecule is used to break the protein chain. This illustration shows the enzyme from the top (the PDB accession code for this structure is <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=7hvp" target="_blank">7hvp <i class="fa fa-external-link"> </i></a></span>). In the two illustrations on the right, the flaps have been removed to show the active site. The center illustration shows the location of an inhibitor (green) which is similar to the position occupied by a protein chain. (There are no structures of a protein bound to the active form of HIV-1 protease, because the chain would be cleaved before the structure could be solved! So, we need to look at how inhibitors bind to imagine how the enzyme binds to protein chains.) Notice how the inhibitor chain is stretched straight through the active site. In the right illustration, the inhibitor has been removed so that we can see the active site. Two aspartate amino acids, shown with asterisks, do all of the work, attacking the protein chain at the very middle.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/6/hivpr_drugs.gif"/></div>
+<div>Four drugs that attack HIV-1 protease are currently being used to treat people infected with the virus. Structures of all four of these drugs bound to HIV-1 protease are available at the PDB. In the illustration, the enzyme is displayed as a ribbon that follows the two protein chains and the drugs are shown as spacefilling models. The view is from the top--notice how the flaps cover the top of the drug molecules. From left to right, the drugs are Indinavir (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hsg" target="_blank">1hsg <i class="fa fa-external-link"> </i></a></span>), Saquinavir (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hxb" target="_blank">1hxb <i class="fa fa-external-link"> </i></a></span>), Ritonavir (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hxw" target="_blank">1hxw <i class="fa fa-external-link"> </i></a></span>), and Nelfinavir (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ohr" target="_blank">1ohr <i class="fa fa-external-link"> </i></a></span>). Notice how similar these drugs are. They all have carbon-rich groups arrayed along either side, interacting with the sides of the active site tunnel. They each have two oxygen atoms at the center, pointing towards us in the illustration, that interact with a special water molecule that is normally trapped under the flaps (not shown here). The drugs all mimic a protein chain, binding to the enzyme like protein chains do. But they are more stable than a protein chain. HIV-1 protease cannot cleave them, so they stay lodged in the active site, blocking the normal function of the enzyme.<br/> This illustration was created with RasMol. You can create similar pictures of these drug complexes by clicking on the PDB accession codes above, and then picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV and AIDS</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_6">http://doi.org/10.2210/rcsb_pdb/mom_2000_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

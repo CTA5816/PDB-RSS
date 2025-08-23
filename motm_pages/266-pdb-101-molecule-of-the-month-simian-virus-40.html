@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Simian Virus 40</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Simian Virus 40" property="og:title"/>
+<meta content="SV40 hijacks the cells it infects using only a handful of proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/47/1sva_DNA.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/47" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Simian Virus 40" name="twitter:title"/>
+<meta content="SV40 hijacks the cells it infects using only a handful of proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/47/1sva_DNA.gif" name="twitter:image"/>
+<meta content="SV40 hijacks the cells it infects using only a handful of proteins" name="description"/>
+<meta content="cancer,capsid,capsid proteins,icosahedral virus,polyomavirus,simian virus 40,T-antigen,1sva,1n25,1tbd,1gh6" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 47
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 47 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Simian Virus 40</h1>
+<p><i>SV40 hijacks the cells it infects using only a handful of proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="SV40 capsid (center) and DNA genome with nucleosomes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/47/1sva_DNA.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>SV40 capsid (center) and DNA genome with nucleosomes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/47/47-SimianVirus40-1sva-DNA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Simian virus 40 is an example of how simple a virus can be and still perform its deadly job. Viruses are tiny machines with a single purpose: to reproduce themselves. They enter cells and hijack their synthetic machinery, forcing them to create new viruses. SV40 does this with very little molecular machinery. It is enclosed by a spherical capsid composed of 360 copies of one protein, seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sva" target="_blank">1sva <i class="fa fa-external-link"> </i></a></span>, and a few copies of two others. This capsid is just big enough to enclose a small circle of DNA 5243 nucleotides long, which contains the barest minimum of information needed to get into the cell and make new viruses.</div>
+<h4>DNA Circles</h4>
+<div>The circular SV40 genome is found in the cell as a "mini-chromosome" wound into a handful of nucleosomes, as shown here. It only has enough space to encode a few functions, since it all has to fit inside the tiny capsid. It has a regulatory region, colored yellow and red here, that controls the entire lifecycle of the virus. It also encodes several proteins: the T-antigen (and a spliced version of it called the t-antigen) and three capsid proteins, VP1, VP2 and VP3. Only a few tiny segments, colored white here, are not used. Space is so limited in this genome that the capsid proteins are actually encoded with overlapping reading frames, such that the end portion of the gene for one protein also encodes for the beginning portion of the next protein. For more information on the parsimonious genome of SV40, take a look at the <a href="https://www.ebi.ac.uk/interpro/legacy/potm/2003_6/Page1.htm">Protein of the Month</a> feature at the European Bioinformatics Institute.</div>
+<h4>Steering the Life Cycle</h4>
+<div>SV40 infects primate cells, forcing its way inside and releasing its DNA circle. Once inside, it has two jobs: to replicate its DNA and to package it inside new viral capsids. Amazingly, SV40 only needs one protein, the T-antigen, to control both of these processes. Soon after the virus enters the cell, the cell's own synthetic machinery recognizes a TATA sequence at the center of the SV40 regulatory regions, shown in bright red here. The cell then creates a messenger RNA reading counterclockwise around the DNA circle. This mRNA is used to make the T-antigen protein (shown in more detail on the next page). Then the virus really gets to work. The T-antigen binds to the SV40 circle and helps to separate the strands, making way for the cell's polymerases to copy the DNA. It also directs the reading of the DNA in the opposite direction, clockwise around the strand, to create many copies of the capsid proteins.</div>
+<h4>SV40 and Cancer</h4>
+<div>In the normal lifecycle of the virus, SV40 enters cells, builds new viruses, and then kills the cell as the viruses are released. SV40 can also infect other mammals in a non-permissive mode. Then, the virus enters the cell but is unable to reproduce. However, T-antigen is formed and it can occasionally transform the cell into a cancer cell. The T-antigen binds to p53 and Rb, two proteins that are important in the control of growth. By blocking their normal function, the infected cell is allowed to multiply without control, leading to cancerous growth. Study of this rare event led to many of the early discoveries in the biology of cancer. More commonly, a similar mechanism allows papillomaviruses to infect cells and cause the unnatural growth of warts.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="T-antigen protein. Flexible portions of the structure are shown schematically with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/47/T-antigen.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>T-antigen protein. Flexible portions of the structure are shown schematically with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/47/47-SimianVirus40-T-antigen.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Amazing T-antigen</h4>
+<div>SV40 packs all of its functional needs into one remarkable, multifunctional protein. The T-antigen is composed of several functional parts, connected by flexible linkers. Structures of the three major pieces are available in the PDB. At one end, a helicase domain assembles with several other copies of the protein to form a six-fold ring (shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n25" target="_blank">1n25 <i class="fa fa-external-link"> </i></a></span>). The hole is just big enough to encircle a DNA double helix. The central domain (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tbd" target="_blank">1tbd <i class="fa fa-external-link"> </i></a></span>) has a small patch, shown here in green, that binds specifically to the regulatory region in the SV40 genome, anchoring the T-antigen complex in the proper place. The third domain interacts with cellular proteins, directing the various stages in the viral life cycle. It is shown here on the right bound to the Rb protein, shown in red (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gh6" target="_blank">1gh6 <i class="fa fa-external-link"> </i></a></span>). In the cell, twelve copies of the protein assemble around the DNA to form a long tube, as shown at the bottom.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/47/1sva-rasmol.gif"/></div>
+<div>You can look at the capsid of SV40 using PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sva" target="_blank">1sva <i class="fa fa-external-link"> </i></a></span>. The PDB file contains 6 chains, which are the ones that are experimentally unique in the crystal lattice. It is worth spending a little time with this file, to explore how the chains interweave and interlock to form the sturdy capsid. They are all identical in chemical structure, but they adopt slightly different structures to accommodate the unusual pseudosymmetry of this capsid. Then, go the file that contains the whole biological assembly (this can be found under Download/Display File, down at the bottom of the page), and look at the whole capsid. Be prepared to spend some time, though, because the whole structure has almost a million atoms! I have drawn only the backbone here, which greatly speeds up the graphics. <br/><br/> This illustration was created with RasMol. To create similar pictures, click on the accession codes in these pages and then choose one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>C. N. Cole (1996): Polyomavirinae: the Viruses and Their Replication. <i>Fields Virology</i>, Chapter 63, Lippincott-Raven Publishers, Philadelphia.</li>
+<li>D. T. Simmons (2000): SV40 Large T Antigen Functions in DNA Replication and Transformation. <i>Advances in Virus Research</i> <b>55</b>, pp. 75-134.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_11">http://doi.org/10.2210/rcsb_pdb/mom_2003_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

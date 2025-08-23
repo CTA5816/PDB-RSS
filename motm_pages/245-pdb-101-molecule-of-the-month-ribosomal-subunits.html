@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ribosomal Subunits</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ribosomal Subunits" property="og:title"/>
+<meta content="Atomic structures of the ribosomal subunits reveal a central role for RNA in protein synthesis" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/10/ribosome.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/10" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ribosomal Subunits" name="twitter:title"/>
+<meta content="Atomic structures of the ribosomal subunits reveal a central role for RNA in protein synthesis" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/10/ribosome.gif" name="twitter:image"/>
+<meta content="Atomic structures of the ribosomal subunits reveal a central role for RNA in protein synthesis" name="description"/>
+<meta content="protein synthesis,protein translation,ribonucleoprotein complex,ribosomal RNA,RNA structure,1ffk,1fka,1fjg" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 10
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 10 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ribosomal Subunits</h1>
+<p><i>Atomic structures of the ribosomal subunits reveal a central role for RNA in protein synthesis</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ribosomal subunits, with RNA in orange and yellow and proteins in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/10/ribosome.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ribosomal subunits, with RNA in orange and yellow and proteins in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/10/10-Ribosome_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Protein Factory</h4>
+<div>Protein synthesis is the major task performed by living cells. For instance, roughly one third of the molecules in a typical bacterial cell are dedicated to this central task. Protein synthesis is a complex process involving many molecular machines. You can look at many of these molecules in the PDB, including DNA, DNA polymerases, and RNA polymerases; a host of repressors, DNA repair enzymes, topoisomerases, and histones; tRNA and acyl-tRNA synthetases; and molecular chaperones. This month, for the first time, you can also look at the factory of protein synthesis in atomic detail. Many additional structures of ribosomes have subsequently been determined, revealing many aspects of their function, as described in a more recent <a href="https://pdb101.rcsb.org/motm/121">Molecule of the Month on Ribosomes</a>.</div>
+<h4>An Elusive Structure</h4>
+<div>The ribosome has been under the scrutiny of scientists for decades. Electron microscopy has yielded an increasingly detailed view over the years, defining the overall shape of individual ribosomes and differences in this shape for ribosomes from different species, More recently, detailed electron micrograph reconstructions have studied the interaction or ribosomes with messenger RNA, transfer RNA and the protein elongation factors. This legacy of morphological work lays the groundwork on which the atomic structures may be understood. <br/><br/> Ribosomes are composed of two subunits: a large subunit, shown on the right, and a small subunit, shown on the left. Of course, the term "small" is used in a relative sense here: both the large and the small subunits are huge compared to a typical protein. Both subunits are composed of long strands of RNA, shown here in orange and yellow, dotted with protein chains, shown in blue. When synthesizing a new protein, the two subunits lock together with a messenger RNA trapped in the space between. The ribosome then walks down the messenger RNA three nucleotides at a time, building a new protein piece-by-piece.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Large subunit of the ribosome, with the catalytic RNA nucleotide in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/10/1ffk.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Large subunit of the ribosome, with the catalytic RNA nucleotide in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/10/10-Ribosome-1ffk_front_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Large Subunit</h4>
+<div>The structure of the large subunit is available in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ffk" target="_blank">1ffk <i class="fa fa-external-link"> </i></a></span>. The large subunit contains the active site of the ribosome: the site that creates the new peptide bonds when proteins are synthesized. In this view, the messenger RNA would run horizontally in the groove across the middle. This structure, along with several other structures with inhibitors bound, provide strong evidence that the ribosome is a <i>ribozyme</i>. Enzymes typically use amino acids to catalyze chemical reactions, but the ribosome appears to use an adenine RNA nucleotide to perform its synthetic task. This adenine is colored green in the figure (we'll look at this more closely later). <br/><br/> The large subunit is composed of two RNA strands: a long one colored orange and a shorter one colored yellow. Dozens of proteins bind on the surface of the ribosome. Many have long, snaky tails that extend into the body of the ribosome, gluing the RNA strands into their proper shape. Several of the proteins were not seen in this crystallographic structure, perhaps because they are too flexible. Approximate shapes for these proteins, which form two prominent stalks commonly used as landmarks in electron micrographs, are indicated here in light blue. <br/><br/> <a class="static" href="https://pdb101.rcsb.org/learn/videos/ribosome-large-subunit">An animated version of this image is also available on PDB-101</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Small subunit of the ribosome." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/10/1fka.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Small subunit of the ribosome.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/10/10-Ribosome-1fka_front_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Small Subunit</h4>
+<div>The structure of the small subunit is available in the PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fka" target="_blank">1fka <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fjg" target="_blank">1fjg <i class="fa fa-external-link"> </i></a></span>. The small subunit is in charge of information flow during protein synthesis. It initially finds a messenger RNA strand and, after combining with a large subunit, ensures that each codon in the message is paired with the anticodon in the proper transfer RNA. The messenger RNA is thought to enter through a small hole (seen here on the left side of the molecule) and then extend up into the "decoding center" in the cleft between the "head" at top and the "body" at the bottom. The messenger RNA does not have to thread through this hole like a needle, however, because the hole is actually formed by a loop of the ribosomal RNA, which can open like a latch to admit the messenger. <br/><br/> <a class="static" href="https://pdb101.rcsb.org/learn/videos/ribosome-small-subunit">An animated version of this image is also available on PDB-101</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Large Ribosomal Subunit</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/10/10-Ribosomal_Subunits-1ffk_JSmol.jpg"/></div>
+<p>Before jumping into these structures, be prepared. Both the large subunit and the small subunit are enormous complexes with many atoms: the structure of the large subunit in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ffk" target="_blank">1ffk <i class="fa fa-external-link"> </i></a></span> contains over 64,000 atoms, even though the authors chose to release only alpha carbon positions for the proteins, and the small subunit structure (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fka" target="_blank">1fka <i class="fa fa-external-link"> </i></a></span>), also with partial structures for the proteins, contains almost 35,000 atoms. Many interactive display programs become very sluggish when working on structures this large. <br/><br/> The picture shown here shows the proposed active site in the large ribosomal subunit. Adenine 2486 is thought to perform the synthesis reaction, at the location indicated by atom in bright turquoise. The two guanines shown on the left and the potassium ion shown in green serve to activate this adenine through a series of hydrogen bonds, shown in light blue. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many other proteins assist ribosomes during protein synthesis. To explore some of them, look at the resources in the <a href="http://pdb101.rcsb.org/browse/protein-synthesis"> Protein Synthesis </a> category of PDB101.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1ffk: Ban, N., Nissen, P., Hansen, J., Moore, P.B., Steitz, T.A. The complete atomic structure of the large ribosomal subunit at 2.4 A resolution. (2000) Science 289: 905-920</li>
+<li>1fjg: Carter, A.P., Clemons Jr., W.M., Brodersen, D.E., Morgan-Warren, R.J., Wimberly, B.T., Ramakrishnan, V. Functional insights from the structure of the 30S ribosomal subunit and its interactions with antibiotics (2000) Nature 407: 340-348</li>
+<li>1fka: Schluenzen, F., Tocilj, A., Zarivach, R., Harms, J., Gluehmann, M., Janell, D., Bashan, A., Bartels, H., Agmon, I., Franceschi, F., Yonath, A. (2000) Functional insights from the structure of the 30S ribosomal subunit and its interactions with antibiotics Cell 102: 615-623</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_10">http://doi.org/10.2210/rcsb_pdb/mom_2000_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

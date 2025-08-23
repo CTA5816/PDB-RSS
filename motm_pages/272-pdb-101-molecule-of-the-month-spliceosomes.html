@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Spliceosomes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Spliceosomes" property="og:title"/>
+<meta content="Cryoelectron microscropy is revealing how spliceosomes cut-and-paste messenger RNA molecules." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-3jb9.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/245" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Spliceosomes" name="twitter:title"/>
+<meta content="Cryoelectron microscropy is revealing how spliceosomes cut-and-paste messenger RNA molecules." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-3jb9.jpg" name="twitter:image"/>
+<meta content="Cryoelectron microscropy is revealing how spliceosomes cut-and-paste messenger RNA molecules." name="description"/>
+<meta content="RNA,messenger RNA,exon,intron,spliceosome,splicing,transcription,cancer,3jb9,6n7p" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 245
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 245 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Spliceosomes</h1>
+<p><i>Cryoelectron microscropy is revealing how spliceosomes cut-and-paste messenger RNA molecules.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Yeast spliceosome captured after the splicing reaction has occurred, with the intron 'lariat' shown in yellow. Proteins are in blue and green, and spliceosome RNA molecules are in magenta and pink." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-3jb9.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Yeast spliceosome captured after the splicing reaction has occurred, with the intron "lariat" shown in yellow. Proteins are in blue and green, and spliceosome RNA molecules are in magenta and pink.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-3jb9.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nothing is ever simple in biology! The basic mechanisms of genetic information flow were discovered using bacteria, showing that DNA is transcribed into messenger RNA, which is then translated into proteins. When researchers started looking at more complex organisms, however, things got complicated. The genes encoded in our DNA are typically four to ten times longer than the mRNA strands that are translated into proteins. Looking more closely at our genome, the protein-coding part of most genes is split into pieces, called <i>exons,</i> separated by long non-coding sequences, called <i>introns.</i> The number of these introns is quite variable: for example, our <a href="https://pdb101.rcsb.org/motm/41">hemoglobin</a> genes are split into three pieces and the gene for the giant protein <a href="https://pdb101.rcsb.org/motm/185">titin</a> is split into 365 pieces. This modularity has a great advantage: cells can splice a gene in many different ways, using the same DNA sequence to produce many proteins with slightly different functions.</div>
+<h4>The Splicing Reaction</h4>
+<div>Spliceosomes cut up the long pre-mRNA molecules made from these genes, and reconnect them to produce the smaller mRNA molecules that are used to make proteins. Spliceosomes are complex molecular machines composed of many components, including protein chains and several small strands of RNA. The complex is built in a stepwise manner, adding and removing subunits to perform each of the steps in the splicing reaction. First, the splice sites are recognized and brought together. Then, one splice site is broken and the end is attached to a special adenine nucleotide inside the intron, forming a loop. Finally, the other splice site is broken, releasing the intron loop and reconnecting the two ends of the exons.</div>
+<h4>Dynamic Structures</h4>
+<div>Cryoelectron microscopy is being used to explore the many steps of spliceosome action. Spliceosomes are highly dynamic machines, however, so these structures only reveal the more stable portions of the complex. So, as you're exploring these structures, be prepared to use some imagination to fill in the portions that are too dynamic to be observed. The structure shown here, from PDB entry <a href="https://www.rcsb.org/structure/3jb9" target="_blank">3jb9</a>, captures the spliceosome at the end of the splicing process, when the connected exons have been released and the loop-shaped "lariat" of the intron is still bound. Structures from cryoelectron microscopy are available for many steps of mRNA splicing, as well as structures of the more complex spliceosomes from human cells, filling out a structural understanding of the entire process. There isn't room to review them all here, but you can search for "spliceosome" at the <a href="http://rcsb.org">main RCSB PDB site</a> to explore them!</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Yeast spliceosome E complex (RNA in magenta, proteins in blue) recognizing the 5' end of an intron in a pre-mRNA (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-6n7p.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Yeast spliceosome E complex (RNA in magenta, proteins in blue) recognizing the 5' end of an intron in a pre-mRNA (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-6n7p.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Role of RNA</h4>
+<div>Much of the detailed work of the splicesome is performed by the small RNA chains. This structure captures the very beginning of the process, when one of the splicing sites is recognized (PDB entry <a href="https://www.rcsb.org/structure/6n7p" target="_blank">6n7p</a>). The spliceosome RNA is pairing with the pre-mRNA, reading the sequence of the splice site. Additional protein and RNA subunits will then assemble around this complex to build the whole spliceosome. These RNA strands also perform the mRNA cutting and pasting reaction, with the help of two magnesium ions. Surprisingly, some <a href="https://pdb101.rcsb.org/motm/65">self-splicing RNAs</a> can splice themselves using similar mechanisms, without any help from spliceosomes.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Rac1 is composed of six exons, each colored differently from blue to red here. The bound nucleotide is in magenta. Rac1b as an extra exon spliced into the middle of the chain (in green). The longer loop is mostly disordered in the protein structure, as shown schematically with dots.
+" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-1mh1_1ryf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Rac1 is composed of six exons, each colored differently from blue to red here. The bound nucleotide is in magenta. Rac1b as an extra exon spliced into the middle of the chain (in green). The longer loop is mostly disordered in the protein structure, as shown schematically with dots.
+</i></div><a href="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-1mh1_1ryf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cancer Connection</h4>
+<div>Problems with mRNA splicing contribute to many diseases. For example, an alternatively-spliced version of the signaling protein Rac1 plays a role in the development of some forms of cancer. Like the <a href="https://pdb101.rcsb.org/motm/148"> Ras protein</a>, Rac1 acts as a molecular switch using GTP and GDP to turn "on" and "off", delivering signals that control growth and proliferation of cells. It normally is constructed from six exons (shown here from PDB entry <a href="https://www.rcsb.org/structure/1mh1" target="_blank">1mh1</a>). The alternative version has an extra exon spliced into the middle of the chain (PDB entry <a href="https://www.rcsb.org/structure/1ryf" target="_blank">1ryf</a>), which has the effect of turning the protein more continuously "on". When Rac1b is over-expressed by cancer cells, it helps them to grow without the normal controls.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Spliceosome Intron Recognition</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/245/245-Spliceosomes-3jb9_jmol_annotated.jpg"/></div>
+<p>This close-up of the active site of the spliceosome shows how the ends of the intron "lariat" (yellow) are held by two small spliceosomal RNA molecules (colored magenta and red). One end of the intron is looped back and attached to the RNA 2' hydroxyl group (arrow). The two catalytic magnesium ions, which were involved in the previous splicing reactions, are shown nearby as magenta spheres. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use resources like GenBank to look up the arrangement of exons and introns in genes, such as in the <a href="https://www.ncbi.nlm.nih.gov/gene/7273"> titin gene</a>. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6n7p: Li, X., Liu, S., Zhang, L., Issaian, A., Hill, R.C., Espinosa, S., Shi, S., Cui, Y., Kappel, K., Das, R., Hansen, K.C., Zhou, Z.H., Zhao, R. (2019) A unified mechanism for intron and exon definition and back-splicing. Nature 573: 375-380</li>
+<li>Wilkinson, M.E., Charenton, C., Nagai, K. (2019) RNA splicing by the spliceosome. Ann. Rev. Biochem. 89, 1.1-1.30.</li>
+<li>Fica, S.M., Nagai, K. (2017) Cryo-electron microscopy snapshots of the spliceosome: structural insights into a dynamic ribonucleoprotein machine. Nat. Struct. Mol. Biol. 10, 791-799</li>
+<li>3jb9: Yan, C., Hang, J., Wan, R., Huang, M., Wong, C., Shi, Y. (2015) Structure of a yeast spliceosome at 3.6-angstrom resolution. Science 349: 1182-1191</li>
+<li>1ryf: Fiegen, D., Haeusler, L.C., Blumenstein, L., Herbrand, U., Dvorsky, R., Vetter, I.R., Ahmadian, M.R. (2004) Alternative Splicing of Rac1 Generates Rac1b, a Self-activating GTPase J.Biol.Chem. 279: 4743-4749</li>
+<li>1mh1: Hirshberg, M., Stockley, R.W., Dodson, G., Webb, M.R. (1997) The crystal structure of human rac1, a member of the rho-family complexed with a GTP analogue. Nat.Struct.Mol.Biol. 4: 147-152</li>
+<li>Ward, A.J., Cooper, T.A. (2010) The pathobiology of splicing. J. Pathol. 220, 152-163</li>
+<li>Sharp, P.A. (1994) Nobel Lecture: Split genes and RNA splicing. Cell 77, 805-815</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_5">http://doi.org/10.2210/rcsb_pdb/mom_2020_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

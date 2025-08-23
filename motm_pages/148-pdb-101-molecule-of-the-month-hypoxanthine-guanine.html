@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)" property="og:title"/>
+<meta content="Cells salvage and recycle their obsolete DNA and RNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1hmp.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/151" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)" name="twitter:title"/>
+<meta content="Cells salvage and recycle their obsolete DNA and RNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1hmp.jpg" name="twitter:image"/>
+<meta content="Cells salvage and recycle their obsolete DNA and RNA" name="description"/>
+<meta content="antimalarial therapy,purine salvage,1hmp,1cjb,1z7g,1d6n,1bzy,1hmp,rare disease,Lesch-Nyhan" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 151
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 151 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)</h1>
+<p><i>Cells salvage and recycle their obsolete DNA and RNA</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Cells are great recyclers. They need to be, otherwise we would be faced with an insurmountable need for new molecular building blocks and enough energy to manage them. For instance, new messenger RNA chains are made constantly, transmitting information from the nucleus to build new proteins. Afterwards, these chains are broken down and the components are recycled. A complex set of salvage machinery is used to recycle these components.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Human hypoxanthine-guanine phosphoribosyltransferase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1hmp.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human hypoxanthine-guanine phosphoribosyltransferase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1hmp.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Purine Salvage</h4>
+<div>The enzyme hypoxanthine-guanine phosphoribosyltransferase (HGPRT) is one of the central enzymes that recycle the building blocks of RNA and DNA. It attaches a purine base (either guanine or hypoxanthine, a modified form of adenine) to a sugar, creating a nucleotide. The structure shown here (PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hmp" target="_blank">1hmp <i class="fa fa-external-link"> </i></a></span>) is the human enzyme, which is composed of four identical subunits, each with its own active site. This structure includes the nucleotide product, guanine monophosphate, just before it is ready to be released for use by the cell.</div>
+<h4>Perils of Purines</h4>
+<div>As with all metabolic pathways, serious problems occur if steps in the pathway are blocked. Some people inherit a rare defective version of HGPRT, which leads to a serious illness termed Lesch-Nyhan syndrome. Since the enzyme is not active, purine bases build up causing severe neurological problems, including a dangerous compulsion for self-injury. In other cases, people with partially active HGPRT have problems with gout, as the pathways for discarding excess purines are overloaded and the waste products build up in the joints.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Purines and Parasites</h4>
+<div>HGPRT is particularly important to the parasites that cause malaria and similar parasitic diseases. Since they live inside cells, they have lost the ability to make purine bases on their own--they just get them from the infected cell. This makes them particularly susceptible to drugs that attack HGPRT. Researchers are currently using the structures of HGPRT, such as the one shown here from PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cjb" target="_blank">1cjb <i class="fa fa-external-link"> </i></a></span>, to discover new drugs to fight malaria, by taking advantage of differences between the human and malarial forms the enzyme.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Malarial hypoxanthine-guanine phosphoribosyltransferase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1cjb.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Malarial hypoxanthine-guanine phosphoribosyltransferase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1cjb.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HGPRT (PDB entries 1z7g, 1d6n, 1bzy and 1hmp)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/151/151-HGPRT_1bzy_jmol.jpg"/></div>
+<p>HGPRT performs its reaction in several steps. First, an activated form of the sugar binds, followed by the purine base. The enzyme then connects the two, releasing a pyrophosphate molecule. Finally, the nucleotide is released in the slowest step of the whole process. Researchers have captured the enzyme performing several of these steps, including the empty enzyme (PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1z7g" target="_blank">1z7g <i class="fa fa-external-link"> </i></a></span>), the enzyme with the sugar and base in the active site (PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1d6n" target="_blank">1d6n <i class="fa fa-external-link"> </i></a></span>), a complex with an analog of the transition state (shown here from PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bzy" target="_blank">1bzy <i class="fa fa-external-link"> </i></a></span>), and a form with the final product in the active site before release (PDB entry <span class="rcsb_id_tag" title="HGPRT"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hmp" target="_blank">1hmp <i class="fa fa-external-link"> </i></a></span>). A large loop (shown here in turquoise) opens and closes around the active site during the reaction. To explore these structures, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the Compare Structures feature at the RCSB PDB to overlap and compare the structures of HGPRT from human cells and from malaria. The structures in the Jmol were also overlapped with this feature to show the motion of the loop.</li>
+<li>Complexes of HGPRT with several potential anti-malarial drugs are included in the PDB. You can compare these with the structures of the substrates and products of the enzyme.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. J. Torres &amp; J. G. Puig (2007) Hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency: Lesch-Nyhan syndrome. Orphanet Journal of Rare Diseases 2:48.</li>
+<li>D. Voet &amp; J. G. Voet (2011) Biochemistry, 4th Edition. J. Wiley &amp; Sons, Hoboken, NJ.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_7">http://doi.org/10.2210/rcsb_pdb/mom_2012_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

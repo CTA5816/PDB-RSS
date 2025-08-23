@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Green Fluorescent Protein (GFP)</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Green Fluorescent Protein (GFP)" property="og:title"/>
+<meta content="A tiny fluorescent protein from jellyfish has revolutionized cell biology" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/42/1gfl.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/42" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Green Fluorescent Protein (GFP)" name="twitter:title"/>
+<meta content="A tiny fluorescent protein from jellyfish has revolutionized cell biology" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/42/1gfl.gif" name="twitter:image"/>
+<meta content="A tiny fluorescent protein from jellyfish has revolutionized cell biology" name="description"/>
+<meta content="bioluminescence,biotechnology,chromophore,fluorescent proteins,luminescent proteins,protein engineering,1gfl,1kys,1ema" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 42
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 42 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Green Fluorescent Protein (GFP)</h1>
+<p><i>A tiny fluorescent protein from jellyfish has revolutionized cell biology</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Green flourescent protein." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/42/1gfl.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Green flourescent protein.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/42/42-GreenFlourescentProtein-1gfl-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The green fluorescent protein, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gfl" target="_blank">1gfl <i class="fa fa-external-link"> </i></a></span>, is found in a jellyfish that lives in the cold waters of the north Pacific. The jellyfish contains a bioluminescent protein-- aequorin--that emits blue light. The green fluorescent protein converts this light to green light, which is what we actually see when the jellyfish lights up. Solutions of purified GFP look yellow under typical room lights, but when taken outdoors in sunlight, they glow with a bright green color. The protein absorbs ultraviolet light from the sunlight, and then emits it as lower-energy green light.</div>
+<h4>So What?</h4>
+<div>You might be saying: who cares about this obscure little green protein from a jellyfish? It turns out that GFP is amazingly useful in scientific research, because it allows us to look directly into the inner workings of cells. It is easy to find out where GFP is at any given time: you just have to shine ultraviolet light, and any GFP will glow bright green. So here is the trick: you attach the GFP to any object that you are interested in watching. For instance, you can attach it to a virus. Then, as the virus spreads through the host, you can watch the spread by following the green glow. Or, you can attach it to a protein, and watch through the microscope as it moves around inside cells.</div>
+<h4>Ready-Made</h4>
+<div>GFP is a ready-made fluorescent protein, so it is particularly easy to use. Most proteins that deal with light use exotic molecules to capture and release photons. For instance, the opsins in our eyes use retinol to sense light (see the <a href="https://pdb101.rcsb.org/motm/27">Molecule of the Month on bacteriorhodopsin</a>). These "chromophores" must be built specifically for the task, and carefully incorporated into the proteins. GFP, on the other hand, has all of its own light handling machinery built in, constructed using only amino acids. It has a special sequence of three amino acids: serine-tyrosine-glycine (sometimes, the serine is replaced by the similar threonine). When the protein chain folds, this short segment is buried deep inside the protein. Then, several chemical transformations occur: the glycine forms a chemical bond with the serine, forming a new closed ring, which then spontaneously dehydrates. Finally, over the course of an hour or so, oxygen from the surrounding environment attacks a bond in the tyrosine, forming a new double bond and creating the fluorescent chromophore. Since GFP makes its own chromophore, it is perfect for genetic engineering. You don't have to worry about manipulating any strange chromophores; you simply engineer the cell with the genetic instructions for building the GFP protein, and GFP folds up by itself and starts to glow.</div>
+<h4>Engineering GFP</h4>
+<div>The uses of GFP are also expanding into the world of art and commerce. Artist Eduardo Kac has created a fluorescent green rabbit by engineering GFP into its cells. Breeders are exploring GFP as a way to create unique fluorescent plants and fishes. GFP has been added to rats, mice, frogs, flies, worms, and countless other living things. Of course, these engineered plants and animals are still controversial, and are spurring important dialogue on the safety and morality of genetic engineering.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Engineered biosensor for zinc ions." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/42/1kys.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Engineered biosensor for zinc ions.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/42/42-GreenFluorescentProtein-1kys-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Improving GFP</h4>
+<div>GFP is amazingly useful for studying living cells, and scientists are making it even more useful. They are engineering GFP molecules that fluoresce different colors. Scientists can now make blue fluorescent proteins, and yellow fluorescent proteins, and a host of others. The trick is to make small mutations that change the stability of the chromophore. Thousands of different variants have been tried, and you can find several successes in the PDB. Scientists are also using GFP to create biosensors: molecular machines that sense the levels of ions or pH, and then report the results by fluorescing in characteristic ways. The molecule shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kys" target="_blank">1kys <i class="fa fa-external-link"> </i></a></span>, is a blue fluorescent protein that has been modified to sense the level of zinc ions. When zinc, shown here in red, binds to the modified chromophore, shown here it bright blue, the protein fluoresces twice as brightly, creating a visible signal that is easily detected.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Green Fluorescent Protein</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/42/1ema.gif"/></div>
+<p>You can take a close look at the chromophore of GFP in the PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ema" target="_blank">1ema <i class="fa fa-external-link"> </i></a></span>. The backbone of the entire protein is shown here on the left. The protein chain forms a cylindrical can (shown in blue), with one portion of the strand threading straight through the middle (shown in green). The chromophore is found right in the middle of the can, totally shielded from the surrounding environment. This shielding is essential for the fluorescence. The jostling water molecules would normally rob the chromophore of its energy once it absorbs a photon. But inside the protein, it is protected, releasing the energy instead as a slightly less energetic photon of light. The chromophore (shown in the close-up on the right) forms spontaneously from three amino acids in the protein chain: a glycine, a tyrosine and a threonine (or serine). Notice how the glycine and the threonine have formed a new bond, creating an unusual five-membered ring. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li><a href="https://pdb101.rcsb.org/learn/paper-models/green-and-red-fluorescent-proteins">Build paper models of Green and Red Fluorescent Proteins and compare their structures. </a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/bioluminescence-and-fluorescence">Bioluminescence and Fluorescence</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1kys: D.P. Barondeau, C.J. Kassmann, J.A. Tainer &amp; E.D. Getzoff (2002) Structural chemistry of a green fluorescent protein Zn biosensor. Journal of the American Chemical Society 124, 3522-3524.</li>
+<li>R.Y. Tsien (1998) The green fluorescent protein. Annual Review of Biochemistry 67, 509-544.</li>
+<li>1ema: M. Ormo, A.B. Cubitt, K. Kallio, L.A. Gross, R.Y. Tsien &amp; S.J. Remington. Crystal structure of the Aequorea victoria green fluorescent protein. Science 273, 1392-1395.</li>
+<li>1gfl: F. Yang, L.G. Moss &amp; G.N. Phillips (1996) The molecular structure of green fluorescent proteins. Nature Biotechnology 14, 1246-1251.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_6">http://doi.org/10.2210/rcsb_pdb/mom_2003_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

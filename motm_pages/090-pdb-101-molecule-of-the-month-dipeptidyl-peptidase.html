@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Dipeptidyl Peptidase 4</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Dipeptidyl Peptidase 4" property="og:title"/>
+<meta content="Inhibitors of dipeptidyl peptidase 4 are used to treat type-2 diabetes" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-1nu8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/202" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Dipeptidyl Peptidase 4" name="twitter:title"/>
+<meta content="Inhibitors of dipeptidyl peptidase 4 are used to treat type-2 diabetes" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-1nu8.jpg" name="twitter:image"/>
+<meta content="Inhibitors of dipeptidyl peptidase 4 are used to treat type-2 diabetes" name="description"/>
+<meta content="diabetes,diabetes treatment,anti-diabetic drugs,gliptins,DPP4 Inhibitors,incretins,GLP-1,GIP,insulin,hormones,substrates,glucose,1nu8,1ron,1eot,1d0r,2b4n,1jrj,1x70" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 202
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 202 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Dipeptidyl Peptidase 4</h1>
+<p><i>Inhibitors of dipeptidyl peptidase 4 are used to treat type-2 diabetes</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DPP4 is a dimer of two identical subunits, colored blue and green here. Each contains two domains: the domains at the top of each subunit are involved in interacting with other extracellular proteins, and the domains at the bottom carry the catalytic triad." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-1nu8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DPP4 is a dimer of two identical subunits, colored blue and green here. Each contains two domains: the domains at the top of each subunit are involved in interacting with other extracellular proteins, and the domains at the bottom carry the catalytic triad.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-1nu8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Have you ever wondered how our bodies maintain a perfect balance, making sure that each cell has the resources it needs? This balance, termed homeostasis, is accomplished by continual communication and cooperation between cells in different parts of the body. For example, all of our cells require glucose for energy, and a complex network of hormones ensure that it is delivered to the places it is needed. When we eat, cells in our digestive system secrete incretin hormones, letting the body know that glucose is going to be available. These hormones travel to the pancreas, which releases <a href="https://pdb101.rcsb.org/motm/14">insulin</a> into the blood and signals to cells around the body, such as muscle cells and liver cells, to take up the glucose and store it for later use. When glucose levels drop between meals, the hormone <a href="https://pdb101.rcsb.org/motm/184">glucagon</a> tells cells to release glucose from their energy stores. The complementary effects of insulin and glucagon, controlled by the level of incretins, ensure that the proper level of glucose is always available for use.</div>
+<h4>Dipeptidyl Peptidase 4 (DPP4)</h4>
+<div>Since hormones control the minute-by-minute functions of the body, their signals need to be carefully regulated as conditions change. Dipeptidyl peptidase 4 (DPP4, also known as CD26), shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nu8" target="_blank">1nu8</a>, helps with this regulation. It is a membrane-bound protein that acts as a dimer of two identical subunits. It is found on the surface of cells throughout the body where it plays several roles: it interacts with many other proteins, playing important roles in processes such as cell signaling and inflammation, and it inactivates several different hormones, including incretins, by clipping off two amino acids from their ends. Because there is so much DPP4 around, incretins only circulate for a few minutes before they are inactivated, allowing tight communication between the incretin-producing cells in the intestine and the insulin- and glucagon-producing cells in the pancreas.</div>
+<h4>Clipping Peptides</h4>
+<div>DPP4 cleaves the amide bond of hormones with proline or alanine at the second position from one end of the chain. The cleavage reaction is performed by a catalytic triad of amino acids very similar to serine proteases such as <a href="https://pdb101.rcsb.org/motm/46">trypsin and elastase</a>. A serine performs the cleavage reaction, which is made more chemically active by nearby histidine and aspartate amino acids. Two acidic glutamates assist with the reaction by holding tightly to the free amino end of the hormone, locking it into position. DPP4 is one of the few enzymes that can cleave next to a proline, because proline fits perfectly into a hydrophobic pocket in the active site. Understanding of the interactions between the DPP4 and its hormone substrates has laid the groundwork for developing inhibitors of DPP4.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Substrates and inhibitor of DPP4. In the four substrates shown here, the two amino acids at the end, colored blue or green, will be clipped off and released as a dipeptide. Exendin-4, with a glycine at the second position, acts as an inhibitor." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-Substrates2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Substrates and inhibitor of DPP4. In the four substrates shown here, the two amino acids at the end, colored blue or green, will be clipped off and released as a dipeptide. Exendin-4, with a glycine at the second position, acts as an inhibitor.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-Substrates2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>DPP4 Substrates</h4>
+<div>DPP4 breaks down peptide hormones such as incretins, neuropeptide Y (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ron" target="_blank">1ron</a>), and chemokine eotaxin (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1eot" target="_blank">1eot</a>), ensuring that they are only active when needed. These hormones share a similar structure, with proline or alanine at the second position. The two incretin hormones, glucagon-like peptide-1 (GLP-1, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1d0r" target="_blank">1d0r</a>) and glucose-dependent insulinotropic polypeptide (GIP, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2b4n" target="_blank">2b4n</a>), have been of particular interest because they provide a way to treat type-2 diabetes.</div>
+<h4>Treating Type-2 Diabetes</h4>
+<div>People with diabetes mellitus have dangerously high levels of glucose in the blood because of low levels of insulin. One approach to treatment is to inhibit DPP4, so that incretins act for longer, stimulating production of insulin. Medical researchers have approached this in two ways. First, they have developed analogs of GLP-1 or GIP that cannot be broken down by DPP4. For example, the drug exenatide was developed from exendin-4 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jrj" target="_blank">1jrj</a>), a natural incretin mimic found in the venom of the Gila monster. These molecules circulate through the blood longer, stimulating production of more insulin to help reduce diabetic blood sugar levels. Unfortunately, these incretin analogs are typically small proteins and need to be injected. The second approach uses drugs that can be taken orally to block the action of DPP4 directly, allowing natural incretins to circulate in the blood longer.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Inhibitors of DPP4</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/202/202-Dipeptidyl_Peptidase4-1x70_JSmol.jpg"/></div>
+<p>In 2006, the Federal Drug Administration approved the first of these DPP4 inhibitors, sitagliptin (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1x70" target="_blank">1x70</a>), which was quickly followed by many other anti-diabetic drugs collectively known as “gliptins.” All of these drugs mimic the end of the incretin hormones, blocking the active site of DPP4 so that it cannot inactivate the hormones. To explore six different gliptins and an analog of one of the DPP4 substrates, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures for several other hormones that are cleaved by DPP4 are available in the PDB, including peptide YY (<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dez" target="_blank">2dez</a>) and chemokine RANTES (<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rtn" target="_blank">1rtn</a>). Take a look at these and find the dipeptide that is cleaved by DPP4.</li>
+<li>You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P27487"> Group Sequence View of DPP4 </a> to see the portions of the enzyme that are not included in the structure.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Rohrborn, N. Wronkowitz &amp; J. Eckel (2015) DPP4 in diabetes. Frontiers in Immunology 6, article 386.</li>
+<li>3w2t: M. Nabeno, F. Akahoshi, H. Kishida, I. Miyaguchi, Y. Tanaka, S. Ishii &amp; T. Kadowaki (2013) A comparative study of the binding modes of recently launched dipeptidyl peptidase IV inhibitors in the active site. Biochemical and Biophysical Research Communications 434, 191-196.</li>
+<li>H. Zhong, X. Rao &amp; S. Rajagopalan (2013) An emerging role of dipeptidyl peptidase 4 (DPP4) beyond glucose control: potential implications in cardiovascular disease. Atherosclerosis 226, 305-314.</li>
+<li>3vjk: T. Yoshida, F. Akahoshi, H. Sakashita, H. Kitajima, M. Nakamura, S. Sonda, M. Takeuchi, Y. Tanaka, N. Ueda, S. Sekiguchi, T. Ishige, K. Shima, M. Nabeno, Y. Abe, J. Anabuki, A. Soejima, K. Yoshida, Y. Takashina, S. Ishii, S. Kiuchi, S. Fukuda, R. Tsutsumiuchi, K. Kosaka, T. Murozono, Y. Nakamaru, H. Utsumi, N. Masutomi, H. Kishida, I. Miyaguchi &amp; Y. Hayashi (2012) Discovery and preclinical trials of teneligliptin (3-[(2S,4S)-4-[4-(3-methyl-1-phenyl-1H-pyrazol-5-yl)piperazin-1-yl]pyrrolidin-2-ylcarbonyl]thiazolidine): a highly potent, selective, long-lasting and orally active dipeptidyl peptidase IV inhibitor for the treatment of type 2 diabetes. Bioorganic and Medicinal Chemistry 20, 5705-5719.</li>
+<li>3g0b: Z. Zhang, M. B. Wallace, J. Feng, J. A. Stafford, R. J. Skene, L. Shi, B. Lee, K. Aertgeerts, A. Jennings, R. Xu, D. B. Kassel, S. W. Kaldor, M. Navre, D. R. Webb &amp; S. L. Gwaltney (2011) Design and synthesis of pyrimidinone and pyrimidinedione inhibitors of dipeptidyl peptidase IV. Journal of Medicinal Chemistry 54, 510-524.</li>
+<li>3bjm: W. J. Metzler, J. Yanchunas, C. Weigelt, K. Kish, H. E. Klei, D. Zie, Y. Zhang, M. Corbett, J. K. Tamura, B. He, L. G. Hamann, M. S. Kirby &amp; J. Marcinkeviciene (2008) Involvement of DPP-IV catalytic residues in enzyme-saxagliptin complex formation. Protein Science 17, 240-250.</li>
+<li>2rgu: M. Eckhardt, E. Langkopf, M. Mark, M. Tadayyon, L. Thomas, H. Nar, W. Pfrengle, B. Guth, R. Lotz, P. Sieger, H. Fuchs &amp; F. Himmelsbach (2007) 8-(3-(R)-aminopiperidin-1-yl)-7-but-2-ynyl-3-methyl-1-(4-methyl-quinazolin-2-ylmethyl)-3,7-dihydropurine-2,6-dione (BI 1356), a highly potent, selective, long-lasting, and orally bioavailable DPP-4 inhibitor for the treatment of type 2 diabetes. Journal of Medicinal Chemistry 50, 6450-6453.</li>
+<li>2b4n: I. Alana, J. C. Parker, V. A. Gault, P. R. Flatt, F. P. O’Harte, J. P. Malthouse &amp; C. M. Hewage (2006) NMR and alanine scan studies of glucose-dependent insulinotropic peptide in water. Journal of Biological Chemistry 281, 16370-16376.</li>
+<li>1x70: D. Kim, L. Wang, M. Beconi, G. J. Eiermann, M. H. Fisher, H. He, G. J. Hickey, J. E. Kowalchick, B. Leiting, K. Lyons, F. Marsilio, M. E. McCann, R. A. Patel, A. Petrov, G. Scapin, S. B. Patel, R. S. Roy, J. K. Wu, M. J. Wyvratt, B. B. Zhang, L. Zhu, N. A. Thornberry &amp; A. E. Weber (2005) (2R)-4-oxo-4-[3-(trifluoromethyl)-5,6-dihydro[1,2,4]triazolo[4,3-a]pyrazin-7(8H)-yl]-1-(2,4,5-trifluorophenyl)butan-2-amine: a potent, orally active dipeptidyl peptidase IV inhibitor for the treatment of type 2 diabetes. Journal of Medicinal Chemistry 48, 141-151.</li>
+<li>1nu8: R. Thoma, B. Loeffler, M. Stihle, W. Huber, A. Ruf &amp; M. Hennig (2003) Structural basis of proline-specific exopeptidase activity as observed in human dipeptidyl peptidase-IV. Structure 11, 947-959.</li>
+<li>1d0r: X. Chang, D. Keller, S. Bjorn &amp; J. J. Led (2001) Structure and folding of glucagon-like peptide-1-(7-36)-amide in trifluoroethanol studied by NMR. Magnetic Resonance Chemistry 39, 477-483.</li>
+<li>1jrj: J. W. Neidigh, R. M. Fesinmeyer, K. S. Prickett &amp; N. H. Andersen (2001) Exendin-4 and glucagon-like-peptide-1: NMR structural comparisons in the solution and micelle-associated states. Biochemistry 40, 13188-13200.</li>
+<li>1eot: M. P. Crump, K. Rajarathnam, K. S. Kim, I. Clark-Lewis &amp; B. D. Sykes (1998) Solution structure of eotaxin, a chemokine that selectively recruits eosinophils in allergic inflammation. Journal of Biological Chemistry 273, 22471-22479.</li>
+<li>1ron: S. A. Monks, G. Karagianis, G. J. Howlett &amp; R. S. Norton (1996) Solution structure of human neuropeptide Y. Journal of Biomolecular NMR 8, 379-390.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2016, Sutapa Ghosh, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_10">http://doi.org/10.2210/rcsb_pdb/mom_2016_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

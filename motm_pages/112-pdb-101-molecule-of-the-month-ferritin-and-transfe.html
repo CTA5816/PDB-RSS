@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ferritin and Transferrin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ferritin and Transferrin" property="og:title"/>
+<meta content="Ferritin and transferrin manage our essential stores of iron ions" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/35/ferritin.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/35" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ferritin and Transferrin" name="twitter:title"/>
+<meta content="Ferritin and transferrin manage our essential stores of iron ions" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/35/ferritin.gif" name="twitter:image"/>
+<meta content="Ferritin and transferrin manage our essential stores of iron ions" name="description"/>
+<meta content="ferritin,iron ion homeostasis,iron ion storage,iron ion transport,transferrin,transferrin receptor,1fha,1h76,1cx8,4lqh,4lpj,4lyu" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 35
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 35 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ferritin and Transferrin</h1>
+<p><i>Ferritin and transferrin manage our essential stores of iron ions</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ferritin exterior and interior cross section." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/35/ferritin.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ferritin exterior and interior cross section.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/35/35-FerritinandTransferrin-ferritin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Iron is found everywhere on the Earth, so it is no surprise that living cells use iron ions in many ways. We use iron throughout our body, for many tasks. Iron ions bind strongly and specifically to small molecules such as oxygen, making it an essential tool for manipulating these elusive molecules. Iron ions also cycle easily between the ferrous and ferric forms, providing a handy tool for manipulating individual electrons. Iron ions, however, pose a great challenge in our modern biological environment. The water filling cells and the oxygen in the air together conspire to convert iron ions to the ferric state, which is highly insoluble, forming rust-like oxides. The cell must somehow shelter iron ions so that they may be stored and delivered in the necessary quantities. This is the job of ferritin and transferrin.</div>
+<h4>Iron Storage</h4>
+<div>Inside cells, extra iron ions are locked safely in the protein shell of ferritin, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fha" target="_blank">1fha <i class="fa fa-external-link"> </i></a></span>. Ferritin is composed of 24 identical protein subunits that form a hollow shell. The bottom illustration shows the hollow shell cut in half, showing the chamber inside and a few of the pores that lead inside the shell. After entering the ferritin shell, iron ions are converted into the ferric state, where they form small crystallites along with phosphate and hydroxide ions. There is room to pack about 4500 iron ions inside.</div>
+<h4>Rich in Iron</h4>
+<div>We have about 3.7 grams of iron in our body, painstakingly gathered from iron in our diet. About 2.5 grams are locked inside the hemoglobin in our blood, where they assist in the transport of oxygen. This is a valuable and essential resource, so special mechanisms for the recycling of this iron have been developed. Another few tenths of a gram are found in myoglobin, which also assists in oxygen management. A remarkably small amount--about 0.02 g--is distributed between the many different proteins that transfer electrons, such as the proteins of the electron transport chain that create most of our cellular ATP supplies. The rest, about a gram, is stored inside ferritin to fulfill future needs.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Transferrin and transferrin receptor. The portion crossing the membrane, which is not included in the structure, is shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/35/transferrin-and-receptor.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transferrin and transferrin receptor. The portion crossing the membrane, which is not included in the structure, is shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/35/35-FerritinandTransferrin-transferrin-and-receptor.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Transporting Iron Ions</h4>
+<div>Iron ions are delivered in the blood by the protein transferrin, shown here at the top in blue from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1h76" target="_blank">1h76 <i class="fa fa-external-link"> </i></a></span>. Each transferrin molecule can carry two iron ions, shown here in brown, with each ion coupled with a carbonate ion, shown in red and white. The protein contains an array of amino acids that are perfectly arranged to form four bonds to the iron ion, which locks it in place. Once it finds its iron atoms, transferrin flows through the blood until it finds a transferrin receptor on the surface of a cell, shown here at the bottom from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cx8" target="_blank">1cx8 <i class="fa fa-external-link"> </i></a></span> (that PDB file contains coordinates for the part of the receptor that is outside the cell--the rest is shown as a schematic here). Transferrin binds tightly to the receptor and is drawn into the cell in a small vesicle. The cell then acidifies the inside of this little pocket, which causes transferrin to release its iron. Then, the receptor and empty transferrin are recycled back to the outside of the cell. Triggered by the neutral pH of the blood, the receptor releases the empty transferrin, and it continues its job of gathering iron. <br/><br/> If you look through the PDB, you will find several molecules called lactoferrin and ovotransferrin that are similar to transferrin. These molecules, found in milk and egg whites respectively, also have strong binding sites for iron. However, their main function is not delivery. Instead, they serve to protect cells from bacteria. Since they mop up any free iron ions, they starve bacteria of a vital resource, slowing the growth of an infection.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ferritin and Iron</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/35/35-Ferritin_and_Transferrin-Ferritin_JSmol.jpg"/></div>
+<p>Three structures (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4lqh" target="_blank">4lqh</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4lpj" target="_blank">4lpj</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4lyu" target="_blank">4lyu</a>) follow ferritin as it starts to fill with iron. The researchers soaked ferritin in a solution of iron and determined structures at different times. The one shown here was obtained after soaking for 15 minutes, and contains five iron ions bound to each subunit, coordinated by a "nanocage" of acidic and histidine amino acids. This site is also thought to be where the iron ions are converted to the safer ferric state before storage. To compare this to structures before the soak (with no iron ions), or after a one minute soak (with only one iron ion), click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>4lqh, 4lpj, 4lyu: C Pozzi, F DiPisa, D Lalli, C Rosa, E Theil, P Turano &amp; S Mangani (2015) Time-lapse anomalous X-ray diffraction shows how Fe(2+) substrate ions move through ferritin protein nanocages to oxidoreductase sites. Acta Crystallographica D71, 941-953.</li>
+<li>1h76: DR Hall, JM Hadden, GA Leonard, S Bailey, M Neu, M Winn &amp; PF Lindley (2002) The crystal and molecular structures of diferric porcine and rabbit serum transferrins at resolutions of 2.15 and 2.60 A, respectively. Acta Crystallographica D58, 70.</li>
+<li>1cx8: CM Lawrence, S Ray, M Babyonyshev, R Galluser, DW Borhani &amp; SC Harrison (1999) Crystal structure of the ectodomain of human transferrin receptor. Science 286, 779-782.</li>
+<li>DR Richardson and P Ponka (1997): The molecular mechanisms of the metabolism and transport of iron in normal and neoplastic cells. Biochimica et Biophysica Acta 1331, pp. 1-40.</li>
+<li>1fha: DM Lawson, PJ Artymiuk, SJ Yewdall, JM Smith, JC Livingstone, A Treffry, A Luzzago, S Levi, P Arosio, G Cesareni, CD Thomas, WV Shaw &amp; PM Harrison (1991) Solving the structure of human H ferritin by genetically engineering intermolecular crystal contacts. Nature 349, 541-544.</li>
+<li>EC Theil (1987): Ferritin: structure, gene regulation, and cellular function in animals, plants and microorganisms. Annual Review of Biochemistry 56, pp. 289-315.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_11">http://doi.org/10.2210/rcsb_pdb/mom_2002_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

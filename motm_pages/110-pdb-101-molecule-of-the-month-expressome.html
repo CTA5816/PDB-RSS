@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Expressome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Expressome" property="og:title"/>
+<meta content="In bacteria, ribosomes start building proteins as messenger RNA is being transcribed" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6x9q_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/253" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Expressome" name="twitter:title"/>
+<meta content="In bacteria, ribosomes start building proteins as messenger RNA is being transcribed" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6x9q_composite.jpg" name="twitter:image"/>
+<meta content="In bacteria, ribosomes start building proteins as messenger RNA is being transcribed" name="description"/>
+<meta content="expressome,ribosome,RNA polymerase,transfer RNA,tRNA,messenger RNA,mRNA,protein synthesis,bacteria,NusG,6x9q,6ztj,6ztm,5my1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 253
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 253 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Expressome</h1>
+<p><i>In bacteria, ribosomes start building proteins as messenger RNA is being transcribed</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Expressome with RNA polymerase in green, ribosome in blue, and transcription elongation factors in purple and magenta. In the image at right, the coding strand of DNA is in yellow and the non-coding strand is in orange, mRNA is in red, and tRNA in magenta and purple." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6x9q_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Expressome with RNA polymerase in green, ribosome in blue, and transcription elongation factors in purple and magenta. In the image at right, the coding strand of DNA is in yellow and the non-coding strand is in orange, mRNA is in red, and tRNA in magenta and purple.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6x9q_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>In our cells, transcription and translation occur in two different places: DNA is transcribed into messenger RNA in the nucleus, and messenger RNA is translated into proteins in the cytoplasm. Bacterial cells, on the other hand, do everything in one place, creating the possibility that the two processes may interfere with one another. In reality, however, bacteria take advantage of this. Ribosomes immediately start work on messenger RNA as it is transcribed, and end up tugging on the new mRNA enough that they promote continued formation of the mRNA.</div>
+<h4>Flexible Connections</h4>
+<div>In general, however, bacteria don't simply allow <a href="https://pdb101.rcsb.org/motm/121">ribosomes</a> to crash into <a href="https://pdb101.rcsb.org/motm/40">RNA polymerase</a>. Instead, they use transcription elongation factors to link the RNA polymerase to the ribosome, holding it close, but not too close. These transcription elongation factors, such as NusG and NusA, are flexible and allow some space between the polymerase and ribosome, leaving room for the many small ribosomal motions that are needed as amino acids are added to the new protein..</div>
+<h4>Expressome in Action</h4>
+<div>RNA polymerase, a ribosome, and all the associated molecules together form an "expressome," or "transcription-translation complex" (TTC). As seen in PDB entry <a href="https://www.rcsb.org/structure/6x9q" target="_blank">6x9q</a>, NusG and NusA bridge between RNA polymerase and the small subunit of the ribosome, placing the emerging mRNA strand in the perfect place for entry into the ribosome.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A collided expressome is shown at left, and an expressome with NusG and NusA is shown at right." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6ztm_6x9q.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A collided expressome is shown at left, and an expressome with NusG and NusA is shown at right.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-6ztm_6x9q.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Collision Complex</h4>
+<div>As you can imagine, these large complexes are difficult to study, so researchers are taking several approaches to visualize them. An early study, available in PDB entry <a href="https://www.rcsb.org/structure/5my1" target="_blank">5my1</a> (not shown), paused RNA polymerase and allowed the ribosome to crash into it. Recently, other researchers used a short piece of RNA to tie the polymerase and the ribosome together, as in PDB entry <a href="https://www.rcsb.org/structure/6ztm" target="_blank">6ztm</a> (shown on the left) and PDB entry <a href="https://www.rcsb.org/structure/6vu3" target="_blank">6vu3</a> (not shown), finding that this creates complexes similar to the earlier collided structure. By comparison, we can see that the NusG/NusA transcription elongation factors (shown on the right) hold the polymerase and ribosome a bit further apart, and in a quite different relative orientation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Expressome in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/253/253-Expressome-jmol.jpg"/></div>
+<p>In these expressome structures, you can see the entire Central Dogma in one structure. PDB entry <a href="https://www.rcsb.org/structure/6ztj" target="_blank">6ztj</a> is shown here. A small piece of DNA is shown at the top, pried open by RNA polymerase to form a transcription bubble. Messenger RNA is being transcribed from the DNA, extending down into the ribosome. There, tRNA is being aligned to the mRNA codons to create new proteins. In this structure, a single phenylalanine, shown in white, is in the place of the growing protein chain. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Visit the EMDataResource to explore the cryoEM data supporting these structures of expressomes--for example, take a look at the <a href="https://www.emdataresource.org/EMD-22107">EMDataResource page for 6x9q.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6x9q: Wang, C., Molodtsov, V., Firlar, E., Kaelber, J.T., Blaha, G., Su, M., Ebright, R.H. (2020) Structural basis of transcription-translation coupling. Science 369: 1359-1365</li>
+<li>6ztj, 6ztm: Webster, M.W., Takacs, M., Zhu, C., Vidmar, V., Eduljee, A., Abdelkareem, M., Weixlbaumer, A. (2020) Structural basis of transcription-translation coupling and collision in bacteria. Science 369: 1355-1359</li>
+<li>Kohler, R., Mooney, R.A., Mills, D.J., Landick, R., Cramer, P. (2017) Architecture of a transcribing-translating expressome. Science 356: 194-197</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_1">http://doi.org/10.2210/rcsb_pdb/mom_2021_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Initiation Factor eIF4E</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Initiation Factor eIF4E" property="og:title"/>
+<meta content="Initiation factors for protein synthesis interact through disordered chains." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-1ap8_1rf8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/230" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Initiation Factor eIF4E" name="twitter:title"/>
+<meta content="Initiation factors for protein synthesis interact through disordered chains." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-1ap8_1rf8.jpg" name="twitter:image"/>
+<meta content="Initiation factors for protein synthesis interact through disordered chains." name="description"/>
+<meta content="protein synthesis,initiation factor,eIF4E,cancer,messenger RNA,cap,1ap8,1rf8,1ejh,1ej4,5t46,4ued,4tpw,1wkw" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 230
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 230 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Initiation Factor eIF4E</h1>
+<p><i>Initiation factors for protein synthesis interact through disordered chains.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Initiation factor eIF4E and its complex with eIF4G. These structures include the end of a messenger RNA and a small portion of eIF4G." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-1ap8_1rf8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Initiation factor eIF4E and its complex with eIF4G. These structures include the end of a messenger RNA and a small portion of eIF4G.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-1ap8_1rf8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Synthesis of proteins is a complex process, and cells need a way to get it started. A collection of initiation factors brings together messenger RNA, <a href="https://pdb101.rcsb.org/motm/121">ribosomes</a> and the first <a href="https://pdb101.rcsb.org/motm/15">transfer RNA</a>, setting everything up to begin construction of a new protein. In our cells and in other eukaryotes, most of the messenger RNA molecules are capped by a methylated guanine nucleotide that is attached backwards at the beginning of the chain. Initiation factor eIF4E (PDB entry <a href="https://www.rcsb.org/structure/1ej1" target="_blank">1ej1</a>) has the job of recognizing this usual cap structure, and then directing the assembly of the rest of the initiation machinery on the messenger RNA.</div>
+<h4>Conditional Disorder</h4>
+<div>Our cells often use flexible regions in proteins to build complexes for signaling and recognition. When the protein is by itself, these tails are disordered, but when they form their complexes, they fold into small interacting local structures. eIF4E (PDB entry <a href="https://www.rcsb.org/structure/1ap8" target="_blank">1ap8</a>) is composed of a compact domain that binds to the mRNA cap, and a long, flexible tail. When eIF4E interacts with eIF4G (an initiation factor that acts as a scaffold for many other initiation factors), a portion of this tail folds up and interacts with a similarly flexible region of eIF4G (PDB entry <a href="https://www.rcsb.org/structure/1rf8" target="_blank">1rf8</a>).</div>
+<h4>Cancer Connection</h4>
+<div>Cancer cells grow very quickly, so they need ways to circumvent the normal cellular controls on growth. One way they do this is through oncogenic changes in the machinery that regulates protein synthesis, for example, by developing an overactive eIF4E. Medical researchers are now targeting eIF4E, developing inhibitors that can slow the action of eIF4E and block the accelerated growth of cancer cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complexes of eIF4E with initiation factor iEF4G, 4E binding protein, and the inhibitor 4EGI-1. The hydrophobic motif is shown in brighter magenta and green, and the structures include only portions of each of the proteins." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-complexes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complexes of eIF4E with initiation factor iEF4G, 4E binding protein, and the inhibitor 4EGI-1. The hydrophobic motif is shown in brighter magenta and green, and the structures include only portions of each of the proteins.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-complexes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Initiation Interactions</h4>
+<div>Structural biologists have been looking closely at the interaction of eIF4E and its partners. The protein is stored in an inactive state with several 4E binding proteins. These proteins are released upon phosphorylation when eIF4E is needed, and eIF4G binds in the same place. PDB entries <a href="https://www.rcsb.org/structure/1ejh" target="_blank">1ejh</a> and <a href="https://www.rcsb.org/structure/1ej4" target="_blank">1ej4</a> first showed how these proteins bind to eIF4E, using a similar hydrophobic motif. Two later structures, PDB entries <a href="https://www.rcsb.org/structure/5t46" target="_blank">5t46</a> and <a href="https://www.rcsb.org/structure/4ued" target="_blank">4ued</a>, looked at a larger segment of eIF4G and 4E-BP, showing that a flanking region is also important for the conditionally-ordered interaction. The trial anti-cancer inhibitor 4EGI-1 binds in the same location on eIF4E and blocks binding of these partners (PDB entry <a href="https://www.rcsb.org/structure/4tpw" target="_blank">4tpw</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Initiation Factor eIF4E and mRNA Cap</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/230/230-Initiation_Factor_eIF4E-1wkw_jsmol.jpg"/></div>
+<p>PDB entry <a href="https://www.rcsb.org/structure/1wkw" target="_blank">1wkw</a> includes the tip of a messenger RNA, including one nucleotide and the cap. In the cap, a guanine is attached backwards from the normal chain direction, and includes an extra methyl group. The structure also includes a short segment of a 4E binding protein, including the hydrophobic stretch that is specifically recognized by eIF4E. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can explore the structures of many other initiation factors by searching in the main RCSB site for “translation initiation factor”. Try looking for others that have disordered tails.</li>
+<li>If you’d like to see a longer piece of RNA with a cap, look at PDB entry <a href="https://www.rcsb.org/structure/6c6k" target="_blank">6c6k</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5t46: Gruner, S., Peter, D., Weber, R., Wohlbold, L., Chung, M.Y., Weichenrieder, O., Valkov, E., Igreja, C., Izaurralde, E. (2016) The Structures of eIF4E-eIF4G Complexes Reveal an Extended Interface to Regulate Translation Initiation. Mol.Cell 64: 467-479</li>
+<li>4ued: Peter, D., Igreja, C., Weber, R., Wohlbold, L., Weiler, C., Ebertsch, L., Weichenrieder, O., Izaurralde, E. (2015) Molecular Architecture of 4E-BP Translational Inhibitors Bound to Eif4E. Mol.Cell 57: 1074</li>
+<li>4tpw: Papadopoulos, E., Jenni, S., Kabha, E., Takrouri, K.J., Yi, T., Salvi, N., Luna, R.E., Gavathiotis, E., Mahalingam, P., Arthanari, H., Rodriguez-Mias, R., Yefidoff-Freedman, R., Aktas, B.H., Chorev, M., Halperin, J.A., Wagner, G. (2014) Structure of the eukaryotic translation initiation factor eIF4E in complex with 4EGI-1 reveals an allosteric mechanism for dissociating eIF4G. Proc.Natl.Acad.Sci.USA 111: E3187-E3195</li>
+<li>1rf8: Gross, J.D., Moerke, N.J., von der Haar, T., Lugovskoy, A.A., Sachs, A.B., McCarthy, J.E., Wagner, G. (2003) Ribosome loading onto the mRNA cap is driven by conformational coupling between eIF4G and eIF4E. Cell 115: 739-750</li>
+<li>1ejh, 1ej4: Marcotrigiano, J., Gingras, A.C., Sonenberg, N., Burley, S.K. (1999) Cap-dependent translation initiation in eukaryotes is regulated by a molecular mimic of eIF4G. Mol.Cell 3: 707-716</li>
+<li>1ej1: Marcotrigiano, J., Gingras, A.C., Sonenberg, N., Burley, S.K. (1997) Cocrystal structure of the messenger RNA 5' cap-binding protein (eIF4E) bound to 7-methyl-GDP. Cell 89: 951-961</li>
+<li>1ap8: Matsuo, H., Li, H., McGuire, A.M., Fletcher, C.M., Gingras, A.C., Sonenberg, N., Wagner, G. (1997) Structure of translation factor eIF4E bound to m7GDP and interaction with 4E-binding protein. Nat.Struct.Mol.Biol. 4: 717-724</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_2">http://doi.org/10.2210/rcsb_pdb/mom_2019_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

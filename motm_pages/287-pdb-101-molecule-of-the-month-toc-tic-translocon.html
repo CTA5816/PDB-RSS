@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: TOC-TIC Translocon</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: TOC-TIC Translocon" property="og:title"/>
+<meta content="The large TOC-TIC supercomplex transports proteins into the chloroplast" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/305/7VCF.png" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/305" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: TOC-TIC Translocon" name="twitter:title"/>
+<meta content="The large TOC-TIC supercomplex transports proteins into the chloroplast" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/305/7VCF.png" name="twitter:image"/>
+<meta content="The large TOC-TIC supercomplex transports proteins into the chloroplast" name="description"/>
+<meta content="chloroplast,transport" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 305
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 305 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: TOC-TIC Translocon</h1>
+<p><i>The large TOC-TIC supercomplex transports proteins into the chloroplast</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="TOC-TIC translocon from Chlamydomonas reinhardtii (7VCF). TOC components are shown in blue, TIC components are shown in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/305/7VCF.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>TOC-TIC translocon from <i>Chlamydomonas reinhardtii</i> (<a href="https://www.rcsb.org/structure/7VCF" target="_blank">7VCF</a>). TOC components are shown in blue, TIC components are shown in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/305/7VCF.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Plants and algae rely on chloroplasts to convert energy from sunlight into chemical energy that can be used to power cellular activity. Like mitochondria, chloroplasts are thought to have originated from the engulfment of a bacterial cell by an early eukaryotic cell. Although modern chloroplasts and mitochondria still retain their own circular genomes, a majority of the proteins needed for organelle function are encoded in the nuclear genome. Of the approximately 3000 proteins in the chloroplast, only about 100 can be synthesized in the organelle from its own genome. Most of the remaining chloroplast proteome is translated in the cytosol and imported into the chloroplast via the TOC-TIC supercomplex.</div>
+<h4>Spanning multiple compartments</h4>
+<div>Chloroplasts are organized into multiple compartments that are separated by membranes. The outer membrane envelops the entire chloroplast. Within the chloroplast is an inner membrane which surrounds the stroma, a large compartment that contains photosynthetic structures, chloroplast ribosomes, and DNA. Between the inner and outer chloroplast membranes is a narrow intermembrane space. Passage of proteins through the outer membrane is mediated by the TOC (<u>T</u>ranslocon at the <u>O</u>uter envelope of <u>C</u>hloroplasts) complex, while passage through the inner membrane is controlled by the TIC (<u>T</u>ranslocon at the <u>I</u>nner envelope of <u>C</u>hloroplasts) complex. Recent structural studies in the green alga <i>Chlamydomonas reinhardtii</i> have shown that TOC and TIC complexes form a large single TOC-TIC supercomplex, as shown to the right (<a href="https://www.rcsb.org/structure/7VCF" target="_blank">7VCF</a>), which is thought to transport proteins from the cytosol to the stroma as well as into the intermembrane space.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt=" The Ycf2-FtsHi complex (shown in pink/purple, 8XQX) docks to the TOC-TIC translocon (shown in blue/green)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/305/8XQX_7VCF.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i> The Ycf2-FtsHi complex (shown in pink/purple, <a href="https://www.rcsb.org/structure/8xqx" target="_blank">8XQX</a>) docks to the TOC-TIC translocon (shown in blue/green).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/305/8XQX_7VCF.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Pulling proteins in</h4>
+<div>Biochemical studies have shown that importing proteins from the cytosol into the chloroplast stroma is an energy-intensive process that can require the hydrolysis of hundreds of ATPs per protein. Much of this energy is likely used by motor complexes that associate with the TOC-TIC translocon and pull proteins into the stroma. One such motor complex in <i>Chlamydomonas reinhardtii</i> has recently been structurally characterized (left). The Ycf2-FtsHi complex (shown in pink/purple, <a href="https://www.rcsb.org/structure/8xqx" target="_blank">8XQX</a>), is a large multi-subunit complex that spans the inner chloroplast membrane. Six of its component proteins form a hexameric ring that is thought to pull proteins through its central channel using the energy released from ATP hydrolysis.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Compare β-barrel structures from TOC and BAM1</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/305/TOCvBAM-jmol.png"/></div>
+<p>The large central channel of the TOC complex is a hybrid β-barrel that is formed between two Toc proteins (Toc75 and Toc120/Toc90). At its widest, this channel is about 20 angstroms across, which is large enough to allow passage for some folded proteins. The structure of the TOC β-barrel has striking similarities to a β-barrel found in a gram-negative bacterial protein complex called BamA (<a href="https://www.rcsb.org/structure/6V05" target="_blank">6V05</a>), suggesting that the TOC channel may have its origins as a bacterial membrane protein. Click on the jsMol tab to compare the TOC β-barrel to the BamA β-barrel structure.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are many other protein complexes that form hexameric complexes that can pull peptides into their central channel, such as <a href="https://pdb101.rcsb.org/motm/80">AAA+ proteases</a> and the <a href="https://pdb101.rcsb.org/motm/299"> PTEX complex in malaria</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li><a href="https://www.rcsb.org/structure/7VCF" target="_blank">7VCF</a>: Jin Z, Wan L, Zhang Y, Li X, Cao Y, Liu H, Fan S, Cao D, Wang Z, Li X, Pan J, Dong MQ, Wu J, Yan Z. Structure of a TOC-TIC supercomplex spanning two chloroplast envelope membranes. Cell. 2022 Dec 8;185(25):4788-4800.e13. Epub 2022 Nov 21.</li>
+<li><a href="https://www.rcsb.org/structure/8XQX" target="_blank">8XQX</a>: Liang K, Zhan X, Li Y, Yang Y, Xie Y, Jin Z, Xu X, Zhang W, Lu Y, Zhang S, Zou Y, Feng S, Wu J, Yan Z. Conservation and specialization of the Ycf2-FtsHi chloroplast protein import motor in green algae. Cell. 2024 Oct 3;187(20):5638-5650.e18. </li>
+<li><a href="https://www.rcsb.org/structure/6V05" target="_blank">6V05</a>: Tomasek D, Rawson S, Lee J, Wzorek JS, Harrison SC, Li Z, Kahne D. Structure of a nascent membrane protein as it folds on the BAM complex. Nature. 2020 Jul;583(7816):473-478. Epub 2020 Jun 11.</li>
+<li>Liu H, Li A, Rochaix JD, Liu Z. Architecture of chloroplast TOC-TIC translocon supercomplex. Nature. 2023 Mar;615(7951):349-357. Epub 2023 Jan 26. PMID: 36702157.</li>
+<li>Wang N, Xing J, Su X, Pan J, Chen H, Shi L, Si L, Yang W, Li M. Architecture of the ATP-driven motor for protein import into chloroplasts. Mol Plant. 2024 Nov 4;17(11):1702-1718. doi: 10.1016/j.molp.2024.09.010. Epub 2024 Sep 25.</li>
+<li>Shi LX, Theg SM. Energetic cost of protein import across the envelope membranes of chloroplasts. Proc Natl Acad Sci U S A. 2013 Jan 15;110(3):930-5. Epub 2012 Dec 31. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_5">http://doi.org/10.2210/rcsb_pdb/mom_2025_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

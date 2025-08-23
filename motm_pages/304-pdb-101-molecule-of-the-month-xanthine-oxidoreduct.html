@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Xanthine Oxidoreductase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Xanthine Oxidoreductase" property="og:title"/>
+<meta content="Xanthine oxidoreductase helps break down obsolete purine nucleotides" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/117/1fo4_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/117" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Xanthine Oxidoreductase" name="twitter:title"/>
+<meta content="Xanthine oxidoreductase helps break down obsolete purine nucleotides" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/117/1fo4_composite.jpg" name="twitter:image"/>
+<meta content="Xanthine oxidoreductase helps break down obsolete purine nucleotides" name="description"/>
+<meta content="gout,oxidation reduction,purine base catabolic process,urate oxidase,xanthine oxidase,1fo4,1r4u,1fiq,1jrp" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 117
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 117 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Xanthine Oxidoreductase</h1>
+<p><i>Xanthine oxidoreductase helps break down obsolete purine nucleotides</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Xanthine dehydrogenase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/117/1fo4_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Xanthine dehydrogenase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/117/117-XanthineOxidoreductase_1fo4_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our diet includes a wide variety of different molecules. Many of these molecules are broken down completely and used to generate the metabolic energy that powers our cells. Others are disassembled piece-by-piece and recycled to build our own proteins and nucleic acids. The ones that are left over are broken down and discarded. Xanthine oxidoreductase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fo4" target="_blank">1fo4 <i class="fa fa-external-link"> </i></a></span>, is the last stop for extra purine nucleotides (ATP and GTP) in our cells. Purines are broken down in several steps, ultimately yielding uric acid, which is excreted from the body.</div>
+<h4>Extracting Electrons</h4>
+<div>Xanthine oxidoreductase shuffles electrons around, so it includes several specialized molecular tools for handling electrons. At one end of the enzyme, an active site binds to the purine substrate and adds a hydroxyl group to it. This tricky reaction is performed by a cofactor that includes a molybdenum atom. Electrons are extracted in the process and a string of iron-sulfur clusters funnel the electrons from the purine active site to a site on the opposite side of the enzyme, which ultimately transfers the electrons to NAD or oxygen.</div>
+<h4>Supporting Roles</h4>
+<div>Xanthine oxidoreductase is found inside cells, where it performs its role in purine degradation. However, xanthine oxidoreductase is also plentiful in milk, which has made it a popular enzyme for study since it is very easy to isolate and purify. In milk, it is thought to play several roles. In its reaction with oxygen, it releases hydrogen peroxide, which is a very reactive substance. This may help give milk its antibacterial properties. It also plays a key role in the secretion of fat globules as milk is being produced. Surprisingly, this role appears to depend on the interaction of xanthine oxidoreductase with other proteins in the mammary gland cell membranes, and not on the catalytic activity of the enzyme.</div>
+<h4>Painful Purines</h4>
+<div>Inhibitors of xanthine oxidoreductase are useful for treating gout. Gout is a painful disease where crystals of uric acid collect in joints (in particular, the big toe), causing painful inflammation. The conditions that lead to gout are still a bit of a mystery, but it seems to be connected to high levels of uric acid in the blood. This, in turn, can be caused by a diet that is rich in purines, including such foods as anchovies and sardines, liver, asparagus and mushrooms. Drugs that block xanthine oxidoreductase, such as allopurinol, reduce the production of uric acid, reducing the levels in the blood.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Urate oxidase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/117/1r4u_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Urate oxidase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/117/117-XanthineOxidoreductase_1r4u_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Total Destruction</h4>
+<div>Most organisms have additional enzymes that take the destruction of purines further. Most have urate oxidase (shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r4u" target="_blank">1r4u <i class="fa fa-external-link"> </i></a></span>) and a few other enzymes that ultimately produce allantoin, a molecule that is more soluble and easier to excrete than uric acid. Some organisms go even further and break it all the way down into ammonia and carbon dioxide. Strangely, our cells have a mutated version of the urate oxidase gene that is inactive. Scientists have postulated that this gene was mutated during the evolution of humans to provide us with a benefit for aging. Uric acid is a powerful antioxidant, and the higher levels in our blood, caused by the evolutionary loss of urate oxidase, may help protect us from oxygen damage over our long lifespans.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Xanthine Oxidoreductase (PDB entries 1fo4 and 1fiq)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/117/1fo4_1fiq_jmol.jpg"/></div>
+<p>Xanthine oxidoreductase is actually two enzymes in one. Early in the study of the enzyme, scientists purified a form that uses NAD and a different form that uses oxygen. Scientists originally thought they were two different enzymes and gave them two names: xanthine dehydrogenase and xanthine oxidase. However, when they finally got a look at the amino acid sequence, both enzymes turned out to be the same. The forms differ in two ways. First, there are several disulfide bridges in the enzyme: if they are formed, the enzyme acts as the oxidase, if they are broken, the enzyme acts as the dehydrogenase. Second, the enzyme may be clipped by proteases to convert it permanently to the oxidase form. Two examples are shown here: the dehydrogenase form is shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fo4" target="_blank">1fo4 <i class="fa fa-external-link"> </i></a></span> and the proteolyzed oxidase form is shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fiq" target="_blank">1fiq <i class="fa fa-external-link"> </i></a></span>. One of the sites of cleavage is shown in white with a star. The last step in the electron transfer chain is an FAD group, shown here in turquoise. In the dehydrogenase form, this transfers electrons to NAD, but in the oxidase form, a loop of protein, shown here in bright red, covers the FAD, excluding NAD but allowing smaller oxygen molecules to accept electrons from FAD. To explore these structures in more detail, click on the image for an interactive JSmol. <br/><br/> Several xanthine oxidoreductase structures in the PDB also show the details of ligand binding in the enzyme. For instance, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jrp" target="_blank">1jrp <i class="fa fa-external-link"> </i></a></span> shows the enzyme with a purine-like inhibitor bound to the molybdenum cofactor.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Molybdenum is a rare element, used by only a few enzymes. Can you find other examples in the PDB? Do they use a similar cofactor to hold and activate the molybdenum ion? </li>
+<li>PDB entry <a class="static" href="https://pdb101.rcsb.org/pdb/explore.do?structureId=3eub">3eub</a> includes xanthine oxidoreductase with the substrate xanthine bound in the active site. How did the researchers obtain this structure without having the enzyme make its chemical change?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. Harrison (2004) Physiological roles of xanthine oxidoreductase. Drug Metabolism Reviews 36, 363-375.</li>
+<li>M. A. Hediger, R. J. Johnson, H. Miyazaki and H. Endou (2005) Molecular physiology of urate transport. Physiology 20, 125-133.</li>
+<li>R. Hille (2005) Molybdenum-containing hydroxylases. Archives of Biochemistry and Biophysics 433, 107-116.</li>
+<li>T. Nishino, K. Okamoto, B. T. Eger, E. F. Pai and T. Nishino (2008) Mammalian xanthing oxidoreductase-mechanism of transition from xanthine dehydrogenase to xanthine oxidase. FEBS Journal 275, 3278-3289.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_9">http://doi.org/10.2210/rcsb_pdb/mom_2009_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

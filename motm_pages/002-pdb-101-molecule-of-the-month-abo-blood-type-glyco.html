@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: ABO Blood Type Glycosyltransferases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: ABO Blood Type Glycosyltransferases" property="og:title"/>
+<meta content="ABO blood types are determined by an enzyme that attaches sugars to proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_3i0g_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/156" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: ABO Blood Type Glycosyltransferases" name="twitter:title"/>
+<meta content="ABO blood types are determined by an enzyme that attaches sugars to proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_3i0g_composite.jpg" name="twitter:image"/>
+<meta content="ABO blood types are determined by an enzyme that attaches sugars to proteins" name="description"/>
+<meta content="ABO,ABO(H),blood transfusion,blood type,H-antigen,3i0g,1lu1,2j1u,2obs,1lzi" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 156
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 156 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: ABO Blood Type Glycosyltransferases</h1>
+<p><i>ABO blood types are determined by an enzyme that attaches sugars to proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="ABO glycosyltransferase with UDP-galactose in red and yellow, a manganese ion in magenta, and the target sugar chain in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_3i0g_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ABO glycosyltransferase with UDP-galactose in red and yellow, a manganese ion in magenta, and the target sugar chain in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_3i0g_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Antibodies in our blood constantly search through the body, making sure that only 
+the proper molecules are present. This is essential, because they protect us from 
+invaders like bacteria and viruses. They can cause problems, however, in medical 
+treatment. For instance, if blood is given in a transfusion, it needs to be similar to 
+the normal blood, so that the antibodies are fooled into thinking that nothing is 
+amiss. By studying these similarities, researchers have discovered that blood comes 
+in several types, which define groups of people with compatible blood. The ABO 
+system defines one of the major types determining groups of people who can donate 
+blood to each other.</div>
+<h4>What's Your Type?</h4>
+<div>Proteins and lipids on the surfaces of red blood cells are covered with carbohydrate 
+chains, which form a protective coat around the cell. The ABO blood type is 
+determined by the type of sugars that are used to build these carbohydrates. The 
+carbohydrate is built around a core of 5-13 sugars, called the H-antigen, that ends in 
+a fucose sugar. For people with the O blood type, the story ends there. For the A and 
+B types, however, a specific glycosyltransferase, such as the one shown here from PDB entry 
+<span class="rcsb_id_tag" title="Glycosyltransferase B"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3i0g" target="_blank">3i0g <i class="fa fa-external-link"> </i></a></span>,
+adds one more sugar to the end. For type A, this sugar is N-acetylgalactosamine,
+and for type B, it is the slightly smaller sugar galactose. This 
+small difference, however, has a critical effect.</div>
+<h4>Matching Types</h4>
+<div>The immune system searches through its repertoire of antibodies and 
+gets rid of any that would attack the normal molecules found in the body. So, a 
+person with type A blood doesn't have any antibodies to bind to the type A sugars. 
+They do, however, have antibodies that attack type B carbohydrates, which will 
+attack any type B blood cells that are transfused. People with type O are great for 
+donating blood, since it will not cause problems with people with type A or type B 
+antibodies, but if they need a transfusion, their options are limited since they have 
+both of these types of antibodies in their own blood.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Carbohydrate-binding proteins from several different organisms, with sugar chains shown in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_1lu1_2j1u_2obs.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Carbohydrate-binding proteins from several different organisms, with sugar chains shown in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_1lu1_2j1u_2obs.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Binding Blood Carbohydrates</h4>
+<div>The blood type carbohydrates provide ready handles for attachment, and are 
+exploited by many organisms. A few examples are shown here. At the left is a lectin 
+from a seed (PDB entry 
+<span class="rcsb_id_tag" title="Dolichos biflorus seed lectin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lu1" target="_blank">1lu1 <i class="fa fa-external-link"> </i></a></span>),
+with four binding sites for carbohydrates (in all of 
+these pictures, the structure includes a few sugars from the longer natural 
+carbohydrate chain, shown here in green). The biological function of seed lectins is 
+not fully understood, but may be part of the defense of the plant. The function of the 
+two proteins on the right is more obvious--they are proteins from a bacterium and from a 
+virus, which are involved with the process of infection (PDB entries
+<span class="rcsb_id_tag" title="Fucose binding module"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2j1u" target="_blank">2j1u <i class="fa fa-external-link"> </i></a></span> and
+<span class="rcsb_id_tag" title="Norovirus P domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2obs" target="_blank">2obs <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glycosyltransferases GTA and GTB (PDB entries 1lzi and 3i0g)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/156/156-ABOBloodTypeGlycosyltransferases_1lzi_jmol.jpg"/></div>
+<p>The ABO blood type of each person is determined by a single gene. For the A type, 
+there is a gene for GTA, a glycosyltransferase that adds N-acetylgalactosamine. For type 
+B, the gene encodes GTB, a different glycosyltransferase that adds galactose. For type 
+O, neither enzyme is made. Amazingly, GTA and GTB are almost identical, with only 
+four amino acid changes (shown here in turquoise on PDB entry 
+<span class="rcsb_id_tag" title="Glycosyltransferase A"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lzi" target="_blank">1lzi <i class="fa fa-external-link"> </i></a></span>).
+This tiny difference in sequence, however, has life-or-death consequences!
+To explore the structure of these two enzymes, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers have studied the specificity of GTA and GTB by creating mutants that 
+include some amino acids from GTA and some from GTB. Structures of many of 
+these hybrid glycosyltransferases are included in the PDB.</li>
+<li>The PDB includes many proteins involved with other blood types--try searching 
+for "Blood Group Antigens" to explore some of them.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. Koscielak (2001) ABH blood group active glycoconjugates from human red cells. 
+Transfusion Medicine 11, 267-279.</li>
+<li>S. I. Patenaude, N. O. L. Seto, S. N. Borisova, A. Szpacenko, S. L. Marcus, M. M. Palcic &amp; 
+S. V. Evans (2002) The structural basis for specificity in human ABO(H) blood group 
+biosynthesis. Nature Structural Biology 9, 685-690.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_12">http://doi.org/10.2210/rcsb_pdb/mom_2012_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

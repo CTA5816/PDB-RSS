@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Citric Acid Cycle</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Citric Acid Cycle" property="og:title"/>
+<meta content="Eight enzymes form a cyclic pathway for energy production and biosynthesis" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_citricacidcycle.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/154" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Citric Acid Cycle" name="twitter:title"/>
+<meta content="Eight enzymes form a cyclic pathway for energy production and biosynthesis" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_citricacidcycle.jpg" name="twitter:image"/>
+<meta content="Eight enzymes form a cyclic pathway for energy production and biosynthesis" name="description"/>
+<meta content="citric acid cycle,Krebs cycle,multienzyme complex,tricarboxylic acid cycle,tca,1cts,7acn,3blw,1e2o,1bbl,1pmr,2eq7,2jgd,2fp4,1cqi,1nek,1fuo,1mld,5mdh" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 154
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 154 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Citric Acid Cycle</h1>
+<p><i>Eight enzymes form a cyclic pathway for energy production and biosynthesis</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Enzymes of the citric acid cycle." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_citricacidcycle.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Enzymes of the citric acid cycle.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_citricacidcycle.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The citric acid cycle, also known as the Krebs cycle or the tricarboxylic acid cycle, is at the center of cellular metabolism, playing a starring role in both the process of energy production and biosynthesis. It finishes the sugar-breaking job started in glycolysis and fuels the production of ATP in the process. It is also a central hub in biosynthetic reactions, providing intermediates that are used to build amino acids and other molecules. The citric acid cycle enzymes are found in all cells that use oxygen, and even in some cells that don't. The examples included here are taken from several different organisms.</div>
+<h4>Eight Reactions</h4>
+<div>The eight enzymes of the citric acid cycle are assisted by the small molecule oxaloacetate. The cycle starts by addition of an acetyl group to oxaloacetate, then, in eight steps, the acetyl group is completely broken apart, restoring the oxaloacetate molecule for another round. In a typically biological twist, it's not quite this simple. You might imagine that the enzymes could just pop off the two carbon atoms of the acetyl group, using the oxaloacetate as a convenient carrier. However, by carefully labeling particular carbon atoms in these molecules, scientists have found that things get shuffled around a bit, and two carbon atoms in the original oxaloacetate are the parts that are actually released as carbon dioxide. Then, at the end of the cycle, the original acetate atoms are shuffled around to recreate the oxaloacetate.</div>
+<h4>Powerhouse of Energy</h4>
+<div>The citric acid cycle provides the electrons that fuel the process of oxidative phosphorylation--our major source of ATP and energy. As the acetyl group is broken down, electrons are stored in the carrier NADH, and delivered to <a href="https://pdb101.rcsb.org/motm/144"> Complex I</a>. These electrons then fuel the production of a proton gradient by two proton pumps: <a href="https://pdb101.rcsb.org/motm/137"> cytochrome bc1</a> and <a href="https://pdb101.rcsb.org/motm/5"> cytochrome c oxidase</a>. This proton gradient then powers the rotation of <a href="https://pdb101.rcsb.org/motm/72"> ATP synthase</a>, buiding ATP. All of this action occurs in our mitochondria--the citric acid cycle enzymes are inside the mitochondria, and the protein pumps are in the mitochondrial membrane. <div style="width:100%;clear:both;"> </div> <hr/></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Citrate synthase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1cts.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Citrate synthase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1cts.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Citrate Synthase</h4>
+<div>The cycle gets started with the enzyme citrate synthase, shown here from PDB entry <span class="rcsb_id_tag" title="Citrate Synthase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cts" target="_blank">1cts <i class="fa fa-external-link"> </i></a></span>. The <a href="https://pdb101.rcsb.org/motm/153"> pyruvate dehydrogenase complex</a> has previously connected an acetyl group to the carrier coenzyme A, which holds it in an activated form. Citrate synthase pops off the acetyl group and adds it to oxaloacetate, forming citric acid. The enzyme opens and closes around these molecules during the reaction--to explore the structures, take a look at the <a href="https://pdb101.rcsb.org/motm/93"> Molecule of the Month on citrate synthase.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Aconitase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_7acn-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Aconitase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_7acn-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Aconitase</h4>
+<div>The citrate formed in the first step is a bit too stable, so the second step moves an oxygen atom to create a more reactive isocitrate molecule. Aconitase, shown here from PDB entry <span class="rcsb_id_tag" title="Aconitase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=7acn" target="_blank">7acn <i class="fa fa-external-link"> </i></a></span>, performs this isomerization reaction, with the assistance of an iron-sulfur cluster. To explore this reaction, take a look at the <a href="https://pdb101.rcsb.org/motm/89"> Molecule of the Month on aconitase.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Isocitrate dehydrogenase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_3blw.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Isocitrate dehydrogenase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_3blw.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Isocitrate Dehydrogenase</h4>
+<div>The real work begins in the third step of the cycle. Isocitrate dehydrogenase, shown here from PDB entry <span class="rcsb_id_tag" title="Isocitrate Dehydrogenase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3blw" target="_blank">3blw <i class="fa fa-external-link"> </i></a></span>, removes one of the carbon atoms, forming carbon dioxide, and transfers electrons to NADH. To explore this molecule in more detail, take a look at the <a href="https://pdb101.rcsb.org/motm/129"> Molecule of the Month on isocitrate dehydrogenase.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="2-Oxoglutarate dehydrogenase complex." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_OGDH.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>2-Oxoglutarate dehydrogenase complex.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_OGDH.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>2-Oxoglutarate Dehydrogenase Complex</h4>
+<div>The next step is performed by a huge multienzyme complex, similar to the <a href="https://pdb101.rcsb.org/motm/153"> pyruvate dehydrogenase complex</a>. A lot of things happen in this complex. Another carbon atom is released as carbon dioxide, electrons are transferred to NADH, and the remaining part of the molecule in connected to coenzyme A. The complex is composed of three separate enzymes, all connected by flexible tethers. The illustration shown here includes only a few of the tethered molecules--in the actual complex, the central core is surrounded by 24 enzymes. This illustration was created using several PDB entries: <span class="rcsb_id_tag" title="2-Oxoglutarate Dehydrogenase Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e2o" target="_blank">1e2o <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="2-Oxoglutarate Dehydrogenase Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bbl" target="_blank">1bbl <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="2-Oxoglutarate Dehydrogenase Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pmr" target="_blank">1pmr <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="2-Oxoglutarate Dehydrogenase Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2eq7" target="_blank">2eq7 <i class="fa fa-external-link"> </i></a></span>, and <span class="rcsb_id_tag" title="2-Oxoglutarate Dehydrogenase Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2jgd" target="_blank">2jgd <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Succinyl-CoA synthetase from mitochondria (top) and bacteria (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_2fp4_1cqi.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Succinyl-CoA synthetase from mitochondria (top) and bacteria (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_2fp4_1cqi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Succinyl-CoA Synthetase</h4>
+<div>The fifth step is the only step in the cycle where ATP is made directly. The bond between succinate and coenzyme A is particularly unstable, and provides the energy needed to build a molecule of ATP. In mitochondria, the enzyme (shown on the top from PDB entry <span class="rcsb_id_tag" title="Succinyl-CoA Synthetase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2fp4" target="_blank">2fp4 <i class="fa fa-external-link"> </i></a></span>) actually creates GTP in the reaction, which is readily converted to ATP by the enzyme nucleoside diphosphate kinase. A similar form of succinyl coA synthetase is found in the cytoplasm, which uses ATP and is thought to be mostly involved in the opposite reaction, creating succinyl-CoA for use in biosynthetic tasks. A bacterial form of the ATP-dependent enzyme is shown on the bottom from PDB entry <span class="rcsb_id_tag" title="Succinyl-CoA Synthetase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cqi" target="_blank">1cqi <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Succinate dehydrogenase, with the membrane shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1nek-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Succinate dehydrogenase, with the membrane shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1nek-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Succinate Dehydrogenase</h4>
+<div>The sixth step is performed by a protein complex that is bound in the membrane of the mitochondrion. It links its citric acid cycle task directly to the electron transport chain. It first extracts hydrogen atoms from succinate, transferring them to the carrier FAD. With the help of several iron-sulfur clusters and a heme, these are then transferred to the mobile carrier ubiquinone, for transport to <a href="https://pdb101.rcsb.org/motm/137"> cytochrome bc1</a>. The complex shown here is from bacteria, from PDB entry <span class="rcsb_id_tag" title="Succinate Dehydrogenase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nek" target="_blank">1nek <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Fumarase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1fuo.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fumarase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1fuo.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fumarase</h4>
+<div>The seventh step is performed by fumarase, which adds a water to the molecule and gets it ready for the last step. A bacterial form of the enzyme is shown here from PDB entry <span class="rcsb_id_tag" title="Fumarase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fuo" target="_blank">1fuo <i class="fa fa-external-link"> </i></a></span>. In our cells, the enzyme is found both in the mitochondrion, where it plays its role in the citric acid cycle, and in the cytoplasm, where it is thought to play a role in biosynthesis and surprisingly, the response to DNA damage. However, our cells only have one gene for the enzyme, so a complex process based on the timing of protein folding is used to target some of the enzyme to the mitochondrion and leave some in the cytoplasm.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Malate dehydrogenase from mitochondria (top) and cytoplasm (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1mld_5mdh.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Malate dehydrogenase from mitochondria (top) and cytoplasm (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/154/154-CitricAcidCycle_1mld_5mdh.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Malate Dehydrogenase</h4>
+<div>The final step of the citric acid cycle recreates oxaloacetate, transferring electrons to NADH in the process. Malate dehydrogenase is found in both the mitochondrion and the cytoplasm--the mitochondrial form is shown at the top from PDB entry <span class="rcsb_id_tag" title="Malate Dehydrogenase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mld" target="_blank">1mld <i class="fa fa-external-link"> </i></a></span> and the cytoplasmic form is shown at the bottom from PDB entry <span class="rcsb_id_tag" title="Malate Dehydrogenase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5mdh" target="_blank">5mdh <i class="fa fa-external-link"> </i></a></span>. Together, they help solve an important problem in energy production: some NADH is produced by glycolysis, but it can't cross directly into the mitochondrion for use in energy production. Instead, the two forms of malate dehydrogenase form part of a shuttle. In the cytoplasm, NADH is used up to convert oxaloacetate to malate. Then, malate is transported into the mitochondrion and is used to recreate NADH by conversion of malate to oxaloacetate.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Allosteric motion of citrate synthase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/154/jmol_image-jmol.jpg"/></div>
+<p>Citrate synthase is an allosteric enzyme that changes shape in the course of its catalytic reaction. The open state, shown here on the left from PDB entry <a href="https://www.rcsb.org/structure/1cts" target="_blank">1cts</a>, captures the substrates and releases the products. In this structure, the product citrate is still bound in the active site. The closed state, shown on the right from PDB entry <a href="https://www.rcsb.org/structure/2cts" target="_blank">2cts</a>, performs the reaction, bringing coenzyme A (magenta) and its attached acetyl group close to oxaloacetate to form citrate. This structure captures the complex after the reaction is completed. Click on the JSmol tab to explore this structural transition in more detail.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>In many cases, the citric acid cycle enzymes are very similar when you compare the forms made by different organisms. You can use the Compare Structures tool to look for similarities and differences in the structures available in the PDB.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Voet and J. G. Voet (2011) Biochemistry, 4th Edition. John Wiley and Sons</li>
+<li>O. Yogev, A. Naamati and O. Pines (2011) Fumarase: a paradigm of dual targeting and dual localized functions. FEBS Journal 278, 4230-4242</li>
+<li>J. Rutter, D. R. Winge and J. D. Schiffman (2010) Succinate dehydrogenase -- assembly, regulation and role in human disease. Mitochondrion 10, 393-401</li>
+<li>M. E. Fraser, K. Hayakawa, M. S. Hume, D. G. Ryan and E. R. Brownie (2006) Interactions of GTP with the ATP-grasp domain of GTP-specific succinyl-CoA synthetase. Journal of Biological Chemistry 281, 11058-11065</li>
+<li>G. E. Murphy and G. J. Jensen (2005) Electron cytotomography of the E. coli pyruvate and 2-oxoglutarate dehydrogenase complexes. Structure 13, 1765-1773</li>
+<li>P. Minarik, N. Tomaskova, M. Kollarova and M. Antalik (2002) Malate dehydrogenases -- structure and function. General Physiology and Biophysics 21, 257-265</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_10">http://doi.org/10.2210/rcsb_pdb/mom_2012_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

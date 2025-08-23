@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: MDM2 and Cancer</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: MDM2 and Cancer" property="og:title"/>
+<meta content="MDM2 controls the action of p53 tumor suppressor, making it a target for cancer chemotherapy." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2_painting.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/234" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: MDM2 and Cancer" name="twitter:title"/>
+<meta content="MDM2 controls the action of p53 tumor suppressor, making it a target for cancer chemotherapy." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2_painting.jpg" name="twitter:image"/>
+<meta content="MDM2 controls the action of p53 tumor suppressor, making it a target for cancer chemotherapy." name="description"/>
+<meta content="P53 tumor suppressor,MDM2,MDMX,cancer,chemotherapy,apoptosis,1ycr,4xxb,5mnj,1rv1,3v3b" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 234
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 234 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: MDM2 and Cancer</h1>
+<p><i>MDM2 controls the action of p53 tumor suppressor, making it a target for cancer chemotherapy.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Artistic view of the interaction of MDM2 and MDMX (red) with p53 tumor suppressor (yellow). Ubiquitin (green) is added to p53, leading to its destruction by the proteasome (purple)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2_painting.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Artistic view of the interaction of MDM2 and MDMX (red) with p53 tumor suppressor (yellow). Ubiquitin (green) is added to p53, leading to its destruction by the proteasome (purple).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2_painting.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div><a href="https://pdb101.rcsb.org/motm/31">P53 tumor suppressor</a> is a guardian in our cells. It watches for damage, infection, and cancer, and if found, it can halt cell growth or trigger cellular self-destruction. P53 tumor suppressor must be closely regulated. This is the job of MDM2 (also known as HDM2 in human cells) and its partner MDMX: they watch over p53 so that these extreme consequences are only triggered when absolutely necessary.</div>
+<h4>Guarding the Guardian</h4>
+<div>Most of the time, MDM2 binds to p53. This has multiple effects. First, one domain of MDM2 binds to the transactivation domain of p53, blocking its signaling action. Another part of MDM2 holds a nuclear export signal, which is used to drag p53 out of the nucleus, away from the genes it activates, and into the cytoplasm. Finally, in the cytoplasm, another domain of MDM2 and MDMX act as a <a href="https://pdb101.rcsb.org/motm/60">ubiquitin ligase</a>, adding ubiquitin to p53 and targeting it for destruction by <a href="https://pdb101.rcsb.org/motm/166">proteasomes</a>.</div>
+<h4>Cancer Connection</h4>
+<div>Normally, enough MDM2 is made to keep p53 in check. But when damage or infection is sensed, MDM2 is inactivated and p53 is allowed to mobilize its resources to control the problem. Most cancer cells have developed ways to circumvent this process. In some cases, p53 itself is corrupted, so the cell has no way of protecting itself. In other cases, cancer cells find ways of creating more MDM2, often by having multiple copies of the gene that encodes it. This extra MDM2 continually blocks the action of p53, allowing the cancer cell to grow unchecked.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="At the top, MDM2 (red) is interacting with a small portion of p53 tumor suppressor (yellow). In the middle, MDM2 is interacting with ribosomal protein RPL11 (blue). At the bottom, MDM2 is interacting with one domain from MDMX (magenta), and the complex of ubiquitin (green) with the carrier protein UbcH5B (turquoise)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>At the top, MDM2 (red) is interacting with a small portion of p53 tumor suppressor (yellow). In the middle, MDM2 is interacting with ribosomal protein RPL11 (blue). At the bottom, MDM2 is interacting with one domain from MDMX (magenta), and the complex of ubiquitin (green) with the carrier protein UbcH5B (turquoise).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-MDM2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>MDM2 Domains</h4>
+<div>MDM2 has several connected domains, each with a specific function. Since the protein is so flexible, structural biologists have studied each of these domains separately. At one end, the N-terminal domain specifically binds to the transactivation domain of p53, blocking its action (PDB entry <a href="https://www.rcsb.org/structure/1ycr" target="_blank">1ycr</a>). In the center, a Zn-finger domain binds to ribosomal proteins (PDB entry <a href="https://www.rcsb.org/structure/4xxb" target="_blank">4xxb</a>). A C-terminal RING domain performs the reaction that connects ubiquitin to p53 (PDB entry <a href="https://www.rcsb.org/structure/5mnj" target="_blank">5mnj</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>MDM2 Inhibitors</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/234/234-MDM2_and_Cancer-1rv1_3v3b.jpg"/></div>
+<p>The interaction between MDM2 and p53 is an attractive target for cancer chemotherapy, because drugs that break this interaction would activate p53, killing the cancer cell. Several effective inhibitors have been discovered that bind at the site on MDM2 that recognizes p53. These include the small molecule Nutlin (PDB entry <a href="https://www.rcsb.org/structure/1rv1" target="_blank">1rv1</a>) and SAH-p53-8, a small peptide taken from p53 and stapled in the proper conformation by a linker (PDB entry <a href="https://www.rcsb.org/structure/3v3b" target="_blank">3v3b</a>, linker shown in green). To explore the complexes of these inhibitors with MDM2, click on the picture for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures of several domains of MDMX are also available in the PDB archive. Try searching for “MDMX”.</li>
+<li>You can explore the interaction of inhibitors with MDM2 using the Ligand View page. For example, look at the <a href="https://www.rcsb.org/3d-view/1RV1?preset=ligandInteraction&amp;sele=IMZ"> interaction in PDB entry 1rv1.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5mnj: Nomura, K., Klejnot, M., Kowalczyk, D., Hock, A.K., Sibbet, G.J., Vousden, K.H., Huang, D.T. (2017) Structural analysis of MDM2 RING separates degradation from regulation of p53 transcription activity. Nat. Struct. Mol. Biol. 24: 578-587.</li>
+<li>Joerger, A.C., Fersht, A.R. (2016) The p53 pathway: origins, inactivation in cancer, and emerging therapeutic approaches. Annu. Rev. Biochem. 85, 375-404.</li>
+<li>4xxb: Zheng, J., Lang, Y., Zhang, Q., Cui, D., Sun, H., Jiang, L., Chen, Z., Zhang, R., Gao, Y., Tian, W., Wu, W., Tang, J., Chen, Z. (2015) Structure of human MDM2 complexed with RPL11 reveals the molecular basis of p53 activation. Genes Dev. 29: 1524-1534.</li>
+<li>3v3b: Baek, S., Kutchukian, P.S., Verdine, G.L., Huber, R., Holak, T.A., Lee, K.W., Popowicz, G.M. (2012) Structure of the stapled p53 peptide bound to Mdm2. J.Am.Chem.Soc. 134: 103-106.</li>
+<li>1rv1: Vassilev, L.T., Vu, B.T., Graves, B., Carvajal, D., Podlaski, F., Filipovic, Z., Kong, N., Kammlott, U., Lukacs, C., Klein, C., Fotouhi, N., Liu, E.A. (2004) In vivo activation of the p53 pathway by small-molecule antagonists of MDM2. Science 303: 844-848.</li>
+<li>Iwakuma, T., Lozano, G. (2003) MDM2, an introduction. Mol. Cancer Res. 1, 993-1000.</li>
+<li>1ycr: Kussie, P.H., Gorina, S., Marechal, V., Elenbaas, B., Moreau, J., Levine, A.J., Pavletich, N.P. (1996) Structure of the MDM2 oncoprotein bound to the p53 tumor suppressor transactivation domain. Science 274: 948-953.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_6">http://doi.org/10.2210/rcsb_pdb/mom_2019_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

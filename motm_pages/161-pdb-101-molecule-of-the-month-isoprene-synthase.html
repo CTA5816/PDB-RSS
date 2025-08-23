@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Isoprene Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Isoprene Synthase" property="og:title"/>
+<meta content="Plants release a billion metric tons of isoprene and other organic gases every year." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-3n0g.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/201" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Isoprene Synthase" name="twitter:title"/>
+<meta content="Plants release a billion metric tons of isoprene and other organic gases every year." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-3n0g.jpg" name="twitter:image"/>
+<meta content="Plants release a billion metric tons of isoprene and other organic gases every year." name="description"/>
+<meta content="isoprene,isoprene synthase,isoprenoid,ozone,global warming,atmospheric chemistry,volatile organic compounds,terpenoid synthase fold,3n0g,1i9a,1p0n,1fps,1n20,3p5p" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 201
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 201 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Isoprene Synthase</h1>
+<p><i>Plants release a billion metric tons of isoprene and other organic gases every year.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Isoprene synthase. An analog of DMAPP is shown in pink and magnesium ions are shown in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-3n0g.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Isoprene synthase. An analog of DMAPP is shown in pink and magnesium ions are shown in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-3n0g.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>You might be surprised to hear that plants emit a billion metric tons of organic gases into the atmosphere every year. About half of this is isoprene, a volatile organic compound produced by tall trees such as oak, aspen, poplar, and eucalyptus, found in forests around the globe. The amount of isoprene emitted by plants is so significant that it filters sunlight, forming the beautiful blue haze that intrigued Leonardo da Vinci and is seen today in scenic locations such as the Blue Ridge Mountains of the United States and the Blue Mountains of Australia.</div>
+<h4>Releasing Isoprene</h4>
+<div>In plants, the enzyme isoprene synthase (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3n0g" target="_blank">3n0g</a>) makes isoprene. Isoprene synthase breaks down dimethylallyl diphosphate (DMAPP), a building block used to construct many “isoprenoid” molecules such as fatty acids or steroid hormones. Isoprene synthase uses metal ions to remove the phosphates from DMAPP, thereby releasing isoprene. This isoprene plays important roles in the chemistry of our atmosphere. For instance, researchers have found that it reacts with hydroxyl radicals and nitrogen oxides in the air, ultimately increasing ozone concentrations. Our understanding of isoprene synthase is also allowing researchers to engineer new forms of the enzyme, to make isoprene for industrial production of synthetic polymers and rubber.</div>
+<h4>Protecting Leaves</h4>
+<div>Leaves exposed to sunlight experience rapid changes in their surface temperature, so isoprene is thought to protect leaves from reactive molecules formed by heat. Several lines of evidence support this beneficial function: synthesis of isoprene synthase in plants is linked to the seasons and leaves at the top of trees produce more isoprene since they are exposed to more sunlight. Although at lower levels, plants also emit isoprene in the absence of light, so isoprene is also thought to act as a defense mechanism to fight herbivores or reduce stress caused by drought.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Isopentenyl diphosphate:dimethylallyl diphophosphate isomerases. A manganese ion is shown in green in the type 1 enzyme, and FAD is shown in pink in the type 2 enzyme." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-1i9a_1p0n.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Isopentenyl diphosphate:dimethylallyl diphophosphate isomerases. A manganese ion is shown in green in the type 1 enzyme, and FAD is shown in pink in the type 2 enzyme.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-1i9a_1p0n.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Building Blocks</h4>
+<div>The isoprene precursor DMAPP and the similar molecule isopentenyl diphosphate (IPP) are used to build many important molecules in all kinds of living things, ranging from steroid hormones to electron carriers such as ubiquinone. Depending on which of these two molecules is needed, DMAPP and IPP are interconverted by isomerase enzymes. Two forms of these enzymes are found in nature: type 1 isomerases use a metal ion to catalyze the interconversion (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1i9a" target="_blank">1i9a</a>) and type 2 enzymes use a nucleotide cofactor to do the same thing (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1p0n" target="_blank">1p0n</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Terpenoid Synthase Fold</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/201/201-Isoprene_Synthase-terpenoidfold.jpg"/></div>
+<p>A large collection of enzymes uses DMAPP and IPP to build different isoprenoid molecules. Many of these enzymes, including isoprene synthase, share a common protein fold, termed the “terpenoid synthase fold.” Four examples are shown here. Isoprene synthase breaks off the phosphate and releases isoprene. Farnesyl diphosphate synthase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fps" target="_blank">1fps</a>) connects three of the isoprene units together to create a longer chain. Bornyl diphosphate synthase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n20" target="_blank">1n20</a>) forms rings out of these types of longer chains. Taxadiene synthase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3p5p" target="_blank">3p5p</a>) fashions a more complicated structure out of isoprene units for use in building taxol. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Isoprenoid molecules have a distinctive shape, with a zigzag string of carbon atoms and little one-carbon branches along the chain. For representative examples, take a look at the <a href="https://www.rcsb.org/ligand/FPP">page for farnesyl diphosphate</a> or search for molecules like chlorophyll, retinol or beta-carotene with the <a href="https://www.rcsb.org/search/advanced/text_chem"> Chemical Atriibutes Search </a> to explore the chemical structures of these molecules.</li>
+<li>These enzymes often use magnesium enzymes in the active site—based on the structures, can you discover what are these ions doing?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>F. Loreto &amp; S. Fineschi (2015) Reconciling functions and evolution of isoprene emission in higher plants. New Phytologist 206, 578-582.</li>
+<li>H. Fuchs, A. Hofzumahaus, F. Rohrer, B. Bohn, T. Brauers, H. P. Dorn, R. Haseler, F. Holland, M. Kaminski, X. Li, K. Lu, S. Nehr, R. Tillmann, R. Wegener &amp; A. Wahner (2013) Experimental evidence for efficient hydroxyl radical regeneration in isoprene oxidation. Nature Geoscience 6, 1023-1026.</li>
+<li>A. B. Guenther, X. Jiang, C. L. Heald, T. Sakulyanontvittaya, T. Duhl, L. K. Emmons &amp; X. Wang (2012) The model of emissions of gases and aerosols from nature version 2.1 (MEGAN2.1): an extended and updated framework for modeling biogenic emissions. Geoscientific Model Development 5, 1471-1492.</li>
+<li>3p5p: M. Koksal, Y. Jin, R. M. Coates, R. Croteau &amp; D. W. Christianson (2011) Taxadiene synthase structure and evolution of modular architecture in terpene biosynthesis. Nature 469, 116-120.</li>
+<li>3n0g: M. Koksal, I. Zimmer, J. P. Schnitzler &amp; D. W. Christianson (2010) Structure of isoprene synthase illuminates the chemical mechanism of teragram atmospheric carbon emission. Journal of Molecular Biology 402, 363-373 </li>
+<li>T. D. Sharkey, A. E. Wiberley &amp; A. R. Donohue (2008) Isoprene emission from plants: why and how. Annals of Botany 101, 5-18.</li>
+<li>1p0n: S. Steinbacher, J. Kaiser, S. Gerhardt, W. Eisenreich, R. Huber, A. Bacher &amp; F. Rohdich (2003) Crystal structure of the type II isopentenyl diphosphate:dimethylallyl diphosphate isomerase from Bacillus subtilis. Journal of Molecular Biology 329, 973-982.</li>
+<li>1n20: D. A. Whittington, M. L. Wise, M. Urbansky, R. M. Coates, R. B. Croteau &amp; D. W. Christianson (2002) Bornyl diphosphate synthase: structure and strategy for carbocation manipulation by a terpenoid cyclase. Proceedings of the National Academy of Science USA 99, 15375-15380.</li>
+<li>1i9a: J. B. Bonanno, C. Edo, N. Eswar, U. Pieper, M. J. Romanowski, V. Ilyin, S. E. Gerchman, H. Kycia, F. W. Studier, A. Sali &amp; S. K. Burley (2001) Structure genomics of enzymes involved in sterol/isoprenoid biosynthesis. Proceedings of the National Academy of Science USA 98, 12896-12901.</li>
+<li>1fps: L. C. Tarshis, M. Yan, C. D. Poulter &amp; J. C. Sacchettini (1994) Crystal structure of recombinant farnesyl diphosphate synthase at 2.6-A resolution. Biochemistry 33, 10871-10877.</li>
+<li>F. W. Went (1960) Blue Hazes in the atmosphere. Nature 187, 641-643.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2016, Luigi Di Costanzo, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_9">http://doi.org/10.2210/rcsb_pdb/mom_2016_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

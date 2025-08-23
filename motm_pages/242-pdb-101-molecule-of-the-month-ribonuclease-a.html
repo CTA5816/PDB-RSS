@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ribonuclease A</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ribonuclease A" property="og:title"/>
+<meta content="Ribonuclease cuts and controls RNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/105/105_5rsa.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/105" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ribonuclease A" name="twitter:title"/>
+<meta content="Ribonuclease cuts and controls RNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/105/105_5rsa.jpg" name="twitter:image"/>
+<meta content="Ribonuclease cuts and controls RNA" name="description"/>
+<meta content="endonuclease activity,pancreatic ribonuclease activity,ribonuclease inhibitor,ribonucleases,5rsa,2fk6,2ez6,1dfj" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 105
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 105 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ribonuclease A</h1>
+<p><i>Ribonuclease cuts and controls RNA</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ribonuclease A." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/105/105_5rsa.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ribonuclease A.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/105/105-Ribonuclease-A-5rsa.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Ribonuclease A is the enzyme that digests RNA in our food. Because is it small, stable, and easily purified, ribonuclease has been an important enzyme in biochemical research. It was used by Christian Anfinsen to prove that the sequence of amino acids determines the structure of a folded protein and it was used by Stanford Moore and William Stein to show that a specific arrangement of amino acids is used in the catalytic center of enzymes. Ribonuclease A was also the first enzyme synthesized by R. Bruce Merrifield, showing that biological molecules are simply chemical entities that may be constructed artificially. All of these central concepts, discovered with the help of ribonuclease, were awarded Nobel Prizes.</div>
+<h4>Fast and Furious</h4>
+<div>Ribonuclease A, shown here from PDB entry <a href="https://www.rcsb.org/structure/5rsa" target="_blank">5rsa</a><span class="rcsb_id_tag" title="">, is an endonuclease, which means that it can cut RNA in the middle of a strand. Other ribonucleases degrade RNA from the ends, such as the <a class="static" href="https://pdb101.rcsb.org/motm/86">exosome</a> that is involved in degradation of RNA inside cells. In ribonuclease A, the RNA chain fits in a groove and is attacked by a collection of acidic and basic amino acids. It is a voracious molecular shredder, cleaving after cytidine bases best, and after uridine bases about half as fast. It has been honed by evolution and is one of a select group of diffusion-limited enzymes that act as fast as substrates can get to them.</span></div>
+<h4>Steady as a Rock</h4>
+<div>Ribonuclease A is amazingly stable. For instance, in one procedure for purifying ribonuclease A from cow pancreas, extracts are treated with sulfuric acid and then heated almost to boiling, and ribonuclease A is the only thing that survives. This is not surprising, since it is secreted by the pancreas and needs to perform its job in the inhospitable environment of the digestive tract. The stability of ribonuclease A is due in large part to four disulfide linkages that glue different parts of the chain together.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Ribonuclease Z bound to portions of two transfer RNA molecules (left) and ribonuclease III bound to double-stranded RNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/105/105_2fk6_2ez6.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ribonuclease Z bound to portions of two transfer RNA molecules (left) and ribonuclease III bound to double-stranded RNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/105/105-Ribonuclease-A-2fk6_2ez6.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Precision Cutting</h4>
+<div>Ribonuclease A is a powerful tool for chopping RNA into bits, but cells also need other tools to make precise modifications to their RNA. For instance, transfer RNA molecules are made in longer lengths and then must be trimmed to the proper size. The enzyme ribonuclease Z, shown on the left from PDB entry <a href="https://www.rcsb.org/structure/2fk6" target="_blank">2fk6</a><span class="rcsb_id_tag" title="">, trims the end that accepts the amino acid. This structure includes the dimeric enzyme (in blue) and partial structures for two transfer RNA molecules (in orange). Ribonuclease P, which is composed of both protein components and a ribozyme, trims the other end (not shown). Ribonuclease III, shown on the right from PDB entry <a href="https://www.rcsb.org/structure/2ez6" target="_blank">2ez6</a><span class="rcsb_id_tag" title="">, wraps around sequences of RNA that form perfect double helices, making a few specific cuts that are needed for maturation and regulation of ribosomal and messenger RNA.</span></span></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ribonuclease and Ribonuclease Inhibitor (PDB entry 1dfj) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/105/105_1dfj_jmol.jpg"/></div>
+<p>Ribonuclease is a dangerous molecular machine that indiscriminately chops up any RNA that it finds. It is toxic to cells, and was once tested as a possible therapy for killing cancer cells. Unfortunately, it is also toxic to normal cells, so it isn't much use as a treatment. Cells protect themselves from ribonuclease with powerful inhibitors such as the ribonuclease inhibitor shown here in green from PDB entry <a href="https://www.rcsb.org/structure/1dfj" target="_blank">1dfj</a><span class="rcsb_id_tag" title="">. These inhibitors are found inside cells and they quickly bind to any ribonuclease that finds its way inside. The binding is amazingly tight due to the extensive contacts formed as the inhibitor wraps around the ribonuclease. <br/><br/> This illustration was created with Jmol--you can see an interactive version of the structure by clicking on the image.</span></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>PDB entry <a href="https://www.rcsb.org/structure/5rsa" target="_blank">5rsa</a> is a structure solved in part by neutron diffraction, which is able to observe the positions of hydrogen atoms. The experiment was performed on crystals that were soaked in deuterated water (heavy water). In the file, you will see that all the water positions are DOD (one oxygen atom and two deuterium atoms), and that many of the hydrogen atoms in the protein have also exchanged hydrogen atoms with the heavy water, and are now deuterium. Can you make sense of why certain positions in the protein are deuterium and why others keep their original hydrogen atoms?</li>
+<li>Many structures of ribonuclease are available with different inhibitors bound in the active site. Can you find examples where the inhibitors are similar to the RNA substrate that is normally cleaved by the enzyme? </li>
+<li>The four disulfide linkages in ribonuclease glue the protein into its active form. How many of these linkages connect distant portions of the chain, and how many stabilize only a small loop? </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. T. Raines (1998) Ribonuclease A. Chemical Reviews 98, 1045-1065. </li>
+<li>K. A. Dickson, M. C. Haigis and R. T. Raines (2005) Ribonuclease Inhibitor: Structure and Function. Progress in Nucleic Acid Research 80, 349-374. </li>
+<li>G. R. Marshall, J. A. Feng and D. J. Kuster (2007) Back to the Future: Ribonuclease A. Peptide Science 90, 259-277. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_9">http://doi.org/10.2210/rcsb_pdb/mom_2008_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

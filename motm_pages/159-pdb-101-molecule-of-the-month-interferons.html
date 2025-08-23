@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Interferons</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Interferons" property="og:title"/>
+<meta content="Interferons mobilize defenses against viral infection" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/128/mom128_interferons.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/128" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Interferons" name="twitter:title"/>
+<meta content="Interferons mobilize defenses against viral infection" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/128/mom128_interferons.jpg" name="twitter:image"/>
+<meta content="Interferons mobilize defenses against viral infection" name="description"/>
+<meta content="cancer therapy,cytokines,immune system,interferon,viral resistance,1itf,1au1,1rfb,3bes,1fg9,2kz1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 128
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 128 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Interferons</h1>
+<p><i>Interferons mobilize defenses against viral infection</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Three types of interferon." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/128/mom128_interferons.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three types of interferon.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/128/128-Interferons_interferons.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Our cells have many defenses against viruses. When cells are infected, they build enzymes 
+that slow protein synthesis, and thus also slow down viral growth, and they build enzymes to 
+chop up double-stranded RNA, which is made primarily by viruses. Infected cells also alert 
+the immune system by displaying pieces of the virus on their surfaces. In the worst cases, 
+infected cells make the ultimate sacrifice and destroy themselves by apoptosis. Of course, 
+our cells can't normally be doing all these things--these draconian measures need to be 
+initiated only when a cell is in trouble. Interferon is the way that cells signal that it's 
+time to shift into virus-fighting mode.
+</div>
+<h4>Virus Alert</h4>
+<div>Interferons are secreted by infected cells to warn their neighbors, and once stimulated, 
+cells of the immune system secrete interferons as part of their viral surveillance. 
+Interferons are small proteins that bind to receptors on the cell surface. This signal is 
+transmitted into the cells and leads to production of hundreds of proteins involved in viral 
+defense. Several types of interferons are made by our cells. Interferon-alpha and 
+interferon-beta, shown here from PDB entries 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1itf" target="_blank">1itf <i class="fa fa-external-link"> </i></a></span> and
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1au1" target="_blank">1au1 <i class="fa fa-external-link"> </i></a></span>,
+are the most common types, 
+and are made by most types of cells, especially cells of the immune system. They send a 
+basic signal to stop growing and focus on defense. Interferon-gamma, shown here from PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rfb" target="_blank">1rfb <i class="fa fa-external-link"> </i></a></span>,
+is secreted primarily by T-cells, and sends signals that tune the response 
+of the immune system.
+</div>
+<h4>Interferon Therapy</h4>
+<div>When interferon was first discovered, it seemed to be the perfect treatment for fighting 
+viral infection. Since it also slows down the growth of cells, it also seemed like a perfect 
+treatment for stopping the uncontrolled growth of cancer cells. Interferons are very 
+specific, though, and only interferon from human cells or other primates is effective for 
+treatment. So widespread use and testing needed to wait until the 1980s, when methods 
+for genetic engineering progressed enough to allow production of recombinant interferon. 
+Today, recombinant interferon is used to treat hepatitis and other 
+viruses, multiple sclerosis, and a few types of cancer. However, since it has such an extreme effect on cells, it 
+causes significant side effects, and it is currently only used in specialized cases.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Viral interferon-gamma binding protein C4R (blue) bound to interferon gamma (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/128/mom128_3bes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Viral interferon-gamma binding protein C4R (blue) bound to interferon gamma (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/128/128-Interferons_3bes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Viruses Fight Back</h4>
+<div>Viruses are tricky, and as you might expect, they have evolved many ways to fight the 
+protection that is elicited by interferons. Different viruses block different steps in 
+interferon action, all the way from the binding of interferon to its receptor to the cascade 
+of signals that ultimately reach the nucleus. For instance, the protein shown here (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3bes" target="_blank">3bes <i class="fa fa-external-link"> </i></a></span>)
+is from the virus that causes a smallpox-like disease in mice. It traps 
+interferon (shown in red) and prevents it from binding to its receptor.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<script>
+            for (var n = 0; n < 2; n++) {
+                jmols[n] = {};
+                jmols[n].loaded = false;
+            }
+          </script>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab-1" onclick="loadIframeById(1);">JSmol 1</a></li>
+<li><a data-toggle="tab" href="#tabs-3" id="jmol-tab-2" onclick="loadIframeById(2);">JSmol 2</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Interferon-gamma and Receptor (PDB entry 1fg9)</h5>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(0);" src="https://cdn.rcsb.org/pdb101/motm/128/mom128_1fg9_jmol.jpg"/></div>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(1);" src="https://cdn.rcsb.org/pdb101/motm/128/mom128_2kz1_jmol.jpg"/></div>
+<p>As with many other signaling proteins, interferons bring together two copies of a receptor 
+to initiate the signal inside the cells. Interferon-gamma is a dimeric protein, and two 
+copies of its receptor bind on either side, as seen in PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fg9" target="_blank">1fg9 <i class="fa fa-external-link"> </i></a></span>.
+Interferon-alpha, on the other hand, is monomeric, and two different receptor chains
+bind to different portions of the protein. PDB entry 
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2kz1" target="_blank">2kz1 <i class="fa fa-external-link"> </i></a></span>
+shows the interaction with one of the receptor chains.
+Click on the images above for interactive Jmols of these complexes.
+</p>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe_1" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+<div class="tab-pane" id="tabs-3">
+<iframe frameborder="0" id="iframe_2" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Interferon-gamma forms a domain-swapped dimer. You can see this by comparing the 
+folding of the chain in structures of interferon-alpha and interferon-gamma.</li>
+<li>The PDB includes several other viral proteins that block interferon action. Can you 
+find them and determine how they attack the interferon process?
+</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Bracarda, A. M. M. Eggermont and J. Samuelsson (2010) Redefining the role of 
+interferon in the treatment of malignant diseases. European Journal of Cancer 46, 284-297.</li>
+<li>R. M. Friedman (2007) Clinical uses of interferons. British Journal of Clinical 
+Pharmacology 65, 158-162.</li>
+<li>Pestka, C. D. Krause and M. R. Walter (2004) Interferons, interferon-like cytokines, 
+and their receptors. Immunological Reviews 202, 8-32.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_8">http://doi.org/10.2210/rcsb_pdb/mom_2010_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          for (var i = 1; i <= jmols.length; i++) {
+              $('#iframe_' + i).load(function () {
+                  $(this).height($(this).contents().find('body').height() + 30);
+              });
+          }
+          
+        </script>
+</div>
+</body>
+</html>

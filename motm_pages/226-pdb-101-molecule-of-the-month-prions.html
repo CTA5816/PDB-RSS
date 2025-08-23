@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Prions</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Prions" property="og:title"/>
+<meta content="Mad cow disease is caused by prion proteins that misfold and aggregate" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/101/101_PrP.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/101" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Prions" name="twitter:title"/>
+<meta content="Mad cow disease is caused by prion proteins that misfold and aggregate" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/101/101_PrP.jpg" name="twitter:image"/>
+<meta content="Mad cow disease is caused by prion proteins that misfold and aggregate" name="description"/>
+<meta content="Creutzfeldt-Jakob syndrome,encephalopathy,bovine spongiform,mad cow disease,prion diseases,PrP proteins,1qm2,1oei,1skh,2rnm" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 101
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 101 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Prions</h1>
+<p><i>Mad cow disease is caused by prion proteins that misfold and aggregate</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Prion protein PrP. Flexible portions of the protein that are not included in the structures are shown with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/101/101_PrP.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Prion protein PrP. Flexible portions of the protein that are not included in the structures are shown with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/101/101-Prions-PrP.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Prions are proteins that can adopt two different forms, a normal form and a misfolded form. This may not seem unusual, since many proteins are flexible and adopt different shapes. However, prions have another unusual characteristic: the misfolded form of the prion can force normal prions to change into the misfolded shape. In this way, a few misfolded prions can corrupt a whole population of normal prions, converting them one-by-one into the misfolded shape. This can have deadly consequences, as the levels of misfolded proteins build up. For instance, misfolding of the PrP prion causes fatal neural diseases in humans and other mammals. To make things worse, misfolded prions are infectious, so a small dose of misfolded prions can infect and corrupt an entire organism.</div>
+<h4>Mad Cows and Cannibals</h4>
+<div>The normal form of the prion protein PrP (shown here) is found on the surface of nerve cells, but when it changes into its misfolded form, it aggregates into long fibrils that clog up the normal functioning of the brain. Infection occurs when a little bit of the misfolded protein is eaten or accidentally gets into the blood through an injury. A devastating example occurred in a native population in Papua New Guinea, where ritual cannibalism was part of funeral ceremonies. The epidemic probably started when one person developed the disease spontaneously (PrP occasionally adopts the misfolded state all by itself, causing very rare sporadic cases of the disease). Then the misfolded prions spread through the community when the infected person was eaten. More recently, there has been concern that the prions that cause mad cow disease could spread to humans by eating infected meat. The cow PrP protein is very similar to human PrP, and several cases of this type of infection have been seen.</div>
+<h4>Prion Protein</h4>
+<div>The normal prion PrP is a flexible protein composed of several parts. The picture shown here is constructed from several PDB files. The large domain at left is from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qm2" target="_blank">1qm2 <i class="fa fa-external-link"> </i></a></span>. It has a lipid attached at the bottom, which normally anchors the protein to the surface of nerve cells, and two carbohydrate chains (all shown in orange, and not included in the PDB file). The rest of the protein chain is largely flexible, and two portions of it have been studied by NMR spectroscopy, in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oei" target="_blank">1oei <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1skh" target="_blank">1skh <i class="fa fa-external-link"> </i></a></span>. In spite of years of intense study, PrP still holds many mysteries. It is found on nerve cells, but its precise function is still a matter of conjecture. Also, researchers have not yet discovered the structure of the misfolded, infectious state of PrP. The structure on the following two pages, however, will give you some idea of what might be happening.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Amyloid complex of prion protein HET-s." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/101/101_2rnm.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Amyloid complex of prion protein HET-s.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/101/101-Prions-2rnm.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Functional Prions</h4>
+<div>Nature is always full of surprises, and prions are no exceptions. Although they cause a terrible disease in humans and other mammals, they are also used for specific tasks in other organisms. For instance, some fungi make the prion protein HET-s, shown here in its misfolded form from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2rnm" target="_blank">2rnm <i class="fa fa-external-link"> </i></a></span>. It plays a specialized role in the growth of the fungi. Some individuals have a form of HET-s that only adopts one form, and others have a slightly different version of the protein that can adopt both forms. When neighboring colonies meet each other, they often mate by fusing cells together, forming large cells with many nuclei. However, these fused cells die if they have incompatible forms of the HET-s protein. This may be an advantage because it enforces diversity in the population, keeping some colonies separate and perhaps limiting the spread of viral infections.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HET-s Prion (PDB entry 2rnm) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/101/101_2rnm-rasmol.jpg"/></div>
+<p>In the misfolded state, prions form a tough fibril. A first look at one of these fibrils is available in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2rnm" target="_blank">2rnm <i class="fa fa-external-link"> </i></a></span>, which includes part of the fungal HET-s protein. Six protein chains are included in the PDB file, stacked to form a long solenoidal structure. Hydrophobic amino acids (in white) are packed inside a triangular pocket, stabilizing the whole structure. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. M. Fowler, A. V. Koulov, W. E. Balch and J. W. Kelley (2007) Functional amyloid--from bacteria to humans. Trends in Biochemical Sciences 32, 217-224.</li>
+<li>D. A. Harris and H. L. True (2006) New insights into prion structure and toxicity. Neuron 50, 353-357.</li>
+<li>J. Collinge (2005) Molecular neurology of prion disease (2005) Journal of Neurology, Neurosurgery and Psychiatry 76, 906-919.</li>
+<li>J. Collinge (1999) Variant Creutzfeldt-Jakob disease. Lancet 354, 317-323. (a review of infection of humans by mad cow disease)</li>
+<li>S. B. Prusiner, M. R. Scott, S. J. DeArmond and F. E. Cohen (1998) Prion protein biology. Cell 93, 337-348.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_5">http://doi.org/10.2210/rcsb_pdb/mom_2008_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

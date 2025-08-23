@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: HER2/neu and Trastuzumab </title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: HER2/neu and Trastuzumab " property="og:title"/>
+<meta content="Trastuzumab monoclonal antibodies targeting HER2 receptors are at the forefront of breast cancer treatment" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/268/Figure1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/268" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: HER2/neu and Trastuzumab " name="twitter:title"/>
+<meta content="Trastuzumab monoclonal antibodies targeting HER2 receptors are at the forefront of breast cancer treatment" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/268/Figure1.jpg" name="twitter:image"/>
+<meta content="Trastuzumab monoclonal antibodies targeting HER2 receptors are at the forefront of breast cancer treatment" name="description"/>
+<meta content="ErbB2,HER2,neu,trastuzumab,herceptin,pertuzumab,breast cancer,cancer therapeutic,monoclonal antibodies,combination therapy,growth factor,1n8z,3pp0,2ks1,1s78,6oge" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 268
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 268 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: HER2/neu and Trastuzumab </h1>
+<p><i>Trastuzumab monoclonal antibodies targeting HER2 receptors are at the forefront of breast cancer treatment</i></p>
+<div>
+<div><i>This article was written and illustrated by Sol De Leon Cruz, Amber Herrod, Katherine H. Park, and Amy Wu Wu as part of a week-long boot camp for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu/node/242">Rutgers Institute for Quantitative Biomedicine.</a> The article is presented as part of the 2022-2023 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Trastuzumab (red/pink) antibody is bound to HER2 (blue). The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/268/Figure1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Trastuzumab (red/pink) antibody is bound to HER2 (blue). The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/268/Figure1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Breast cancer is the leading cause of cancer-related deaths in women worldwide. Approximately 20% of invasive breast cancers have excess amounts of human epidermal growth factor receptor 2 (HER2), also known as neu or ErbB2. This can happen when the HER2 gene makes too many copies of itself (HER2 gene amplification), which can lead to overproduction of HER2 receptors (HER2 protein overexpression). Patients with too much HER2 have decreased survival rates and poorer responses to chemotherapy and hormone treatment, due to the uncontrolled growth and division of breast cancer cells. Understanding the mechanism of action and three-dimensional structure of HER2 is helping scientists discover new and effective treatments to fight these problems.</div>
+<h4>The Odd One Out</h4>
+<div>HER2 belongs to a family of four tyrosine kinase receptors (HER1, HER2, HER3, and HER4) found embedded within the plasma membranes of many cells around the body. These receptors normally regulate important biological processes such as cell growth and proliferation, metabolism, survival, and differentiation. HER receptors can exist in two conformations: tethered and extended. In the tethered form, the protein is folded on itself and unable to partner with itself or another receptor. The open, extended shape, however, is formed through interaction with their ligands and is free to form complexes and participate in signaling. HER2 is unique among this class of tyrosine kinases because it always adopts an extended shape without the need for a ligand, making it an ideal binding partner and major contributor in tumor development. In normal signaling pathways, HER2 generally forms complexes with other HER receptors. In cancerous cells, however, the higher concentration of HER2 causes the formation of active dimers with itself in addition to more of the normal complexes with other HER receptors, sending stronger signals to the cell to reproduce.</div>
+<h4>Targeting HER2 </h4>
+<div>Structural understanding of HER2 is helping to discover new effective therapies for breast cancer. Trastuzumab, a laboratory-created monoclonal antibody, is a HER2-targeted therapy approved by the FDA (Food and Drug Administration). Trastuzumab binds to the HER2 receptor, blocking its homodimerization. This inhibits cell proliferation and replication, and ultimately slows the growth of HER2-positive breast cancer. The illustration shown here is built from three PDB entries: the extracellular domain with the Fab portion of trastuzumab is from <a href="https://www.rcsb.org/structure/1n8z" target="_blank">1n8z</a>, the kinase domain inside the cell is from <a href="https://www.rcsb.org/structure/3pp0" target="_blank">3pp0</a>, and the transmembrane domain is from <a href="https://www.rcsb.org/structure/2ks1" target="_blank">2ks1</a>. Unfortunately, despite this clinical benefit, the overall impact of the antibody is limited due to resistance that is often acquired after administration of trastuzumab.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Pertuzumab (red/orange) antibody is bound to HER2 (blue) at a different location compared to trastuzumab. The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/268/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Pertuzumab (red/orange) antibody is bound to HER2 (blue) at a different location compared to trastuzumab. The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/268/Figure2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Tackling Resistance </h4>
+<div>Trastuzumab has drastically improved the prognosis of HER2-positive breast cancer patients. However, approximately 50-60% of HER2-positive breast cancer patients acquire resistance and stop responding to the antibody. Scientists have tackled this issue by introducing Pertuzumab, a new antibody that also targets HER2, but in a different way. As seen in PDB entry <a href="https://www.rcsb.org/structure/1s78" target="_blank">1s78</a>, it binds farther up the molecule away from the membrane, blocking a binding pocket that HER2 uses to heterodimerize with other HER receptors. Pertuzumab particularly prevents formation of HER2:HER3 complexes, which play a key role in oncogenesis. Pertuzumab is also FDA-approved, and by blocking the HER2 signaling cascade at its source, it has contributed to overall higher survival rates and better responses, especially in patients who failed to respond to treatments previously.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HER2 with Pertuzumab and Trastuzumab</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/268/6oge_Jmol-jmol.jpg"/></div>
+<p>The availability of two different therapeutic antibodies has a great advantage. Using a combination of trastuzumab and pertuzumab simultaneously, known as Dual-HER2 inhibition, overcomes trastuzumab resistance and may also help suppress development of resistance in patients. When HER2 is attacked in two different locations (as seen here from PDB entry <a href="https://www.rcsb.org/structure/6oge" target="_blank">6oge</a>), it is more difficult for the protein to mutate and become resistant to both therapies at the same time. Additionally, this combination assists in targeting many of the functional elements of HER2 that contribute to the progression of breast cancer. Trastuzumab alone blocks homodimerization, but leaves the HER2 heterodimerization arm functional. In contrast, pertuzumab has the ability to block heterodimerization. The combination reaps the benefits of both arresting cell growth (trastuzumab) and preventing HER2:HER3 activation (pertuzumab). Dual anti-HER2 treatments have been shown to improve outcomes in patients significantly when compared to using a single drug. To explore this structure in more detail, click on the image for an interactive Jsmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many cell-surface receptors transmit signals into the cell by dimerizing. To see other examples, see the Molecule of the Month on <a href="https://pdb101.rcsb.org/motm/52">Growth Hormone</a>, <a href="https://pdb101.rcsb.org/motm/126">Epidermal Growth Factors (EGF)</a>, and <a href="https://pdb101.rcsb.org/motm/267">Vascular Endothelial Growth Factor (VegF)</a> .</li>
+<li>Trastuzumab has been chemically-connected to other drugs that attack other molecules, such as the microtubule-binding drug maytansine (PDB ID <a href="https://www.rcsb.org/structure/4tv8" target="_blank">4tv8</a>). In the conjugate drug, trastuzumab targets the cancer cell and maytansine kills it.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6oge: Hao Y., Yu X., Bai Y., McBride H.J., Huang X. (2019) Cryo-EM Structure of HER2-trastuzumab-pertuzumab complex. PLoS One. 14(5):e0216095.</li>
+<li>Ling W.L., Lua W.H., Poh J.J., Yeo J.Y., Lane D.P., Gan S.K. (2018) Effect of VH-VL Families in Pertuzumab and Trastuzumab Recombinant Production, Her2 and FcγIIA Binding. Front Immunol. 9:469. </li>
+<li>Roskoski R.Jr. (2014) The ErbB/HER family of protein-tyrosine kinases and cancer. Pharmacol Res. 79:34-74.</li>
+<li>Olson E.M. (2012) Maximizing human epidermal growth factor receptor 2 inhibition: a new oncologic paradigm in the era of targeted therapy. J Clin Oncol. 30(14):1712-4.</li>
+<li>3pp0: Aertgeerts K., Skene R., Yano J., Sang B.C., Zou H., Snell G., Jennings A., Iwamoto K., Habuka N., Hirokawa A., Ishikawa T., Tanaka T., Miki H., Ohta Y., Sogabe S. (2011) Structural analysis of the mechanism of inhibition and allosteric activation of the kinase domain of HER2 protein. J Biol Chem. 286(21):18756-65.  </li>
+<li>Hanahan D., Weinberg R.A. (2011) Hallmarks of cancer: the next generation. Cell. 144(5):646-74.</li>
+<li>LoRusso PM., Weiss D., Guardino E., Girish S., Sliwkowski MX. Trastuzumab emtansine: a unique antibody-drug conjugate in development for human epidermal growth factor receptor 2-positive cancer. (2011) Clin Cancer Res. 17(20):6437-47.</li>
+<li>2ks1: Mineev K.S., Bocharov E.V., Pustovalova Y.E., Bocharova O.V., Chupin V.V., Arseniev A.S. (2010) Spatial structure of the transmembrane domain heterodimer of ErbB1 and ErbB2 receptor tyrosine kinases. J Mol Biol. 400(2):231-43. </li>
+<li>Hudis C.A. (2007) Trastuzumab--mechanism of action and use in clinical practice. N Engl J Med. 357:39-51.  </li>
+<li>1s78: Franklin M.C., Carey K.D., Vajdos F.F., Leahy D.J., de Vos A.M., Sliwkowski M.X. (2004) Insights into ErbB signaling from the structure of the ErbB2-pertuzumab complex. Cancer Cell. 5(4):317-28. </li>
+<li>1n8z: Cho H.S., Mason K., Ramyar K.X., Stanley A.M., Gabelli S.B., Denney D.W. Jr., Leahy D.J. (2003) Structure of the extracellular region of HER2 alone and in complex with the Herceptin Fab. Nature. 421(6924):756-60.  </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2022, Sol De Leon Cruz, Amber Herrod, Katherine H. Park, Amy Wu Wu, David S. Goodsell, Stephen K. Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_4">http://doi.org/10.2210/rcsb_pdb/mom_2022_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

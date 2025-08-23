@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ribonuclease P</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ribonuclease P" property="og:title"/>
+<meta content="The ribozyme ribonuclease P cleaves pre-tRNA to form functional tRNA." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/260/6ahu.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/260" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ribonuclease P" name="twitter:title"/>
+<meta content="The ribozyme ribonuclease P cleaves pre-tRNA to form functional tRNA." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/260/6ahu.jpg" name="twitter:image"/>
+<meta content="The ribozyme ribonuclease P cleaves pre-tRNA to form functional tRNA." name="description"/>
+<meta content="Ribonuclease P,RNase P,ribozyme,ribonuclease,tRNA,6ahu,3q1q,6k0b,6ahr,RNA,nucleic acids,pre-tRNA,precursor tRNA,central dogma,PRORP,mitochondria,nucleus,endonuclease,catalysis" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 260
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 260 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ribonuclease P</h1>
+<p><i>The ribozyme ribonuclease P cleaves pre-tRNA to form functional tRNA.</i></p>
+<div>
+<div><i>This article was written and illustrated by Steven Arnold, Momodou Camara, Megan C. DiIorio, and Dhyan Ray as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021.</i></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Human nuclear RNase P in complex with tRNA. The RNase P RNA is shown in red, proteins in blue, and cleaved tRNA in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/260/6ahu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human nuclear RNase P in complex with tRNA. The RNase P RNA is shown in red, proteins in blue, and cleaved tRNA in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/260/6ahu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Ribozymes</h4>
+<div>Most of the chemical reactions performed inside cells are catalyzed by enzymes. However, in some specialized cases, RNA is used to build a catalytic active site to form a <i>ribozyme</i>. For example, <a href="https://pdb101.rcsb.org/motm/65">self-splicing RNA</a> cuts itself out of a longer RNA strand without any need for help by a protein. Ribonuclease P (RNase P), RNase MRP, and <a href="https://pdb101.rcsb.org/motm/121">ribosomes</a> are examples of ribozymes that perform key roles in the biosynthesis of proteins. RNase P cleaves pre-tRNA, generating <a href="https://pdb101.rcsb.org/motm/15">tRNA (transfer RNA)</a> molecules with mature 5’ ends. RNase MRP makes cuts in the RNA inside ribosomes as they are constructed, and ribosomes build new proteins using a reaction that is catalyzed by the ribosomal RNA.</div>
+<h4>tRNA Cleaver </h4>
+<div>Transfer RNA facilitates protein synthesis by matching three-nucleotide codons of nucleic acids to their corresponding amino acids. As this process is paramount for cell survival, tRNA molecules are highly regulated and undergo extensive structural modifications after they are transcribed as pre-tRNA. Shown here in PDB entry <a href="https://www.rcsb.org/structure/6ahu" target="_blank">6ahu</a>, the endonuclease RNase P cuts a small precursor segment from the 5' end of pre-tRNA, producing a mature tRNA molecule ready to do its job. Human nuclear RNase P is comprised of 10 proteins and a large catalytic RNA strand. The individual protein components serve to stabilize and orient the RNA is such a way that allows for tRNA recognition and subsequent catalysis.</div>
+<h4>RNase P Diversity</h4>
+<div>While both bacteria and archaea have just one type of RNase P, some eukaryotes have two kinds of pre-tRNA cleavers: a ribozyme RNase P that contains a catalytic RNA strand and a form that lacks RNA altogether, called protein-only RNase P (PRORP). Although both endonucleases perform the same function, they differ in both cellular location and structure. PRORP works in the mitochondria, cutting pre-tRNA involved in the expression of genes crucial for energy production that are encoded by a separate mitochondrial genome. The RNA-based RNase P, on the other hand, modifies pre-tRNA in the nucleus. Protein subunits of PRORP and RNA-based RNase P have analogous function but share no structural homology.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial (top left), archaeal (top right) and human nuclear (bottom) RNase P with bound tRNA. The RNase P RNA subunits shown in red, protein subunits shown in blue, and tRNA shown in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/260/ThreeRNaseP.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial (top left), archaeal (top right) and human nuclear (bottom) RNase P with bound tRNA. The RNase P RNA subunits shown in red, protein subunits shown in blue, and tRNA shown in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/260/ThreeRNaseP.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Fossil</h4>
+<div>RNase P is one of two ribozymes present in nearly all organisms, the other being the ribosome. Remarkably, the RNA is very similar in bacterial, archaeal, and eukaryotic nuclear RNase P. This is evidence that a form of RNase P was present before the diversification of the three kingdoms of life and that it may have evolved in an ancient RNA-based world. The major differences are seen in the protein content: more complex organisms generally contain a greater number of protein subunits. As shown in PDB entry <a href="https://www.rcsb.org/structure/3q1q" target="_blank">3q1q</a> (top left), bacterial RNase P has a small protein subunit that accounts for only 10% of the total mass. Also shown is PDB entry <a href="https://www.rcsb.org/structure/6k0b" target="_blank">6k0b</a> (top right), an archaeal RNase P that functions as a dimer with eight protein subunits, and PDB entry <a href="https://www.rcsb.org/structure/6ahu" target="_blank">6ahu</a> (bottom), a human nuclear RNase P with ten protein subunits.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ribonuclease P in Action </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/260/Jmol-jmol.jpg"/></div>
+<p>Uracil 80 (U80) is a conserved nucleotide of the human RNase P found in the ribozyme’s catalytic center. A close study of the nucleotides in the active site of RNase P reveal a conformational change in U80 upon binding tRNA. Superposition of RNase P with and without tRNA show bulging of U80 in the absence of tRNA (turquoise), creating a steric hinderance that renders catalysis inactive. When tRNA binds, U80 flips and turns catalysis on. Click on the image to explore structures of RNase P with and without tRNA (PDB ID <a href="https://www.rcsb.org/structure/6ahu" target="_blank">6ahu</a> and <a href="https://www.rcsb.org/structure/6ahr" target="_blank">6ahr</a>).</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several structures of RNase MRP are available in the PDB archive, including <a href="https://www.rcsb.org/structure/6w6v" target="_blank">6w6v</a>.</li>
+<li>Be sure to visit the EMDataResource to explore the cryo-EM data supporting the structures of RNase P. For instance, take a look at the <a href="https://www.emdataresource.org/EMD-9627">EMDataResource page for 6ahu.</a></li>
+<li>PRORPs are unique types of RNase that lack a catalytic RNA subunit. Explore the three-dimensional structure of a PRORP by looking at <a href="https://www.rcsb.org/structure/4g24" target="_blank">4g24</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6k0b: Wan, F., Wang, Q., Tan, J., Tan, M., Chen, J., Shi, S., Lan, P., Wu, J., Lei, M. (2019) Cryo-electron microscopy structure of an archaeal ribonuclease P holoenzyme. Nature Communications 10: 2617-2617</li>
+<li>6ahr, 6ahu : Wu, J., Niu, S., Tan, M., Huang, C., Li, M., Song, Y., Wang, Q., Chen, J., Shi, S., Lan, P., Lei, M. (2018) Cryo-EM Structure of the Human Ribonuclease P Holoenzyme. Cell 175, 1393-1404. </li>
+<li>Klemm, B.P., Wu, N., Chen, Y., Liu, X., Kaitany, K.J., Howard, M.J., Fierke, C.A. (2016) The diversity of ribonuclease P: Protein and RNA catalysts with analogous biological functions. Biomolecules 6: 27.</li>
+<li>3q1q: Reiter, N., Osterman, A., Torres-Larios A., Swinger K.K., Pan T., Mondragon, A. (2010) Structure of a bacterial ribonuclease P holoenzyme in complex with tRNA. Nature 468, 784–789.</li>
+<li>Sun F.J., Caetano-Anollés, G. (2010) The ancient history of the structure of ribonuclease P and the early origins of Archaea. BMC Bioinformatics 11: 153. </li>
+<li>Holzmann, J., Frank, P., Loffler, E., Bennett, K.L., Gerner, C., Rossmanith, W. (2008) RNase P without RNA: Identification and functional reconstitution of the human mitochondrial tRNA processing enzyme. Cell 135: 462-474.</li>
+<li>Walker, S.C., Engelke, D.R. (2008) A protein-only RNase P in human mitochondria. Cell 135:412-414.</li>
+<li>Cech, T.R. (2002) Ribozymes, the first 20 years. Biochem Soc Trans 30: 1162–1166. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2021, Steven Arnold, Momodou Camara, Megan C. DiIorio, Dhyan Ray, David Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_8">http://doi.org/10.2210/rcsb_pdb/mom_2021_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

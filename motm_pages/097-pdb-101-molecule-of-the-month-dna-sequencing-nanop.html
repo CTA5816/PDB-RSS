@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: DNA-Sequencing Nanopores</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: DNA-Sequencing Nanopores" property="og:title"/>
+<meta content="Designer nanopores work with enzymes to offer pocket-sized DNA sequencing" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/261/4uv3_sequencing.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/261" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: DNA-Sequencing Nanopores" name="twitter:title"/>
+<meta content="Designer nanopores work with enzymes to offer pocket-sized DNA sequencing" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/261/4uv3_sequencing.jpg" name="twitter:image"/>
+<meta content="Designer nanopores work with enzymes to offer pocket-sized DNA sequencing" name="description"/>
+<meta content="DNA sequencing,nanopores,enzymes,nanopore sequencing,DNA,polymerase,nanotechnology,4uv3,1xhz,7ahl,1uun,6si7" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 261
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 261 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: DNA-Sequencing Nanopores</h1>
+<p><i>Designer nanopores work with enzymes to offer pocket-sized DNA sequencing</i></p>
+<div>
+<div><i>This article was written and illustrated by Jennifer Jiang, Katherine H. Park, and Kiranmayi Vemuri as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021.</i></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DNA-sequencing nanopore, with DNA in red, CsgG in blue, DNA polymerase in orange, and the membrane shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/261/4uv3_sequencing.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA-sequencing nanopore, with DNA in red, CsgG in blue, DNA polymerase in orange, and the membrane shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/261/4uv3_sequencing.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>DNA sequencing has revolutionized the study of biology, revealing the information that encodes the processes of life. The Human Genome Project took a total of 13 years and cost almost 3 billion dollars using the conventional Sanger chain-termination method. As the enthusiasm for genomics continues to grow, the need for faster, better and more cost-effective sequencing techniques is increasingly clear. Nanopore sequencing is a rapidly developing tool to meet these demands, with devices often costing less than $1000. Today, this technology is used everywhere - from Antarctica to the International Space Station!</div>
+<h4>Pocket-sized Sequencers</h4>
+<div>Nanopore sequencing decodes a <a href="https://pdb101.rcsb.org/motm/23">DNA strand</a> as it is drawn through a tiny pore embedded in a membrane. Compared to conventional DNA sequencing approaches, nanopore sequencing directly detects nucleotides without relying on DNA synthesis/amplification. This technique also enables sequencing of long fragments of DNA, which can be used to piece together entire genomes of organisms quickly and reliably. A single device houses thousands of individual nanopores and yet is simple, inexpensive and can even fit in your pocket. Scientists are currently minimizing challenges such as reducing error rates and increasing yields per run.</div>
+<h4>Nanopores in Action</h4>
+<div>Nanopore sequencers are composed of nanopores embedded in a membrane that splits a salt solution into two chambers. A voltage is applied across the membrane, which causes ionic flow that can be measured. When a DNA strand is pulled through the pore, the ion flow is partially blocked, leading to a reduction in the observed current. The four types of nucleic acid bases are each associated with a different level of ion current change, which enables their identification. Commercially-available sequencers currently use derivatives of the bacterial protein CsgG as the go-to nanopore. CsgG, shown here from PDB ID <a href="https://www.rcsb.org/structure/4uv3" target="_blank">4uv3</a>, is an ungated, non-selective outer membrane protein with a pore diameter of about 1 nanometer, which allows the easy passage of single-stranded DNA. To improve its DNA-reading ability, CsgG has been engineered to reshape the nanopore, as described below, resulting in greater yields and more accurate sequencing reads.</div>
+<h4>Regulating DNA Threading </h4>
+<div>Precise control of the DNA strand is required to maintain efficient sequencing rates as it passes through the nanopore. Free DNA strands pass through pores too fast to get a clear read of each base. Scientists have found that they can regulate the speed by adding DNA-binding enzymes such as polymerases or helicases to the nanopore machinery. Bacteriophage phi29 DNA polymerase is shown here (PDB ID <a href="https://www.rcsb.org/structure/1xhz" target="_blank">1xhz</a>). It acts as a stepper motor to slow down the DNA. In association with phi29 DNA polymerase, DNA ratchets through the CsgG pore at single nucleotide resolution.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cross-sectional view of α-hemolysin (left) and MspA (right) highlighted the different sizes of their sensing regions when used for DNA sequencing." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/261/Nanopores.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cross-sectional view of α-hemolysin (left) and MspA (right) highlighted the different sizes of their sensing regions when used for DNA sequencing.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/261/Nanopores.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nature’s Pores</h4>
+<div>Other pore-forming membrane proteins are abundant in nature. α-hemolysin (PDB ID <a href="https://www.rcsb.org/structure/7ahl" target="_blank">7ahl</a>), a bacterial toxin, was the first biological nanopore used for sequencing. It features a long channel with a range of pore diameters (1.5-2.5 nanometers), making it suboptimal for discerning individual nucleic acid bases. The mycobacterial protein, MspA (PDB ID <a href="https://www.rcsb.org/structure/1uun" target="_blank">1uun</a>), is a naturally occurring nanopore with a shorter sensing region. This is an advantage, because in pores with shorter sensing regions, fewer nucleotides influence the characteristics of the recorded current, resulting in more accurate sequence reading. Since MspA exhibits a channel diameter of about 1.2 nanometers and a shorter sensing region, it is a better sequencer compared to α-hemolysin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Dual constriction nanopores in action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/261/6si7_jmol-jmol.jpg"/></div>
+<p>Scientists have engineered nanopores with greater pore stability and tuned for optimal function. For example, <i>dual constriction nanopores</i> add an accessory protein to CsgG to introduce a second constriction for detecting DNA. The CsgG-CsgF complex shown here (PDB ID <a href="https://www.rcsb.org/structure/6si7" target="_blank">6si7</a>) highlights the CsgG molecule in blue with its pore-forming region in yellow, and the CsgF molecule in pink. CsgG forms the initial constriction point for DNA and CsgF adds a second constriction. Integrating the signal from two constriction sites improves base-reading accuracy, particularly in DNA stretches with multiple consecutive copies of the same base. Click on the image to explore this structure in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>If you want to explore the structure of DNA bases, PDB ID <a href="https://www.rcsb.org/structure/2rpd" target="_blank">2rpd</a> includes a single DNA strand with one of each of the four types of bases.</li>
+<li>Aerolysin is another commonly used nanopore sensor borrowed from a bacterium. You can see the wild-type pore in the PDB ID <a href="https://www.rcsb.org/structure/5jzt" target="_blank">5jzt</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6si7: Van der Verren, S.E., Van Gerven, N., Jonckheere, W., Hambley, R., Singh, P., Kilgour, J., Jordan, M., Wallace, E.J., Jayasinghe, L., Remaut, H. (2020) A dual-constriction biological nanopore resolves homonucleotide sequences with high fidelity. Nat Biotechnol 38, 1415-1420.</li>
+<li>Carter, J.M., Hussain, S. (2017) Robust long-read native DNA sequencing using the ONT CsgG Nanopore system. Wellcome Open Res, 2, 23.</li>
+<li>Castro-Wallace, S.L., Chiu, C.Y., John, K.K., Stahl, S.E., Rubins, K.H., McIntyre, A.B.R., Dworkin, J.P., Lupisella, M.L., Smith, D.J., Botkin, D.J., Stephenson, T.A., Juul, S., Turner, D.J., Izquierdo, F., Federman, S., Stryke, D., Somasekar, S., Alexander, N., Yu, G., Mason, C.E., Burton, A.S. (2017) Nanopore DNA sequencing and genome assembly on the International Space Station. Sci Rep 7, 18022.</li>
+<li>Johnson, S.S., Zaikova, E., Goerlitz, D.S., Bai, Y., Tighe, S.W. (2017) Real-time DNA sequencing in the Antarctic dry valleys using the Oxford Nanopore sequencer. J Biomol Tech 28, 2-7.</li>
+<li>Deamer, D., Akeson, M., Branton, D. (2016) Three decades of nanopore sequencing. Nat Biotechnol 34, 518-524.</li>
+<li>4uv3:  Goyal, P., Krasteva, P.V., Van Gerven, N., Gubellini, F., Van den Broeck, I., Troupiotis-Tsailaki, A., Jonckheere, W., Pehau-Arnaudet, G., Pinkner, J.S., Chapman, M.R., Hultgren, S.J., Howorka, S., Fronzes, R., Remaut, H. (2014) Structural and mechanistic insights into the bacterial amyloid secretion channel CsgG. Nature 516, 250-253.</li>
+<li>Lieberman, K.R., Cherf, G.M., Doody, M.J., Olasagasti, F., Kolodji, Y., Akeson, M. (2010) Processive replication of single DNA molecules in a nanopore catalyzed by phi29 DNA polymerase. J Am Chem Soc 132, 17961–17972. </li>
+<li>1uun: Faller, M., Niederweis, M., Schulz, G.E. (2004) The structure of mycobacterial outer-membrane channel. Science 303, 1189-1192.</li>
+<li>1xhz: Kamtekar, S., Berman, A.J., Wang, J., Lazaro, J.M., de Vega, M., Blanco, L., Salas, M., Steitz, T.A. (2004) Insights into strand displacement and processivity from the crystal structure of the protein-primed DNA polymerase of bacteriophage phi29. Mol Cell 16, 609-618.</li>
+<li>7ahl: Song, L., Hobaugh, M.R., Shustak, C., Cheley, S., Bayley, H., Gouaux, J.E. (1996) Structure of staphylococcal alpha-hemolysin, a heptameric transmembrane pore. Science 274, 1859-1866.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2021, Jennifer Jiang, Katherine H. Park, Kiranmayi Vemuri, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_9">http://doi.org/10.2210/rcsb_pdb/mom_2021_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

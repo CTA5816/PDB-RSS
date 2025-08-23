@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hydrogenase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hydrogenase" property="og:title"/>
+<meta content="Hydrogenases use unusual metal ions to split hydrogen gas" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/111/hydrogenases.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/111" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hydrogenase" name="twitter:title"/>
+<meta content="Hydrogenases use unusual metal ions to split hydrogen gas" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/111/hydrogenases.jpg" name="twitter:image"/>
+<meta content="Hydrogenases use unusual metal ions to split hydrogen gas" name="description"/>
+<meta content="ferredoxin hydrogenase activity,hydrogenase,oxidation reduction,2frv,1feh,3dag,3f47,1e08" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 111
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 111 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hydrogenase</h1>
+<p><i>Hydrogenases use unusual metal ions to split hydrogen gas</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Nickel-iron hydrogenase (top), iron-iron hydrogenase (center), and iron hydrogenase (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/111/hydrogenases.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nickel-iron hydrogenase (top), iron-iron hydrogenase (center), and iron hydrogenase (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/111/111-Hydrogenases_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Hydrogen gas is an unusual substance. Normally, it is stable and must be coaxed with powerful catalysts to enter 
+into chemical reactions. But when mixed with oxygen, a tiny spark will set off an explosive chain reaction. 
+Hydrogen gas holds great promise to be the greenest of green energy sources. It has many advantages: compared 
+with many fuels, it releases a lot of energy for its weight, and the reaction forms only energy and pure water. 
+It has substantial disadvantages, however. It is dangerous to store, and it is difficult to perform the reaction 
+in a controlled, non-explosive manner. Currently, the fuel cells being developed for use in hydrogen-powered 
+vehicles use costly platinum catalysts to perform this reaction. Researchers are now looking to nature for 
+other alternatives. 
+</div>
+<h4>Splitting Hydrogen</h4>
+<div>Enzymes that split hydrogen gas have evolved at least three separate times in the 
+history of life on the Earth. These enzymes are used either to split hydrogen gas for use 
+as energy, or to create hydrogen gas as a product of their reaction. Three examples are 
+shown here. At the top is a nickel-iron hydrogenase (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2frv" target="_blank">2frv <i class="fa fa-external-link"> </i></a></span>),
+in the center is an iron-iron hydrogenase (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1feh" target="_blank">1feh <i class="fa fa-external-link"> </i></a></span>),
+and at the bottom is an iron hydrogenase (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3dag" target="_blank">3dag <i class="fa fa-external-link"> </i></a></span> and
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3f47" target="_blank">3f47 <i class="fa fa-external-link"> </i></a></span>).
+As the names imply, all of them use metal ions in their reactions.
+</div>
+<h4>Handling Hydrogen</h4>
+<div>The three types of hydrogenases use different combinations of metal ions and cofactors to activate 
+hydrogen. The active sites of nickel-iron and iron-iron hydrogenases are buried deep within the 
+proteins. The reaction begins when hydrogen diffuses through little channels into the active site. 
+First, the enzyme breaks hydrogen into two pieces: a proton (H+) and a hydride (H-). Then, the 
+electrons are stripped off of the hydride and transferred down a string of electron carriers, and 
+the two protons are simultaneously shuttled to the surface. Iron hydrogenases are slightly different: 
+a special cofactor binds in the active site at the beginning of each reaction, and this cofactor 
+accepts the hydride when the hydrogen molecule is split. 
+</div>
+<h4>Exotic Metal Complexes</h4>
+<div>The active site complexes are an unusual combination of metal ions and strange molecules such as 
+cyanide and carbon monoxide, held in place by cysteine amino acids. These complicated active sites 
+are constructed by a dedicated set of maturation enzymes. For instance, the nickel-iron hydrogenases 
+require at least seven enzymes, powered by GTP and ATP, to build their active sites. One of these 
+enzymes acts as a chaperone, bonding to a key cysteine in the active site and wrenching the protein 
+open to make it accessible to the other enzymes. They load in metal ions and add the cyanide and 
+carbon monoxide ligands. Finally, the chaperone protein releases the cysteine and the mature 
+hydrogenase snaps shut around its new active site. </div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Electron transfer complex of iron-iron hydrogenase with cytochrome c553 (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/111/1e08.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Electron transfer complex of iron-iron hydrogenase with cytochrome c553 (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/111/111-Hydrogenases_1e08.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Electron Carriers</h4>
+<div>Hydrogenases need a place to dump all the electrons extracted from hydrogen. In some 
+cases, these electrons are transferred to electron transport proteins such as cytochromes. 
+In this structure solved by NMR spectroscopy (PDB entry
+<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e08" target="_blank">1e08 <i class="fa fa-external-link"> </i></a></span>),
+an iron-iron hydrogenase (blue) is caught in the act of transferring its electrons to a cytochrome 
+(pink). To look at this complex in more detail, take a look at the
+<a class="static" href="http://www.proteopedia.org/wiki/index.php/1e08" target="_blank">page at Proteopedia</a>.
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<script>
+            for (var n = 0; n < 3; n++) {
+                jmols[n] = {};
+                jmols[n].loaded = false;
+            }
+          </script>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab-1" onclick="loadIframeById(1);">JSmol 1</a></li>
+<li><a data-toggle="tab" href="#tabs-3" id="jmol-tab-2" onclick="loadIframeById(2);">JSmol 2</a></li>
+<li><a data-toggle="tab" href="#tabs-4" id="jmol-tab-3" onclick="loadIframeById(3);">JSmol 3</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Nickel-Iron Hydrogenase (PDB entry 2frv) </h5>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(0);" src="https://cdn.rcsb.org/pdb101/motm/111/jmol1.jpg"/></div>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(1);" src="https://cdn.rcsb.org/pdb101/motm/111/jmol2.jpg"/></div>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(2);" src="https://cdn.rcsb.org/pdb101/motm/111/jmol3.jpg"/></div>
+<p>X-ray crystallography has revealed the active sites of all three types of hydrogenases, 
+but mysteries still remain. Hydrogen is too small to be seen in most crystallographic 
+experiments, so other methods must be used to discover the specifics of the reaction. 
+The active sites are all different, but they have compelling structural similarities. 
+All are centered around an iron atom with several unusual ligands, such as cyanide 
+ions and carbon monoxide. Each has another metal ion or cofactor to assist the iron 
+atom with the reduction/oxidation reaction. And they all use cysteine amino acids to 
+hold everything in place. Click on the images above to take an interactive look at 
+each active site. 
+<br/><br/>
+You can get an up-to-date list of proteins related to Hydrogenase by clicking on any of 
+the accession codes in this Molecule of the Month, and then using the tab named 
+"Sequence Similarity" at the top of the page.
+</p>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe_1" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+<div class="tab-pane" id="tabs-3">
+<iframe frameborder="0" id="iframe_2" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+<div class="tab-pane" id="tabs-4">
+<iframe frameborder="0" id="iframe_3" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>PDB entry
+<a class="static" href="https://pdb101.rcsb.org/pdb/explore.do?structureId=1hfe">1hfe</a>
+is an iron-iron hydrogenase from a different organism than the one 
+shown here. It has a different set of ligands coordinated around the active site iron atoms. 
+Can you see similarities and differences with the one shown here?</li>
+<li>Researchers are exploring the possibility of using hydrogenases for the production and use of hydrogen in technology. What challenges might they face?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/renewable-energy">Renewable Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A.L. DeLacey, V.M. Fernandez, M. Rousset and R. Cammack (2007) Activation and inactivation of hydrogenase function and the catalytic cycle: spectroelectrochemical studies. Chemical Reviews 107, 4304-4330. </li>
+<li>K.A. Vincent, A. Parkin and F.A. Armstrong (2007) Investigating and exploiting the electrocatalytic properties of hydrogenases. Chemical Reviews 107, 4366-4413.</li>
+<li>M.R. Leach and D. B. Zamble (2007) Metallocenter assembly of the hydrogenase enzymes. Current Opinion in Chemical Biology 11, 159-165. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_3">http://doi.org/10.2210/rcsb_pdb/mom_2009_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          for (var i = 1; i <= jmols.length; i++) {
+              $('#iframe_' + i).load(function () {
+                  $(this).height($(this).contents().find('body').height() + 30);
+              });
+          }
+          
+        </script>
+</div>
+</body>
+</html>

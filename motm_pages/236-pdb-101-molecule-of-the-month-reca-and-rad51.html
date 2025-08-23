@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: RecA and Rad51</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: RecA and Rad51" property="og:title"/>
+<meta content="Broken DNA strands may be repaired by matching sequences in a duplicate copy of the DNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_recA_filament.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/172" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: RecA and Rad51" name="twitter:title"/>
+<meta content="Broken DNA strands may be repaired by matching sequences in a duplicate copy of the DNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_recA_filament.jpg" name="twitter:image"/>
+<meta content="Broken DNA strands may be repaired by matching sequences in a duplicate copy of the DNA" name="description"/>
+<meta content="BRCA2,cancer,DNA repair,Homologous recombination,RecBCD,3cmx,1w36,1miu,1n0w,1n0w,1pzn,1szp,RecA and Rad51,recA,Rad51" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 172
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 172 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: RecA and Rad51</h1>
+<p><i>Broken DNA strands may be repaired by matching sequences in a duplicate copy of the DNA</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Breakage of DNA is bad news, so cells have powerful methods to fix damaged DNA. One method trims the broken ends and then reconnects them back together. This is fast and easy, but has the disadvantage of possibly incorporating errors during the repair. Cells also have a more accurate method to repair breaks that relies on duplicate copies of the genome. This process is called homologous recombination, and rebuilds the damaged areas using an intact copy as a template.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="RecA protein (blue) wrapped around two strands of DNA (orange and pink). An analogue of ATP is shown in bright red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_recA_filament.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>RecA protein (blue) wrapped around two strands of DNA (orange and pink). An analogue of ATP is shown in bright red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_recA_filament.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Strand Invasion</h4>
+<div>The bacterial RecA protein, and our similar Rad51 protein, perform the tricky task of pairing up a broken strand with its backup copy. The broken strand is first processed by other proteins (described below) to expose a single strand. RecA and Rad51 surround this single strand, and then capture the backup DNA copy, matching the sequence of the broken strand with a homologous sequence in the intact DNA double helix. Inside the RecA complex, the single strand is then exchanged for one of the strands in the duplex DNA, powered by ATP. Finally, a host of other proteins fill in all the missing sections of DNA, ultimately restoring two matching copies.</div>
+<h4>RecA in Action</h4>
+<div>Researchers have solved structures of RecA and Rad51 capturing different steps in the process of homologous recombination. The structure shown here, from PDB entry <span class="rcsb_id_tag" title="RecA and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cmx" target="_blank">3cmx <i class="fa fa-external-link"> </i></a></span>, shows RecA surrounding the heteroduplex, after the damaged strand has been paired with the intact copy. The structure was determined used an engineered form of recA, with five copies of the protein tethered together. The illustration was created by overlapping several copies of this five-subunit structure to create a model of the long helical complex. The structure revealed that the DNA is stretched when it binds to recA, with a distinctive pattern of three bases to each protein subunit.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>RecBCD</h4>
+<div>A large complex of three proteins prepares the damaged DNA for the strand exchange by RecA. This complex includes subunits that clip away one strand of the damaged DNA, to create the necessary single strand. Another subunit monitors the process and stops the cleavage when a particular sequence of nucleotides is found, triggering the complex to start assembling RecA for the recombination. The structure shown here (PDB entry <span class="rcsb_id_tag" title="RecBCD"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1w36" target="_blank">1w36 <i class="fa fa-external-link"> </i></a></span>) includes all three subunits along with a short piece of DNA. The structure revealed that the complex unwinds the blunt end of the damaged DNA, making the strands available for processing.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="RecBCD complex (blue) unwinding DNA (orange and red) and preparing it for recombination." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_1w36.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>RecBCD complex (blue) unwinding DNA (orange and red) and preparing it for recombination.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_1w36.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Rad51 and BRCA2 (PDB entries 1n0w, 1pzn and 1szp)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/172/172-RecAAndRad51_Rad51_BRCA2.jpg"/></div>
+<p>Mutations in the process of homologous recombination have dangerous effects on the health of the cell. For instance, the huge protein BRCA2, shown here in green (PDB entries <span class="rcsb_id_tag" title="BRCA2"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1miu" target="_blank">1miu <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Rad51 and BRCA2"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n0w" target="_blank">1n0w <i class="fa fa-external-link"> </i></a></span>), was discovered through its connection to breast cancer. BRCA2 binds to DNA and also has eight binding sites for Rad51, and it assists with the assembly of the filament around damaged DNA. PDB entry <span class="rcsb_id_tag" title="Rad51 and BRCA2"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n0w" target="_blank">1n0w <i class="fa fa-external-link"> </i></a></span> includes a Rad51 subunit bound to one of these BRCA2 binding sequences. To take a closer look at this structure and compare it to other Rad51 structures (PDB entries <span class="rcsb_id_tag" title="Rad51"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pzn" target="_blank">1pzn <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Rad51"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1szp" target="_blank">1szp <i class="fa fa-external-link"> </i></a></span>), click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures for Rad51 and several related molecules are available in the PDB. You can start with the structure of Rad51 filament in PDB entry <span class="rcsb_id_tag" title="Rad51">1szp</span>, and then use the "Sequence Similarity" tab to find related proteins.</li>
+<li>You can explore structures of RecA bound to a single-stranded DNA in PDB entries <span class="rcsb_id_tag" title="RecA and DNA">3cmw</span> and <span class="rcsb_id_tag" title="RecA and DNA">3cmu</span>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. B. Wigley (2013) Bacterial DNA repair: recent insights into the mechanism of RecBCD, AddAB and AdnAB. Nature Reviews Microbiology 11, 9-13.</li>
+<li>W. K. Holloman (2011) Unraveling the mechanism of BRCA2 in homologous recombination. Nature Structural and Molecular Biology 18, 748-754.</li>
+<li>3cmx: Z. Chen, H. Yang &amp; N. P. Pavletich (2008) Mechanism of homologous recombination from the RecA-ssDNA/dsDNA structures. Nature 453, 489-494.</li>
+<li>1szp: A. B. Conway, T. W. Lynch, Y. Zhang, G. S. Fortin, C. W. Fung, L. S. Symington &amp; P. A. Rice (2004) Crystal structure of a Rad51 filament. Nature Structural and Molecular Biology 11, 791-796.</li>
+<li>1w36: M. R. Singleton, M. S. Dillingham, M. Gaudier, S. C. Kowalczykowski &amp; D. B. Wigley (2004) Crystal structure of RecBCD enzyme reveals a machine for processing DNA breaks. Nature 432, 187-193.</li>
+<li>1pzn: D. S. Shin, L. Pellegrini, D. S. Daniels, B. Yelent, L. Craig, D. Bates, D. S. Yu, M. K., Shivji, C. Hitomi, A. S. Arvai, N. Volkmann, H. Tsuruta, T. L. Blundell, A. R. Venkitaraman &amp; J. A. Tainer (2003) Full-length archaeal Rad51 structure and mutants: mechanisms for RAD51 assembly and control by BRCA2. EMBO Journal 22, 4566- 4576.</li>
+<li>1n0w: L. Pellegrini, D. S. Yu, T. Lo, S. Anand, M. Lee, T. L. Blundell &amp; A. R. Venkitaraman (2002) Insights into DNA recombination from the structure of a RAD51- BRCA2 complex. Nature 420, 287-293.</li>
+<li>1miu: H. Yang, P. D. Jeffrey, J. Miller, E. Kinnucan, Y. Sun, N. H. Thoma, N. Zheng, P. L. Chen, W. H. Lee &amp; N. P. Pavletich (2002) BRCA2 function in DNA binding and recombination from a BRCA2-DSS1-ssDNA structure. Science 297, 1837-1848.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2014, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2014_4">http://doi.org/10.2210/rcsb_pdb/mom_2014_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

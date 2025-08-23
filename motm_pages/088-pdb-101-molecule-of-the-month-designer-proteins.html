@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Designer Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Designer Proteins" property="og:title"/>
+<meta content="Researchers have successfully designed entirely new proteins based on biological principles" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/70/1qys-composite.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/70" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Designer Proteins" name="twitter:title"/>
+<meta content="Researchers have successfully designed entirely new proteins based on biological principles" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/70/1qys-composite.gif" name="twitter:image"/>
+<meta content="Researchers have successfully designed entirely new proteins based on biological principles" name="description"/>
+<meta content="biotechnology,leucine zipper,protein design,1qys,2zta,1cos,2a3d,1rh4,1jmb,1l2y,1psv,1fsd" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 70
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 70 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Designer Proteins</h1>
+<p><i>Researchers have successfully designed entirely new proteins based on biological principles</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ribbon diagram and spacefilling diagram for Top7." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/70/1qys-composite.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ribbon diagram and spacefilling diagram for Top7.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/70/70-DesignerProteins-1qys-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As we learn more and more about proteins and how they work, we naturally have the desire to use this knowledge and do some tinkering of our own. Since the early 1980's, scientists have been using the ever-expanding understanding of protein structure and function to redesign existing proteins, and more recently, to design entirely new proteins.</div>
+<h4>Designing Proteins</h4>
+<div>As scientists began this quest, they quickly found that proteins are more complicated than they might seem. The different types of amino acids, each with their own chemical features, work together to coax a protein chain to fold into a compact stable structure. A collection of carbon-rich amino acids, like leucine and phenylalanine, are usually placed inside the protein, all chosen to lock perfectly together. On the other hand, charged amino acids, such as lysine and aspartic acid, are typically spread across the surface to make the protein soluble in water. Hydrogen-bonding amino acids, such as serine and asparagine, are dotted in strategic places to tie different portions of the chain together. Finally, the odd glycine or proline is added to redirect the chain in the proper direction.</div>
+<h4>Negative Design</h4>
+<div>This combination of favorable forces locks the protein chain into a stable, compact structure. But this is only the first step in protein design. In order to design a protein that will successfully fold, you also need to make sure that the protein only has one stable structure. If there are any other ways to fold the protein, they will compete with your desired structure and spoil the construction. So, it is not enough design a stable protein structure...you also need to design a protein that is unstable in every other conformation.</div>
+<h4>Proteins from Scratch</h4>
+<div>Building on decades of protein structure research, scientists at the Fred Hutchinson Cancer Research Center and the University of Washington in Seattle have successfully weighed these positive and negative design elements to create an entirely novel protein. They started with a fold that had never been seen in nature, shown here on the left. Then, they used a computational method to design a sequence of amino acids that would adopt this fold. When they built this protein, which they call Top7, they found that it folded up and adopted exactly the structure they designed, as seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qys" target="_blank">1qys <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Several examples of designed proteins built from bundles of alpha helices." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/70/bundles.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Several examples of designed proteins built from bundles of alpha helices.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/70/70-DesignerProteins-bundles.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Amazing Alpha Helices</h4>
+<div>A popular approach to protein design is to start with a natural protein and make changes from there. Many groups have focused on a particularly stable structure composed of alpha helices. The GCN4 protein, a transcriptional activator from yeast, contains two chains that are linked together with a leucine zipper, a special sequence that forms an alpha helix with lots of leucines on one side. The leucines are spaced perfectly so they can zip together, gluing the two alpha helices together, as shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zta" target="_blank">2zta <i class="fa fa-external-link"> </i></a></span>. Taking this as the start, many groups have designed new proteins based on this principle. Coil-Ser (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cos" target="_blank">1cos <i class="fa fa-external-link"> </i></a></span>) is composed of three short protein chains that form alpha helices and then associate into a tight bundle. Alpha3D (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2a3d" target="_blank">2a3d <i class="fa fa-external-link"> </i></a></span>) is composed of a single chain that folds into a bundle of three alpha helices connected by short loops. RH4 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rh4" target="_blank">1rh4 <i class="fa fa-external-link"> </i></a></span>) was designed, by careful choice of the amino acids on the inside, to remove the characteristic twist of alpha helical bundles--notice that the alpha helices are tipped differently than in the other structures. Finally, researchers are now designing new functions in these artificial proteins, such as adding binding sites for metals in the protein DF2 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jmb" target="_blank">1jmb <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/70/1l2y1psv-rasmol.gif"/></div>
+<div>One goal of protein design is to create mini-proteins for use in biotechnology and medicine. Several groups have created mini-proteins by taking small, stable domains out of natural proteins and then redesigning the amino acids to stabilize the desired fold. Two examples are shown here. The basic fold of TC5b (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l2y" target="_blank">1l2y <i class="fa fa-external-link"> </i></a></span>) was taken from a protein found in Gila monsters, and then truncated and redesigned for better stability. It has a tryptophan at the very center (shown with a star) surrounded by prolines that together stabilize the structure. Pda8d (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1psv" target="_blank">1psv <i class="fa fa-external-link"> </i></a></span>) and FSD-1 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fsd" target="_blank">1fsd <i class="fa fa-external-link"> </i></a></span>, not shown) take their folds from a zinc finger, and were redesigned so that zinc was no longer needed for folding. Notice that it has a cluster of carbon-rich amino acids at the center (shown with a star), and lots of charged amino acids decorating the surface. <br/><br/> These pictures were created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-structure-prediction-design-and-computed-structure-models">Protein Structure Prediction, Design, and Computed Structure Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. S. Richardson and D. C. Richardson (1989) The de novo design of protein structures. Trends in Biochemical Sciences 14, 304-309.</li>
+<li>W. F. DeGrado, C. S. Summa, V. Pavone, F. Nastri and A. Lombardi (1999) De novo design and structural characterization of proteins and metalloproteins. Annual Review of Biochemistry 68, 779-819. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_10">http://doi.org/10.2210/rcsb_pdb/mom_2005_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

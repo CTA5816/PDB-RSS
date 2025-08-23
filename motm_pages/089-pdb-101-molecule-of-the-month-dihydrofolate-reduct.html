@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Dihydrofolate Reductase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Dihydrofolate Reductase" property="og:title"/>
+<meta content="DHFR is a target for cancer chemotherapy and bacterial infection" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/34/7dfr.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/34" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Dihydrofolate Reductase" name="twitter:title"/>
+<meta content="DHFR is a target for cancer chemotherapy and bacterial infection" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/34/7dfr.gif" name="twitter:image"/>
+<meta content="DHFR is a target for cancer chemotherapy and bacterial infection" name="description"/>
+<meta content="cancer chemotherapy,folate,folic acid,methotrexate,one-carbon metabolic process,7dfr,3dfr,1dls" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 34
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 34 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Dihydrofolate Reductase</h1>
+<p><i>DHFR is a target for cancer chemotherapy and bacterial infection</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Dihydrofolate reducase with NADP (green) and folic acid (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/34/7dfr.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Dihydrofolate reducase with NADP (green) and folic acid (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/34/34-DihydrofolateReductase-7dfr.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Dihydrofolate reductase is a small enzyme that plays a supporting role, but an essential role, in the building of DNA and other processes. It manages the state of folate, a snaky organic molecule that shuttles carbon atoms to enzymes that need them in their reactions. Of particular importance, the enzyme thymidylate synthase uses these carbon atoms to build thymine bases, an essential component of DNA. After folate has released its carbon atoms, it has to be recycled. This is the job performed by dihydrofolate reductase.</div>
+<h4>A Protein Jig</h4>
+<div>Dihydrofolate reductase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=7dfr" target="_blank">7dfr <i class="fa fa-external-link"> </i></a></span>, juggles two relatively large molecules in its reaction. It has a long groove that binds to folate at one end, shown here in purple, and to NADPH at the other end, shown here in green. As you can see, the protein wraps sidechains around the two molecules, positioning them tightly next to one another. Then, the enzyme transfers hydrogen atoms from NADPH to the folate, converting folate to a useful reduced form.</div>
+<h4>A Target in the Fight Against Cancer</h4>
+<div>Enzymes with essential roles are sensitive targets for drug therapy. Dihydrofolate reductase was the first enzyme to be targeted for cancer chemotherapy. The first drug used for cancer chemotherapy was aminopterin. It binds to dihydrofolate reductase a thousand times more tightly than folate, blocking the action of the enzyme. Today, methotrexate and other variations on aminopterin are used, because of their tighter binding and better clinical characteristics. Since these drugs attack a key step in the production of DNA, they tend to kill cells that are actively growing rather than cells that are not growing. Since cancer cells are often the most rapidly reproducing cells in a patient, the drug will have the strongest effect on the cancer cells. The side effects of chemotherapy, however, are the result of the drug on other normally-growing tissues, such as hair follicles and the lining of the stomach.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial (left) and human (right) dihydrofolate reductase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/34/3dfr-1dls.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial (left) and human (right) dihydrofolate reductase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/34/34-DihydrofolateReductase-3dfr-1dls.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Taking Advantage of Differences</h4>
+<div>Dihydrofolate reductase is used in all organisms, but each organism makes a slightly different version. Over the course of the evolution of life, the plans for dihydrofolate reductase have slowly mutated, making small changes but keeping the essential function the same. As a result, the version from bacteria, shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3dfr" target="_blank">3dfr <i class="fa fa-external-link"> </i></a></span>, is smaller and more streamlined than the version in our own cells, shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dls" target="_blank">1dls <i class="fa fa-external-link"> </i></a></span>. As seen in these structures, both bind similarly to NADPH, shown in green, and to the drug methotrexate, shown in purple. Researchers, however, have developed drugs that take advantage of the differences. For instance, the drug trimethoprim binds about 30,000 times more tightly to the bacterial enzyme. So, it is effective as an antibiotic drug. A low dose of trimethoprim will attack bacteria while leaving the dihydrofolate reductase in our own cells relatively untouched.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/34/dhfr-rasmol.gif"/></div>
+<div>The drug methotrexate is designed to mimic a folate molecule, so that it will bind in the active site of the enzyme and block its action. Methotrexate is about the same size as folate, with similar chemical composition. In these two early crystal structures, PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=7dfr" target="_blank">7dfr <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3dfr" target="_blank">3dfr <i class="fa fa-external-link"> </i></a></span>, researchers confirmed that the drug does in fact mimic folate, binding in a very similar position. In these pictures, the carbon atoms in NADPH are colored green, and carbon atoms in the drug are white. Notice how the nicotinamide ring at the lower end of the nucleotide packs tightly against flat rings of methotrexate and folate. During the chemical reaction, hydrogen atoms (which are unfortunately not seen in crystal structures) are transferred from the nicotinamide to these large, flat rings. You can explore these structures in more detail by clicking on the accession codes and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_10">http://doi.org/10.2210/rcsb_pdb/mom_2002_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

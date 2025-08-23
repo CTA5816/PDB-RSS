@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Catabolite Activator Protein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Catabolite Activator Protein" property="og:title"/>
+<meta content="CAP senses the level of sugar and mobilizes the proteins needed to utilize it" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/48/1cgp.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/48" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Catabolite Activator Protein" name="twitter:title"/>
+<meta content="CAP senses the level of sugar and mobilizes the proteins needed to utilize it" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/48/1cgp.gif" name="twitter:image"/>
+<meta content="CAP senses the level of sugar and mobilizes the proteins needed to utilize it" name="description"/>
+<meta content="cyclic AMP,cyclic AMP receptor protein,DNA bending,regulation of transcription,transcription factor activity,1cgp,1iw7,1lb2,1j59" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 48
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 48 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Catabolite Activator Protein</h1>
+<p><i>CAP senses the level of sugar and mobilizes the proteins needed to utilize it</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Catabolite activator protein bound to a short piece of DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/48/1cgp.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Catabolite activator protein bound to a short piece of DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/48/48-CataboliteActivatorProtein-1cgp.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sweet Tooth</h4>
+<div>Bacteria love sugar. In particular, bacteria love glucose, which is easily digestible and quickly converted to chemical energy. When glucose is plentiful, bacteria ignore other nutrients in their environment, feasting on their favored source. But, when glucose is rare, they shift gears and mobilize the machinery needed to use other sources of energy.</div>
+<h4>Second Messengers</h4>
+<div>Bacteria use an unusual modification of ATP, the molecule that carries chemical energy in the cell, to notify its synthetic machinery about what it is currently eating. As glucose levels drop, the cell-surface enzyme adenyl cyclase is activated. It grabs ATP molecules, clips off two phosphates, and reconnects the free end back onto the molecule, creating an odd little molecular loop through the phosphate. This product, called cyclic AMP, is released and it spreads through the cell, stimulating production of the enzymes that process other food molecules. Because of its role in delivering messages from the primary glucose sensor (adenyl cyclase) to the synthetic machinery, cyclic AMP is often known as a <i>second messenger</i>.</div>
+<h4>Reading the Message</h4>
+<div>Catabolite activator protein (CAP), also known as cyclic AMP receptor protein (CRP), is activated by cyclic AMP and stimulates synthesis of the enzymes that break down non-glucose food molecules. It is composed of two identical subunits, shown here in blue from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cgp" target="_blank">1cgp <i class="fa fa-external-link"> </i></a></span>. When cyclic AMP (shown in purple) binds, it changes the conformation of the protein slightly, making it perfect for binding to DNA (shown here in red). CAP binds to a specific DNA sequence, which is found next to the genes that are activated. As shown below, when CAP binds to DNA, it coaxes <a href="http://pdb101.rcsb.org/motm/40">RNA polymerase</a> into place, beginning transcription.</div>
+<h4>Get a Grip</h4>
+<div>CAP is not gentle when it binds to DNA: it grabs the DNA and bends it by nearly 90 degrees. This is not a smooth bend, however. Since DNA is a double helix with two grooves that spiral up along the strand, it bends more easily in some directions. CAP bends the DNA sharply at two positions where protein alpha helices contact the compressible DNA major groove.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="CAP-DNA complex (top) interacting with RNA polymerase (yellow and green, bottom). A flexible linker in the polymerase subunit is not seen in the structures and is shown schematically with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/48/cap-polymerase.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>CAP-DNA complex (top) interacting with RNA polymerase (yellow and green, bottom). A flexible linker in the polymerase subunit is not seen in the structures and is shown schematically with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/48/48-CataboliteActivatorProtein-cap-polymerase.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>CAP in Action</h4>
+<div>CAP lures RNA polymerase close to the DNA, stimulating the transcription of genes that are nearby. RNA polymerase, shown in yellow from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1iw7" target="_blank">1iw7 <i class="fa fa-external-link"> </i></a></span>, has a subunit that reaches up and interacts with CAP and the DNA. In the RNA polymerase structure, only half of this subunit is seen. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lb2" target="_blank">1lb2 <i class="fa fa-external-link"> </i></a></span> reveals how the other half binds to both CAP (blue), and DNA (red). The two halves of this subunit are connected through a flexible linker, shown with little yellow dots. Notice that only a small piece of DNA is shown here; inside cells the DNA is part of a long continuous strand. The flexible linker allows RNA polymerase to reach neighboring regions of the DNA and start transcription.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/48/1cgp-rasmol.gif"/></div>
+<div>CAP recognizes a specific sequence of DNA, binding only to special sites next to genes involved in energy production. The recognition is provided by interactions between CAP amino acids and DNA bases in the major groove. This picture, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cgp" target="_blank">1cgp <i class="fa fa-external-link"> </i></a></span>, shows how two arginines and a glutamate reach over and form specific hydrogen bonds with the DNA bases. Notice also the big bend in the DNA at the thymine-adenine base pair at center. CAP also interacts with many sites on the phosphate backbone of the DNA, strengthening the binding. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cgp" target="_blank">1cgp <i class="fa fa-external-link"> </i></a></span> has a break in the DNA chain at a key point in the backbone (shown with a star), but you can explore how CAP interacts with this site in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j59" target="_blank">1j59 <i class="fa fa-external-link"> </i></a></span>.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. Kolb, S. Busby, H. Buc, S. Garges and S. Adhya (1993): Transcriptional regulation by cAMP and its receptor protein. <i>Annual Review of Biochemistry</i> <b>62</b>, pp. 749-795.</li>
+<li>S. Busby and R. H. Ebright (1999): Transcription activation by catabolite activator protein.<i> Journal of Molecular Biology</i> <b>293</b>, pp. 199-213.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_12">http://doi.org/10.2210/rcsb_pdb/mom_2003_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

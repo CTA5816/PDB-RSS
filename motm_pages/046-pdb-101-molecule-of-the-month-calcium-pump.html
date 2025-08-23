@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Calcium Pump</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Calcium Pump" property="og:title"/>
+<meta content="Atomic structures have captured the calcium pump in action" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/51/1eul-membrane.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/51" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Calcium Pump" name="twitter:title"/>
+<meta content="Atomic structures have captured the calcium pump in action" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/51/1eul-membrane.gif" name="twitter:image"/>
+<meta content="Atomic structures have captured the calcium pump in action" name="description"/>
+<meta content="calcium ion transport,calcium-transporting ATPase activity,ion transport,sarcoplasmic reticulum,1su4,1iwo,1eul" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 51
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 51 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Calcium Pump</h1>
+<p><i>Atomic structures have captured the calcium pump in action</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Calcium pump, with two bound calcium ions in turquoise. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/51/1eul-membrane.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Calcium pump, with two bound calcium ions in turquoise. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/51/51-TheCalciumPump-1eul-membrane.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Every time we move a muscle, it requires the combined action of trillions of <a href="http://pdb101.rcsb.org/motm/18">myosin</a> motors. Our muscle cells use calcium ions to coordinate this massive molecular effort. When a muscle cell is given the signal to contract from its associated nerves, it releases a flood of calcium ions from a special intracellular container, the sarcoplasmic reticulum, that surrounds the bundles of actin and myosin filaments. The calcium ions rapidly spread and bind to tropomyosins on the actin filaments. They shift shape slightly and allow myosin to bind and begin climbing up the filament. These trillions of myosin motors will continue climbing, contracting the muscle, until the calcium is removed.</div>
+<h4>Relaxation</h4>
+<div>The calcium pump allows muscles to relax after this frenzied wave of calcium-induced contraction. The pump is found in the membrane of the sarcoplasmic reticulum. In some cases, it is so plentiful that it may make up 90% of the protein there. Powered by ATP, it pumps calcium ions back into the sarcoplasmic reticulum, reducing the calcium level around the actin and myosin filaments and allowing the muscle to relax. Calcium ions are also used for signaling inside other cells, and similar pumps are found in the cell membrane of most cells. They constantly work to reduce the amount of calcium to very low levels, preparing the cell. Then, at a moment's notice, the cell can allow a flood of calcium to enter, spreading the signal to all corners.</div>
+<h4>Pumping Calcium</h4>
+<div>The calcium pump is an amazing machine with several moving parts. It is found in the membrane, as shown here from PDB entry <a href="https://www.rcsb.org/structure/1su4" target="_blank">1su4</a>. It has a big domain poking out on the outside of the sarcoplasmic reticulum, and a region that is embedded in the membrane, forming a tunnel to the other side. For each ATP broken, it transfers two calcium ions (shown here in blue) through the membrane, and two or three hydrogen ions back in the opposite direction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Conformational changes in the pumping cycle: empty state (left) and with calcium bound (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/51/calcium-pumps.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Conformational changes in the pumping cycle: empty state (left) and with calcium bound (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/51/51-TheCalciumPumps-calcium-pumps.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Pumping Cycle</h4>
+<div>The calcium pump goes through a cycle of changes in the process of pumping. Four distinct steps have been proposed, and the PDB currently has structures of two of these steps. The structure on the left, from PDB entry <a href="https://www.rcsb.org/structure/1iwo" target="_blank">1iwo</a>, is the empty state, which presumably has hydrogen ions bound in the transfer site, although they cannot be seen in the crystal structure. It shifts shape into the structure on the right, from PDB entry <a href="https://www.rcsb.org/structure/1su4" target="_blank">1su4</a>, allowing calcium ions to enter from the top and replace the hydrogen ions, which travel out upwards into the cytoplasm. The remaining two steps use an ATP molecule to shift the shape so that the calcium will be released downwards. In this process, a phosphate is transferred from the ATP to a special aspartate amino acid in the pump, number 351, shown here in red. As you can see, this aspartate and the presumed ATP binding site (which must be close to the aspartate) are some distance from the tunnel that calcium passes through. The switching is controlled by large motions of the ATP-binding domains, which push and pull on the protein surrounding the tunnel, opening and closing it appropriately.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Calcium Pump in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/51/MoM-51-CalciumPump_Figure-jmol.jpg"/></div>
+<p>The calcium transfer site is surrounded by four internal alpha helices (white) that form a tunnel through the membrane. In the structure shown at left (PDB ID <a href="https://www.rcsb.org/structure/1su4" target="_blank">1su4</a>), the two calcium ions (blue) are held by a constellation of amino acids, ready to be pumped across the membrane. Without these ions, the calcium pump is less stable, and calcium-free structures have been difficult to determine. We can see the structure of the calcium-free state (PDB ID <a href="https://www.rcsb.org/structure/1iwo" target="_blank">1iwo</a>) with the help of an inhibitor (yellow) that freezes the calcium pump in place. <br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/><b> This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. G. Lee and J. M. East (2001) What the structure of a calcium pump tells us about its mechanism. <i>Biochemical Journal</i> <b>356</b>, 665-683.</li>
+<li>D. H. MacLennan, W. J. Rice and N. M. Green (1997) The mechanism of Ca2+ transport by sarco(endo)plasmic reticulum Ca2+-ATPases. <i>Journal of Biological Chemistry</i> <b>272</b>, 28815-28818.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_3">http://doi.org/10.2210/rcsb_pdb/mom_2004_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

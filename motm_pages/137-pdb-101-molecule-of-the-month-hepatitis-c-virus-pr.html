@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hepatitis C Virus Protease/Helicase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hepatitis C Virus Protease/Helicase" property="og:title"/>
+<meta content="Structures of hepatitis C viral proteins have led to the discovery of direct-acting antivirals." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-1cu1_label.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/252" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hepatitis C Virus Protease/Helicase" name="twitter:title"/>
+<meta content="Structures of hepatitis C viral proteins have led to the discovery of direct-acting antivirals." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-1cu1_label.jpg" name="twitter:image"/>
+<meta content="Structures of hepatitis C viral proteins have led to the discovery of direct-acting antivirals." name="description"/>
+<meta content="HCV,hepatitis,direct-acting antiviral drug,blood transfusion,protease,virus,NS3/4A,NS5A,RNA-dependent RNA polymerase,1cu1,4wtg,1zh1,1r7g,2oc8,3sv6,3sue,6p6l,6nzt" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 252
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 252 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hepatitis C Virus Protease/Helicase</h1>
+<p><i>Structures of hepatitis C viral proteins have led to the discovery of direct-acting antivirals.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="HCV protease/helicase NS3/4A. The protease domain is shown in blue, the helicase domain is in green, and NS4A is in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-1cu1_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>HCV protease/helicase NS3/4A. The protease domain is shown in blue, the helicase domain is in green, and NS4A is in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-1cu1_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Enemies that are known are easier to fight. The discovery of hepatitis C virus in 1989 is a perfect example of how scientific knowledge can be translated into clinical success. Before then, blood transfusions carried a significant risk of causing hepatitis, a chronic disease that can cause severe liver damage and cancer. But with discovery of the agent that causes the disease, blood may now be screened for presence of the virus. Also, new therapies have been discovered to fight the virus in infected patients, and for the first time, a chronic infection may now be cured with drugs. This remarkable success of translational research was recognized by the 2020 Nobel Prize in Physiology or Medicine, awarded to H. J. Alter, M. Houghton, and C. M. Rice.</div>
+<h4>Hitting HCV</h4>
+<div>Like many RNA viruses, hepatitis C virus (HCV) hijacks cellular ribosomes and forces them to make a long viral polyprotein, which must then be clipped into functional pieces by a viral protease (for other examples, see <a href="https://pdb101.rcsb.org/motm/6">HIV protease</a> and <a href="https://pdb101.rcsb.org/motm/242">coronavirus proteases</a>). Since these proteases have a central function in the viral life cycle, they are effective targets for antiviral drugs. As shown in the interactive view below, researchers have progressively refined inhibitors for HCV protease, so today, there are powerful "direct-acting antivirals" (DAA) that block growth of the virus and cure infected individuals. This cure is an enormous boon for global health, since it has been estimated that 3% of the world population is infected with HCV, and HCV is the leading cause of liver transplantation in the United States.</div>
+<h4>Two-in-One</h4>
+<div>HCV protease is a serine protease similar to <a href="https://pdb101.rcsb.org/motm/46">chymotrypsin</a>, which is built as part of a longer protein that also includes a helicase enzyme that is involved in replication of the viral RNA genome. This composite protein is collectively called NS3 (non-structural protein 3), shown here from PDB entry <a href="https://www.rcsb.org/structure/1cu1" target="_blank">1cu1</a>. The protease/helicase also binds to another small viral protein, called NS4A, which is needed for maximal function of the protease and also tethers the complex to cellular membranes.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="(Top) HCV RNA-dependent RNA polymerase (NS5B) bound to a short RNA duplex and sofosbuvir. (Bottom) HCV NS5A protein." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-4wtg_1zh1_1r7g_2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Top) HCV RNA-dependent RNA polymerase (NS5B) bound to a short RNA duplex and sofosbuvir. (Bottom) HCV NS5A protein.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-4wtg_1zh1_1r7g_2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>DAA Targets</h4>
+<div>Researchers have also targeted other HCV proteins with direct-acting antiviral drugs. As with <a href="https://pdb101.rcsb.org/motm/249">SARS-CoV-2</a>, HCV has an RNA genome that is replicated by an RNA-dependent RNA polymerase, shown here from PDB entry <a href="https://www.rcsb.org/structure/4wtg" target="_blank">4wtg</a>. This structure includes the antiviral drug sofosbuvir targeting the polymerase. Effective antiviral drugs have also been developed for NS5A, a membrane-bound protein that plays essential supporting roles in viral RNA replication and virus assembly (PDB entries <a href="https://www.rcsb.org/structure/1zh1" target="_blank">1zh1 </a>and <a href="https://www.rcsb.org/structure/1r7g" target="_blank">1r7g</a>). These drugs are thought to inhibit the dimerization of the protein, blocking its function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Direct-acting antivirals</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/252/252-Hepatitis_C_Virus_ProteaseHelicase-Jmol.jpg"/></div>
+<p>The active site of the HCV protease is a tricky target, because it doesn't have a deep pocket like many other enzyme active sites. Medicinal chemists have overcome this challenge in two ways. Early breakthrough antivirals boceprevir and telaprevir (PDB entries <a href="https://www.rcsb.org/structure/2oc8" target="_blank">2oc8 </a>and <a href="https://www.rcsb.org/structure/3sv6" target="_blank">3sv6</a>) form a reversible covalent bond with the active site serine amino acid, helping to lock the drug to the surface of the enzyme. Unfortunately, these have unwelcome side effects. Later generation drugs such as grazoprevir, glecaprevir, and voxilaprevir (PDB entries <a href="https://www.rcsb.org/structure/3sue" target="_blank">3sue</a>, <a href="https://www.rcsb.org/structure/6p6l" target="_blank">6p6l</a>, and <a href="https://www.rcsb.org/structure/6nzt" target="_blank">6nzt</a>), which are now in widespread use, have a large cyclic structure that grips the protein surface. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many interesting structures of the helicase domain are available in the PDB archive. Try looking at <a href="https://www.rcsb.org/structure/3kql" target="_blank">3kql</a> to get started.</li>
+<li>You can use the Ligand Page to explore these drug structures in more detail. For example, try looking at <a href="https://www.rcsb.org/ligand/SUE">grazoprevir</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Houghton, M. (2019) Hepatitis C virus: 30 years after its discovery. Cold Spring Harbor Persp Med 9: a037069</li>
+<li>Ozen, A., Prachanronarong, K., Matthew, A. N., Soumana, D. I., Schiffer, C. A. (2019) Resistance outside the substrate envelope: hepatitis C NS3/4A protease inhibitors. Crit Rev Biochem Mol Biol 54: 11-26</li>
+<li>Pol, S., Lagaye, S. (2019) The remarkable history of the hepatitis C virus. Genes Immun 20: 436-446</li>
+<li>Gu, M., Rice, C. M. (2013) Structures of hepatitis C virus nonstructural protein required for replicase assembly and function. Curr Op Virol 3: 129-136</li>
+<li>1cu1: Yao, N., Reichert, P., Taremi, S.S., Prosise, W.W., Weber, P.C. (1999) Molecular views of viral polyprotein processing revealed by the crystal structure of the hepatitis C virus bifunctional protease-helicase. Structure 7: 1353-1363</li>
+<li>1r7g: Penin, F., Brass, V., Appel, N., Ramboarina, S., Montserret, R., Ficheux, D., Blum, H.E., Bartenschlager, R., Moradpour, D. (2004) Structure and function of the membrane anchor domain of hepatitis C virus nonstructural protein 5A. J Biol Chem 279: 40835-40843</li>
+<li>1zh1: Tellinghuisen, T.L., Marcotrigiano, J., Rice, C.M. (2005) Structure of the zinc-binding domain of an essential component of the hepatitis C virus replicase. Nature 435: 374-379</li>
+<li>2oc8: Prongay, A.J., Guo, Z., Yao, N., Pichardo, J., Fischmann, T., Strickland, C., Myers, J., Weber, P.C., Beyer, B.M., Ingram, R., Hong, Z., Prosise, W.W., Ramanathan, L., Taremi, S.S., Yarosh-Tomaine, T., Zhang, R., Senior, M., Yang, R.S., Malcolm, B., Arasappan, A., Bennett, F., Bogen, S.L., Chen, K., Jao, E., Liu, Y.T., Lovey, R.G., Saksena, A.K., Venkatraman, S., Girijavallabhan, V., Njoroge, F.G., Madison, V. (2007) Discovery of the HCV NS3/4A protease inhibitor (1R,5S)-N-[3-amino-1-(cyclobutylmethyl)-2,3-dioxopropyl]-3- [2(S)-[[[(1,1-dimethylethyl)amino]carbonyl]amino]-3,3-dimethyl-1-oxobutyl]- 6,6-dimethyl-3-azabicyclo[3.1.0]hexan-2(S)-carboxamide (Sch 503034) II. Key steps in structure-based optimization. J Med Chem 50: 2310-2318</li>
+<li>3sue, 3sv6: Romano, K.P., Ali, A., Aydin, C., Soumana, D., Ozen, A., Deveau, L.M., Silver, C., Cao, H., Newton, A., Petropoulos, C.J., Huang, W., Schiffer, C.A. (2012) The molecular basis of drug resistance against hepatitis C virus NS3/4A protease inhibitors. PLoS Pathog 8: e1002832-e1002832</li>
+<li>4wtg: Appleby, T.C., Perry, J.K., Murakami, E., Barauskas, O., Feng, J., Cho, A., Fox, D., Wetmore, D.R., McGrath, M.E., Ray, A.S., Sofia, M.J., Swaminathan, S., Edwards, T.E. (2015) Structural basis for RNA replication by the hepatitis C virus polymerase. Science 347: 771-775</li>
+<li>6nzt: Taylor, J.G., Zipfel, S., Ramey, K., Vivian, R., Schrier, A., Karki, K.K., Katana, A., Kato, D., Kobayashi, T., Martinez, R., Sangi, M., Siegel, D., Tran, C.V., Yang, Z.Y., Zablocki, J., Yang, C.Y., Wang, Y., Wang, K., Chan, K., Barauskas, O., Cheng, G., Jin, D., Schultz, B.E., Appleby, T., Villasenor, A.G., Link, J.O. (2019) Discovery of the pan-genotypic hepatitis C virus NS3/4A protease inhibitor voxilaprevir (GS-9857): A component of Vosevi®. Bioorg Med Chem Lett 29: 2428-2436</li>
+<li>6p6l: Timm, J., Kosovrasti, K., Henes, M., Leidner, F., Hou, S., Kurt-Yilmaz, N., Schiffer, C.A. (2020) Molecular and structural mechanism of pan-genotypic HCV NS3/4A protease inhibition by glecaprevir. ACS Chem Biol 15, 342-352</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_12">http://doi.org/10.2210/rcsb_pdb/mom_2020_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SARS-CoV-2 Spike</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike" property="og:title"/>
+<meta content="Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/246/246-SARSCoV2_Spike-6crz_6vxx3.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/246" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike" name="twitter:title"/>
+<meta content="Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/246/246-SARSCoV2_Spike-6crz_6vxx3.jpg" name="twitter:image"/>
+<meta content="Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development." name="description"/>
+<meta content="coronavirus,SARS,SARS-CoV,SARS-CoV-2,COVID19,spike,receptor,ACE2,antibody,immunity,vaccine,pandemic,6crz,6vxx,6m17,6vsb,2ghw,3bgf,6w41 " name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 246
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 246 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SARS-CoV-2 Spike</h1>
+<p><i>Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Spike protein from SARS-CoV, with one receptor binding domain (RBD) in the up position, and a closed conformation of the SARS-CoV-2 spike. The S1 fragment is shown in magenta and the S2 fragment in red, with glycosylation in lighter shades." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/246/246-SARSCoV2_Spike-6crz_6vxx3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Spike protein from SARS-CoV, with one receptor binding domain (RBD) in the up position, and a closed conformation of the SARS-CoV-2 spike. The S1 fragment is shown in magenta and the S2 fragment in red, with glycosylation in lighter shades.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/246/246-SARSCoV2_Spike-6crz_6vxx3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The research community has quickly mobilized to fight the current SARS-CoV-2 pandemic, building on years of work on the previous SARS-CoV virus. The spike protein of this virus will be a central figure in this fight, since it is the primary target of antibodies that provide immunity against the virus. The surfaces of coronaviruses are covered with these spikes, giving them their distinctive crown-like appearance in electron micrographs. The spikes initiate the process of infection, binding to receptors and then fusing with the cell membrane to release the viral genome inside. Many other enveloped viruses use similar spike-like proteins to infect cells, including <a href="https://pdb101.rcsb.org/motm/76">influenza hemagglutinin</a>, and the envelope glycoproteins of <a href="https://pdb101.rcsb.org/motm/169">HIV-1</a> and <a href="https://pdb101.rcsb.org/motm/178">ebola</a>.</div>
+<h4>Cut to Size</h4>
+<div>The spike protein is composed of three identical chains, that together form a complex with a small domain inside the virus, a membrane-spanning segment, and a large ectodomain that extends outward from the virus. In addition, the spike is a glycoprotein: the ectodomain is covered with sugar chains that help to mask the virus from the immune system. The structures of SARS-CoV and SARS-COV-2 spikes shown here (PDB entries <a href="https://www.rcsb.org/structure/6crz" target="_blank">6crz</a> and <a href="https://www.rcsb.org/structure/6vxx" target="_blank">6vxx</a>) include only the ectodomain, and as you can see, they are very similar. Each chain is synthesized in one piece, but then is clipped by cellular proteases into two functional pieces. The outer S1 fragment, colored magenta, binds to cellular receptors, and the S2 fragment, colored red, directs fusion of the virus with the cell. Both of these structures include only portions of the many sugar chains that coat the spike, since the sugars are highly flexible and difficult to observe.</div>
+<h4>Flexible Features</h4>
+<div>Recent structures have revealed that the spikes of SARS-CoV and SARS-CoV-2 are quite flexible. In these structures, the receptor-binding domains are seen in different conformations. Often, just one domain is extended upwards, but sometimes they're all tucked down or several are extended. The extended conformation is needed to bind to receptors, so this flexibility is a great advantage to the virus. Researchers hypothesize that the recent SARS variants are virulent because their receptor binding domains are particularly flexible, whereas the more widespread coronaviruses that cause the common cold are less dangerous because they are less flexible.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Illustration of a complex of the spike protein (red and magenta) bound to its receptor ACE2 (blue). ACE2 is part of a complex with the amino acid transporter B0AT1 (green). The cell membrane is shown schematically in light blue at the bottom." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/246/246-Coronavirus_Spike-6vsb_6m17_2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Illustration of a complex of the spike protein (red and magenta) bound to its receptor ACE2 (blue). ACE2 is part of a complex with the amino acid transporter B0AT1 (green). The cell membrane is shown schematically in light blue at the bottom.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/246/246-Coronavirus_Spike-6vsb_6m17_2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Receptor Binding</h4>
+<div>Spike protein binds to ACE2 (angiotensin-converting enzyme 2) on the surface of cells. ACE2 is an enzyme that activates angiotensin, a peptide hormone involved in control of blood pressure. ACE2 is found on lung, heart, kidney, and intestinal cells, making these cells the target for infection by the virus. PDB entry <a href="https://www.rcsb.org/structure/6m17" target="_blank">6m17</a> reveals the complex of ACE2 with the receptor-binding domain of the SARS-CoV-2 spike. In the complex, ACE2 is also bound to the amino acid transporter B0AT1. The illustration was created by superimposing this complex with the structure of the spike protein in PDB entry <a href="https://www.rcsb.org/structure/6vsb" target="_blank">6vsb</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Antibodies bound to the spike receptor-binding domain</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/246/246-Coronavirus_Spike-RBD_jmol.jpg"/></div>
+<p>Our immune system fights back when coronaviruses infect us. The spike is the major target for this protection, since it is exposed on the surface of the virus. These three structures (PDB entries <a href="https://www.rcsb.org/structure/3bgf" target="_blank">3bgf</a>, <a href="https://www.rcsb.org/structure/2ghw" target="_blank">2ghw</a> and <a href="https://www.rcsb.org/structure/6w41" target="_blank">6w41</a> show that antibodies (shown in green) can recognize spike proteins in many ways. Two of these antibodies block the receptor-binding portion of the domain (shown here in brighter colors), but the other antibody targets a cryptic site at the base of the domain, that is only exposed when the antibody binds to it. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>For more information on SARS-CoV-2 and COVID-19, visit the resource pages at the <a href="http://RCSB.org/covid19">main RCSB PDB site</a> and at <a href="http://pdb101.rcsb.org/browse/coronavirus">PDB-101</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6vxx: Walls, A.C., Park, Y.J., Tortorici, M.A., Wall, A., McGuire, A.T., Veesler, D. (2020) Structure, Function, and Antigenicity of the SARS-CoV-2 Spike Glycoprotein. Cell 181, 281-292</li>
+<li>6w41: Yuan, M., Wu, N.C., Zhu, X., Lee, C.D., So, R.T.Y., Lv, H., Mok, C.K.P., Wilson, I.A. (2020) A highly conserved cryptic epitope in the receptor-binding domains of SARS-CoV-2 and SARS-CoV. Science DOI: 10.1126/science.abb7269</li>
+<li>6vsb:  Wrapp, D., Wang, N., Corbett, K.S., Goldsmith, J.A., Hsieh, C.L., Abiona, O., Graham, B.S., McLellan, J.S. (2020) Cryo-EM structure of the 2019-nCoV spike in the prefusion conformation. Science 367: 1260-1263</li>
+<li>6m17: Yan, R., Zhang, Y., Li, Y., Xia, L., Guo, Y., Zhou, Q. (2020) Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2. Science 367: 1444-1448</li>
+<li>6crz: Kirchdoerfer, R.N., Wang, N., Pallesen, J., Wrapp, D., Turner, H.L., Cottrell, C.A., Corbett, K.S., Graham, B.S., McLellan, J.S., Ward, A.B. (2018) Stabilized coronavirus spikes are resistant to conformational changes induced by receptor recognition or proteolysis. Sci Rep 8: 15701-15701</li>
+<li>3bgf: Pak, J.E., Sharon, C., Satkunarajah, M., Auperin, T.C., Cameron, C.M., Kelvin, D.J., Seetharaman, J., Cochrane, A., Plummer, F.A., Berry, J.D., Rini, J.M. (2009) Structural insights into immune recognition of the severe acute respiratory syndrome coronavirus S protein receptor binding domain. J Mol Biol 388: 815-823</li>
+<li>2ghw: Hwang, W.C., Lin, Y., Santelli, E., Sui, J., Jaroszewski, L., Stec, B., Farzan, M., Marasco, W.A., Liddington, R.C. (2006) Structural basis of neutralization by a human anti-severe acute respiratory syndrome spike protein antibody, 80R. J Biol Chem 281: 34610-34616</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_6">http://doi.org/10.2210/rcsb_pdb/mom_2020_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

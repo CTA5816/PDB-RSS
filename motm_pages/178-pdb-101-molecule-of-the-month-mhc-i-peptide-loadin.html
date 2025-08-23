@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: MHC I Peptide Loading Complex</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: MHC I Peptide Loading Complex" property="og:title"/>
+<meta content="Several steps of quality control optimize the peptides that are displayed by MHC I." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/280/PLC.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/280" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: MHC I Peptide Loading Complex" name="twitter:title"/>
+<meta content="Several steps of quality control optimize the peptides that are displayed by MHC I." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/280/PLC.jpg" name="twitter:image"/>
+<meta content="Several steps of quality control optimize the peptides that are displayed by MHC I." name="description"/>
+<meta content="MHC I,immune system,viral infection,cancer,inflammation,autoimmune,molecular evolution,transporter,peptide,endoplasmic reticulum,tapaisin,peptide loading,5ab0,7qpd,5u1d,5opi,5mzo,1hoc,MHC I,immune system,viral infection,cancer,inflammation,autoimmune,molecular evolution,transporter,peptide,endoplasmic reticulum,tapaisin,peptide loading,5ab0,7qpd,5u1d,5opi,5mzo,1hoc,MHC I,immune system,viral infection,cancer,inflammation,autoimmune,molecular evolution,transporter,peptide,endoplasmic reticulum,tapaisin,peptide loading,5ab0,7qpd,5u1d,5opi,5mzo,1hoc,MHC I,immune system,viral infection,cancer,inflammation,autoimmune,molecular evolution,transporter,peptide,endoplasmic reticulum,tapaisin,peptide loading,5ab0,7qpd,5u1d,5opi,5mzo,1hoc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 280
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 280 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: MHC I Peptide Loading Complex</h1>
+<p><i>Several steps of quality control optimize the peptides that are displayed by MHC I.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="MHC I peptide loading complex. The endoplasmic reticulum membrane is shown schematically in gray. The transmembrane domains of MHC I and tapasin are not included in the structure, and are also shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/280/PLC.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>MHC I peptide loading complex. The endoplasmic reticulum membrane is shown schematically in gray. The transmembrane domains of MHC I and tapasin are not included in the structure, and are also shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/280/PLC.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our immune system is constantly making decisions. It is tasked with a difficult job: it must seek out infections and cancers and destroy them, but at the same time, ignore the many normal cellular processes that are needed for healthy life. So, when the immune system finds an infected cell or tumor, it needs to make absolutely sure that there is a problem. If it makes a wrong decision and attacks a healthy cell, it can lead to life-threatening inflammation or autoimmune disease. <a href="https://pdb101.rcsb.org/motm/62">MHC I</a> (“major histocompatibility complex”) helps the immune system make these decisions. Most of our cells chop up a few copies of their internal proteins and use MHC I to display the small peptide pieces on the cell surface. That way the immune system can monitor what’s happening inside the cell. The peptide loading complex (PLC) shown here helps our cells load only the most interesting peptides onto MHC I.</div>
+<h4>Complex Loading</h4>
+<div>The peptide loading complex has many functional parts that find an empty MHC I, load it with a peptide, check the stability of the peptide-MHC I complex, and then release it for delivery to the cell surface. Most of the action happens in the endoplasmic reticulum. The protein chaperone calreticulin starts building the complex by recognizing a distinctive glycan on the surface MHC I. It then recruits the chaperone tapasin, the disulfide isomerase ERp57, and the transporter TAP (“transporter associated with antigen processing”). When the whole thing is assembled, a peptide is loaded. Finally, the complex disassembles and a glucose is clipped off the end of the MHC I glycan, giving the signal that peptide-MHC I complex is ready for transport.</div>
+<h4>PLC in Action</h4>
+<div>The illustration shown here includes two experimentally-determined atomic structures of different parts of the peptide loading complex. PDB ID <a href="https://www.rcsb.org/structure/7qpd" target="_blank">7qpd</a> shows what’s happening inside the endoplasmic reticulum. Calreticulin, tapasin and ERp57 surround MHC I. Tapasin changes the shape of the peptide-binding groove, making it a bit wider at one end, and also forms a small lid over part of the groove, making it more difficult for weakly-binding peptides to find their way in. As a result, the complex accelerates binding of peptides and favors strong-binding, optimal peptides. PDB ID <a href="https://www.rcsb.org/structure/5u1d" target="_blank">5u1d</a> includes TAP, which has the task of transporting peptides into the endoplasmic reticulum. It is an ATP-driven transporter similar to <a href="https://pdb101.rcsb.org/motm/123">P-glycoprotein</a> and other <a href="https://pdb101.rcsb.org/motm/95">multidrug transporters</a>, consisting of two similar protein subunits that form a passageway through the endoplasmic reticulum membrane. In this structure, the transporter is frozen by a small protein from herpes simplex virus, ICP47, which blocks transport of viral proteins and allows the virus to hide from the immune system.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="UGGT and the complex of MHC I with TAPBPR. The glycan on MHC I is not included in the structure of the complex, and is shown here using a structure from PDB ID 6cbp. In UGGT, the portion in darker blue recognizes MHC I, and the portion in turquoise performs the sugar-adding reaction." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/280/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>UGGT and the complex of MHC I with TAPBPR. The glycan on MHC I is not included in the structure of the complex, and is shown here using a structure from PDB ID <a href="https://www.rcsb.org/structure/6cbp" target="_blank">6cbp</a>. In UGGT, the portion in darker blue recognizes MHC I, and the portion in turquoise performs the sugar-adding reaction.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/280/Figure2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Double Check</h4>
+<div>Amazingly, a second level of quality control is employed to ensure that only the most relevant peptides are displayed on the cell surface. As the complex of peptide and MHC I moves through the transport process, it is examined by another set of proteins. TAPBPR (“TAP-binding protein-related,” shown here from PDB entry <a href="https://www.rcsb.org/structure/5opi" target="_blank">5opi</a>) binds to MHC I in a similar way as tapasin and checks if the peptide is binding tightly. If the peptide doesn’t pass the test, the protein UGGT (“UDP-glucose:glycoprotein glucosyltransferase,” shown here from PDB ID <a href="https://www.rcsb.org/structure/5mzo" target="_blank">5mzo</a>) adds glucose back to the MHC I glycan, giving the cell the signal to recycle the emptied MHC I back to the endoplasmic reticulum for another try.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="ERAP1 (blue) with a short peptide (magenta) bound inside in the buried active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/280/5ab0_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ERAP1 (blue) with a short peptide (magenta) bound inside in the buried active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/280/5ab0_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Trimming Peptides</h4>
+<div>The TAP transporter delivers a wide range of peptides to the endoplasmic reticulum, from about 8 to 40 amino acids in length. However, MHC I prefers smaller peptides, with about 8 to 10 amino acids. So, two similar enzymes, ERAP1 and ERAP2 (“endoplasmic reticulum aminopeptidase,” with ERAP2 shown here from PDB ID <a href="https://www.rcsb.org/structure/5ab0" target="_blank">5ab0</a>) trim the peptides to the proper size. A recent study of historical human DNA reveals how important this process is. The Black Death, which struck in the Middle Ages, is the single greatest mortality event in recorded history, killing somewhere between a third and half of the human population. A recent study of several hundred DNA extracts from people of the time revealed that individuals with enhanced ERAP2 activity were 40% more likely to survive. This may have been an example of human evolutionary natural selection that occurred in the time of recorded history, leaving a population that for centuries often showed reduced mortality rates in later bubonic plague pandemics.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>MHC I Complexes</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/280/jmol_image-jmol.jpg"/></div>
+<p>By comparing the structures of MHC I bound to a peptide versus MHC I bound to TAPBPR, we can see how TAPBPR proofreads the complex. In the peptide complex (PDB ID <a href="https://www.rcsb.org/structure/1hoc" target="_blank">1hoc</a>), two alpha helices in MHC I tightly flank the peptide, hugging it along its entire length. In two similar structures of the TAPBPR complex (PDB ID <a href="https://www.rcsb.org/structure/5wer" target="_blank">5wer</a> and PDB ID <a href="https://www.rcsb.org/structure/5opi" target="_blank">5opi</a>), however, notice that the alpha helices are slightly separated. Optimal peptides need to bind strongly enough to induce MHC I to shift to the tighter, narrow groove. To explore these structures in more detail, click on the image for an interactive JSmol view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several of the structures shown here do not include transmembrane segments for some of the protein. To understand the portions that are missing, you can view the Group Sequence page for each protein, such as the<a href="https://www.rcsb.org/groups/sequence/polymer_entity/O15533"> page for tapasin.</a></li>
+<li>You can look at a series of structures of TmrAB, a bacterial transporter similar to TAP, to see the many conformations that are needed for transport. For example, take a look at the inward-open conformation in PDB ID <a href="https://www.rcsb.org/structure/6ran" target="_blank">6ran</a> and outward-open conformation in PDB ID <a href="https://www.rcsb.org/structure/6rah" target="_blank">6rah</a>.</li>
+<li>To see how these peptides are recognized by the immune system, visit the Molecule of the Month on <a href="https://pdb101.rcsb.org/motm/63">T-cell receptors.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7qpd: Domnick, A., Winter, C., Susac, L., Hennecke, L., Hensen, M., Zitzmann, N., Trowitzsch, S., Thomas, C., Tampe, R. (2022) Molecular basis of MHC I quality control in the peptide loading complex. Nat Commun 13: 4701-4701</li>
+<li>Klunk, J., Vilgalys, T.P., Demeure, C.E., Cheng, X., Shiratori, M., Madej, J., Beau, R., Elli, D., Patino, M.I., Redfern, R., DeWitte, S.N., Gamble, J.A., Boldsen, J.L., Carmichael, A., Varlik, N., Eaton, K., Grenier, J.C., Golding, G.B., Devault, A., Rouillard, J.M., Yotova, V., Sindeaux, R., Ye, C.J., Bikaran, M., Dumaine, A., Brinkworth, J.F., Missiakas, D., Rouleau, G.A, Steinrucken, M., Pizarro-Cerda, J., Poinar, H.N., Barreiro, L.B. (2022) Evolution of immune genes is associated with the Black Death. Nature 611:312-319</li>
+<li>Trowitzsch, S., Tampe, R. (2020) Multifunctional chaperone and quality control complexes in adaptive immunity. Annu Rev Biophys 49:135-161</li>
+<li>Thomas, C., Tampe, R. (2019) MHC I chaperone complexes shaping immunity. Curr Op Immunol 58:9-15.</li>
+<li>Blees, A., Januliene, D., Hofmann, T., Koller, N., Schmidt, C., Trowitzsch, S., Moeller, A., Tampe, R. (2017) Structure of the human MHC-I peptide-loading complex. Nature 551: 525-528</li>
+<li>5mzo: Roversi, P., Marti, L., Caputo, A.T., Alonzi, D.S., Hill, J.C., Dent, K.C., Kumar, A., Levasseur, M.D., Lia, A., Waksman, T., Basu, S., Soto Albrecht, Y., Qian, K., McIvor, J.P., Lipp, C.B., Siliqi, D., Vasiljevic, S., Mohammed, S., Lukacik, P., Walsh, M.A., Santino, A., Zitzmann, N. (2017) Interdomain conformational flexibility underpins the activity of UGGT, the eukaryotic glycoprotein secretion checkpoint. Proc Natl Acad Sci U S A 114: 8544-8549</li>
+<li>5wer: Jiang, J., Natarajan, K., Boyd, L.F., Morozov, G.I., Mage, M.G., and Margulies, D.H. (2017). Crystal structure of a TAPBPR-MHC I complex reveals the mechanism of peptide editing in antigen presentation. Science 358, 1064-1068</li>
+<li>5opi: Thomas, C., Tampe, R. (2017) Structure of the TAPBPR-MHC I complex defines the mechanism of peptide loading and editing. Science 358: 1060-1064</li>
+<li>5u1d: Oldham, M.L., Grigorieff, N., Chen, J. (2016) Structure of the transporter associated with antigen processing trapped by herpes simplex virus. Elife 5: e21829</li>
+<li>5ab0: Mpakali, A., Giastas, P., Mathioudakis, N., Mavridis, I.M., Saridakis, E., Stratikos, E. (2015) Structural basis for antigenic peptide recognition and processing by Endoplasmic Reticulum (ER) Aminopeptidase 2. J Biol Chem 290: 26021-26032</li>
+<li>1hoc: Young, A.C., Zhang, W., Sacchettini, J.C., Nathenson, S.G. (1994) The three-dimensional structure of H-2Db at 2.4 A resolution: implications for antigen-determinant selection Cell 76: 39-50</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_4">http://doi.org/10.2210/rcsb_pdb/mom_2023_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

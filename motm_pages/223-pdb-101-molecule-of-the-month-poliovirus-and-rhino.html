@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Poliovirus and Rhinovirus</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Poliovirus and Rhinovirus" property="og:title"/>
+<meta content="Crystallographic structures reveal the atomic details of viruses and how to fight them" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/20/picornaviruses.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/20" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Poliovirus and Rhinovirus" name="twitter:title"/>
+<meta content="Crystallographic structures reveal the atomic details of viruses and how to fight them" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/20/picornaviruses.gif" name="twitter:image"/>
+<meta content="Crystallographic structures reveal the atomic details of viruses and how to fight them" name="description"/>
+<meta content="antibody,common cold,foot and mouth disease,icosahedral virus,immunoglobulin,picornavirus,polio,poliovirus,rhinovirus,vaccine,viral capsid,2plv,4rhv,1bbt,4rhv,1dgi,1rvf,1c8m" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 20
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 20 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Poliovirus and Rhinovirus</h1>
+<p><i>Crystallographic structures reveal the atomic details of viruses and how to fight them</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Picornaviruses: poliovirus (top), rhinovirus (center), and foot and mouth disease virus (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/20/picornaviruses.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Picornaviruses: poliovirus (top), rhinovirus (center), and foot and mouth disease virus (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/20/20-PoliovirusandRhinovirus-picornaviruses.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Little RNA Viruses</h4>
+<div>Viruses are biological hijackers. They attack a living cell and force it to make many new viruses, often destroying the cell in the process. Picornaviruses, or "little RNA viruses," are among the most simple viruses. They are composed of a modular protein shell, which seeks out and binds to a target cell surface, surrounding a short piece of RNA, which contains all of the information needed to co-opt the cell's machinery and direct the construction of new viruses. In spite of their simplicity, or perhaps because of it, the picornaviruses are also among the most important viruses for human health and welfare. Three familiar examples are shown here: poliovirus at the top (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2plv" target="_blank">2plv <i class="fa fa-external-link"> </i></a></span>), rhinovirus at the center (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4rhv" target="_blank">4rhv <i class="fa fa-external-link"> </i></a></span>), and the virus that causes foot and mouth disease in livestock at the bottom (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bbt" target="_blank">1bbt <i class="fa fa-external-link"> </i></a></span>). </div>
+<h4>Specialization</h4>
+<div>Poliovirus and rhinovirus have specialized to attack primarily human beings, but they use two different approaches. Poliovirus, which is found in three similar forms, is designed to attack a given person only once. It makes its offspring and then is off to the next person. In most cases, poliovirus causes a simple flu-like disease as it attacks cells in the digestive system. This infection is rapidly cleared up by the immune system. But in about 1 in 100 cases, the virus spreads to the nerve cells that control muscle motion, causing paralysis--polio myelitis--as the nerve cells are infected. <br/><br/> Rhinovirus, on the other hand, is found in many different forms that attack a given person many times during their life. Each time you get a cold, a different form of rhinovirus (or occasionally, a different type of virus) is attacking. Your body learns how to fight it off, but you are still susceptible to the next form. On average, a person will have a new cold once every two years, so most of us are quite familiar with the symptoms of rhinovirus infection in our nose and respiratory tract. Because they are so simple, picornaviruses can be very stable. Rhinovirus can last for days on your hands and still be infectious. And because the virus is shed from infected people all through the period with symptoms and even for days after, it spreads effectively through contact from person to person.</div>
+<h4>Vaccines</h4>
+<div>Antibodies are our major defense against these small, efficient viruses. Vaccines prime the immune system with antibodies, making it ready to fight an infection. In the case of poliovirus, there are two types of vaccines. One is a killed version of the virus, which is slowly killed with formaldehyde over the course of several days so that it is inactivated, but still keeps its proper shape. The second is a weakened, but still live, strain of the virus that has been artificially bred to stimulate the immune system without causing disease. The immune system responds by making antibodies to fight these weakened viruses, leaving it ready to fight the real thing when it comes along. <br/><br/> The polio vaccines are one of the triumphs of modern medicine, but many people would say that the lack of a cure for the common cold is one of the great failings. The difficulty of creating a vaccine for the common cold lies in the diversity of rhinovirus. Over one hundred types of rhinovirus have been discovered as they strike people around the world, and new strains appear continually. Rhinovirus is a moving target that is not effectively combated with a single vaccine. Antiviral drugs, however, are a possible solution.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Rhinovirus capsid with icosahedral symmetry highlighted (top) and a cross section to show the interior (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/20/4rhv-symmetry.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Rhinovirus capsid with icosahedral symmetry highlighted (top) and a cross section to show the interior (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/20/20-PoliovirusandRhinovirus-4rhv-symmetry.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Picornavirus Structure</h4>
+<div>Many viruses, including the picornaviruses and <a href="http://pdb101.rcsb.org/motm/2">bacteriophage phiX174</a>, are icosahedral in shape. They are composed of 60 identical pieces that form a perfectly symmetrical shell, termed a capsid, around the viral genome. In the case of poliovirus and rhinovirus, the shell is composed of 60 copies of four different proteins (colored yellow, orange, red, and magenta on rhinovirus here, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4rhv" target="_blank">4rhv <i class="fa fa-external-link"> </i></a></span>), for a total of 240 protein chains in all. Notice that the fourth chain, colored magenta, can only be seen on the inside surface of the capsid. These proteins are carefully designed to be stable, but not too stable. They must be fairly sturdy to allow the virus to pass from host to host through the hostile environment. But at the same time, they must be able to fall apart when they enter the cell, releasing the RNA inside. A carefully orchestrated set of structural changes occur as the virus attaches to the surface of the cell and is drawn inside, allowing the virus to deliver its RNA into the unwitting host. <br/><br/> The RNA protected inside the capsid is seen only as a blurry tangle in these crystallographic structures and is not shown in these pictures, because it is not as perfectly symmetrical as the many proteins in the shell. The rhinovirus genome, when analyzed by sequencing techniques, contains just enough information to direct the construction of eleven proteins. These include the four separate proteins for its capsid, another four proteins that replicate its RNA, two proteins to clip each of these proteins into the proper shape, and one additional protein with as-yet obscure function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Rhinovirus bound to cell surface receptor (left) and coated with fragments of antibodies (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/20/rhinovirus-biology.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Rhinovirus bound to cell surface receptor (left) and coated with fragments of antibodies (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/20/20-PoliovirusandRhinovirus-rhinovirus-biology.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Antibody Protection</h4>
+<div>Antibodies bind to the surface of picornaviruses and stop them from attacking cells. In the left picture, rhinovirus is bound to a receptor protein on the cell surface, shown in blue (from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dgi" target="_blank">1dgi <i class="fa fa-external-link"> </i></a></span>). Notice that the receptor protein is gripped within a groove that encircles the five-fold symmetrical arrangement of proteins shown in yellow (known as the <i>canyon</i> in the picornavirus literature). Antibodies bind to the surface of rhinovirus and poliovirus in this same position and block their attachment to the surfaces of cells. The right picture shows fragments of antibodies (in light blue) bound to rhinovirus (from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rvf" target="_blank">1rvf <i class="fa fa-external-link"> </i></a></span>). The intact antibodies are much larger than the small fragments seen here, so seven to ten antibodies are enough to form a bulky barrier on each virus to block attachment and infection.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/20/1c8m-rasmol.gif"/></div>
+<div>Many structures of rhinovirus with antiviral drugs are available at the PDB, including the drug pleconaril, currently in clinical testing, shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c8m" target="_blank">1c8m <i class="fa fa-external-link"> </i></a></span>). In this illustration, the drug is shown in spheres, and only four protein chains are shown, instead of the entire capsid. The inside of the virus is towards the bottom of the figure and the deep groove where the cellular receptor and antibodies bind can be seen on the upper side, shown with an arrow. Most drugs act by blocking protein binding sites or destabilizing a key interaction. These drugs, on the other hand, may act differently. They actually stabilize the virus structure so that it cannot release its cargo of RNA. The drugs bind in a little pocket under the deep groove that grabs onto the cellular receptor. Normally, the binding of virus to receptor shifts the structure of the virus, ultimately allowing the virus to release RNA. The drug, however, glues the virus shut. <br/><br/> This illustration was created with RasMol. You can create similar illustrations by clicking on the PDB accession code above and then picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Ronald B. Turner (2001) The treatment of rhinovirus infections: progress and potential. Antiviral Research 49, 1-14.</li>
+<li>Thomas J. Smith and Timothy Baker (1999) Picornaviruses: epitopes, canyons, and pockets. Advances in Virus Research 52, 1-23.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_8">http://doi.org/10.2210/rcsb_pdb/mom_2001_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

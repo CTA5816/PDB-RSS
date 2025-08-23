@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Lactate Dehydrogenase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Lactate Dehydrogenase" property="og:title"/>
+<meta content="Our cells temporarily build lactate when supplies of oxygen are low" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/102/102_3ldh.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/102" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Lactate Dehydrogenase" name="twitter:title"/>
+<meta content="Our cells temporarily build lactate when supplies of oxygen are low" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/102/102_3ldh.jpg" name="twitter:image"/>
+<meta content="Our cells temporarily build lactate when supplies of oxygen are low" name="description"/>
+<meta content="aerobic exercise,anaerobic glycolysis,fermentation,isozymes,L-lactate dehydrogenase activity,oxidation reduction,3ldh,1lth,1cet,1t24,1t25" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 102
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 102 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Lactate Dehydrogenase</h1>
+<p><i>Our cells temporarily build lactate when supplies of oxygen are low</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Lactate dhydrogenase, with NAD in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/102/102_3ldh.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lactate dhydrogenase, with NAD in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/102/102-LactateDehydrogenase-3ldh.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Lactate dehydrogenase is a safety valve in our pipeline of energy production. Most of the time, our cells break down glucose completely, releasing the carbon atoms as carbon dioxide and the hydrogen atoms as water. This requires a lot of oxygen. If the flow of oxygen is not sufficient, however, the pipeline of energy production gets stopped up at the end of <a class="static" href="https://pdb101.rcsb.org/motm/50">glycolysis</a>. Lactate dehydrogenase is the way that cells solve this problem, at least temporarily.</div>
+<h4>Aerobic exercise</h4>
+<div>When we exercise at a normal pace, our cells get plenty of oxygen and sugar is broken down quickly and efficiently. However, during sprints or other over-exertions, there isn't enough oxygen to go around. In this case, our cells use glycolysis as their primary source of energy, As part of glycolysis, hydrogen from glucose is placed on NAD+ to form NADH. Normally, these hydrogen atoms are then transferred to oxygen to form water. If oxygen isn't available, the NADH builds up and there isn't enough NAD+ to continue using glycolysis to make ATP. That's where lactate dehydrogenase steps in: it combines pyruvate and NADH, producing lactic acid and NAD+. The NAD+ can then be recycled to do another round of glycolysis, quickly producing more energy for the sprint. However, lactic acid builds up and in a matter of a minute or so, you have to stop and let your body recover. As you catch your breath, your body converts the lactic acid back to pyruvate, where it enters your normal flow of aerobic energy production.</div>
+<h4>Mix and Match</h4>
+<div>Our cells build two major types of lactate dehydrogenase: the M form and the H form (there is also a third form that is only made in sperm). These are very similar in size and shape, but they have different catalytic properties. The M form, which is the major form in your large skeletal muscles, is best at converting pyruvate to lactate. It stands ready to get to work if the muscles need to perform anaerobic exercise. The H form, on the other hand, is better at the opposite reaction, converting lactate to pyruvate. It is the major form in the heart, which has a constant supply of oxygen and can easily use lactate as an aerobic source of energy. The two types are so similar in structure that they form complexes with a mixture of both types, for instance, with two H chains and two M chains. In this way, different cells can tailor their lactate dehydrogenases to fit their current needs. The molecule shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ldh" target="_blank">3ldh <i class="fa fa-external-link"> </i></a></span>, is the form with four identical M chains.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Active (left) and inactive (right) lactate dehydrogenase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/102/102_1lth.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Active (left) and inactive (right) lactate dehydrogenase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/102/102-LactateDehydrogenase-1lth.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fermentation</h4>
+<div>Some bacteria obtain most of their energy by conversion of glucose into lactose. This process is called fermentation, and you have probably experienced the results of it at the dinner table. Fermenting bacteria are used to convert milk into yogurt and fermented lactic acid is an important part of the sharp flavors of sauerkraut and sourdough bread. The bacterial lactose dehydrogenase shown here is an allosteric enzyme. Binding of fructose 1,6-bisphosphate, one of the molecules formed in the early steps of glycolysis, causes the enzyme to change into an active shape. Remarkably, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lth" target="_blank">1lth <i class="fa fa-external-link"> </i></a></span>, shown here, contains two separate enzyme molecules, one in the active state (left) and one in the inactive state (right).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Lactate Dehydrogenase with Chloroquine (PDB entry 1cet)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/102/102_1cet-rasmol.jpg"/></div>
+<p>The protozoan parasites that cause malaria are thought to rely on glycolysis for most of their energy during part of their cycle of infection. Researchers are now looking for drugs to block the action of lactate dehydrogenase as a way of attacking these parasites and curing the infection. The structure shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cet" target="_blank">1cet <i class="fa fa-external-link"> </i></a></span>) has four molecules of chloroquine bound in the active sites of the lactate dehydrogenase found in the Plasmodium parasite. Chloroquine is one of the major drugs used to treat malaria, however, its major site of action probably isn't at this enzyme; instead, it is thought to block the unusual methods that the parasite must use to feed on blood. But researchers are exploring many other anti-malarial molecules that target lactate dehydrogenase, as seen in other PDB entries such as <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1t24" target="_blank">1t24 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1t25" target="_blank">1t25 <i class="fa fa-external-link"> </i></a></span>, and similar structures. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. L. Nelson and M. M. Cox (2000) Lehninger Principles of Biochemistry. Worth Publishers.</li>
+<li>M. T. Madigan, J. M. Martinko and J. Parker (2000) Brock Biology of Microorganisms. Prentice Hall.</li>
+<li>J. A. Read, K. W. Wilkinson, R. Tranter, R. B. Sessions and R. L. Brady (1999) Chloroquine binds in the cofactor binding site of Plasmodium falciparum lactate dehydrogenase. Journal of Biological Chemistry 274, 10213-10218.</li>
+<li>S. Iwata, K. Kamata, S. Yoshida, T. Minowa and T. Ohta (1994) T and R states in the crystals of bacterial L-lactate dehydrogenase reveal the mechanism for allosteric control. Structure 1, 176-185.</li>
+<li>J. J. Holbrook, A. Liljas, S. J. Steindel and M. G. Rossman (1975) Lactate Dehydrogenase. In "The Enzymes," P. D. Boyer, editor. Academic Press. Volume XI, pages 191-292.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_6">http://doi.org/10.2210/rcsb_pdb/mom_2008_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

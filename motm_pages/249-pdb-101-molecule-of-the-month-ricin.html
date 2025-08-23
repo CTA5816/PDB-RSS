@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ricin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ricin" property="og:title"/>
+<meta content="The structure of ricin reveals how it kills cells and how vaccines can produce immunity against ricin poisoning" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_2aai.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/161" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ricin" name="twitter:title"/>
+<meta content="The structure of ricin reveals how it kills cells and how vaccines can produce immunity against ricin poisoning" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_2aai.jpg" name="twitter:image"/>
+<meta content="The structure of ricin reveals how it kills cells and how vaccines can produce immunity against ricin poisoning" name="description"/>
+<meta content="bioterrorism,ribosome depurination,toxin,2aai,3u5d,3u5e,1igt,3srp,4imv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 161
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 161 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ricin</h1>
+<p><i>The structure of ricin reveals how it kills cells and how vaccines can produce immunity against ricin poisoning</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Ricin is one of the most deadly toxins that has been discovered. A single molecule can kill an entire cell. It's also a very common toxin. It's made by the castor bean plant, which can be found in gardens and wild areas around the world and is widely grown for the oil it produces. The seeds are laced with the toxin: about 8 beans can provide a lethal dose.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ricin with cell-targeting B chain in blue and the toxic A chain in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_2aai.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ricin with cell-targeting B chain in blue and the toxic A chain in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_2aai.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nefarious Purposes</h4>
+<div>Ricin has been classified by the Centers for Disease Control and Prevention (CDC) as a serious threat for use as a weapon in biological warfare and bioterrorism. It is easily purified in large quantities from castor beans, but fortunately, it is difficult to deliver in a form that would be deadly to large groups of people. It has been used, however, in more targeted attacks. In a classic spy-thriller attack, a small metal pellet containing ricin, delivered with a poison dart fired from an umbrella, was used to kill a diplomat in London in 1978. More recently, ricin powder was found in mail addressed to senators and the White House. This is dangerous, because inhalation of fine ricin powder can be deadly.</div>
+<h4>Two-Part Toxin</h4>
+<div>Ricin uses an effective strategy shared by many bacterial and plant toxins, as described in the previous <a href="https://pdb101.rcsb.org/motm/69">Molecule of the Month on cholera toxin.</a> It is composed of two chains, as shown here from PDB entry <span class="rcsb_id_tag" title="Ricin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2aai" target="_blank">2aai <i class="fa fa-external-link"> </i></a></span>, each with a specific job. The "B" chain (in blue) is the targeting mechanism, and the "A" chain (in red) is the toxic portion. When a person is poisoned, millions of the molecules of ricin bind to carbohydrates on the surface of the cell and chaperone the toxin inside. Most of these never make it to the cytoplasm, but one is enough. A disulfide linkage between the chains (shown here in yellow) is broken, and the A chain travels through the cytoplasm, inactivating 1500 ribosomes per minute and ultimately killing the cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Attacking Ribosomes</h4>
+<div>Ricin attacks the Achilles heel of the ribosome: a loop, termed the sarcin/ricin loop, that is essential for interaction with the elongation factors. Ricin clips off a single adenine base at the tip of this loop, which is enough to inactivate the ribosome permanently. This is why ricin is so incredibly toxic: it can hop from ribosome to ribosome, destroying each one in turn, until there are no active ones left in the cell. The large subunit of the yeast ribosome is shown here (PDB entries <span class="rcsb_id_tag" title="Yeast Ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3u5d" target="_blank">3u5d <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Yeast Ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3u5e" target="_blank">3u5e <i class="fa fa-external-link"> </i></a></span>), with the sarcin/ricin loop in yellow and the targeted adenine in red.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Large subunit of the ribosome, showing the site attacked by ricin in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_3u5d_3u5e.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Large subunit of the ribosome, showing the site attacked by ricin in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_3u5d_3u5e.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Ricin to the Rescue</h4>
+<div>Ricin is deadly, but if used properly, it can also have beneficial effects. For instance, researchers have created a new type of therapeutic molecule termed an immunotoxin, which combines the targeting ability of an antibody (shown in yellow, modified from PDB entry <span class="rcsb_id_tag" title="Antibody"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1igt" target="_blank">1igt <i class="fa fa-external-link"> </i></a></span>) with the toxicity of the ricin A chain (shown in red). The antibody is chosen to bind specifically to cancer cells, delivering the toxic directly to the pathological cells that we want to destroy.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_immunotoxin.jpg"/>
+<div class="img-caption"><a href="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_immunotoxin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ricin Vaccines (entries 2aai, 3srp and 4imv)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/161/161-Ricin_2aai_4imv_jmol.jpg"/></div>
+<p>Since ricin poses a threat to our safety, researchers are working to develop methods to protect us from the toxin. The molecule shown here is an experimental vaccine that is designed to produce immunity against ricin. The vaccine is built from ricin, but with a few changes to make it less toxic. Hopefully, this type of vaccine will be used to protect people who are particularly at risk, such as the military or first responders. To compare two of these experimental vaccines (PDB entries <span class="rcsb_id_tag" title="Ricin Vaccine"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3srp" target="_blank">3srp <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Ricin Vaccine"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4imv" target="_blank">4imv <i class="fa fa-external-link"> </i></a></span>) with the active toxin, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers are looking for small molecule inhibitors that bind in the active site of ricin and block its action. You can find several examples of these in the PDB.</li>
+<li>Ricin is a glycoprotein, with several carbohydrate chains on its surface, and it is stabilized by several disulfide linkages. You can view these structural features in PDB entry <span class="rcsb_id_tag" title="Ricin">2aai</span>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. B. Reisler &amp; L. A. Smith (2012) The need for continued development of ricin countermeasures. Advances in Preventive Medicine DOI 10.1155/2012/149737.</li>
+<li>F. Musshoff &amp; B. Madea (2009) Ricin poisoning and forensic toxicology. Drug Testing and Analysis DOI 10.1002/dta.27.</li>
+<li>R. J. Kreitman (2006) Immunotoxins for targeted cancer therapy. AAPS Journal 8, E532- E551.</li>
+<li>J. Audi, M. Belson, M. Patel, J. Schier &amp; J. Osterloh (2005) Ricin poisoning, a comprehensive review. Journal of the American Medical Association 294, 2342-2351.</li>
+<li>J. M. Lord, L. M. Roberts &amp; J. D. Robertus (1994) Ricin: structure, mode of action, and some current applications. FASEB Journal 8, 201-208.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_5">http://doi.org/10.2210/rcsb_pdb/mom_2013_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

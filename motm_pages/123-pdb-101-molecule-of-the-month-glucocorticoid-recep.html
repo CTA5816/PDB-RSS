@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glucocorticoid Receptor and Dexamethasone</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glucocorticoid Receptor and Dexamethasone" property="og:title"/>
+<meta content="An anti-inflammatory drug has given us a new way to fight the COVID-19 pandemic." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-1m2z_1glu.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/258" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glucocorticoid Receptor and Dexamethasone" name="twitter:title"/>
+<meta content="An anti-inflammatory drug has given us a new way to fight the COVID-19 pandemic." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-1m2z_1glu.jpg" name="twitter:image"/>
+<meta content="An anti-inflammatory drug has given us a new way to fight the COVID-19 pandemic." name="description"/>
+<meta content="Coronavirus,Wuhan,anti-inflammatory drug,inflammation,glucocorticoids,glucocorticoid receptor,1M2Z,6XK0,1GLU,4P6X,COVID-19" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 258
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 258 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glucocorticoid Receptor and Dexamethasone</h1>
+<p><i>An anti-inflammatory drug has given us a new way to fight the COVID-19 pandemic.</i></p>
+<div>
+<div><i>This article was written and illustrated by Jenna Abyad, Tanvi Banota, Zachary Fritz and Alexandria Lo as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021. </i></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glucocorticoid receptor in green, with ligand-binding domain (top; PDB:1m2z) and DNA-binding domain (bottom; PDB:1glu), co-activators in salmon, and DNA in purple. The flexible linker of the protein is not included in the structures and is represented schematically with dots. Dexamethasone, shown in a magnified view, is hidden within the glucocorticoid receptor and is similar in structure to cortisol. Ligand atoms are colored with carbon in gray, oxygen in red, and fluorine in green. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-1m2z_1glu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glucocorticoid receptor in green, with ligand-binding domain (top; PDB:<a href="https://www.rcsb.org/structure/1m2z" target="_blank">1m2z</a>) and DNA-binding domain (bottom; PDB:<a href="https://www.rcsb.org/structure/1glu" target="_blank">1glu</a>), co-activators in salmon, and DNA in purple. The flexible linker of the protein is not included in the structures and is represented schematically with dots. Dexamethasone, shown in a magnified view, is hidden within the glucocorticoid receptor and is similar in structure to cortisol. Ligand atoms are colored with carbon in gray, oxygen in red, and fluorine in green. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-1m2z_1glu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fight Against COVID-19</h4>
+<div>Glucocorticoid drugs have been widely prescribed for the treatment of inflammatory and autoimmune diseases and have recently been used to treat critically ill COVID-19 patients. COVID-19 progresses swiftly from symptoms like fever and shortness of breath to severe complications like multiple organ failure. Critically ill patients experience a “cytokine storm,” where the body is no longer able to limit the inflammatory response to the coronavirus, and the aberrant production of cytokines (molecular messengers of inflammation) triggers further complications. Clinical trials have shown that the administration of low dose dexamethasone, a potent anti-inflammatory drug that binds to the glucocorticoid receptor, has been effective in reducing mortality rates in hospitalized COVID-19 patients.</div>
+<h4>Receptor on the Move</h4>
+<div>Along with the <a href="https://pdb101.rcsb.org/motm/45">estrogen receptor</a>, the glucocorticoid receptor belongs to the nuclear receptor family. It consists of three parts: a ligand-binding domain, a DNA-binding domain, and a transactivation domain. The most abundant ligand for this receptor in humans is cortisol, a stress hormone. When the receptor binds to cortisol, the receptor changes conformation and migrates from the cytoplasm to the nucleus. In the nucleus, it can bind to target DNA sequences to influence gene expression. Glucocorticoid receptor can also interact with coactivators to further regulate the gene expression machinery. Since the receptor is composed of several domains connected by flexible linkers, structures of the domains have been determined separately. The ligand-binding domain bound to dexamethasone is shown from PDB ID <a href="https://www.rcsb.org/structure/1m2z" target="_blank">1m2z</a> and the DNA-binding domain bound to DNA is shown from PDB ID <a href="https://www.rcsb.org/structure/1glu" target="_blank">1glu</a>. The transactivation domain is not shown here. All these domains work together to relay the initial message triggered by the binding of cortisol.</div>
+<h4>Too Much Inflammation</h4>
+<div>The structure of the drug dexamethasone is very similar to that of natural cortisol. This allows dexamethasone to bind snugly within the glucocorticoid receptor and similarly trigger changes in gene expression that resolve inflammation in the body. This activity makes dexamethasone particularly effective in treating COVID-19, as the damage caused by the coronavirus is not only due to the virus itself, but also from uncontrolled inflammation. However, the anti-inflammatory effects of dexamethasone can be harmful if the drug is administered in the wrong context or at the wrong time. In the early stages of COVID-19, the body must be capable of mobilizing the immune system to fight off the virus, and treatment of early, non-severe COVID-19 with dexamethasone may inadvertently lead to a worse outcome for the patient.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Equine serum albumin with bound dexamethasone in blue (PDB:6xk0). Equine and human (PDB: 4k2c) serum albumins are highly similar, with a sequence identity of 76.1% and root-mean-square deviation (RMSD) of 1.65 Å." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-6xk0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Equine serum albumin with bound dexamethasone in blue (PDB:<a href="https://www.rcsb.org/structure/6xk0" target="_blank">6xk0</a>). Equine and human (PDB: <a href="https://www.rcsb.org/structure/4k2c" target="_blank">4k2c</a>) serum albumins are highly similar, with a sequence identity of 76.1% and root-mean-square deviation (RMSD) of 1.65 Å.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-6xk0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>DEX Dosing: It’s Complicated</h4>
+<div>Like many other drugs and hormones, dexamethasone is transported throughout the body by <a href="https://pdb101.rcsb.org/motm/37">serum albumin</a>, the most plentiful protein found in blood plasma. However, factors related to this protein can complicate the safe and effective administration of dexamethasone when treating COVID-19-associated inflammation. In diabetic patients, for example, a critical amino acid in the protein is frequently bonded to a sugar molecule through a process known as glycation, which can prevent the drug from binding to the protein. Common pain relievers like ibuprofen, and other drugs, can also compete for the same binding site on serum albumin if taken at the same time, hindering dexamethasone transport. Additionally, COVID-19 risk factors such as liver disease, malnutrition, advanced age, or even the virus itself can lower a patient’s serum albumin levels. These complications make it hard for physicians to estimate the relative levels of free and bound dexamethasone in the blood, and can potentially lead to increased drug toxicity, side effects, or loss of drug efficacy.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Two Ligands, One Receptor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/258/258-Glucocorticoid_Receptor_and_Dexamethasone-JSmol.jpg"/></div>
+<p>Two structures capture the ligand-binding domain of the glucocorticoid receptor bound to dexamethasone (left; PDB <a href="https://www.rcsb.org/structure/1m2z" target="_blank">1m2z</a>) and cortisol (right; PDB <a href="https://www.rcsb.org/structure/4p6x" target="_blank">4p6x</a>). These ligands are very similar in structure and bind in the same pocket in the glucocorticoid receptor. The ligands are shown in space-filling atomic coloring and the glucocorticoid receptor shown in a green ribbon model. To explore these structures further, click on the interactive JSmol tab.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>See the <a href="https://pdb101.rcsb.org/motm/128">Molecule of the Month on Interferons</a> for an example of a cytokine that is produced in response to viral infection.</li>
+<li>To learn more about the structural biology of coronaviruses, check out these <a href="https://pdb101.rcsb.org/browse/coronavirus">PDB-101 coronavirus resources.</a></li>
+<li>To learn more about recommended medication guidelines for treatment of COVID-19, visit the <a href="https://www.covid19treatmentguidelines.nih.gov/">NIH Treatment Guidelines.</a> You can also visit the <a href="https://pdb101.rcsb.org/teach/covid-19">PDB-101 <i>COVID-19 in Molecular Detail</i> Curriculum Modules.</a> </li>
+<li>To learn more about other nuclear receptors like the glucocorticoid receptor, check out the Molecule of the Month on <a href="https://pdb101.rcsb.org/motm/45">estrogen receptor</a> and <a href="https://pdb101.rcsb.org/motm/155">vitamin D receptor</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6xk0: Shabalin, I.G., Czub, M.P., Majorek, K.A., Brzezinski, D., Grabowski, M., Cooper, D.R., Panasiuk, M., Chruszcz, M., Minor, W. (2020) Molecular determinants of vascular transport of dexamethasone in COVID-19 therapy. IUCrJ 7: 1048-1058.</li>
+<li>4p6x: He, Y., Yi, W., Suino-Powell, K., Zhou, X.E., Tolbert, W.D., Tang, X., Yang, J., Yang, H., Shi, J., Hou, L., Jiang, H., Melcher, L., Xu, H.E. (2014) Structures and mechanism for the design of highly potent glucocorticoids. Cell Res. 24: 713-726. </li>
+<li>1glu: Luisi, B.F., Xu, W.X., Otwinoswki, Z., Freedman, L.P., Yamamoto, K.R., Sigler, P.B. (1991) Crystallographic analysis of the interaction of the glucocorticoid receptor with DNA. Nature 352: 497-505. </li>
+<li>4k2c: Wang, Y., Yu, H., Shi, X., Luo, Z., Lin, D., Huang, M. (2013) Structural mechanism of ring-opening reaction of glucose by human serum albumin. J Biol Chem 288: 15980-15987.</li>
+<li>1m2z: Bledsoe, R.B., Montana, V.G., Stanley, T.B., Delves, C.J., Apolito, C. J., Mckee, D.D., Consler, T.G., Parks, D.J., Stewart, E.L., Wilson, T.M., Lambert, M.H., Moore, J.T., Pearce, K.H., Xu, H.E. (2002) Cell 110: 93-105. </li>
+<li>Vandevyer, S., Dejager, L., Libert, C. (2014) Comprehensive Overview of the Structure and Regulation of the Glucocorticoid Receptor. Endocrine Rev 35(4): 671-693.</li>
+<li>Oakley, R.H., Cidlowski, J.A. (2013) The biology of the glucocorticoid receptor: New signaling mechanisms in health and disease. J Allergy Clin Immunol 132(5): 1033-44. </li>
+<li>Busillo, J.M., Cidlowski, J.A. (2013) The five Rs of glucocorticoid action during inflammation: ready, reinforce, repress, resolve, and restore. Trends Endocrinol Metab 24(3): 109-119.</li>
+<li>Chatterjee, K., Wu, C.P., Bhardwaj, A., &amp; Siuba, M. (2020) Steroids in COVID-19: An overview. Cleve Clinic J Med. doi: 10.3949/ccjm.87a.ccc05. Epub ahead of print.</li>
+<li>Jenkins, B.D., Pullen, C.B., Darimont, B.D. (2001) Novel glucocorticoid receptor coactivator effector mechanisms. Trends Endocrinol Metab. 12(3):122-126.</li>
+<li>Bledsoe, R.B., Montana, V.G., Stanley, T.B., Delves, C.J., Apolito, C. J., Mckee, D.D., Consler, T.G., Parks, D.J., Stewart, E.L., Wilson, T.M., Lambert, M.H., Moore, J.T., Pearce, K.H., Xu, H.E. (2002) Cell 110: 93-105.</li>
+<li>He, Y., Yi, W., Suino-Powell, K., Zhou, X.E., Tolbert, W.D., Tang, X., Yang, J., Yang, H., Shi, J., Hou, L., Jiang, H., Melcher, L., Xu, H.E. (2014) Structures and mechanism for the design of highly potent glucocorticoids. Cell Res. 24: 713-726.</li>
+<li>Luisi, B.F., Xu, W.X., Otwinoswki, Z., Freedman, L.P., Yamamoto, K.R., Sigler, P.B. (1991) Crystallographic analysis of the interaction of the glucocorticoid receptor with DNA. Nature 352: 497-505.</li>
+<li>Shabalin, I.G., Czub, M.P., Majorek, K.A., Brzezinski, D., Grabowski, M., Cooper, D.R., Panasiuk, M., Chruszcz, M., Minor, W. (2020) Molecular determinants of vascular transport of dexamethasone in COVID-19 therapy. IUCrJ 7: 1048-1058.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2021, Jenna Abyad, Tanvi Banota, Zachary Fritz, Alexandria Lo, David Goodsell, and Stephen Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_6">http://doi.org/10.2210/rcsb_pdb/mom_2021_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

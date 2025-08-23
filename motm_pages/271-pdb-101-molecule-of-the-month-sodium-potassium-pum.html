@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Sodium-Potassium Pump</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Sodium-Potassium Pump" property="og:title"/>
+<meta content="Cells continually pump sodium ions out and potassium ions in, powered by ATP" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/118/2zxe_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/118" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Sodium-Potassium Pump" name="twitter:title"/>
+<meta content="Cells continually pump sodium ions out and potassium ions in, powered by ATP" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/118/2zxe_composite.jpg" name="twitter:image"/>
+<meta content="Cells continually pump sodium ions out and potassium ions in, powered by ATP" name="description"/>
+<meta content="cardiotonic agents,cation transport,ion pumps,ion transport,membrane potentials,sodium-potassium-exchanging ATPase,2zxe,3b8e,3a3y,2zxe,1su4,3b8c,3ixz" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 118
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 118 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Sodium-Potassium Pump</h1>
+<p><i>Cells continually pump sodium ions out and potassium ions in, powered by ATP</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Sodium-potassium pump with potassium ions (green) in the transport sites and a phosphate analogue (yellow) in the ATP-binding site. The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/118/2zxe_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Sodium-potassium pump with potassium ions (green) in the transport sites and a phosphate analogue (yellow) in the ATP-binding site. The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/118/118-SodiumPotassiumPump_2zxe_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our bodies use a lot of energy. ATP (adenosine triphosphate) is one of the major currencies of energy in our cells; it is continually used and rebuilt throughout the day. Amazingly, if you add up the amount of ATP that is built each day, it would roughly equal the weight of your entire body. This ATP is spent in many ways: to power muscles, to make sure that enzymes perform the proper reactions, to heat your body. The lion's share, however, goes to the protein pictured here: roughly a third of the ATP made by our cells is spent to power the sodium-potassium pump.</div>
+<h4>Pumping Ions</h4>
+<div>The sodium-potassium pump (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zxe" target="_blank">2zxe <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3b8e" target="_blank">3b8e <i class="fa fa-external-link"> </i></a></span>) is found in our cellular membranes, where it is in charge of generating a gradient of ions. It continually pumps sodium ions out of the cell and potassium ions into the cell, powered by ATP. For each ATP that is broken down, it moves 3 sodium ions out and 2 potassium ions in. As the cell is depleted of sodium, this creates an electrical gradient and a concentration gradient, both of which are put to use for many tasks.</div>
+<h4>Amazing Gradients</h4>
+<div>The most spectacular use of this gradient is in the transmission of nerve signals. Our nerve axons deplete themselves of sodium ions, then use special voltage-gated sodium channels to allow the ions to rush back in during a nerve impulse. The sodium-potassium pump has the job of keeping the axon ready for the next signal. The gradient also helps control the osmotic pressure inside cells, and powers a variety of other pumps that link the flow of sodium ions with the transport of other molecules, such as calcium ions or glucose.</div>
+<h4>Medicine for the Heart</h4>
+<div>A traditional cure for heart failure works by blocking the sodium-potassium pump. Plant toxins like digitalis and ouabain (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3a3y" target="_blank">3a3y <i class="fa fa-external-link"> </i></a></span>) and similar toxins from poisonous toads, collectively known as cardiotonic steroids, can be used in small doses to slow the pumping of ions. As the level of sodium ions builds up inside the cell, this slows the sodium-calcium exchanger, leading to a build up of calcium, which ultimately increases the force of contraction of the heart muscle. Recent research has revealed that our own cells make molecules similar to these toxins, but only in low concentrations to regulate the action of our sodium-potassium pumps.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Several types of ion pumps powered by ATP." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/118/2zxe_1su4_3b8c.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Several types of ion pumps powered by ATP.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/118/118-SodiumPotassiumPump_2zxe_1su4_3b8c.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>P-type Pumps</h4>
+<div>The sodium-potassium pump (shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zxe" target="_blank">2zxe <i class="fa fa-external-link"> </i></a></span>) is one of a large class of P-type ATPase pumps, so called because they all incorporate a phosphate-linked intermediate in their mechanism. Several other examples are currently available in the PDB. Many structures of the <a class="static" href="https://pdb101.rcsb.org/motm/51"> calcium pump</a> are available (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1su4" target="_blank">1su4 <i class="fa fa-external-link"> </i></a></span> is pictured here), showing how these pumps undergo large conformational changes through the pumping cycle. Other examples include the proton pump found in plant cell membranes (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3b8c" target="_blank">3b8c <i class="fa fa-external-link"> </i></a></span>), and a proton-potassium pump that acidifies the stomach (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ixz" target="_blank">3ixz <i class="fa fa-external-link"> </i></a></span>, not shown here). The proton pump and the calcium pump are each composed of a single chain, whereas the pumps that transport potassium typically have a second smaller chain, shown here in turquoise. The structure of the sodium-potassium pump also has a third regulatory chain, shown here in purple.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Sodium-Potassium Pump (PDB entry 2zxe)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/118/2zxe_jmol.jpg"/></div>
+<p>The sodium-potassium pump (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zxe" target="_blank">2zxe <i class="fa fa-external-link"> </i></a></span>) is a protein machine with many moving parts. The helices that run through the membrane contain the binding sites for the sodium ions and potassium ions, and the large lobes that stick into the cytoplasm contain the machinery for linking the cleavage of ATP to the pumping cycle. The typical cycle occurs in several steps. First, the pump binds ATP and three sodium ions from the cytoplasm. The ATP then phosphorylates the pump and it shifts in shape, creating an opening towards the outside of the cell. The sodium is released and two potassium ions are picked up. Finally, the phosphate is cleaved off and the pump shifts back, releasing the potassium inside the cell. The structure shown here has captured the pump in the middle of the cycle, when the pump has just picked up its payload of potassium ions. The two potassium ions (shown here in green) are surrounded on all sides by oxygen atoms from the protein. Click on the image above for an interactive JSmol view of this interaction.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The sodium-potassium pump is able to distinguish sodium ions from potassium ions. How might a protein distinguish between these two ions, or between other types of ions?</li>
+<li>The portion of the sodium-potassium pump that crosses the membrane is composed of a bundle of alpha helices. Many other membrane-bound proteins have similar bundles of alpha helices. Can you find other examples in the PDB, and why is this a particularly effective approach for building membrane-bound proteins?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. Y. Bagrov, J. I. Shapiro, and O. V. Fedrova (2009) Endogenous cardiotonic steroids: physiology, pharmacology, and novel therapeutic targets. Pharmacological Reviews 61, 9-38.</li>
+<li>L. D. Faller (2008) Mechanistic studies of sodium pump. Archives of Biochemistry and Biophysics 476, 12-21.</li>
+<li>I. Prassas and E. P. Diamandis (2008) Novel therapeutic applications of cardiac glycosides. Nature Reviews Drug Discovery 7, 926-935.</li>
+<li>M. J. Buono and F. W. Kolkhorst (2001) Estimating ATP resynthesis during a marathon run: a method to introduce metabolism. Advances in Physiology Education 25, 70-71. (Calculation of the amount of ATP used each day.)</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_10">http://doi.org/10.2210/rcsb_pdb/mom_2009_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

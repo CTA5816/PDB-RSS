@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Anaphase-Promoting Complex / Cyclosome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Anaphase-Promoting Complex / Cyclosome" property="og:title"/>
+<meta content="APC/C guards the checkpoints that regulate key steps in the cell cycle" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/279/5a31_label.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/279" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Anaphase-Promoting Complex / Cyclosome" name="twitter:title"/>
+<meta content="APC/C guards the checkpoints that regulate key steps in the cell cycle" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/279/5a31_label.jpg" name="twitter:image"/>
+<meta content="APC/C guards the checkpoints that regulate key steps in the cell cycle" name="description"/>
+<meta content="anaphase-promoting complex,APC/C,cell cycle,cyclins,checkpoint regulation,cancer,ubiquitination,E3 ubiquitin ligase,protein degradation,metaphase,5G05,5G04,7QE7,4N14" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 279
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 279 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Anaphase-Promoting Complex / Cyclosome</h1>
+<p><i>APC/C guards the checkpoints that regulate key steps in the cell cycle</i></p>
+<div>
+<div><i>This article was written and illustrated by Zara Bukhari, Eduardo Chaparro-Barriera, Casey H. Greenberg and Verna Van as part of a <a href="https://iqb.rutgers.edu/node/263">week-long boot camp</a> for undergraduate and graduate students hosted by the Rutgers Institute for Quantitative Biomedicine. The article is presented as part of the 2023-2024 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="APC/C, with three functional regions in different shades of blue, is bound to adapter protein Cdh1 (orange), the degron portion of a target protein (magenta), and an E2 ubiquitin-conjugating enzyme (red). The approximate location of ubiquitin (Ub), which is bound to the E2 enzyme but is disordered in this cryo-EM structure, is shown schematically. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/279/5a31_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>APC/C, with three functional regions in different shades of blue, is bound to adapter protein Cdh1 (orange), the degron portion of a target protein (magenta), and an E2 ubiquitin-conjugating enzyme (red). The approximate location of ubiquitin (Ub), which is bound to the E2 enzyme but is disordered in this cryo-EM structure, is shown schematically. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/279/5a31_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As cells grow and divide, they must pass through several checkpoints to ensure that new cells are true copies of the original. Cells that fail to pass a checkpoint often undergo apoptosis (or programmed cell death) to prevent them from dividing and passing on deleterious mutations. Many different proteins guard the checkpoints so that the cell cycle runs smoothly. However, when these proteins malfunction and a cell skips a checkpoint, it can grow uncontrollably and become cancerous.</div>
+<h4>Marked for Destruction</h4>
+<div>Anaphase-promoting complex / cyclosome (APC/C) is a central gatekeeper of the cell cycle. Although its name suggests that it promotes “anaphase” - a specific step in the cell cycle - APC/C is a large protein complex that monitors many stages of the cell cycle. It helps in removing regulatory proteins, allowing cells to move from one step to the next. These regulatory proteins include <a href="https://pdb101.rcsb.org/motm/236">cyclins</a>, which trigger each phase of the cell cycle, and proteins that control the mechanics of critical cell cycle tasks such as DNA replication and chromosome separation. As each cell cycle phase nears completion, APC/C binds to the regulatory proteins and attaches <a href="https://pdb101.rcsb.org/motm/60">ubiquitin</a> to them, targeting them for degradation by <a href="https://pdb101.rcsb.org/motm/166">proteasomes</a>.</div>
+<h4>APC/C in Action</h4>
+<div>APC/C is an <a href="https://pdb101.rcsb.org/motm/60">E3 ubiquitin ligase</a>, and like other E3 enzymes, it acts as a scaffold that brings together multiple proteins. The APC/C has three functional regions - the “TPR lobe” (named after the distinctive “tetratricopeptide repeat” folding pattern of several of its proteins), the platform region, and the catalytic subunit. The TPR lobe positions two different adapter proteins, Cdh1 and Cdc20, at different times in the cell cycle to specifically recognize the target protein destined for degradation. The target proteins contain a characteristic “degron” sequence recognized by the adapter protein. The structure of APC/C in PDB ID <a href="https://www.rcsb.org/structure/5a31" target="_blank">5a31</a> shows the adapter protein Cdh1 and a peptide representing the degron sequence of the target protein. The platform region of APC/C positions the catalytic module optimally relative to the degrons, and regulates the binding of Cdc20 to the TPR lobe. Finally, the catalytic module of APC/C binds the E2 ubiquitin-conjugating enzyme that delivers ubiquitin, and catalyses the transfer of ubiquitin from E2 to the target protein. The ubiquitination reaction may be repeated many times to attach a linked chain of multiple ubiquitins to the target protein.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complex of APC/C with adapter protein Cdc20 (yellow) and a degron peptide (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/279/5g04_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of APC/C with adapter protein Cdc20 (yellow) and a degron peptide (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/279/5g04_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cancer Connections</h4>
+<div>The other APC/C adaptor protein Cdc20 (shown here from PDB ID <a href="https://www.rcsb.org/structure/5g04" target="_blank">5g04</a>) helps monitor the anaphase stage of the cell cycle. Cdc20 binds to APC/C early in the process of cell division and triggers a pathway that degrades the protein holding replicated chromosomes together, allowing the chromosomes to separate into the two daughter cells. However, Cdc20 overexpression allows this phase to occur even without proper alignment, possibly creating cells with damaged chromosomes. This type of genomic instability can help generate abnormal growth characteristics often found in cancerous cells. Overexpression of Cdc20 has long been associated with a multitude of different cancers. Because of its central role in cancer biology, APC/C and its adapters are attractive targets for the development of anticancer therapies.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cdc20 Complexes</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/279/Cdc20_jmol-jmol.jpg"/></div>
+<p>The small molecule inhibitor Apcin, named for “APC inhibitor,” is currently being evaluated as a potential treatment for cancer. It binds to Cdc20 in the site that recognizes degrons, thus blocking recognition of the target protein by APC/C. The structure of apcin bound to Cdc20 is shown in PDB entry <a href="https://www.rcsb.org/structure/4n14" target="_blank">4n14</a>, and compared to the degron complex in PDB entry PDB entry <a href="https://www.rcsb.org/structure/5g04" target="_blank">5g04</a>. Click on the image for an interactive JSmol to see how this small drug blocks the function of the large APC/C.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>APC/C binds to many regulatory proteins over the course of the cell cycle. For example, you can explore the complex of APC/C with the mitotic checkpoint complex in PDB ID <a href="https://www.rcsb.org/structure/5lcw" target="_blank">5lcw</a>.</li>
+<li>As you’re exploring the structure, notice that Cdc20 has a distinctive 7-bladed beta propeller fold. You can explore other proteins with this fold using the <a href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_polymer_instance_annotation.annotation_lineage.id%22%2C%22operator%22%3A%22exact_match%22%2C%22value%22%3A%222.130%22%7D%7D%2C%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_polymer_instance_annotation.type%22%2C%22operator%22%3A%22exact_match%22%2C%22value%22%3A%22CATH%22%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22nested-attribute%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22972c7d4e5d4011117570282e1503804c%22%7D%7D">“Browse by Annotation” function for “CATH” classifications. </a> </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Bhuniya, R., Yuan, X., Bai, L., Howie, K. L., Wang, R., Li, W., Park, F., Yang, C.-Y. (2022) Design, synthesis, and biological evaluation of Apcin-based CDC20 inhibitors. ACS Med Chem Lett 13: 188–195</li>
+<li>Bruno, S., Ghelli Luserna di Rorà, A., Napolitano, R., Soverini, S., Martinelli, G., Simonetti, G. (2022) CDC20 in and out of mitosis: a prognostic factor and therapeutic target in hematological malignancies. J Exp Clin Cancer Res 41: 159 </li>
+<li>Schrock, M. S., Stromberg, B. R., Scarberry, L., Summers, M. K. (2020) APC/C ubiquitin ligase: Functions and mechanisms in tumorigenesis. Seminars in Cancer Biology 67: 80–91</li>
+<li>5g04: Zhang, S., Chang, L., Alfieri, C., Zhang, Z., Yang, J., Maslen, S., Skehel, M., Barford, D. (2016) Molecular Mechanism of Apc/C Activation by Mitotic Phosphorylation. Nature 533: 260-264</li>
+<li>5a31: Chang, L., Zhang, Z., Yang, J., Mclaughlin, S.H., Barford, D. (2015) Atomic Structure of the Apc/C and its Mechanism of Protein Ubiquitination. Nature 522: 450-454</li>
+<li>4n14: Luo, X., Tian, W., Yu, H. (2014) Synergistic blockade of mitotic exit by two chemical inhibitors of the APC/C. Nature 514: 646-649</li>
+<li>Sackton, K., Dimova, N., Zeng, X., Tian, W., Zhang, M., Sackton, T. B., Meaders, J., Pfaff, K. L., Sigoillot, F., Yu, H., Luo, X., King, R. W. (2014) Synergistic blockade of mitotic exit by two chemical inhibitors of the APC/C. Nature 514: 646–649</li>
+<li>Pesin, J. A., Orr-Weaver, T. L. (2008) Regulation of APC/C Activators in Mitosis and Meiosis. Annu Rev Cell Dev Biol 24: 475–499.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2023, Zara Bukhari, Eduardo Chaparro-Barriera, Casey H. Greenberg, Verna Van, David S. Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_3">http://doi.org/10.2210/rcsb_pdb/mom_2023_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

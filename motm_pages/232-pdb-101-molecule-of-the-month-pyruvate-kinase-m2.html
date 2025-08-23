@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Pyruvate Kinase M2</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Pyruvate Kinase M2" property="og:title"/>
+<meta content="Pyruvate kinases are the paradoxical gatekeepers for cancer cell metabolism and growth." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/270/4fxf_twoview.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/270" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Pyruvate Kinase M2" name="twitter:title"/>
+<meta content="Pyruvate kinases are the paradoxical gatekeepers for cancer cell metabolism and growth." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/270/4fxf_twoview.jpg" name="twitter:image"/>
+<meta content="Pyruvate kinases are the paradoxical gatekeepers for cancer cell metabolism and growth." name="description"/>
+<meta content="Cancer,cancer therapy,Metabolism,Glycolysis,Pyruvate Kinase,PKM1,PKM2,FBP,Allosteric Enzyme,Regulation,4FXF,6WP3,6GG3,3ME3" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 270
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 270 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Pyruvate Kinase M2</h1>
+<p><i>Pyruvate kinases are the paradoxical gatekeepers for cancer cell metabolism and growth.</i></p>
+<div>
+<div><i>This article was written and illustrated by Faiza Ahmed, Jonathan Ash, Thirth Patel, and Auriel Sanders as part of a week-long boot camp for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu/node/242">Rutgers Institute for Quantitative Biomedicine.</a> The article is presented as part of the 2022-2023 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Pyruvate kinase 2 (PKM2) with fructose bisphosphate (red), ATP (orange), and oxalate (an inhibitor similar to pyruvate, purple)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/270/4fxf_twoview.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Pyruvate kinase 2 (PKM2) with fructose bisphosphate (red), ATP (orange), and oxalate (an inhibitor similar to pyruvate, purple).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/270/4fxf_twoview.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cancer cells make many radical changes to support their uncontrolled growth. Surprisingly, one of these changes is reprogramming energy production pathways. In normal cells, conversion of glucose to energy begins with <a href="http://pdb101-beta.rcsb.org/motm/50">glycolysis</a> in the cell cytoplasm. Pyruvate produced at the end of glycolysis normally enters the mitochondria for the <a href="http://pdb101-beta.rcsb.org/motm/154">citric acid cycle</a>. In the presence of oxygen this pathway powers aerobic energy production through the action of the electron transfer chain (Complex <a href="http://pdb101-beta.rcsb.org/motm/144">I</a>, <a href="http://pdb101-beta.rcsb.org/motm/137">III</a>, and <a href="http://pdb101-beta.rcsb.org/motm/5">IV</a>) and <a href="http://pdb101-beta.rcsb.org/motm/72">ATP synthase</a>. Cancer cells take in large amounts of glucose, but paradoxically block the last step of glycolysis. Instead of entering the mitochondria, pyruvate that is made in these cells is converted to lactate.</div>
+<h4>Pyruvate Kinase M2: The Gatekeeper                          </h4>
+<div>The last step in glycolysis is catalyzed by the enzyme pyruvate kinase (PDB ID <a href="https://www.rcsb.org/structure/4fxf" target="_blank">4fxf</a>). It catalyzes the transfer of a phosphate group from phosphoenolpyruvate to form ATP (the energy currency of cells) and pyruvate. Since it is vital for cell survival, the activity of pyruvate kinase is highly regulated. The enzyme forms two types of assemblies: a high-activity tetramer and a low-activity dimer. If more energy is required, fructose bisphosphate (a molecule formed earlier in glycolysis) promotes tetramer formation. A variety of other regulatory molecules can bind to specific allosteric sites to promote dimer formation, and decrease enzyme activity. Four different types of tissue-specific pyruvate kinases are made in the body: PKM1 is made by cells that need a lot of energy, PKR is found in red blood cells, PKL in liver cells, while PKM2 is normally made by embryonic and other proliferating cells. The PKM1 enzyme is commonly in its tetrameric form and is constitutively active. However, the PKM2 enzyme binds to many allosteric regulators to affect its tetramer-to-dimer transition and regulate its action. Cancer cells take advantage of this regulation to reprogram their own metabolism.</div>
+<h4>Energy Production Paradox</h4>
+<div>Many cancer cells produce high levels of the PKM2 enzyme, shifting their energy production pathways to glycolysis. This metabolic reprogramming is paradoxical for two reasons - firstly these cells do not perform aerobic energy production, even when oxygen is plentiful; secondly, even though these rapidly dividing cells require more energy than normal cells, they use glycolysis, a markedly less energy-efficient process, as the major source of energy. The solution to this paradox lies in another consequence of the metabolic bottleneck created by slowing PKM2: it causes a build up of various metabolic intermediates from previous steps in glycolysis. These intermediates are directed to many biosynthetic pathways, allowing cancer cells to build protein and nucleic acid building blocks needed for rapid growth. Thus, cancer cells prioritize growth over energy production. This reprogramming of glucose utilization is referred to as the Warburg Effect, named after Otto Heinrich Warburg, the researcher who discovered it.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The dimeric form of PKM2 with a site of phosphorylation (serine 37) in yellow and a site of acylation (lysine 433) in red. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/270/6wp3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The dimeric form of PKM2 with a site of phosphorylation (serine 37) in yellow and a site of acylation (lysine 433) in red. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/270/6wp3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Warburg Effect and Cancer Treatment</h4>
+<div>The Warburg Effect is a common hallmark of tumorigenesis. Since its discovery, researchers have found that PKM2 is phosphorylated and acetylated in cancerous cells (PDB entry <a href="https://www.rcsb.org/structure/6wp3" target="_blank">6wp3</a>). These modifications affect the binding sites of activators such as fructose bisphosphate. Without these activators, PKM2 cannot efficiently form the high-activity tetramers. The dimeric form of the enzyme is not only less active in glycolysis but can also move into the nucleus to promote the transcription of other cancer-causing genes. These changes in turn cause a buildup of lactate that supports tumor progression and resistance to cancer therapies. Since PKM2 plays key roles in reprogramming cancer cells, scientists are now looking for drugs and therapies to block it or devise other ways to activate aerobic metabolism.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Allosteric Regulation of Pyruvate Kinase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/270/JSmol-jmol.jpg"/></div>
+<p>Structures of the PKM2 tetramer reveal how different small molecules cause allosteric shape changes in the protein that help regulate its action. The active form is shown at left (PDB ID <a href="https://www.rcsb.org/structure/4fxf" target="_blank">4fxf</a>) with ATP, oxalate and magnesium in the active site, and fructose bisphosphate (FBP) in a regulatory site. The inactive form is at center with alanine in a regulatory site (PDB ID <a href="https://www.rcsb.org/structure/6gg3" target="_blank">6gg3</a>)—notice that it has shifted shape and is now narrower through the middle. Researchers are actively looking for drug molecules that bind to PKM2, for use in cancer treatment. For example, an artificial activator molecule (magenta) is bound in the structure at right (PDB ID <a href="https://www.rcsb.org/structure/3me3" target="_blank">3me3</a>) along with FBP, shifting the molecule to the active form and hopefully reversing the Warburg Effect in cells treated with it.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Cell proliferation can also be slowed by inhibiting <a href="https://pdb101.rcsb.org/motm/102">lactate dehydrogenase</a>, and used to monitor cancer progression and treatment efficacy. Explore lactate dehydrogenase with a trial anticancer agent in PDB ID <a href="https://www.rcsb.org/structure/4ajp" target="_blank">4ajp</a>.</li>
+<li>The PDB archive includes many structures of human PKM2 with different small molecules. To find them, try going to PDB entry <a href="https://www.rcsb.org/structure/4fxf" target="_blank">4fxf</a> and in the “Macromolecules” panel, look for the section on UniProt and click “Find proteins for P14618.” </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Vaupel, P., Multhoff, G. (2021) Revisiting the Warburg effect: Historical dogma versus current understanding. The Journal of Physiology, 599, 1745–1757.</li>
+<li>6wp3: Nandi, S., Razzaghi, M., Srivastava, D., Dey, M. (2020) Structural basis for allosteric regulation of pyruvate kinase M2 by phosphorylation and acetylation. Journal of Biological Chemistry, 295, 17425–17440. </li>
+<li>Alquraishi, M., Puckett, D. L., Alani, D. S., Humidat, A. S., Frankel, V. D., Donohoe, D. R., Whelan, J., Bettaieb, A. (2019) Pyruvate kinase M2: A simple molecule with complex functions. Free Radical Biology and Medicine, 143, 176–192. </li>
+<li>Macpherson, J. A., Theisen, A., Masino, L., Fets, L., Driscoll, P. C., Encheva, V., Snijders, A. P., Martin, S. R., Kleinjung, J., Barran, P. E., Fraternali, F., Anastasiou, D. (2019) Functional cross-talk between allosteric effects of activating and inhibiting ligands underlies PKM2 regulation. ELife, 8, e45068.</li>
+<li>6gg3: Yuan, M., McNae, I. W., Chen, Y., Blackburn, E. A., Wear, M. A., Michels, P. A. M., Fothergill-Gilmore, L. A., Hupp, T., Walkinshaw, M. D. (2018) An allostatic mechanism for M2 pyruvate kinase as an amino-acid sensor. Biochemical Journal 475, 1821-1837.</li>
+<li>Israelsen, W. J., Vander Heiden, M. G. (2015) Pyruvate kinase: Function, regulation and role in cancer. Seminars in Cell &amp; Developmental Biology, 43, 43–51.</li>
+<li>3me3: Anastasiou, D., Yu, Y., Israelsen, W. J., Jiang, J. K., Boxer, M. B., Hong, B. S., Tempel, W., Dimov, S., Shen, M., Jha, A., Yang, H., Mattaini, K. R., Metallo, C. M., Fiske, B. P., Courtney, K. D., Malstrom, S., Khan, T. M., Kung, C., Skoumbourdis, A. P., Veith, H., Southall, N., Walsh, M. J., Brimacombe, K. R., Leister, W., Lunt, S. Y., Johnson, Z. R., Yen, K. E., Kunii, K., Davidson, S. M., Christofk, H. R., Austin, C. P., Inglese, J., Harris, M. H., Asara, J. M., Stephanopoulos, G., Salituro, F. G., Jin, S., Dang, L., Auld, D. S., Park, H. W., Cantley, L. C., Thomas, C. J., Vander Heiden, M. G. (2012) Pyruvate kinase M2 activators promote tetramer formation and suppress tumorigenesis. Nature Chemical Biology 8, 839-847.</li>
+<li>Vander Heiden, M., Cantley, L., Thompson, C. (2009) Understanding the Warburg effect: The metabolic requirements of cell proliferation. Science, 324, 1029–1033. </li>
+<li>4fxf: Pan, Y. H., Epstein, T. M., Jain, M. K., Bahnson, B.J. (2001) Five coplanar anion binding sites on one face of phospholipase A2: relationship to interface binding. Biochemistry 40, 609-617.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2022, Faiza Ahmed, Jonathan Ash, Thirth Patel, Auriel Sanders, David Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_6">http://doi.org/10.2210/rcsb_pdb/mom_2022_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

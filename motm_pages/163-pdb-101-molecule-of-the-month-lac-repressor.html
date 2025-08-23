@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: lac Repressor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: lac Repressor" property="og:title"/>
+<meta content="A genetic circuit controls the production of lactose-utilizing enzymes in bacteria" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/39/lac.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/39" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: lac Repressor" name="twitter:title"/>
+<meta content="A genetic circuit controls the production of lactose-utilizing enzymes in bacteria" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/39/lac.gif" name="twitter:image"/>
+<meta content="A genetic circuit controls the production of lactose-utilizing enzymes in bacteria" name="description"/>
+<meta content="beta-galactosidase,DNA bending,galactoside acetyltransferase,lac operon,regulation of transcription,repressor proteins,1bgl,1krv,4oaa,1tlf,1efa" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 39
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 39 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: lac Repressor</h1>
+<p><i>A genetic circuit controls the production of lactose-utilizing enzymes in bacteria</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Lac repressor." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/39/lac.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lac repressor.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/39/39-LacRepressor-lac.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>DNA is filled with information. Our own DNA contains the instructions for building tens of thousands of different proteins and RNA, which perform all the different functions that keep us alive. As discovered by Watson and Crick fifty years ago, this genetic information is stored in the sequence of adenine, thymine, cytosine and guanine bases in the DNA. Their model of the DNA double helix showed how the information is read by separating the two strands of DNA and then pairing the exposed surfaces of the bases with appropriate partners, such that adenine always pairs with thymine and cytosine pairs with guanine.</div>
+<h4>Even More Information</h4>
+<div>The genetic information encoded in the DNA strand is far from being the whole story. A simple set of protein blueprints would hardly be useful, because each of our cells would make all of the 30,000 proteins continually. But brain cells don't need to make hemoglobin, and red blood cells don't need to make acetylcholine receptors. Each cell needs to be able to control the construction of its proteins so that it only builds the proteins needed for its own function. To solve this problem, our DNA also contains a lot of regulatory information that specifies when and where each protein should be made. Unlike the genetic information, this regulatory information is read without unwinding the DNA double helix. Instead, an army of regulatory proteins feels along the surface of the DNA double helix, reading the parts of the bases that are exposed and looking for the appropriate instructions. Some of these proteins, when they find the appropriate instructions, bind to DNA and block the production of proteins that are encoded in the local area. Other regulators enhance the production of proteins, coaxing RNA polymerase to begin its function of transcribing messenger RNA. The nucleus is a flurry of these regulatory proteins, as they control the production of proteins that are currently needed and block synthesis of proteins that are not.</div>
+<h4>Blocking DNA</h4>
+<div>The lac repressor is part of the first regulatory network--the lac operon--that was discovered. It is found in bacteria, where it controls the production of three proteins that are involved in the metabolism of lactose. Its action is very simple. It is a tetramer of four identical subunits that normally binds tightly to a specific region in the bacterial DNA, termed the operator, that is next to a region that encodes three lactose-metabolizing proteins. When bound there, it blocks production of the proteins. But when lac repressor binds to lactose and similar sugars, it changes shape and no longer can bind to the DNA. Then, RNA polymerase is free to transcribe the gene, and the proteins are made. <br/><br/> Notice what this accomplishes for the bacterial cell. When lactose is rare, the lac operon proteins are not made, because they are not needed. But when the bacterium stumbles upon a source of lactose, the plentiful sugars bind to lac repressor and force it to allow production of the enzymes, which quickly begin using the sugars for energy. When the source is depleted, lac repressor loses its bound sugars, and goes back to blocking the production of the proteins since they are no longer needed.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Model of lac repressor bound to a loop of DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/39/lac-DNAloop.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Model of lac repressor bound to a loop of DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/39/39-LacRepressor-lac-DNAloop.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>DNA Loops</h4>
+<div>The crystal structures of the lac repressor show that it forms a bent structure, with all four of the DNA-binding portions pointing in one direction. Based on this structure, researchers have proposed that when all four subunits bind at the same time, the DNA is twisted into a small loop.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Proteins of the lac Operon</h4>
+<div>Lac repressor controls the synthesis of three proteins. Beta-galactosidase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bgl" target="_blank">1bgl <i class="fa fa-external-link"> </i></a></span>, is the enzyme that performs the first step in the metabolism of lactose, breaking it in half into the simple sugars glucose and galactose. Galactoside acetyltransferase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1krv" target="_blank">1krv <i class="fa fa-external-link"> </i></a></span>, is another enzyme that acts on sugars, but its role in lactose metabolism is not as clear. Lactose permease, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4oaa" target="_blank">4oaa <i class="fa fa-external-link"> </i></a></span>, transports lactose through the membrane into the bacterium.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Proteins encoded in the lac operon." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/39/39-lac_Repressor-39-LacRepressor-lac-operon.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Proteins encoded in the lac operon.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/39/39-lac_Repressor-39-LacRepressor-lac-operon.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/39/lac-rasmol.gif"/></div>
+<div>A complete atomic structure for the entire lac repressor is not currently available in the PDB, but you can look at two structures to get a good idea of how it works. Each lac repressor subunit folds into three functional regions. The first is a tetramerization domain that links four subunits together into the functional complex. The second is a core domain that binds to lactose and other similar molecules, like the sugar mimic ONPF. The third is the headpiece, which binds to DNA. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tlf" target="_blank">1tlf <i class="fa fa-external-link"> </i></a></span> contains the tetramerization domain and the core, but is missing the headpieces. It shows how four subunits are tied together, forming the bent structure. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1efa" target="_blank">1efa <i class="fa fa-external-link"> </i></a></span> is missing the tetramerization domain, and only contains two subunits. It includes two headpieces bound to a short piece of DNA, and also shows how sugars bind deep inside the core region.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Lewis, M., Chang, G., Horton, N.C., Kercher, M.A., Pace, H.C., Schumacher, M.A., Brennan, R.G., and Lu, P. (1996): Crystal Structure of the Lactose Operon Repressor and Its Complexes with DNA and Inducer. <i>Science</i> <b>271</b>, pp. 1247-1254.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_3">http://doi.org/10.2210/rcsb_pdb/mom_2003_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

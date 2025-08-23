@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Potassium Channels</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Potassium Channels" property="og:title"/>
+<meta content="Potassium channels allow potassium ions to pass, but block smaller sodium ions" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/38/1bl8.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/38" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Potassium Channels" name="twitter:title"/>
+<meta content="Potassium channels allow potassium ions to pass, but block smaller sodium ions" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/38/1bl8.gif" name="twitter:image"/>
+<meta content="Potassium channels allow potassium ions to pass, but block smaller sodium ions" name="description"/>
+<meta content="ion channel activity,ion transport,neurotoxins,potassium ion transport,scorpion venom,1bl8,1lnq,1k4c,1f6g,2crd" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 38
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 38 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Potassium Channels</h1>
+<p><i>Potassium channels allow potassium ions to pass, but block smaller sodium ions</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Potassium channel, viewed from outside the membrane. Potassium ions bound in the channel are shown in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/38/1bl8.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Potassium channel, viewed from outside the membrane. Potassium ions bound in the channel are shown in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/38/38-PotassiumChannels-1bl8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>All living cells are surrounded by a membrane that separates the watery world inside from the environment outside. Membranes are effective barriers for small ions (as well as for large molecules like proteins and DNA), providing a novel opportunity: differences in ion levels may be used for rapid signaling. For instance, a cell can raise the level of potassium ions inside it. Then, at a moment's notice, potassium can be released through channels in the membrane, creating a large change in the potassium level that will be felt throughout the cell. This process is used in all types of cells - bacteria, plants and animals. Two common examples of ion channels at work are seen in muscle contraction (which is started by the release of calcium ions), and nerve signaling (which involves a complex flow of sodium and potassium ions).</div>
+<h4>Ion Channels in Nerve Signals </h4>
+<div>When you smell a flower and know that it is a rose, or touch a hot object and immediately pull your hand away, nerves from your nose and hands use the release of ions to send signals to your brain and relay back the appropriate response. Nerve cells ready themselves for sending a signal by concentrating potassium ions inside and selectively pumping sodium ions out. This creates a difference in electrical potential across the cell membrane. To send a signal, sodium channels along the nerve open, allowing sodium to enter and reducing the voltage across the membrane. Potassium channels then open, letting the potassium ions out and re-establishing the original voltage. Other channels and pumps later reset the distribution of sodium and potassium ions inside and outside the cell. By clever design, both of these channels are sensitive to the voltage across the membrane, opening when the voltage changes. So, when the channels are opened at one end of a nerve cell, the flow of ions there instantly triggers channels further down the membrane to open. The result is a wave of channels opening that rushes down the nerve cell, carrying the nerve signal to the end.</div>
+<h4>Potassium Channels</h4>
+<div>Potassium channels are designed to allow the flow of potassium ions across the membrane, but to block the flow of other ions--in particular, sodium ions. These channels are typically composed of two parts: the filter, which selects and allows potassium but not sodium to pass, and the gate, which opens and closes the channel based on environmental signals. The structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bl8" target="_blank">1bl8 <i class="fa fa-external-link"> </i></a></span>, shows the filter portion of a bacterial potassium channel. It is comprised of four identical protein molecules that span the width of the membrane, forming a selective pore down the center. Potassium ions, shown in green, flow freely through it, at rates of up to one hundred million ions per second. But it is also remarkably selective--it allows only one sodium ion to pass for every ten thousand potassium ions. Crystallographic structures of this channel have revealed how this is accomplished.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Potassium channels KcsA (left) and MthK (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/38/potassiumchannels.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Potassium channels KcsA (left) and MthK (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/38/38-PotassiumChannels.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Open and Shut</h4>
+<div>Hundreds of different ion channels are made by living cells, for a variety of different functions. These all have similar filters, shown at the top in these two examples, connected to specialized gating domains, shown at the bottom. The membrane is shown schematically with a gray stripe and only two of the four chains are shown in the selectivity filters, so that you can see the pore. The gating domains open and shut the channel based on different signals, such as voltage or the presence of key signaling molecules. Several structural mechanisms are used for opening and closing potassium channels. In the two simple bacterial channels shown here, protein domains connected to the channel are thought to twist the four chains of the channel. This can be clearly seen by comparing the "open" channel structure of PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lnq" target="_blank">1lnq <i class="fa fa-external-link"> </i></a></span> on the right with the "closed" structure of PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k4c" target="_blank">1k4c <i class="fa fa-external-link"> </i></a></span> on the left (the gating domain of this structure is taken from the low resolution structure in <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f6g" target="_blank">1f6g <i class="fa fa-external-link"> </i></a></span>). The more complex channels found in nerve cells, which open and close after sensing changes in the voltage across the membrane, are thought to include a small tethered ball of protein that floats over and physically blocks the pore. (Note: somewhat surprisingly, the crystal structure of the closed channel has several potassium ions in the channel, shown here in green, but the structure of the open channel was solved without potassium ions.)</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Charybdotoxin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/38/2crd.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Charybdotoxin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/38/38-PotassiumChannels-2crd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Poisonous Aside</h4>
+<div>Ion channels play a critical role in signaling by nerves, so any blockage of these channels can have serious effects. Scorpions take advantage of this to paralyze their prey. Scorpion venom includes a collection of powerful neurotoxins that bind to ion channels and block the flow of ions. The example shown here, charybdotoxin (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2crd" target="_blank">2crd <i class="fa fa-external-link"> </i></a></span>), attacks potassium channels and blocks their function in nerve signaling. The surface of the protein is covered with positively-charged amino acids, colored bright blue, that are thought to glue the toxin over the exposed mouth of the pore. These toxins are typically small, highly stable proteins. Charybdotoxin is only 37 amino acids long, but contains three disulfide linkages--two are seen here in bright yellow--that hold the protein in its proper poisonous shape.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Potassium Channel</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/38/MoM-38-PotassiumChannel_Figure_v1-jmol.jpg"/></div>
+<p>The potassium channel is remarkable for its ability to allow only potassium to pass, as seen in PDB entry <a href="https://www.rcsb.org/structure/1k4c" target="_blank"> 1k4c </a>. This specificity is the result of interactions between potassium ions (yellow) and oxygens (red) within the channel pore. Potassium is typically cushioned by water molecules (dark red) while in solution. When passing through the channel, potassium sheds its water shell and interacts with the channel oxygens, which are perfectly spaced to mimic this shell. Sodium ions are too small to interact with these oxygens in the same way, instead staying cushioned by their own water shells outside the channel pore.<br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1lnq: JIANG, Y., LEE, A., CHEN, J., CADENE, M., CHAIT, B.T., MACKINNON, R. (2002) Crystal structure and mechanism of a calcium-gated potassium channel. Nature 417: 515-522</li>
+<li>Yellen, G. (2002): The voltage-gated potassium channels and their relatives. Nature 419, pp. 35-42.</li>
+<li>1f6g: Cortes, D.M., Cuello, L.G., Perozo, E. (2001) Molecular architecture of full-length KcsA: role of cytoplasmic domains in ion permeation and activation gating. J.Gen.Physiol. 117: 165-180</li>
+<li>Minor Jr.,D.L. (2001): Potassium channels: life in the post-structural world. Current Opinion in Structural Biology 11, pp. 408-414.</li>
+<li>1k4c: Zhou, Y., Morais-Cabral, J.H., Kaufman, A., MacKinnon, R. (2001) Chemistry of ion coordination and hydration revealed by a K+ channel-Fab complex at 2.0 A resolution. Nature 414: 43-48</li>
+<li>1bl8: Doyle, D.A., Morais Cabral, J., Pfuetzner, R.A., Kuo, A., Gulbis, J.M., Cohen, S.L., Chait, B.T., MacKinnon, R. (1998) The structure of the potassium channel: molecular basis of K+ conduction and selectivity. Science 280: 69-77</li>
+<li>2crd: Bontems, F., Gilquin, B., Roumestand, C., Menez, A., Toma, F. (1992) Analysis of side-chain organization on a refined model of charybdotoxin: structural and functional implications. Biochemistry 31: 7756-7764</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2003, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_2">http://doi.org/10.2210/rcsb_pdb/mom_2003_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

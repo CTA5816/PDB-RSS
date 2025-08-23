@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Measles Virus Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Measles Virus Proteins" property="og:title"/>
+<meta content="Six proteins in measles virus work together to infect cells." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/231/231-Measles_Virus_Proteins-measles.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/231" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Measles Virus Proteins" name="twitter:title"/>
+<meta content="Six proteins in measles virus work together to infect cells." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/231/231-Measles_Virus_Proteins-measles.jpg" name="twitter:image"/>
+<meta content="Six proteins in measles virus work together to infect cells." name="description"/>
+<meta content="Measles,virus,vaccine,nucleocapsid,infection,immunity,immune system,5e4v,3zdo,1t6o,4uft,2zb5,4gjt,3alz,3inb,5yxw,4g1g,5a22" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 231
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 231 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Measles Virus Proteins</h1>
+<p><i>Six proteins in measles virus work together to infect cells.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Illustration of a cross section through measles virus and structures for each of the viral proteins. Portions of the proteins that have not been determined are shown with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/231/231-Measles_Virus_Proteins-measles.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Illustration of a cross section through measles virus and structures for each of the viral proteins. Portions of the proteins that have not been determined are shown with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/231/231-Measles_Virus_Proteins-measles.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Measles is one of the most infectious viruses: 9 out of 10 people exposed to an infected person will contract the disease. Infection by the virus most often leads to an uncomfortable rash and then clears up, but some people have more serious or even deadly complications. Fortunately, there is an effective vaccine that protects against infection. The disease has not been eradicated, however, because the vaccine is not widely available in many parts of the world, and a growing number of people refuse vaccination.</div>
+<h4>Measles Proteins</h4>
+<div>The measles virus genome encodes six proteins, which are enough to choreograph its highly infectious life cycle. Three are involved in management of the genome. The genome is composed of RNA, so a special polymerase is made by the virus that makes new copies of RNA using RNA as a template (a related polymerase from a different virus is shown here, PDB entry <a href="https://www.rcsb.org/structure/5a22" target="_blank">5a22</a>). The RNA is encapsidated by the nucleoprotein, with six nucleotides bound to each protein subunit. The phosphoprotein has several flexible tails that tether the polymerase to the nucleoprotein, chaperoning the process of replication and transcription. Structures are available for the ordered regions of nucleoprotein and phosphoprotein (PDB entries <a href="https://www.rcsb.org/structure/5e4v" target="_blank">5e4v</a>, <a href="https://www.rcsb.org/structure/3zdo" target="_blank">3zdo</a>, <a href="https://www.rcsb.org/structure/1t6o" target="_blank">1t6o</a>), but the remaining regions are thought to form a flexible, random tangle.</div>
+<h4>Surface Proteins</h4>
+<div>The virus is enveloped by a lipid membrane with two types of proteins that coordinate how the virus finds cells and enters them. The hemagglutinin protein (PDB entry <a href="https://www.rcsb.org/structure/2zb5" target="_blank">2zb5</a>) binds to receptor proteins on the cell surface, and the fusion protein (PDB entry <a href="https://www.rcsb.org/structure/5yxw" target="_blank">5yxw</a>) fuses the viral membrane to the cell membrane, releasing the viral genetic material into the cell. The hemagglutinin protein is the major target of our immune system, and the widely-used vaccines employ weakened forms of the virus that stimulate the immune system to make antibodies against the protein.</div>
+<h4>The Matrix</h4>
+<div>The matrix protein is involved in budding of new viruses from an infected cell, and ensuring that the viral RNA is included. As is often the case with biology, there are two conflicting models of how this occurs, based on the results of different experimental studies. The model shown here places matrix on the inner surface of the membrane, where it assists with bending the membrane and also interacts with the helical nucleocapsid. An alternative model proposes that tubes of matrix surround the nucleocapsid, which then associate with the membrane. The matrix protein structure shown here (PDB entry <a href="https://www.rcsb.org/structure/4g1g" target="_blank">4g1g</a>) is from a related virus.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Measles nucleoprotein (green) and RNA (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/231/232-Measles_Virus_Proteins-4uft.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Measles nucleoprotein (green) and RNA (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/231/232-Measles_Virus_Proteins-4uft.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Measles Nucleocapsid</h4>
+<div>The measles nucleoprotein forms a large helical complex with RNA, as seen in PDB entry <a href="https://www.rcsb.org/structure/4uft" target="_blank">4uft</a>. It is thought to chaperone the process of replication and transcription by providing a ready site for binding of the polymerase/phosphoprotein complex while a new RNA chain is being built. The structure includes the stable core domain of the nucleoprotein and a strand of RNA, but the flexible tail of nucleoprotein was removed in this study.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Measles Hemagglutinin and Cellular Receptors</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/231/232-Measles_Virus_Proteins-3inb_JSmol.jpg"/></div>
+<p>Measles hemagglutinin is known to bind to three different proteins found on the surface of our cells. Structures have been determined for each: CD46 (PDB entry <a href="https://www.rcsb.org/structure/3inb" target="_blank">3inb</a>, shown here in the image), SLAM (PDB entry <a href="https://www.rcsb.org/structure/3alz" target="_blank">3alz</a>) and nectin-4 (PDB entry <a href="https://www.rcsb.org/structure/4gjt" target="_blank">4gjt</a>). In all three, two copies of the receptor protein (red) bind on opposite sides of a dimeric hemagglutinin molecule (blue). To explore all three structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers are developing drugs to block several of these measles proteins. Try searching for “measles inhibitor” in the <a href="https://www.rcsb.org">main RCSB PDB site</a> to see a few of them. </li>
+<li>The phosphoprotein complex structures shown here were determined by studying chimeric proteins, where portions of two proteins are fused together—you can use the “Protein Feature View” to help sort out which parts belong to each protein.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5yxw: Hashiguchi, T., Fukuda, Y., Matsuoka, R., Kuroda, D., Kubota, M., Shirogane, Y., Watanabe, S., Tsumoto, K., Kohda, D., Plemper, R.K., Yanagi, Y. (2018) Structures of the prefusion form of measles virus fusion protein in complex with inhibitors. Proc. Natl. Acad. Sci. U.S.A. 115: 2496-2501</li>
+<li>Ke, Z., Strauss, J. D., Hampton, C. M., Brindley, M. A., Dillard, R. S., Leon, F., Lamb, K. M., Plemper, R. K., Wright, E. R. (2018) Promotion of virus assembly and organization by the measles virus matrix protein. Nat. Comm. 9: 1738</li>
+<li>5e4v: Guryanov, S.G., Liljeroos, L., Kasaragod, P., Kajander, T., Butcher, S.J. (2015) Crystal Structure of the Measles Virus Nucleoprotein Core in Complex with an N-Terminal Region of Phosphoprotein. J.Virol. 90: 2849-2857</li>
+<li>4uft: Gutsche, I., Desfosses, A., Effantin, G., Ling, W.L., Haupt, M., Ruigrok, R.W.H., Sachse, C., Schoehn, G. (2015) Near-Atomic Cryo-Em Structure of the Helical Measles Virus Nucleocapsid. Science 348: 704-707</li>
+<li>5a22: Liang, B., Li, Z., Jenni, S., Rahmeh, A.A., Morin, B.M., Grant, T., Grigorieff, N., Harrison, S.C., Whelan, S.P. (2015) Structure of the L Protein of Vesicular Stomatitis Virus from Electron Cryomicroscopy. Cell 162: 314-327</li>
+<li>3zdo: Communie, G., Crepin, T., Maurin, D., Ringkjobing Jensen, M., Blackledge, M., Ruigrok, R.W. (2013) Structure of the Tetramerization Domain of Measles Virus Phosphoprotein. J.Virol. 87: 7166-7169</li>
+<li>4gjt: Zhang, X., Lu, G., Qi, J., Li, Y., He, Y., Xu, X., Shi, J., Zhang, C.W., Yan, J., Gao, G.F. (2013) Structure of measles virus hemagglutinin bound to its epithelial receptor nectin-4 Nat.Struct.Mol.Biol. 20: 67-72</li>
+<li>4g1g: Battisti, A.J., Meng, G., Winkler, D.C., McGinnes, L.W., Plevka, P., Steven, A.C., Morrison, T.G., Rossmann, M.G. (2012) Structure and assembly of a paramyxovirus matrix protein. Proc.Natl.Acad.Sci.USA 109: 13996-14000</li>
+<li>4alz: Hashiguchi, T., Ose, T., Kubota, M., Maita, N., Kamishikiryo, J., Maenaka, K., Yanagi, Y. (2011) Structure of the measles virus hemagglutinin bound to its cellular receptor SLAM Nat.Struct.Mol.Biol. 18: 135-141</li>
+<li>3inb: Santiago, C., Celma, M.L., Stehle, T., Casasnovas, J.M. (2010) Structure of the measles virus hemagglutinin bound to the CD46 receptor Nat.Struct.Mol.Biol. 17: 124-129</li>
+<li>2zb5: Hashiguchi, T., Kajikawa, M., Maita, N., Takeda, M., Kuroki, K., Sasaki, K., Kohda, D., Yanagi, Y., Maenaka, K. (2007) Crystal structure of measles virus hemagglutinin provides insight into effective vaccines Proc.Natl.Acad.Sci.Usa 104: 19535-19540</li>
+<li>1tdo: Kingston, R.L., Hamel, D.J., Gay, L.S., Dahlquist, F.W., Matthews, B.W. (2004) Structural basis for the attachment of a paramyxoviral polymerase to its template. Proc.Natl.Acad.Sci.USA 101: 8301-8306</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_3">http://doi.org/10.2210/rcsb_pdb/mom_2019_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

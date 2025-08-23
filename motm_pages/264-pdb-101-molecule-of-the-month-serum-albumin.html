@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Serum Albumin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Serum Albumin" property="og:title"/>
+<meta content="Serum albumin delivers fatty acid molecules through the bloodstream" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/37/1e7i.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/37" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Serum Albumin" name="twitter:title"/>
+<meta content="Serum albumin delivers fatty acid molecules through the bloodstream" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/37/1e7i.gif" name="twitter:image"/>
+<meta content="Serum albumin delivers fatty acid molecules through the bloodstream" name="description"/>
+<meta content="blood physiology,blood serum,drug binding,drug transport,fatty acid transport,fatty acids,transferrin,transthyretin,1e7i,1h76,1tha,1gnj" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 37
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 37 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Serum Albumin</h1>
+<p><i>Serum albumin delivers fatty acid molecules through the bloodstream</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Serum albumin, with bound fatty acids in white and red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/37/1e7i.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Serum albumin, with bound fatty acids in white and red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/37/37-SerumAlbumin-1e7i.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Think about how convenient it is to be able to eat. Each one of your ten trillion cells requires a constant supply of nourishment. But we don't have to worry about this--we merely eat our dinner and our body does the rest. The food is digested and the useful pieces are delivered to cells throughout the body, using the bloodstream as the delivery system. Delivery of water-soluble molecules, like sugar, is easy. They float in the watery bloodstream and are picked up by cells along the way. Other important nutrients, however, are not soluble in water, so special carriers must be made to chaperone them to hungry cells.</div>
+<h4>Carrying Fatty Acids</h4>
+<div>Serum albumin, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e7i" target="_blank">1e7i <i class="fa fa-external-link"> </i></a></span>, is the carrier of fatty acids in the blood. Fatty acids are essential for two major things in your body. They are the building blocks for lipids, which form all of the membranes around and inside cells. They are also rich sources of energy, and may be broken down inside cells to form ATP. Thus, your body maintains a storehouse of fatty acids, stored as fat. When your body needs energy or needs building materials, fat cells release fatty acids into the blood. There, they are picked up by serum albumin and delivered to distant parts of the body.</div>
+<h4>A Versatile Protein</h4>
+<div>Serum albumin is the most plentiful protein in blood plasma. Each protein molecule can carry seven fatty acid molecules. They bind in deep crevices in the protein, burying their carbon-rich tails safely away from the surrounding water. Serum albumin also binds to many other water-insoluble molecules. In particular, serum albumin binds to many drug molecules, such as ibuprofen, and can strongly affect the way they are delivered through the body.</div>
+<h4>A Generic Protein</h4>
+<div>Since serum albumin is so common in the blood and so easy to purify, it was one of the first proteins to be studied by scientists. Today, the similar protein from cows--bovine serum albumin or BSA--is widely used in research when a generic protein is needed. Many enzymes are unstable when they are placed in a dilute solution, so it is difficult to study them in the laboratory. One solution is to add some BSA. It stabilizes the enzyme during the experiment, but it is relatively neutral so it doesn't affect the properties of the enzyme.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Transferrin (top) and transthyretin (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/37/transport.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transferrin (top) and transthyretin (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/37/37-SerumAlbumin-transport.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Collection of Carriers</h4>
+<div>Many different molecules are transported in the blood, so it is no surprise that we make a diverse collection of proteins to carry them. Unlike serum albumin, many of these are specific carriers, delivering only a single type of molecule. Two examples are shown here. Transferrin, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1h76" target="_blank">1h76 <i class="fa fa-external-link"> </i></a></span>, carries iron ions and transthyretin, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tha" target="_blank">1tha <i class="fa fa-external-link"> </i></a></span>, delivers thyroid hormones. The blood is filled with these busy carriers that deliver their cargo throughout the body.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/37/1gnj.gif"/></div>
+<div>A series of human serum albumin structures that show how different fatty acids bind to the protein are available in the PDB. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e7i" target="_blank">1e7i <i class="fa fa-external-link"> </i></a></span> includes seven molecules of a saturated fatty acid bound to the protein. Some can be seen peeking out from the surface in the illustration at the beginning of this month's column. The structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gnj" target="_blank">1gnj <i class="fa fa-external-link"> </i></a></span>, has seven molecules of arachidonic acid bound to it. The protein is shown with blue tubes and the fatty acids are shown with spheres at each atom. As you explore this structure, notice how the protein chain surrounds the carbon-rich tails of the fatty acids, shielding them from the surrounding water. Arachidonic acid is an unsaturated fatty acid with several double bonds that form rigid kinks in the carbon chain. It is important for the construction of molecular messengers used to signal pain and inflammation.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li><a class="mom_big" href="http://www.albumin.org" target="_new">The Albumin Website</a> features discoveries regarding serum albumin, an updated list of published albumin mutations with references, and other information of interest related to albumin.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Stephen Curry, Peter Brick and Nicholas P. Franks (1999): Fatty Acid Binding to Human Serum Albumin: New Insights from Crystallographic Studies. <i>Biochimica et Biophysica Acta</i> <b>1441</b>, pp. 131-140.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_1">http://doi.org/10.2210/rcsb_pdb/mom_2003_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

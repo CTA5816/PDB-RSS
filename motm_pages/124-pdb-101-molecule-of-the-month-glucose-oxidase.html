@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glucose Oxidase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glucose Oxidase" property="og:title"/>
+<meta content="Glucose oxidase measures blood glucose level in biosensors" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/77/77_1gpe.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/77" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glucose Oxidase" name="twitter:title"/>
+<meta content="Glucose oxidase measures blood glucose level in biosensors" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/77/77_1gpe.gif" name="twitter:image"/>
+<meta content="Glucose oxidase measures blood glucose level in biosensors" name="description"/>
+<meta content="biosensors,glucose oxidase activity,oxidation reduction,1gpe,1gco,1cq1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 77
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 77 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glucose Oxidase</h1>
+<p><i>Glucose oxidase measures blood glucose level in biosensors</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glucose oxidase with FAD in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/77/77_1gpe.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glucose oxidase with FAD in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/77/77-GlucoseOxidase-gpe-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Diabetes is a worldwide health problem affecting hundreds of millions of people. Fortunately, with careful management of diet and medication, the many complications of diabetes can be reduced. Part of this treatment includes the monitoring of glucose levels in the blood, so that proper action may be taken if levels get too high. The enzyme glucose oxidase has made glucose measurement fast, easy, and inexpensive.</div>
+<h4>Chemical Defense</h4>
+<div>Glucose oxidase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gpe" target="_blank">1gpe <i class="fa fa-external-link"> </i></a></span>, is a small, stable enzyme that oxidizes glucose into glucolactone, converting oxygen into hydrogen peroxide in the process. Its normal biological function appears to be centered on the peroxide that is formed: hydrogen peroxide is a toxic compound that can be used to kill bacteria. For instance, glucose oxidase is found on the surface of fungi, where it helps protect against bacterial infection, and it is also found in honey, where it acts as a natural preservative.</div>
+<h4>Biotech Bonanza</h4>
+<div>This obscure enzyme, while playing only a minor role in natural settings, has become the center of a $5 billion biotech industry. It is used as the heart of biosensors that measure the amount of glucose in blood. The trick to these biosensors is that the enzyme takes something that is difficult to measure--glucose--and creates something that is easy to measure--hydrogen peroxide. A typical laboratory glucose meter includes some of the enzyme trapped inside a membrane. Glucose enters the sensor and is converted to glucolactone. In the process, hydrogen peroxide is formed, which is then sensed by a platinum electrode. The more glucose there is in the sample, the more peroxide is formed, and the stronger the signal at the electrode.</div>
+<h4>Controlling Costs</h4>
+<div>Of course, platinum electrodes are expensive, so newer biosensors use a serendipitous property of glucose oxidase to make even more affordable glucose meters. Glucose oxidase is very specific for glucose in the initial oxidation reaction, but can use many different compounds as the final electron acceptor, not just oxygen. So, biotech researchers have developed different "mediator" molecules, such as ferrocene, to work in place of oxygen. These molecules pick up electrons from the glucose reaction, and then deliver them directly to a cheaper type of electrode. This method is used to create single-use, disposable test strips that have glucose oxidase, the mediator, and the electrode compound all printed on the surface.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two bacterial glucose dehydrogenases." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/77/77_1gco-1cq1.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two bacterial glucose dehydrogenases.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/77/77-GlucoseOxidase-1gco-1cq1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Choices for Biosensors</h4>
+<div>Other enzymes that oxidize glucose are also used as glucose monitors. Two glucose dehydrogenases that are being explored for use in biosensors are shown here. At the top is an enzyme that uses NAD as the cofactor to perform the oxidation reaction (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gco" target="_blank">1gco <i class="fa fa-external-link"> </i></a></span>), and the enzyme at the bottom (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cq1" target="_blank">1cq1 <i class="fa fa-external-link"> </i></a></span>) uses an unusual pyrroloquinoline quinone cofactor.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/77/77_1gpe-rasmol.gif"/></div>
+<div>You can take a closer look at glucose oxidase from a Penicillium mold in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gpe" target="_blank">1gpe <i class="fa fa-external-link"> </i></a></span>. The oxidation reaction is performed by the FAD cofactors bound deep inside the enzyme, shown in red. The active site where glucose binds is just above the FAD, in a deep pocket shown with a star. Notice that the enzyme, like many proteins that act outside of cells, is covered with carbohydrate chains, shown in green. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. D. Newman and A. P. F. Turner (2005) Home blood glucose biosensors: a commercial perspective. Biosensors and Bioelectronics 20, 2435-2453.</li>
+<li>R. Wilson and A. P. F. Turner (1992) Glucose oxidase: and ideal enzyme. Biosensors and Bioelectronics 7, 165-185. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_5">http://doi.org/10.2210/rcsb_pdb/mom_2006_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

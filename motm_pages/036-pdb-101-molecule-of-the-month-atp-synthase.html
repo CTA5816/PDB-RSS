@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: ATP Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: ATP Synthase" property="og:title"/>
+<meta content="ATP synthase links two rotary motors to generate ATP" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/72/ATPsynthase.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/72" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: ATP Synthase" name="twitter:title"/>
+<meta content="ATP synthase links two rotary motors to generate ATP" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/72/ATPsynthase.gif" name="twitter:image"/>
+<meta content="ATP synthase links two rotary motors to generate ATP" name="description"/>
+<meta content="APT biosynthetic process,ATP synthesis coupled proton transport,hydrogen ion transmembrane transporter activity,molecular motor protein,proton transport,synthase activity,rotational mechanism,1c17,1e79,2a7u,1l2p,1e79,1c17,6b8h,5are,5ari,5fil" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 72
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 72 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: ATP Synthase</h1>
+<p><i>ATP synthase links two rotary motors to generate ATP</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="ATP synthase. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/72/ATPsynthase.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ATP synthase. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/72/72-ATPSynthase-ATPsynthase.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>ATP synthase is one of the wonders of the molecular world. ATP synthase is an enzyme, a molecular motor, an ion pump, and another molecular motor all wrapped together in one amazing nanoscale machine. It plays an indispensable role in our cells, building most of the ATP that powers our cellular processes. The mechanism by which it performs this task is a real surprise.</div>
+<h4>Rotary Motors</h4>
+<div>ATP synthesis is composed of two rotary motors, each powered by a different fuel. The motor at the top, termed F0, an electric motor. It is embedded in a membrane (shown schematically as a gray stripe here), and is powered by the flow of hydrogen ions across the membrane. As the protons flow through the motor, they turn a circular rotor (shown in blue). This rotor is connected to the second motor, termed F1. The F1 motor is a chemical motor, powered by ATP. The two motors are connected together by a stator, shown on the right, so that when F0 turns, F1 turns too.</div>
+<h4>Motor to Generator</h4>
+<div>So why have two motors connected together? The trick is that one motor can force the other motor to turn, and in this way, change the motor into a generator. This is what happens in our cells: the F0 motor uses the power from a proton gradient to force the F1 motor to generate ATP. In our cells, food is broken down and used to pump hydrogen ions across the mitochondrial membrane. The F0 portion of ATP synthase allows these ions to flow back, turning the rotor in the process. As the rotor turns, it turns the axle and the F1 motor becomes a generator, creating ATP as it turns. Remarkably, cells build similar molecular machines, such as the <a href="https://pdb101.rcsb.org/motm/219">vacuolar ATPase</a>, that work in reverse, using an ATP-driven motor to pump protons across a membrane.</div>
+<h4>Parts List</h4>
+<div>Large, complex molecular machines like ATP synthase pose difficult problems for structural scientists, so the structures of these machines are often determined in parts. The picture shown here is a composite of four different structures, combining structures determined by X-ray crystallography and NMR spectroscopy. The F0 motor is included in PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c17" target="_blank">1c17 <i class="fa fa-external-link"> </i></a></span>. The F1 motor and the axle that connects the two are included in PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e79" target="_blank">1e79 <i class="fa fa-external-link"> </i></a></span>. The stator has proven to be the most elusive part--the two pieces shown here are from PDB files <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2a7u" target="_blank">2a7u <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l2p" target="_blank">1l2p <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/72/F1-rasmol.gif"/>
+</div>
+</div>
+<h4>The F1 Structure</h4>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e79" target="_blank">1e79 <i class="fa fa-external-link"> </i></a></span> includes the F1 motor of ATP synthase. When operating as a generator, it uses the power of rotational motion to build ATP, or when operating as a motor, it breaks down ATP to spin the axle the opposite direction. The synthesis of ATP requires several steps, including the binding of ADP and phosphate, the formation of the new phosphate-phosphate bond, and release of ATP. As the axle turns, it forces the motor into three different conformations that assist these difficult steps. Two states are shown here. The one on the left shows a conformation that assists the binding of ADP, and the one on the right shows a conformation that has been forced open to release ATP. Notice how the oddly-shaped axle forces the change in conformation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/72/F0-rasmol.gif"/>
+</div>
+</div>
+<h4>The F0 Structure</h4>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c17" target="_blank">1c17 <i class="fa fa-external-link"> </i></a></span> includes the F0 electric motor. In this picture, we are looking down the axis of rotation, as if we where looking down at the top of the picture on the first page. The rotor is composed of 12 identical protein chains, colored blue here, and the ion pump is a single chain, colored red. The pump has an arginine amino acid that hands off a hydrogen ion to aspartates on the rotor. Aspartate amino acids typically have a negative charge, but since the rotor is surrounded by membrane lipids, this would be very unfavorable. So, the rotor only turns when the aspartates have a hydrogen attached, neutralizing their charge. Hydrogen ions take a convoluted path through the F0 motor, turning the rotor in the process. They are gathered by a chain of amino acids in the pump, and transferred to the arginine. The arginine passes the hydrogen to the rotor, which turns all the way around. Then the hydrogen is offloaded by other amino acids on the pump, and finally passed to the opposite side of the membrane. The exact path of the hydrogen ions through the pump is still a matter of intense study.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Dimeric complex of ATP synthase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/72/72-ATP_Synthase-6b8h.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Dimeric complex of ATP synthase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/72/72-ATP_Synthase-6b8h.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Two Heads are Better than One</h4>
+<div>Cryoelectron microscopy has been used to determine the entire structure of ATP synthase. The resolution of these studies is not quite enough to see individual atoms, but it allows us to arrange all the subunits in their proper places. One of the surprises from this work is that the ATP synthase in our mitochondria forms a dimer, and the dimer is sharply bent. This is thought to help shape the extensively folded inner membrane of the mitochondrion. The structure shown here is from yeast mitochondria (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6b8h" target="_blank">6b8h</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>ATP synthase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/72/72-ATP_Synthase-ATPsynthase_JSmol.jpg"/></div>
+<p>To determine a structure by cryoelectron microscopy, researchers scatter many copies of the molecule on a surface, and then combine images of thousands of them to build up a coherent structure. In some cases, the molecules adopt several different shapes, so by classifying these images correctly, researchers can observe different conformations of the molecule. With a monomeric form of cow ATP synthase, researchers found seven different rotational states. Three are shown here (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5are" target="_blank">5are</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5ari" target="_blank">5ari</a> &amp; <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5fil" target="_blank">5fil</a>), capturing a full rotation. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try looking at the PDB-101 topic <a href=" http://pdb101.rcsb.org/browse/biological-energy">“Biological Energy” </a> to see other proteins involved in generation and usage of ATP. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6b8h: H Guo, SA Bueler &amp; JL Rubinstein (2017) Atomic model for the dimeric FO region of mitochondrial ATP synthase. Science 358: 936-940.</li>
+<li>5are, 5ari, 5fil: A Zhou, A Rohou, DG Schep, JV Bason, MG Montgomery, JE Walker, N Grigorieff &amp; JL Rubinstein (2015) Structure and conformational states of the bovide mitochondrial ATP synthase by cryo-EM. Elife 4, e10180.</li>
+<li>2a7u: S Wilkins, D Borchardt, J Weber &amp; AE Senior (2005) Structural characterization of the interaction of the delta and alpha subunits of the Escherichia coli F(1)F(0)-ATP synthase by NMR spectroscopy. Biochemistry 44, 11786-11794.</li>
+<li>G Oster and H Wang (2003) Rotary Protein Motors. Trends in Cell Biology 13, 114-121. </li>
+<li>1l2p: PA Del Rizzo, Y Bi, SD Dunn &amp; BH Shilton (2002) The “second stalk” of Escherichia coli ATP synthase: structure of the isolated dimerization domain. Biochemistry 41, 6875-6884.</li>
+<li>1e79: C Gibbons, MG Montgomery, AGW Leslie &amp; JE Walker (2000) The structure of the central stalk in bovine F(1)-ATPase at 2.4 A resolution. Nature Structural Biology 7, 1055.</li>
+<li>G Oster &amp; H Wang (1999) ATP Synthase: Two Motors, Two Fuels. Structure 7, R67-R72.</li>
+<li>1c17: VK Rastogi &amp; ME Girvin (1999) Structural changes linked to proton translocation by subunit c of the ATP synthase. Nature 402, 263-268.</li>
+<li>PD Boyer (1997) The ATP Synthase--A Splendid Molecular Machine. Annual Review of Biochemistry 66, 717-749.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_12">http://doi.org/10.2210/rcsb_pdb/mom_2005_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

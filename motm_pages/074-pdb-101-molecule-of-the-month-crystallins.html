@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Crystallins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Crystallins" property="og:title"/>
+<meta content="A concentrated solution of crystallins refracts light in our eye lens" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/127/mom127_crystallins2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/127" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Crystallins" name="twitter:title"/>
+<meta content="A concentrated solution of crystallins refracts light in our eye lens" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/127/mom127_crystallins2.jpg" name="twitter:image"/>
+<meta content="A concentrated solution of crystallins refracts light in our eye lens" name="description"/>
+<meta content="domain swapping,eye lens,moonlighting proteins,3l1e,2wj7,1blb,4gcr,1hy1,1o9j,3ado" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 127
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 127 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Crystallins</h1>
+<p><i>A concentrated solution of crystallins refracts light in our eye lens</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Different forms of crystallin proteins." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/127/mom127_crystallins2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Different forms of crystallin proteins.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/127/127-Crystallins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As you read this Molecule of the Month, the light from the page is being focused in your eyes by a concentrated solution of crystallin proteins. The lenses in your eyes are built of long cells that, early in their development, filled themselves with crystallins and then made the major sacrifice, ejecting their nuclei and mitochondria and leaving only a smooth, transparent solution of protein. We then rely on these proteins to see for the rest of our lives.</div>
+<h4>Crystal Clear</h4>
+<div>The name "crystallin" is rather ironic. Crystallins have been perfected by evolution expressly for their ability not to form crystals. The eye lens needs to be a highly concentrated solution, but it needs to avoid small crystals or aggregates, since they would scatter light and make the lens opaque. Our lenses achieve this by mixing together several different crystallins, which together form a uniform, glassy solution.</div>
+<h4>Transparency Through Diversity</h4>
+<div>Our lenses contain three major types of crystallins, which together comprise about 90% of the protein. Alpha crystallins are the most common. They are composed of two similar types of protein chain, shown at the top here from PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3l1e" target="_blank">3l1e <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2wj7" target="_blank">2wj7 <i class="fa fa-external-link"> </i></a></span>, which associate to form large spherical complexes containing about 40 chains. These large spheres repel one another and distribute themselves throughout the lens cells. Beta crystallins, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1blb" target="_blank">1blb <i class="fa fa-external-link"> </i></a></span>, also form oligomeric complexes, typically formed of two or six copies of the chain. There are several similar beta crystallins, which can mix and match to form a bunch of different types of oligomers. Finally, gamma crystallins, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4gcr" target="_blank">4gcr <i class="fa fa-external-link"> </i></a></span>, are monomeric, and serve as a weak glue to gently bind the alpha crystallins together.</div>
+<h4>Moonlighting Proteins</h4>
+<div>Alpha, beta and gamma crystallins are found in most animals, but they are assisted by other crystallins in different animals. Often, these proteins also have another function elsewhere in the body, and are moonlighting as crystallins. Three examples are shown here: delta crystallin from ducks (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hy1" target="_blank">1hy1 <i class="fa fa-external-link"> </i></a></span>) also acts as the enzyme argininosuccinate lyase, epsilon crystallin from elephant shrew (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1o9j" target="_blank">1o9j <i class="fa fa-external-link"> </i></a></span>) is an aldehyde dehydrogenase that acts on retinal, and lambda crystallin from rabbits (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ado" target="_blank">3ado <i class="fa fa-external-link"> </i></a></span>) also acts as the enzyme L-gulonate 3-dehydrogenase.</div>
+<h4>Cataracts</h4>
+<div>Our crystallin proteins need to last our entire life, so the lens contains a powerful method to protect them. Alpha crystallin acts as chaperone, finding unfolded and damaged proteins and binding to them before they can aggregate into milky complexes. Unfortunately, in spite of this protection, the damage builds up as we age, as crystallins are broken or unfolded or oxidized. Slowly, the damage leads to progressive build-up of opaque aggregates, leading to cataracts.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Beta and Gamma Crystallin (PDB entries 1blb and 4gcr)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/127/mom127_1blb_jmol.jpg"/></div>
+<p>The key to crystallin function is their ability to form many different types of similar complexes, so that they will form a smooth, random arrangement when concentrated inside lens cells. The crystal structures of crystallins have revealed that they use domain swapping to form many different complexes using a small number of building blocks. Beta crystallin uses a classic domain swapping mechanism to mix-and-match different variants of the beta chain, and alpha crystallins use a more complex mechanism to create larger complexes. Click the images above to see Jmols that show these domain swaps in detail.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many proteins use domain swapping to create stable complexes. Can you find other examples in the PDB? (Hint: many researchers mention the term "domain swapping" in their titles or abstracts).</li>
+<li>Can you think of any other proteins with two or more different functions?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>K. K. Sharma and P. Santhoshkumar (2009) Lens aging: effects of crystallins. Biochimica et Biophysica Acta 1790, 1095-1108.</li>
+<li>L. Takemoto and C. M. Sorensen (2008) Protein-protein interactions and lens transparency. Experimental Eye Research 87, 496-501.</li>
+<li>H. Bloemendal, W. de Jong, R. Jaenicke, N. H. Lubsen, C. Slingsby and A. Tardieu (2004) Ageing and vision: structure, stability and function of lens crystallins. Progress in Biophysics and Molecular Biology 86, 407-485.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_7">http://doi.org/10.2210/rcsb_pdb/mom_2010_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

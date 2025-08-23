@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nanobodies</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nanobodies" property="og:title"/>
+<meta content="Unusual antibodies from camels are useful in research and medicine" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_antibody_nanobody.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/136" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nanobodies" name="twitter:title"/>
+<meta content="Unusual antibodies from camels are useful in research and medicine" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_antibody_nanobody.jpg" name="twitter:image"/>
+<meta content="Unusual antibodies from camels are useful in research and medicine" name="description"/>
+<meta content="antibody,heavy chain antibody,immune system,nanobody,single domain antibody,1mel,1mlc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 136
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 136 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nanobodies</h1>
+<p><i>Unusual antibodies from camels are useful in research and medicine</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A typical antibody (left) and a smaller camel antibody (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_antibody_nanobody.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A typical antibody (left) and a smaller camel antibody (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_antibody_nanobody.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nature is full of exceptions, and sometimes they turn out to be exceptionally useful. In 1993, researchers discovered that camels, dromedaries and llamas have unusual antibodies composed of a single type of protein chain. Later, similar single-chain antibodies were discovered in sharks. This would have been just another biological oddity, but it turns out that these unusual molecules hold the key to better tools for biotechnology and medicine.</div>
+<h4>Alternative Antibodies</h4>
+<div>The antibodies in our blood, and in most other vertebrate animals, are composed of two types of chains (shown here on the left). The larger heavy chain (in blue) plays two roles. It comes together with another heavy chain, forming the stem of the Y-shaped antibody. It also associates with two smaller light chains (in green), which together create the antigen-binding site at the tips of each arm. Some of the antibodies in camels, however, do without the light chains entirely (shown on the right). The two arms are composed of a truncated version of the heavy chain, and the single domain in each arm does all the work of recognizing antigens.</div>
+<h4>Fabulous Fabs</h4>
+<div>Fragments of antibodies are widely used in technology and medicine. The arms are cut off, forming smaller molecules known as Fabs. Each Fab contains a single site for binding to their target molecules. If this Fab binds to a cell surface protein, it can be used as a diagnostic tool to identify damaged or malignant cells. If this Fab is connected to a fluorescent molecule, it can be used to image the location of its target molecule inside cells. If the Fab binds to a viral protein, it can be used as a drug to fight the virus. Unfortunately, Fab molecules are rather large, and since they are composed of two chains, they are not as stable as we would like for these applications. This is where nanobodies come in.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Nanobody (blue) bound to lysozyme (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_1mel_complex.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nanobody (blue) bound to lysozyme (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies_1mel_complex.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nanobodies</h4>
+<div>Nanobodies are similar fragments taken from the unusual camel antibodies. The arms are cut off, creating a smaller, more stable molecule that, like an antibody Fab, is highly specific for a given target molecule. The one shown here binds specifically to lysozyme (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mel" target="_blank">1mel <i class="fa fa-external-link"> </i></a></span>). The nanobody is shown in blue and lysozyme is shown in red. Researchers have already used them in research, and are currently exploring them for use as drugs.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Nanobodies and Antibodies (PDB entries 1mel, 1t6v, 1mlc)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/136/136-Nanobodies-nanobody_jmol.jpg"/></div>
+<p>Since nanobodies are so small, they typically interact with a smaller portion of their targets when compared to other antibodies. This turns out to be an advantage, as seen by comparing the structure of a nanobody bound to lysozyme (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mel" target="_blank">1mel <i class="fa fa-external-link"> </i></a></span>) and a typical antibody Fab bound to the same target (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mlc" target="_blank">1mlc <i class="fa fa-external-link"> </i></a></span>). The nanobody has a finger-shaped loop that pokes into the active site of lysozyme, forming interactions that mimic the substrate. The typical antibody, however, has a large cup-shaped binding site that can't fit into the active site, so it grips one side of the protein instead. Click on the image to explore these two structures along with the structure of a shark nanobody.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the "Compare Structures" feature at the PDB to compare the structure of nanobodies with Fabs. To get started, try overlapping chain A of PDB entry <span class="rcsb_id_tag" title="">1mel</span> with chain H of PDB entry <span class="rcsb_id_tag" title="">2ig2</span>.</li>
+<li>Nanobodies have been useful tools for scientific research, and you can explore several of these structures in the PDB. For instance, PDB entry  <span class="rcsb_id_tag" title="">3p0g</span> includes a nanobody that was used to capture a cell receptor in an active conformation.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Muyldermans, T. N. Baral, V. Cortez Retamozzo, P. De Baetselier, E. De Genst, J. Kinne, H. Leonhardt, S. Magez, V. K. Nguyen, H. Revets, U. Rothbauer, B. Stijlemans, S. Tillib, U. Wernery, L. Wyns, Gh. Hassanzadeh-Ghassabeh and D. Saerens (2009) Camelid immunoglobulins and nanobody technology. Veternary Immunology and Immunopathology 128, 178-183.</li>
+<li>J. Wesolowski, V. Alzogaray, J. Reyelt, M. Unger, K. Juarez, M. Urrutia, A. Cauerhff, W. Danquah, F. Scheuplein, N. Schwarz, S. Adriouch, O. Boyer, M. Seman, A. Licea, D. V.  Serreze, F. A. Goldbaum, F. Haag and F. Koch-Nolte (2009) Single domain antibodies:  promising experimental and therapeutic tools in infection and immunity. Medical  Microbiology and Immunology 198, 157-174.</li>
+<li>C. Hamers-Casterman, T. Atarhouch, S. Muyldermans, G. Robinson, C. Hamers, E. Bajyana Songa, N. Bendahman and R. Hamers (1993) Naturally occuring antibodies devoid of light chains. Nature 363, 446-448.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_4">http://doi.org/10.2210/rcsb_pdb/mom_2011_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

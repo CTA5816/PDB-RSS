@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: RNA Polymerase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: RNA Polymerase" property="og:title"/>
+<meta content="RNA polymerase transcribes genetic information from DNA into RNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/40/1i6h-composite.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/40" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: RNA Polymerase" name="twitter:title"/>
+<meta content="RNA polymerase transcribes genetic information from DNA into RNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/40/1i6h-composite.gif" name="twitter:image"/>
+<meta content="RNA polymerase transcribes genetic information from DNA into RNA" name="description"/>
+<meta content="alpha-amanitin,DNA-directed RNA polymerase activity,transcription,1i6h,1k83,1msw" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 40
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 40 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: RNA Polymerase</h1>
+<p><i>RNA polymerase transcribes genetic information from DNA into RNA</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Model of RNA polymerase in action." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/40/1i6h-composite.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Model of RNA polymerase in action.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/40/40-RNAPolymerase-1i6h-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Not Just for Messages</h4>
+<div>RNA is a versatile molecule. In its most familiar role, RNA acts as an intermediary, carrying genetic information from the DNA to the machinery of protein synthesis. RNA also plays more active roles, performing many of the catalytic and recognition functions normally reserved for proteins. In fact, most of the RNA in cells is found in <a href="http://pdb101.rcsb.org/motm/121">ribosomes</a>--our protein-synthesizing machines--and the <a href="http://pdb101.rcsb.org/motm/15">transfer RNA</a> molecules used to add each new amino acid to growing proteins. In addition, countless small RNA molecules are involved in regulating, processing and disposing of the constant traffic of messenger RNA. The enzyme RNA polymerase carries the weighty responsibility of creating all of these different RNA molecules.</div>
+<h4>The RNA Factory</h4>
+<div>RNA polymerase is a huge factory with many moving parts. The one shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1i6h" target="_blank">1i6h <i class="fa fa-external-link"> </i></a></span>, is from yeast cells. It is composed of a dozen different proteins. Together, they form a machine that surrounds DNA strands, unwinds them, and builds an RNA strand based on the information held inside the DNA. Once the enzyme gets started, RNA polymerase marches confidently along the DNA copying RNA strands thousands of nucleotides long.</div>
+<h4>Accuracy</h4>
+<div>As you might expect, RNA polymerase needs to be accurate in its copying of genetic information. To improve its accuracy, it performs a simple proofreading step as it builds an RNA strand. The active site is designed to be able to remove nucleotides as well as add them to the growing strand. The enzyme tends to hover around mismatched nucleotides longer than properly added ones, giving the enzyme time to remove them. This process is somewhat wasteful, since proper nucleotides are also occasionally removed, but this is a small price to pay for creating better RNA transcripts. Overall, RNA polymerase makes an error about once in 10,000 nucleotides added, or about once per RNA strand created.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Inhibition of RNA polymerase by mushroom toxin alpha-amanitin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/40/1k83.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Inhibition of RNA polymerase by mushroom toxin alpha-amanitin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/40/40-RNAPolymerase-1k83.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Poisoning Polymerase</h4>
+<div>Since RNA polymerase is absolutely essential for the life of the cell, it is a sensitive target for poisons and toxins. The most powerful of these poisons is alpha-amanitin, a small circular peptide created by the death cap mushroom. Eating even one of these mushrooms will lead to coma and death in a manner of days, as the poison attacks RNA polymerase throughout the body. Surprisingly, it binds on the back side of RNA polymerase, away from the active site and away from the binding site for the DNA and RNA. It does not physically block the active site, like most inhibitors, but instead jams the mechanism of the enzyme. RNA polymerase is a highly mobile enzyme, that flexes and changes shape as it performs the sequential steps of binding to DNA, unwinding it, and then building the RNA strand. As seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k83" target="_blank">1k83 <i class="fa fa-external-link"> </i></a></span>, the poison binds between two subunits of the protein, gluing them together and blocking these essential motions.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/40/1msw-rasmol.gif"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1msw" target="_blank">1msw <i class="fa fa-external-link"> </i></a></span> contains a remarkable structure showing RNA polymerase in action. The structure includes a very small RNA polymerase that is made by the bacteriophage T7, shown here with blue tubes. A small transcription bubble, composed of two DNA strands and an RNA strand, is bound in the active site. Notice how the two DNA strands form a double helix at the top of the picture. The enzyme separates them in the middle and builds an RNA strand using the DNA on the right. Finally, at the bottom, the two DNA strands come back together. You can explore this structure in more detail by clicking the accession code and choosing one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Bruce Alberts, Alexander Johnson, Julian Lewis, Martin Raff, Keith Roberts and Peter Walter (2002) "Molecular Biology of the Cell" Chapter 6, Garland, New York. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2003, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_4">http://doi.org/10.2210/rcsb_pdb/mom_2003_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

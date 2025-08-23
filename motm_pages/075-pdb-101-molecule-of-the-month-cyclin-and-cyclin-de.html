@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cyclin and Cyclin-dependent Kinase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cyclin and Cyclin-dependent Kinase" property="og:title"/>
+<meta content="Cyclins and cyclin-dependent kinases control when cells divide, making them important targets for cancer therapy." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-1fin.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/236" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cyclin and Cyclin-dependent Kinase" name="twitter:title"/>
+<meta content="Cyclins and cyclin-dependent kinases control when cells divide, making them important targets for cancer therapy." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-1fin.jpg" name="twitter:image"/>
+<meta content="Cyclins and cyclin-dependent kinases control when cells divide, making them important targets for cancer therapy." name="description"/>
+<meta content="cyclin,CDK,cell cycle,cell division,cancer,chemotherapy,1fin,1jsu,1bi7,1qmz,2euf,5l2t,5l2s" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 236
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 236 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cyclin and Cyclin-dependent Kinase</h1>
+<p><i>Cyclins and cyclin-dependent kinases control when cells divide, making them important targets for cancer therapy.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cyclin A (green) and cyclin-dependent kinase 2 (blue) with ATP (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-1fin.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cyclin A (green) and cyclin-dependent kinase 2 (blue) with ATP (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-1fin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Division of cells is tightly regulated, and for very good reason. During early development of an embryo, many cells divide and multiply. But later in life, most cells have taken on specialized tasks and don’t need to divide any more. Only a few types of cells, such as skin cells and cells of the immune system, need to keep dividing. A collection of cyclins and cyclin-dependent kinases (CDK) together control when cells divide and when they don’t. Control is absolutely essential, since uncontrolled growth is one of the hallmarks of cancer.</div>
+<h4>Cycles and Checkpoints</h4>
+<div>Growth and division of cells is cyclic, split into several distinct phases. In the G1 phase, the cell synthesizes all of the proteins, ribosomes, and other machinery that it will need. When it has enough, it moves to the S phase, where the DNA is replicated. After a gap phase called G2, the cell moves to the M phase of mitosis, the cell divides, and the two cells can then start the cycle all over again. Transitions between these phases are controlled by different cyclins and CDKs, which guard checkpoints that allow passage from one phase into the next.</div>
+<h4>Mobilizing Machinery</h4>
+<div>Cyclins and CDKs work together to guard the checkpoints. Cyclin levels are usually kept low, through the action of <a href="https://pdb101.rcsb.org/motm/60">ubiquitin</a> and <a href="https://pdb101.rcsb.org/motm/166">proteasomes</a>. When conditions are appropriate, cyclin levels are allowed to rise, and they bind to their partner CDKs, as seen here in PDB entry <a href="https://www.rcsb.org/structure/1fin" target="_blank">1fin</a>. The kinase then phosphorylates itself, which enhances its action, and then phosphorylates many proteins for DNA synthesis, cell division, and other tasks that are needed at that particular stage in the cell cycle.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="In the structure at top, a small peptide from a target protein (yellow) is bound in the active site of cyclin-dependent kinase. In the two structures at the bottom, inhibitory proteins (red) are blocking the action of the kinase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-CDKinhibitors.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>In the structure at top, a small peptide from a target protein (yellow) is bound in the active site of cyclin-dependent kinase. In the two structures at the bottom, inhibitory proteins (red) are blocking the action of the kinase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-CDKinhibitors.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Tuning the Cycle</h4>
+<div>Many additional proteins help regulate cell-cycle control. The two shown here bind to CDK6 and slow its action, for example, when DNA damage needs to be repaired before moving into DNA replication. INK4 inhibitors (shown here from PDB entry <a href="https://www.rcsb.org/structure/1bi7" target="_blank">1bi7</a>) bind to CDK and cause a key active site loop (in lighter blue in the figure) to move, inactivating the protein and impacting its interaction with cyclin. Kip1 inhibitors (shown here from PDB entry <a href="https://www.rcsb.org/structure/1jsu" target="_blank">1jsu</a>) insinuate into the active site, blocking ATP binding. Compare these structures to the one shown at the top (PDB entry <a href="https://www.rcsb.org/structure/1qmz" target="_blank">1qmz</a>), which includes an active complex of cyclin and CDK bound to a small peptide from a target protein.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cyclin-dependent Kinase and Anticancer Drugs</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/236/236-Cyclin_and_Cyclindependent_Kinase-jsmol.jpg"/></div>
+<p>CDK enzymes are targets for cancer chemotherapy, since by blocking them, we can block the abnormal growth of tumor cells. Much effort has been focused on CDK4 and CDK6, which guard a key restriction point before the cell starts DNA replication. Structures of three US FDA-approved drugs are shown here (PDB entries <a href="https://www.rcsb.org/structure/2euf" target="_blank">2euf</a>, <a href="https://www.rcsb.org/structure/5l2t" target="_blank">5l2t</a> and <a href="https://www.rcsb.org/structure/5l2s" target="_blank">5l2s</a>), all of which were discovered through structure-based design. They all have different chemical structures, but bind in a similar way to the active site of the enzyme, blocking its ability to bind to ATP and phosphorylate target proteins. To compare these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many structures of other inhibitors with CDK have been determined. Try searching for “CDK inhibitor” in the <a href="https://www.rcsb.org">main RCSB site</a> to explore some of them.</li>
+<li>Kinases often have a two-domain structure, with the active site formed between the two domains. Try comparing the structure of CDK with, for example, the MAP kinase (which is similar and is thought to have evolved from the same ancestral enzyme), or glycolytic phosphoglycerate kinase (which is quite different).</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Roskoski, R. Cyclin-dependent protein serine/threonine kinase inhibitors as anticancer drugs. (2019) Pharmacol. Res. 139, 471-488</li>
+<li>5l2s, 5l2t: Chen, P., Lee, N.V., Hu, W., Xu, M., Ferre, R.A., Lam, H., Bergqvist, S., Solowiej, J., Diehl, W., He, Y.A., Yu, X., Nagata, A., VanArsdale, T., Murray, B.W. Spectrum and Degree of CDK Drug Interactions Predicts Clinical Performance. (2016) Mol.Cancer Ther. 15: 2273-2281</li>
+<li>2euf: Lu, H., Schulze-Gahmen, U. Toward understanding the structural basis of cyclin-dependent kinase 6 specific inhibition. (2006) J.Med.Chem. 49: 3826-3831</li>
+<li>1qmz: Brown, N.R., Noble, M.E., Endicott, J.A., Johnson, L.N. The Structural Basis for Specificity of Substrate and Recruitment Peptides for Cyclin-Dependent Kinases. (1999) Nat.Cell Biol. 1: 438-443</li>
+<li>1bi7: Russo, A.A., Tong, L., Lee, J.O., Jeffrey, P.D., Pavletich, N.P. Structural basis for inhibition of the cyclin-dependent kinase Cdk6 by the tumour suppressor p16INK4a. (1998) Nature 395: 237-243</li>
+<li>1jsu: Russo, A.A., Jeffrey, P.D., Patten, A.K., Massague, J., Pavletich, N.P. Crystal structure of the p27Kip1 cyclin-dependent-kinase inhibitor bound to the cyclin A-Cdk2 complex. (1996) Nature 382: 325-331</li>
+<li>1fin: Jeffrey, P.D., Russo, A.A., Polyak, K., Gibbs, E., Hurwitz, J., Massague, J., Pavletich, N.P. Mechanism of CDK activation revealed by the structure of a cyclinA-CDK2 complex. (1995) Nature 376: 313-320</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_8">http://doi.org/10.2210/rcsb_pdb/mom_2019_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

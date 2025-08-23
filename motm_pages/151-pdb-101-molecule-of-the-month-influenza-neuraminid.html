@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Influenza Neuraminidase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Influenza Neuraminidase" property="og:title"/>
+<meta content="Neuraminidase is an important target for influenza drugs" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-neuraminidases.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/113" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Influenza Neuraminidase" name="twitter:title"/>
+<meta content="Neuraminidase is an important target for influenza drugs" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-neuraminidases.jpg" name="twitter:image"/>
+<meta content="Neuraminidase is an important target for influenza drugs" name="description"/>
+<meta content="influenza subtypes,drug resistance,viral,exo-alpha-sialidase activity,influenza A virus,influenza vaccines,oseltamivir,zanamivir,influenza,neuraminidase,1nn2,3b7e,2hu4,1nca,2bat,3cl0" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 113
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 113 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Influenza Neuraminidase</h1>
+<p><i>Neuraminidase is an important target for influenza drugs</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ectodomain of neuraminidase (top), with Relenza (center) and Tamiflu (bottom), and three zinc fingers from Klf5 (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-neuraminidases.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ectodomain of neuraminidase (top), with Relenza (center) and Tamiflu (bottom), and three zinc fingers from Klf5 (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-neuraminidases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Influenza virus is continually changing and every decade or so, a dangerous new strain appears and poses a threat to public health. In 2009, there was an outbreak of a new strain of H1N1 flu, more commonly known as swine flu. The H1N1 designation refers to the two molecules that cover the surface of the virus: <a class="static" href="https://pdb101.rcsb.org/motm/76">hemagglutinin</a> and neuraminidase. Together, these two molecules control the infectivity of the virus. Hemagglutinin plays the starring role as the virus approaches a cell, binding to polysaccharide chains on the cell surface and then injecting the viral genome into the cell. Neuraminidase, on the other hand, plays its major role after the virus leaves an infected cell. It ensures that the virus doesn't get stuck on the cell surface by clipping off the ends of these polysaccharide chains.</div>
+<h4>Clipping Sugars</h4>
+<div>Neuraminidase, shown here at the top from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nn2" target="_blank">1nn2 <i class="fa fa-external-link"> </i></a></span>, is composed of four identical subunits arranged in a square. It is normally attached to the virus surface through a long protein stalk (not shown). The active sites are in a deep depression on the upper surface. They bind to polysaccharide chains and clip off the sugars at the end. The surface of neuraminidase is decorated with several polysaccharide chains (seen extending upwards and downwards in this structure) that are similar to the polysaccharide chains that decorate our own cell surface proteins.</div>
+<h4>Pigs and People</h4>
+<div>As with hemagglutinin, neuraminidase comes in a variety of subtypes named N1-N9. These subtypes are defined by their interaction with antibodies: all of the variants within a given subtype will be neutralized by a similar set of antibodies. These subtypes are one of the causes of the continual effectiveness of influenza. Some of the subtypes promote infection in people, others promote infection in birds, and others target pigs and other mammals. As viruses spread and infect different organisms, they can mix and match different subtypes, randomly building new combinations and occasionally coming up with particularly lethal combinations.</div>
+<h4>Fighting Back</h4>
+<div>Two effective drugs are currently used to battle influenza infection: zanamivir (Relenza) and oseltamivir (Tamiflu). These drugs were discovered using the crystal structures found in the PDB. By studying the binding of molecules to the neuraminidase active site, researchers were able to design new drug molecules that mimic the natural substrates of the enzyme. These molecules bind tightly in the active site, and block its essential role in viral release. Two structures of these drugs are shown here. At the center (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3b7e" target="_blank">3b7e <i class="fa fa-external-link"> </i></a></span>) is zanamivir bound to neuraminidase from the "Spanish flu" virus that caused a pandemic in 1918. At the bottom (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hu4" target="_blank">2hu4 <i class="fa fa-external-link"> </i></a></span>) is oseltamivir bound to an avian flu virus.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Antibody Fab fragments (blue) bound to the neuraminidase ectodomain." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-1nca.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antibody Fab fragments (blue) bound to the neuraminidase ectodomain.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-1nca.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Antibodies and Vaccines</h4>
+<div>When we are infected with influenza, our immune system makes antibodies to fight the virus. The flu vaccine is a way to make the immune system ready for this protection, by challenging us with a weakened virus or harmless fragments of the virus, and spurring the immune system to make the proper antibodies before an infection. As you might expect, these antibodies recognize the proteins on the surface of the virus. The most effective ones are the ones against hemagglutinin, which block infection of new cells. Antibodies against neuraminidase, like the ones shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nca" target="_blank">1nca <i class="fa fa-external-link"> </i></a></span>, can reduce the severity of the flu, playing a supporting role in the fight against the virus.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Drug Resistance in Neuraminidase (PDB entries 2bat, 2hu4 and 3cl0) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/113/113-Influenza_Neuraminidase-neuraminidase_jmol.jpg"/></div>
+<p>When designing a drug, we walk a fine line. Drugs need to be different from the natural substrate of the enzyme so that the enzyme can't catalyze a reaction to destroy it. However, drugs must also be very similar to the natural substrate of the enzyme, so that they bind tightly and block the enzyme. It is also important to make drugs similar to the natural substrates in order to avoid drug resistance. An example of this problem is shown in these three structures. The first structure shows neuraminidase with sialic acid in the active site (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2bat" target="_blank">2bat <i class="fa fa-external-link"> </i></a></span>). This structure shows us how the enzyme interacts with polysaccharides during its normal reaction. The second structure shows the binding of oseltamivir, one of the drugs used to fight influenza infection (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hu4" target="_blank">2hu4 <i class="fa fa-external-link"> </i></a></span>). Notice that it is similar but not identical to sialic acid: it is slightly larger and it forces a glutamate (shown in pink) to swing upwards a bit towards a neighboring histidine (also shown in pink). The third structure is a drug resistant strain of the enzyme (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cl0" target="_blank">3cl0 <i class="fa fa-external-link"> </i></a></span>). The histidine has mutated to a larger tyrosine, forcing the glutamate down against the drug. The drug still binds, but not nearly as tightly, so the polysaccharide substrates can easily displace it and the drug is no longer effective against the mutant virus. However, there is still plenty of room for the sialic acid to bind, so the enzyme still works for its normal function of viral release.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures are available for several of the 9 different subtypes of neuraminidase. Can you find examples of different ones?</li>
+<li>Many structures of neuraminidase bound to inhibitors are available in the PDB. Can you find similarities and differences between them and sialic acid?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. M. Colman (1994) Influenza virus neuraminidase: structure, antibodies, and inhibitors. Protein Science 3, 1687-1696.</li>
+<li>M. von Itzstein (2007) The war against influenza: discovery and development of sialidase inhibitors. Nature Reviews Drug Discovery 6, 967-974.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_5">http://doi.org/10.2210/rcsb_pdb/mom_2009_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

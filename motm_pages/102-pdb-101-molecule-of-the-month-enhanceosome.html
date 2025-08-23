@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Enhanceosome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Enhanceosome" property="og:title"/>
+<meta content="Enhanceosomes help decide the appropriate time to transcribe a gene" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/122/enhanceosome.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/122" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Enhanceosome" name="twitter:title"/>
+<meta content="Enhanceosomes help decide the appropriate time to transcribe a gene" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/122/enhanceosome.jpg" name="twitter:image"/>
+<meta content="Enhanceosomes help decide the appropriate time to transcribe a gene" name="description"/>
+<meta content="CBP,CREB-binding protein,enhanceosome,gene expression,transcription factor,transcriptional enhancers,1t2k,2pi0,2o6g,2o61,1l8c,1kdx,1jsp,3biy,2ka6,1kbh" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 122
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 122 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Enhanceosome</h1>
+<p><i>Enhanceosomes help decide the appropriate time to transcribe a gene</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Enhanceosome that controls transcription of the gene for interferon-beta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/122/enhanceosome.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Enhanceosome that controls transcription of the gene for interferon-beta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/122/122-Enhanceosome_enhanceosome.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Take a moment to ponder the form of your body: the shape of your face, the color of your eyes, the length of your fingers, the perfect articulation of your bones and muscles, the way your hair grows curly or straight. Now let your imagination travel inward, and think of the complex shapes and functions of your different cells, and the teeming molecular world inside each one. Remarkably, this amazing structure and form and function is specified by information in the genome, which encodes a mere 20,000-25,000 protein-coding genes. One of the great puzzles being pieced together by scientists is the mechanism by which these genes, and the methods used to control their expression, specify all of these different aspects of life.</div>
+<h4>Combinatorial Control</h4>
+<div>In order to specify which gene will be expressed in a given situation, your cells use a diverse collection of DNA-binding proteins to control access to the DNA. Surprisingly, there are relatively few of these proteins: by some estimates, the human genome encodes about 2,600 of them. But then, the capabilities of this limited set are greatly expanded by using them in combination, by requiring two or more to bind simultaneously to activate a gene. In this way, each protein may be used in many ways and the spectrum of responses is far more varied.</div>
+<h4>Enhancing Transcription</h4>
+<div>The assembly of DNA and proteins pictured here is a transcriptional enhanceosome (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1t2k" target="_blank">1t2k <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pi0" target="_blank">2pi0 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o6g" target="_blank">2o6g <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o61" target="_blank">2o61 <i class="fa fa-external-link"> </i></a></span>) that controls expression of interferon-beta, an important protein for fighting viral infection. When the cell is infected by viruses, several different DNA-binding proteins are produced, including ATF-2/c-Jun (in green at the top), interferon response factors (IRF, shown in turquoise at the center), and nuclear factor kB (NF-kB, shown in blue and magenta at the bottom). Individually, each one is not sufficient to activate the gene, and each one also plays other roles in the activation of other genes (for instance, Nf-kB is also important in immune responses, inflammation, apoptosis, and many other processes). But when they all bind together, they activate the gene and interferon is made.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="CREB-binding protein (blue) with domians from several of its binding partners (green). Flexible portions not seen in the structures are shown as dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/122/CBP.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>CREB-binding protein (blue) with domians from several of its binding partners (green). Flexible portions not seen in the structures are shown as dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/122/122-Enhanceosome_CBP.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Integrating the Signal</h4>
+<div>Once the transcription factors bind to the different sites in the enhancer DNA sequence, the signal must somehow be sensed and used to activate the gene. In many cases, this is performed using CREB-binding protein or the similar protein p300. This protein is composed of many connected domains, (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l8c" target="_blank">1l8c <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kdx" target="_blank">1kdx <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jsp" target="_blank">1jsp <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3biy" target="_blank">3biy <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ka6" target="_blank">2ka6 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kbh" target="_blank">1kbh <i class="fa fa-external-link"> </i></a></span>), which bind to different proteins in the assembled enhanceosome. Then, a large domain in the center acts as a histone acetyltransferase, modifying histones in nucleosomes and causing them to disassemble and reveal the gene. In the intereferon-b gene, a nucleosome normally covers the start site of transcription, blocking transcription. Assembly of the enhanceosome leads to removal of this nucleosome, allowing the gene to be expressed.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Enhanceosome</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/122/enhanceosome_jmol.jpg"/></div>
+<p>This model of the entire interferon-b enhancer was created by Daniel Panne based on several crystallographic structures (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1t2k" target="_blank">1t2k <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pi0" target="_blank">2pi0 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o6g" target="_blank">2o6g <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o61" target="_blank">2o61 <i class="fa fa-external-link"> </i></a></span>); click here for <a class="static" href="https://cdn.rcsb.org/pdb101/motm/122/enhanceosome.pdb">coordinates of the model)</a>. It reveals several surprising aspects of the assembly. First, it shows that the DNA is nearly straight--some researchers had predicted that the DNA would be significantly bent. Second, the interaction between the proteins is very limited, even though the binding of the proteins is known to be cooperative, such that binding of one protein promotes the binding of others. This may be a consequence of several things. Several of the proteins bind on opposite sides of the same part of the DNA, so the proteins may promote binding by distorting the DNA slightly into a preferred conformation. Also, the crystal structures of ATF-2/c-Jun and the IRF proteins were solved using only the DNA-binding portions of the proteins, so the missing portions of the proteins may interact cooperatively with their neighbors. Finally, inside cells, CREB-binding protein or p300 (shown on the previous page) might generate a strong cooperative effect through its binding to the different proteins. Click on the image to view an interactive Jmol version.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Additional structures of several of these proteins are available in the PDB. Are they similar in structure to the proteins in the enhanceosome complex?</li>
+<li>Many different protein folding motifs are used to recognize DNA. Can you find other examples in the PDB?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Panne, T. Maniatis and S. C. Harrison (2007) An atomic model of the interferon-b enhanceosome. Cell 129, 1111-1123.</li>
+<li>D. Panne (2008) The enhanceosome. Current Opinion in Structural Biology 18, 236-242.</li>
+<li>L. Wang, Y. Tang, P. A. Cole and R. Marmorstein (2008) Structure and chemistry of the p300/CBP and Rtt109 histone acetyltransferases: implications for histone acetyltransferase evolution and function. Current Opinion in Structural Biology 18, 741-747.</li>
+<li>Number of genes in the human genome: International Human Genome Sequencing Consortium (2004) Finishing the euchromatic sequence of the human genome. Nature 431, 931-945.</li>
+<li>Number of transcription factors in the human genome: M. M. Babu, N. M. Luscombe, L. Aravind, M. Gerstein and S. A. Teichmann (2004) Structure and evolution of transcriptional regulatory networks. Current Opinion in Structural Biology 14, 283-291.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_2">http://doi.org/10.2210/rcsb_pdb/mom_2010_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Designed Proteins and Citizen Science</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Designed Proteins and Citizen Science" property="og:title"/>
+<meta content="What if people with no formal experience in science could help to improve or even rewrite nature, simply by playing a game?" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-FoldiProteins.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/259" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Designed Proteins and Citizen Science" name="twitter:title"/>
+<meta content="What if people with no formal experience in science could help to improve or even rewrite nature, simply by playing a game?" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-FoldiProteins.jpg" name="twitter:image"/>
+<meta content="What if people with no formal experience in science could help to improve or even rewrite nature, simply by playing a game?" name="description"/>
+<meta content="Foldit,citizen science,6mrr,6mrs,6nuk,6msp,3u0s,3i1c,6tht,3sqf,3r2x,1qys,de novo protein design,rosetta,alphafold,CASP14,protein interactions,M-PMV,drug development" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 259
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 259 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Designed Proteins and Citizen Science</h1>
+<p><i>What if people with no formal experience in science could help to improve or even rewrite nature, simply by playing a game?</i></p>
+<div>
+<div><i>This article was written and illustrated by Changpeng Lu, Natalie Losada, and Nithish Selvaraj as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021. </i></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Four proteins created by Foldit users (image generated with Pymol)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-FoldiProteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Four proteins created by Foldit users (image generated with Pymol).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-FoldiProteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4><i>De novo</i> Design, at a Glance </h4>
+<div>The Protein Data Bank (PDB) has been the central archive of biomolecular structures since 1971. These structures, of proteins, nucleic acids, and their various complexes have helped us understand structure-function relations in biology and learn the rules about how polypeptide chains fold into functional proteins. Using this knowledge, scientists have recently attempted <i>de novo</i> design of custom proteins to solve some 21st century problems like breaking down plastic or efficiently building specific drug molecules. Protein folding and design programs like AlphaFold and Rosetta can predict structures of the designed proteins, but these proteins may not always be stable when synthesized to test function. In these scenarios scientists have turned to gamers and citizen scientists for help in improving the protein designs.</div>
+<h4>A Solution: Foldit</h4>
+<div>Foldit is an interactive computer game that enables players to design protein sequences and predict their structures. Its easy-to-use interface enables players to manipulate structures based on spatial intuition, while following rules for stabilizing interactions such as hydrogen bonds and hydrophobic interactions, as set by the Rosetta program, to score the highest points in the game. To start a challenge, scientists upload protein folding puzzles with varied levels of difficulty - ranging from simple modifications of an already folded structure, to structure prediction of an entire <i>de novo</i> designed protein. Players use their 3D problem-solving skills to explore a unique range of structures that might be missed by purely computational approaches. Afterwards, when these proteins are synthesized by scientists and tested in laboratory experiments to confirm intended properties and function(s), users can see their predicted structures as real proteins.</div>
+<h4>The Impact of <i>de novo</i> Design</h4>
+<div>New protein folds have been a cornerstone of <i>de novo</i> design - for example, to engineer new enzymes and other functional proteins. Scientific groups have used algorithms like Rosetta to design new protein folds from scratch, such as <a href="https://pdb101.rcsb.org/motm/70">Top7 (<a href="https://www.rcsb.org/structure/1qys" target="_blank">1qys</a>, not shown). These new folds are the basis from which new enzymes are created, such as proteins that help fight off viral infections (<a href="https://www.rcsb.org/structure/7jzl" target="_blank">7jzl</a> and <a href="https://www.rcsb.org/structure/3r2x" target="_blank">3r2x</a>, not shown) or the creation of molecules that can track specific chemicals in cells. Foldit players created 56 unique proteins from scratch, one of them even had a newly-discovered protein fold! Experimental structures of four of these new proteins are shown here (PDB ID <a href="https://www.rcsb.org/structure/6mrr" target="_blank">6mrr</a>, <a href="https://www.rcsb.org/structure/6nuk" target="_blank">6nuk</a>, <a href="https://www.rcsb.org/structure/6msp" target="_blank">6msp</a> and <a href="https://www.rcsb.org/structure/6mrs" target="_blank">6mrs</a>). Thanks to new computational design tools, there are now more possibilities for <i>de novo</i> designed proteins than ever before.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="An engineered Diels-Alderase enzyme (left) and an enzyme modified with Foldit (right). The designed loop (pink) stabilizes the ligand (green), increasing catalytic activity." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-3i1c_3u0s.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>An engineered Diels-Alderase enzyme (left) and an enzyme modified with Foldit (right). The designed loop (pink) stabilizes the ligand (green), increasing catalytic activity.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-3i1c_3u0s.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Protein Structure Prediction and Engineering</h4>
+<div>Tools developed for <i>de novo</i> protein design have also been very effective for structure prediction and optimization. Three examples are listed here. Using structure optimization, scientists engineered an efficient PET depolymerase (<a href="https://www.rcsb.org/structure/6tht" target="_blank">6tht</a>, not shown) that performs the difficult chemical task of breaking down polyester plastics. After 10 years of trying, scientists were finally able to determine the structure of the Mason-Pfizer monkey virus (M-PMV) protease, with help from Foldit players (<a href="https://www.rcsb.org/structure/3sqf" target="_blank">3sqf</a>, not shown). The structure is ready to be used in targeted drug discovery. Finally, Foldit players were able to improve the function of an existing protein by increasing its catalytic activity more than 10-fold. The starting point was an engineered protein that performs an unusual Diels-Alder reaction (PDB ID <a href="https://www.rcsb.org/structure/3i1c" target="_blank">3i1c</a>). Foldit players were guided by scientists to build a “lid” for the enzyme to hold the substrate more tightly for more efficient catalysis (PDB ID <a href="https://www.rcsb.org/structure/3u0s" target="_blank">3u0s</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>How is a protein’s structure stabilized?</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/259/259-Designed_Proteins_and_Citizen_Science-6nuk_Jmol.jpg"/></div>
+<p>For proteins to adopt their stable 3D structure, many different types of interactions occur between individual amino acids. Carbon-rich amino acid side chains are clustered inside the enzyme, forming a “hydrophobic core,” while amino acids with charged and polar side chains are most often arrayed on the surface of the protein, where they interact with the surrounding water. Specific interactions, such as ionic interactions, hydrogen bonds, and others further stabilize the protein and guide the local details of the polypeptide chain fold. Click on the image for an interactive JSmol that displays many of these interactions for a Foldit-designed protein (PDB ID <a href="https://www.rcsb.org/structure/6nuk" target="_blank">6nuk</a>).</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try Fold.it yourself at <a href="https://fold.it/">their website</a>.</li>
+<li>Try searching for “de novo” at <a href="https://rcsb.org">the main RCSB PDB site</a> to see many designed proteins in the PDB archive.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-structure-prediction-design-and-computed-structure-models">Protein Structure Prediction, Design, and Computed Structure Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Kohli, P., Jones, D.T., Silver, D., Kavukcuoglu, K., Hassabis, D. (2020) Improved protein structure prediction using potentials from deep learning. Nature 577: 706–710.</li>
+<li>Tournier, V., Topham, C.M., Gilles, A., David, B., Folgoas, C., Moya-Leclair, E., Kamionka, E., Desrousseaux, M.L., Texier, H.,  Gavalda, S., Cot, M., Guémard, E., Dalibey, M., Nomme, J., Cioci, G., Barbe, S., Chateau, M., André, I., Duquesne, S., Marty, A. (2020) An engineered PET depolymerase to break down and recycle plastic bottles. Nature 580: 216–219.</li>
+<li>6mrs, 6mrr, 6msp, 6nuk: Koepnick, B., Flatten, J., Husain, T., Ford, A., Silva, D., Bick, M., Bauer, A., Liu, G., Ishida, Y., Boykov, A., Estep, R., Kleinfelter, S., Nørgård-Solano, T., Wei, L., Foldit Players, Montelione, G. T., DiMaio, F., Popović, Z., Khatib, F., Cooper, S., Baker, D. (2019) De novo protein design by citizen scientists. Nature 570: 390–394.</li>
+<li>Feng, J., Wester, B. W., Tinberg, C. E., Mandell, D. J., Antunes, M. S., Chari, R., Morey, K. J., Rios, X., Medford, J. I., Church, G. M., Fields, S., Baker, D. (2015) A General Strategy to Construct Small Molecule Biosensors in Eukaryotes. ELife 4.</li>
+<li>3u0s: Eiben, C.B., Siegel, J.B., Bale, J. B., Cooper, S., Khatib, F., Shen, B.W., Foldit Players, Stoddard, B.L., Popovic, Z., Baker, D. (2012) Increased Diels-Alderase activity through backbone remodeling guided by Foldit players. Nature Biotechnology 30(2): 190-192. </li>
+<li>Cooper, S., Khatib, F., Treuille, A., Barbero, J., Lee, J., Beenen, M., Leaver-Fay, A., Baker, D., Popovic, Z., Foldit players. (2010) Predicting protein structures with a multiplayer online game. Nature 466: 756–760.</li>
+<li>3i1c: Siegel, J.B., Zanghellini, A., Lovick, H.M., Kiss, G., Lambert, A.R., St Clair, J.L., Gallaher, J.L., Hilvert, D., Gelb, M.H., Stoddard, B.L., Houk, K.N., Michael, F.E., Baker, D. (2010) Computational design of an enzyme catalyst for a stereoselective bimolecular Diels-Alder reaction. Science 329: 309-313.</li>
+<li>Senior, A.W., Evans, R., Jumper, J., Kirkpatrick, J., Sifre, L., Green, T., Qin, C., Zidek, A., Nelson, A.W.R., Bridgland, A., Penedones, H., Petersen, S., Simonyan, K., Crossan, S., Simons, K.T., Bonneau, R., Ruczinski, I.,Baker, D. (1999) Ab initio protein structure prediction of CASP III targets using ROSETTA. Proteins 37: 171-176.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2021, Changpeng Lu, Natalie Losada, Nithish Selvaraj, David S. Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_7">http://doi.org/10.2210/rcsb_pdb/mom_2021_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

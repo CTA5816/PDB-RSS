@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Insulin Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Insulin Receptor" property="og:title"/>
+<meta content="The cellular receptor for insulin helps control the utilization of glucose by cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_insulinreceptor.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/182" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Insulin Receptor" name="twitter:title"/>
+<meta content="The cellular receptor for insulin helps control the utilization of glucose by cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_insulinreceptor.jpg" name="twitter:image"/>
+<meta content="The cellular receptor for insulin helps control the utilization of glucose by cells" name="description"/>
+<meta content="blood glucose level,diabetes mellitis,hormone action,receptor tyrosine kinase,signal transduction,3loh,2mfr,1irk,3w14,1irk,1ir3" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 182
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 182 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Insulin Receptor</h1>
+<p><i>The cellular receptor for insulin helps control the utilization of glucose by cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Insulin receptor, with the extracellular portion at the top, intracellular portion at the bottom, and the cell membrane shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_insulinreceptor.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Insulin receptor, with the extracellular portion at the top, intracellular portion at the bottom, and the cell membrane shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_insulinreceptor.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Cells throughout the body are fueled largely by glucose that is delivered through the bloodstream. A complex signaling system is used to control the process, ensuring that glucose is delivered when needed and stored when there is a surplus. Two hormones, insulin and glucagon, are at the center of this signaling system. When blood glucose levels drop, alpha cells in the pancreas release glucagon, which then stimulates liver cells to release glucose into the circulation. When blood glucose levels rise, on the other hand, beta cells in the pancreas release <a href="https://pdb101.rcsb.org/motm/14">insulin</a>, which promotes uptake of glucose for metabolism and storage. Both hormones are small proteins that are recognized by receptors on the surface of cells.</div>
+<h4>Signal Transduction</h4>
+<div>The receptor for insulin is a large protein that binds to insulin and passes its message into the cell. It has several functional parts. Two copies of the protein chains come together on the outside of the cell to form the receptor site that binds to insulin. This is connected through the membrane to two tyrosine kinases, shown here at the bottom. When insulin is not present, they are held in a constrained position, but when insulin binds, these constraints are released. They first phosphorylate and activate each other, and then phosphorylate other proteins in the signaling network inside the cell. Since the whole receptor is so flexible, researchers have determined its structure in several pieces: the insulin-binding portion is shown here from PDB entry <span class="rcsb_id_tag" title="Insulin Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3loh" target="_blank">3loh <i class="fa fa-external-link"> </i></a></span>, the transmembrane segment from <span class="rcsb_id_tag" title="Insulin Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2mfr" target="_blank">2mfr <i class="fa fa-external-link"> </i></a></span>, and the tyrosine kinase from <span class="rcsb_id_tag" title="Insulin Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1irk" target="_blank">1irk <i class="fa fa-external-link"> </i></a></span>.</div>
+<h4>When Things Go Wrong</h4>
+<div>Problems with insulin signaling can impair the proper management of glucose levels in the blood, leading to the widespread disease <i>diabetes mellitis</i>. There are two common ways that this happens. Type I diabetes is caused by problems with insulin: in some cases, the pancreatic cells that produce insulin are destroyed by autoimmunity, and in other cases insulin is mutated and inactive. This often occurs early in life, and requires treatment with insulin to replace the missing insulin. Type II diabetes, on the other hand, most often occurs later in life, and is caused by an acquired resistance to the action of insulin on its receptor. The details are complex and involve phosphorylation of the receptor and its substrates, modifying their action in insulin signaling. The condition is treated with careful attention to diet, lifestyle and medication.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Extracellular portion of the insulin receptor (blue) bound to insulin (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_3w14_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Extracellular portion of the insulin receptor (blue) bound to insulin (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_3w14_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Insulin Binding</h4>
+<div>When insulin binds to the receptor, it is thought to cause a change in shape that is propagated inside the cell, activating the tyrosine kinases. The details are still a mystery and an area of active research. A recent structure of insulin bound to a portion of the receptor (insulin shown here in red from PDB entry <span class="rcsb_id_tag" title="Insulin Receptor and Insulin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3w14" target="_blank">3w14 <i class="fa fa-external-link"> </i></a></span>) places another piece in the puzzle. Surprisingly, insulin binds to the outer edge of the receptor, and typically only binds to one side of the symmetrical receptor.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Insulin Receptor Tyrosine Kinase (PDB entries 1irk and 1ir3)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/182/182-InsulinReceptor_1irk_1ir3_JSmol.jpg"/></div>
+<p>The tyrosine kinase portion of the receptor is itself a dynamic protein with many moving parts. The active site binds to ATP and uses it to phosphorylate its targets. In the inactive state (shown on the left, PDB entry <span class="rcsb_id_tag" title="Insulin Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1irk" target="_blank">1irk <i class="fa fa-external-link"> </i></a></span>), a mobile loop (in bright turquoise) binds in the active site, blocking its action. When the receptor is activated, several tyrosines (green) on this loop are phosphorylated, causing it to swing out of the active site, allowing ATP (magenta) to enter (shown on the right, PDB entry <span class="rcsb_id_tag" title="Insulin Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ir3" target="_blank">1ir3 <i class="fa fa-external-link"> </i></a></span>). Other signaling proteins (a small peptide from one is shown in pink) then bind and are phosphorylated on their tyrosine amino acids. To explore these two structures in more detail, click on the image for an interactive JSmol. <br clear="BOTTOM"/></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P06213">Group Sequence view for insulin receptor</a> at the RCSB PDB to determine which portion of the receptor is included in each PDB entry.</li>
+<li>Several of the structures of the insulin-binding portion of the molecule, including entry 3loh, were determined by attaching antibodies to the receptor and crystallizing the complex. When you visualize these structures, be sure to ignore the antibodies, since they are not involved with the biological function of the molecule.</li>
+<li>There are many excellent online resources to learn about diabetes, such as the <a href="http://www.who.int/diabetes">World Health Organization</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>2mfr: Q. Li, Y. L. Wong &amp; C. Kang (2014) Solution structure of the transmembrane domain of the insulin receptor in detergent micelles. Biochimica et Biophysica Acta 1838, 1313-1321.</li>
+<li>S. R. Hubbard (2013) The insulin receptor: both a prototypical and atypical receptor tyrosine kinase. Cold Spring Harbor Perspectives in Biology 5:a008946, 1-12.</li>
+<li>3w14: J. G. Menting, J. Whittaker, M. B. Margetts, L. J. Whittaker, G. K. W. Kong, B. J. Smith, C. J. Watson, L. Zakova, E. Kletvikova, J. Jiracek, S. J. Chan, D. F. Steiner, G. G. Dodson, A. M. Brzozowski, M. A. Weiss, C. W. Ward &amp; M. C. Lawrence (2013) How insulin engages its primary binding site on the insulin receptor. Nature 493, 241-245.</li>
+<li>C. W. Ward, J. G. Menting &amp; M. C. Lawrence (2013) The insulin receptor changes conformation in unforeseen ways on ligand binding: sharpening the picture of insulin receptor activation. Bioessays 35, 945-954.</li>
+<li>K. D. Copps &amp; M. F. White (2012) Regulation of insulin sensitivity by serine/threonine phosphorylation of insulin receptor substrate proteins IRS1 and IRS2. Diabetologia 55, 2565-2582.</li>
+<li>C. W. Ward &amp; M. C. Lawrence (2011) Landmarks in insulin research. Frontiers in Endocrinology 2:76, 1-11.</li>
+<li>3loh: B. J. Smith, K. Huang, G. Kong, S. J. Chan, S. Nakagawa, J. G. Menting, S. Q. Hu, J. Whittaker, D. F. Steiner, P. G. Katsoyannis, C. W. Ward, M. A. Weiss &amp; M. C. Lawrence (2010) Structural resolution of a tandem hormone-binding element in the insulin receptor and its implications for the design of peptide agonists. Proceedings of the National Academy of Science USA 107, 6771-6776.</li>
+<li>1ir3: S. R. Hubbard (1997) Crystal structure of the activated insulin receptor tyrosine kinase in complex with peptide substrate and ATP analog. EMBO Journal 16, 5572-5581.</li>
+<li>1irk: S. R. Hubbard, L. Wei, L. Ellis &amp; W. A. Hendrickson (1994) Crystal structure of the tyrosine kinase domain of the human insulin receptor. Nature 372, 746-754.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_2">http://doi.org/10.2210/rcsb_pdb/mom_2015_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

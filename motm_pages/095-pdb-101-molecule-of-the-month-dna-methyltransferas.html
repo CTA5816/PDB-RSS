@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: DNA Methyltransferases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: DNA Methyltransferases" property="og:title"/>
+<meta content="Cells add methyl groups to their DNA to encode additional epigenetic information" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_DNMT.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/139" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: DNA Methyltransferases" name="twitter:title"/>
+<meta content="Cells add methyl groups to their DNA to encode additional epigenetic information" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_DNMT.jpg" name="twitter:image"/>
+<meta content="Cells add methyl groups to their DNA to encode additional epigenetic information" name="description"/>
+<meta content="DNA methylation,DNMT1,DNMT3,epigenetics,restriction modification system,2qrv,3pt6,1mht,3pt6,1mht" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 139
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 139 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: DNA Methyltransferases</h1>
+<p><i>Cells add methyl groups to their DNA to encode additional epigenetic information</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Your body is built of skin cells, nerve cells, bone cells, and many other different types of cells. These cells are different shapes and sizes, and each type of cell builds a characteristic collection of proteins that are needed for its function. However, every cell in your body contains the same genetic information, encoded in strands of DNA. How does each cell decide which genes to use and which ones to ignore?</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DNA methyltransferase 3a and its regulatory factor (left) and DNA methyltransferase 1 bound to a short piece of DNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_DNMT.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA methyltransferase 3a and its regulatory factor (left) and DNA methyltransferase 1 bound to a short piece of DNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_DNMT.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Genetics and Epigenetics</h4>
+<div>Scientists have discovered that the information in DNA does not end at the simple genetic sequence of bases. Cells layer additional forms of control on top of the genetic code, creating "epigenetic" information that modifies the use of particular genes. In some cases, this control is performed by the positioning of nucleosomes. In other cases, bases in the DNA are methylated, modifying how they are read during protein synthesis.</div>
+<h4>Clean Slate</h4>
+<div>In the first minutes of life, when we are composed of a single cell, this epigenetic information has been wiped clean. In the fertilized egg, the methyl groups have been removed and every gene is like all the others. Then, as cells divide in the embryo, they have to make choices about what they are going to do--becoming skin cells or nerve cells or their particular fate. At this point, DNA methyltransferases come into play, and they add methyl groups to genes, shutting off some and activating others. The DNA methyltransferase DNMT3, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2qrv" target="_blank">2qrv <i class="fa fa-external-link"> </i></a></span>, performs this important job, creating the proper epigenetic coding of methyl groups throughout the genome.</div>
+<h4>Methyl Maintenance</h4>
+<div>Once each cell has decided its fate, this epigenetic code must be maintained for the rest of the life of the organism. When a cell divides, the information must be transmitted to each of the new cells. The DNA methyltransferase DNMT1, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pt6" target="_blank">3pt6 <i class="fa fa-external-link"> </i></a></span>, performs this job. As DNA is being replicated, it adds the proper methyl groups to the new DNA strands. The information is propagated in a tricky way. Methyl groups are almost always added to cytosine bases with the sequence:<br/> <div> <center> ---CG---<br/> ---GC---<br/> </center> </div> Notice that both strands have a cytosine, so in a methylated region of DNA, both strands will have a methyl group. When the DNA is replicated, each of the new DNA double helices will have one old strand, complete with methyl groups, and one new strand, which is not methylated. So, DNMT1 just needs to look for CG base steps where only one strand has a methyl group.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Restrictive Bacteria</h4>
+<div>Bacteria also use DNA methylation, but they use it to protect themselves from viruses. They build <a href="https://pdb101.rcsb.org/motm/8"> restriction enzymes</a> that cut DNA at specific sequences. Then, they build specific DNA methyltransferases, such as the one shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mht" target="_blank">1mht <i class="fa fa-external-link"> </i></a></span>, that add methyl groups to these sequences. The methyl groups block the restriction enzyme, but still allow proper reading of the bases during transcription and replication. So, the restriction enzyme floats around the cell with nothing to do, until a virus infects the cell. The DNA from the virus typically does not contain any methyl groups, so the restriction enzyme quickly chops it into pieces.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bacterial DNA methyltransferase HhaI bound to a short piece of DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_1mht.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial DNA methyltransferase HhaI bound to a short piece of DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_1mht.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/139/139-DNAMethylases_3pt6_1mht_jmol.jpg"/></div>
+<div>Several structures have helped to explain how DNA methyltransferases perform their jobs. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pt6" target="_blank">3pt6 <i class="fa fa-external-link"> </i></a></span> includes DMNT1 and a small piece of DNA. The enzyme wraps around the DNA and probes the edges of the bases in the DNA. This structure was solved using DNA with no methyl groups, which would normally not be a substrate of the enzyme. Sure enough, the structure shows that the enzyme recognizes the unmethylated bases on both sides, and holds the DNA away from the active site. There is currently no structure of DNMT1 with a half-methylated DNA, but we can get an idea of how it might act by looking at a bacterial methyltransferase, pdb entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mht" target="_blank">1mht <i class="fa fa-external-link"> </i></a></span>. The DNA binds deeper in the active site, and flips out the cytosine base that will be methylated. To take a closer look at these structures, click on the images for an interactive Jmol.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The methyl group is provided by the cofactor S-adenosylmethionine during the </li>
+<li>methylation reaction. Many of the DNA methyltransferase structures were solved with the </li>
+<li>similar cofactor S-adenosyl homocysteine in the active site, but PDB entry</li>
+<li><span class="rcsb_id_tag" title="">3av6</span> is</li>
+<li>DNMT1 with SAM bound. Can you find other enzymes in the PDB that use this </li>
+<li>cofactor? Are they performing similar reactions?</li>
+<li>You can use the structure comparison tool to overlap structures of DNMT enzymes </li>
+<li>and bacterial methyltransferases. Notice that the cores of the enzymes are similar, but the DNMT </li>
+<li>enzymes are larger. Why do you think our DNA methyltransferases need additional protein </li>
+<li>domains along with the domain that performs the reaction?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. Z. Jurkowska, T. P. Jurkowski and A. Jeltsch (2011) Structure and Function of Mammalian DNA Methyltransferases. ChemBioChem 12, 206-222.</li>
+<li>X. Cheng and R. M. Blumenthal (2008) Mammalian DNA Methyltransferases: A Structural Perspective. Structure 16, 341-350. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_7">http://doi.org/10.2210/rcsb_pdb/mom_2011_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

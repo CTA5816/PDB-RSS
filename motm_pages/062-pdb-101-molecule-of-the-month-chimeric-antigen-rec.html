@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Chimeric Antigen Receptors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Chimeric Antigen Receptors" property="og:title"/>
+<meta content="T cells may be engineered with chimeric antigen receptors to attack cancer cells." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CAR.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/214" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Chimeric Antigen Receptors" name="twitter:title"/>
+<meta content="T cells may be engineered with chimeric antigen receptors to attack cancer cells." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CAR.jpg" name="twitter:image"/>
+<meta content="T cells may be engineered with chimeric antigen receptors to attack cancer cells." name="description"/>
+<meta content="Chimeric antigen receptor,CAR,CART,cancer,adoptive cell therapy,T cell,genetic engineering" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 214
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 214 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Chimeric Antigen Receptors</h1>
+<p><i>T cells may be engineered with chimeric antigen receptors to attack cancer cells.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="This model of a chimeric antigen receptor is composed of a single-chain antibody Fv connected to a portion of CD3 zeta. It is shown in complex with the signaling molecule ZAP70. Four PDB entries were used to create the illustration: 2kh2, 2hac, 2oq1, and 2ozo." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CAR.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>This model of a chimeric antigen receptor is composed of a single-chain antibody Fv connected to a portion of CD3 zeta. It is shown in complex with the signaling molecule ZAP70. Four PDB entries were used to create the illustration: <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2kh2" target="_blank">2kh2</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hac" target="_blank">2hac</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2oq1" target="_blank">2oq1</a>, and <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ozo" target="_blank">2ozo</a>.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CAR.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The immune system is expert at defending us from dangers, but when faced with cancer cells, the immune system often fails. Cancer cells are normal human cells that have been transformed into rogues. They usually have many genetic changes that allow them to grow without normal limitations. Unfortunately, most of these genetic changes mutate proteins that are inside the cancer cell, so the immune system may not detect them. Today, researchers are developing ways to retool the immune system to fight specific forms of cancer.</div>
+<h4>Engineered T cells</h4>
+<div>T cells have the ability to recognize virus-infected cells using <a href="https://pdb101.rcsb.org/motm/63">T-cell receptors</a>, and then destroy them. Unfortunately T cells are not as effective against cancer cells, because the molecules on the surface of cancer cells often look much like the molecules on normal cells. Chimeric antigen receptors (CAR) are a way for doctors to arm T cells with the ability to recognize cancer cells. Researchers remove T cells from a cancer patient and add a gene for a CAR that recognizes their form of cancer. When these “CART” cells are returned to the patient, they search for cancer cells and destroy them.</div>
+<h4>Building a CAR</h4>
+<div>Chimeric antigen receptors are built by connecting several functional parts from different proteins, each with a specific job. A single-chain antibody variable fragment (Fv) recognizes a known cancer cell protein, targeting the tumor. These are generally engineered from monoclonal <a href="https://pdb101.rcsb.org/motm/21">antibodies</a> by using only the domains at the tip of the antibody, and connecting the two chains with a flexible linker. The antibody portion is connected to a transmembrane segment with another flexible linker. Inside the cell, one or more domains are taken from signaling proteins, which will activate the T cell once it finds a tumor cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Artistic illustration of an engineered T cell (on the left side in blue) recognizing and attacking a leukemia cell (on the right side in green). The CAR molecule is shown in red, bound to CD19 on the leukemia cell. This has lead to activation of the T cell, which releases perforin (purple), forming pores in the cell surface. Granzymes (magenta) then enter through the pore and initiate apoptosis to kill the cancer cell." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CART_2017.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Artistic illustration of an engineered T cell (on the left side in blue) recognizing and attacking a leukemia cell (on the right side in green). The CAR molecule is shown in red, bound to CD19 on the leukemia cell. This has lead to activation of the T cell, which releases perforin (purple), forming pores in the cell surface. Granzymes (magenta) then enter through the pore and initiate apoptosis to kill the cancer cell.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-CART_2017.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>CART in Action</h4>
+<div>The CART therapy tisagenlecleucel was recently approved by the US FDA for treatment of a form of leukemia that is particularly common in children. In this leukemia, known as acute lymphoblastic leukemia (ALL), normal B cells are transformed into cancer cells that fail to develop correctly. The CART therapy targets CD19, a protein normally found of the surface of B cells, and also found on the surface of these transformed leukemia cells. The chimeric antigen receptor is a bit more advanced than the model shown above, composed of pieces from four molecules: a single-chain antibody, a flexible linker and transmembrane section from CD8 alpha, and two signaling domains from CD3 zeta and 4-1BB (CD137). The engineered T cells are remarkably effective for this particular form of cancer, leading to remission for most of the patients.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Single Chain Antibody</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/214/214-Chimeric_Antigen_Receptors-2kh2_JSmol.jpg"/></div>
+<p>Single-chain antibodies are created by engineering a linker between the heavy and light chains of a monoclonal antibody. Typically only the variable domains at the tip of the antibody (labeled VL and VH) are used, and the linker is a flexible chain of glycine and serine amino acids (shown in magenta). The one shown here is bound to a cytokine, interleukin-1 beta, shown in blue. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are many structures of single-chain antibody Fv in the PDB archive. As you explore them, you’ll find that most of them don’t include atomic coordinates for the engineered linker between the two chains. Why is this?</li>
+<li>To explore more about the cytotoxic machinery of T cells, try looking for structures of perforin and granzymes in the PDB archive.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>FDA Briefing Document BLA 125646, Tisagenlecleucel, Novartis Pharmaceuticals Corporation.</li>
+<li>ZL Chang &amp; YY Chen (2017) CARs: Synthetic immunoreceptors for cancer therapy and beyond. Trends in Molecular Medicine 23, 430-450.</li>
+<li>MH Kershaw, JA Westwood &amp; PK Darcy (2013) Gene-engineered T cells for cancer therapy. Nature Reviews Cancer 13, 525-541.</li>
+<li>2kh2: IC Wilkinson, CJ Hall, V Veverka, JY Shi, FW Muskett, PE Stephens, RJ Taylor, AJ Henry &amp; MD Carr (2009) High resolution NMR-based model for the structure of a svFv-IL-1beta complex. Journal of Biological Chemistry 284, 31928-31935.</li>
+<li>2ozo: S Deindl, TA Kadlecek, T Brdicka, X Cao, A Weiss &amp; J Kuriyan (2007) Structural basis for the inhibition of tyrosine kinase activity of ZAP-70. Cell 129, 735-746.</li>
+<li>2hac: ME Call, JR Schnell, C Xu, RA Lutz, JJ Chou &amp; KW Wucherpfennig (2006) The structure of the zetazeta transmembrane dimer reveals features for its assembly with the T cell receptor. Cell 127, 355-368.</li>
+<li>2oq1: MH Hatada, X Lu, ER Laird, J Green, JP Morgenstern, M Lou, C Marr, TB Phillips, MK Ram &amp; K Theriault (1995) Molecular basis for the interaction of ZAP-70 with the T-cell receptor. Nature 377, 32-38.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_10">http://doi.org/10.2210/rcsb_pdb/mom_2017_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

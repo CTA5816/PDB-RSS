@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Globin Evolution</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Globin Evolution" property="og:title"/>
+<meta content="The mechanisms of molecular evolution are revealed in globin sequences and structures." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Myoglobins.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/206" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Globin Evolution" name="twitter:title"/>
+<meta content="The mechanisms of molecular evolution are revealed in globin sequences and structures." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Myoglobins.jpg" name="twitter:image"/>
+<meta content="The mechanisms of molecular evolution are revealed in globin sequences and structures." name="description"/>
+<meta content="Evolution,natural selection,myoglobin,hemoglobin,mutation,gene duplication,globin,phylogenetic tree,3vrf,2hhb" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 206
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 206 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Globin Evolution</h1>
+<p><i>The mechanisms of molecular evolution are revealed in globin sequences and structures.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Sequences of myoglobin from five different animals are compared to create a phylogenetic tree. Each molecule is colored to show differences from the human protein. Amino acids that are identical are pink, amino acids that are different but similar are lighter pink, and amino acids that are completely different are in white. The heme is shown in bright red. The tree was calculated with the online server at phylogeny.fr. PDB entries 3rgk, 1ymb, 1mbo, 1lhs, 2nrl." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Myoglobins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Sequences of myoglobin from five different animals are compared to create a phylogenetic tree. Each molecule is colored to show differences from the human protein. Amino acids that are identical are pink, amino acids that are different but similar are lighter pink, and amino acids that are completely different are in white. The heme is shown in bright red. The tree was calculated with the online server at <a href="http://www.phylogeny.fr">phylogeny.fr</a>. PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rgk" target="_blank">3rgk</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ymb" target="_blank">1ymb</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mbo" target="_blank">1mbo</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lhs" target="_blank">1lhs</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2nrl" target="_blank">2nrl</a>.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Myoglobins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>When Charles Darwin developed his theory of evolution, the inner workings of the cell were largely a mystery. His revolutionary insight, that populations of organisms evolve under natural selection, was based largely on his observations of plants and animals living around him. The inner mechanisms of evolution were only uncovered later, as the details of genetic information, inheritance, and mutation were revealed by scientists. Today, we have an abundance of data to explore, allowing us to see and understand the underlying molecular biology behind evolution.</div>
+<h4>Tree of Life</h4>
+<div>Ever since biologists started looking closely at living things, it was apparent that everything living on the Earth is related. Some are close relations: horses share many traits with cows. Others are more distant relatives: starfish are quite different from elephants. By carefully analyzing these similarities and differences, biologists built a tree a life, with similar organisms clustered closely together on individual branches and differing organisms scattered on distant branches. Today, the study of the genomic sequences of these organisms allows us to make this tree more quantitative. If we assume that differences in genomic sequences build up at an approximately equal rate as the organisms evolve, we can use this data to build a phylogenetic tree of life.</div>
+<h4>Globin Evolution</h4>
+<div>To build this type of tree, we need to have a protein that is essential in all the organisms we are studying, so that they all have a corresponding gene in their genome. The tree shown here uses the protein <a href="https://pdb101.rcsb.org/motm/1">myoglobin</a>, and is limited to vertebrates. As you can see, our closest relatives, mammals, have myoglobins that are quite similar, but reptiles and fish have had more time to diverge and their myoglobins have more changes. Trees that span a larger range of organisms, from bacteria to humans, are often built using biomolecules that are even more essential, such as the central machinery of protein synthesis or energy metabolism.</div>
+<h4>Globin Mutation</h4>
+<div>Darwinian evolution relies on diversity in a population, so that there are individuals with different traits, some of which might be beneficial and will be selected for a particular environment. This diversity is generated by mutation of the genome, producing slightly altered proteins with different functional characteristics. Many examples of these types of mutations, and their consequences, are found in the PDB archive. For instance, the <a href="https://pdb101.rcsb.org/motm/1">myoglobin in aquatic mammals</a> can be packed more densely than typical myoglobins, allowing it to store extra oxygen for their long dives, and the single-site mutation in human <a href="https://pdb101.rcsb.org/motm/41">sickle-cell hemoglobin</a> causes disease, but also may provide protection against infection by malaria.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A cluster of beta-like hemoglobin genes is found in the human genome on chromosome 11, as shown at the top from the  UCSC Genome Browser. The structures reveal that they are quite similar, with small mutations that tune the function for their tasks in embryonic, fetal, and adult life. The four globins at the bottom have different functions, as reflected in their quite different sequences. PDB entries 2hhb,  1shr, 1i3d, 1fdh, 1a9w, 3rgk, 1ut0, 1oj6,  all are colored based on differences with the hemoglobin beta-chain." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Globins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A cluster of beta-like hemoglobin genes is found in the human genome on chromosome 11, as shown at the top from the <a href="https://genome.ucsc.edu/"> UCSC Genome Browser</a>. The structures reveal that they are quite similar, with small mutations that tune the function for their tasks in embryonic, fetal, and adult life. The four globins at the bottom have different functions, as reflected in their quite different sequences. PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hhb" target="_blank">2hhb</a>,  <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1shr" target="_blank">1shr</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1i3d" target="_blank">1i3d</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fdh" target="_blank">1fdh</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a9w" target="_blank">1a9w</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rgk" target="_blank">3rgk</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ut0" target="_blank">1ut0</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oj6" target="_blank">1oj6</a>,  all are colored based on differences with the hemoglobin beta-chain.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-Globins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Mechanisms of Evolution</h4>
+<div>Looking closely at gene sequences and protein structures, we can also unravel some of the mechanisms of evolution. For example, you might imagine that it is difficult for a protein to evolve, since it needs to be continually active to keep the organism alive. Looking in the genome, we find that this problem is often solved through gene duplication. A copy of the gene is made, which is then free to evolve without compromising the organism. In the globins, this has happened multiple times in the distant past. There is a cluster of genes in our genome that encode several variants of the <a href="https://pdb101.rcsb.org/motm/41">hemoglobin</a> beta-chain. For instance, the gamma-2 and epsilon genes encode variants that subtly change the properties hemoglobin for the specialized needs of fetuses and embryos. Larger changes are seen in other globins, evolved from other gene duplication events, such as the hemoglobin alpha-chain, myoglobin, and two recently-discovered globins of unknown function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The structure of mammoth hemoglobin has four amino acid changes (shown in blue) when compared to modern Asian elephants." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-3vrf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The structure of mammoth hemoglobin has four amino acid changes (shown in blue) when compared to modern Asian elephants.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-3vrf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Reconstructing Ancient Globins</h4>
+<div>In special cases, we can also look back in history to study the evolution of life. Using DNA isolated from a mammoth bone found frozen in Siberia, researchers reconstructed the genes for for the alpha and beta chains of hemoglobin from this extinct species and used it to synthesize the protein in bacteria (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3vrf" target="_blank">3vrf</a>). Mammoth hemoglobin is quite similar to the hemoglobin of modern elephants, but testing of the protein showed that the small changes make it function better in cold temperatures. The sequence also supported other studies that showed that mammoths are more closely related to Asian elephants than to African elephants.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Sequence Conservation in the Hemoglobin Beta-Chain</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/206/206-Globin_Evolution-2hhb_JSmol.jpg"/></div>
+<p>Molecular biologists often look at evolutionary variation is terms of “conservation.” Regions of the protein with essential functions are very similar when we look at different organisms, whereas regions that are playing a supporting role are often quite different. Hemoglobin is shown here (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hhb" target="_blank">2hhb</a>), with one beta-chain colored by conservation, calculated using the online <a href="http://consurf.tau.ac.il/"> ConSurf Server</a> and based on sequences from several hundred organisms. As you can see, regions involved in subunit contacts and lining the heme pocket are highly conserved (colored bright blue), but the exterior portions of the protein are not (colored white). To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the “Pairwise Structure Alignment” tool to compare sequences and structures of proteins in the PDB archive. For example, try aligning the <a href="https://www.rcsb.org/alignment?request-body=eJyVjrsOwjAMRf%2FFcxiKEEM3OvUfUFWFxC2R8iiJI6iq%2FDtOGRgRm%2BPje3I3eGSMK7QbhIVM8KmOESlHPyZk6BWOWpKEdpI2YRGggid8UT10QSO0sEgTnyYhCHBI96Ar89JVRu4grZk9cDJRzIrVyL9cN0BPcR0NX8Ox7ztOJ7Soao0qkGl1H3phdMO5FtoXjeCs%2Fj5PTSniD1%2F3y3cuZWAlTMbuXYfyBguMZKk%3D&amp;response-body=eJzdVN9vmzwU%2FV94JpENBuy%2BeeWXhMNoQJ6iaopocDKkhHQJbIuq%2FO%2FfNV1b0jVpvz1O4SH2vefe42Of%2B2DUzXJrXD0YXVdXxpVREuzdecwdLe%2FockTukDsqSYlGrlvRqnJttqwqwzT2bdl2e8i%2F%2FjzJRFAExtE0NqotdalyXa%2BajWra%2BWZbKUi6L%2Bvdz3qvADiIqfbbVrdsN6N%2BV5fYqX23bqHw7QP02HWLtoOtfgmY3WHek7Ti%2BJMmodZq0dbbpm%2B6P2weoxxCd2o136vv%2FQY2AVu9LAk%2BHs3%2FUe%2FTe%2FXc4%2FGr%2BUJ3%2FnzGnvdOraCkPsPtOyz1sm4q9cu4QqaxVs2q%2FQYBT7M9D7TQCdIaQi0LmN2%2Bc5i325LTrq9x7gnOGeDwZSChJ0jCBnQvIx37tCf5ONI5RbovSAYKweW1u7LZL7e7Tdk%2BXRY20e%2Ffm%2F9AVzRmhFCH2BZxzBEaW8xCnuU6nqtXmFBsE9eiFNL7KPIczBCiesUc12KuSyAXjZGNGCWe7bLHVOwgDyNCbFsHse0xYruW3eMohboe0iETQ1VqE6jrIc%2B0KADBvg5xMDapNSbQnjEHUxfo6hfabTbl7qBf936xffLVj3LdgUmhNMhwuNd%2BLSajPsHQsj7Hif2cAMJ2qlmoUV3BM6%2FbwzATjwl%2BzpxOct%2FQ9mjAFs0cmtZVp%2BZ6IkB7bDMd0WNiraqnqOYFLjXBWZo1XKKGwo1ps1E9Q5r5YvtD7coVtLhlzGTO10cP%2FuZ11oJ%2F5UBy2YDOWSvYl4Eft8IfSPZRK%2FxBFl20gmmsyvtHoYbMXpUfhuj5mPNaw2HMGeIGVwecpcgz7idFKhPOv0SJjHjMo2AW8YCLYDoJRR5mRZEUszCLQ1%2FkcZTzG5lEcZQkkvtcFCmXPJa%2BP8lSLnL4fBHzOBFT6WcyDRMBoGshZCE4j0XGg7DIuIx5LvwkFDyXeSFFkSezaf%2By335AH56lmF6eT5hdGOH03K3ggfTWawljUWRBkORcFlxoDVPpBzKKQMFoCgeXs%2BxLcTMNwyAPI5CwyHwuJ1GaJSB6r6OIeJj7kQB9%2FFQkURHyQuSBiK%2F9RIC2WZCGUClKpZDXEtLiMEq0jpm84Xx2k0jJI8lBfxB%2BFvdD4F%2BfQMf%2FABIM4ZU%3D&amp;encoded=true"> hemoglobin alpha and beta chains</a> to see their similarities and differences.</li>
+<li>The “Protein Feature View” has a convenient menu for finding structures of a particular protein from different organisms. For example, take a look at the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P02185"> Protein Feature View for myoglobin</a> and look for the little box in blue next to the image.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. F. Storz, J. C. Opazo &amp; F. G. Hoffmann (2013) Gene duplication, genome duplication, and the functional diversification of vertebrate globins. Molecular Phylogenetics and Evolution 66, 469-478.</li>
+<li>H. Noguchi, K. L. Campbell, C. Ho, S. Unzai, S.-Y. Park &amp; J. R. H. Tame (2012) Structures of haemoglobin from whooly mammoth in liganded and unliganded states. Acta Crystallographica D68, 1441-1449.</li>
+<li>2nrl: E. R. Schreiter, M. M. Rodriguez, A. Weichsel, W. R. Montfort &amp; J. Bonaventura (2007) S-nitrosylation-induced conformation change in blackfin tuna myoglobin. Journal of Biological Chemistry 282, 19773-19780.</li>
+<li>1ut0: D. DeSanctis, S. Dewilde, A. Pesce, L. Moens, P. Ascenzi, T. Hankeln, T. Burmester &amp; M. Bolognesi (2004) Crystal structure of cytoglobin: the fourth globin type discovered in man displays heme hexa-coordination. Journal of Molecular Biology 336, 917-927.</li>
+<li>1shr: U. Sen, J. Dasgupta, D. Choudhury, P. Datta, A. Chakrabarti, S. B. Chakrabarty, A. Chakrabarty &amp; J. K. Dattagupta (2004) Crystal structures of HbA2 and HbE and modeling of hemoglobin delta4: interpretation of the thermal stability and the antisickling effect of HbA2 and identification of the ferrocyanide binding site in Hb. Biochemistry 43, 12477-12488.</li>
+<li>1oj6: A. Pesce, S. Dewilde, M. Nardini, L. Moens, P. Ascenzi, T. Hankeln, T. Burmester &amp; M. Bolognesi (2003) Human brain neuroglobin structure reveals a distinct mode of controlling oxygen affinity. Structure 11, 1087-1095.</li>
+<li>1i3d: R. D. Kidd, H. M. Baker, A. J. Mathews, T. Brittain &amp; E. N. Baker (2001) Oligomerization and ligand binding in a homotetrameric hemoglobin: two high-resolution crystal structures of hemoglobin Bart’s (gamma(4)), a marker for alpha-thalassemia. Protein Science 10, 1739-1749.</li>
+<li>1a9w: A. J. Sutherland-Smith, H. M. Baker, O. M. Hofmann, T. Brittain &amp; E. N. Baker (1998) Crystal structure of a human embryonic haemoglobin: the carbonmonoxy form of gower II (alpha2 epsilon2) haemoglobin at 2.9 A resolution. Journal of Molecular Biology 280, 475-484.</li>
+<li>1lhs: M. Nardini, C. Tarricone, M. Rizzi, A. Lania, A. Desideri, G. DeSanctis, M. Coletta, R. Petruzzelli, P. Ascenzi, A. Coda &amp; M. Bolognesi (1995) Reptile heme protein structure: X-ray crystallographic study of the aquo-met and cyano-met derivatives of the loggerhead sea turtle (Caretta caretta) myoglobin at 2.0 A resolution. Journal of Molecular Biology 247, 459-465.</li>
+<li>1ymb: S. V. Evans &amp; G. D. Brayer (1990) High resolution study of the three-dimensional structure of horse heart metmyoglobin. Journal of Molecular Biology 213, 885-897.</li>
+<li>3rgk: S. R. Hubbard, S. G. Lambright, S. G. Boxer &amp; W. A. Hendrickson (1990) X-ray crystal structure of a recombinant human myoglobin mutant at 2.8 A resolution. Journal of Molecular Biology 20, 215-218.</li>
+<li>2hhb: G. Fermi, M. F. Perutz, B. Shaanan &amp; R. Fourme (1984) The crystal structure of human deoxyhaemoglobin at 1.74 A resolution. Journal of Molecular Biology 175, 159-174.</li>
+<li>1mbo: S. E. Phillips (1980) Structure and refinement of oxymyoglobin at 1.6 A resolution. Journal of Molecular Biology 142, 531-554.</li>
+<li>1fdh: J. A. Frier &amp; M. F. Perutz (1977) Structure of human foetal deoxyhaemoglobin. Journal of Molecular Biology 112, 97-112.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_2">http://doi.org/10.2210/rcsb_pdb/mom_2017_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

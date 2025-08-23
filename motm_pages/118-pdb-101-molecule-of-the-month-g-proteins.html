@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: G Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: G Proteins" property="og:title"/>
+<meta content="G proteins receive signals from cellular receptors and deliver them inside the cell" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-1gg2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/58" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: G Proteins" name="twitter:title"/>
+<meta content="G proteins receive signals from cellular receptors and deliver them inside the cell" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-1gg2.jpg" name="twitter:image"/>
+<meta content="G proteins receive signals from cellular receptors and deliver them inside the cell" name="description"/>
+<meta content="adenylyl cyclase,G-protein-coupled receptor protein signaling pathway,guanyl nucleotide binding,heterotrimeric G protein complex,signal transducer activity,signal transduction,1gg2,6r3q,3sn6,6eg8,1tbg,1cjk" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 58
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 58 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: G Proteins</h1>
+<p><i>G proteins receive signals from cellular receptors and deliver them inside the cell</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Inactive G protein with GDP bound. Two sites of lipidation are not included in the structure, and are shown schematically at upper right." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-1gg2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Inactive G protein with GDP bound. Two sites of lipidation are not included in the structure, and are shown schematically at upper right.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-1gg2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cells communicate by passing small, disposable messages to one another. Some of these messengers travel to distant parts of the body through the blood, others simply diffuse to a neighboring cell. Then, another cell picks the message up and reads it. Thousands of these messages are used in the human body. Some familiar examples include adrenaline, which controls the level of excitement, glucagon, which carries messages about blood sugar levels, histamine, which signals tissue damage, and dopamine, which relays messages in the nervous system.</div>
+<h4>Reading the Mail</h4>
+<div>In many cases, these molecular messengers never get inside cells. Instead, the message is picked up by a receptor on the cell surface and the signal is then passed from outside to inside through a chain of signaling molecules. G proteins, such as the one shown here from PDB entry <a href="https://www.rcsb.org/structure/1gg2" target="_blank">1gg2</a>, form the central link in this chain of communication. The G protein system is the most common method of signaling in our cells. Thousands of G-protein-coupled receptors (GPCR) have been found on our cells, each waiting for its own particular messenger. Some, such as the <a href="http://pdb101.rcsb.org/motm/184">glucagon receptor</a>, recognize hormones and make changes in the level of metabolism. Others, such as the <a href="http://pdb101.rcsb.org/motm/100">adrenergic receptor</a>, are used in the nervous system to transmit nerve signals. Our sense of sight also relies on <a href="http://pdb101.rcsb.org/motm/147">rhodoposin</a>, a G-protein-coupled receptor that is sensitive to light, and a thousand different forms of these receptors, each recognizing the odor of a different molecule, control our sense of smell. They all share the combination of a receptor that receives a message and a G protein that delivers it inside the cell.</div>
+<h4>The "G" in G Proteins</h4>
+<div>G proteins are molecular switches that use GDP to control their signaling cycle. When GDP is bound, as shown here, the G protein is inactive. To activate the protein, the GDP is replaced with GTP, the G protein will deliver its signal, as shown below. G proteins come in many shapes and sizes. Most are used for cell signaling, but other types play an important role in other tasks, such as powering protein synthesis. The ones described here are termed heterotrimeric G proteins because they are composed of three different chains, denoted as alpha, beta, and gamma (shown in orange, yellow and green here).</div>
+<h4>Hugging the Membrane</h4>
+<div>These G proteins bind to the inner surface of the cell membrane, holding them close to their receptors. Several small lipids are attached to the protein chains, which insert into the membrane and tether the protein there. However, don't try to find these little lipids in the crystal structure file, because they were removed to allow crystallization.</div>
+<h4>G Proteins Under Attack</h4>
+<div>The G protein system plays a central role in many signaling tasks, making it a sensitive target for drugs and toxins. Many of the drugs that are currently on the market, such as Claritin and Prozac, as well as a number of drugs of abuse, such as heroin, cocaine and marijuana, act at G-protein-coupled receptors in these signaling chains. Cholera bacteria make a <a href="http://pdb101.rcsb.org/motm/69">toxin</a> that attacks G proteins directly, by attaching a nucleoside group in a strategic place. This modification causes the G protein to be continually active. Among other things, this disrupts the normal controls on fluid balance in intestinal cells, and the infected person rapidly becomes dehydrated as water, sodium and chloride are lost.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Signaling with G-proteins. Hormones like adrenaline bind to a GPCR receptor (left), which binds to a heterotrimeric G-protein and releases GDP. Then the G-protein separates into two pieces, and the G-alpha subunit binds to GTP and activates adenylyl cyclase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-G-Protein.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Signaling with G-proteins. Hormones like adrenaline bind to a GPCR receptor (left), which binds to a heterotrimeric G-protein and releases GDP. Then the G-protein separates into two pieces, and the G-alpha subunit binds to GTP and activates adenylyl cyclase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-G-Protein.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Relaying the Signal</h4>
+<div>G proteins relay their signal on the inside surface of the cell membrane. The process starts when a receptor binds to its proper hormone or neurotransmitter, such as adrenaline (shown on the left using PDB entry <a href="https://www.rcsb.org/structure/3sn6" target="_blank">3sn6</a>). This changes the shape of the receptor, and it binds to the inactive three-chain G protein inside. This causes the G protein to expel its GDP molecule and replace it with GTP. The GTP causes a small loop (shown in red in the Jmol below) to change shape, and the G protein falls into two pieces. The freed alpha subunit, with its bound GTP, then moves along the membrane until it finds the enzyme adenylyl cyclase (as shown on the right from PDB entry <a href="https://www.rcsb.org/structure/6r3q" target="_blank">6r3q</a> and <a href="https://www.rcsb.org/structure/1tbg" target="_blank">1tbg</a>). The little loop then binds to the enzyme and activates it. The activated adenylyl cyclase then produces lots of cyclic AMP, which spreads the signal through the cell. Eventually, the GTP in the active alpha subunit will break down into GDP, and the G protein will reform into its inactive, resting state. <br/><br/> One major advantage of this approach is that it allows the signal to be amplified. In the signaling chain shown here, a single molecule of adrenaline can stimulate the production of many molecules of cyclic AMP. By incorporating an enzyme (like adenylyl cyclase) into the chain, a weak signal from outside the cell can be translated into a strong signal throughout the inside of the cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>G-proteins in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/58/58-G_Proteins-Gprotein_jmol.jpg"/></div>
+<p>These two structures show how G proteins use GTP to switch to their active state. PDB entry <a href="https://www.rcsb.org/structure/6eg8" target="_blank">6eg8</a> is the inactive state with GDP bound. The two phosphates are shown in green here, and the signalling helix is shown in red. PDB entry <a href="https://www.rcsb.org/structure/1cjk" target="_blank">1cjk</a> is the active form with GTP bound (notice that it is longer than the GDP), which pushes the signaling helix into a different conformation that is perfect for binding to adenylyl cyclase. This structure has an analog of ATP bound in the active site of adenylyl cyclase, and forskolin, a plant molecule that activates the enzyme, bound in a neighboring site. Click on the image to explore these structures interactively in Jmol. While you're doing that, be sure to try the cartoon representation to see the beautifully-symmetric propeller-shaped fold of the beta subunit in the inactive structure.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try searching for "cyclic AMP" to see structures of many of the proteins that are regulated by cAMP.</li>
+<li>You can explore the structure of cyclic AMP in the <a href="http://www.rcsb.org/ligand/CMP">Chemical Component Library for <i>CMP</i>.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6eg8: Liu, X., Xu, X., Hilger, D., Aschauer, P., Tiemann, J.K.S., Du, Y., Liu, H., Hirata, K., Sun, X., Guixa-Gonzalez, R., Mathiesen, J.M., Hildebrand, P.W., Kobilka, B.K. (2019) Structural Insights into the Process of GPCR-G Protein Complex Formation. Cell 177: 1243-1251.e12</li>
+<li>6r3q: Qi, C., Sorrentino, S., Medalia, O., Korkhov, V.M. (2019) The structure of a membrane adenylyl cyclase bound to an activated stimulatory G protein. Science 364: 389-394</li>
+<li>3sn6: Rasmussen, S.G., DeVree, B.T., Zou, Y., Kruse, A.C., Chung, K.Y., Kobilka, T.S., Thian, F.S., Chae, P.S., Pardon, E., Calinski, D., Mathiesen, J.M., Shah, S.T., Lyons, J.A., Caffrey, M., Gellman, S.H., Steyaert, J., Skiniotis, G., Weis, W.I., Sunahara, R.K., Kobilka, B.K. (2011) Crystal structure of the beta2 adrenergic receptor-Gs protein complex Nature 477: 549-555</li>
+<li>1cjk: Tesmer, J.J., Sunahara, R.K., Johnson, R.A., Gosselin, G., Gilman, A.G., Sprang, S.R. (1999) Two-metal-Ion catalysis in adenylyl cyclase. Science 285: 756-760</li>
+<li>Sprang, S.R. (1997) G protein mechanisms: insights from structural analysis. Annual Review of Biochemistry 66, 639-678.</li>
+<li>Bourne, H.R. (1997) How receptors talk to trimeric G proteins. Current Opinion in Cell Biology 9, 134-142.</li>
+<li>Coleman, D.E., Sprang, S.R. (1996) How G proteins work. Trends in Biochemical Sciences 21, 41-44.</li>
+<li>1tbg: Sondek, J., Bohm, A., Lambright, D.G., Hamm, H.E., Sigler, P.B.(1996) Crystal structure of a G-protein beta gamma dimer at 2.1A resolution. Nature 379: 369-374</li>
+<li>Hepler, J.R., Gilman, A.G. (1992) G proteins. Trends in Biochemical Sciences 17, 383-387.</li>
+<li>Linder, M.E., Gilman, A.G. (1992) G proteins. Scientific American 267(1), 56-65.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2004, David Goodsell, updated September 2020</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_10">http://doi.org/10.2210/rcsb_pdb/mom_2004_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

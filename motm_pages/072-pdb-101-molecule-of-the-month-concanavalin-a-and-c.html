@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Concanavalin A and Circular Permutation</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Concanavalin A and Circular Permutation" property="og:title"/>
+<meta content="For some proteins, clipped and reassembled sequences can produce the same 3D shape" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/124/1cvn.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/124" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Concanavalin A and Circular Permutation" name="twitter:title"/>
+<meta content="For some proteins, clipped and reassembled sequences can produce the same 3D shape" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/124/1cvn.jpg" name="twitter:image"/>
+<meta content="For some proteins, clipped and reassembled sequences can produce the same 3D shape" name="description"/>
+<meta content="circular permutation,lectin,protein evolution,protein folding,protein sequence,1cvn,3cna,1ui9,1h0r,3cna,2pel,2ayh,1ajk,1ajo,1cpm" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 124
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 124 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Concanavalin A and Circular Permutation</h1>
+<p><i>For some proteins, clipped and reassembled sequences can produce the same 3D shape</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Concanavalin A, with short carbohydrate chains (green) in the four binding sites." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/124/1cvn.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Concanavalin A, with short carbohydrate chains (green) in the four binding sites.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/124/124-ConcanavalinACircularPermutation_1cvn.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Evolution is a great tinkerer: once a successful plan is found, it is used again and again, often with many changes and improvements. This is easily seen in the living things around us. Most mammals have four limbs, which have evolved into all manner of arms and legs, and even into flippers and wings. Most plants are covered with leaves, which range from spiny needles to huge jungle fronds. Looking at protein sequences and structures, we see the same diversity generated through variation. Proteins evolve by slow mutation of individual amino acids, but they also evolve through larger piece-wise changes, where the genes for successful proteins are clipped and reassembled in new combinations.</div>
+<h4>Circular Reasoning</h4>
+<div>Circular permutation is one of the most unusual changes found in protein evolution. To understand where the name "circular permutation" comes from, imagine a folded protein that has the two ends of the chain near to one another. Now, chemically link these two ends. This would form a circular protein chain, with no ends. Then, clip the circularized chain in a different place. The folded protein would look the same, except that the two ends would be in a different place.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Precursor and circularly-permuted mature forms of concanavalin A." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/124/3cna.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Precursor and circularly-permuted mature forms of concanavalin A.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/124/124-ConcanavalinACircularPermutation_3cna.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Permuted Proteins</h4>
+<div>This is exactly what happens with the protein concanavalin A, a carbohydrate-binding protein found in jack beans, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cvn" target="_blank">1cvn <i class="fa fa-external-link"> </i></a></span>. When the amino acid sequence of this protein was determined in the seventies (by actually studying the amino acids in the protein, not looking at the gene), it was found to have a similar sequence to favin, a protein from fava beans. However, the sequence was permuted, as if the protein chain had been cut in the middle and the two halves swapped. Further study showed that in cells, concanavalin A is synthesized similarly to favin, but then a circular permutation is performed, as shown below using PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cna" target="_blank">3cna <i class="fa fa-external-link"> </i></a></span>. The precursor protein made by ribosomes has an extra tail and an extra loop, both shown here with dotted lines. The mature form is produced by clipping off the loop to create the new ends of the chain, and sealing up the two original ends of the chain into a new loop.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="These two lectin proteins have similar folds, but the beginning (blue) and end (red) of the chains are in different locations." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/124/124-Concanavalin_A_and_Circular_Permutation-3cna_2pel_jmol.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>These two lectin proteins have similar folds, but the beginning (blue) and end (red) of the chains are in different locations.</i></div>
+</div>
+</div>
+</div>
+<h4>Permuting Genes</h4>
+<div>Since the discovery of circular permutation in concanavalin A, many other examples have been discovered. In most cases, however, the circular permutation occurs in the genome, not by the more laborious cutting and pasting of the actual protein. In these cases, a rearrangement of the gene occurs: a portion at the front of the gene is removed and then replaced at the end. Sometimes only a single helix at one end is moved (as in the proteins in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ui9" target="_blank">1ui9 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1h0r" target="_blank">1h0r <i class="fa fa-external-link"> </i></a></span>) and in other cases, entire domains are switched. As described in the next section, scientists have also gotten in on the action, and they have done their own circular permutations.</div>
+<h4>Circular Permutation Discovered</h4>
+<div>Circular permutation was originally discovered by comparing the amino acid sequences of concanavalin A (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cna" target="_blank">3cna <i class="fa fa-external-link"> </i></a></span>) with the sequences of other lectins, such as the peanut lectin shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pel" target="_blank">2pel <i class="fa fa-external-link"> </i></a></span>). When the structures were solved years later, as expected, they showed very similar three-dimensional structures, in spite of the permutation of the chain.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Circularly Permuted Glucanase (PDB entries 2ayh, 1ajk, 1ajo and 1cpm)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/124/124-Concanavalin_A_and_Circular_Permutation-2ayh_overlaps_jmol.jpg"/></div>
+<p>Scientists are also great tinkerers. As soon as they discovered the process of circular permutation, they had to try it out themselves. The glucanase protein shown here (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ayh" target="_blank">2ayh <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ajk" target="_blank">1ajk <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ajo" target="_blank">1ajo <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cpm" target="_blank">1cpm <i class="fa fa-external-link"> </i></a></span>) has been permuted in several different ways, by cutting the gene in different places and reassembling the two pieces. In this picture, each protein chain is colored blue at one end, red at the other, and rainbow colors in between. Notice that the overall protein fold is the same in each one, except that the ends are in a different place. This demonstrates that protein folding is a robust process, and that the protein fold is determined by the sequence, even if it's shuffled around a bit. You can explore these structures in more detail by clicking on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Can you find other examples of circularly-permuted proteins in the PDB?</li>
+<li>Can you think of any ways that circular permutation would improve the function of a protein?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>U. Heinemann and M. Hahn (1995) Circular permutation of polypeptide chains: implications for protein folding and stability. Progress in Biophysics and Molecular Biology 64, 121-143.</li>
+<li>D. J. Bowles and D. J. Pappin (1988) Traffic and assembly of concanavalin A. Trends in Biochemical Sciences 13, 60-64.</li>
+<li>B. A. Cunningham, J. J. Hemperly, T. P. Hopp and G. M. Edelman (1979) Favin versus concanavalin A: circularly permuted amino acid sequences. Proceedings of the National Academy of Sciences USA 76, 3218-3222.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_4">http://doi.org/10.2210/rcsb_pdb/mom_2010_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

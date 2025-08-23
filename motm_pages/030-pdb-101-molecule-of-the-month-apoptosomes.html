@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Apoptosomes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Apoptosomes" property="og:title"/>
+<meta content="Apoptosomes make life or death decisions in cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_human_apoptosome.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/177" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Apoptosomes" name="twitter:title"/>
+<meta content="Apoptosomes make life or death decisions in cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_human_apoptosome.jpg" name="twitter:image"/>
+<meta content="Apoptosomes make life or death decisions in cells" name="description"/>
+<meta content="apoptosis,programmed cell death,3j2t,2p1h,1z6t,3sfz,3iz8,3lqq" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 177
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 177 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Apoptosomes</h1>
+<p><i>Apoptosomes make life or death decisions in cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Inactive Apaf-1 (left) associates into the active form (right) when it associates with cytochrome c (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_human_apoptosome.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Inactive Apaf-1 (left) associates into the active form (right) when it associates with cytochrome c (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_human_apoptosome.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>"To be, or not to be"--that question is continually being asked by each of your cells. Your cells are preprogrammed to die on command. This is essential during development of large organisms like ourselves, where cells work together, growing and dying to shape our complicated bodies. It is also essential throughout our adult lives, to remove damaged or infected or cancerous cells. The machinery for cell death is always silently present in cells, but can be instantly mobilized if the choice is made to die.</div>
+<h4>The Gatekeeper</h4>
+<div>The process of programmed cell death, also known as apoptosis, is highly regulated, and the decision to die is made through the coordinated action of many molecules. The apoptosome plays the role of gatekeeper in one of the major processes, termed the intrinsic pathway. It lies between the molecules that sense a problem and the molecules that disassemble the cell once the choice is made. Normally, the many subunits of the apoptosome are separated and inactive, circulating harmlessly through the cell. When trouble occurs, they assemble into a star-shaped complex, which activates protein-cutting <a href="https://pdb101.rcsb.org/motm/56">caspases</a> that get apoptosis started.</div>
+<h4>Cytochrome c Trigger</h4>
+<div>In our cells, the signal that activates the apoptosome is the release of cytochrome c from the mitochondria. Cytochrome c (shown in red) binds to the protein Apaf-1 (shown in blue and magenta), causing it to assemble into a seven-fold ring. The caspases are then activated by binding to a ring of CARD domains (magenta) on the assembled apoptosome. The apoptosome structure shown here (PDB entry <span class="rcsb_id_tag" title="Apoptosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3j2t" target="_blank">3j2t <i class="fa fa-external-link"> </i></a></span>) was solved using maps from electron microscopy, which you can find at the EMDataResource in entry <a href="https://www.emdataresource.org/EMD-5186"> EMD-5186.</a> In the human apoptosome, the CARD domains are connected to the rest of the protein through a flexible linker, and are not included in the PDB entry. They are shown here in their approximate position using a crystallographic structure of the CARD domain (PDB entry <span class="rcsb_id_tag" title="Apaf-1 CARD domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2p1h" target="_blank">2p1h <i class="fa fa-external-link"> </i></a></span>). The structure of the inactive monomeric Apaf-1 (shown on the left) is from PDB entries <span class="rcsb_id_tag" title="Apaf-1"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1z6t" target="_blank">1z6t <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Apaf-1"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3sfz" target="_blank">3sfz <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Apoptosome diversity. Cytochrome c is in red in the human form, and the CARD domains are in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_apoptosomes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Apoptosome diversity. Cytochrome c is in red in the human form, and the CARD domains are in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_apoptosomes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Apoptosomes</h4>
+<div>Apoptosomes from different organisms vary widely in their structure, and how they perform their jobs. The human apoptosome is composed of seven subunits and is activated by cytochrome c. The one from fruit flies, known as DARK (PDB entry <span class="rcsb_id_tag" title="Apoptosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iz8" target="_blank">3iz8 <i class="fa fa-external-link"> </i></a></span>), has eight subunits, and may or may not need cytochrome c for activation. The apoposome from nematodes, termed CED-4 (PDB entry <span class="rcsb_id_tag" title="Apoptosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3lqq" target="_blank">3lqq <i class="fa fa-external-link"> </i></a></span>), is much smaller, without the portion that binds to cytochrome c, and caspases are thought to bind on the back side of the ring, not to the CARD domains.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Apoptosome (PDB entry 3iz8)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/177/177-Apoptosomes_3iz8_JSmol.jpg"/></div>
+<p>Apoptosome proteins are composed of several functional domains, each with a different role to play. The apoptosome from fruit flies is shown here, with the domains in different colors. At one end of the chain, there is a CARD domain (magenta) involved in caspase interaction and a nucleotide-binding domain (blue) that assists with assembly of the complex. At the other end of the chain are two "beta-propeller" domains (red) that grip cytochrome c and trigger formation of the complex. In between are several smaller domains (green and yellow) that coordinate action between the two ends. To explore the domains in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The inactive form of the nematode apoptosome is composed of two apoptosome subunits (CED-4) bound to a regulatory protein (CED-9). You can explore this structure in PDB entry <span class="rcsb_id_tag" title="CED-4 and CED-9">2a5y</span>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Yuan &amp; C. W. Akey (2013) Apoptosome structure, assembly, and procaspase activation. Structure 21, 501-515.</li>
+<li>3j2t: S. Yuan, M. Topf, T. F. Reubold, S. Eschenburg &amp; C. W. Akey (2013) Changes in Apaf-1 conformation that drive apoptosome assembly. Biochemistry 52, 2319-2327.</li>
+<li>3iz8: S. Yuan, X. Yu, M. Topf, L. Dorstyn, S. Kumar, S. J. Ludtke &amp; C. W. Akey (2011) Structure of the Drosophila apoptosome at 6.9 A resolution. Structure 19, 128-140.</li>
+<li>3sfz: T. F. Reubold, S. Wohlgemuth &amp; S. Eschenburg (2011) Crystal structure of full- length Apaf-1: how the death signal is relayed in the mitochondrial pathway of apoptosis. Structure 19, 1074-1083.</li>
+<li>3lqq: S. Qi, Y. Pang, Q. Hu, Q. Liu, H. Li, Y. Zhou, T. He, Q. Liang, Y. Liu, X. Yuan, G. Luo, H. Li, J. Wang, N. Yan &amp; Y. Shi (2010) Crystal structure of the Caenorhabditis elegans apoptosome reveals an octameric assembly of CED-4. Cell 141, 446-457.</li>
+<li>2p1h: S. L. Milam, N. I. Nicely, B. Feeney, C. Mattos &amp; A. C. Clark (2007) Rapid folding and unfolding of Apaf-1 CARD. Journal of Molecular Biology 369, 290-304.</li>
+<li>1z6t: S. J. Riedl, W. Li, Y. Chao, R. Schwarzenbacher &amp; Y. Shi (2005) Structure of the apoptotic protease-activating factor 1 bound to ADP. Nature 434, 926-933.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2014, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2014_9">http://doi.org/10.2210/rcsb_pdb/mom_2014_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

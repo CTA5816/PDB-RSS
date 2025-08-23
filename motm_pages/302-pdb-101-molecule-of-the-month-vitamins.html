@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vitamins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vitamins" property="og:title"/>
+<meta content="Vitamins are essential molecular tools that are obtained through a healthy diet." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/288/3fpz.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/288" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vitamins" name="twitter:title"/>
+<meta content="Vitamins are essential molecular tools that are obtained through a healthy diet." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/288/3fpz.jpg" name="twitter:image"/>
+<meta content="Vitamins are essential molecular tools that are obtained through a healthy diet." name="description"/>
+<meta content="vitamin,diet,nutrition,retinal,beta-carotene,thiamine,niacin,riboflavin,cobalamin,ascorbic acid,calciferol,tocopherol,scurvy,cofactor,NAD,FAD,rhodopsin,2biw,3fpz,1p4m,2wsi,4req,7zsc,4bta,3w67,6wv5" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 288
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 288 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vitamins</h1>
+<p><i>Vitamins are essential molecular tools that are obtained through a healthy diet.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The thiazole ring of  vitamin B1 (thiamine) is built in yeast and plants by the enzyme thiamine thiazole synthase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/3fpz.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The thiazole ring of <a href="https://www.rcsb.org/ligand/VIB"> vitamin B1 (thiamine)</a> is built in yeast and plants by the enzyme thiamine thiazole synthase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/3fpz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>A healthy diet must include all the nutrients we need to keep our cells growing normally. This includes proteins, nucleic acids, carbohydrates, and fats that are all broken apart and used to build our own molecules and provide the energy we need to live. We need many minerals, such as iron for <a href="https://pdb101.rcsb.org/motm/41">hemoglobin</a> in our blood and calcium to build our bones. We also require small quantities of thirteen essential vitamins. Vitamins are small, unusual molecules that are used for critical tasks in our cells. These molecules are required for healthy life, but our cells are not able to make them. So, we need to get them from the food we eat or in vitamin supplements.</div>
+<h4>Evolution of Vitamins</h4>
+<div>This poses a question: if these molecules are so important, why can’t we make them? The answer is found, as with most things related to biology, in evolution. Throughout the evolution of our distant ancestors, these molecules were freely available in the typical diet, so there wasn’t strong pressure to make them from scratch. Also, many of these molecules are chemically difficult to construct, so there is selective pressure against expending resources to build them. So somewhere in our distant family tree, the security of being able to make the molecules wasn’t enough to cover the cost, and the ability to make them was lost forever.</div>
+<h4>Suicide Enzyme</h4>
+<div>The enzyme that builds <a href="https://www.rcsb.org/ligand/VIB"> vitamin B1 (thiamine)</a> is a good example of this evolutionary trade-off. In plants and yeast cells, the unusual thiazole ring is created by the enzyme thiamine thiazole synthase. When researchers looked at the structure of this enzyme (PDB ID <a href="https://www.rcsb.org/structure/3fpz" target="_blank">3fpz</a>), they discovered that one cysteine amino acid, number 205 in the chain, was missing its sulfur atom. Further study revealed that this enzyme donates this sulfur atom during the reaction, using it to build the thiazole ring. Thus, thiamine thiazole synthase is a “suicide enzyme” that can only work one time. For this reason, building thiamine is very costly, and yeast cells must build large quantities of the protein. Since we (and other animals) eat plants that have plenty of thiamine, we don’t need to cover the cost of building this single-use enzyme and making our own thiamine.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Vitamin C (ascorbic acid) and the enzyme collagen prolyl 4-hydroxylase. The enzyme includes binding sites for collagen that tether it to collagen fibrils, and a separate catalytic site that performs the reaction." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/7zsc_4bta.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i><a href="https://www.rcsb.org/ligand/VIB">Vitamin C (ascorbic acid)</a> and the enzyme collagen prolyl 4-hydroxylase. The enzyme includes binding sites for collagen that tether it to collagen fibrils, and a separate catalytic site that performs the reaction.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/7zsc_4bta.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Deadly Consequences</h4>
+<div>Vitamins were discovered through their connections to historical diseases that are caused when people don’t have a dietary source for the molecule. For example, centuries ago, sailors on long sea voyages succumbed to scurvy, a disease caused by the inability to build <a href="https://pdb101.rcsb.org/motm/4">collagen.</a> The culprit was the lack of <a href="https://www.rcsb.org/ligand/ASC">vitamin C (ascorbic acid)</a> in their diet, and the problem was eventually solved by packing plenty of citrus fruits for a voyage. Today we can look at the molecular details of this disease. The enzyme collagen prolyl 4-hydroxylase, shown here from PDB IDs <a href="https://www.rcsb.org/structure/7zsc" target="_blank">7zsc</a> and <a href="https://www.rcsb.org/structure/4bta" target="_blank">4bta</a>, converts proline into hydroxyproline, which is essential for tight packing and interactions of collagen fibrils in healthy connective tissue. The enzyme uses an iron-sulfur cluster in this reaction, and an unwanted side reaction occasionally inactivates the cluster. Here is where vitamin C steps in: it is a powerful antioxidant that restores the proper oxidation state of the iron atoms, reviving the enzyme.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="An enzyme similar to this cyanobacterial carotenoid oxygenase (bottom) splits beta-carotene into two molecules of vitamin A (top)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/2biw.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>An enzyme similar to this cyanobacterial carotenoid oxygenase (bottom) splits <a href="https://www.rcsb.org/ligand/BCR">beta-carotene</a> into two molecules of <a href="https://www.rcsb.org/ligand/RET">vitamin A</a> (top).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/2biw.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Eat Your Carrots!</h4>
+<div>We get most of our vitamins from foods in our diet, and in our modern world, many processed foods are enriched with vitamins to help ensure that we always have enough. In many cases we get these vitamins directly from food, because the plants and animals that we eat are using the vitamins for the same thing in their own cells. In other cases, we can build a vitamin from a molecule that is used for another function. For example, plants have colorful <a href="https://www.rcsb.org/ligand/BCR"> beta-carotene</a> molecules, which are brightly colored because they absorb certain wavelengths of light. Carrots are a classic source of beta-carotene, which gives them their orange color. Our cells use the enzyme carotene oxygenase to split beta-carotene into two pieces, each a functional molecule of <a href="https://www.rcsb.org/ligand/RET">vitamin A (retinal).</a> Retinal also absorbs light, and is used in our eyes in the receptor protein <a href="https://pdb101.rcsb.org/motm/147">rhodopsin.</a> A similar retinal-forming enzyme from cyanobacteria is shown here, from PDB ID <a href="https://www.rcsb.org/structure/2biw" target="_blank">2biw</a>, and you can view a predicted model of the human enzyme in <a href="https://www.rcsb.org/structure/AF_AFQ9HAY6F1">AF_AFQ9HAY6F1.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Vitamin K (left) and vitamin K epoxide reductase (right, with the vitamin in orange)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/6wv5.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i><a href="https://www.rcsb.org/ligand/PQN">Vitamin K</a> (left) and vitamin K epoxide reductase (right, with the vitamin in orange).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/6wv5.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Tricks of the Trade</h4>
+<div>Vitamins have useful chemical properties. Vitamin A is a specialist: it senses light in our eyes. B vitamins are generalists: they excel at delivering chemical groups (or single electrons) to wherever they are needed and are used by many different enzymes. Vitamins C and E are antioxidants that protect our molecules from damage and vitamin D is used as a hormone to deliver messages. <a href="https://www.rcsb.org/ligand/PQN">Vitamin K</a> is used by enzymes that modify glutamate amino acids in proteins involved in blood clotting, such as <a href="https://pdb101.rcsb.org/motm/75">Factor X,</a> making them able to bind strongly to cell surfaces. PDB ID <a href="https://www.rcsb.org/structure/6wv5" target="_blank">6wv5</a> shows an enzyme that assists with this reaction, which is a target of the powerful anticoagulant warfarin. Vitamin K wears many hats: under the name “phylloquinone,” it has a very different function in plants. There, it helps manage transfer of electrons in proteins such as <a href="https://pdb101.rcsb.org/motm/22">photosystem I.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="(Left) Human riboflavin kinase and yeast FAD synthetase. (Right) Steps in the formation of FAD performed by the two enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/FAD.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Left) Human riboflavin kinase and yeast FAD synthetase. (Right) Steps in the formation of <a href="https://www.rcsb.org/ligand/FAD">FAD</a> performed by the two enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/FAD.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Preparing Your Tools</h4>
+<div>B vitamins are used to carry chemical groups or electrons, and thus need to be positioned very carefully by the enzymes that use them. However, several of the B vitamins are small molecules that are difficult to manage, so cells add convenient chemical handles to them. For example, a nucleotide is added to <a href="https://www.rcsb.org/ligand/RBF">riboflavin (vitamin B2)</a> to form <a href="https://www.rcsb.org/ligand/FAD">FAD (flavin adenine dinucleotide),</a> and a similar handle is added to <a href="https://www.rcsb.org/ligand/NIO">niacin (vitamin B3)</a> to form <a href="https://www.rcsb.org/ligand/NAI">NAD.</a> Two enzymes prepare riboflavin for use: first, riboflavin kinase (PDB ID <a href="https://www.rcsb.org/structure/1p4m" target="_blank">1p4m</a>) adds a phosphate, then FAD synthetase (PDB ID <a href="https://www.rcsb.org/structure/2wsi" target="_blank">2wsi</a>) adds the nucleotide.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Sunlight converts a form of cholesterol (top) into vitamin D3 (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/VitD.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Sunlight converts a form of cholesterol (top) into <a href="https://www.rcsb.org/ligand/VD3">vitamin D3 (bottom).</a></i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/VitD.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Doing it Ourselves</h4>
+<div>Two vitamins have an honorary place in the list: our cells are able to make them, but sometimes not quite enough. Niacin (vitamin B3) is used to make our central carrier of electrons, NADH, which is used in all manner of biosynthetic and energy-producing pathways. For example, it carries electrons from enzymes in glycolysis and the citric acid cycle to the huge <a href="https://pdb101.rcsb.org/motm/144">NADH dehydrogenase complex.</a> Our cells can make niacin from the amino acid tryptophan, but the process is inefficient and we rely largely on dietary sources of it. <a href="https://www.rcsb.org/ligand/VD3">Vitamin D</a> is created in our skin when a form of cholesterol is chemically rearranged by exposure to sunlight. This is perfectly fine if you live in a sunny climate, but if not, you may need to get it from a dose of cod liver oil or another dietary supplement.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Vitamin E (top) and a tocopherol transfer protein (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/288/3w67.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i><a href="https://www.rcsb.org/ligand/VIV">Vitamin E</a> (top) and a tocopherol transfer protein (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/288/3w67.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Special Delivery</h4>
+<div>In some cases, our bodies need to put extra effort into getting vitamins to the places they are needed. For example, <a href="https://www.rcsb.org/ligand/VIV">vitamin E (tocopherol),</a> is a fat-soluble antioxidant that protects our membranes. It is not very soluble in water, so we make a tocopherol transfer protein that delivers it through the bloodstream to where it is needed. A structure of this protein, PDB ID <a href="https://www.rcsb.org/structure/3w67" target="_blank">3w67</a>, shows that the vitamin is protected inside the protein, and when it gets to its target cell, binding of a lipid in a nearby groove may help open the protein and release the vitamin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Vitamin B12 in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/288/4req_jmol-jmol.jpg"/></div>
+<p>The largest vitamin, <a href="https://www.rcsb.org/ligand/B12">vitamin B12 (cobalamin),</a> is used by only a handful of enzymes in our cells. The one shown here, methylmalonyl coenzyme A mutase (PDB ID <a href="https://www.rcsb.org/structure/4req" target="_blank">4req</a>), interconverts methylmalonate and succinate by removing a carbon atom and replacing it in a slightly different place. During the reaction, the molecule is held close to vitamin B12 by the cofactor coenzyme A, which itself is built using <a href="https://www.rcsb.org/ligand/PAU">vitamin B5.</a> This is an important step in the breakdown of amino acids, converting them to succinate that can fuel the <a href="https://pdb101.rcsb.org/motm/154">citric acid cycle.</a> This structure includes both states of the molecule. The reaction is performed by the central cobalt atom of vitamin B12, with the assistance of a nearby molecule deoxyadenosine. To explore this structure in more detail, use the menu to view an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many structures in the PDB archive include vitamin molecules. You can find them by going to the ligand page for the vitamin, then choose the option for “is present as a standalone ligand.” For example, here is the page for <a href="https://www.rcsb.org/ligand/b12">vitamin B12,</a> which is currently found in over a hundred entries.</li>
+<li>For more information on the sources and health benefits of vitamins, take a look at <a href="https://medlineplus.gov/ency/article/002399.htm">the page at the US National Library of Medicine.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7zsc: Murthy, A.V., Sulu, R., Lebedev, A., Salo, A.M., Korhonen, K., Venkatesan, R., Tu, H., Bergmann, U., Janis, J., Laitaoja, M., Ruddock, L.W., Myllyharju, J., Koski, M.K., Wierenga, R.K. (2022) Crystal structure of the collagen prolyl 4-hydroxylase (C-P4H) catalytic domain complexed with PDI: Toward a model of the C-P4H alpha 2 beta 2 tetramer. J Biol Chem 298: 102614-102614</li>
+<li>6wv5: Liu, S., Li, S., Shen, G., Sukumar, N., Krezel, A.M., Li, W. (2021) Structural basis of antagonizing the vitamin K catalytic cycle for anticoagulation. Science 371: eabc5667</li>
+<li>4bta: Anantharajan, J., Koski, M.K., Kursula, P., Hieta, R., Bergmann, U., Myllyharju, J., Wierenga, R.K. (2013) The structural motifs for substrate binding and dimerization of the alpha subunit of collagen prolyl 4-hydroxylase. Structure 21: 2107-2118</li>
+<li>Helliwell, K.E., Wheeler, G.L., Smith, A.G. (2013) Widespread decay of vitamin-related pathways: coincidence or consequence? Trends Genetics 29, 469-478.</li>
+<li>3w67: Kono, N., Ohto, U., Hiramatsu, T., Urabe, M., Uchida, Y., Satow, Y., Arai, H. (2013) Impaired alpha-TTP-PIPs interaction underlies familial vitamin E deficiency. Science 340: 1106-1110</li>
+<li>3fpz: Chatterjee, A., Abeydeera, N.D., Bale, S., Pai, P.J., Dorrestein, P.C., Russell, D.H., Ealick, S.E., Begley, T.P. (2011) Saccharomyces cerevisiae THI4p is a suicide thiamine thiazole synthase. Nature 478: 542-546</li>
+<li>2wsi: Leulliot, N., Blondeau, K., Keller, J., Ulryck, N., Quevillon-Cheruel, S., Van Tilbeurgh, H. (2010) Crystal structure of yeast FAD synthetase (Fad1) in Complex with Fad. J Mol Biol 398: 641-646</li>
+<li>2biw:Kloer, D.P., Ruch, S., Al-Babili, S., Beyer, P., Schulz, G.E. (2005) The structure of a retinal-forming carotenoid oxygenase. Science 308: 267-269</li>
+<li>1p4m: Karthikeyan, S., Zhou, Q., Mseeh, F., Grishin, N.V., Osterman, A.L., Zhang, H. (2003) Crystal structure of human riboflavin kinase reveals a beta barrel fold and a novel active site arch. Structure 11: 265-273</li>
+<li>4req: Mancia, F., Evans, P.R. (1998) Conformational changes on substrate binding to methylmalonyl CoA mutase and new insights into the free radical mechanism. Structure 6: 711-720</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_12">http://doi.org/10.2210/rcsb_pdb/mom_2023_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

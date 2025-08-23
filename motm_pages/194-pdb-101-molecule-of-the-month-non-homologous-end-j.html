@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Non-Homologous End Joining Supercomplexes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Non-Homologous End Joining Supercomplexes" property="og:title"/>
+<meta content="Lethal double-strand breaks in the DNA genome are repaired by NHEJ" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/271/1jey.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/271" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Non-Homologous End Joining Supercomplexes" name="twitter:title"/>
+<meta content="Lethal double-strand breaks in the DNA genome are repaired by NHEJ" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/271/1jey.jpg" name="twitter:image"/>
+<meta content="Lethal double-strand breaks in the DNA genome are repaired by NHEJ" name="description"/>
+<meta content="double-strand break,DNA,DNA repair,DNA damage,genome,NHEJ,cancer,cancer therapy,radiation therapy" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 271
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 271 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Non-Homologous End Joining Supercomplexes</h1>
+<p><i>Lethal double-strand breaks in the DNA genome are repaired by NHEJ</i></p>
+<div>
+<div><i>This article was written and illustrated by Gabriela Diaz-Figueroa, Michael Egozi, Syeda Jannath and Jasmine Maddy as part of a week-long boot camp for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu/node/242">Rutgers Institute for Quantitative Biomedicine.</a> The article is presented as part of the 2022-2023 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Recognition of broken DNA ends by Ku70 and Ku80." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/271/1jey.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Recognition of broken DNA ends by Ku70 and Ku80.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/271/1jey.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Essential DNA Repair</h4>
+<div><a href="https://pdb101.rcsb.org/motm/23">DNA</a> is the carrier of our genetic information. Because of its central importance, our DNA also possesses instructions for repairing itself when its strands become fractured. Breaks in DNA can be caused in many ways, for example, through errors in replication and by damage by external dangers such as radiation, oxidative stress and reactive chemicals. If only a single DNA strand is broken, repair systems in the nucleus smoothly fill the gap by using the complementary strand as a guide. Double-strand breaks, however, are more difficult to repair and are lethal to cells if left unfixed. Non-homologous end joining (NHEJ) is one of the major ways of reconnecting these broken ends to correct these harmful errors. This process is essential because in our everyday lives, about 10 double-strand breaks occur in each cell every day.</div>
+<h4>NHEJ In Action </h4>
+<div>Non-homologous end joining is performed by a diverse collection of repair proteins that assemble step-by-step on the broken ends, forming supercomplexes that reconnect the DNA. Assembly of these supercomplexes begins with a heterodimer of two proteins, Ku70 and Ku80, that identifies the broken ends and recruits the other NHEJ proteins. The structure shown here captures the complex at the beginning of the process, when Ku70 and Ku80 have bound to the broken ends (PDB ID <a href="https://www.rcsb.org/structure/1jey" target="_blank">1jey</a>). DNA-PKcs will bind next (see PDB ID <a href="https://www.rcsb.org/structure/6zhe" target="_blank">6zhe</a>, not shown), and then recruit many other enzymes to trim and prepare the two broken ends. The two ends are brought together by XRCC4 and XLF, and finally, DNA ligase IV glues the broken DNA strands together and releases the repaired DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Assembly of the “long-range complex” that recruits enzymes that prepare the broken DNA ends." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/271/7nfc.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Assembly of the “long-range complex” that recruits enzymes that prepare the broken DNA ends.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/271/7nfc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Targeted Mechanisms </h4>
+<div>Double-strand breaks can have different problems, including spatial separation of the two ends, modified bases, and overhanging single strands at the broken ends. To deal with this, DNA-PKcs binds to the supercomplex (shown here from PDB ID <a href="https://www.rcsb.org/structure/7nfc" target="_blank">7nfc</a> and <a href="https://www.rcsb.org/structure/3w1b" target="_blank">3w1b</a>) and recruits other enzymes to repair different types of damage and bring the ends together. These include several small polymerases that fill in missing nucleotides and nucleases like Artemis that trim overhanging strands. Because of these multiple repairs at the damaged ends, NHEJ is not an exact process and may introduce small errors at the join site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Reconnection of the broken DNA by DNA ligase IV in the “short-range complex.”" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/271/7lsy.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Reconnection of the broken DNA by DNA ligase IV in the “short-range complex.”</i></div><a href="https://cdn.rcsb.org/pdb101/motm/271/7lsy.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Making Connections </h4>
+<div>Finally, when the ends are properly prepared, the assembly is rearranged and DNA ligase IV reconnects them (PDB entry <a href="https://www.rcsb.org/structure/7lsy" target="_blank">7lsy</a>). Even though double-strand breaks are harmful to a living organism, they also can be a benefit. For example, in our own immune system, antibody genes are broken and recombined with NHEJ to generate diversity, searching for new combinations that recognize new pathogens. Double-strand breaks are also a key part of cancer radiation therapy and chemotherapy. These therapies break the DNA in the targeted tumor cells, effectively killing them or slowing their growth. Unfortunately, the error-prone nature of NHEJ can also be a cause of cancer, by introducing carcinogenic errors in key genes involved in cellular growth and regulation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Ku Protein and DNA</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/271/1jey_Jmol-jmol.jpg"/></div>
+<p>Ku protein solves a tricky molecular challenge: how do you recognize a broken DNA strand? It does this using shape. DNA is a long strand and usually proteins need to wrap around it. Ku, on the other hand, is shaped like a closed ring, so DNA needs to thread through the hole in the middle. This is only possible at an end of the strand. The structure shown here (PDB ID <a href="https://www.rcsb.org/structure/1jey" target="_blank">1jey</a>) shows the heterodimer of Ku70 and Ku80 with a short piece of DNA threaded through the cavity inside. Several positively-charged lysine and arginine amino acids (white) line the cavity and interact with the DNA backbone. The blunt end of the DNA is in magenta. A short hairpin (yellow) was added to the DNA by the researchers to assist with the structure determination, forming a knuckle that locks the DNA in one place.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Search for “Artemis” or “polymerase mu” at the main RCSB site to explore some of the enzymes involved in NHEJ. For example, look at PDB ID <a href="https://www.rcsb.org/structure/7sgl" target="_blank">7sgl</a> to see Artemis acting on a broken DNA end.</li>
+<li>Inhibitors that block NHEJ are being developed for use in cancer treatment. For example, look at PDB ID <a href="https://www.rcsb.org/structure/7otw" target="_blank">7otw</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7nfc: Chaplin, A.K., Hardwick, S.W., Stavridi, A.K., Buehl, C.J., Goff, N.J., Ropars, V., Liang, S., De Oliveira, T.M., Chirgadze, D.Y., Meek, K., Charbonnier, J.B., Blundell, T.L. (2021) Cryo-EM of NHEJ supercomplexes provides insights into DNA repair. Mol Cell 81: 3400</li>
+<li>7lsy: Chen, S., Lee, L., Naila, T., Fishbain, S., Wang, A., Tomkinson, A.E., Lees-Miller, S.P., He, Y. (2021) Structural basis of long-range to short-range synaptic transition in NHEJ. Nature 593: 294-298</li>
+<li>Zhao, B., Rothenberg, E., Ramsden, D.A., Lieber, M.R. (2020) The molecular basis and disease relevance of non-homologous DNA end joining. Nat Rev Mol Cell Biol 21, 765–781.</li>
+<li>Chang, H.Y.H., Pannunzio, N.R., Adachi, N., Lieber, M.R. (2017) Non-homologous DNA end joining and alternative pathways to double-strand break repair. Nat Rev Mol Cell Biol 18, 495-506.</li>
+<li>3w1b: Ochi, T., Gu, X., Blundell, T.L. (2013) Structure of the catalytic region of DNA ligase IV in complex with an artemis fragment sheds light on double-strand break repair. Structure 21: 672-679</li>
+<li>1jey: Walker, J.R., Corpina, R.A., Goldberg, J. (2001) Structure of the Ku heterodimer bound to DNA and its implications for double-strand break repair. Nature 412: 607-614</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2022, Gabriela Diaz-Figueroa, Michael Egozi, Syeda Jannath, Jasmine Maddy, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_7">http://doi.org/10.2210/rcsb_pdb/mom_2022_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

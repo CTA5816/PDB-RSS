@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Serpins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Serpins" property="og:title"/>
+<meta content="Serpins are traps that capture dangerous proteases" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/53/1psi.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/53" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Serpins" name="twitter:title"/>
+<meta content="Serpins are traps that capture dangerous proteases" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/53/1psi.gif" name="twitter:image"/>
+<meta content="Serpins are traps that capture dangerous proteases" name="description"/>
+<meta content="alpha 1-antitrypsin,blood coagulation,serine protease inhibitor,serine-type endopeptidase inhibitor activity,1psi,1k9o,1ezx" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 53
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 53 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Serpins</h1>
+<p><i>Serpins are traps that capture dangerous proteases</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Alpha 1-antitrypsin, with the reactive loop in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/53/1psi.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Alpha 1-antitrypsin, with the reactive loop in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/53/53-Serpins-1psi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our cells are often forced to work with dangerous machinery. For instance, cells build many machines for demolition, such as nucleases that break down DNA and RNA, amylases and related enzymes that break down carbohydrates, lipases that chew up lipids, and proteases that disassemble proteins. These destructive enzymes are needed in many capacities. They are used in digestion, to break food molecules into workable pieces. They are used in defense, to attack invading viruses and bacteria. They are used to break down defective or obsolete molecules inside cells. They are also used in signaling cascades, to activate signaling molecules instantly when a message is received. These enzymes are essential when used at the proper place and time, but can spell disaster if they get loose.</div>
+<h4>Protection from Proteases</h4>
+<div>To control these destructive machines, our cells also build a host of proteins that block their action and neutralize the danger. The serpins are one class of these molecules, designed to seek out and destroy specific <a href="http://pdb101-beta.rcsb.org/motm/46">serine proteases</a>. The name serpin, although sounding like something from Greek mythology, is taken from their function: <u>ser</u>ine <u>p</u>rotease <u>in</u>hibitors. The example shown here is alpha1-antitrypsin, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1psi" target="_blank">1psi <i class="fa fa-external-link"> </i></a></span>. It is found in the bloodstream, where it protects the surrounding tissues from the protein-cutting enzyme elastase. Neutrophils (a type of white blood cell) secrete elastase in sites of inflammation, where it breaks down connective tissue and allows blood cells to enter and do their jobs in defense and repair. The serpin protects the neighboring areas and ensures that the elastase doesn't spread throughout the body.</div>
+<h4>Trapping Proteases</h4>
+<div>Serpins are molecular mouse traps, complete with bait and a swinging arm. They are metastable proteins, meaning that they are only partially stable in their active form, but they can snap into a far more stable form when they find a protease. The key is a flexible loop, shown here in magenta. One amino acid in this loop is used as bait. In alpha1-antitrypsin, it is a methionine, shown here in red and orange. As shown on the next two pages, proteases are trapped and destroyed when they take this bait.</div>
+<h4>A Nest of Serpins</h4>
+<div>Over thirty different human serpins (a number of which are available in the PDB) have been studied, each with a different essential job. Many are found in the blood. Several control the process of blood clotting: antithrombin limits the action of thrombin when a clot is forming, and antiplasmin limits the action of plasmin when blood clots are being disassembled. Other serpins control the action of proteases used in the complement system, which protects us from bacterial infection.</div>
+<h4>When Serpins Fail </h4>
+<div>When serpins fail, they can cause serious problems. Two types of problems often occur. A serpin can be defective, so that it is unable to block its proper target and leaves the protease to go on a rampage. This happens in emphysema, where alpha1-antitrypsin is compromised and elastase destroys connective tissue in the lungs. One way that the serpin can be disabled is through smoking, which can modify the methionine amino acid used as bait. Alternatively, the unique trapping mechanism of serpins, shown in more detail on the following pages, can lead to another problem. After the loop is broken, it can associate with other copies of the serpin, leading to bulky aggregates. If these form inside nerve cells, they can block nerve function and lead to dementia.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Action of alpha 1-antitrypsin, with trypsin in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/53/antitrypsin-action.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Action of alpha 1-antitrypsin, with trypsin in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/53/53-Serpins-antitrypsin-action.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Tripping the Trap</h4>
+<div>The flexible loop of serpins, known as the reactive center loop, is the bait and trap. The protease, shown here in green, binds to the bait and begins to perform its normal cleavage reaction. The structure on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k9o" target="_blank">1k9o <i class="fa fa-external-link"> </i></a></span>, shows trypsin just after it binds. The reactive serine in the protease attacks the loop, forms a bond with the chain, and makes the break. Normally, a water molecule would then be used to release the protease from its target. But instead, the serpin takes control before the unlucky trypsin can extricate itself. The flexible loop, now cleaved and free to move, zips into a comfortable groove in the side of the serpin, dragging the protease all the way to the other side, as shown in the structure on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ezx" target="_blank">1ezx <i class="fa fa-external-link"> </i></a></span>. You might think that the trypsin could then perform the rest of its reaction and release itself. But the strand of the serpin, now gripped firmly in the groove on its side, is just a few amino acids too short, so the trypsin is jammed up against the bottom of the serpin. This pulls the active site of trypsin out of shape, so that it is no longer active. It also destabilizes the trypsin, so that it partially unfolds. This makes it an easy target for the cellular machinery that cleans up defective proteins, which destroys both the protease and the one-shot serpin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/53/antitrypsin-rasmol.gif"/></div>
+<div>These two amazing crystallographic structures show before and after pictures of alpha1-antitrypsin action. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k9o" target="_blank">1k9o <i class="fa fa-external-link"> </i></a></span>, on the left, shows the serpin-protease complex before it is trapped. The scientists used a mutant form of the protease, with the reactive serine changed to an alanine (shown in yellow), to look at the complex without tripping the trap. Notice the four long parallel strands in the serpin, colored white. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ezx" target="_blank">1ezx <i class="fa fa-external-link"> </i></a></span>, on the right, shows the complex after it has snapped. The loop has broken, and the trypsin has been dragged all the way down to the other side of the serpin. The trypsin serine (yellow) is attached with a bond to the serpin methionine (red). Notice how the strand from the broken loop has zipped into the middle of the four parallel strands. Notice also that the trypsin is destabilized. Much of the protein chain was not seen in the crystal structure because it was moving too much. The little stars show places where the experimental structure ends and loops are not seen. <br/> <br/> This picture was created using RasMol. You can create similar pictures by clicking on the accession codes and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. G. W. Gettins (2002) Serpin structure, mechanism and function. <i>Chemical Reviews</i> <b>102</b>, 4751-4803.</li>
+<li>R. N. Pike and others (2002) Serpins: Finely balanced conformational traps. <i>IUBMB Life</i> <b>54</b>, 1-7<br/></li>
+<li>G. A. Silverman and others (2001) The serpins are an expanding superfamily of structurally similar but functionally diverse proteins.<i>Journal of Biological Chemistry</i> <b>276</b>, 33293-33296.</li>
+<li>J. Protempa, E. Korzus and J. Travis (1994) The serpin superfamily of proteinase inhibitors: Structure, function and regulation. <i>Journal of Biological Chemistry</i> <b>269</b>, 15957-15960.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_5">http://doi.org/10.2210/rcsb_pdb/mom_2004_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

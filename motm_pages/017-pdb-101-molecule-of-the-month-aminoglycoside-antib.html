@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Aminoglycoside Antibiotics</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Aminoglycoside Antibiotics" property="og:title"/>
+<meta content="Antibiotic-resistant bacteria build enzymes that destroy drugs like streptomycin" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_3frh_3pb3.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/146" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Aminoglycoside Antibiotics" name="twitter:title"/>
+<meta content="Antibiotic-resistant bacteria build enzymes that destroy drugs like streptomycin" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_3frh_3pb3.jpg" name="twitter:image"/>
+<meta content="Antibiotic-resistant bacteria build enzymes that destroy drugs like streptomycin" name="description"/>
+<meta content="antibiotic resistance,drug resistance,ribosome,streptomycin,tuberculosis,3frh,3pb3,1l8t,1kny,1bo4,3r1k,1j5e,1ibm,1ibk,1ibl" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 146
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 146 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Aminoglycoside Antibiotics</h1>
+<p><i>Antibiotic-resistant bacteria build enzymes that destroy drugs like streptomycin</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bacterial 16S rRNA methylases." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_3frh_3pb3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial 16S rRNA methylases.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_3frh_3pb3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>The discovery of streptomycin in 1944 provided the first effective treatment for tuberculosis. Ever since then, we have fought an escalating battle with bacteria using streptomycin and other aminoglycoside antibiotics. Researchers have discovered many natural aminoglycosides made by bacteria, and chemists have created entirely new antibiotics based on these effective natural defenses. In turn, bacteria have developed many different ways to protect themselves from attack by these antibiotics. These include molecular methods to control the entry of the drug into cells, pumps to eject drugs out of the cell (see the Molecule of the Month on <a href="https://pdb101.rcsb.org/motm/95">multidrug transporters</a>), and enzymes that directly modify both the target of the drug and the drug itself.</div>
+<h4>Changing the Target</h4>
+<div>The major way that tuberculosis bacteria become resistant to streptomycin is to change the target of the drug. Aminoglycosides attack the ribosome, as shown in more detail below. The drug binds in a tight pocket on the small subunit of the ribosome, corrupting the proper pairing of codons and anticodons. Drug resistant bacteria, however, have developed enzymes that add methyl groups to specific bases in their ribosomes, making this pocket a bit too small for the antibiotic to bind. Two examples are shown here: the one on the left adds a methyl group to guanine 1405 in the ribosome (PDB entry <span class="rcsb_id_tag" title="methyltransferase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3frh" target="_blank">3frh <i class="fa fa-external-link"> </i></a></span>), and the one on the right modifies adenine 1408 (PDB entry <span class="rcsb_id_tag" title="methyltransferase"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pb3" target="_blank">3pb3 <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial enzymes that inactivate antibiotic molecules." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_aminoglycoside_modifying_enzymes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial enzymes that inactivate antibiotic molecules.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_aminoglycoside_modifying_enzymes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Attacking the Antibiotic</h4>
+<div>As chemists developed more and more types of aminoglycosides, including many that work against methylated ribosomes, bacteria developed methods to attack the drugs directly. Dozens of different enzymes have been discovered in different strains of bacteria, and to make things worse, bacteria exchange these enzymes by passing plasmids back and forth. They fall into three major classes: ones that connect a phosphate to the drug, ones that add an acetyl group, and ones that add AMP. The structures of these enzymes are as diverse as their chemical reactions. Four are shown here: a phosphotransferase from PDB entry <span class="rcsb_id_tag" title="aminoglycoside-modifying enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l8t" target="_blank">1l8t <i class="fa fa-external-link"> </i></a></span>, a nucleotidyltransferase from PDB entry <span class="rcsb_id_tag" title="aminoglycoside-modifying enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kny" target="_blank">1kny <i class="fa fa-external-link"> </i></a></span>, an acetyltransferase from PDB entry <span class="rcsb_id_tag" title="aminoglycoside-modifying enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bo4" target="_blank">1bo4 <i class="fa fa-external-link"> </i></a></span> and an unusual acetyltransferase that can modify the drug in as many as four places, from PDB entry <span class="rcsb_id_tag" title="aminoglycoside-modifying enzyme"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3r1k" target="_blank">3r1k <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Paromomycin and the Ribosome (PDB entries 1j5e, 1ibm, 1ibk and 1ibl)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/146/146-AminoglycosideAntibiotics_1ibk_jmol.jpg"/></div>
+<p>An amazing series of structures, in PDB entries <span class="rcsb_id_tag" title="30S ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j5e" target="_blank">1j5e <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="30S ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ibm" target="_blank">1ibm <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="30S ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ibk" target="_blank">1ibk <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="30S ribosome"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ibl" target="_blank">1ibl <i class="fa fa-external-link"> </i></a></span>, have revealed the way that aminoglycosides work. Treatment with aminoglycosides causes the bacterium to incorporate errors into their proteins, and these corrupted proteins ultimately kill the cell. By comparing the structures of normal ribosomes with antibiotic-bound ribosomes, researchers have discovered that the antibiotics weaken the proofreading ability of the ribosome, allowing improper tRNA molecules to bind to codons in the mRNA. To explore these structures, click on the image here for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many other structures of enzymes that modify aminoglycosides are available at the PDB. You can find structures of the enzymes alone, and structures with antibiotics and cofactors.</li>
+<li>Researchers are attempting to fight antibiotic resistance by developing inhibitors that block these enzymes. To find these, you can start by searching the PDB for `aminoglycoside inhibitor`. </li>
+<li>Many other structures of enzymes that modify aminoglycosides are available at the PDB. You can find structures of the enzymes alone, and structures with antibiotics and cofactors.</li>
+<li>Researchers are attempting to fight antibiotic resistance by developing inhibitors that block these enzymes. To find these, you can start by searching the PDB for `aminoglycoside inhibitor`. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. S. Ramirez and M. E. Tolmasky (2010) Aminoglycoside modifying enzymes. Drug </li>
+<li>Resistance Update 13, 151-171.</li>
+<li>S. B. Vakulenko and S. Mobashery (2003) Versatility of aminoglycosides and prospects </li>
+<li>for their future. Clinical Microbiology Reviews 16, 430-450.</li>
+<li>J. M. Ogle, D. E. Brodersen, W. M. Clemons Jr., M. J. Tarry, A. P. Carter and V. </li>
+<li>Ramakrishnan (2001) Recognition of cognate transfer RNA by the 30S ribosomal </li>
+<li>subunit. Science 292, 897-902.</li>
+<li>G. D. Wright (1999) Aminoglycoside-modifying enzymes. Current Opinion in </li>
+<li>Microbiology 2, 499-503.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_2">http://doi.org/10.2210/rcsb_pdb/mom_2012_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

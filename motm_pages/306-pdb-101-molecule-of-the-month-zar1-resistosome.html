@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: ZAR1 Resistosome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: ZAR1 Resistosome" property="og:title"/>
+<meta content="Plants protect themselves from infection with immune system machines such as the resistosome" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/287/6j5t.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/287" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: ZAR1 Resistosome" name="twitter:title"/>
+<meta content="Plants protect themselves from infection with immune system machines such as the resistosome" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/287/6j5t.jpg" name="twitter:image"/>
+<meta content="Plants protect themselves from infection with immune system machines such as the resistosome" name="description"/>
+<meta content="plant,immunity,innate immunity,resistosome,apoptosis,uridylylation,AvrAC,xopAC,ZAR1,resistance,6j5t,6j5v,6j5w" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 287
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 287 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: ZAR1 Resistosome</h1>
+<p><i>Plants protect themselves from infection with immune system machines such as the resistosome</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Top and side views of the fully-formed ZAR1 resistosome assembly (PDB ID 6j5t), composed of uridylylated PBL2 (dark blue; uridylyl groups in magenta), RSK1 (turquoise), and ZAR1 (green) subunits. The ends of the ZAR1 subunits (yellow) form a funnel-like protrusion on one side of the assembly." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/287/6j5t.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Top and side views of the fully-formed ZAR1 resistosome assembly (PDB ID <a href="https://www.rcsb.org/structure/6j5t" target="_blank">6j5t</a>), composed of uridylylated PBL2 (dark blue; uridylyl groups in magenta), RSK1 (turquoise), and ZAR1 (green) subunits. The ends of the ZAR1 subunits (yellow) form a funnel-like protrusion on one side of the assembly.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/287/6j5t.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Like humans and all other organisms, plants can become infected by pathogens and stricken with disease. This is a serious concern for agriculture and food production, as diseases can wipe out entire populations of crops. Fortunately, plants already come equipped with their own set of immune defenses to protect themselves against such outside threats. However, unlike humans which have both <a href="https://pdb101.rcsb.org/browse/immune-system">adaptive and innate immunities</a>, plants only have innate immunity. The innate immune system relies on receptors on the cell surface as well as inside the cell that detect certain molecular patterns and effector molecules associated with pathogens, respectively. When this detection event occurs, it will trigger a cascade of events that ultimately lead to an immune response to fend off the pathogen and maintain survival. Here we explore one of these pathways in <i>Arabidopsis thaliana</i>, a common weed plant that is widely used by researchers as a model organism, which culminates in the formation of a large molecular machine known as the <i>resistosome</i>.</div>
+<h4>Fishing for Pathogens</h4>
+<div>As with any immune response, the resistosome formation pathway begins with the infection itself. Specifically, the pathogenic bacteria <i>Xanthomonas campestris</i>—a major culprit of “black rot” in leaves—initiates the offensive by infecting a plant cell with the uridylyltransferase AvrAC. Uridylyltransferases are a group of enzymes that—as their name implies—“transfer” a “uridylyl” nucleotide onto a target protein or nucleic acid chain, generally by attaching it to an amino acid with an available hydroxyl group such as a threonine or serine. Once inside the plant cell, AvrAC starts its attack by adding uridyl groups to regulatory kinase enzymes, which inhibits immune signaling pathways and thereby leads to increased virulence. Cleverly, however, the plant cell fights back by baiting it with a decoy protein called PBL2. When PBL2 is uridylylated, instead of shutting down the immune response, it begins the process of building the resistosome, as shown in the “Exploring the Structure” section below via an interactive JSmol visualization.</div>
+<h4>Pièce de Résistance</h4>
+<div>As observed in the top view of the resistosome (shown here from PDB ID <a href="https://www.rcsb.org/structure/6j5t" target="_blank">6j5t</a>), the fully-formed assembly exhibits a ring-like structure and is composed of five copies of three different proteins. On the outer edges of the ring are the uridylylated PBL2 subunits (dark blue), each of which is bound toward the center to another subunit called RSK1 (a pseudokinase; turquoise). On the inside of the ring sits an immune-receptor subunit known as ZAR1 (green), and serves as the connecting point for the five complexes to join together. Notably, at the very center of the resistosome, the ends of the ZAR1 subunits (yellow) form a funnel-like protrusion on one side of the assembly, as depicted in the side view. This funnel is found to carry out the critical protective function of the ZAR1 resistosome by inserting itself into the cell membrane to form a pore and lead to a localized programmed cell death termed the “hypersensitive response,” thus sacrificing the infected cell for the good of the whole. Such an insertion mechanism can be envisioned given the relatively hydrophobic exterior of the funnel which would interact with the hydrophobic interior of the plasma membrane, as well as the funnel’s hollow hydrophilic interior which would be conducive to the cytosolic environment.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Computed structure model of AvrAC/xopAC (AF-Q4UWF4-F1), with the Fic domain highlighted in dark red. The N-terminal tail colored in white exhibits low prediction confidence and is likely disordered." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/287/model2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Computed structure model of AvrAC/xopAC (<a href="https://www.rcsb.org/structure/AF_AFQ4UWF4F1" target="_blank">AF-Q4UWF4-F1</a>), with the Fic domain highlighted in dark red. The N-terminal tail colored in white exhibits low prediction confidence and is likely disordered.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/287/model2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Uridylylation Modulation</h4>
+<div>The <a href="https://www.rcsb.org/docs/general-help/computed-structure-models-and-rcsborg" target="_blank">computed structure model</a> of AvrAC, shown here from <a href="https://www.rcsb.org/structure/AF_AFQ4UWF4F1" target="_blank">AF-Q4UWF4-F1</a>, is composed of two basic parts: a kinase-binding domain (in red) and a long, disordered tail (in white). The kinase-binding region not only facilitates the association of AvrAC with PBL2 (the decoy protein), but it is also responsible for carrying out the uridylylation activity of AvrAC. This activity is imparted by a small motif called a “Fic” domain (highlighted in dark red) which is capable of mediating nucleotide binding and transfer. Importantly, it has been found that AvrAC must uridylylate two sites on PBL2—one serine and one threonine—in order to trigger the cascade of events in the resistosome formation pathway.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Resistosome Formation Pathway</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/287/jmol-jmol.jpg"/></div>
+<p>Three structures reveal the steps in the process of building the active resistosome. First, a complex composed of the immune receptor ZAR1 (green) bound to ADP (orange) and pseudokinase RSK1 (turquoise) exists in an inactive form inside the plant cell, shown on the left (PDB ID <a href="https://www.rcsb.org/structure/6j5w" target="_blank">6j5w</a>). When PBL2 (dark blue) becomes doubly uridylylated, it binds to RSK1 to form the larger intermediate complex depicted in the center (PDB ID <a href="https://www.rcsb.org/structure/6j5v" target="_blank">6j5v</a>), allowing it to open up and release ADP. This open, intermediate state is induced by the stabilizing interactions of the two uridylyl groups (magenta) with a loop region of RSK1, which ends up pushing the ATP/ADP-binding domain (light green) away and triggering a conformational change in the ZAR1 structural domain (green). Last, the ZAR1 subunit then binds ATP (orange), leading to additional allosteric conformational changes such as the release of the short alpha helix tail (yellow) and ultimately the formation of the active complex illustrated on the right (PDB ID <a href="https://www.rcsb.org/structure/6j5t" target="_blank">6j5t</a>). When five of these activated complexes come together into the complete resistosome assembly, the yellow tails will form the membrane-interacting funnel.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Explore how other organisms make use of macromolecular supercomplexes for regulating immunity and programmed cell death, such as <a href="https://pdb101.rcsb.org/motm/143" target="_blank">Toll-like receptors</a> and the <a href="https://pdb101.rcsb.org/motm/177" target="_blank">apoptosome assembly</a>.</li>
+<li>To learn more about computed structure models (CSMs) and how to explore them on RCSB.org, take a look through our <a href="https://www.rcsb.org/docs/general-help/computed-structure-models-and-rcsborg" target="_blank">documentation pages</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-structure-prediction-design-and-computed-structure-models">Protein Structure Prediction, Design, and Computed Structure Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Feng, F., Yang, F., Rong, W., Wu, X., Zhang, J., Chen, S., He, C., Zhou, J.-M. (2012) A Xanthomonas uridine 5′-monophosphate transferase inhibits plant immune kinases. Nature 485: 114–118.</li>
+<li>Wang, G., Roux, B., Feng, F., Guy, E., Li, L. Li, N., Zhang, X., Lautier, M., Jardinaud, M.-F., Chabannes, M., Arlat, M., Chen, S., He, C., Noël, L.D., Zhou, J.-M. (2015) The decoy substrate of a pathogen effector and a pseudokinase specify pathogen-induced modified-self recognition and immunity in plants. Cell Host &amp; Microbe 18: 285–295.</li>
+<li>Burdett, H., Bentham, A.R., Williams, S.J., Dodds, P.N., Anderson, P.A., Banfield, M.J., Kobe, B. (2019) The plant “resistosome”: structural insights into immune signaling. Cell Host &amp; Microbe 26: 193–201.</li>
+<li>Bi, G., Su, M., Li, N., Liang, Y., Dang, S., Xu, J., Hu, M., Wang, J., Zou, M., Deng, Y., Li, Q., Huang, S., Li, J., Chai, J., He, K., Chen, Y.-H., Zhou, J.-M. (2021) The ZAR1 resistosome is a calcium-permeable channel triggering plant immune signaling. Cell 184: 3528–3541.e12.</li>
+<li>6j5t: Wang, J., Hu, M., Wang, J., Qi, J., Han, Z., Wang, G., Qi, Y., Wang, H.-W., Zhou, J.-M., Chai, J. (2019) Reconstitution and structure of a plant NLR resistosome conferring immunity. Science 364: eaav5870.</li>
+<li>6j5v, 6j5w: Wang, J., Wang, J., Hu, M., Wu, S., Qi, J., Wang, G., Han, Z., Qi, Y., Gao, N., Wang, H.-W., Zhou, J.-M., Chai, J. (2019) Ligand-triggered allosteric ADP release primes a plant NLR complex. Science 364: eaav5868.</li>
+<li>AF-Q4UWF4-F1: Varadi, M., Anyango, S., Deshpande, M., Nair, S., Natassia, C., Yordanova, G., Yuan, D., Stroe, O., Wood, G., Laydon, A., Žídek, A., Green, T., Tunyasuvunakool, K., Petersen, S., Jumper, J., Clancy, E., Green, R., Vora, A., Lutfi, M., Figurnov, M., Cowie, A., Hobbs, N., Kohli, P., Kleywegt, G., Birney, E., Hassabis, D., Velankar, S. (2022) AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models. Nucleic Acids Research 50: D439–D444. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2023, Dennis Piehl, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_11">http://doi.org/10.2210/rcsb_pdb/mom_2023_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: HIV Capsid</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: HIV Capsid" property="og:title"/>
+<meta content="At the center of HIV, an unusual cone-shaped capsid protects the viral genome and delivers it into infected cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_capsid_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/163" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: HIV Capsid" name="twitter:title"/>
+<meta content="At the center of HIV, an unusual cone-shaped capsid protects the viral genome and delivers it into infected cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_capsid_composite.jpg" name="twitter:image"/>
+<meta content="At the center of HIV, an unusual cone-shaped capsid protects the viral genome and delivers it into infected cells" name="description"/>
+<meta content="capsid,human immunodeficiency virus,TRIM5,viral restriction,virus assembly,1e6j,3h47,2kod,3j3q,3j3y,2lm3,1ak4,3mge,3p05" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 163
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 163 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: HIV Capsid</h1>
+<p><i>At the center of HIV, an unusual cone-shaped capsid protects the viral genome and delivers it into infected cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The HIV capsid protein (left) assembles into a hollow capsid (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_capsid_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The HIV capsid protein (left) assembles into a hollow capsid (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_capsid_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses come in many shapes and sizes, ranging from simple protein shells filled with RNA or DNA to membrane-enveloped particles that rival cells in complexity. HIV is one of these complex viruses, surrounded by a membrane and filled with a diverse collection of viral and cellular molecules. The genome of HIV, which is composed of two strands of RNA, is packaged inside a distinctive cone-shaped capsid, which protects the RNA and delivers it to the cells that HIV infects.</div>
+<h4>Staying Flexible</h4>
+<div>The HIV capsid is built from a single protein, called capsid protein, shown here on the left from PDB entry <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e6j" target="_blank">1e6j <i class="fa fa-external-link"> </i></a></span>. Capsid protein, also known as CA or p24, folds to form two domains connected by a flexible linker. This flexibility gives the protein a lot of options for assembly. The larger domain associates with other copies of the protein to form rings of six, and slightly less often, rings of five. The smaller domain then links these rings together to form the larger structure.</div>
+<h4>Breaking Symmetry</h4>
+<div>The flexibility allows the formation of structures that aren't as perfectly symmetrical as the capsids of viruses like poliovirus or rhinovirus. Instead, HIV capsid forms an unusual cone-shaped structure, with twelve of the pentameric rings (shown here in orange) and over a hundred hexamers (shown here in red). This model was constructed based on electron micrographs, using PDB entries <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3h47" target="_blank">3h47 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2kod" target="_blank">2kod <i class="fa fa-external-link"> </i></a></span> and refining the model with molecular dynamics. Two models were obtained that are consistent with the electron microscope images: a model with 216 hexamers (shown here from PDB entry <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3j3q" target="_blank">3j3q <i class="fa fa-external-link"> </i></a></span>) and a slightly smaller model with 186 hexamers (PDB entry <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3j3y" target="_blank">3j3y <i class="fa fa-external-link"> </i></a></span>). Because of their large size, these HIV capsid structures are milestone entries for the PDB archive: you can read more about this on the <a href="http://www.wwpdb.org/news/news_2013.html#30-May-2013">wwPDB news.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cellular proteins that bind to HIV capsid protein." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_2lm3_1ak4_1e6j.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cellular proteins that bind to HIV capsid protein.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_2lm3_1ak4_1e6j.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fighting Back</h4>
+<div>TRIM5 is one of the weapons deployed in the ongoing battle being fought between living organisms and viruses. TRIM5 binds to the retroviral capsid and interferes with the uncoating process. At this point in our evolution, the human version of TRIM5 is not effective against HIV, but it blocks other retroviruses. However, the TRIM5 protein from rhesus monkeys, shown here from PDB entry <span class="rcsb_id_tag" title="TRIM5alpha"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2lm3" target="_blank">2lm3 <i class="fa fa-external-link"> </i></a></span>, is highly potent against HIV. Other cellular proteins are used by HIV to assist in viral replication. As HIV is budding from an infected cell, the cellular enzyme cyclophilin A binds to capsid, as shown here from PDB entry <span class="rcsb_id_tag" title="HIV capsid and cyclophilin A"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ak4" target="_blank">1ak4 <i class="fa fa-external-link"> </i></a></span>. Researchers are still working out its function in the viral lifecycle, but it seems to be essential for the proper uncoating of the virus when it infects a new cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HIV Capsid (PDB entries 3mge and 3p05)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/163/163-HIVCapsid_3mge_3p05_jmol.jpg"/></div>
+<p>The capsid protein is able to form hexamers and pentamers by shifting slightly in structure. This is an example of the principle of "quasiequivalence", first proposed by Caspar and Klug in 1962. Quasiequivalence is the way that many viruses build capsids that are much larger than is possible with perfect symmetry, but that still only use a single type of protein chain. In the HIV capsid, the interactions between the many subunits are similar, but are deformed slightly to accommodate the different shapes of the cone-shaped portion and the round caps. To take a closer look at these two structures, PDB entries <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3mge" target="_blank">3mge <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="HIV capsid"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3p05" target="_blank">3p05 <i class="fa fa-external-link"> </i></a></span>, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can explore the structure of capsid and other HIV proteins in the online animation: <a href="https://cdn.rcsb.org/pdb101/learn/resources/structural-biology-of-hiv/index.html" target="_blank"> The Structural Biology of HIV.</a></li>
+<li>To explore the flexibility of capsid, you can use the <a href="https://www.rcsb.org/alignment">Pairwise Structure Alignment</a> tool at the RCSB PDB to overlap the different structures.</li>
+<li>In order to solve the structures of the hexagonal and pentagonal complexes, researchers engineered capsid with cysteines to lock the structure together--see if you can find them when you're viewing these structures.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV and AIDS</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>G. Zhao, J. R. Perilla, E. L. Yufenyuy, X. Meng, B. Chen, J. Ning, J. Ahn, A. M. Groneborn, K. Schulten, C. Aiken &amp; P. Zhang (2013) Mature HIV-1 capsid structure by cryo-electron microscopy and all-atom molecular dynamics. Nature 497, 643-646.</li>
+<li>N. Biris, Y. Yang, A. B. Taylor, A. Tomashevski, M. Guo, P. J. Hart, F. Diaz-Griffero &amp; D. N. Ivanov (2012) Structure of the rhesus monkey TRIM5alpha PRYSPRY domain, the HIV capsid recognition module. Proc. Natl. Acad. Sci. USA 109, 13278-13283.</li>
+<li>O. Pornillos, B. K. Ganser-Pornillos &amp; M. Yeager (2011) Atomic-level modelling of the HIV capsid. Nature 469, 424-427.</li>
+<li>O. Pornillos, B. K. Ganser-Pornillos, S. Banumathi, Y. Hua &amp; M. Yeager (2010) Disulfide bond stabilization of the hexameric capsomer of human immunodeficiency virus. J. Mol. Biol. 401, 985-995.</li>
+<li>I. J. Byeon, X. Meng, J. Jung, G. Zhao, R. Yang, J. Ahn, J. Shi, J. Concel, C. Aiken, P. Zhang &amp; A. M. Gronenborn (2009) Structural convergence between cryo-EM and NMR reveals intersubunit interactions critical for HIV-1 capsid function. Cell 139, 780-790.</li>
+<li>O. Pornillos, B. K. Ganser-Pornillos, B. N. Kelly, Y. Hua, F. G. Whitby, C. D. Stout, W. I. Sundquist, C. P. Hill &amp; M. Yeager (2009) X-ray structures of the hexameric building block of HIV capsid. Cell 137, 1282-1292.</li>
+<li>G. J. Towers (2007) The control of viral infection by tripartite motif proteins and cyclophilin A. Retrovirology 4:40.</li>
+<li>S. Monaco-Malbet, C. Berthet-Colominas, A. Novelli, N. Battai, N. Piga, V. Cheynet, F. Mallet &amp; S. Cusack (2000) Mutual conformational adaptations in antigen and antibody upon complex formation between an Fab and HIV-1 capsid protein p24. Structure 15, 1069-1077.</li>
+<li>T. R. Gamble, F. F. Vajdos, S. Yoo, D. K. Worthylake, M Houseweart, W. I. Sundquist &amp; C. P. Hill (1996) Crystal structure of human cyclophilin A bound to the amino-terminal domain of HIV-1 capsid. Cell 87, 1285-1294.</li>
+<li>D. L. D. Caspar and A. Klug (1962) Physical principles in the construction of regular viruses. Cold Spring Harbor Symposium on Quantitative Biology 27, 1-24.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_7">http://doi.org/10.2210/rcsb_pdb/mom_2013_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SARS-CoV-2 RNA-dependent RNA Polymerase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 RNA-dependent RNA Polymerase" property="og:title"/>
+<meta content="Coronaviruses duplicate their RNA genome using a specialized polymerase" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-6yyt_label.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/249" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 RNA-dependent RNA Polymerase" name="twitter:title"/>
+<meta content="Coronaviruses duplicate their RNA genome using a specialized polymerase" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-6yyt_label.jpg" name="twitter:image"/>
+<meta content="Coronaviruses duplicate their RNA genome using a specialized polymerase" name="description"/>
+<meta content="RNA,RNA-dependent RNA polymerase,coronavirus,nsp12,nsp6,nsp7,SARS-CoV-2,SARS-CoV,COVID-19,6yyt,7c2k,7bzf,7bv2,2ahm" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 249
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 249 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SARS-CoV-2 RNA-dependent RNA Polymerase</h1>
+<p><i>Coronaviruses duplicate their RNA genome using a specialized polymerase</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="SARS-CoV-2 RNA-directed RNA polymerase (nsp12) with nsp7 and nsp8, and a short duplex of RNA with a template strand and a product strand. Nsp7 and 8 are removed on the right to show the interaction with RNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-6yyt_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>SARS-CoV-2 RNA-directed RNA polymerase (nsp12) with nsp7 and nsp8, and a short duplex of RNA with a template strand and a product strand. Nsp7 and 8 are removed on the right to show the interaction with RNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-6yyt_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Some viruses, including <a href="https://pdb101.rcsb.org/motm/20">poliovirus, rhinovirus</a>, and coronaviruses, don't bother with DNA at all. They transmit their genetic information as a strand of RNA that can be used as a messenger RNA to build proteins as soon as the virus infects a cell. One of the tricks, however, is that these viruses need a special polymerase that goes against the standard DNA-to-RNA-to-protein information flow. This polymerase makes a new RNA strand using RNA, not DNA, as the template. So, the virus simply needs to encode this polymerase in its RNA genome. Then, the polymerase is made by cellular ribosomes soon after infection and it starts replicating the viral RNA to make new viruses.</div>
+<h4>Under the Microscope</h4>
+<div>Amazingly, only a few months after SARS-CoV-2 was discovered, researchers are revealing the structure its RNA-dependent RNA polymerase and exploring its interactions with RNA. Cryoelectron microscopy is being used to determine the structures of the polymerase and its helper proteins, along with small pieces of RNA. A few of the first structures can be found in PDB entries <a href="https://www.rcsb.org/structure/6yyt" target="_blank">6yyt</a> (shown here), <a href="https://www.rcsb.org/structure/7c2k" target="_blank">7c2k</a>, <a href="https://www.rcsb.org/structure/7bzf" target="_blank">7bzf</a>, <a href="https://www.rcsb.org/structure/7bv2" target="_blank">7bv2</a>, and <a href="https://www.rcsb.org/structure/6x2g" target="_blank">6x2g</a>. These structures include the polymerase (also known as nsp12 for "non-structural protein 12") along with two other viral proteins, nsp7 and nsp8, that help the polymerase stay on track and copy long portions of the RNA chain.</div>
+<h4>Perfect Target</h4>
+<div>Since our own cells don't make RNA from RNA, this polymerase is an attractive target for antivirals. New drugs usually take a long time to perfect since they have to be evaluated for effectiveness and safety, but investigational polymerase-targeting agents like remdesivir are being repurposed in the fight against COVID19. Remdesivir was developed to fight hepatitis and Ebola, but wasn't very effective. It is currently approved for emergency use against SARS-CoV-2.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complex of SARS-CoV nsp7 and nsp8." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-2ahm_2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of SARS-CoV nsp7 and nsp8.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-2ahm_2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Getting Started</h4>
+<div>Nsp 7 and 8 assist the polymerase in its job, but they are also thought to help get the whole process started by creating a primer at the start of the RNA chain. This structure (PDB entry <a href="https://www.rcsb.org/structure/2ahm" target="_blank">2ahm</a>) shows a large, circular complex of SARS-CoV nsp7 and nsp8 composed of 16 chains. Researchers have speculated that it encircles the RNA strand and creates the primer. It is currently unknown if something similar occurs with SARS-CoV-2.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>RNA-dependent RNA Polymerase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/249/249-SARSCoV2_RNAdependent_RNA_Polymerase-7bv2_jmol.jpg"/></div>
+<p>Remdesivir is a modified adenine-like nucleotide that is converted to an active triphosphate form and then added to the product RNA strand, blocking the function of the polymerase. This structure (PDB entry <a href="https://www.rcsb.org/structure/7bv2" target="_blank">7bv2</a>) captures the drug (green) after it has been attached to the product strand. Two magnesium ions (magenta) assist with the normal polymerase reaction, and the structure also found a pyrophosphate nearby (dark purple). To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Try searching for "RNA-dependent RNA polymerase" at the main RCSB site to see similar enzymes from other viruses.</li>
+<li>Be sure to take a look at the cryoEM maps for these structures at the <a href="http://www.emdataresource.org">EMDataBank</a>--there is a link to them at the top of each Structure Summary page.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6yyt: Hillen, H.S., Kokic, G., Farnung, L., Dienemann, C., Tegunov, D., Cramer, P. (2020) Structure of replicating SARS-CoV-2 polymerase. Nature, https://doi.org/10.1038/s41586-020-2368-8</li>
+<li>7c2k, 7bzf, : Wang, Q., Wu, J., Wang, H., Gao, Y., Liu, Q., Mu, A., Ji, W., Yan, L., Zhu, Y., Zhu, C., Fang, X., Yang, X., Huang, Y., Gao, H., Liu, F., Ge, J., Sun, Q., Yang, X., Xu, W., Liu, Z., Yang, H., Lou, Z., Jiang, B., Guddat, L.W., Gong, P., Rao, Z. (2020) Structural Basis for RNA Replication by the SARS-CoV-2 Polymerase. Cell 182: 1-12.</li>
+<li>7bv2: Yin, W., Mao, C., Luan, X., Shen, D.D., Shen, Q., Su, H., Wang, X., Zhou, F., Zhao, W., Gao, M., Chang, S., Xie, Y.C., Tian, G., Jiang, H.W., Tao, S.C., Shen, J., Jiang, Y., Jiang, H., Xu, Y., Zhang, S., Zhang, Y., Xu, H.E. (2020) Structural basis for inhibition of the RNA-dependent RNA polymerase from SARS-CoV-2 by remdesivir. Science 368: 1499-1504.</li>
+<li>2ahm: Zhai, Y.J., Sun, F., Li, X., Pang, H., Xu, X., Bartlam, M., Rao, Z. (2005) Insights into SARS-CoV transcription and replication from the structure of the nsp7-nsp8 hexadecamer. Nat Struct Mol Biol 12: 980-986.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_9">http://doi.org/10.2210/rcsb_pdb/mom_2020_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

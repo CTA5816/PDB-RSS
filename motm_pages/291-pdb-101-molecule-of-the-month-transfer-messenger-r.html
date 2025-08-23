@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Transfer-Messenger RNA</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Transfer-Messenger RNA" property="og:title"/>
+<meta content="tmRNA rescues ribosomes that are stalled by damaged messenger RNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3iyr_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/157" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Transfer-Messenger RNA" name="twitter:title"/>
+<meta content="tmRNA rescues ribosomes that are stalled by damaged messenger RNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3iyr_composite.jpg" name="twitter:image"/>
+<meta content="tmRNA rescues ribosomes that are stalled by damaged messenger RNA" name="description"/>
+<meta content="protein synthesis,ribosome,tmRNA,3iyr,3iz4,4v6t,4v8q,3iyq" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 157
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 157 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Transfer-Messenger RNA</h1>
+<p><i>tmRNA rescues ribosomes that are stalled by damaged messenger RNA</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Transfer-messenger RNA (right) compared with a typical transfer RNA (left)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3iyr_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transfer-messenger RNA (right) compared with a typical transfer RNA (left).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3iyr_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Damaged messenger RNA poses a double danger to cells. If a messenger RNA is truncated, it will be missing its stop codon, so it will encode a faulty, truncated protein. Also, ribosomes get stalled at the end of these truncated messages and are unable to release the mRNA and move on to the next protein synthesis job. Bacteria possess an ingenious molecular method for solving both of these problems at the same time, that destroys the faulty protein and releases the ribosome all at once.</div>
+<h4>Two in One</h4>
+<div>Transfer-messenger RNA, called tmRNA for short, rescues stalled ribosomes. It is composed of a long strand of RNA, several hundred nucleotides in length. The one shown here (PDB entry <span class="rcsb_id_tag" title="tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iyr" target="_blank">3iyr <i class="fa fa-external-link"> </i></a></span>) is from <i>Thermus thermophilus</i>, and has 349 nucleotides, and a similar structure is available from <i>Escherichia coli</i>, which is slightly larger (PDB entry <span class="rcsb_id_tag" title="tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iz4" target="_blank">3iz4 <i class="fa fa-external-link"> </i></a></span>, not shown here). tmRNA folds into a distinctive donut shape with several functional parts. The two ends come together to form a section that looks remarkably like a transfer RNA, shown here in red (a tRNA is shown for comparison, from PDB entry 4tna). Like a tRNA, this portion is loaded with an amino acid, which for tmRNA is always an alanine. Next to this, there is a short section that acts as like a messenger RNA (shown here in magenta), that encodes a short stretch of amino acids, complete with a stop codon. SmpB, a small protein shown here in blue, assists the tmRNA.</div>
+<h4>tmRNA to the Rescue</h4>
+<div>Several problems must be solved when tmRNA rescues stalled ribosomes. First, the truncated mRNA has been translated to its end, so the decoding site doesn't hold a complete mRNA codon. To solve this problem, the tRNA-like portion of tmRNA inserts into the ribosome and the SmpB protein fits into the decoding site, replacing the normal codon-anticodon interaction. Then, protein synthesis needs to be resumed. The alanine carried by the tmRNA is added to the stalled protein chain and the mRNA-like section slips into the position normally occupied by mRNA. In the process, the truncated mRNA is kicked out to be destroyed by ribonucleases. The ribosome then steps along the mRNA-like stretch of the tmRNA, extending the truncated protein by a few amino acids and finally releasing it when the tmRNA stop codon is reached. This isn't the end of the story, however: the sequence of this short extension encodes a tag that is recognized by the protein degradation machinery of the cell, ensuring that the faulty protein will be destroyed.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Transfer-messenger RNA (red) bound to a ribosome (blue and green) with elongation factor G (magenta) and a transfer RNA (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3j18_3j19_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Transfer-messenger RNA (red) bound to a ribosome (blue and green) with elongation factor G (magenta) and a transfer RNA (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3j18_3j19_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>tmRNA in Action</h4>
+<div>Cryoelectron microscopy has been used to look at the structures of many of the steps in this process. The structure shown here captures the tmRNA just after it gets started translating the short extension encoded in the mRNA-like section (PDB entries <span class="rcsb_id_tag" title="ribosome and tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4v6t" target="_blank">4v6t <i class="fa fa-external-link"> </i></a></span>). The structure includes an outgoing tRNA (yellow) and elongation factor G (magenta). A crystallographic structure is also available for a small fragment of tmRNA bound to ribosomes along with elongation factor Tu, showing the atomic details of the interaction of SmpB with the ribosome (PDB entries <span class="rcsb_id_tag" title="ribosome and tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4v8q" target="_blank">4v8q <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>tmRNA (PDB entries 3iyq and 3iyr)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/157/157-TransferMessengerRNA_3iyr_3iyq_jmol.jpg"/></div>
+<p>As you can imagine, tmRNA must be very flexible to allow the tRNA portion to enter the ribosomal tRNA site, and the mRNA portion to feed through ribosome and be translated into protein. The two structures shown here (PDB entries <span class="rcsb_id_tag" title="tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iyq" target="_blank">3iyq <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="tmRNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iyr" target="_blank">3iyr <i class="fa fa-external-link"> </i></a></span>) reveal some of this flexibility, showing tmRNA just after it binds to the ribosomal A-site, and after the tRNA-like portion has inserted into the ribosomal P-site. These PDB entries only include atomic coordinates for tmRNA and SmpB--you have to imagine the rest of the ribosome surrounding the structure. To take a closer look at these two structures, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can look at the cryoEM maps for these structures at EMDB: <a href="https://www.ebi.ac.uk/emdb/EMD-5189">EMD-5189</a>, <a href="https://www.ebi.ac.uk/emdb/EMD-5234">EMD-5234</a> and <a href="https://www.ebi.ac.uk/emdb/EMD-5386">EMD-5386</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>B. D. Janssen &amp; C. S. Hayes (2012) The tmRNA ribosome-rescue system. Advances in Protein Chemistry and Structural Biology 86, 151-191.</li>
+<li>B. Felden &amp; R. Gillet (2011) SmpB as the handyman of tmRNA during trans-translation. RNA Biology 8, 440-449.</li>
+<li>J. Fu, Y. Hashem, J. Wower &amp; J. Frank (2011) tmRNA on its way through the ribosome. RNA Biology8, 586-590.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_1">http://doi.org/10.2210/rcsb_pdb/mom_2013_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

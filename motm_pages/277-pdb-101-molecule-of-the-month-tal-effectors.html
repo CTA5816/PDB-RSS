@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: TAL Effectors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: TAL Effectors" property="og:title"/>
+<meta content="TAL-effectors are modular, DNA-reading proteins that can be used to edit DNA in living cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_3ugm.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/180" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: TAL Effectors" name="twitter:title"/>
+<meta content="TAL-effectors are modular, DNA-reading proteins that can be used to edit DNA in living cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_3ugm.jpg" name="twitter:image"/>
+<meta content="TAL-effectors are modular, DNA-reading proteins that can be used to edit DNA in living cells" name="description"/>
+<meta content="genome editing,sequence-specific DNA binding protein,TALEN,3ugm,1fok,3v6t" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 180
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 180 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: TAL Effectors</h1>
+<p><i>TAL-effectors are modular, DNA-reading proteins that can be used to edit DNA in living cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DNA-reading domains of a TAL effector (blue) wrapped around DNA (orange)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_3ugm.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA-reading domains of a TAL effector (blue) wrapped around DNA (orange).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_3ugm.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nature is full of surprises, and sometimes you can find treasures hidden in the most unlikely places. A few years ago, scientists found one of these treasures in a bacterium that attacks plants: a modular protein that can read the sequence of nucleotides in DNA. Structural understanding of this protein opens the door to all manner of applications in medicine and biotechnology. We can now customize a protein to read any DNA sequence that we desire, and thus target the protein to specific places in a genome. Already, these sequence-reading proteins are being used to create the tools for genome editing, as a possible way to correct genetic diseases.</div>
+<h4>A TALE of Battle</h4>
+<div>These proteins are termed TAL effectors, short for transcription activator-like effectors. Several types of bacteria inject these proteins into plant cells, where they travel to the nucleus and activate genes that make the plant more susceptible to infection. Some types of these bacteria just build a few TAL effectors, others build and inject several dozen. As is often the case, however, some plant cells have evolved a way to fight back, and when they're injected with TAL effectors, they instead activate specific resistance genes that protect the plant.</div>
+<h4>Modular DNA Readers</h4>
+<div>TAL effectors are composed of small modules, about 34 amino acids long, that are repeated many times in a row. Each of these modules reads one nucleotide when the TAL effector binds to DNA. The protein shown here, which is from a bacterium that infects rice, has 23 of these modules. The crystallographic structure (PDB entry <span class="rcsb_id_tag" title="TAL Effector and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ugm" target="_blank">3ugm <i class="fa fa-external-link"> </i></a></span>) includes the DNA-binding portion. The entire protein also includes a portion that targets the protein to the nucleus and another portion that activates genes once it gets there.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Model of an engineered TALE nuclease with the nuclease domain in green and the DNA-reading domains in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_TALEN.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Model of an engineered TALE nuclease with the nuclease domain in green and the DNA-reading domains in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_TALEN.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Talented TALENs</h4>
+<div>In the few short years since their discovery, researchers have put these DNA-reading proteins to good use. For instance, they have engineered TALE nucleases (TALEN) by attaching the DNA-cutting domain of FokI nuclease (PDB entry <span class="rcsb_id_tag" title="FokI and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fok" target="_blank">1fok <i class="fa fa-external-link"> </i></a></span>, shown here in green) to one end of a TAL effector. FokI needs to form a dimer to cut DNA, so the TALEN only becomes active when two of them bind to the proper DNA target sequence. Then, it breaks both strands. This can be used to knock out a specific gene, or to stimulate the natural DNA repair methods that are present in cells, which may be coaxed into inserting a new engineered gene while they are making the repair. This approach has been so successful that researchers are also exploring other types of molecules to recognize the DNA, such as zinc fingers and CRISPR.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>TAL Effector and DNA (PDB entry 3v6t)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/180/180-TALEffectors_3v6t_JSmol.jpg"/></div>
+<p>By comparing TAL effectors from different bacteria, researchers have discovered modules for reading each of the bases in DNA, as well as a few modified forms of the bases. Each module is composed of a little bundle of two alpha helices. An amino acid at the inner edge of the module does the reading by contacting the edge of the nucleotide in the DNA, and a neighboring amino acid (not shown here) helps to position it. PDB entry <span class="rcsb_id_tag" title="TAL Effector and DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3v6t" target="_blank">3v6t <i class="fa fa-external-link"> </i></a></span> includes an engineered TAL effector with three types of modules. A module with aspartate, shown in red, forms a specific interaction with cytosine. However, a smaller glycine, shown in blue, makes a favorable interaction with the large methyl group of thymine. Serine, shown in green, forms a bond with adenine. Additional research is uncovering other modules to read the remaining base, guanine. To explore these modules and the entire structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can see the structure of an engineered TAL effector before it binds to DNA in PDB entry <span class="rcsb_id_tag" title="TAL Effector">3v6p</span>.</li>
+<li>Each TAL effector  module is composed of two alpha helices with a small kink in one, which improves the packing between the two. Try displaying all prolines in these TAL effector structures to see the kink. Each module also includes a lysine and a glutamine that form non-specific interactions with the DNA backbone--see if you can find them.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. Deng, C. Yan, J. Wu, X. Pan &amp; N. Yan (2014) Revisiting the TALE repeat. Protein Cell 5, 297-306.</li>
+<li>E. L. Doyle, B. L. Stoddard, D. F. Voytas &amp; A. J. Bogdanove (2013) TAL effectors: highly adaptable phytobacterial virulence factors and readily engineered DNA-targeting proteins. Trends in Cell Biology 23, 390-398.</li>
+<li>T. Gaj, C. A. Gersbach &amp; C. F. Barbas (2013) ZFN, TALEN, and CRISPR/Cas-based methods for genome engineering. Trends in Biotechnology 31, 397-405.</li>
+<li>3v6t, 3v6p: D. Deng, C. Yan, X. Pan, M. Mahfouz, J. Wang, J. K. Zhu, Y. Shi &amp; N. Yan (2012) Structural basis for sequence-specific recognition of DNA by TAL effectors. Science 335, 720-723.</li>
+<li>3ugm: A. N. S. Mak, P. Bradley, R. A. Cernadas, A. J. Bogdanove &amp; B. L. Stoddard (2012) The crystal structure of TAL effector PthXo1 bound to its DNA target. Science 335, 716-719.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2014, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2014_12">http://doi.org/10.2210/rcsb_pdb/mom_2014_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Phytosulfokine Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Phytosulfokine Receptor" property="og:title"/>
+<meta content="Phytosulfokine and other small peptides deliver signals about growth and development in plants." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4z64_Figure.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/248" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Phytosulfokine Receptor" name="twitter:title"/>
+<meta content="Phytosulfokine and other small peptides deliver signals about growth and development in plants." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4z64_Figure.jpg" name="twitter:image"/>
+<meta content="Phytosulfokine and other small peptides deliver signals about growth and development in plants." name="description"/>
+<meta content="hormone,plant,signaling,receptor" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 248
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 248 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Phytosulfokine Receptor</h1>
+<p><i>Phytosulfokine and other small peptides deliver signals about growth and development in plants.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Complex of the phytosulfokine (red) with its receptor SERK1 (blue) and coreceptor (green). The structure includes the extracellular domains. The kinase domains on the inside are shown using the structure of a similar receptor." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4z64_Figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of the phytosulfokine (red) with its receptor SERK1 (blue) and coreceptor (green). The structure includes the extracellular domains. The kinase domains on the inside are shown using the structure of a similar receptor.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4z64_Figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Plants are remarkably resilient. I think about this every time I'm in the garden, trying to get rid of dandelions. With roses and many other plants, you can pick a branch and put it in the ground, and with some care, you'll get a healthy new plant. Plant cells are constantly making decisions based on what's happening to them, deciding when to grow, how to repair damage, and figuring out what part needs to be a root and what part needs to be a flower. Plant cells make these decisions by constantly communicating with their neighbors through a flurry of hundreds of types of hormones, including small molecules like <a href="https://pdb101.rcsb.org/motm/110">auxin</a> and peptides like phytosulfokine.</div>
+<h4>On Switch</h4>
+<div>The hormone phytosulfokine sends a simple message: "go ahead and grow." It is a small peptide with five amino acids that is secreted from cells and then sensed by a membrane-bound receptor on the cell surface. Binding of phytosulfokine to the receptor then rapidly causes the coreceptor protein SERK1 to bind, as seen in PDB ID <a href="https://www.rcsb.org/structure/4z64" target="_blank">4z64</a>. This leads to activation of kinase domains in the interior of the cells, launching the signals that will promote cell growth. The kinase domains are shown using a structure of a similar receptor (PDB ID <a href="https://www.rcsb.org/structure/5lpb" target="_blank">5lpb</a>).</div>
+<h4>Modified Signals</h4>
+<div>Plant cells build hundreds of different types of small peptide hormones, to send different messages. For example, systemin helps manage healing when plants are damaged by insects, and CLAVATA hormones help control the development of the rapidly growing tips of roots and shoots. These hormones are typically built as larger proteins, then clipped to the proper size by specialized proteases. Often, the peptides are also further customized with chemical modifications, such as the addition of hydroxyls to prolines or addition of sugars. Phytosulfokine, as you can guess from the name, has sulfate groups added to two tyrosine amino acids.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Receptors and coreceptors for flagellin (left, with a piece of flagellin in red) and a brassinosteroid (right, with a steroid in red). In both cases, only the extracellular domains are included in the structure." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4mn8_4lsx.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Receptors and coreceptors for flagellin (left, with a piece of flagellin in red) and a brassinosteroid (right, with a steroid in red). In both cases, only the extracellular domains are included in the structure.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-4mn8_4lsx.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Loopy Leucine Repeats</h4>
+<div>Many hormone receptors in plants have a distinctive curved shape formed of many tandem copies of a "leucine-rich repeat" sequence. Two similar receptors are shown here that use leucine repeats to build their binding sites. FLS2 (flagellin-sensitive 2) is involved in the plant immune system (PDB ID <a href="https://www.rcsb.org/structure/4mn8" target="_blank">4mn8</a>). FLS2 recognizes the bacterial protein flagellin and launches a protective response, with the help of the co-receptor BAK1. BRI1 (brassinosteroid insensitive 1) recognizes a steroid plant hormone, and with its coreceptor SERK1 helps to control growth (PDB ID <a href="https://www.rcsb.org/structure/4lsx" target="_blank">4lsx</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Phytosulfokine and Receptor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/248/248-Phytosulfokine_Receptor-jmol.jpg"/></div>
+<p>In the FLS2 receptor shown above, flagellin acts like glue to stick the receptor and coreceptor together. The phytosulfokine receptor, on the other hand, does this in two steps. Binding of phytosulfokine causes a flexible loop on the receptor to fold into a stable pocket that holds the hormone. This complex is then the perfect shape to bind to the coreceptor. Three structures show the process: in the free receptor (PDB ID <a href="https://www.rcsb.org/structure/4z62" target="_blank">4z62</a>) the loop is so flexible that it is not seen in the structure; PDB ID <a href="https://www.rcsb.org/structure/4z63" target="_blank">4z63</a> shows the peptide-receptor complex; and PDB ID <a href="https://www.rcsb.org/structure/4z64" target="_blank">4z64</a> shows the final activated complex. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Proteins build from leucine-rich repeats have interesting functions--try <a href="http://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22parameters%22%3A%7B%22value%22%3A%22%5C%22leucine-rich%5C%22%20repeat%22%7D%2C%22service%22%3A%22text%22%2C%22type%22%3A%22terminal%22%2C%22node_id%22%3A0%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22pager%22%3A%7B%22start%22%3A0%2C%22rows%22%3A100%7D%2C%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%7D%2C%22request_info%22%3A%7B%22src%22%3A%22ui%22%2C%22query_id%22%3A%22137132613e2b0bb98044b91f2848f32b%22%7D%7D">searching for "leucine-rich repeat" at the main RCSB PDB site</a> to see some.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Sauter M. (2015) Phytosulfokine peptide signalling. J. Exper. Botany 66, 5161-5169.</li>
+<li>4z62, 4z63, 4z64: Wang, J., Li, H., Han, Z., Zhang, H., Wang, T., Lin, G., Chang, J., Yang, W., Chai, J. (2015) Allosteric receptor activation by the plant peptide hormone phytosulfokine. Nature 525: 265-268</li>
+<li>Matsubayashi, Y. (2014) Posttranslationally modified small-peptide signals in plants. Annu. Rev. Plant Biol. 65, 385-413</li>
+<li>4lsx: Santiago, J., Henzler, C., Hothorn, M. (2013) Molecular mechanism for plant steroid receptor activation by somatic embryogenesis co-receptor kinases. Science 341: 889-892</li>
+<li>4mn8: Sun, Y., Li, L., Macho, A.P., Han, Z., Hu, Z., Zipfel, C., Zhou, J.M., Chai, J. (2013) Structural basis for flg22-induced activation of the Arabidopsis FLS2-BAK1 immune complex. Science 342: 624-628</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_8">http://doi.org/10.2210/rcsb_pdb/mom_2020_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

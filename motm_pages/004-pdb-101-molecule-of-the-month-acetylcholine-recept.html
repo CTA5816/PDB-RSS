@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Acetylcholine Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Acetylcholine Receptor" property="og:title"/>
+<meta content="The neurotransmitter acetylcholine opens a protein channel, stimulating muscle contraction" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/71/2bg9-composite.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/71" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Acetylcholine Receptor" name="twitter:title"/>
+<meta content="The neurotransmitter acetylcholine opens a protein channel, stimulating muscle contraction" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/71/2bg9-composite.gif" name="twitter:image"/>
+<meta content="The neurotransmitter acetylcholine opens a protein channel, stimulating muscle contraction" name="description"/>
+<meta content="acetylcholine,cobratoxin,ion channel activity,neurotransmitter receptor activity,nicotininc acetylcholine-activated cation-selective channel,2bg9,1yi5,1uv6" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 71
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 71 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Acetylcholine Receptor</h1>
+<p><i>The neurotransmitter acetylcholine opens a protein channel, stimulating muscle contraction</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Acetylcholine receptor, with the binding site for acetylcholine in red. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/71/2bg9-composite.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Acetylcholine receptor, with the binding site for acetylcholine in red. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/71/71-AcetylcholineReceptor-2bg9-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nerve cells need to be able to send messages to each other quickly and clearly. One way that nerve cells communicate with their neighbors is by sending a burst of small neurotransmitter molecules. These molecules diffuse to the neighboring cell and bind to special receptor proteins in the cell surface. These receptors then open, allowing ions to flow inside. The process is fast because the small neurotransmitters, such as acetylcholine or serotonin, diffuse rapidly across the narrow synapse between the cells. The channels open in milliseconds, allowing ions to flood into the cell. Then, they close up just as fast, quickly terminating the message as the neurotransmitters separate and broken down by <a href="http://pdb101.rcsb.org/motm/54">acetylcholinesterase</a>.</div>
+<h4>The Cascade of Contraction</h4>
+<div>Acetylcholine receptors are found on the surface of muscle cells, concentrated in the synapse between nerve cells and muscle cells. A similar form is also found in the central nervous system, relaying messages from nerve to nerve. These acetylcholine receptors are composed of five protein chains, arranged in a long tube that crosses the cell membrane. Two of these chains, colored orange here, have binding sites for acetylcholine on the side, colored here in red. When acetylcholine binds to these two chains, the shape of the entire receptor changes slightly, opening the channel. This allows positively charged ions, such as sodium, potassium, and calcium, to cross the membrane. Muscles are constantly pumping sodium out of their cells, so when they are relaxed, there is more sodium outside than inside. When they get the signal from the nerve, however, the channels open and sodium ions to rush back inside, starting the process that will lead to muscle contraction.</div>
+<h4>Biological Electricity</h4>
+<div>The acetylcholine receptor shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2bg9" target="_blank">2bg9 <i class="fa fa-external-link"> </i></a></span>) is found in electric torpedo rays. It is a good subject for study because it is similar to the one found in our nerve-muscle synapses, and it is found in high concentrations in the electric organs of the ray. Electric rays and electric eels generate bursts of electricity with a special electric organ. It is composed of many modified muscle cells, which are flattened and stacked on top of one another. The small voltage differences across each cell membrane, controlled by the dense packing of many acetylcholine receptors, add up over the large stack, together producing a large electric shock that can stun their prey.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Alpha-cobratoxin bound to acetylcholine-binding protein." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/71/1yi5.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Alpha-cobratoxin bound to acetylcholine-binding protein.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/71/71-AcetycholineReceptor-1yi5.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cobras and Curare</h4>
+<div>The acetylcholine receptor is an essential link between the brain and the muscles, so it is a sensitive location for attack. Many organisms make poisons that block the acetylcholine receptor, causing paralysis. These include a neurotoxin in cobra venom, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yi5" target="_blank">1yi5 <i class="fa fa-external-link"> </i></a></span>. In this structure, five molecules of toxin, shown in red, are bound to a protein that is similar to the acetylcholine receptor. Other poisons that paralyze the acetylcholine receptor include curare, nicotine, and the deadly venom from cone seashells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Binding Site for Acetylcholine</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/71/AcetylcholineReceptorJSmol-jmol.jpg"/></div>
+<p>Although there aren’t currently structures of acetylcholine receptor bound to acetylcholine, you can see how it binds by looking at a similar protein, acetylcholine-binding protein. This protein was discovered in certain sea slugs, where it modulates the signals carried by acetylcholine. The acetylcholine receptor (PDB entry <a href="https://www.rcsb.org/structure/2bg9" target="_blank">2bg9</a>) is shown on the left, in the closed state before acetylcholine binds. The membrane-spanning region (shown in white) is composed of multiple alpha helices. Binding sites for acetylcholine (shown in lime green) can be found on two of the five chains, which are colored gray. A close-up of the acetylcholine binding site in its unbound state is shown at the top right. The similar portion of the acetylcholine binding protein (PDB entry <a href="https://www.rcsb.org/structure/3wip" target="_blank">3wip</a>) is shown on the bottom, with acetylcholine (colored pink) bound. Three aromatic amino acids (shown in lime green) form a cage around acetylcholine. Acetylcholine also forms close interactions with one backbone tryptophan as well as water molecule (light blue) which mediates bonds to a leucine and methionine (shown in green) on another chain. An unusual disulfide linkage (yellow) between two adjacent cysteines helps form the pocket for the acetylcholine molecule. Notice that these amino acids fold up around the neurotransmitter. As the binding site closes around acetylcholine, it shifts the conformation of the whole receptor, opening the pore through the membrane.<br/><br/> Click on the JSmol tab to explore these structures.<br/><br/> <b>This JSMol was designed and illustrated by Xinyi Christine Zhang.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Nigel Unwin (2005) Refined structure of the nicotinic acetylcholine receptor. Journal of Molecular Biology 346, 967-989.</li>
+<li>Arthur Karlin (2002) Emerging structure of the nicotinic acetylcholine receptors. Nature Reviews Neuroscience 3, 102-114.</li>
+<li>Irwin B. Levitan and Leonard K. Kaczmarek (2002) The Neuron. Oxford University Press.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_11">http://doi.org/10.2210/rcsb_pdb/mom_2005_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

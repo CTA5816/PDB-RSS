@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vaults</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vaults" property="og:title"/>
+<meta content="Cells build huge vault containers constructed of a symmetric arrangement of many subunits" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/114/vaults.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/114" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vaults" name="twitter:title"/>
+<meta content="Cells build huge vault containers constructed of a symmetric arrangement of many subunits" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/114/vaults.jpg" name="twitter:image"/>
+<meta content="Cells build huge vault containers constructed of a symmetric arrangement of many subunits" name="description"/>
+<meta content="carboxysome,cell compartmentation,encapsulin,major vault protein,ribonucleoprotein complex,vault ribonucleoprotein particles,4v60,3dkt,2qw7,3bn4" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 114
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 114 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vaults</h1>
+<p><i>Cells build huge vault containers constructed of a symmetric arrangement of many subunits</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Vaults from rat liver cells." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/114/vaults.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Vaults from rat liver cells.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/114/114-Vaults_vaults.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our cells are filled with compartments, each performing a specific function. Some of these compartments, such as mitochondria and lysozomes, are very large and enclose many different molecular machines. Other intracellular compartments are smaller, such as the transport vesicles that shuttle proteins from site to site inside the cell. Most of these compartments, including mitochondria, lysozomes and transport vesicles, are surrounded by membranes. However, in special cases, cells build smaller compartments surrounded by a protein shell. In our own cells, vaults are a spectacular example of these protein-enclosed compartments.</div>
+<h4>Symmetrical Shells</h4>
+<div>Vaults are composed of many copies of the major vault protein, which assembles to form a hollow football-shaped shell. The one shown here is from rat liver cells (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4V60" target="_blank">4V60 <i class="fa fa-external-link"> </i></a></span>) and contains 78 copies of the protein. Inside cells, the vault also encloses a few other molecules, which were not seen in the crystal structure because they don't have a symmetrical structure inside the vault. These molecules include several small RNA molecules, a protein that binds to RNA, and an enzyme that adds nucleotides to proteins.</div>
+<h4>Mystery of the Vault</h4>
+<div>Vaults still pose great mysteries. Researchers have been struggling to find out what they do. They are found in many types of cells (each of our own cells contain about 100,000 of them) but some organisms, such as fruit flies and yeast cells, don't have them at all. They are often found in the cytoplasm, where they are transported rapidly from site to site. But, they are also found occasionally in the nucleus, and even more interestingly, they have been found in nuclear pores. These findings, along with lots of other observations, suggest that vaults may be used for transport. Definitive proof, however, still remains to be discovered.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Encapsulin (left) and subunits of the carboxysome (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/114/containers.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Encapsulin (left) and subunits of the carboxysome (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/114/114-Vaults_containers.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Bacterial Microcompartments</h4>
+<div>Bacteria also contain protein-enclosed compartments. Two examples are shown here. The one on the left is encapsulin (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3dkt" target="_blank">3dkt <i class="fa fa-external-link"> </i></a></span>), a protein that forms a virus-like shell. The inner surface has binding sites for antioxidant enzymes. This crystal structure contains a short peptide from these enzymes (in blue) bound to the inner surface. The proteins on the right, PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2qw7" target="_blank">2qw7 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3bn4" target="_blank">3bn4 <i class="fa fa-external-link"> </i></a></span>, are the building blocks for a much larger protein shell called a carboxysome. It is found in photosynthetic bacteria, where it packages two of the enzymes of carbon fixation. This improves the efficiency of the slow carbon-fixing reaction by packaging <a class="static" href="https://pdb101.rcsb.org/motm/49">carbonic anhydrase</a>, the enzyme that makes carbon dioxide, next to <a class="static" href="https://pdb101.rcsb.org/motm/11">rubisco</a>, the enzyme that fixes it into sugars.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Vaults (PDB entries 4V60)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/114/vault_jmol.jpg"/></div>
+<p>The vault is a huge symmetrical structure composed of 78 identical chains. In this picture, one of the chains is colored white and the others are colored from red to blue from one end of the chain to the other. Part of the protein folds into a string of small domains that together assemble into the wide body at the center. The rest of the protein forms a long alpha helix that assembles into the narrow cap at the ends. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Like the major vault protein, many proteins fold to form a string of repeated compact domains. Can you find other examples in the PDB?</li>
+<li>Can you find structural similarities between the two bacterial microcompartments shown on the previous page and virus capsids? </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>W. Berger, E. Steiner, M. Grusch, L. Elbling and M. Micksche (2009) Vaults and the major vault protein: novel roles in signal pathway regulation and immunity. Cellular and Molecular Life Sciences 66, 43-61.</li>
+<li>S. Tanaka, C. A. Kerfeld, M. R. Sawaya, F. Cai, S. Heinhorst, G. C. Cannon and T. O. Yeates (2008) Atomic-level models of the bacterial carboxysome shell. Science 319, 1083-1086</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_6">http://doi.org/10.2210/rcsb_pdb/mom_2009_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

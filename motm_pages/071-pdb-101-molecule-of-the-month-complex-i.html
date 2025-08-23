@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Complex I</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Complex I" property="og:title"/>
+<meta content="A proton-pumping protein complex performs the first step of the respiratory electron transport chain" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_3m9s_3rko.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/144" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Complex I" name="twitter:title"/>
+<meta content="A proton-pumping protein complex performs the first step of the respiratory electron transport chain" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_3m9s_3rko.jpg" name="twitter:image"/>
+<meta content="A proton-pumping protein complex performs the first step of the respiratory electron transport chain" name="description"/>
+<meta content="cellular respiration,electron transport chain,NADH:quinone oxidoreductase,3m9s,3rko,1zcd,2fug" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 144
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 144 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Complex I</h1>
+<p><i>A proton-pumping protein complex performs the first step of the respiratory electron transport chain</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Complex I from mitochondria. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_3m9s_3rko.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex I from mitochondria. The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_3m9s_3rko.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Complex I, also known as NADH:quinone oxidoreductase, performs the first step in respiratory electron transport, the process that creates much of the energy that powers our cells. Complex I is a huge membrane-bound molecular machine that links two different reactions: the transport of electrons from NADH to ubiquinone, and the transport of protons across a membrane. In our mitochondria, this is used to create the electrochemical gradient that powers <a href="https://pdb101.rcsb.org/motm/72"> ATP synthase,</a> powered by NADH produced by the breakdown of food molecules. Our complex I is one of the largest membrane-bound protein complexes that has been discovered, composed of 46 chains. A simpler bacterial complex I is shown here, from PDB entries <span class="rcsb_id_tag" title="Complex I"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3m9s" target="_blank">3m9s <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Complex I membrane-bound domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rko" target="_blank">3rko <i class="fa fa-external-link"> </i></a></span>, which is composed of 14 protein chains.</div>
+<h4>Electron Transport</h4>
+<div>The peripheral arm of complex I (shown here in shades of red and yellow) performs the electron transport reaction. A site near the top captures NADH, the carrier molecule that transports hydrogen atoms from food molecules. Complex I then strips the electrons from these hydrogen atoms using a FMN (flavin mononucleotide) cofactor, and ships them down a chain of iron-sulfur clusters. Finally, the electrons are placed on ubiquinone molecule, which will carry the electrons to the next complex in the electron transport chain: <a href="https://pdb101.rcsb.org/motm/137">cytochrome bc1</a>.</div>
+<h4>Tandem Proton Pumping</h4>
+<div>The membrane-bound portion of complex I (shown here in green, blue and purple) pumps protons across a membrane. Each pair of electrons obtained from NADH will power the transport of 4 protons. Remarkably, the structure reveals that each of these protons is transported by a dedicated protein pump. Complex I has chain of transporters, all arranged in a row. The final transporter in the chain, colored green here, has a tail that reaches back and links all the transporters, and is thought to synchronize the electron transport reaction with the proton pumping cycle in all four transporters.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial Na+/H+ antiporter." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_1zcd.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial Na+/H+ antiporter.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_1zcd.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Managing Protons</h4>
+<div>The transporters in complex I look very similar to simpler transporters, such as the Na+/H+ antiporter shown here (PDB entry <span class="rcsb_id_tag" title="Na+/H+ Antiporter"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1zcd" target="_blank">1zcd <i class="fa fa-external-link"> </i></a></span>). They contain a bundle of parallel alpha helices that form a pore at their center, with a charged amino acid blocking the pore at the center. In small antiporters, a negatively-charged amino acid is often used to form this gate, but in complex I, positively-charged lysines appear to play this role.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Complex I (PDB entry 3m9s)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/144/144-ComplexI_3m9s_jmol.jpg"/></div>
+<p>The structure of bacterial complex I is available in PDB entry <span class="rcsb_id_tag" title="Complex I"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3m9s" target="_blank">3m9s <i class="fa fa-external-link"> </i></a></span>. The structure was solved at low resolution, so not all portions of the chain were visible, and you may notice that some parts of the chain are missing. The two portions of the molecule have also been solved separately at higher resolution: you can take a look at them in PDB entries <span class="rcsb_id_tag" title="Complex I hydrophilic domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2fug" target="_blank">2fug <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Complex I membrane-bound domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rko" target="_blank">3rko <i class="fa fa-external-link"> </i></a></span>. Click on this image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the "overlap protein" tool at the PDB to compare the structures of three of the proton pumps: chains L, M, and N in PDB entry <span class="rcsb_id_tag" title="Complex I membrane-bound domain">3rko</span>. The fourth proton pump is thought to be formed between several protein chains: N, K, J and A.</li>
+<li>The structure of complex I fills out the entire electron transport chain: you can now explore the structure of all three complexes at the PDB.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>U. Brandt (2006) Energy converting NADH:quinone oxidoreductase (complex I). Annual Review of Biochemistry 75, 69-92.</li>
+<li>R. G. Efremov, R. Baradaran and L. A. Sazanov (2010) The architecture of respiratory complex I. Nature 465, 441-445.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_12">http://doi.org/10.2210/rcsb_pdb/mom_2011_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

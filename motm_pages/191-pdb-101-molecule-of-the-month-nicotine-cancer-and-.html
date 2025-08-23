@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nicotine, Cancer, and Addiction</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nicotine, Cancer, and Addiction" property="og:title"/>
+<meta content="Nicotine causes addiction by interacting with receptors in the brain" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/269/6pv7_twoviews.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/269" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nicotine, Cancer, and Addiction" name="twitter:title"/>
+<meta content="Nicotine causes addiction by interacting with receptors in the brain" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/269/6pv7_twoviews.jpg" name="twitter:image"/>
+<meta content="Nicotine causes addiction by interacting with receptors in the brain" name="description"/>
+<meta content="nicotine,nicotinic acetylcholine receptor,cytochrome P450,addiction,smoking,vaping,cancer,6pv7,4ejj,4ejh,nicotine,nicotinic acetylcholine receptor,cytochrome P450,addiction,smoking,vaping,cancer,6pv7,4ejj,4ejh" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 269
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 269 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nicotine, Cancer, and Addiction</h1>
+<p><i>Nicotine causes addiction by interacting with receptors in the brain</i></p>
+<div>
+<div><i>This article was written and illustrated by Kanza Choudhry, Danielle Muse, Diego Prado De Maio, and Angeliz A. Soto Acevedo as part of a week-long boot camp for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu/node/242">Rutgers Institute for Quantitative Biomedicine.</a> The article is presented as part of the 2022-2023 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Top and side view of the nicotinic acetylcholine receptor showing three alpha (dark blue) and two beta (light blue) subunits. In this structure, nicotine (red) is bound to sites between alpha and beta subunits, and a sodium ion is present in the central channel (magenta). The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/269/6pv7_twoviews.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Top and side view of the nicotinic acetylcholine receptor showing three alpha (dark blue) and two beta (light blue) subunits. In this structure, nicotine (red) is bound to sites between alpha and beta subunits, and a sodium ion is present in the central channel (magenta). The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/269/6pv7_twoviews.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nicotine and Addiction</h4>
+<div>Vaping and tobacco products represent serious dangers to health, particularly among teens and young adults. Continued usage of these products leads to chronic exposure to hazardous chemicals and millions of deaths worldwide every year. The nicotine in vapes and tobacco is a driving force in habitual use of these products. Although nicotine is not naturally found in humans, it binds to the acetylcholine receptor in the brain and activates the reward system in our central nervous system. This phenomenon induces users to continue consuming nicotine, leading to addiction.</div>
+<h4>An Alternate Key</h4>
+<div><a href="https://pdb101.rcsb.org/motm/71">Nicotinic acetylcholine receptors</a> are funnel-shaped molecules with an ion channel running through the center (shown here from PDB entry <a href="https://www.rcsb.org/structure/6pv7" target="_blank">6pv7</a>). A specific neurotransmitter molecule called acetylcholine functions as a key to unlock these ion channels. Once opened, the channels allow ions such as sodium, calcium, and potassium to pass through, converting a chemical signal across the cell membrane into an electrical signal. Nicotine from smoking or vaping products can act as an alternative key for opening these channels, and is reflected in the name <i>nicotinic</i> acetylcholine receptors.</div>
+<h4>Building the Receptor</h4>
+<div>In human cells, nicotinic acetylcholine receptors are pentameric, made up of five subunits. There are 16 types of receptor subunits that can combine in myriad ways to assemble the pentameric receptor. Nicotine molecules bind at the interface between two different subunits. Depending on the combinations of distinct subunits present in a given receptor, there are differences in binding affinities and responses to the drug. Human genetic studies and mouse models of nicotine exposure show that some of these subunit combinations may lead to higher susceptibility of nicotine addiction and severe withdrawal symptoms. Structures of the various types of nicotinic acetylcholine receptors can help us understand how different combinations of subunits interact with acetylcholine and nicotine molecules.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cytochrome P450 (yellow) with heme  in red and NNK in green. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/269/4ejh.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome P450 (yellow) with heme  in red and NNK in green. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/269/4ejh.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Detoxification and Cancer</h4>
+<div>Like most drugs, the effects of nicotine wear off as special enzymes break it down into molecules that can be excreted. <a href="https://pdb101.rcsb.org/motm/82">Cytochrome P450 enzymes</a> play a major role in metabolizing and detoxifying nicotine. These enzymes add oxygen to nicotine to make it easier to excrete. However, cytochrome P450 enzymes can have dangerous effects. They can activate nitrosamines, molecules derived from nicotine in vaping and tobacco products. One of the most common nitrosamines, NNK, is a procarcinogen that can be activated by a cytochrome P450 enzyme (shown here in PDB entry <a href="https://www.rcsb.org/structure/4ejh" target="_blank">4ejh</a>), releasing activated molecules that interact with DNA and can cause mutations in cancer-related genes. In this way, persistent use of vaping and other nicotine-containing products continually exposes people to dangerous carcinogens that can promote tumor formation over time.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Nicotine and NNK bound to Cytochrome P450</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/269/4ejh_5ejj_Jmol-jmol.jpg"/></div>
+<p>Cytochrome P450 2A6 begins the process of detoxifying nicotine, which is then converted to cotinine, a less toxic substance that is subsequently excreted. In a similar reaction, multiple cytochrome P450 enzymes activate NNK, which can cause cancer. The heme group in these enzymes plays a central role in both reactions, and nicotine and NNK bind in a similar place, as seen in PDB entries <a href="https://www.rcsb.org/structure/4ejj" target="_blank">4ejj</a> and <a href="https://www.rcsb.org/structure/4ejh" target="_blank">4ejh</a>. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Explore the chemical structures of <a href="https://www.rcsb.org/ligand/nct">nicotine</a> and <a href="https://www.rcsb.org/ligand/0qa">NNK</a> at the RCSB ligand library.</li>
+<li>Visit the <a href="https://www.fda.gov/tobacco-products/youth-and-tobacco/get-latest-facts-teen-tobacco-use">U.S. Food and Drug Administration </a> to get the latest facts on teen tobacco use.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Bonner, E., Chang, Y., Christie, E., Colvin, V., Cunningham, B., Elson, D., Ghetu, C., Huizenga, J., Hutton, S. J., Kolluri, S. K., Maggio, S., Moran, I., Parker, B., Rericha, Y., Rivera, B. N., Samon, S., Schwichtenberg, T., Shankar, P., Simonich, M. T., Wilson, L. B., and Tanguay, R. L. (2021) The chemistry and toxicology of vaping. Pharmacological Therapy 225, 107837.</li>
+<li>Wittenberg, R. E., Wolfman, S. L., De Biasi, M., and Dani J. A. (2020) Nicotinic acetylcholine receptors and nicotine addiction: A brief introduction. Neuropharmacology 177, 108256.</li>
+<li>6pv7: Gharpure, A., Teng, J., Zhuang, Y., Noviello, C. M., Walsh, Jr., R. M., Cabuco, R., Howard, R. J., Zaveri, N. T., Lindahl, E., and Hibbs, R. E. (2019) Agonist selectivity and ion permeation in the α3β4 ganglionic nicotinic receptor. Neuron 104, 501-511.</li>
+<li>Dani J. A. (2015) Neuronal nicotinic acetylcholine receptor structure and function and response to nicotine. International Review of Neurobiology 124, 3–19.</li>
+<li>Xue, J., Yang, S., and Seng S. (2014) Mechanisms of cancer induction by tobacco-specific NNK and NNN. Cancers 6, 1138–1156.</li>
+<li>4ejh, 4ejj: DeVore, N. M. and Scott, E. E. (2012) Nicotine and 4-(methylnitrosamino)-1-(3-pyridyl)-1-butanone binding and access channel in human cytochrome P450 2A6 and 2A13 enzymes. Journal of Biological Chemistry 287, 26576–26585. </li>
+<li>Dani, J. A. and Bertrand, D. (2007) Nicotinic acetylcholine receptors and nicotinic cholinergic mechanisms of the central nervous system. Annual Review of Pharmacology and Toxicology 47, 699-729.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2022, Kanza Choudhry, Danielle Muse, Diego Prado De Maio, Angeliz A. Soto Acevedo, David S. Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_5">http://doi.org/10.2210/rcsb_pdb/mom_2022_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

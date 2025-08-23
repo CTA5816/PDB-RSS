@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SARS-CoV-2 Nucleocapsid and Home Tests</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Nucleocapsid and Home Tests" property="og:title"/>
+<meta content="Home test kits for SARS-CoV-2 test for the presence of nucleocapsid, the protein that packages the viral genome in infectious virions." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/278/nucleocapsid.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/278" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Nucleocapsid and Home Tests" name="twitter:title"/>
+<meta content="Home test kits for SARS-CoV-2 test for the presence of nucleocapsid, the protein that packages the viral genome in infectious virions." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/278/nucleocapsid.jpg" name="twitter:image"/>
+<meta content="Home test kits for SARS-CoV-2 test for the presence of nucleocapsid, the protein that packages the viral genome in infectious virions." name="description"/>
+<meta content="antigen test,home test,COVID19,SARS-CoV-2,nucleocapsid,RNA,RNA-binding domain,pandemic,coronavirus,6yi3,7act,6wji,7cr5,7n3c,7sts" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 278
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 278 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SARS-CoV-2 Nucleocapsid and Home Tests</h1>
+<p><i>Home test kits for SARS-CoV-2 test for the presence of nucleocapsid, the protein that packages the viral genome in infectious virions.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A dimer of SARS-CoV-2 nucleocapsid. Structurally-ordered domains are depicted from the atomic structures and disordered regions are shown schematically. Nucleocapsid is in magenta and purple, and short RNA strands are in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/278/nucleocapsid.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A dimer of SARS-CoV-2 nucleocapsid. Structurally-ordered domains are depicted from the atomic structures and disordered regions are shown schematically. Nucleocapsid is in magenta and purple, and short RNA strands are in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/278/nucleocapsid.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Soon after the COVID19 pandemic began, the research community mobilized to find ways to fight it. Thanks to these efforts, we have many effective methods for stopping the spread of the virus. <a href="https://pdb101.rcsb.org/learn/resources-to-fight-the-covid-19-pandemic/sars-cov-2-mrna-vaccine">Vaccines</a> protect us against infection and nirmatrelvir (the anti-viral active ingredient in Pfizer's Paxlovid) can be used to help treat people who get infected. But perhaps most importantly, many easy-to-use home test kits are widely available to see if we are infected. This is a central tool in the fight against SARS-CoV-2, since it allows us to test ourselves any time and quarantine if we’re infected, thus giving us greater confidence in the safety of social situations.</div>
+<h4>Testing at Home</h4>
+<div>Most home test kits look for the presence of nucleocapsid in the sample that we collect. Nucleocapsid has the job of packaging the viral genome inside virions. It is made in large quantities in cells infected by SARS-CoV-2, so it provides an effective target for testing. The tests typically use a “flow-through” technology. A small sample is placed in a small well and the molecules flow through an area that has <a href="https://pdb101.rcsb.org/motm/21">antibodies</a> that recognize nucleocapsid. Then the antibody-bound nucleocapsid flows further and is captured in the distinctive line of a positive test. These tests also include a control that tests for a common molecule, such as our own antibodies, just to make sure the sample was collected correctly.</div>
+<h4>Order and Disorder</h4>
+<div>Nucleocapsid is a complex molecule with many functional parts. One section folds into an RNA-binding domain (PDB ID <a href="https://www.rcsb.org/structure/7act" target="_blank">7act</a>), with a groove that grips a short segment of the viral genomic RNA. Another section folds into a dimerization domain (<a href="https://www.rcsb.org/structure/6wji" target="_blank">6wji</a>) that brings two nucleocapsid molecules together. The rest of the protein is intrinsically disordered, forming tails at each end of the protein chain and a flexible linker that connects the two structured domains. These disordered regions assist with RNA binding and orchestrate association of nucleocapsid dimers into larger assemblies that package the RNA in the small space inside virions.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three structures of antibodies (blue) bound to different faces of SARS-CoV-2 nucleocapsid (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/278/antibodies.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three structures of antibodies (blue) bound to different faces of SARS-CoV-2 nucleocapsid (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/278/antibodies.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Antibody Recognition</h4>
+<div>SARS-CoV-2 home test kits rely on <a href="https://pdb101.rcsb.org/motm/21">antibodies</a> that specifically recognize nucleocapsid within the complex mix of biomolecules found in a nasal sample. Different brands of these kits use different antibodies that recognize different portions of the molecule. This is not surprising, since the immune system is very effective at developing antibodies that probe all aspects of a target molecule, so developers of tests have many choices for the antibodies they use. For example, the illustration shown here superimposes three structures of antibodies bound to different faces of the RNA-binding domain of nucleocapsid, from PDB ID <a href="https://www.rcsb.org/structure/7cr5" target="_blank">7cr5</a>, <a href="https://www.rcsb.org/structure/7n3c" target="_blank">7n3c</a>, and <a href="https://www.rcsb.org/structure/7sts" target="_blank">7sts</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>RNA-Binding Domain</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/278/JSmol-jmol.jpg"/></div>
+<p>Nucleocapsid uses several structural tricks to bind tightly to RNA. First, the RNA-binding domain has a long loop that bends down and grips the RNA. Second, this loop and the groove that it forms are lined with arginine and lysine amino acids (shown in purple and turquoise here), which are positively-charged and interact favorably with the negatively-charged RNA. To explore the three-dimensional aspects of this interaction, click on the image for an interactive JSmol that includes the RNA-bound structure (<a href="https://www.rcsb.org/structure/7act" target="_blank">7act</a>) and the protein alone (<a href="https://www.rcsb.org/structure/6yi3" target="_blank">6yi3</a>).</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Superimposed coordinates for the antibody illustration and JSmol were created by overlapping the structures using the Pairwise Structure Alignment tool at the RCSB PDB website. Try the <a href="https://www.rcsb.org/alignment?response-body=eJzdVWtro0AU%2FS9%2BNmHeo%2F0mNZlKjGuMtEgpwcRpKiSm9dHdUPLf945pmnbZLcuysLCIonPPvefcmXPxxSqr%2B5118WJ1XVlYF5ZmxQotGRsIofGAcbQcLIng8MakwJRiLQvLtpo2b7sG8JdfpnE4SkfWwba2us1NqXxTrqutrtrFdldoAD3mZf21bDQkvovp9mFnKO%2FzdpW3g7pcgwIoU%2Bum27RQ%2FPYFeOpu1Xaw1H9CXr1f9EJFFlAjRG%2F0qi13VU%2Fc7LfHqGcdDvYHvPQu08%2Fxd%2FaZbvGms%2Bet9RpSjIbbj1m2tdTrRaOf%2BgVx%2FCyrQn%2BzLpBtbXS1bh%2BsC06Mmk8S0YdMzs6pDgZh%2F4QV9qOt86q539XbvD31j230ev30DbSiIcEUI46RcLBwEBX2AA0Zx0IK1yGIOy7GzKw5QlAOCAkwwigzJYZYEIYAQqQgkjDm9EjuIEwEEvB0hAMw5kgiYVW6mLouZyYZgK6gjApKgIdRQqlZgyIcnEwRwZgf1WDkMhdxhJh0IN3lRjsfCleCHCY4pgzE2wKQUM%2BF28ESRNgEmAnnwMwINCgZtGyM0223eb03pmpWu5Ndn%2FNNB%2F4nxIX2YTf3j2YamnJbbvK6bPeDHmuZU3qFYuj0DZhM575lbFmBHasFVC2LTi%2FMNEF9GMajZ%2FVTp6vVry37R97BlL8vDqnKm6owjqLUm9%2BMUy9MZ1dqMvLDyThO1Exdx0GURvN57PuzQGVZknhpkgSJUr6aTCd%2BOI%2BTm2ycZaFKVTzyoFamvGjiqyC4ufbSkfLCKI0n%2FlWg0iSKvSjyvOA6nIXxTKVpGE%2FUOPNGag4V5%2F2W%2Fecd%2Fk1XnVGv3Q7KAowC4PcwOiQ%2Fmu8cREPw%2BimYTn%2BL5KzpUxubiPlTbHRxippOMYOZpPJ4Rn0qHF1%2FbuY3Ui1Wu2dd52tgvIX5deUdjMPhO6tDEV0%3D&amp;encoded=true">alignment of RNA-binding domains</a>, and use the SelectView--&gt;Structures menu to view the RNA.</li>
+<li>You can get an overview of all the structures of nucleocapsid using the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P0DTC9"> Group Sequence page</a> at the RCSB PDB website. Notice there are a few structures that include the central linker region.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Frank, F., Keen, M.M., Rao, A., Bassit, L., Liu, L., Liu, X., Bowers, H.B., Patel, A.B., Cato, M.L., Sullivan, J.A., Greenleaf, M., Piantadosi, A., Lam, W.A., Hudson, W.H., Orlund, E.A. (2020) Deep mutational scanning identifies SARS-CoV-2 nucleocapsid escape mutations of currently available rapid antigen tests. Cell 185: 3603-3616</li>
+<li>6yi3, 7act: Dinesh, D.C., Chalupska, D., Silhan, J., Koutna, E., Nencka, R., Veverka, V., Boura, E. (2020) Structural basis of RNA recognition by the SARS-CoV-2 nucleocapsid phosphoprotein. PLoS Pathog 16: e1009100</li>
+<li>Peng, Y., Du, N., Lei, Y., Dorje, S., Qi, J., Luo, T., Gao, G.F., Song, H. (2020) Structures of the SARS-CoV-2 nucleocapsid and their perspectives for drug design. EMBO J 39: e105938</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_2">http://doi.org/10.2210/rcsb_pdb/mom_2023_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hemoglobin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hemoglobin" property="og:title"/>
+<meta content="Hemoglobin uses a change in shape to increase the efficiency of oxygen transport" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/41/2dhb.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/41" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hemoglobin" name="twitter:title"/>
+<meta content="Hemoglobin uses a change in shape to increase the efficiency of oxygen transport" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/41/2dhb.gif" name="twitter:image"/>
+<meta content="Hemoglobin uses a change in shape to increase the efficiency of oxygen transport" name="description"/>
+<meta content="allosteric protein,allostery,blood physiology,carbon monoxide,oxgen transport,red blood cell,sickle cell anemia,globin,1buw,2hco,1c7d,2dhb,1idr,2hhb,1hho,2hbs" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 41
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 41 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hemoglobin</h1>
+<p><i>Hemoglobin uses a change in shape to increase the efficiency of oxygen transport</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Hemoglobin, with hemes in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/41/2dhb.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Hemoglobin, with hemes in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/41/41-Hemoglobin-2dhb.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Red Blood, Blue Blood</h4>
+<div>Ever wondered why blood vessels appear blue? Oxygenated blood is bright red: when you are cut, the blood you see is brilliant red oxygenated blood. Deoxygenated blood is deep purple: when you donate blood or give a blood sample at the doctor's office, it is drawn into a storage tube away from oxygen, so you can see this dark purple color. However, deep purple deoxygenated blood appears blue as it flows through our veins, especially in people with fair skin. This is due to the way that different colors of light travel through skin: blue light is reflected in the surface layers of the skin, whereas red light penetrates more deeply. The dark blood in the vein absorbs most of this red light (as well as any blue light that makes it in that far), so what we see is the blue light that is reflected at the skin's surface. Some organisms like snails and crabs, on the other hand, use copper to transport oxygen, so they truly have blue blood. <br/><br/> Hemoglobin is the protein that makes blood red. It is composed of four protein chains, two alpha chains and two beta chains, each with a ring-like heme group containing an iron atom. Oxygen binds reversibly to these iron atoms and is transported through blood. Each of the protein chains is similar in structure to <a href="http://pdb101.rcsb.org/motm/1">myoglobin</a>, the protein used to store oxygen in muscles and other tissues. However, the four chains of hemoglobin give it some extra advantages, as described below.</div>
+<h4>Use and Abuse of Hemoglobin</h4>
+<div>Aside from oxygen transport, hemoglobin can bind and transport other molecules like nitric oxide and carbon monoxide. Nitric oxide affects the walls of blood vessels, causing them to relax. This in turn reduces the blood pressure. Recent studies have shown that nitric oxide can bind to specific cysteine residues in hemoglobin and also to the irons in the heme groups, as shown in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1buw" target="_blank">1buw <i class="fa fa-external-link"> </i></a></span>. Thus, hemoglobin contributes to the regulation of blood pressure by distributing nitric oxide through blood. Carbon monoxide, on the other hand, is a toxic gas. It readily replaces oxygen at the heme groups, as seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hco" target="_blank">2hco <i class="fa fa-external-link"> </i></a></span> and many others, forming stable complexes that are difficult to remove. This abuse of the heme groups blocks normal oxygen binding and transport, suffocating the surrounding cells.</div>
+<h4>Artificial Blood</h4>
+<div>Blood transfusions have saved countless lives. However, the need for matching blood type, the short life of stored blood, and the possibility of contamination are still major concerns. An understanding of how hemoglobin works, based on decades of biochemical study and many crystallographic structures, has prompted a search for blood substitutes and artificial blood. The most obvious approach is to use a solution of pure hemoglobin to replace lost blood. The main challenge is keeping the four protein chains of hemoglobin together. In the absence of the protective casing of the red blood cell, the four chains rapidly fall apart. To avoid this problem, novel hemoglobin molecules have been designed where two of the four chains are physically linked together, as shown in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1c7d" target="_blank">1c7d <i class="fa fa-external-link"> </i></a></span>. In that structure, two additional glycine residues form a link between two of the chains, preventing their separation in solution.</div>
+<h4>Hemoglobin Cousins</h4>
+<div>Looking through the PDB, you will find many different hemoglobin molecules. You can find Max Perutz's groundbreaking structure of horse hemoglobin in entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dhb" target="_blank">2dhb <i class="fa fa-external-link"> </i></a></span>, shown in the picture here. There are structures of human hemoglobins, both adult and fetal. You can also find unusual hemoglobins like leghemoglobin, which is found in legumes. It is thought to protect the oxygen-sensitive bacteria that fix nitrogen in leguminous plant roots. In the past few years some hemoglobin cousins called the "truncated hemoglobins" have been identified, such as the hemoglobin in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1idr" target="_blank">1idr <i class="fa fa-external-link"> </i></a></span>, which have several portions of the classic structure edited out. The only feature that is absolutely conserved in this subfamily of proteins is the histidine amino acid that binds to the heme iron.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Allosteric motion of hemoglobin, with an oxygen molecule in turquoise." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/41/hb-animation.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Allosteric motion of hemoglobin, with an oxygen molecule in turquoise.</i></div>
+</div>
+</div>
+</div>
+<h4>Cooperation Makes It Easier</h4>
+<div>Hemoglobin is a remarkable molecular machine that uses motion and small structural changes to regulate its action. Oxygen binding at the four heme sites in hemoglobin does not happen simultaneously. Once the first heme binds oxygen, it introduces small changes in the structure of the corresponding protein chain. These changes nudge the neighboring chains into a different shape, making them bind oxygen more easily. Thus, it is difficult to add the first oxygen molecule, but binding the second, third and fourth oxygen molecules gets progressively easier and easier. This provides a great advantage in hemoglobin function. When blood is in the lungs, where oxygen is plentiful, oxygen easily binds to the first subunit and then quickly fills up the remaining ones. Then, as blood circulates through the body, the oxygen level drops while that of carbon dioxide increases. In this environment, hemoglobin releases its bound oxygen. As soon as the first oxygen molecule drops off, the protein starts changing its shape. This prompts the remaining three oxygens to be quickly released. In this way, hemoglobin picks up the largest possible load of oxygen in the lungs, and delivers all of it where and when needed.<br/><br/> In this animated figure, the heme group of one subunit, shown in the little circular window, is kept in one place so that you can see how the protein moves around it when oxygen binds. The oxygen molecule is shown in blue green. As it binds to the iron atom in the center of the heme, it pulls a histidine amino acid upwards on the bottom side of the heme. This shifts the position of an entire alpha helix, shown here in orange below the heme. This motion is propagated throughout the protein chain and on to the other chains, ultimately causing the large rocking motion of the two subunits shown in blue. The two structures shown are PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hhb" target="_blank">2hhb <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hho" target="_blank">1hho <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Fiber of sickle cell hemoglobin, showing the site of mutation." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/41/2hbs-fiber.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fiber of sickle cell hemoglobin, showing the site of mutation.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/41/41-Hemoglobin-2hbs-fiber.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Troubled Hemoglobins</h4>
+<div>The genes for the protein chains of hemoglobin show small differences within different human populations, so the amino acid sequence of hemoglobin is slightly different from person to person. In most cases the changes do not affect protein function and are often not even noticed. However, in some cases these different amino acids lead to major structural changes. One such example is that of the sickle cell hemoglobin, where glutamate 6 in the beta chain is mutated to valine. This change allows the deoxygenated form of the hemoglobin to stick to each other, as seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hbs" target="_blank">2hbs <i class="fa fa-external-link"> </i></a></span>, producing stiff fibers of hemoglobin inside red blood cells. This in turn deforms the red blood cell, which is normally a smooth disk shape, into a C or sickle shape. The distorted cells are fragile and often rupture, leading to loss of hemoglobin. This may seem like a uniformly terrible thing, but in one circumstance, it is actually an advantage. The parasites that cause the tropical disease malaria, which spend part of their life cycle inside red blood cells, cannot live in the fiber-filled sickle cells. Thus people with sickle cell hemoglobin are somewhat resistant to malaria. Other circumstances leading to troubled hemoglobins arise from a mismatch in the production of the alpha and beta proteins. The structure requires equal production of both proteins. If one of these proteins is missing, it leads to conditions called Thalassemia.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Deoxy and Oxy States of Hemoglobin</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/41/41-Hemoglobin-hb_JSmol.jpg"/></div>
+<p>You can look at the binding of oxygen up close in two structures of human hemoglobin. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hhb" target="_blank">2hhb <i class="fa fa-external-link"> </i></a></span> shows hemoglobin with no oxygen bound. In this picture, the heme is seen edge-on with the iron atom colored in green. You can see the key histidine reaching up on the bottom side to bind to the iron atom. In PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hho" target="_blank">1hho <i class="fa fa-external-link"> </i></a></span>, oxygen has bound to the iron, pulling it upwards. This in turn, pulls on the histidine below, which then shifts the location of the entire protein chain. These changes are transmitted throughout the protein, ultimately causing the big shift in shape that changes the binding strength of the neighboring sites. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Perutz, M.F. (1978): Hemoglobin Structure and Respiratory Transport. <i>Scientific American</i>, <b>239 </b>(6).</li>
+<li>Squires, J.E. (2002): Artificial Blood. <i>Science</i> <b>295</b>, p.1002.</li>
+<li>Vichinsky, E. (2002): New therapies in sickle cell disease. <i>Lancet</i> <b>24</b>, p. 629.</li>
+<li><a href="http://discovermagazine.com/1996/dec/theskinnyonblueb954" target="_new">The Skinny on Blue Blood. <i>Discover Magazine</i>, December 1996. </a></li>
+<li>2hbs: Harrington, D.J., Adachi, K., Royer Jr., W.E. (1997) The high resolution crystal structure of deoxyhemoglobin S. J.Mol.Biol. 272: 398-407</li>
+<li>2hhb: Fermi, G., Perutz, M.F., Shaanan, B., Fourme, R. (1984) The crystal structure of human deoxyhaemoglobin at 1.74 A resolution. J.Mol.Biol. 175: 159-174</li>
+<li>1hho: Shaanan, B. (1983) Structure of human oxyhaemoglobin at 2.1 A resolution. J.Mol.Biol. 171: 31-59</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2003, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_5">http://doi.org/10.2210/rcsb_pdb/mom_2003_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

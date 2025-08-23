@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Bacteriophage phiX174</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Bacteriophage phiX174" property="og:title"/>
+<meta content="Bacteriophage phiX174 hijacks bacterial cells and forces them to make new copies of the virus" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/2/1cd3_mature.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/2" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Bacteriophage phiX174" name="twitter:title"/>
+<meta content="Bacteriophage phiX174 hijacks bacterial cells and forces them to make new copies of the virus" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/2/1cd3_mature.gif" name="twitter:image"/>
+<meta content="Bacteriophage phiX174 hijacks bacterial cells and forces them to make new copies of the virus" name="description"/>
+<meta content="icosahedral virus,viral capsid,viral capsid assembly,1cd3" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 2
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 2 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Bacteriophage phiX174</h1>
+<p><i>Bacteriophage phiX174 hijacks bacterial cells and forces them to make new copies of the virus</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Bacteriophage phiX174." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/2/1cd3_mature.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacteriophage phiX174.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/2/2-BacteriophagephiX174-mature.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Milestone at the PDB</h4>
+<div>The 10,000th entry in the Protein Data Bank, the bacteriophage phiX174, is a perfect example of how the science of protein structure has progressed in four decades. In 1960, the world got its first look at the structure of a protein. That first structure was the small protein myoglobin, composed of one protein chain and one heme group--about 1260 atoms in all. By contrast, the 10,000th entry in the PDB contains 420 protein chains and over half a million atoms. Enormous structures like this are not uncommon in the Protein Data Bank. The stakes have risen dramatically since the structure of myoglobin was first revealed.</div>
+<h4>Animal, Mineral, or Vegetable?</h4>
+<div>A bacteriophage is a virus that attacks bacteria. The phiX174 bacteriophage attacks the common human bacteria <i>Escherichia coli</i>, infecting the cell and forcing it to make new viruses. Do you think that viruses are living organisms? PhiX174 is composed of a single circle of DNA surrounded by a shell of proteins. That's all. It can inject its DNA into a bacterial cell, then force the cell to create many new viruses. These viruses then burst out of the cell, and go on to hijack more bacteria. By itself, it is like an inert rock. But given the proper bacterial host, it is a powerful reproducing machine. What do you think? Is it alive?</div>
+<h4>A Molecular Time Bomb</h4>
+<div>The capsid of phiX174 is designed to find bacterial cells, and then infect them with its DNA. Sixty copies of the capsid protein (colored red here) form a spherical shell around the DNA, and the spike proteins (colored orange here) form 12 pentagonal spikes on the surface. It is thought that the DNA is ejected through the middle of the spikes when the virus infects an <i>Escherichia coli</i> cell. The DNA itself encodes 11 genes. In order to fit into this tiny protein shell, however, the DNA is so short that the genes must actually overlap.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacteriophage phiX174 with scaffolding proteins." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/2/1cd3_assembly.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacteriophage phiX174 with scaffolding proteins.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/2/2-BacteriophagephiX174-1cd3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Assembling a Virus</h4>
+<div>As one can imagine, assembling 120 protein chains into a perfectly symmetrical shell is a difficult task. PhiX174 uses special scaffolding proteins to ensure that everything ends up in the right place. The capsid and spike proteins spontaneously form pentagonal units, with five copies of each chain. The scaffolding proteins (shown here in light blue and purple) then arrange these pentagon building-blocks into the whole icosahedron, complete with DNA inside. The scaffolding proteins are small, and bind to the inner and outer surfaces of the pentagons, aligning them one next to the other in the proper orientation.</div>
+<h4>The DNA Inside</h4>
+<div>PhiX174 has the distinction of being the first DNA genome sequence that was determined. The virus contains one piece of DNA, 5386 bases long, wrapped into a small circle. In the mature virus, this small circle of DNA is packaged inside the icosahedral protein shell, safe for delivery to an unfortunate bacterial target. The PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cd3" target="_blank">1cd3 <i class="fa fa-external-link"> </i></a></span> includes atomic coordinates for the capsid proteins, but the DNA inside is not included. It does not conform to the beautiful icosahedral symmetry of the capsid, and thus cannot be resolved by x-ray crystallography. We must imagine it packed inside, trapped as the last pentamer closes the capsid.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/2/1cd3_cpk.gif"/></div>
+<div>You can easily look at one of the subunits of this bacteriophage. There are seven separate chains in the PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cd3" target="_blank">1cd3 <i class="fa fa-external-link"> </i></a></span>. The spike protein, chain G, is small and compact and the capsid protein, chain F, is large. Both are very stable structures composed of two beta-sheets, forming a structure commonly called a "beta-sandwich." The ribbon diagram shows the chain of the spike protein. Notice how the beta-strands, each depicted with an arrow, arrange side-by-side to form the two sheets. Beta-sandwich structures like this are found in many different viruses. <br/><br/> Four copies of a small scaffolding protein (chains 1, 2, 3 and 4) are arranged in the angle between the capsid and spike proteins, ending up on the outside of the final virus capsid. Another small scaffold protein (chain B) is found on the inside of the capsid, where it assists in the capture of DNA. Compare this detailed atomic view of one subunit of the capsid to the picture of the whole capsid shown above, which contains 60 identical copies of each of these seven proteins. <br/><br/> The pictures were created with RasMol. You can create similar pictures by using one of the viewers on the page for PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cd3" target="_blank">1cd3 <i class="fa fa-external-link"> </i></a></span>.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_2">http://doi.org/10.2210/rcsb_pdb/mom_2000_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

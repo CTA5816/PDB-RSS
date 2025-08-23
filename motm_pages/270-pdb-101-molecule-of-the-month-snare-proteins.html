@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SNARE Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SNARE Proteins" property="og:title"/>
+<meta content="SNARE proteins power the fusion of vesicles with membranes by forming a bundle of alpha helices" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1sfc_1br0.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/167" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SNARE Proteins" name="twitter:title"/>
+<meta content="SNARE proteins power the fusion of vesicles with membranes by forming a bundle of alpha helices" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1sfc_1br0.jpg" name="twitter:image"/>
+<meta content="SNARE proteins power the fusion of vesicles with membranes by forming a bundle of alpha helices" name="description"/>
+<meta content="membrane fusion,synaptic vesicle,vesicle fusion,1sfc,1br0,1nsf,1kil" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 167
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 167 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SNARE Proteins</h1>
+<p><i>SNARE proteins power the fusion of vesicles with membranes by forming a bundle of alpha helices</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Small membrane-enclosed vesicles are used like cargo trucks to deliver proteins and other molecules inside and outside of cells. When these vesicles reach their proper destination, they fuse with a membrane and deliver their cargo. For instance, vesicles are used inside cells to transport digestive enzymes from the Golgi to their final location in lysosomes. They are also used to deliver molecules out of the cell: for example, neurotransmitters are released from vesicles that fuse with the cell membrane at nerve synapses. The 2013 Nobel Prize was awarded to three researchers who have revealed the central molecular machinery for this process of vesicle fusion.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="SNARE protein complex in the process of fusing two membranes. The membrane-spanning portions and a large loop in SNAP-25, which are not included in the PDB entry, are shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1sfc_1br0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>SNARE protein complex in the process of fusing two membranes. The membrane-spanning portions and a large loop in SNAP-25, which are not included in the PDB entry, are shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1sfc_1br0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Snaring Vesicles</h4>
+<div>Vesicle fusion depends on the association of SNARE proteins that tether a vesicle to a target membrane and assist with the fusion of their lipid bilayers. SNAREs are short proteins that are bound to the surface of the vesicle and the membrane, connected by a segment that crosses the membrane or by covalently-attached lipid chains. When the SNARE proteins come together, they form a tight bundle of alpha helices that pull the membranes into close proximity. The complex shown here is from nerve synaptic vesicles, from PDB entries <span class="rcsb_id_tag" title="SNARE Complex"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sfc" target="_blank">1sfc <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Syntaxin Domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1br0" target="_blank">1br0 <i class="fa fa-external-link"> </i></a></span>. The vesicle includes the SNARE protein synaptobrevin (blue), and the cell membrane includes two SNARE proteins, syntaxin (red) and SNAP-25 (green).</div>
+<h4>Membrane Fusion</h4>
+<div>Experiments have shown that two or three of these SNARE complexes are sufficient to power the fusion of a vesicle with a membrane. Researchers have also discovered that the process requires the assistance of several other proteins that chaperone the SNARE proteins and regulate the time and place that fusion occurs. But that is currently where the scientific results end: the details of how the vesicle membrane lipids insert themselves into the target membrane is still one of the great mysteries of cellular biology.</div>
+<h4>Navigating Nomenclature</h4>
+<div>As with many subjects in molecular biology, the proteins involved in vesicle fusion were named based on how they were discovered. The first of these proteins was discovered by inactivating proteins with the cysteine-attacking chemical N-ethylmaleimide, and then adding proteins back one at a time until vesicle-fusing function was restored. This resulted in the discovery of NSF: N-ethylmaleimide-sensitive factor. Other proteins were then discovered by their interaction with NSF, resulting in complex names such as SNARE (soluble NSF-attachment protein receptor), and confusing nomenclature such as the acronym SNAP, which used for two different proteins with different activities: SNAP-25 (synaptosomal-associated protein) and alpha-SNAP (soluble NSF-attachment protein). So watch your step when you start traveling through the literature about these molecules...the names can be tricky!</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Separating SNAREs</h4>
+<div>Once the SNARE proteins have done their job, they need to be disassembled and recycled for the next delivery. NSF, shown here from PDB entry <span class="rcsb_id_tag" title="NSF"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nsf" target="_blank">1nsf <i class="fa fa-external-link"> </i></a></span>, performs this important task. It is a member of the <a href="https://pdb101.rcsb.org/motm/80"> AAA+ class of enzymes</a>, which use ATP to power the unfolding of proteins. Like the other members of this class, it is composed of a ring of six subunits, each with its own site for ATP binding and hydrolysis.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="NSF disassembles SNARE complexes by feeding the chain through the central hole." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1nsf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>NSF disassembles SNARE complexes by feeding the chain through the central hole.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1nsf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>SNARE Complex and Complexin (PDB entry 1kil)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/167/167-SNAREProteins_1kil_jmol.jpg"/></div>
+<p>Many proteins assist the SNARE proteins in their task. Complexin, shown here in yellow in PDB entry <span class="rcsb_id_tag" title="SNARE Complex and Complexin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kil" target="_blank">1kil <i class="fa fa-external-link"> </i></a></span>, is part of the machinery that allows synaptic vesicles to release their contents quickly and on demand. It stabilizes the SNARE complex and is thought to hold the vesicle close to the membrane, ready to fuse on command. To explore this structure, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>When not in use, the SNARE protein syntaxin is held in a folded-over, inactive complex by the protein Munc18-1. You can explore this complex in PDB entry <span class="rcsb_id_tag" title="Syntaxin and Munc18-1">3c98</span>. Also, an NMR structure captures free syntaxin bound to a small micelle: <span class="rcsb_id_tag" title="Syntaxin">2m8r</span>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. Rizo and T. S. Sudhof (2012) The membrane fusion enigma: SNAREs, Sec1/Munc18 proteins, and their accomplices--guilty as charged? Annual Review of Cell and Developmental Biology 28, 279-308.</li>
+<li>1br0: I. Fernandez, J. Ubach, I. Dulubova, X. Zhang, T. C. Sudhof &amp; J. Rizo (1998) Three-dimensional structure of an evolutionarily conserved N-terminal domain of syntaxin 1A. Cell 94, 841-849.</li>
+<li>1sfc: R. B. Sutton, D. Fasshauer, R. Jahn &amp; A. T. Brunger (1998) Crystal structure of a SNARE complex involved in synaptic exocytosis at 2.4 A resolution. Nature 395, 347-353.</li>
+<li>1nsf: R. C. Yu, P. I. Hanson, R. Jahn &amp; A. T. Brunger (1998) Structure of the ATP-dependent oligomerization domain of N-ethylmaleimide sensitive factor complexed with ATP. Nature Structural Biology 5, 803-811.</li>
+<li>1kil: X. Chen, D R. Tomchick, E. Kovrigin, D. Arac, M. Machius, T. C. Sudhof &amp; J. Rizo (2002) Three-dimensional structure of the complexin/SNARE complex. Neuron 33, 397-409.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_11">http://doi.org/10.2210/rcsb_pdb/mom_2013_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

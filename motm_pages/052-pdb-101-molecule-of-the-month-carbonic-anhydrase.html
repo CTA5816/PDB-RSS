@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Carbonic Anhydrase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Carbonic Anhydrase" property="og:title"/>
+<meta content="Carbonic anhydrase solubilizes carbon dioxide gas so we can breathe it out" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/49/carbonic-anhydrases.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/49" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Carbonic Anhydrase" name="twitter:title"/>
+<meta content="Carbonic anhydrase solubilizes carbon dioxide gas so we can breathe it out" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/49/carbonic-anhydrases.gif" name="twitter:image"/>
+<meta content="Carbonic anhydrase solubilizes carbon dioxide gas so we can breathe it out" name="description"/>
+<meta content="blood physiology,carbon dioxide transport,carbonate dehydratase activity,1ca2,1ddz,1thj,1cnw,5dsj,5dsi,1cam" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 49
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 49 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Carbonic Anhydrase</h1>
+<p><i>Carbonic anhydrase solubilizes carbon dioxide gas so we can breathe it out</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Alpha (top), beta (middle), and gamma (bottom) carbonic anhydrases." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/49/carbonic-anhydrases.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Alpha (top), beta (middle), and gamma (bottom) carbonic anhydrases.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/49/49-CarbonicAnhydrase-carbonic-anhydrases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Breathing In, Breathing Out</h4>
+<div>Breathing is a fundamental function in life - ever wondered what really happens when we breathe? The air we breathe in has precious oxygen that fuels the breakdown of sugars and fat in our cells. In our lungs, oxygen diffuses into the blood, binds to hemoglobin and is transported to all the cells of our body (see the <i>Molecule of the Month</i> feature on <a class="mom_big" href="https://pdb101.rcsb.org/motm/41"> hemoglobin</a>). Carbon dioxide is a byproduct of sugar and fat breakdown in cells and needs to be removed from our body. Again, blood acts as a transport medium. Carbon dioxide diffuses out of cells and is transported in blood in a few different ways: less than 10% dissolves in the blood plasma, about 20% binds to hemoglobin, while the majority of it (70%) is converted to carbonic acid to be carried to the lungs. An enzyme present in red blood cells, carbonic anhydrase, aids in the conversion of carbon dioxide to carbonic acid and bicarbonate ions. When red blood cells reach the lungs, the same enzyme helps to convert the bicarbonate ions back to carbon dioxide, which we breathe out. Although these reactions can occur even without the enzyme, carbonic anhydrase can increase the rate of these conversions up to a million fold.</div>
+<h4>Green Plants and Corals</h4>
+<div>Plants also use oxygen for producing energy, and also release carbon dioxide. Green plants can convert water and carbon dioxide into sugars in the presence of sunlight. This process, photosynthesis, uses carbon dioxide from the atmosphere. Gaseous carbon dioxide is stored in plants as bicarbonate ions. In both land and water plants, carbonic anhydrase plays a role in converting bicarbonate ions back to carbon dioxide for photosynthesis. Another interesting biological phenomenon where this enzyme plays a role is the calcification of corals. Seawater calcium reacts with the bicarbonate produced by carbonic anhydrase from the coral polyps, forming calcium carbonate. This is deposited as the hard exterior of corals.</div>
+<h4>Carbonic Anhydrases</h4>
+<div>Carbonic anhydrase is an enzyme that assists rapid inter-conversion of carbon dioxide and water into carbonic acid, protons and bicarbonate ions. This enzyme was first identified in 1933, in red blood cells of cows. Since then, it has been found to be abundant in all mammalian tissues, plants, algae and bacteria. This ancient enzyme has three distinct classes (called alpha, beta and gamma carbonic anhydrase). Members of these different classes share very little sequence or structural similarity, yet they all perform the same function and require a zinc ion at the active site. Carbonic anhydrase from mammals belong to the alpha class, the plant enzymes belong to the beta class, while the enzyme from methane-producing archaea that grow in hot springs forms the gamma class. Thus it is apparent that these enzyme classes have evolved independently to create a similar enzyme active site. PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ca2" target="_blank">1ca2 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ddz" target="_blank">1ddz <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1thj" target="_blank">1thj <i class="fa fa-external-link"> </i></a></span>, shown here from top to bottom, are examples of the alpha, beta and gamma carbonic anhydrase enzymes, respectively. The zinc ions in the active site are colored blue in these figures. Note that the alpha enzyme is a monomer, while the gamma enzyme is trimeric. Although the beta enzyme shown here is a dimer, there are four zinc ions bound to the structure indicating four possible enzyme active sites. Other members of this class form tetramers, hexamers or octamers, suggesting that dimer is probably a building block for this class. <br/> <br/> Mammalian carbonic anhydrases occur in about 10 slightly different forms depending upon the tissue or cellular compartment they are located in. These isozymes have some sequence variations leading to specific differences in their activity. Thus isozymes found in some muscle fibers have low enzyme activity compared to that secreted by salivary glands. While most carbonic anhydrase isozymes are soluble and secreted, some are bound to the membranes of specific epithelial cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Inhibitor (green) bound in the active site of carbonic anhydrase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/49/1cnw.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Inhibitor (green) bound in the active site of carbonic anhydrase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/49/49-CarbonicAnhydrase-1cnw.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Carbonic Anhydrase in Health and Disease</h4>
+<div>Since this enzyme produces and uses protons and bicarbonate ions, carbonic anhydrase plays a key role in the regulation of pH and fluid balance in different parts of our body. In our stomach lining it plays a role in secreting acid, while the same enzyme helps to make pancreatic juices alkaline and our saliva neutral. The transport of the protons and bicarbonate ions produced in our kidney and eyes influence the water content of the cells at these locations. Thus carbonic anhydrase isozymes perform different functions at their specific locations, and their absence or malfunction can lead to diseased states, ranging from the loss of acid production in the stomach to kidney failure. <br/> <br/> When there is a build up of fluid that maintains the shape of our eyes, the fluid often presses on the optic nerve in the eye and may damage it. This condition is called glaucoma. In recent years, inhibitors of carbonic anhydrase are being used to treat glaucoma. Blocking this enzyme shifts the fluid balance in the eyes of the patient to reduce fluid build up thereby relieving pressure. The structure of PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cnw" target="_blank">1cnw <i class="fa fa-external-link"> </i></a></span> shows how one such inhibitor (a sulfonamide), colored green in the figure, is bound to human carbonic anhydrase (isozyme II). Note that this inhibitor binds near the active site and disrupts the interactions of the water bound to the zinc ion, blocking the enzyme action. Unfortunately, prolonged use of this drug can affect the same enzyme present in other tissues and lead to side effects like kidney and liver damage.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Carbonic Anhydrase in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/49/49-Carbonic_Anhydrase-JSmol_still2.jpg"/></div>
+<p>The alpha carbonic anhydrase enzymes have been well studied, leading to an understanding of how they work. Three structures are shown here, showing three steps in the process. The structure at the top (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5dsj" target="_blank">5dsj</a>) is the empty enzyme. The active site includes a zinc ion (magenta), which is held by three histidines (purple). The zinc also coordinates a hydroxide ion (red). At bottom left (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5dsi" target="_blank">5dsi</a>), carbon dioxide (red and gray) is bound and a glutamate and a threonine (green) assist with the reaction. At bottom right (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cam" target="_blank">1cam</a>), the hydroxide has been added, forming carbonic acid. The threonine has been mutated to alanine to help capture the complex. The histidine at upper left (green), which was seen in two different conformations in the structure, assists with guiding one of the nearby water molecules (orange) to the zinc ion, and converting it to a hydroxyl. To explore these three structures in more detail, click on the image for an interactive JSmol.<br/><br/></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Carbonic anhydrase is an example of a "perfect" enzyme, which performs its reaction as fast as carbon dioxide molecules can diffuse to it. You can find other diffusion-limited enzymes in the PDB archive, including <a href="https://pdb101.rcsb.org/motm/57">catalase</a>, <a href="https://pdb101.rcsb.org/motm/94">superoxide dismutase</a>, and <a href="https://pdb101.rcsb.org/motm/50">triosephosphate isomerase</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5dsi, 5dsj: Kim JK, Lomelino CL, Avvaru BS, Mahon BP, McKenna R, Park SY &amp; Kim CU (2018) Active-size solvent replenishment observed during human carbonic anhydrase II catalysis. IUCrJ 5, 93-102.</li>
+<li>BC Tripp, K Smith &amp; JG Ferry (2001) Carbonic anhydrase: New insights for an ancient enzyme. Journal of Biological Chemistry 276, 48615-48618.</li>
+<li>1ddz: S Mitsuhashi, T Mizushima, E Yamashita, M Yamanoto, T Kumasaka, H Moriyama, T Ueki, S Miyachi &amp; T Tsukihara (2000) X-ray structure of beta-carbonic anhydrase from the red alga, Porphyridium purpureum, reveals a nove catalytic site for CO(2) hydration. Journal of Biological Chemistry 275, 5521-5526.</li>
+<li>S Lindskog (1997) Structure and Mechanism of Carbonic Anhydrase. Pharmacology and Therapeutics 74, 1-20.</li>
+<li>1thj: C Kisker, H Schindelin, BE Alber, JG Ferry &amp; DC Rees (1996) A left-hand beta-helix revealed by the crystal structure of a carbonic anhydrase from the archaeon Methanosarcina thermophila. EMBO Journal 15, 2323-2330.</li>
+<li>1cnw: PA Boriack, DW Christianson, J Kingery-Wood &amp; GM Whitesides (1995) Secondary interactions significantly removed from the sulfonamide binding pocket of carbonic anhydrase II influence inhibitor binding constants. Journal of Medicinal Chemistry 38, 2286-2291.</li>
+<li>1ca2: AE Eriksson, TA Jones &amp; A Liljas (1988) Refined structure of human carbonic anhydrase II at 2.0 A resolution. Proteins. 4, 274-282.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2004, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_1">http://doi.org/10.2210/rcsb_pdb/mom_2004_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

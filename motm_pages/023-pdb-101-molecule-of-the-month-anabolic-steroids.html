@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Anabolic Steroids</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Anabolic Steroids" property="og:title"/>
+<meta content="Anabolic steroids like testosterone are among the most common performance enhancing drugs" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/92/92_1d2s-composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/92" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Anabolic Steroids" name="twitter:title"/>
+<meta content="Anabolic steroids like testosterone are among the most common performance enhancing drugs" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/92/92_1d2s-composite.jpg" name="twitter:image"/>
+<meta content="Anabolic steroids like testosterone are among the most common performance enhancing drugs" name="description"/>
+<meta content="anabolic steroid,androgen binding,athletic performance,dietary supplements,hormone transport,steroid binding,testosterone,1d2s,1xf0,1r4i,2am9,2amb" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 92
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 92 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Anabolic Steroids</h1>
+<p><i>Anabolic steroids like testosterone are among the most common performance enhancing drugs</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Domain of sex-hormone-binding globulin bound to testosterone." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/92/92_1d2s-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Domain of sex-hormone-binding globulin bound to testosterone.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/92/92-AnabolicSteroids-1d2s.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Athletes are constantly striving for better performance in their sports. Most athletes stay in top shape through a rigorous training program in fitness and nutrition, giving them the strength and stamina to push their bodies to the physical limit. But some athletes also look to biochemistry to improve their performance even further. There are many ways to give nature an artificial boost. For instance, some athletes artificially increase the number of red blood cells in their blood, either by injecting purified cells or by using the blood-stimulating hormone erythropoietin. The extra red blood cells carry more oxygen to their straining muscles than in normal blood, giving them an edge in endurance. Similarly, many male athletes use steroid hormones like testosterone to spur their muscles into growth far beyond what is normally possible, giving them the edge in strength. These methods are controversial and regarded by many to be unethical, and thus are generally banned from organized sporting events. However, the many drug testing scandals currently in the news show that these methods are still in widespread use.</div>
+<h4>Making the Man</h4>
+<div>Anabolic steroids like testosterone are among the most common performance enhancing drugs used by athletes today. Anabolic steroids have two major functions. First, they are <i>androgenic</i>, being responsible for control of "male" characteristics. Before birth, testosterone directs the formation of male characteristics in the growing embryo, and at puberty, raised levels of testosterone direct the changes as a boy grows into a man. Second, these steroids are <i>anabolic</i>: they regulate anabolic processes such as synthesis of protein in muscle, formation of blood cells, and the emotional and physical aspects of sexual function.</div>
+<h4>Testosterone Action</h4>
+<div>Testosterone is produced naturally by the testes and circulates through the blood, acting on cells throughout the body. Much of this testosterone is transported inside carrier proteins in the blood, including <a class="static" href="http://pdb101.rcsb.org/motm/37">serum albumin</a> and sex hormone binding globulin, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1d2s" target="_blank">1d2s <i class="fa fa-external-link"> </i></a></span>. These carriers slowly release testosterone, which slips through cell membranes and into cells. Once inside, a cellular enzyme often converts it to an even more active form, 5-alpha-dihydrotestosterone (shown here at the top). Then it finds its way to the nucleus, where it binds to the androgen receptor and changes the expression of a wide variety of genes, turning on various anabolic and androgenic functions.</div>
+<h4>Designer Steroids</h4>
+<div>In the early 1960s, weightlifters and bodybuilders discovered that anabolic steroids improved their performance in aerobic and endurance sports. Testosterone was discovered earlier, in 1935, but it was quickly discovered that it could not be taken orally--it is rapidly removed from the blood by the liver. Instead, a variety of modified forms of testosterone, generally termed anabolic steroids, were developed that either mimic testosterone or are converted to testosterone in the body. Ever since then, these compounds have been used and misused by amateur and professional athletes. In 1975, the International Olympic Committee placed steroids on their list of banned substances, and most professional sports organizations currently ban their use. This has led to a tug-of-war between ambitious athletes and regulatory officials, including things like "designer steroids" that are designed to be undetectable by current testing methods and random testing protocols that catch athletes who regularly take steroids but stop a few weeks before an event to be clean for a scheduled test.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="17beta-hydroxysteroid dehydrogenase bound to a precursor of testosterone." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/92/92_1xf0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>17beta-hydroxysteroid dehydrogenase bound to a precursor of testosterone.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/92/92-AnabolicSteroids-1xf0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Supplementing Performance</h4>
+<div>Testosterone is created step-by-step by a collection of enzymes, starting from cholesterol. The enzyme shown here, 17-beta hydroxysteroid dehydrogenase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xf0" target="_blank">1xf0 <i class="fa fa-external-link"> </i></a></span>), performs the last step in this process, converting androstenedione into testosterone. In this picture, the androstenedione is shown in green and an NADP cofactor is shown in magenta. These enzymes provide the basis for several "dietary supplements" that have close connections to anabolic steroids. Until 2004 (when it was banned by the FDA), you could buy androstenedione as a supplement. It is converted to testosterone in the body, and shows about a tenth of the activity of testosterone. Dihydroepiandrostenone (DHEA), however, is still sold as a supplement. It is two metabolic steps away from testosterone, requiring the action of two enzymes to create the active form.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/92/92_androgen-receptor.jpg"/></div>
+<div>Once testosterone gets into cells, it binds to the androgen receptor and modifies the expression of many anabolic and androgenic genes. The androgen receptor is very similar to the <a class="static" href="http://pdb101.rcsb.org/motm/45">estrogen receptor</a>, with a domain that binds to the proper sequences of DNA and a domain that binds to testosterone. Because the molecule is rather flexible, these two domains have been studied separately by X-ray crystallography. You can look at the DNA binding domain in entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r4i" target="_blank">1r4i <i class="fa fa-external-link"> </i></a></span>--it is not pictured here. Two structures of the testosterone-binding domain are shown here: on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2am9" target="_blank">2am9 <i class="fa fa-external-link"> </i></a></span>) is one bound to testosterone and on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2amb" target="_blank">2amb <i class="fa fa-external-link"> </i></a></span>) is a structure bound to a synthetic designer steroid, tetrahydrogestrinone (THG). THG is the "undetectable" anabolic steroid uncovered in the 2003 BALCO doping scandal. <p> These pictures were created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</p></div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. H. Catlin (2006) Anabolic Steroids. Chapter 176 in the textbook: Endocrinology, edited by DeGroot and Jameson, Elsevier.</li>
+<li>C. Saudan, N. Baume, N. Robinson, L. Avois, P. Mangin and M. Saugy (2006) Testosterone and Doping Control. Journal of Sports Medicine 40(supplement 1), i21-i24.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_8">http://doi.org/10.2210/rcsb_pdb/mom_2007_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Designed Protein Cages</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Designed Protein Cages" property="og:title"/>
+<meta content="Researchers are modifying natural proteins to design new self-assembling protein cages" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3vdx_4egg.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/165" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Designed Protein Cages" name="twitter:title"/>
+<meta content="Researchers are modifying natural proteins to design new self-assembling protein cages" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3vdx_4egg.jpg" name="twitter:image"/>
+<meta content="Researchers are modifying natural proteins to design new self-assembling protein cages" name="description"/>
+<meta content="biotechnology,nanotechnology,protein complexes,self-assembly,3vdx,4egg,3tom,3vcd" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 165
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 165 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Designed Protein Cages</h1>
+<p><i>Researchers are modifying natural proteins to design new self-assembling protein cages</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Two proteins engineered to form a cage structure." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3vdx_4egg.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two proteins engineered to form a cage structure.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3vdx_4egg.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Scientists are great tinkerers, and surprisingly, proteins can often be used like tinkertoys. The proteins found in cells have evolved to have a stable, folded structures. Scientists are now building on these stable proteins and making changes to engineer new functions. These functions include designing new enzymes, designing proteins with improved medicinal properties, and designing large complexes with a desired shape and size.</div>
+<h4>Protein Cages</h4>
+<div>The structures shown here are the result of tinkering with natural proteins to achieve a new goal. Todd Yeates and his collaborators wanted to build a self-assembling nanoscale cage, for use in nanotechnology applications such as the delivery of drugs. The goal was to create a complex with a defined symmetry: a tetrahedron. The symmetry of the tetrahedron requires two types of interfaces between the pieces: a three-fold interaction at the pointed vertices, and a two-fold interaction along the edges that connect the vertices. The molecules shown here are the result of taking two different approaches to the design.</div>
+<h4>Perfect Connection</h4>
+<div>The first approach relied on Nature for both of the interfaces. The protein bromoperoxidase normally forms a trimer, so it was used for the vertices, and the M1 virus matrix protein is normally a dimer, so it was used to create the edges. The trick was to connect these two proteins in exactly the proper geometry. This was done by creating a fusion protein, designed so that a continuous alpha helix forms between the two proteins, fixing them in the proper orientation. When these proteins are synthesized, they self-assemble into a cage-like protein with a large cavity in the center, shown here at the top from PDB entry <span class="rcsb_id_tag" title="Designed Protein Cage"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3vdx" target="_blank">3vdx <i class="fa fa-external-link"> </i></a></span>. In the illustration, the long alpha helix in each protein subunit is colored slightly lighter.</div>
+<h4>Interfaces from Scratch</h4>
+<div>The second approach, shown here at the bottom from PDB entry <span class="rcsb_id_tag" title="Designed Protein Cage"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4egg" target="_blank">4egg <i class="fa fa-external-link"> </i></a></span>, built the dimeric interface entirely from scratch. David Baker and his collaborators used the trimeric enzyme galactoside O-acetyltransferase for the vertices, and designed mutations that would create a stable interface between each trimer. The result is a more compact tetrahedron, with a smaller cavity in the center.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A cytochrome protein engineered to form a two-dimensional lattice with the assistance of zinc ions (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3tom.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A cytochrome protein engineered to form a two-dimensional lattice with the assistance of zinc ions (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3tom.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Building on Nature</h4>
+<div>Researchers are attempting to build all types of structures from protein components. For instance, the structure shown here, from PDB entry <span class="rcsb_id_tag" title="Designed 2D Protein lattice"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3tom" target="_blank">3tom <i class="fa fa-external-link"> </i></a></span>, is a continuous two-dimensional lattice built from an engineered version of a normally-monomeric cytochrome protein. The engineered proteins have several sites of mutation that bind to zinc ions (shown in red), which link the subunits together into the lattice.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Designed Protein Cage (PDB entry 3vcd)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/165/165-DesignedProteinCages_3vcd_jmol.jpg"/></div>
+<p>The RosettaDesign method was used to design interfaces for two self-assembling protein cages, the tetrahedral one shown earlier, and an octahedral one shown here from PDB entry <span class="rcsb_id_tag" title="Designed Protein Cage"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3vcd" target="_blank">3vcd <i class="fa fa-external-link"> </i></a></span>. It is built from the bacterial protein PduT, which is normally a trimer. New interfaces were engineered to connect up each of the edges of the cube-shaped structure. To explore this structure and the designed interfaces in more detail, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can compare the natural proteins with the engineered proteins using the <a href="http://www.rcsb.org/pdb/workbench/workbench.do">Compare Structures</a> tool.</li>
+<li>What are some of the advantages (and disadvantages) of building large structures using symmetrical components?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3vdx: Y. T. Lai, K. L. Tsai, M. R. Sawaya, F. J. Asturias &amp; T. O. Yeates (2013) Structure and flexibility of nanoscale protein cages designed by symmetric self-assembly. Journal of the American Chemical Society 135, 7738-7743.</li>
+<li>3vcd, 4egg: N. P. King, W. Sheffler, M. R. Sawaya, B. S. Vollmar, J. P. Sumida, I. Andre, T. Gonen, T. O. Yeates &amp; D. Baker (2012) Computational design of self-assembling protein nanomaterials with atomic level accuracy. Science 336, 1171-1174.</li>
+<li>3tom: J. D. Brodin, X. I. Ambroggio, C. Tang, K. N. Parent, T. S. Baker &amp; F. A. Tezcan (2012) Metal-directed, chemically tunable assembly of one- two-, and three-dimensional crystalline protein arrays. Nature Chemistry 4, 375-382.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2013, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2013_9">http://doi.org/10.2210/rcsb_pdb/mom_2013_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

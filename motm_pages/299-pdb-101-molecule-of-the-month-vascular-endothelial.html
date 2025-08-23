@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vascular Endothelial Growth Factor (VegF) and Angiogenesis</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vascular Endothelial Growth Factor (VegF) and Angiogenesis" property="og:title"/>
+<meta content="VegF promotes blood vessel formation (angiogenesis), affecting cancer proliferation, wound healing, and other bodily processes." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/267/5t89_new.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/267" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vascular Endothelial Growth Factor (VegF) and Angiogenesis" name="twitter:title"/>
+<meta content="VegF promotes blood vessel formation (angiogenesis), affecting cancer proliferation, wound healing, and other bodily processes." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/267/5t89_new.jpg" name="twitter:image"/>
+<meta content="VegF promotes blood vessel formation (angiogenesis), affecting cancer proliferation, wound healing, and other bodily processes." name="description"/>
+<meta content="VegF,vascular endothelial growth factor,cancer,angiogenesis,blood vessel,antibody,Fab,Bevacizumab,Avastin,5t89,3hng,1bj1,1vpf,1wq8,2m59" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 267
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 267 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vascular Endothelial Growth Factor (VegF) and Angiogenesis</h1>
+<p><i>VegF promotes blood vessel formation (angiogenesis), affecting cancer proliferation, wound healing, and other bodily processes.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Active complex of VegFR (lavender) with VegF (magenta). The ectodomain (extracellular portion) of VegFR is decorated with sugars (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/267/5t89_new.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Active complex of VegFR (lavender) with VegF (magenta). The ectodomain (extracellular portion) of VegFR is decorated with sugars (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/267/5t89_new.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div><i>This article was written and illustrated by Ethan Cartagena, Mariam Gelashvili, Jasmine Keyes, and Elizabeth Rosenzweig as part of a week-long boot camp for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu/node/242">Rutgers Institute for Quantitative Biomedicine</a>. The article is presented as part of the 2022-2023 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i></div>
+<h4>Building New Vessels</h4>
+<div>Our bodies continually build new blood vessels, ensuring that every cell gets the nutrients it needs. Cancer cells exploit this process, known as <i>angiogenesis</i>, to proliferate and spread. Angiogenesis is stimulated by vascular endothelial growth factor (VegF), a signaling protein. When VegF is released into the bloodstream, it begins a complex molecular dance that results in openings between cells. Precursor endothelial cells can then migrate into this opening, forming the lining of a new blood vessel. Cancer cells, especially the most aggressive types with the greatest ability to metastasize, manipulate the process of angiogenesis. By inducing the growth of new blood vessels into the tumor, the cancer can divert nutrients away from other organs and create a pathway in the surrounding tissue to grow quickly and spread.</div>
+<h4>Pairing Up for Activation</h4>
+<div>VegF delivers the signal to begin angiogenesis, which is received by its cellular receptor, a transmembrane protein called VegF receptor tyrosine kinase (VegFR). In the inactive state, the receptor exists as a single unit, traveling along the cell membrane like an iceberg floating through water. When it binds with VegF, however, it pairs off with another copy of itself, creating an active dimer, as shown here. Because the receptor is so flexible and structurally diverse, three PDB files were needed to create this illustration: the structures of the extracellular ectodomain (PDB ID <a href="https://www.rcsb.org/structure/5t89" target="_blank">5t89</a>), the transmembrane domain (PDB ID <a href="https://www.rcsb.org/structure/2m59" target="_blank">2m59</a>), and intracellular tyrosine kinase domain (PDB ID <a href="https://www.rcsb.org/structure/3hng" target="_blank">3hng</a>). The dimerization process brings together two copies of the tyrosine kinase domain inside the cell membrane, which allows them to activate each other. The active tyrosine kinases in turn stimulate other signaling proteins inside the cell. This begins the many processes needed for angiogenesis, including unzipping the adherens junction, as described below.</div>
+<h4>Bevacizumab: A Double-Edged Sword</h4>
+<div>Since VegF signaling is an important step in growth of cancers, it is an attractive target for cancer therapy. Bevacizumab (Avastin) is a monoclonal antibody that binds to VegF and obstructs its binding to the receptor (shown below). When VegF is deactivated by binding to bevacizumab, the rate of VegFR dimerization slows, in turn slowing the process of angiogenesis. This prevents oxygen and nutrients from reaching the tumor as quickly, while reducing the number of opportunities that cancer cells have to detach from their original tumor and travel to a different part of the body. However, while treatment with bevacizumab is effective in inhibiting cancer cell proliferation, it can also cause serious side effects with other processes, such as slowing down wound healing.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Artistic conception of VegF signaling. VegF (magenta, top left) arrives at the potential site of a new blood vessel by traveling through the blood plasma (tan). VegF brings together two copies of VegFR (top center, lavender/yellow) to form an active dimer. Active VegFR then initiates a signal cascade that leads to intracellular phosphorylation of many proteins, including cadherin (green). The phosphorylated cadherins separate, making room for new blood vessels. The full image is available at PDB-101." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/267/VegF_recolor2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Artistic conception of VegF signaling. VegF (magenta, top left) arrives at the potential site of a new blood vessel by traveling through the blood plasma (tan). VegF brings together two copies of VegFR (top center, lavender/yellow) to form an active dimer. Active VegFR then initiates a signal cascade that leads to intracellular phosphorylation of many proteins, including cadherin (green). The phosphorylated cadherins separate, making room for new blood vessels. The full image is available at <a href="https://pdb101-beta.rcsb.org/sci-art/goodsell-gallery/vascular-endothelial-growth-factor-vegf-signaling">PDB-101</a>.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/267/VegF_recolor2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Laying Pipelines</h4>
+<div>Signaling by VegF begins under nutrient-poor conditions, like those created by a fast-growing tumor, where lack of oxygen stimulates the production and release of VegF signaling proteins. VegF proteins travel through blood plasma, where they bind to the outer domain of VegFR and activate it. The signal is “transduced” across the membrane, and the VegFR kinase domains activate many other signaling proteins inside the cell. Some of these travel to the nucleus where they cause changes in the expression of genes involved in angiogenesis. The signaling proteins also phosphorylate the interior portion of cadherin proteins in the cell-cell interface, which induces the portion of the cadherins outside the membrane to open like two pieces of Velcro pulling apart. Precursor blood vessel cells are attracted to the opening and form the lining of a new blood vessel.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/267/vammin.jpg"/>
+<div class="img-caption"><a href="https://cdn.rcsb.org/pdb101/motm/267/vammin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Wound Healing</h4>
+<div>Angiogenesis is an important target for limiting the progression of metastatic tumors. In other cases, however, we may want to stimulate angiogenesis, to promote beneficial processes like wound healing. Researchers are currently exploring the possibility of using proteins that mimic the structure of VegF, which duplicate its function. For example, vammin (PDB ID 1<a href="https://www.rcsb.org/structure/wq8" target="_blank">wq8</a>), a protein from snake venom, has high similarity to VegF (PDB ID <a href="https://www.rcsb.org/structure/1vpf" target="_blank">1vpf</a>) in both 3D structure and sequence, and induces similar activation of VegF receptors.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>VegF and Bevacizumab</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/267/1BJ1_JSmol-jmol.jpg"/></div>
+<p>The structure of bevacizumab with VegF (PDB ID <a href="https://www.rcsb.org/structure/1bj1" target="_blank">1bj1</a>) shows that two bevacizumab molecules interact with VegF, blocking both ends of the VegF dimer (as seen on the left). Thus, it is unable to dimerize the receptor and unable to activate the angiogenic signaling cascade. As with most antibodies, highly-complementary interactions are formed between bevacizumab and VegF. For example, a set of three molecular interactions centered around a glutamine are critical for the binding of bevacizumab to VegF. These include hydrogen bonding interactions with a neighboring threonine, and hydrophobic interactions with tryptophan and isoleucine that constrain the glutamine in the proper conformation. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are high levels of redundancy and crosstalk in the pathways that trigger angiogenesis. To explore signalling molecules in other pathways, try starting with platelet-derived grown factor (PDB ID <a href="https://www.rcsb.org/structure/6t9e" target="_blank">6t9e</a>) and fibroblast growth factor (PDB ID <a href="https://www.rcsb.org/structure/1qql" target="_blank">1qql</a>). </li>
+<li>Dimerization is a common mechanism for activation of receptors. For another example, see the article on <a href="https://pdb101.rcsb.org/motm/126">epidermal growth factor. </a> </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Ye, X., Gaucher, J. F., Vidal, M., Broussy, S. (2021). A structural overview of vascular endothelial growth factors pharmacological ligands: from macromolecules to designed peptidomimetics. Molecules 26, 6759.</li>
+<li>5t89: Markovic-Mueller, S., Stuttfeld, E., Asthana, M., Weinert, T., Bliven, S., Goldie, K. N., ... Ballmer-Hofer, K. (2017). Structure of the full-length VEGFR-1 extracellular domain in complex with VEGF-A. Structure 25, 341-352.</li>
+<li>Toivanen, P. I., Nieminen, T., Laakkonen, J. P., Heikura, T., Kaikkonen, M. U., Ylä-Herttuala, S. (2017). Snake venom VEGF Vammin induces a highly efficient angiogenic response in skeletal muscle via VEGFR-2/NRP specific signaling. Scientific reports 7, 5525.</li>
+<li>Zhao, Y., Adjei, A. A. (2015). Targeting angiogenesis in cancer therapy: moving beyond vascular endothelial growth factor. Oncologist 20, 660-673.</li>
+<li>2m59: Manni, S., Mineev, K.S., Usmanova, D., Lyukmanova, E.N., Shulepko, M.A., Kirpichnikov, M.P., Winter, J., Matkovic, M., Deupi, X., Arseniev, A.S., Ballmer-Hofer, K. (2014) Structural and functional characterization of alternative transmembrane domain conformations in VEGF receptor 2 activation. Structure 22, 1077-1089.</li>
+<li>Span, E. A., Goodsell, D. S., Ramchandran, R., Franzen, M. A., Herman, T., Sem, D. S. (2013). Protein structure in context: the molecular landscape of angiogenesis. Biochemistry and Molecular Biology Education 41, 213-223.</li>
+<li>Kazazi-Hyseni, F., Beijnen, J. H., Schellens, J. H. (2010). Bevacizumab. Oncologist 15, 819-825. </li>
+<li>1wq8: Suto, K., Yamazaki, Y., Morita, T., Mizuno, H. (2005). Crystal structures of novel vascular endothelial growth factors (VEGF) from snake venoms: insight into selective VEGF binding to kinase insert domain-containing receptor but not to fms-like tyrosine kinase-1. Journal of Biological Chemistry 280, 2126-2131.</li>
+<li>1bj1: Muller, Y. A., Chen, Y., Christinger, H. W., Li, B., Cunningham, B. C., Lowman, H. B., de Vos, A. M. (1998). VEGF and the Fab fragment of a humanized neutralizing antibody: crystal structure of the complex at 2.4 Å resolution and mutational analysis of the interface. Structure 6, 1153-1167.</li>
+<li>1vpf: Muller, Y. A., Li, B., Christinger, H. W., Wells, J. A., Cunningham, B. C., De Vos, A. M. (1997). Vascular endothelial growth factor: crystal structure and functional mapping of the kinase domain receptor binding site. Proceedings of the National Academy of Sciences 94, 7192-7197.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2022, Ethan Cartagena, Mariam Gelashvili, Jasmine Keyes, Elizabeth Rosenzweig, David S. Goodsell, Stephen K. Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_3">http://doi.org/10.2210/rcsb_pdb/mom_2022_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

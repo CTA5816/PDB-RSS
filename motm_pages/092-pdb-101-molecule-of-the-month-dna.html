@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: DNA</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: DNA" property="og:title"/>
+<meta content="Atomic structures reveal how the iconic double helix encodes genomic information" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/23/B-DNA.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/23" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: DNA" name="twitter:title"/>
+<meta content="Atomic structures reveal how the iconic double helix encodes genomic information" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/23/B-DNA.gif" name="twitter:image"/>
+<meta content="Atomic structures reveal how the iconic double helix encodes genomic information" name="description"/>
+<meta content="A-DNA,B-DNA,base pairing,DNA bending,double helix,oligonucleotides,Z-DNA,1bna,1ana,2dcg" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 23
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 23 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: DNA</h1>
+<p><i>Atomic structures reveal how the iconic double helix encodes genomic information</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="DNA double helix." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/23/B-DNA.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA double helix.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/23/23-DNA-B-DNA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Each of the cells in your body carries about 1.5 gigabytes of genetic information, an amount of information that would fill two CD ROMs or a small hard disk drive. Surprisingly, when placed in an appropriate egg cell, this amount of information is enough to build an entire living, breathing, thinking human being. Through the efforts of the international human genome sequencing projects, you can now read this information. Along with most of the biological research community, you can marvel at the complexity of this information and try to understand what it means. At the same time, you can wonder at the simplicity of this information when compared to the intricacy of the human body.</div>
+<h4>Read-Only Memory</h4>
+<div>DNA is read-only memory, archived safely inside cells. Genetic information is stored in an orderly manner in strands of DNA. DNA is composed of a long linear strand of millions of nucleotides, and is most often found paired with a partner strand. These strands wrap around one another in the familiar double helix, as shown here. The code is quite easy to read: you simply step down the strand of DNA one nucleotide at a time and read off the bases: A, T, C or G. This is exactly what your cells do: they scan down a messenger RNA (copied from the DNA), and use <a href="http://pdb101.rcsb.org/motm/121">ribosomes</a> to build proteins based on the code that is read. This is also how researchers determine the sequence of a DNA strand: they clip off one nucleotide at a time to see what it is.</div>
+<h4>Your Inheritance</h4>
+<div>Your genetic information, inherited from your parents, is your most precious possession. It guided the construction of your body in the first nine months of your life and it continues to control all of the basic functions of living. Each of your cells is constantly using this information, asking questions about how to control blood sugar levels and body temperature, how to digest different foods and how to deal with new environmental challenges, and thousands of other important questions. The answers are held in the DNA. Hundreds of different proteins are built to interact with this information: to read it and use it to build new proteins, to copy it when the cell divides, to store and protect it when it is not actively being used, and to repair the information when it becomes corrupted by chemicals or radiation.</div>
+<h4>A Central Icon</h4>
+<div>DNA is arguably one of the most beautiful molecules in living cells. Its graceful helix is pleasing to the eye. DNA is also one of the most familiar molecules, the central icon of molecular biology, easily recognized by everyone. To some, it may carry a negative connotation, being a pervasive symbol for activists against genetically engineered produce. To others, it may bring to mind advances in forensics such as the DNA fingerprinting used in many recent high-profile trials. Some may have seen it in science fiction, modified to build dinosaurs or store cryptic messages from aliens. To all it is a pervasive symbol of our growing understanding of the human body and our close kinship with the rest of the biosphere, and the moral and ethical issues that must be addressed in the face of that knowledge.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Base pairing in the DNA double helix, showing hydrogen bond acceptors (A) and donors (D), and the different sizes of methyl groups and hydrogen atoms (large and small stars)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/23/information.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Base pairing in the DNA double helix, showing hydrogen bond acceptors (A) and donors (D), and the different sizes of methyl groups and hydrogen atoms (large and small stars).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/23/23-DNA-information.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Information</h4>
+<div>DNA is perfect for the storage and readout of information. It is laden with information. Every surface and edge of the molecule carries information. The basic mechanism by which DNA stores and transmits genetic information was discovered in the 1950's by Watson and Crick. This basic information is stored in the way that the bases match one another on opposite sides of the double helix--adenine with thymine, guanine with cytosine--forming a set of complementary hydrogen bonds. These are shown in the diagram with red arrows. <br/><br/> Additional 'extragenetic' information is read from the surfaces that are left exposed in the double helix. In the major groove (the wider of the two grooves in the structure on the left), the different base pairs have a characteristic pattern of chemical groups that carry information, shown by green arrows in the close-up diagrams on the right. These include hydrogen bond donors (D) and acceptors (A) as well as a site with a large, bulky group in adenine-thymine base pairs (large asterisk) or a small group in guanine-cytosine base pairs (small asterisk). In the minor groove, there is a different arrangement of chemical groups that carry additional information, indicated with blue arrows in the diagram on the right and the blue letters in the structure on the left. As revealed in hundreds of structures in the PDB, this extragenetic information is used by proteins to read the genetic code in DNA without unwinding the double helix. It is also targeted by a number of toxins and drugs that attack DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three conformations of the DNA double helix: A (left), B (center), and left-handed Z (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/23/ABZ.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three conformations of the DNA double helix: A (left), B (center), and left-handed Z (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/23/23-DNA-ABZ.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Variations on a Theme</h4>
+<div>DNA adopts the familiar smooth double helix, termed a B-helix, under the typical conditions found in living cells. An example is shown in the center, exemplified by the crystal structure in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bna" target="_blank">1bna <i class="fa fa-external-link"> </i></a></span>, shown at the top superimposed over the idealized version of the B-helix. Under other conditions, however, DNA can form other structures, as revealed in two early crystal structures: PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ana" target="_blank">1ana <i class="fa fa-external-link"> </i></a></span> on the left and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dcg" target="_blank">2dcg <i class="fa fa-external-link"> </i></a></span> on the right. The one on the left, with tipped bases and a deep major groove, is termed A-DNA. It is formed under dehydrating conditions. Also, RNA most often shows this form, because its extra hydroxyl group on the sugar gets in the way, making the B-form unstable (look, for instance, at the A-helical structure of <a href="http://pdb101.rcsb.org/motm/15">transfer RNA</a>). The form on the right, which winds in the opposite direction from A-DNA and B- DNA, is termed Z-DNA. It is found under high salt conditions and requires a special type of base sequence, with many alternating cytosine-guanine and guanine-cytosine base pairs.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>DNA Double Helix</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/23/1bna.gif"/></div>
+<p>We often think of DNA as a perfect, smooth double helix. In reality, DNA has a lot of local structure. The small piece of DNA shown here, from PDB entry <span class="rcsb_id_tag" title="1bna"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bna" target="_blank">1bna <i class="fa fa-external-link"> </i></a></span>, shows some of the common variations. At the top, the helix is bent to the left, distorted by the way that the helices are packed into the crystal. At the bottom, two of the bases are strongly propeller twisted--they are not in one perfect plane. This improves the way that the bases stack on top of one another along each strand, stabilizing the whole double helix. As more and more structures of DNA are studied, it is becoming clear that DNA is a dynamic molecule, quite flexible on its own, which is bent, kinked, knotted and unknotted, unwound and rewound by the proteins that interact with it. Click on the image for an interactive JSmol view of this structure.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers have determined the structures of many small DNA helices with mispaired bases, and some of the enzymes that help correct them. Try searching for "DNA mispair" in the main RCSB PDB site to see them.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>2dcg: Wang, A.H., Quigley, G.J., Kolpak, F.J., Crawford, J.L., van Boom, J.H., van der Marel, G., Rich, A. (1979) Molecular structure of a left-handed double helical DNA fragment at atomic resolution. Nature 282: 680-686</li>
+<li>1bna: Drew, H.R., Wing, R.M., Takano, T., Broka, C., Tanaka, S., Itakura, K., Dickerson, R.E. (1981) Structure of a B-DNA dodecamer: conformation and dynamics. Proceedings of the National Academy of Science USA 78: 2179-2183</li>
+<li>1ana: Conner, B.N., Yoon, C., Dickerson, J.L., Dickerson, R.E. (1984) Helix geometry and hydration in an A-DNA tetramer: IC-C-G-G Journal of Molecular Biology 174: 663-695</li>
+<li>Richard E. Dickerson (1983) The DNA Helix and How it is Read. <i>Scientific American</i> <b>249</b> (December), pp. 94-111.</li>
+<li>Wolfram Saenger (1994) <i>Principles of Nucleic Acid Structure</i> (Springer-Verlag, New York).</li>
+<li>The Nucleic Acid Knowledgebase (NAKB), <a class="mom_big" href="https://nakb.org/" target="_new">NAKB.org</a></li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_11">http://doi.org/10.2210/rcsb_pdb/mom_2001_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

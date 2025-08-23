@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Actin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Actin" property="og:title"/>
+<meta content="Cells are supported by a cytoskeleton of protein filaments" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/19/19-Actin-actin18.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/19" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Actin" name="twitter:title"/>
+<meta content="Cells are supported by a cytoskeleton of protein filaments" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/19/19-Actin-actin18.jpg" name="twitter:image"/>
+<meta content="Cells are supported by a cytoskeleton of protein filaments" name="description"/>
+<meta content="actin filament,actomyosin,cytoskeleton,gelsolin,myosin,profilin,1yvn,1hlu,1atn,1alm" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 19
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 19 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Actin</h1>
+<p><i>Cells are supported by a cytoskeleton of protein filaments</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Actin filament." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/19/19-Actin-actin18.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Actin filament.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/19/19-Actin-actin18.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Infrastructure</h4>
+<div>The complex ultrastructure of cells--their shape and internal structure--and the many motions of cells are largely supported by filaments of actin. A tangle of cross-linked actin filaments fills the cytoplasm of animal, plant and fungal cells, forming a "cytoskeleton" that gives the cell shape and form and provides a scaffold for organization. Tightly bundled actin filaments provide a sturdy backbone to extrude structures from the cell surface, such as the pseudopods used by amoebas for crawling and the finger-like microvilli of intestinal cells, which extend into the digestive tract and absorb nutrients. As we saw last month, actin also forms the ladder on which myosin climbs, providing the infrastructure for muscle contraction and creating the motion that we experience in our daily lives. Actin is plentiful throughout the body as it performs these basic structural tasks: it may comprise 5 percent of the protein in a typical cell, or up to one fifth of the protein in special cases, such as muscle cells.</div>
+<h4>A Dynamic Molecule</h4>
+<div>Actin has a rare combination of strength and sensitivity. Actin filaments are used in many of the most strenuous structural tasks, but at the same time, actin filaments are easily and continually disassembled. One of the great hallmarks of actin is its dynamic character. Actin filaments are continually built and broken down as the needs of the cell change from moment to moment. In special cases, such as muscle actin or the actin bundles in microvilli, a collection of specialized actin-binding proteins stabilize the filament, forming a more permanent structure. But the bulk of actin in typical cells is in constant flux, constantly forming filaments and breaking down for each new task. <br/><br/> The dynamic character of actin is controlled by a molecule of ATP bound to each actin monomer. The state of this ATP determines the stability of the actin filament. Free actin typically holds an ATP molecule and binds tightly to growing filaments. After attaching, the ATP is broken and the actin subtly changes shape. This new form, with ADP bound, is not as stable in the filament and dissociates more easily. One of the unusual consequences of this behavior is "treadmilling." An actin filament will be continually building at one end, where new actin-ATP complexes are forming strong new connections, and at the same time slowly falling apart at the opposite end, where the actin-ADP form has weakened connections. Imagine the filament growing at one end and dissolving at the other, so that the whole structure slowly steps through the cell but never gets any longer or shorter.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Actin bound to a domain of gelsolin (left) and to profilin (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/19/actin-binding.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Actin bound to a domain of gelsolin (left) and to profilin (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/19/19-Actin-actin-binding.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Controlled Growth</h4>
+<div>Of course, cells cannot have actin filaments growing uncontrollably all over the cytoplasm. The poison phalloidin, from the death cap mushroom, demonstrates what would happen. It promotes the growth of actin and ultimately clogs the cell with rigid actin filaments, causing fatal liver and kidney damage in unwary mushroom lovers. In cells, a variety of actin-severing proteins control the growth of actin, ensuring that the filaments grow only when needed. Two of these actin watchdogs are shown here, with actin in blue, ATP in green, and the actin-binding protein in red and orange. Gelsolin, on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yvn" target="_blank">1yvn <i class="fa fa-external-link"> </i></a></span>, breaks actin filaments into short lengths when the level of calcium rises. Then, it remains bound to the end, blocking additional growth. Profilin, on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hlu" target="_blank">1hlu <i class="fa fa-external-link"> </i></a></span>, binds to free actin and keeps it from adding to filaments, also inhibiting growth. Both bind to the actin monomer at a similar location, blocking part of the site that binds to neighboring actin molecules in a filament.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/19/actin-rasmol.gif"/></div>
+<div>Large helical protein assemblies, such as actin filaments, are notoriously difficult to study by crystallography, because the filaments do not form perfect crystals. The structures of actin in the PDB all have something bound to them, blocking formation of a filament, so the structures contain only a single actin molecule, not an entire actin filament. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1atn" target="_blank">1atn <i class="fa fa-external-link"> </i></a></span>, shown at the left, contains a DNA-cutting enzyme (colored pink) that just happens to bind to actin. Actin is a U-shaped molecule with ATP (shown in spacefilling spheres) bound deep in the groove between the two arms. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1alm" target="_blank">1alm <i class="fa fa-external-link"> </i></a></span>, shown on the right, presents a model of one myosin motor (red and yellow) bound to a short actin filament formed of five molecules (blue), based on data from electron microscopy. The file contains only alpha carbon positions for the proteins, so you'll need to use backbone diagrams like the one shown here when you look at it. <br/><br/> These illustrations were created with RasMol. To create similar illustrations, click on the PDB accession codes above and pick one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Wolfgang Kabsch and Joel Vandekerckhove (1992): Structure and Function of Actin. <i>Annual Review of Biophysics and Biomolecular Structure</i> <b>21</b>, pp. 49-76.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_7">http://doi.org/10.2210/rcsb_pdb/mom_2001_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

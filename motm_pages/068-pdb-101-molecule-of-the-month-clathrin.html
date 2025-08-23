@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Clathrin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Clathrin" property="og:title"/>
+<meta content="Three-armed clathrin triskelions are used to build molecular cages involved in transport" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/88/88_1xi4.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/88" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Clathrin" name="twitter:title"/>
+<meta content="Three-armed clathrin triskelions are used to build molecular cages involved in transport" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/88/88_1xi4.jpg" name="twitter:image"/>
+<meta content="Three-armed clathrin triskelions are used to build molecular cages involved in transport" name="description"/>
+<meta content="AP-1 adaptor complex,clathrin adapter complex,clathrin coat,coated pit,membrane coat,triskelion,vesicle-mediated transport,1xi4,1gw5,1ky7,2g30,1w63,1gyu,1b89,1bpo" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 88
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 88 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Clathrin</h1>
+<p><i>Three-armed clathrin triskelions are used to build molecular cages involved in transport</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Clathrin cage (top) and an individual clathrin triskelion (bottom). Hemoglobin is shown in red for size comparison." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/88/88_1xi4.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Clathrin cage (top) and an individual clathrin triskelion (bottom). Hemoglobin is shown in red for size comparison.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/88/88-Clathrin-1xi4-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>With its intricate meshwork of protein braids and alluring symmetry, clathrin is sure to seize your attention. It was named in the 1960s for its clathrate (lattice of bars) appearance in electron micrographs, and to this day, this beautiful molecule invokes intensive study. Like many proteins, clathrin represents a perfect case of form following function; it performs critical roles in shaping rounded vesicles for intracellular trafficking.</div>
+<h4>Intracellular Traffic</h4>
+<div>Most of the cells in your body are divided into a variety of membrane-sealed compartments called organelles. Each compartment has a membranous skin, constructed of lipids and proteins, that encapsulates a specialized environment. The molecules inside each compartment perform specific tasks and must remain isolated from the cytoplasm, both to enhance their chemical efficiency and in many cases to protect the cytoplasm from potentially harmful functions. For instance, degradative enzymes destroy their target molecules inside lysosomes, oxidative enzymes are sealed in peroxisomes, and cell-suicide activators are sequestered inside the intermembrane spaces of mitochondria. Although segregated, these compartments must communicate with one another, for example, to refresh aging proteins and to shuttle the reactants and products of cell metabolism. Cells can safely transport molecules over great distances in small vesicles that bud into the cytoplasm from an organelle's surface, and then fuse with the target organelle. In most cases these vesicles do not form spontaneously, but rather, are facilitated by coat-proteins like clathrin. Cells endocytose vesicles of various sizes from the plasma membrane, for example, to take in nutrients, to import signaling receptors, to mediate an immune response after sampling the extracellular world, and to clean up the cell debris left by tissue inflammation. In some cases, however, the endocytic mechanism also provides a pathway for raiding pathogens or toxins!</div>
+<h4>Rapid Transit</h4>
+<div>It takes less than a minute to form a typical clathrin-coated vesicle. This may sound slow compared to the rates of many enzyme reactions, but, since they need to transport bags of cargo (lipids and proteins) in bulk quantities, the macromolecular cages formed by clathrin are enormous when measured against typical enzymes; you can contrast the size of clathrin to a <a class="static" href="http://pdb101.rcsb.org/motm/41">hemoglobin</a> molecule, shown here in red. A macrophage, for example, internalizes an equivalent of 100% of its membrane roughly every 30-60 minutes as it samples its environment via small vesicles from its cell membrane, while a hepatocyte uses vesicles to secrete a quantity of serum proteins like transferrin and LDL equivalent to its total protein content every day. After a vesicle buds into the cytoplasm, the coat rapidly disassembles, allowing the clathrin to recycle while the vesicle gets transported to a variety of fates.</div>
+<h4>Molecular Basket-weaver</h4>
+<div>Clathrin cages are composed of symmetrical three-legged components called triskelions. The structure shown here, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xi4" target="_blank">1xi4 <i class="fa fa-external-link"> </i></a></span>, is built of 36 triskelia, one of which is highlighted in green. When triskelia snap together in solution, they can interact with enough flexibility to form either 6-sided rings that yield a flatter surface, or 5-sided rings with higher curvature. In a cell, a triskelion floating in the cytoplasm binds to an adaptor protein (shown on the next page), linking one of its three feet to the membrane at a time. This triskelion will bind to other membrane-attached triskelia to form a rounded lattice of hexagons and pentagons, reminiscent of the panels on a soccer ball, that pulls the membrane into a bud. By constructing different combinations of 5-sided and 6-sided rings, vesicles of different sizes may assemble. The structure shown here represents the second smallest possible cage structure, which is actually too small to contain a functional vesicle. It was created in the laboratory by reconstituting triskelions without a lipid vesicle. The smallest clathrin cage commonly photographed, called a mini-coat, has 12 pentagons and four hexagons. Even smaller cages with zero hexagons probably don't form from the native protein, because the feet of the triskelia are too bulky.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Adapter protein AP-2. Flexible linkers that are not included in the structures are shown with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/88/88_ap2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Adapter protein AP-2. Flexible linkers that are not included in the structures are shown with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/88/88-Clathrin-ap2-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Special Delivery</h4>
+<div>Clathrin doesn't bind directly to a membrane to form vesicles, instead, it binds to adaptor proteins that recognize molecules on a membrane surface. At least 20 different clathrin adaptors have been identified, each recognizing and binding to membrane proteins and phospholipids that are unique to a particular organelle. In this way, the adaptors play a central role in assisting particular membrane components into a vesicle when it buds. For instance, the adaptor protein shown here, AP-2 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gw5" target="_blank">1gw5 <i class="fa fa-external-link"> </i></a></span>), binds weakly to a breed of phospholipids in the plasma membrane (the small molecule in red at lower right is part of one of these lipids). Once attached to the membrane, AP-2 changes shape and gains a voracious affinity for any transmembrane protein that dangles a cytoplasmic tail with a special AP-2-specific amino-acid sequence. AP-2 also binds to the feet of each triskelion, assembling the clathin coat on a membrane surface, and it binds to accessory proteins that assist with cage formation or disassembly. The two appendages, shown here connected at the top (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ky7" target="_blank">1ky7 <i class="fa fa-external-link"> </i></a></span>) and the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2g30" target="_blank">2g30 <i class="fa fa-external-link"> </i></a></span>), bind to special amino acid sequences on these proteins. Structures are also available for the similar adaptor protein AP-1 in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1w63" target="_blank">1w63 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1gyu" target="_blank">1gyu <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/88/88_clathrin-rasmol.jpg"/></div>
+<div>The large size and flexibility of clathrin makes it difficult to crystallize, so an integrative approach was employed to determine its structure. In the case of PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xi4" target="_blank">1xi4 <i class="fa fa-external-link"> </i></a></span>, researchers started with two pieces of information. First, they used cryoelectron microscopy to average thousands of electron microscope photographs of individual clathrin cages after freezing them in amorphous ice. Then, they fit the atomic structures of two pieces of clathrin, which had been solved by crystallography (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1b89" target="_blank">1b89 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bpo" target="_blank">1bpo <i class="fa fa-external-link"> </i></a></span>, shown in red and blue on the right), into 3D image. Atomic models for the missing parts were generated by homology modeling, since the amino acid sequence of clathrin is highly repetitive. The structures were fit into the density map and their ends simply tied together in a manner that simultaneously matches the fit with the known amino acid sequence. <br/><br/> This picture was created using RasMol. You can create similar illustrations by clicking on the accession codes here and picking one of the options for 3D viewing. When you go to look at the whole clathrin cage in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xi4" target="_blank">1xi4 <i class="fa fa-external-link"> </i></a></span>, be sure to download the entire biological assembly!</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>T. Kirchhausen (2000) Clathrin. Annual Review of Biochemistry 69, 699-727.</li>
+<li>S. A. Mousavi, L Malerod, T. Berg and R. Kjeken (2004) Clathrin-dependent endocytosis. Biochemical Journal 377, 1-16.</li>
+<li>D. Owen, B. Collins and  P. Evans, (2004) Adaptors for clathrin coats: structure and function. Annual Review of Cell and Developmental Biology 20, 153-191.</li>
+<li>S. Honing, D. Ricotta, M. Krauss, K. Spate, B. Spolaore, A. Motley, M. Robinson, C. Robinson, V. Haucke and D. J. Owen (2005) Phosphatidylinositol-(4,5)-bisphosphate regulates sorting signal recognition by the clathrin-associated adaptor complex AP2. Molecular Cell 18, 519-531.</li>
+<li>J. Wilbur, P. Hwang and F. Brodsky (2005) New faces of the familiar clathrin lattice. Traffic 6, 346-350.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2007, Graham T. Johnson, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_4">http://doi.org/10.2210/rcsb_pdb/mom_2007_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

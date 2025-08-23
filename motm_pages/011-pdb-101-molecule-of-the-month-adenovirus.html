@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Adenovirus</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Adenovirus" property="og:title"/>
+<meta content="Adenovirus has an icosahedral capsid with unusual cell-binding fibers" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/132" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Adenovirus" name="twitter:title"/>
+<meta content="Adenovirus has an icosahedral capsid with unusual cell-binding fibers" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus.jpg" name="twitter:image"/>
+<meta content="Adenovirus has an icosahedral capsid with unusual cell-binding fibers" name="description"/>
+<meta content="capsid,gene therapy,icosahedral virus,viral receptor,virus,3iyn,1vsz,1qiu,1kac,2o39" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 132
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 132 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Adenovirus</h1>
+<p><i>Adenovirus has an icosahedral capsid with unusual cell-binding fibers</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Adenovirus capsid." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Adenovirus capsid.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Viruses are one of the most dangerous enemies to our health, attacking cells and causing deadly diseases like AIDS and influenza. However, scientists are currently discovering ways to trick viruses into improving our health instead of causing disease. Adenovirus is one of the viruses being used in this work. It is found around the world, but it usually causes only mild disease when it infects cells. It can be life-threatening, however, in infants or people with weakened immune systems. Modified forms of the virus are being developed to cure genetic diseases, to fight cancer, and to deliver vaccines.</div>
+<h4>The Adenovirus Capsid</h4>
+<div>Adenovirus is a large virus, composed of a complex protein capsid surrounding its DNA genome and core proteins. The structure of the capsid has recently been solved by cryo-electron microscopy (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3iyn" target="_blank">3iyn <i class="fa fa-external-link"> </i></a></span>) and x-ray crystallography (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1vsz" target="_blank">1vsz <i class="fa fa-external-link"> </i></a></span>). The capsid is icosahedral: the faces are composed of 240 hexons, each composed of three identical proteins, and 12 pentons sit on the vertices, each composed of five protein chains. A long fiber extends from each vertex, composed of three identical chains that form a knob at the end (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qiu" target="_blank">1qiu <i class="fa fa-external-link"> </i></a></span>). In addition, several types of "minor" proteins bind in the grooves between the hexons and pentons, guiding the assembly of the capsid and gluing the entire structure together.</div>
+<h4>Attacking Cells</h4>
+<div>The adenovirus capsid has the job of finding a cell and delivering the viral genome inside. Most of the action occurs at the vertices. The long fibers bind selectively to receptors on the surface of the cell. The most common receptor is CAR, a protein of unknown function that is found on most types of cells. Other strains of adenovirus use CD46, a regulatory protein in the complement system. Once the virus attaches to the cell surface, it is drawn into vesicles by the normal process of endocytosis. Then, the penton attaches to integrins, ultimately breaking through the vesicle membrane and releasing the viral DNA. It then enters the nucleus and builds thousands of new viruses.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cross-section through the adenovirus capsid." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus_clip.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cross-section through the adenovirus capsid.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_adenovirus_clip.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Engineering Adenovirus</h4>
+<div>Engineered adenovirus is being developed to deliver genes to cells. The idea has great promise: for instance, a functional CFTR gene could be delivered to cells in people with cystic fibrosis, replacing the defective gene and restoring the function. However, things always get complicated when biology is involved, and scientists have faced many challenges with this work. The early studies replaced one viral gene with the therapeutic gene. These engineered viruses infect cells, deliver the gene, but are unable to replicate, so the infection can be controlled. However, the immune system rapidly discovers these cells, since they contain viruses, and destroys them in a matter of hours. This is okay if you're using the engineered virus to treat cancer or deliver a vaccine--the virus can go in, do its job, and then be cleared away. For long-lasting gene therapy, however, a more permanent approach is necessary, and many new ideas are currently being explored.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Adenovirus Fiber Interactions (PDB entries 1kac, 2o39 and 1qiu)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/132/132-Adenovirus_1kac_2o39_jmol.jpg"/></div>
+<p>The end of each adenovirus fiber forms a knob that binds to the cellular receptor. Several structures of adenovirus and its cellular receptors have been solved, including the complex of the fiber knob with CAR (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kac" target="_blank">1kac <i class="fa fa-external-link"> </i></a></span>) and the complex with CD46 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2o39" target="_blank">2o39 <i class="fa fa-external-link"> </i></a></span>). In both cases, three copies of the receptor protein bind in the grooves between subunits in the fiber knob. To take a closer look at this interaction, click on the images here for an interactive jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several other adenovirus proteins are available in the PDB: what are their functions in the viral lifecycle?</li>
+<li>Crystal structures for the purified hexons and pentons were solved before the structure of the entire capsid was available. </li>
+<li>Can you find them in the PDB? Notice that the purified pentons form an unusual mini-capsid.</li>
+<li>Several other adenovirus proteins are available in the PDB: what are their functions in the viral lifecycle?</li>
+<li>Crystal structures for the purified hexons and pentons were solved before the structure of the entire capsid was available. </li>
+<li>Can you find them in the PDB? Notice that the purified pentons form an unusual mini-capsid.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. J. Rux and R. M. Burnett (2004) Adenovirus structure. Human Gene Therapy 15, 1167-1176.</li>
+<li>W. Wu and G. R. Nemerow (2004) Virus yoga: the role of flexibility in virus host cell recognition. Trends in Microbiology 12, 162-169.</li>
+<li>M. A. F. V. Goncalves and A. A. F. deVries (2006) Adenovirus: from foe to friend. Review of Medical Virology 16, 167-186.</li>
+<li>L. S. Young, P. F. Searle, D. Onion and V. Mautner (2006) Viral gene therapy strageies: from basic science to clinical application. Journal of Pathology 208, 299-318. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2010, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2010_12">http://doi.org/10.2210/rcsb_pdb/mom_2010_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

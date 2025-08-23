@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Myelin-associated Glycoprotein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Myelin-associated Glycoprotein" property="og:title"/>
+<meta content="Nerve axons are insulated and protected by a sheath of myelin" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-5lf5_composite3.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/247" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Myelin-associated Glycoprotein" name="twitter:title"/>
+<meta content="Nerve axons are insulated and protected by a sheath of myelin" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-5lf5_composite3.jpg" name="twitter:image"/>
+<meta content="Nerve axons are insulated and protected by a sheath of myelin" name="description"/>
+<meta content="myelin,multiple sclerosis,nerve,axon,central nervous system,myelin-associated glycoprotein,antibody,MHC,autoimmunity" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 247
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 247 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Myelin-associated Glycoprotein</h1>
+<p><i>Nerve axons are insulated and protected by a sheath of myelin</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Myelin-associated glycoprotein extends from the myelin membrane and binds to glycolipids (green) on the axon surface. Only the extracellular portion of the protein and glycolipids are included in the structure file, so the rest is shown schematically here." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-5lf5_composite3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Myelin-associated glycoprotein extends from the myelin membrane and binds to glycolipids (green) on the axon surface. Only the extracellular portion of the protein and glycolipids are included in the structure file, so the rest is shown schematically here.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/247/5lf5_composite3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nerve cells face a challenging problem: cells are small, but the human body is large. The nervous system needs to communicate over long distances, but using small parts. Nerve cells solve this problem by sending signals down long, thin axons, some over a meter in length but only a few microns across. These delicate axons are often surrounded by a sheath of myelin, which protects and strengthens them and also creates a narrow, insulated space that rapidly propagates signals along the axon.</div>
+<h4>Structural Support</h4>
+<div>A collection of specialized proteins control the construction and maintenance of the myelin sheath. The one shown here, myelin-associated glycoprotein (MAG), forms a bridge between the myelin and the axon (PDB entry <a href="https://www.rcsb.org/structure/5lf5" target="_blank">5lf5</a>). It forms a dimeric assembly embedded in the myelin membrane. The structure includes the portion of the protein that is outside the cell, showing how it reaches across the space between the cells and binds to specialized lipids on the surface of the axon membrane. MAG also has non-structured tails that extend into the myelinating cell and interact with regulatory and structural proteins inside.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Artistic image of a cross section through a myelinated axon. The myelin sheath is shown in yellow, with molecules inside the oligodendrocyte cell shown in orange. The axon membrane is in green, the axon cytoskeleton is in blue, and an axon mitochondrion is in purple." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-Myelin_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Artistic image of a cross section through a myelinated axon. The myelin sheath is shown in yellow, with molecules inside the oligodendrocyte cell shown in orange. The axon membrane is in green, the axon cytoskeleton is in blue, and an axon mitochondrion is in purple.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-Myelin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Wrapping Cells</h4>
+<div>Myelin is formed by specialized cells that wrap themselves around and around the axon. In the central nervous system, oligodendrocytes reach out with tendrils to several neighboring axons and form these amazing structures. Specialized proteins such as MAG, myelin basic protein (MBP), myelin oligodendrocyte glycoprotein (MOG), and others control the process and glue everything together.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complex of myelin oligodendrocyte protein (MOG) with an antibody Fab fragment, and a peptide from myelin basic protein (MBP) being displayed by an MHC." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-1pkq_1bx2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of myelin oligodendrocyte protein (MOG) with an antibody Fab fragment, and a peptide from myelin basic protein (MBP) being displayed by an MHC.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-1pkq_1bx2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Autoimmune Unwrapping</h4>
+<div>A combination of genetic and environmental problems can cause the immune system to attack one or more myelin proteins, leading to the destruction of the myelin sheath and causing the disease <i>multiple sclerosis</i>. The two structures shown here capture events in this terrible process. PDB entry <a href="https://www.rcsb.org/structure/1pkq" target="_blank">1pkq</a> shows an <a href="https://pdb101.rcsb.org/motm/21">antibody</a> bound to MOG, which disrupts its function on the outer surface of the sheath. PDB entry <a href="https://www.rcsb.org/structure/1bx2" target="_blank">1bx2</a> shows a peptide from MBP being displayed by <a href="https://pdb101.rcsb.org/motm/62">MHC</a>, which will lead to mobilization of the immune system against MBP. PDB entry <a href="https://www.rcsb.org/structure/1h15" target="_blank">1h15</a> (not shown) is complex of MHC with a similar viral peptide, showing how a viral infection can lead to immune responses that then cross react with normal proteins such as MBP.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Myelin-associated glycoprotein</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/247/247-Myelinassociated_Glycoprotein-5lf5_jmol.jpg"/></div>
+<p>MAG folds into five compact domains, similar to the domains in antibodies. Unlike antibodies, however, these domains are connected by very short linkers, so the entire structure is rigid, forming a sturdy strut perfectly suited to its role in linking myelin to axon and mediating communication between the two cells. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The proteins shown here are found in myelin in the central nervous system. Several additional proteins are involved in the peripheral nervous system. You can search for "myelin" at the main RCSB PDB site to find them.</li>
+<li>You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P20917">Protein Feature View</a> to see the parts of the protein that are included in the structure, and parts that are missing.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Stassart, R.M., Modius, W., Nave, K.A., Edgar, J.M. (2018) The axon-myelin unit in development and degenerative disease. Frontiers Neurosci. 12, 467</li>
+<li>5lf5: Pronker, M.F., Lemstra, S., Snijder, J., Heck, A.J., Thies-Weesie, D.M., Pasterkamp, R.J., Janssen, B.J. (2016) Structural basis of myelin-associated glycoprotein adhesion and signalling. Nat Commun 7: 13584-13584</li>
+<li>1pkq: Breithaupt, C., Schubart, A., Zander, H., Skerra, A., Huber, R., Linington, C., Jacob, U. (2003) Structural insights into the antigenicity of myelin oligodendrocyte glycoprotein. Proc Natl Acad Sci U S A 100: 9446-9451</li>
+<li>1h15: Lang, H., Jacobsen, H., Ikemizu, S., Andersson, C., Harlos, K., Madsen, L., Hjorth, P., Sondergaard, L., Svejgaard, A., Wucherpfennig, K., Stuart, D.I., Bell, J.I., Jones, E.Y., Fugger, L. (2002) A Functional and Structural Basis for Tcr Cross-Reactivity in Multiple Sclerosis. Nat Immunol 3: 940</li>
+<li>1bx2: Smith, K.J., Pyrdol, J., Gauthier, L., Wiley, D.C., Wucherpfennig, K.W. (1998) Crystal structure of HLA-DR2 (DRA*0101, DRB1*1501) complexed with a peptide from human myelin basic protein. J Exp Med 188: 1511-1520</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_7">http://doi.org/10.2210/rcsb_pdb/mom_2020_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

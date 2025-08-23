@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Citrate Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Citrate Synthase" property="og:title"/>
+<meta content="Citrate synthase opens and closes around its substrates as part of the citric acid cycle" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/93/pdb93_1cts-2cts.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/93" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Citrate Synthase" name="twitter:title"/>
+<meta content="Citrate synthase opens and closes around its substrates as part of the citric acid cycle" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/93/pdb93_1cts-2cts.jpg" name="twitter:image"/>
+<meta content="Citrate synthase opens and closes around its substrates as part of the citric acid cycle" name="description"/>
+<meta content="citrate (Si)-synthase activity,tricarboxylic acid cycle,1cts,2cts,1nxg,1a59,1ohg" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 93
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 93 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Citrate Synthase</h1>
+<p><i>Citrate synthase opens and closes around its substrates as part of the citric acid cycle</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Citrate synthase: open form with product (top) and closed form with substrates (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/93/pdb93_1cts-2cts.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Citrate synthase: open form with product (top) and closed form with substrates (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/93/93-CitrateSynthase-1cts-2cts.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Your body burns up a lot of food every day. However, cells don't burn food like a fireplace. Instead, food molecules are combined with oxygen molecules one-by-one, in many carefully controlled steps. In this way, the energy that is released can be captured in convenient forms, like ATP or NADH, which are then used elsewhere to power essential cellular functions. Our cells get most of their energy from a long series of reactions that combine oxygen and glucose, forming carbon dioxide and water, and creating lots of ATP and NADH in the process.</div>
+<h4>Making the Link</h4>
+<div>Citrate synthase is a central enzyme in this process of sugar oxidation. It is the first step of the<a href="http://pdb101.rcsb.org/motm/154"> citric acid cycle</a>, also known as the Krebs cycle. Glucose has previously been broken into several pieces by <a class="static" href="http://pdb101.rcsb.org/motm/50">glycolysis</a>, releasing two carbon atoms as carbon dioxide and leaving the rest as two molecules of acetate, carried in an activated form on special cofactor molecules. In the citric acid cycle, these remaining carbon atoms are fully oxidized to form carbon dioxide. Citrate synthase starts this process by taking the molecules of acetate and attaching them to oxaloacetate, which acts as a convenient handle as the carbon atoms are passed from enzyme to enzyme in the citric acid cycle.</div>
+<h4>A Perfect Fit</h4>
+<div>Citrate synthase is a classic example of induced fit in enzyme action. The enzyme from pigs is shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cts" target="_blank">1cts <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cts" target="_blank">2cts <i class="fa fa-external-link"> </i></a></span>. The enzyme in our cells and in most animals and plants is very similar. It is composed of two identical subunits, each with its own active site. The enzyme starts in an open form (shown at the top, with the product citrate in red), and when it binds to its substrates, it closes around them and performs the linkage reaction (shown at the bottom, with the two substrates in green).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial citrate synthase. The lower image is colored to highlight the similarity with the eukaryotic enzyme." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/93/pdb93_1nxg.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial citrate synthase. The lower image is colored to highlight the similarity with the eukaryotic enzyme.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/93/93-CitrateSynthase-1nxg.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Stop and Go</h4>
+<div>The citrate synthase enzyme found in many bacteria is larger than ours, as seen in this structure of the enzyme from <i>Escherichia coli</i> (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nxg" target="_blank">1nxg <i class="fa fa-external-link"> </i></a></span>). It is composed of six identical subunits, but if you look from the side (as shown in the lower picture), you can see that each pair of subunits has a similar Z shape as our enzyme. The bacterial enzyme has an additional site that binds to NADH, shown here in magenta. Binding of NADH slows the action of the enzyme. This helps the cell regulate its level of energy production: high levels of NADH mean that the cell has plenty of energy, so it doesn't need to break down any more sugar.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/93/pdb93_2ibp-rasmol.jpg"/></div>
+<div>Citrate synthase is found in all living cells, so it has been a useful enzyme for comparing differences from organism to organism. In particular, it has been used to study the unusual adaptations in cells that live in extreme environments. Structures have been obtained from organisms that live in very cold environments (see, for instance, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a59" target="_blank">1a59 <i class="fa fa-external-link"> </i></a></span>, not shown here) and others that live in hot environments. The enzyme shown here, from PDB entry 2ibp, has an interesting structural feature that allows it to resist high temperatures. Each chain has a disulfide linkage that closes the chain into a loop. Looking at the whole structure, we see that these two loops are linked, so even if the structure melts now and then, the two chains stay linked together. This is a trick that is only rarely used by natural proteins--for another amazing example, take a look at the many linked rings in the virus capsid of HK97 (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ohg" target="_blank">1ohg <i class="fa fa-external-link"> </i></a></span>). <p> These pictures were created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</p></div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>G. Wiegand and S. J. Remington (1986) Citrate synthase: structure, control, and mechanism. Annual Review of Biophysics and Biophysical Chemistry 15, 97-117.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_9">http://doi.org/10.2210/rcsb_pdb/mom_2007_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

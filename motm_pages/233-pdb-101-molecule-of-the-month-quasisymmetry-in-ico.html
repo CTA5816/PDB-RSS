@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Quasisymmetry in Icosahedral Viruses</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Quasisymmetry in Icosahedral Viruses" property="og:title"/>
+<meta content="Viruses use quasisymmetry to build large capsids out of many small subunits" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-Quasisymmetry.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/200" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Quasisymmetry in Icosahedral Viruses" name="twitter:title"/>
+<meta content="Viruses use quasisymmetry to build large capsids out of many small subunits" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-Quasisymmetry.jpg" name="twitter:image"/>
+<meta content="Viruses use quasisymmetry to build large capsids out of many small subunits" name="description"/>
+<meta content="icosahedral virus,capsid,quasisymmetry,protein assembly,symmetry,2buk,2tbv,1ohf,1ohg,1sva,2btv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 200
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 200 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Quasisymmetry in Icosahedral Viruses</h1>
+<p><i>Viruses use quasisymmetry to build large capsids out of many small subunits</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Icosahedral virus capsids. In each virus, all of the subunits are chemically identical, but they adopt a few different quasisymmetrical shapes, each colored differently here. Pentamers of subunits are colored red, and hexamers of subunits are colored in shades of yellow and orange." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-Quasisymmetry.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Icosahedral virus capsids. In each virus, all of the subunits are chemically identical, but they adopt a few different quasisymmetrical shapes, each colored differently here. Pentamers of subunits are colored red, and hexamers of subunits are colored in shades of yellow and orange.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-Quasisymmetry.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>In the 1950s, before any virus structures had been determined, Watson and Crick predicted that viruses are symmetrical assemblies of many small subunits. They based this proposal on a puzzling observation: only a small amount of RNA (or DNA) can fit inside a tiny virus, but this RNA needs to encode the sequences for the proteins comprising the virus. This problem is particularly severe for the smallest viruses, such as satellite tobacco necrosis virus (shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2buk" target="_blank">2buk</a>). Its capsid is just big enough to hold a single strand of RNA that encodes only one protein: the capsid subunit. It’s called a “satellite” virus because it can’t infect a cell on its own. Instead, it relies on other viruses, which infect the cell at the same time, to provide the necessary viral machinery for its reproduction.</div>
+<h4>Quasisymmetry</h4>
+<div>Viruses typically need to be larger than these tiny satellite viruses, so that they can encode additional viral proteins. One way they do this is by using <i>quasisymmetry</i>. In perfectly icosahedral viruses, the subunits form pentamers that assemble at the vertices of a small icosahedron. In quasisymmetrical viruses, a single type of subunit plays several different roles. They form pentamers that assemble at the vertices, but they also assemble in a slightly different way to form hexamers that fill out the faces of larger icosahedrons. In the early 1960s, Caspar and Klug discovered that there are a few systematic ways to arrange these pentamers and hexamers, based on a <i>triangulation number</i> that quantifies the number of slightly different shapes that the subunit needs to adopt in the final capsid.</div>
+<h4>Triangulation Numbers</h4>
+<div>Perfectly symmetrical viruses have a triangulation number T=1, because all of the subunits are identical. In satellite tobacco necrosis virus, this is just big enough to hold an RNA strand 1239 nucleotides long. Tomato bushy stunt virus (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2tbv" target="_blank">2tbv</a>) has the next larger triangulation number, T=3, with pentamers on the vertices of the icosahedron and a hexamer centered on each face. It can hold a larger genome with 4776 nucleotides that encodes five proteins, including a viral replicase. The T=4 capsid of Nudaurelia capensis omega virus (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ohf" target="_blank">1ohf</a>) has hexamers centered on each edge of the icosahedron, and holds two strands of RNA that encode replicase and capsid proteins. Bacteriophage HK97 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ohg" target="_blank">1ohg</a>) has T=7 quasisymmetry, and is large enough to enclose a DNA strand with 39,732 nucleotides that encodes 61 proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Exceptions to quasisymmetry, colored similarly to the first illustration." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-1sva_2btv.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Exceptions to quasisymmetry, colored similarly to the first illustration.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-1sva_2btv.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Breaking Symmetry</h4>
+<div>Of course, evolution always comes up with exceptions to every rule, and many variations on this theme have been discovered. Many icosahedral viruses, such as <a href="https://pdb101.rcsb.org/motm/132">adenovirus</a>, use several different types of subunits to create a capsid, placing different proteins at the vertices and on the faces. Some viruses, however, use a single type of subunit that doesn’t conform to classic quasisymmetry. For instance, simian virus 40 (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sva" target="_blank">1sva</a>) resembles T=7 quasisymmetry, but uses a pentamer in all of the positions. It does this by building long arms on each subunit that intertwine with neighboring subunits. The inner core of bluetongue virus (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2btv" target="_blank">2btv</a>) has a unique tiling of subunits reminiscent of an Escher print. The subunits adopt two unique types of positions—to see the difference, notice that the pointed end of red subunits cluster at the five-fold vertices, but the same pointed end of each yellow subunit tucks in between two red subunits.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Subunit Motion in Tomato Bushy Stunt Virus</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/200/200-Quasisymmetry_in_Icosahedral_Viruses-2tbv_JSmol.jpg"/></div>
+<p>Quasisymmetry requires that subunits make small motions to fit into their local environments, so that they can form both pentamers and hexamers. Looking closely at the subunits in tomato bushy stunt virus, we see that they are composed of two domains. One domain (colored bright turquoise or green) forms the pentamer and hexamer contacts, and the other domain (colored blue or yellow-green) connects the hexamers and pentamers to their neighbors. The flexible linkage between these two domains allows them to bend to find their proper partners. To explore these motions in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can build models of these quasisymmetrical viruses and explore the principles of quasisymmetry in a <a href="http://pdb101.rcsb.org/learn/paper-models/quasisymmetry-in-icosahedral-viruses">paper folding activity available on PDB-101</a>.</li>
+<li>You can print out a <a href="http://pdb101.rcsb.org/learn/paper-models/quasisymmetry-in-icosahedral-viruses">PDB-101 poster highlighting 200 icosahedral viruses from the PDB archive</a>.</li>
+<li>Take a look at the Geis Digital Archive to view his <a href="https://pdb101.rcsb.org/sci-art/geis-archive/gallery/geis-0563-tomato-bushy-stunt-virus">early paintings of viruses</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1ohf: C. Helgstrand, S. Munshi, J. E. Johnson &amp; L. Liljas (2004) The refined structure of Nudaurelia capensis omega virus reveals control elements for a T = 4 capsid maturation. Virology 318, 192-203.</li>
+<li>1ohg: C. Helgstrand, W. R. Wikoff, R. L. Duda, R. W. Hendrix, J. E. Johnson &amp; L. Liljas (2003) The refined structure of a protein catenane: the Hk97 bacteriophage capsid at 3.44 A resolution. Journal of Molecular Biology 334, 885-899.</li>
+<li>2btv: J. M. Grimes, J. N. Burroughs, P. Gouet, J. M. Diprose, R. Malby, S. Zientara, P. P. Mertens &amp; D. I. Stuart (1998) The atomic structure of the bluetongue virus core. Nature 395, 470-478.</li>
+<li>1sva: T. Stehle, S. J. Gamblin, Y. Yan &amp; S. C. Harrison (1996) The structure of simian virus 40 refined at 3.1 A resolution. Structure 4, 165-182.</li>
+<li>2tbv: P. Hopper, S. C. Harrison &amp; R. T. Sauer (1984) Structure of tomato bushy stunt virus. V. Coat protein sequence determination and its structural implications. Journal of Molecular Biology 117, 701-713.</li>
+<li>2buk: T. A. Jones &amp; L. Liljas (1984) Structure of satellite tobacco necrosis virus after crystallographic refinement at 2.5 A resolution. Journal of Molecular Biology 177, 735-767.</li>
+<li>D. L. D. Caspar &amp; A. Klug (1962) Physical principles in the construction of regular viruses. Cold Spring Harbor Symposium on Quantitative Biology 27, 1-24.</li>
+<li>F. H. C. Crick &amp; J. D. Watson (1956) Structure of small viruses. Nature 177, 473-475.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_8">http://doi.org/10.2210/rcsb_pdb/mom_2016_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

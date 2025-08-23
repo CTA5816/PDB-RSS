@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glutamate-gated Chloride Receptors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glutamate-gated Chloride Receptors" property="og:title"/>
+<meta content="The antibiotic ivermectin attacks glutamate-gated chloride channels, paralyzing parasitic worms." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_3rif.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/191" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glutamate-gated Chloride Receptors" name="twitter:title"/>
+<meta content="The antibiotic ivermectin attacks glutamate-gated chloride channels, paralyzing parasitic worms." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_3rif.jpg" name="twitter:image"/>
+<meta content="The antibiotic ivermectin attacks glutamate-gated chloride channels, paralyzing parasitic worms." name="description"/>
+<meta content="Cys-loop receptor,GluCl,glutamate-gated chloride,nerve transmission,receptor,3rif,4hfe,3jad,4tnv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 191
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 191 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glutamate-gated Chloride Receptors</h1>
+<p><i>The antibiotic ivermectin attacks glutamate-gated chloride channels, paralyzing parasitic worms.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glutamate-gated chloride receptor from a nematode, with glutamate (yellow) and antiparasitic drug ivermectin (red). The nerve membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_3rif.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glutamate-gated chloride receptor from a nematode, with glutamate (yellow) and antiparasitic drug ivermectin (red). The nerve membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_3rif.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Medical science is always looking for a magic bullet: an antibiotic that will kill a pathogen, but leave our own bodies untouched. The trick is to find targets that are unique to the pathogen, and then find a drug that attacks only them. For instance, penicillin attacks the machinery that builds bacterial cell walls (see <a href="http://pdb101.rcsb.org/motm/29"> the Molecule of the Month on Penicillin binding proteins</a>), which are quite different than the membranes surrounding our own cells. This gets trickier, however, when we need to fight parasitic animals, since their molecules are quite similar to ours.</div>
+<h4>Invertebrate Channels</h4>
+<div>Many invertebrates, such as disease-causing parasitic worms, rely on glutamate-gated chloride channels, which are widely found in many types of nerves, including those controlling locomotion, feeding and sensing. The one shown here, from PDB entry <span class="rcsb_id_tag" title="Glutamate-gated chloride channel"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rif" target="_blank">3rif <i class="fa fa-external-link"> </i></a></span>, is an inhibitory channel from a roundworm. It is composed of five identical protein chains. The upper portion recognizes the neurotransmitter, glutamate, and opens up a channel that passes through the nerve membrane, allowing chloride ions to pass through. These channels are perfect targets for antibiotics, because our own cells don't use them.</div>
+<h4>Paralyzing Parasites</h4>
+<div>The 2015 Nobel Prize for Physiology or Medicine was awarded to two scientists who discovered drugs that block these channels. The drug ivermectin binds to the channel and locks it into an open state. As seen in the crystal structure, the drug binds between the protein subunits, within the membrane-spanning portion. Drugs like ivermectin have become the front line weapons for battling infections by parasitic worms, and are widely used to treat people and livestock.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial ligand-gated channel with ethanol (left) and alpha-1 glycine receptor with strychnine (right). The nerve membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_4hfe_3jad.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial ligand-gated channel with ethanol (left) and alpha-1 glycine receptor with strychnine (right). The nerve membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_4hfe_3jad.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sensitive Targets</h4>
+<div>Similar ligand-gated channels are used in our nervous system to deliver the varied signals needed for sensing, thought and response. Ivermectin does not bind strongly to them, but they are targets of many other familiar drugs and poisons. Two are shown here. Ethanol, such as that in alcoholic beverages, is seen in a complex with channel from bacteria, which is similar to our channels (PDB entry <span class="rcsb_id_tag" title="GLIC and ethanol"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4hfe" target="_blank">4hfe <i class="fa fa-external-link"> </i></a></span>). Like ivermectin, it thought to modulate the opening and closing of the channel by binding between the membrane-spanning portion of the subunits. Strychnine, on the other hand, binds in the same site as the neurotransmitter, blocking the inhibitory signal and leading to uncontrolled nerve impulses and deadly muscle contractions (PDB entry <span class="rcsb_id_tag" title="Glycine receptor and strychnine"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3jad" target="_blank">3jad <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Glutamate-gated Chloride Channel (PDB entries 4tnv and 3rif)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/191/191-GlutamateGatedChlorideReceptors_4tnv_3rif_JSmol.jpg"/></div>
+<p>Researchers have captured these channels in many states, revealing how they open and close in response to binding of their ligands. On the right is a closed channel (PDB entry <span class="rcsb_id_tag" title="Glutamate-gated chloride channel"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4tnv" target="_blank">4tnv <i class="fa fa-external-link"> </i></a></span>). A leucine amino acid forms a tight ring at the center of the channel that blocks passage of ions. On the left is a channel with glutamate and ivermectin bound, which has opened the channel, allowing ions to pass (PDB entry <span class="rcsb_id_tag" title="Glutamate-gated chloride channel"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rif" target="_blank">3rif <i class="fa fa-external-link"> </i></a></span>). To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures for many similar channels are available in the PDB. Try searching for "Cys-loop receptor" to see a few examples.</li>
+<li>When you look at the PDB entries for glutamate-gated chloride channels, you'll find that they include five antibodies bound to the ligand-binding portion of the molecule. Why are these included in the structure?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3jad: J. Du, W. Lu, S. Wu, Y. Cheng &amp; E. Gouaux (2015) Glycine receptor mechanism elucidated by electron cryo-microscopy. Nature 526, 224-229.</li>
+<li>4tnv: T. Althoff, R. E. Hibbs, S. Banerjee &amp; E. Gouaux (2014) X-ray structures of GluCl in apo states reveal a gating mechanism of Cys-loop receptors. Nature 512, 333-337.</li>
+<li>4hfe: L. Sauguet, R. J. Howard, L. Malherbe, U. S. Lee, P. J. Corringer, R. A. Harris &amp; M. Delarue (2013) Structural basis for potentiation by alcohols and anaesthetics in a ligand-gated ion channel. Nature Communications 4, 1697.</li>
+<li>A. J. Wolstenholme (2012) Glutamate-gated chloride channels. Journal of Biological Chemistry 287, 40232-40238.</li>
+<li>3rif: R. E. Hibbs &amp; E. Gouaux (2011) Principles of activation and permeation in an anion-selective Cys-loop receptor. Nature 474, 54-60.</li>
+<li>L. M. Fox (2006) Ivermectin: uses and impact 20 years on. Current Opinion in Infectious Diseases 19, 588-593.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_11">http://doi.org/10.2210/rcsb_pdb/mom_2015_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

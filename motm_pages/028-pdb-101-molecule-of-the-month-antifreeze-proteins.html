@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Antifreeze Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Antifreeze Proteins" property="og:title"/>
+<meta content="Small antifreeze proteins protect cells from damage by ice" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/120/1kdf.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/120" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Antifreeze Proteins" name="twitter:title"/>
+<meta content="Small antifreeze proteins protect cells from damage by ice" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/120/1kdf.jpg" name="twitter:image"/>
+<meta content="Small antifreeze proteins protect cells from damage by ice" name="description"/>
+<meta content="antifreeze protein,biotechnology,ice binding,ice-restructuring protein,response to freezing,thermal hysteresis,1kdf,1kdf,1wfb,1ezg,1eww,2pne" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 120
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 120 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Antifreeze Proteins</h1>
+<p><i>Small antifreeze proteins protect cells from damage by ice</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Antifreeze protein from the cold-water ocean pout, with the ice-binding portion in lighter blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/120/1kdf.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antifreeze protein from the cold-water ocean pout, with the ice-binding portion in lighter blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/120/120-AntifreezeProteins_1kdf.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Ice is a big problem for organisms that live in cold climates. Once the temperature dips below freezing, ice crystals steadily grow and burst cells. This danger, however, has not limited the spread of life on Earth to temperate regions. Organisms of all types--plants, animals, fungi and bacteria--have developed ways to combat the deadly growth of ice crystals. In some cases, they pack their cells with small antifreeze compounds like sugars or glycerol. But in cases where extra help is needed, cells make specialized antifreeze proteins to protect themselves as the temperature drops.</div>
+<h4>Nice Ice</h4>
+<div>Antifreeze proteins don't stop the growth of ice crystals, but they limit the growth to manageable sizes. For this reason, they are also known as ice-restructuring proteins. This is necessary because of an unusual property of ice called recrystallization. When water begins to freeze, many small crystals form, but then a few small crystals dominate and grow larger and larger, stealing water molecules from the surrounding small crystals. Antifreeze proteins counteract this recrystallization effect. They bind to the surface of the small ice crystals and slow or prevent the growth into larger dangerous crystals.</div>
+<h4>Supercooling</h4>
+<div>Antifreeze proteins lower the freezing point of water by a few degrees, but surprisingly, they don't change the melting point. This process of depressing the freezing point while not effecting the melting point is termed <i>thermal hysteresis</i>. The most effective antifreeze proteins are made by insects, which lower the freezing point by about 6 degrees. However, antifreeze proteins, even the ones from plants and bacteria that have smaller effects on freezing point, are useful in another way. They are placed outside cells where they control the size of ice crystals and prevent catastrophic ice crystal formation when the temperature drops below the (lowered) freezing point.</div>
+<h4>Icy Ice Cream</h4>
+<div>Antifreeze proteins have been useful in industry. For instance, natural antifreeze proteins purified from cold-water ocean pout (shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kdf" target="_blank">1kdf <i class="fa fa-external-link"> </i></a></span>) have been used as a preservative in ice cream. They coat the fine ice crystals that give ice cream its smooth texture, and prevent it from recrystallizing during storage and delivery into chunky, icy ice cream. Researchers are also experimenting with antifreeze proteins as a way to preserve tissues and organs that are stored at low temperatures, reducing the possible damage from ice crystals.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Several different antifreeze proteins, with the ice-binding portions in lighter blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/120/antifreeze.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Several different antifreeze proteins, with the ice-binding portions in lighter blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/120/120-AntifreezeProteins_antifreeze.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Many Solutions to the Same Problem</h4>
+<div>Antifreeze proteins are a perfect example of convergent evolution. Looking at the proteins used by different organisms, we see that many different proteins have been selected to serve this same function. Several examples are included here. All of these are small proteins with a flat surface that is rich in threonine (colored lighter blue here), which binds to the surface of ice crystals. These include two proteins from fish, the ocean pout (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kdf" target="_blank">1kdf <i class="fa fa-external-link"> </i></a></span>) and the winter flounder (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1wfb" target="_blank">1wfb <i class="fa fa-external-link"> </i></a></span>), and three very active proteins from insects, the yellow mealworm beetle (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ezg" target="_blank">1ezg <i class="fa fa-external-link"> </i></a></span>), the spruce budworm moth (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1eww" target="_blank">1eww <i class="fa fa-external-link"> </i></a></span>), and the snow flea (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pne" target="_blank">2pne <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Antifreeze Proteins (PDB entry 2pne)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/120/2pne_jmol.jpg"/></div>
+<p>Antifreeze proteins bind to ice crystals, blocking the surface and preventing growth of the crystal. The structure of snow flea antifreeze protein (<span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pne" target="_blank">2pne <i class="fa fa-external-link"> </i></a></span>) will give you an idea of what this recognition may be like. In the crystal structure, the ice-binding surface of the protein is covered with strings of water molecules (shown here in red). These water molecules are spaced similarly to the water molecules in ice crystals. So you can imagine this protein binding to the geometric lattice of water molecules in ice in a similar way. Click on the image to view an interactive Jmol version.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Antifreeze proteins are examples of convergent evolution. Can you find other examples in the PDB where two entirely different proteins perform the same function?</li>
+<li>The insect antifreeze proteins are examples of solenoidal folds, where the protein chain loops around like a spring. Compare the way the chain is folded in the beetle and moth proteins with the entirely different type of looping fold in the snow flea protein. Can you find other examples of solenoidal folds in the PDB (hint: look at the SCOP classification of these proteins, available at the bottom of the structure browser page).</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Venkatesh and C. Dayananda (2008) Properties, potentials, and prospects of antifreeze proteins. Critical Reviews in Biotechnology 28, 57-82.</li>
+<li>A. Regand and H. D. Goff (2006) Ice recrystallization inhibition in ice cream as affected by ice restructuring proteins from winter wheat grass. Journal of Dairy Science 89, 49-57.</li>
+<li>Z. Jia and P. L. Davies (2002) Antifreeze proteins: an unusual receptor-ligand interaction. Trends in Biochemical Sciences 27, 101-106.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_12">http://doi.org/10.2210/rcsb_pdb/mom_2009_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

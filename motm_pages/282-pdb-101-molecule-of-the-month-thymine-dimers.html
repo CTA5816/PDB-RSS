@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Thymine Dimers</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Thymine Dimers" property="og:title"/>
+<meta content="Ultraviolet light damages our DNA, but our cells have ways to correct the damage" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/91/91_1n4e.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/91" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Thymine Dimers" name="twitter:title"/>
+<meta content="Ultraviolet light damages our DNA, but our cells have ways to correct the damage" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/91/91_1n4e.jpg" name="twitter:image"/>
+<meta content="Ultraviolet light damages our DNA, but our cells have ways to correct the damage" name="description"/>
+<meta content="DNA repair,pyrimidine dimers,skin neoplasms,thymine dimers,ultraviolet light,1n4e,1ttd,1vas,1tez,1rys,1sl2" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 91
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 91 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Thymine Dimers</h1>
+<p><i>Ultraviolet light damages our DNA, but our cells have ways to correct the damage</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A small piece of DNA with a thymine dimer (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/91/91_1n4e.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A small piece of DNA with a thymine dimer (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/91/91-ThymineDimers-1n4e.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Summer is here, and we're all heading outdoors to enjoy the sun. But remember to take your sunscreen, since too much sunlight can damage your cells. Small doses of sunlight are needed to create vitamin D, but larger doses attack your <a href="http://pdb101.rcsb.org/motm/23">DNA</a>. Ultraviolet light is the major culprit. The most energetic and dangerous wavelengths of UV light, termed UVC, are screened out (at least for now) by the ozone in the upper atmosphere. However, the weaker UV light, termed UVA and UVB, passes through the atmosphere and is powerful enough to cause chemical changes in the DNA.</div>
+<h4>Dangerous Dimers</h4>
+<div>Ultraviolet light is absorbed by a double bond in thymine and cytosine bases in DNA. This added energy opens up the bond and allows it to react with a neighboring base. If the neighbor is another thymine or cytosine base, it can form a covalent bond between the two bases. The most common reaction is shown here: two thymine bases have formed a tight thymine dimer, with two bonds gluing the bases together. The upper image is from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1n4e" target="_blank">1n4e <i class="fa fa-external-link"> </i></a></span> and the close-up picture at the bottom is from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ttd" target="_blank">1ttd <i class="fa fa-external-link"> </i></a></span>. This is not a rare event: every second you are in the sun, 50 to 100 of these dimers are formed in each skin cell!</div>
+<h4>Problems with Polymerases</h4>
+<div>These dimers are awkward and form a stiff kink in the DNA. This causes problems when the cell needs to replicate its DNA. <a class="static" href="http://pdb101.rcsb.org/motm/3">DNA polymerase</a> has trouble reading the dimer, since it doesn't fit smoothly in the active site. TT dimers like the ones shown here are not the major problem, since they are usually paired correctly with adenine when the DNA is replicated. But CC dimers do not fare as well. DNA polymerase often incorrectly pairs adenine with them instead of guanine, causing a mutation. If this happens to be in an important gene that controls the growth of cells, such as the genes for <a class="static" href="http://pdb101.rcsb.org/motm/43">Src tyrosine kinase</a> or <a class="static" href="http://pdb101.rcsb.org/motm/31">p53 tumor suppressor</a>, the mutation can lead to cancer.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Repair enzymes T4 endonuclease V (left) and DNA photolyase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/91/91_1vas-1tez.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Repair enzymes T4 endonuclease V (left) and DNA photolyase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/91/91-ThymineDimers-1vas-1tez.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Error Control </h4>
+<div>We spend a lot of time in the sun, so it will come as no surprise that we have a powerful mechanism for correcting these problems. Our cells use a process called nucleotide excision repair, which requires the concerted effort of a large collection of proteins that recognize the corrupted bases, clip out the section of DNA with the error, and then build a new copy of the damaged area. Other organisms have additional correction mechanisms. For instance, the enzyme on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1vas" target="_blank">1vas <i class="fa fa-external-link"> </i></a></span>) is an endonuclease that clips out the damaged bases, making the site available for repair. Surprisingly, this endonuclease doesn't recognize the thymine dimer directly. You can see in this picture that the thymine dimer (colored magenta) doesn't touch the enzyme at all. Instead, the enzyme recognizes one of the adenines that is paired with the dimer. Since the base pair is weakened by the contorted shape of the dimer, the adenine is easily flipped out and bound to a pocket in the enzyme. The enzyme on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tez" target="_blank">1tez <i class="fa fa-external-link"> </i></a></span>) is a photolyase that directly breaks the bonds connecting the dimer, correcting the error in place. Ironically, photolyases use visible light to power this process. This structure captures the DNA after the thymine dimer has been fixed. Notice that the two thymine bases (colored magenta) are flipped out of the normal DNA helix and are bound in a pocket on the enzyme surface.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/91/91_DNApolymerases.jpg"/></div>
+<div>Most DNA polymerases have a hard time replicating DNA with pyrimidine dimers. The enzyme on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rys" target="_blank">1rys <i class="fa fa-external-link"> </i></a></span>, is an exception: it is designed to read through damaged DNA. It has a loose active site, so it can easily accommodate the stiff thymine dimer. However, this open active site makes the enzyme rather prone to errors. A more typical DNA polymerase is shown on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sl2" target="_blank">1sl2 <i class="fa fa-external-link"> </i></a></span>. It tightly enfolds the DNA, and because of this close contact, is very accurate in copying the DNA. However, it has a lot of trouble with damaged bases and works 3,000 times slower on thymine dimers than with a normal DNA. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>H. S. Black, F. R. deGruijl, P. D. Forbes, J. E. Cleaver, H. N. Ananthaswamy, E. C. deFabo, S. E. Ullrich and R. M. Tyrrell (1997) Photocarcinogenesis: an overview. Journal of Photochemistry and Photobiology B: Biology 40, 29-47.</li>
+<li>T. Lindahl and R. D. Wood (1999) Quality control by DNA repair. Science 286, 1897-1905.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_7">http://doi.org/10.2210/rcsb_pdb/mom_2007_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

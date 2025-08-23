@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Beta-galactosidase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Beta-galactosidase" property="og:title"/>
+<meta content="Beta-galactosidase is a powerful tool for genetic engineering of bacteria" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-1jz8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/198" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Beta-galactosidase" name="twitter:title"/>
+<meta content="Beta-galactosidase is a powerful tool for genetic engineering of bacteria" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-1jz8.jpg" name="twitter:image"/>
+<meta content="Beta-galactosidase is a powerful tool for genetic engineering of bacteria" name="description"/>
+<meta content="beta-galactosidase,alpha-complementation,lactose,allolactose,lac operon,genetic engineering,1jz8,5a1a,1jz7" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 198
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 198 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Beta-galactosidase</h1>
+<p><i>Beta-galactosidase is a powerful tool for genetic engineering of bacteria</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Beta-galactosidase consists of four chains, each with 1023 amino acids (blue), that form four active sites. The substrate/product allolactose (pink and white) can be seen here in two of these active sites. This structure is based on a high resolution (1.5 Angstrom) x-ray crystallographic study." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-1jz8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Beta-galactosidase consists of four chains, each with 1023 amino acids (blue), that form four active sites. The substrate/product allolactose (pink and white) can be seen here in two of these active sites. This structure is based on a high resolution (1.5 Angstrom) x-ray crystallographic study.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-1jz8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Beta-galactosidase, shown here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jz8" target="_blank">1jz8</a>, is a huge bacterial enzyme that performs several tiny tasks. Its first task is to perform an initial step in energy production: it breaks lactose, a common sugar in milk, into two pieces, glucose and galactose, so that they can be used in glycolysis. It also performs a similar side reaction: it can break lactose and then reconnect the pieces in a slightly different way to form allolactose. This cleavage reaction is important for the life of the bacterium, but it has also played a central role in many scientific discoveries.</div>
+<h4>Discovering Operons</h4>
+<div>In a famous set of experiments, study of beta-galactosidase production allowed Jacob and Monod to discover the way that bacterial operons work. It turns out that allolactose is not just a wasteful side product of the reaction. They discovered that bacterial cells use it to sense when lactose is plentiful, providing the signal to turn the <a href="http://pdb101.rcsb.org/motm/39">lac repressor</a> on and off. When lactose is plentiful, beta-galactosidase produces allolactose. This binds to the lac repressor and causes it to fall off the DNA, allowing production of enzymes and transporters for lactose utilization. Beta-galactosidase also breaks any extra allolactose into glucose and galactose, so nothing is wasted.</div>
+<h4>Dyes and Complementation</h4>
+<div>Beta-galactosidase is also an essential tool in the study of genetics, building on two discoveries about the enzyme. First, the enzyme is very specific for the galactose portion of lactose, but the glucose portion can be replaced with many alternative structures. In particular, scientists discovered that a dye could be used that turns blue when it is cleaved from the galactose portion. Second, scientists also discovered that the enzyme can be inactivated by removing the first 20 or so residues from the beginning of the polypeptide chain and then the truncated enzyme could be reactivated by combining it with small ‘complementing’ peptides that include the missing region.</div>
+<h4>Engineering Bacteria</h4>
+<div>Biotech scientists use these dyes and truncated beta-galactosidase to report what is happening inside engineered bacteria. A plasmid is constructed with a gene for the complementing peptide, and it is transfected into bacteria that have the truncated, inactive enzyme. Then, if the cell has taken up the plasmid, the peptide is made, beta-galactosidase is activated, and the cell turns blue when given the dye. This plasmid is then modified to add a gene of interest in the middle of the peptide. If addition of the new gene fails, the plasmid will still turn the cell blue, but if the gene has been successfully added, it will destroy the complementing peptide and the cell will be colorless.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="2.2 Angstrom resolution cryo-EM map of beta-galactosidase, from EMD-2984. Image courtesy of Veronica Falconieri and Siriam Subramaniam, National Cancer Institute. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-emd-2984.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>2.2 Angstrom resolution cryo-EM map of beta-galactosidase, from EMD-2984. Image courtesy of Veronica Falconieri and Siriam Subramaniam, National Cancer Institute. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/198/198-Betagalactosidase-bgal_2015_Multicolor_highRes_Subramaniam.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Atomic EM</h4>
+<div>Beta-galactosidase has also been explored using cryo-electron microscopy. A cryo-EM map was built from over 90,000 images of the molecule frozen in ice, which was detailed enough to provide an atomic model. You can view the cryoEM map at EMDataResource entry <a href="https://www.emdataresource.org/EMD-2984">EMD-2984</a>, and the atomic coordinates in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5a1a" target="_blank">5a1a</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/198/198-betaGalactosidase-1jz7_JSmol.jpg"/></div>
+<p>The structure of beta-galactosidase revealed how this process of complementation works. PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jz7" target="_blank">1jz7</a> is shown here, which includes a molecule of galactose in the active site, shown here in white and pink spheres. The small peptide used for complementation, shown here in green and magenta, passes through a tunnel in the protein, stabilizing the active, tetrameric form of the enzyme. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The mechanism of the cleavage reaction has been studied with complexes of the enzyme with a variety of reaction intermediates. Try going to entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4v44" target="_blank">4v44</a> and use the “Sequence Similarity” tab to find these structures.</li>
+<li>The large beta-galactosidase enzyme may have evolved from smaller enzymes that perform similar reactions. Try searching for “beta-galactosidase” to see some. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/recombinant-dna">Recombinant DNA</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5a1a: A. Bartesaghi, A. Merk, S. Banerjee, D. Matthies, X. Wu, J. L. S. Milne &amp; S. Subramaniam (2015) 2.2 A resolution cryo-EM structure of beta-galactosidase in complex with a cell-permeant inhibitor. Science 348, 1147-1151.</li>
+<li>D. H. Juers, B. W. Matthews &amp; R. E. Huber (2012) LacZ beta-galactosidase: structure and function of an enzyme of historical and molecular biological importance. Protein Science 21, 1792-1807.</li>
+<li>1jz7, 1jz8: D. H. Juers, T. D. Heightman, A. Vasella, J. D. McCarter, L. Mackenzie, S. G. Withers &amp; B. M. Matthews (2001) A structural view of the action of Escherichia coli (lacZ) beta-galactosidase. Biochemistry 40, 14781-14794.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_6">http://doi.org/10.2210/rcsb_pdb/mom_2016_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Alcohol Dehydrogenase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Alcohol Dehydrogenase" property="og:title"/>
+<meta content="Alcohol dehydrogenase detoxifies the ethanol we drink" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/13/1htb.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/13" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Alcohol Dehydrogenase" name="twitter:title"/>
+<meta content="Alcohol dehydrogenase detoxifies the ethanol we drink" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/13/1htb.gif" name="twitter:image"/>
+<meta content="Alcohol dehydrogenase detoxifies the ethanol we drink" name="description"/>
+<meta content="alcoholism,ethanol oxidation,fermentation,isozymes,oxidation reduction,1htb,6adh,1agn,1ykf,1adc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 13
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 13 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Alcohol Dehydrogenase</h1>
+<p><i>Alcohol dehydrogenase detoxifies the ethanol we drink</i></p>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Alcohol dehydrogenase, with NAD in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/13/1htb.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Alcohol dehydrogenase, with NAD in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/13/13-AlcoholDehydrogenase-1htb.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Here's a toast to alcohol dehydrogenase. While recovering from the excesses of New Year's Eve, we might ponder the enzyme that ceaselessly battles the champagne that we consume. Alcohol dehydrogenase is our primary defense against alcohol, a toxic molecule that compromises the function of our nervous system. The high levels of alcohol dehydrogenase in our liver and stomach detoxify about one stiff drink each hour. The alcohol is converted to acetaldehyde, an even more toxic molecule, which is then quickly converted into acetate and other molecules that are easily utilized by our cells. Thus, a potentially dangerous molecule is converted, through alcohol dehydrogenase, into a mere foodstuff.</div>
+<h4>Forms and Functions</h4>
+<div>Our bodies create at least nine different forms of alcohol dehydrogenase, each with slightly different properties. Most of these are found primarily in the liver, including the beta3 form (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1htb" target="_blank">1htb <i class="fa fa-external-link"> </i></a></span>) and the similar enzyme from horse liver (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6adh" target="_blank">6adh <i class="fa fa-external-link"> </i></a></span>). The sigma form, available in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1agn" target="_blank">1agn <i class="fa fa-external-link"> </i></a></span>, is found in the lining of the stomach. Each enzyme is composed of two subunits, and quite remarkably, you can mix and match subunits between these different forms, creating mixed dimers that are still active. Ethanol is not the only target of these enzymes, they also make important modifications to retinol, steroids, and fatty acids. The range of different types of alcohol dehydrogenase ensures that there will always be one that is perfect for the current task.</div>
+<h4>Consequences</h4>
+<div>Alcohol dehydrogenase provides a line of defense against a common toxin in our environment. But this protection carries with it some dangers. Alcohol dehydrogenase also modifies other alcohols, often producing dangerous products. For instance, methanol, which is commonly used to "denature" ethanol rendering it undrinkable, is converted into formaldehyde by alcohol dehydrogenase. The formaldehyde then does the damage, attacking proteins and embalming them. Small amounts of methanol cause blindness, as the sensitive proteins in the retina are attacked, and larger amounts, perhaps a glassful, lead to widespread damage and death.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Human (left) and bacterial (right) alcohol dehydrogenase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/13/two-adh.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human (left) and bacterial (right) alcohol dehydrogenase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/13/13-AlcoholDehydrogenase-two-adh.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Making Alcohol</h4>
+<div>Alcohol dehydrogenase also plays a central role in the most ancient business of biotechnology: alcoholic fermentation. Yeast and many bacteria build a larger alcohol dehydrogenase, like the one shown on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ykf" target="_blank">1ykf <i class="fa fa-external-link"> </i></a></span>). It performs the last step in the conversion of food into metabolic energy, creating ethanol instead of detoxifying it. Sugars are broken down and used for energy, forming ethanol as the waste product, which is excreted into liquid surrounding the cell. We have harnessed this process to produce alcoholic beverages: yeast is allowed to ferment grain sugars to form beer, and yeast is allowed to ferment grape juice to form wine.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Alcohol Dehydrogenase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/13/13-Alcohol_Dehydrogenase-1adc_JSmol.jpg"/></div>
+<p>Alcohol dehydrogenase uses two molecular "tools" to perform its reaction on ethanol. The first is a zinc atom, which is used to hold and position the alcoholic group on ethanol. The second is a large NAD cofactor (constructed using the vitamin niacin), which actually performs the reaction. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1adc" target="_blank">1adc <i class="fa fa-external-link"> </i></a></span>, shown here, contains ethanol molecules bound to the two active sites. A slightly-modified version of NAD was used in the structure analysis, so that the enzyme would not immediately attack the ethanol. Notice how the zinc atom is cradled by three amino acids from the protein: cysteine 46 to the left, cysteine 174 to the right, and histidine 67 above. The ethanol binds to the zinc and is positioned next to the NAD cofactor, which extends below the ethanol molecule in this illustration. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1ykf: Y Korkhin, AJ Kalb(Gilboa), M Peretz, O Bogin, Y Burnstein &amp; F Frolow (1998) NADP-dependent bacterial alcohol dehydrogenases: crystal structure, cofactor-binding and cofactor specificity of the ADHs of Clostridium beijerinickii and Thermoanaerobacter brockii. Journal of Molecular Biology 278, 967-981.</li>
+<li>1htb: GJ David, WF Bosrun, CL Stone, K Owusu-Dekyi &amp; TD Hurley (1996) X-ray structure of human beta3beta3 alcohol dehydrogenase. Journal of Biological Chemistry 271, 17057-17061.</li>
+<li>1adc: H Li, WH Hallows, JS Punzi, KW Pankiewicz, KA Watanebe &amp; BM Goldstein (1994) Crystallographic studies of isosteric NAD analogues bound to alcohol dehydrogenase: specificity and substrate binding in two ternary complexes. Biochemistry 33, 11734-11744.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_1">http://doi.org/10.2210/rcsb_pdb/mom_2001_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

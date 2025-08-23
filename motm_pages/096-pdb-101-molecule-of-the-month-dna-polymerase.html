@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: DNA Polymerase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: DNA Polymerase" property="og:title"/>
+<meta content="DNA polymerase makes an accurate copy of the cell's genome" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/3/1tau.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/3" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: DNA Polymerase" name="twitter:title"/>
+<meta content="DNA polymerase makes an accurate copy of the cell's genome" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/3/1tau.gif" name="twitter:image"/>
+<meta content="DNA polymerase makes an accurate copy of the cell's genome" name="description"/>
+<meta content="biotechnology,DNA fingerprinting,DNA replication,polymerase chain reaction,proofreading,replication fidelity,taq polymerase,1tau,1kln,1zqa,1clq" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 3
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 3 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: DNA Polymerase</h1>
+<p><i>DNA polymerase makes an accurate copy of the cell's genome</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Taq DNA polymerase, with a short piece of DNA in magenta and green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/3/1tau.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Taq DNA polymerase, with a short piece of DNA in magenta and green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/3/3-DNAPolymerase-1tau.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Secret of Life</h4>
+<div>DNA polymerase plays the central role in the processes of life. It carries the weighty responsibility of duplicating our genetic information. Each time a cell divides, DNA polymerase duplicates all of its DNA, and the cell passes one copy to each daughter cell. In this way, genetic information is passed from generation to generation. Our inheritance of DNA creates a living link from each of our own cells back through trillions of generations to the first primordial cells on Earth. The information contained in our DNA, modified and improved over millennia, is our most precious possession, given to us by our parents at birth and passed to our children.</div>
+<h4>Amazing Accuracy</h4>
+<div>DNA polymerase is the most accurate enzyme. It creates an exact copy of your DNA each time a cell divides, making less than one mistake in a billion bases. This is far better than information in our own world: imagine reading a thousand novels, and finding only one mistake. The excellent match of cytosine to guanine and adenine to thymine, the language of DNA, provides much of the specificity needed for this high accuracy. But DNA polymerase adds an extra step. After it copies each base, it proofreads it and cuts it out if the base is wrong.</div>
+<h4>Prisoners and Pedigrees</h4>
+<div>Your DNA is unique to you, more unique than any fingerprint. Your DNA is a mixture of your mother's and your father's DNA, plus perhaps a few mutational changes. This uniqueness has been used to great advantage in criminal forensics. If a drop of blood is left at a crime scene, the DNA may be analyzed and compared with the DNA of a suspected criminal. If they match, the criminal has been caught in the act. <br/><br/> Of course, there is very little DNA in a dried drop of blood. This is where DNA polymerase enters the world of forensics. A small sample of DNA is multiplied using PCR (the polymerase chain reaction), creating a large sample that may be easily analyzed. The tiny sample is placed in a test tube, and DNA polymerase is added to make a copy. Then the sample is heated up momentarily, and the two strands of DNA separate. Then DNA polymerase builds a new double helix from each strand. These two copies are then heated, and duplicated, yielding four copies. After repeating this many times, many identical DNA strands are produced. Our own DNA polymerases, and those from most organisms, would be destroyed by the heating step in this process. But today, DNA polymerase from <i>Thermus aquaticus</i>, a bacterium that lives in hot springs, is used. This polymerase, shown in the picture here, is perfectly happy at 70 degrees centigrade, and may be used throughout all of the PCR heating and cooling steps. This enzyme may be found in the PDB in the file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tau" target="_blank">1tau <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/3/threepol.gif"/>
+</div>
+</div>
+<h4>DNA Polymerases</h4>
+<div>All living organisms have DNA polymerases. Some, like the ones pictured here, are quite simple: one enzyme does it all. The ones in our own cells are more complex, composed of separate proteins that unwind the helix, build an RNA primer, and build the new strand. Some even have a ring-shaped protein that clamps the polymerase to the DNA strand. A single cell often has several different polymerases: complex ones that do the major DNA replication when the cell divides, and simpler ones that help in day-to-day repair and maintenance of the DNA. <br/><br/> Three simple polymerases are pictured here, each with a tiny piece of DNA bound in the active site. In each picture, the template DNA strand is colored purple and the newly built strand is colored green. At upper left is DNA polymerase I from <i>Escherichia coli</i>, with PDB accession code <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1kln" target="_blank">1kln <i class="fa fa-external-link"> </i></a></span>. At upper right is human DNA polymerase, from the PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1zqa" target="_blank">1zqa <i class="fa fa-external-link"> </i></a></span>. At bottom is a viral DNA polymerase, from the PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1clq" target="_blank">1clq <i class="fa fa-external-link"> </i></a></span>. They are quite different in size and shape, but notice how all wrap around the DNA, and enclosing the end of the DNA in a pocket in which the synthetic reaction is performed. <br/><br/> These illustrations were created with RasMol. You can create similar pictures by clicking on the accession codes and choosing one of the options for 3D viewing.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>DNA polymerase in action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/3/MoM-33-DNAPolymerase_Figure_v1-jmol.jpg"/></div>
+<p>Simple DNA polymerases are roughly shaped like a hand. PDB entry <a href="https://www.rcsb.org/structure/1tau" target="_blank">1tau</a> from <i>Thermus aquaticus</i> demonstrates this, where the template and synthesized strands snugly fit into the “palm” between the “thumb” and “fingers.” This enzyme has three active sites. The polymerase domain near the top (in green) synthesizes a new strand from the template strand. The 3’-5’ exonuclease (blue-green) is responsible for proofreading the synthesized strand for mistakes. However this domain is not functional in <i>Thermus aquaticus</i>, potentially due to its extremely hot environment performing this function. The 5’-3’ exonuclease domain (in blue) removes the small RNA fragments used to prime DNA replication. <br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/recombinant-dna">Recombinant DNA</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_3">http://doi.org/10.2210/rcsb_pdb/mom_2000_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

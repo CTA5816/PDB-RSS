@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Actin Branching by Arp2/3 Complex</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Actin Branching by Arp2/3 Complex" property="og:title"/>
+<meta content="By mimicking actin, Arp2/3 complex helps build a complex cytoskeleton that supports and shapes cells." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/275/7tpt_label.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/275" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Actin Branching by Arp2/3 Complex" name="twitter:title"/>
+<meta content="By mimicking actin, Arp2/3 complex helps build a complex cytoskeleton that supports and shapes cells." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/275/7tpt_label.jpg" name="twitter:image"/>
+<meta content="By mimicking actin, Arp2/3 complex helps build a complex cytoskeleton that supports and shapes cells." name="description"/>
+<meta content="actin,actin-binding protein,Arp2/3,profilin,capping,cytoskeleton,branching,7tpt,2btf,7pdz" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 275
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 275 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Actin Branching by Arp2/3 Complex</h1>
+<p><i>By mimicking actin, Arp2/3 complex helps build a complex cytoskeleton that supports and shapes cells.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A branch between two actin filaments (blue) created by the Arp2/3 complex (red and yellow). The subunits shown in yellow are Arp2 and Arp3." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/275/7tpt_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A branch between two actin filaments (blue) created by the Arp2/3 complex (red and yellow). The subunits shown in yellow are Arp2 and Arp3.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/275/7tpt_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our cells have a complex cytoskeleton built around three basic types of protein filaments. <a href="https://pdb101.rcsb.org/motm/175">Microtubules</a> are used for jobs that require heavy lifting, like transporting vesicles or entire chromosomes with the help of <a href="https://pdb101.rcsb.org/motm/176">dyneins</a> and <a href="https://pdb101.rcsb.org/motm/64">kinesins</a>. Intermediate filaments are sturdy structures that are often used to build more permanent infrastructures, like the sturdy network supporting the nuclear membrane or large structures in skin and hair. <a href="https://pdb101.rcsb.org/motm/19">Actin</a>, on the other hand, is more nimble, being built and demolished when needed. Actin networks are often used to control the inner structure and overall shape of cells.</div>
+<h4>Branching Out</h4>
+<div>Arp2/3 complex helps to pattern actin filaments as they perform their many cytoskeletal jobs. It forms a branch in the actin cytoskeleton. It binds to an actin strand (the “mother” strand) and nucleates the construction of a new strand (the “daughter” strand). The shape of Arp2/3 complex results in a characteristic 70 degree angle between the two strands. This is perfect for building tree-shaped structures with many actin filaments connected by many Arp2/3 complexes.</div>
+<h4>Actin Mimic</h4>
+<div>Arp2/3 complex, shown here from PDB entry <a href="https://www.rcsb.org/structure/7tpt" target="_blank">7tpt</a>, is a complex of seven different proteins. Together, they hug the side of the mother strand and glue it in place. Two of the proteins, termed Arp2 and Arp3, are very similar in structure to actin. As shown below in the interactive JSmol, they are arranged similarly to two actin chains in a filament, and provide the starting point for the daughter filament.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Profilin and capping protein (magenta) help control the growth of actin filaments (blue)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/275/2btf_7pdz.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Profilin and capping protein (magenta) help control the growth of actin filaments (blue).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/275/2btf_7pdz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Team Players</h4>
+<div>Many other proteins work together to manage the complex actin cytoskeleton, building and controlling connections. Two examples are shown here. Profilin (PDB entry <a href="https://www.rcsb.org/structure/2btf" target="_blank">2btf</a>), binds to actin and blocks part of the protein involved in forming interactions with neighbors in a filament. It is used to maintain a steady supply of actin monomers for use in building new filaments when needed. Capping protein, as the name implies, caps one end of an actin filament, ensuring that it doesn’t continue growing without any controls. As seen in PDB entry <a href="https://www.rcsb.org/structure/7pdz" target="_blank">7pdz</a>, it is composed of a dimer of proteins that covers the end of the filament.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Arp2/3 Complex at an Actin Branch</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/275/7tpt_jmol-jmol.jpg"/></div>
+<p>PDB entry <a href="https://www.rcsb.org/structure/7tpt" target="_blank">7tpt</a> includes Arp2/3 complex along with short pieces of the mother and daughter actin strands. This allows us to look closely and the interactions between proteins. The interaction between Arp3 and the first actin in the daughter filament is shown here. Notice that the two proteins have a very similar shape, including a similar binding site for ATP. To explore the whole structure and the Arp2 interaction, click on the picture for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can compare the structures of Arp3, Arp2, and actin in more detail using the <a href="https://www.rcsb.org/alignment?response-body=eJytV1lv2zgQ%2Fi9%2Btg2JEnXkjTApiiClpSiChhAUgRMrqYHEaX10Nyjy33foNPWRs4u1XyTOfHNx5hv752CxvL4fnP0cbLeL%2BeBsgHEyvwziYHQdR9koxmE0ukwu4xEOZ2h%2BlV5e53E2GA7Wm9lmuwb9yV%2BVVsyyweNwcNdvZt7U7HZxs7zrl5uLu%2Ft5D0rfZovV34t1D8ADWb%2F5eu9dXs82V7PNaLW4gQjAzKpfb283YPz8J%2FhZba82WzjavQJu9XCxCzS12vpA%2Btv%2BarO4X%2B4crx%2FunqRk8Pg4%2FAP9CvS%2FDPfuLn7HufO76m8A4mM4P%2FYyHFz2Nxfr%2FvvuIH56XSzn%2FT%2BDs2A4uO2XN5uvg7Mo99G8DcT4CInDPTT%2FABom6Agb4nwPzvD7YBRnR2AU4z04jD4AJ8kxOIn2YPQROA%2BOwVm6B%2BPkfXB0knN0mDNGcJPnx5d7DE8%2Be02nwDh%2F85pOi%2FXCZ3QETQ7qHIX48Qs032Y1W66v71d3s81zs4XD4Nf31SfIMxjjLEBJnCfwwXmSo2EwzoIoD1IMrZHkaRYkw1EwDqMgzoI8QqCKEhRkYMAfZ3kGtY%2ByHKdhiLLcHwYIITCIghijKA3CyB%2FmWYiTOAhRnEZhhKInfJqHeY5zwGKMfC9CQHkcwQ1FeYbDHIN379zHB4FGKAvSLAO1IcJoHKYoz6MEJ0EWoeEoROM8hizAeQrwMMyGOIjGAc5xlOcxUA9GkLUf1O3d3Wz14Id4fXX%2FTA8%2FZrdb4Jssw%2BMY7mbz8M2zz3pxt7idrRabh9FOd%2BBv6pdqOE6T34qmaunA08ASxn95AVYX821%2F4dlr7ZsufeKI%2Fvu2X169TRH%2FiSGS%2BP2WT7K3%2BydOfFw3s29P3g%2FV4oMOPQzedyjhRmkycY5OuOWdlYp3hNeW6aYQQrcTQYRkLZGO04Y0xrhKckepokUhOGVEMKltR6ycamFKLhyjU6oqZoqKNU4UslOGMM1o2RVKgV2taqtZbVhnCRNVwdqidpqrThDXEKeIIqSd2tY0jjNjleXWCdpyyp0tndCOMN45wSE0WQotIAMqbFeIplHKUMMcF1qzpoWNRCRxkpmu7dxEUwXPRS07ailv5VTIprNc1ES0EgStoI53ELfimomiKDUrSK1pYRstWgYVYk409USDnjFadbIWTrWct7YqDC24MaoxVEljHSVGSdUy5uXwqKVHQTlsWVaN6YibFgCsFGmhFkXXuElppaQdY4LrVkxMWWtXcFe1u0Z9va8%2BTWnxB7z0HqUFwfvY8AT87uo5BaMo%2FvzqeQGO08%2Bvnhfg9A9Wzyk4QskHq%2BfVQYwP4su8h6OyhW8LUXw0widCnB04PxVmydvI6DCgMDmlhglllFlLlJvQmrccxofwgnBKiTbEFdCnjhttygb61PGKN5LCoHlSaFppuFBWyU4LBqwgbD2ltGJSTMvSFl3NlHFEM1Zq61mBACtoSYAVZGUbzwrWswKpOkeEZ4VWdaTlxsLAOvXMBqAhOmADonRJRGUUVZ4NlKWdqiT4Z4Z3beEgCWaYcEAUkkk1AaPAX6xmFbFANvBRTLYdU5pyP6SC18ADZqKZVUWjW2C6CjiQixLq0dWtqOSECiqMpBBWXcOYcm5t1WkuCDVVI5mAuhEN1CCFFIIAIRnZtW4qYOwFjL1qbdE01VRY2bAOSubH3pVGTord9vm%2FdhtsYrxX%2FHW7oz3iWBd28rOurV4zFmUvjS3msP5OTKExRp9fqV7i%2FyXc9vNnqc83DuNhlKKnttxBoVlhjMLQ%2F4VYXlzd%2F%2BhXsxtwcQ4%2FWfL8C6zmx38Bxt%2Fn8w%3D%3D&amp;encoded=true"> Structure Alignment Tool.</a></li>
+<li>Structures of many other proteins related to the actin cytoskeleton are available in the PDB archive. Try searching at the main RCSB site for formin, cofilin, actinin, and of course, the motor protein <a href="https://pdb101.rcsb.org/motm/18">myosin</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7tpt: Ding, B., Narvaez-Ortiz, H.Y., Singh, Y., Hocky, G.M., Chowdhury, S., Nolen, B.J. (2022) Structure of Arp2/3 complex at a branched actin filament junction resolved by single-particle cryo-electron microscopy. Proc Natl Acad Sci U S A 119: e2202723119-e2202723119.</li>
+<li>7pdz: Funk, J., Merino, F., Schaks, M., Rottner, K., Raunser, S., Bieling, P. (2021) A barbed end interference mechanism reveals how capping protein promotes nucleation in branched actin networks. Nat Commun 12: 5329-5329.</li>
+<li>Merino, F., Pospich, S., Rausner, S. (2020) Towards a structural understanding of the remodeling of the actin cytoskeleton. Sem Cell Develop Biol 102, 51-64.</li>
+<li>Pollard, T.D. (2016) Actin and actin-binding proteins. Cold Spring Harbor Perspect Biol 8, a018226.</li>
+<li>2btf: Schutt, C.E., Myslik, J.C., Rozycki, M.D., Goonesekere, N.C., Lindberg, U. (1993) The structure of crystalline profilin-beta-actin. Nature 365: 810-816.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_11">http://doi.org/10.2210/rcsb_pdb/mom_2022_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

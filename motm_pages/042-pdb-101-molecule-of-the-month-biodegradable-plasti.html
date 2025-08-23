@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Biodegradable Plastic</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Biodegradable Plastic" property="og:title"/>
+<meta content="Bacteria build biodegradable plastic that could be better for the environment" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-5t6o_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/216" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Biodegradable Plastic" name="twitter:title"/>
+<meta content="Bacteria build biodegradable plastic that could be better for the environment" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-5t6o_composite.jpg" name="twitter:image"/>
+<meta content="Bacteria build biodegradable plastic that could be better for the environment" name="description"/>
+<meta content="bioplastic,environment,pollution,polyhydroxyalkanoate,polyhydroxybutyrate,PHB,PHA,biodegradable,biotechnology,5t6o,4o9c,3vzs,2d81" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 216
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 216 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Biodegradable Plastic</h1>
+<p><i>Bacteria build biodegradable plastic that could be better for the environment</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Reaction performed by polyhydroxybutyrate synthase (PhaC)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-5t6o_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Reaction performed by polyhydroxybutyrate synthase (PhaC).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-5t6o_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Most of the plastic we use in our daily lives is composed of long molecular chains derived from petroleum. Despite its numerous applications, plastic is not environmentally friendly. It is estimated that by 2050 nearly 12,000 megatons of plastic will accumulate in landfills, pollute the ocean, and endanger life on the planet. The synthetic chains in plastic are chemically stable, and thus not bio-degradable, so the only way to eliminate them is by incineration. However, this process is also worrisome since it releases carbon dioxide into the atmosphere. Researchers are exploring biodegradable plastic (or bioplastic) from bacteria to provide eco-friendly options for use in commercial products.</div>
+<h4>Versatile Bioplastics</h4>
+<div>Some bacteria store fuel molecules in granules of plastic, similar to the way our cells store glucose in glycogen granules. When starved of nutrients, these bacteria make a lot of this plastic, sometimes building granules 80 times heavier than their dry weight. This is perfect for the biotech industry, since it allows easy production of large amounts. Bioplastic has many of the advantages of synthetic plastics: it is chemically stable and resistant to high temperatures. It is currently being used to make a variety of products, including packaging materials, utensils for food, textile fibers, systems for drug delivery, medical sutures and implants, and fiber material for 3D-printing.</div>
+<h4>Bioplastic Factory</h4>
+<div>Bacteria build bioplastic with the enzyme polyhydroxybutyrate synthase (or PhaC, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5t6o" target="_blank"> 5t6o </a>). PhaC constructs the plastic chain from small hydroxybutyrate building blocks. The polymerization reaction is performed in two steps, similar to the way that <a href="https://pdb101.rcsb.org/motm/90">fatty acid synthase</a> makes the long carbon chains in fat molecules. The hydroxybutyrate (HB) building block is carried to the enzyme by coenzyme A. PhaC first transfers the HB unit to the enzyme, connecting it to a cysteine amino acid, then the HB is attached to the growing plastic chain, making it one piece longer. A typical polyhydroxybutyrate chain contains hundreds to thousands of these HB units. Scientists are now using the atomic details of PhaC to explore ways to modify the plastic chain for special applications.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two enzymatic reactions to prepare hydroxybutyrate-CoA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-4o9c_3vzs.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two enzymatic reactions to prepare hydroxybutyrate-CoA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-4o9c_3vzs.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Bioplastic Precursors</h4>
+<div>The bioplastic building block HB-CoA is made in two consecutive steps. The process begins with acetyl-CoA, which is formed at the end of glycolysis by the <a href="https://pdb101.rcsb.org/motm/153">pyruvate dehydrogenase complex</a>, and is used in many different biochemical reactions linked to metabolism. In the first step the enzyme beta-ketothiolase (PhaA, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4o9c" target="_blank">4o9c</a>) takes the acetyl group from one acetyl-CoA and transfers it to the other, forming the larger molecule acetoacetyl-CoA. A similar reaction is performed by the enzyme thiolase in our cells, as part of a process that creates small molecules that deliver energy from the liver to other parts of the body. In the second step, the acetoacetyl group is converted to HB by the enzyme acetoacetyl-CoA reductase (PhaB, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3vzs" target="_blank">3vzs</a>), using a NADPH cofactor in the reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>PHB Depolymerase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/216/216-Biodegradable_Plastic-2d81_JSmol.jpg"/></div>
+<p>Since bacteria use plastic as a way to store energy, they also need an enzyme to degrade it when energy is needed. This is serendipitous for us, since these bacteria can also use this enzyme to break down bioplastics in landfills. The enzyme PHB depolymerase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2d81" target="_blank">2d81</a>) is similar to our <a href="https://pdb101.rcsb.org/motm/46">serine protease</a> digestive enzymes, using an activated serine amino acid to chop the bioplastic chain into its component pieces. In this structure, researchers have mutated the serine to inactivate the enzyme, so they could visualize the molecular details of the complex between PHB depolymerase and a fragment of bioplastic.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Acetyl-CoA is used by many enzymes in the cell. Use the <a href="http://www4.rcsb.org/ligand/ACO"> Ligand page for “ACO” </a>to explore the structure of acetyl-CoA and find some of the PDB entries that include it.</li>
+<li>Use the <a href="https://www.rcsb.org/alignment">Pairwise Structure Alignment</a> tool to compare the structures of PhaC from two different bacteria in PDB entries 5t6o and 5xav.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R Geyer, J. Jambeck &amp; KL Law (2017) Production, use, and fate of all plastics ever made. Scientific Advances 3, e1700782.</li>
+<li>V Urtuvia, P Villegas, M González &amp; M Seeger (2014) Bacterial production of the biodegradable plastics polyhydroxyalkanoates. International Journal of Biological Macromolecules 70, 208-213.</li>
+<li>GQ Chen. (2009) A microbial polyhydroxyalkanoates (PHA) based bio- and materials industry. (2009) Chemical Society Reviews 38, 2434-2446.</li>
+<li>5t6o: EC Wittenborn, M Jost, Y We, J Stubbe &amp; CL Drennan (2016) Structure of the catalytic domain of the class I polyhydroxybutyrate synthase from Cupriavidus necator. Journal of Biological Chemistry 291, 25264-25277.</li>
+<li>2d81: T Hisano, K Kasuya, Y Tezuka, N Ishii, T Kobayashi, M Shiraki, E Oroudjev, H Hansma, T Iwata, Y Doi, T Saito &amp; K Miki (2006) The crystal structure of polyhydroxybutyrate depolymerase from Penicillium funiculosum provides insights into the recognition and degradation of biopolyesters. Journal of Molecular Biology 356, 993-1004.</li>
+<li>4o9c: EJ Kim &amp; KJ Kim (2014) Crystal structure and biochemical characterization of PhaA from Ralstonia eutropha, a polyhydroxyalkanoate-producing bacterium. Biochemical and Biophysical Research Communications 452, 124-129.</li>
+<li>3vzs: K Matsumoto, Y Tanaka, T Watanabe, R Motohashi, K Ikeda, K Tobitani, M Yao, I Tanaka &amp; S Taguchi (2013) Directed evolution and structural analysis of NADPH-dependent acetoacetyl coenzyme A (acetoacetyl-CoA) reductase from Ralstonia eutropha reveals two mutations responsible for enhanced kinetics. Applied Environmental Microbiology 79, 6134-6139.</li>
+<li>5hz2: J Kim, YJ Kim, SY Choi, SY Lee &amp; KJ Kim (2017) Crystal structure of Ralstonia eutropha polyhydroxyalkanoate synthase C-terminal domain and reaction mechanisms. Biotechnology Journal 12, 1600648.</li>
+<li>5xav: MF Chek, SY Kim, T Mori, H Arsad, MR Samian, K Sudesh &amp; T Hakoshima (2017) Structure of polyhydroxyalkanoate (PHA) synthase PhaC from Chromobacterium sp. USM2, producing biodegradable plastics. Scientific Reports 7, 5312.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2017, Luigi Di Costanzo &amp; David S. Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_12">http://doi.org/10.2210/rcsb_pdb/mom_2017_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

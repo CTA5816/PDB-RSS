@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Fibrin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Fibrin" property="og:title"/>
+<meta content="Rod-shaped fibrin molecules link together to form blood clots" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/83/83_1m1j-composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/83" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Fibrin" name="twitter:title"/>
+<meta content="Rod-shaped fibrin molecules link together to form blood clots" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/83/83_1m1j-composite.jpg" name="twitter:image"/>
+<meta content="Rod-shaped fibrin molecules link together to form blood clots" name="description"/>
+<meta content="blood coagulation,fibrin fibrils,fibrinogen,hemostatis,thrombin,1m1j,1fzc,2a45" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 83
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 83 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Fibrin</h1>
+<p><i>Rod-shaped fibrin molecules link together to form blood clots</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Fibrinogen. Flexible portions of the protein that are not included in the structures are shown with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/83/83_1m1j-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fibrinogen. Flexible portions of the protein that are not included in the structures are shown with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/83/83-Fibrin-1m1j-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>When you cut yourself, you bleed, but the bleeding rapidly stops. Blood has a built-in emergency repair system that quickly blocks any damage to the circulatory system, creating a temporary patch that allows time for more permanent repairs. Three basic mechanisms are at work. First, platelets (small fragments of blood cells that circulate in the blood) clump at the site of the wound, forming a weak plug. Second, neighboring blood vessels constrict, reducing the amount of blood flowing into the area. Finally, the protein fibrin assembles into a tough network that clots the blood and forms an insoluble blockage. Together, these methods stop the loss of blood and create a sturdy scab to protect the area as you heal.</div>
+<h4>Standing Guard</h4>
+<div>Fibrin is normally present in an inactive form known as fibrinogen. Fibrinogen is soluble in water and is found in high concentrations in the blood, where it waits until needed to form a clot. When given the signal, fibrinogen is converted to fibrin, which then assembles into an extended network of fibers. This changes normally-fluid blood into a jelly-like solid, which then dries to form a scab. Of course, it is very important to assemble fibrin networks only in the local area of the cut, and nowhere else, since the blood must continue flowing to other parts of the body. The fine-tuned control of blood clotting is controlled by a cascade of specialized proteins, as discussed in previous installments of the Molecule of the Month on <a class="static" href="http://pdb101.rcsb.org/motm/25">thrombin</a> and <a class="static" href="http://pdb101.rcsb.org/motm/75">tissue factor.</a></div>
+<h4>Flexible Fibrin</h4>
+<div>Fibrin is a large, flexible protein composed of six proteins chains. Since it has several flexible parts, it has been difficult to study, and many of the structures in the PDB contain only part of the molecule. Two PDB structures were used to create this picture: <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1m1j" target="_blank">1m1j <i class="fa fa-external-link"> </i></a></span> for the central core of the molecule, and 2baf for the two flexible arms at either side. The four little chains shown with dotted lines at the center, which unfortunately are not seen in the structure analyses, are the key to the activation of fibrin. The ends of these four chains are clipped by thrombin, changing inactive fibrinogen to active fibrin. As shown on the next page, these flexible chains then form the linkages that glue many fibrin chains into a fibril.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Lateral interactions in a fibrin fibril." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/83/83_1m1j-1fzc.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lateral interactions in a fibrin fibril.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/83/83-Fibrin-1m1j-1fzc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Forming the Fibril</h4>
+<div>Once fibrin is activated, it assembles to form tough fibrils. The chains at the center reach over and bind into pockets on the large globular heads of neighboring fibrin molecules. Also, fibrin associates head-to-head, as shown in the upper structure from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fzc" target="_blank">1fzc <i class="fa fa-external-link"> </i></a></span>. This head-to-head interaction is made stronger in a clot by crosslinking, making the interaction permanent. Finally, the longer chains colored orange here can extend over to neighboring fibrils to form even larger structures, binding in a small pocket colored green here.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/83/83_2a45-rasmol.jpg"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2a45" target="_blank">2a45 <i class="fa fa-external-link"> </i></a></span> shows fibrin in the process of being activated by thrombin. Only the center part of fibrin is included in the structure--you have to imagine the rest of the molecule extended right and left. Thrombin (blue) binds on the two sides of the central knob in fibrinogen, placing its active site in perfect proximity to the flexible chains that have to be cleaved. The small green molecules are inhibitors bound in the active site of thrombin. <br/><br/> This picture was created with RasMol. You can create similar images by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. W. Mosesson, K. R. Siebenlist and D. A. Meh (2001) The structure and biological features of fibrinogen and fibrin. Annals of the New York Academy of Sciences 936, 11-30.</li>
+<li>R. F. Doolittle, Z. Yang and I. Mochalkin (2001) Crystal structure studies on fibrinogen and fibrin. Annals of the New York Academy of Sciences 936, 31-43.</li>
+<li>M. W. Mosesson (2005) Fibrinogen and fibrin structure and functions. Journal of Thrombosis and Haemostasis 3, 1894-1904.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_11">http://doi.org/10.2210/rcsb_pdb/mom_2006_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

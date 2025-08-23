@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Circadian Clock Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Circadian Clock Proteins" property="og:title"/>
+<meta content="Circadian clock proteins measure time in our cells" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/97/97_Kai-proteins.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/97" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Circadian Clock Proteins" name="twitter:title"/>
+<meta content="Circadian clock proteins measure time in our cells" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/97/97_Kai-proteins.jpg" name="twitter:image"/>
+<meta content="Circadian clock proteins measure time in our cells" name="description"/>
+<meta content="biological clocks,circadian rhythm,jet lag syndrome,KaiC circadian clock protein,melatonin,serotonin N-acetyltransferase,1r8j,2gbl,1r5p,1cjw" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 97
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 97 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Circadian Clock Proteins</h1>
+<p><i>Circadian clock proteins measure time in our cells</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Circadian clock proteins KaiA (top), KaiC (center) and KaiB (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/97/97_Kai-proteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Circadian clock proteins KaiA (top), KaiC (center) and KaiB (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/97/97-CircadianClockProteins-Kai-proteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our cells contain tiny molecular clocks that measure out a 24-hour circadian rhythm. This clock decides when we get hungry and when we get sleepy. This clock can sense when the days are getting longer and shorter, and then trigger seasonal changes. Our major clock is housed in a small region of the brain, called the suprachiasmic nuclei. It acts as our central pacemaker, checking the cycles of light and dark outside, and then sending signals to synchronize clocks throughout the rest of the body.</div>
+<h4>Counting the Hours</h4>
+<div>Molecular processes occur so fast that is it difficult to imagine a 24-hour clock that works at the molecular level. But surprisingly, different organisms have evolved many different ways of doing this. Animal cells use a complex collection of proteins (with fanciful names like Clock, Cryptochrome, and Period) that are rhythmically synthesized and degraded each day. The 24-hour oscillation of the levels of these proteins is controlled by a series of interconnected feedback loops, where the levels of the proteins precisely regulate their own production. A much simpler system has been discovered in cyanobacteria. It is composed of three proteins, KaiA, KaiB and KaiC, that together form a circadian clock. At the beginning of the cycle, KaiA (at the top, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r8j" target="_blank">1r8j <i class="fa fa-external-link"> </i></a></span>) stimulates the large KaiC hexamer (center, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2gbl" target="_blank">2gbl <i class="fa fa-external-link"> </i></a></span>), which then adds phosphate groups to itself. Then, as KaiC fills itself up with phosphates, it binds to KaiB (bottom, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r5p" target="_blank">1r5p <i class="fa fa-external-link"> </i></a></span>), which inactivates KaiA and allows the phosphates to be slowly removed. As the number of phosphates drops, KaiB falls off and KaiA can start the cycle again.</div>
+<h4>Synchronize Your Watches</h4>
+<div>These clocks have a period of about 24 hours, but as you can imagine, they are not exact. So cells have a way of synchronizing their clocks with the outside world. The clock in our brain is synchronized by exposure to light. Light is sensed by the retina, and signals are sent into the brain to modify the timing of the circadian oscillations. If you have traveled across several time zones, you have experienced this synchronization. For the first day or two, you experience jet lag because your clock is synchronized with the old schedule. But gradually, the bright light of day (blue light seems to work best) shifts your clock to bring you into alignment with the local time.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Serotonin N-acetyltransferase, with an analogue of the substrate (green) bound in the active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/97/97_1cjw.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Serotonin N-acetyltransferase, with an analogue of the substrate (green) bound in the active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/97/97-CircadianClockProteins-1cjw.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sleepy Molecules</h4>
+<div>The small hormone melatonin is produced selectively at night, and circulates through the blood to coordinate our nightly activities, such as sleep. Treatment with melatonin may be used to change this cycle artificially, for instance helping to shift cycles that are out of phase during jet lag. The daily rise and fall of melatonin is caused by changes in the levels of the enzyme serotonin N-acetyltransferase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cjw" target="_blank">1cjw <i class="fa fa-external-link"> </i></a></span>. This enzyme adds a few atoms to the neurotransmitter serotonin, then a second enzyme converts it into melatonin. In this structure, the enzyme is caught in the process of performing the reaction--the large green molecule bound in the active site is similar to the intermediate formed as the acetyl group is added to serotonin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>KaiC Circadian Clock Protein (PDB entry 2gbl)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/97/97_2gbl-rasmol.jpg"/></div>
+<p>The KaiC clock protein (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2gbl" target="_blank">2gbl <i class="fa fa-external-link"> </i></a></span>) is composed of six identical subunits that form a barrel-shaped structure. The protein is shown from side here, with two subunits removed to show the tunnel that runs through the middle. The phosphates that tick off the hours of each day are added to a serine and a threonine on each subunit. They are buried deep inside the tunnel, near the binding site for ATP, shown here in green. KaiA stimulates KaiC to add these phosphate groups to itself, and KaiB blocks the action of KaiA, allowing KaiC to remove these phosphates from itself. The speed of these reactions are all calibrated so that the whole process takes 24 hours to complete. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. J. Rust, J. S. Markson, W. S. Lane, D. S. Fisher and E. K O'Shea. (2007) Ordered phosphorylation governs oscillation of a three-protein circadian clock. Science 318, 809-812.</li>
+<li>J. Arendt and D. J. Skene (2005) Melatonin as a chronobiotic. Sleep Medicine Reviews 9, 25-39.</li>
+<li>D. Bell-Pedersen, V. M. Cassone, D. J. earnest, S. S. Golden, P. E. Hardin, T. L. Thomas and M. J. Zoran (2005) Circadian rhythms from multiple oscillators: lessons from diverse organisms. Nature Reviews Genetics 6, 544-556.</li>
+<li>S. L. Harmer, S. Panda and S. A. Kay (2001) Molecular bases of circadian rhythms. Annual Review of Cell and Developmental Biology 17, 215-253.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_1">http://doi.org/10.2210/rcsb_pdb/mom_2008_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Amyloid-beta Precursor Protein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Amyloid-beta Precursor Protein" property="og:title"/>
+<meta content="Cell-clogging amyloids form when proteins improperly aggregate" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/79/79_app-composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/79" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Amyloid-beta Precursor Protein" name="twitter:title"/>
+<meta content="Cell-clogging amyloids form when proteins improperly aggregate" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/79/79_app-composite.jpg" name="twitter:image"/>
+<meta content="Cell-clogging amyloids form when proteins improperly aggregate" name="description"/>
+<meta content="Alzheimer disease,amyloid beta-protein,amyloid precursor protein secretases,beta-amyloid metabolic process,1mwp,1owt,1rw6,1iyt,1fkn,2beg" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 79
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 79 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Amyloid-beta Precursor Protein</h1>
+<p><i>Cell-clogging amyloids form when proteins improperly aggregate</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Amyloid-beta precursor protein. Flexible portions that are not included in the structures are shown with dots, and the membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/79/79_app-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Amyloid-beta precursor protein. Flexible portions that are not included in the structures are shown with dots, and the membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/79/79-Amyloid-betaPrecursorProtein-app-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Like Dr. Jekyll and Mr. Hyde, some seemingly innocent proteins have evil alter egos. The amyloid-beta precursor protein is an important example. It is a large membrane protein that normally plays an essential role in neural growth and repair. However, later in life, a corrupted form can destroy nerve cells, leading to the loss of thought and memory in Alzheimer's disease.</div>
+<h4>Anatomy of APP</h4>
+<div>Amyloid-beta precursor protein (APP) is a complicated protein with many functions. It is found on the surface of cells throughout the body. Like many membrane-tethered proteins, it is composed of several domains connected by flexible linkers, making it difficult to study as one intact piece. Looking to the PDB, we can find four pieces of APP, including three domains that extend on the outside of the cell (from top to bottom in blue, PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mwp" target="_blank">1mwp <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1owt" target="_blank">1owt <i class="fa fa-external-link"> </i></a></span>, and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rw6" target="_blank">1rw6 <i class="fa fa-external-link"> </i></a></span>), and a special peptide that crosses the membrane (in green, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1iyt" target="_blank">1iyt <i class="fa fa-external-link"> </i></a></span>). There is also a small domain inside the cell, shown schematically here at the very bottom with a circle.</div>
+<h4>Bits and Pieces</h4>
+<div>APP plays roles both as an intact membrane protein and when broken into pieces. It appears to play a central role in several processes, so it has been difficult to tease out all of the details and many of the functions of APP are still being discovered and studied. The intact protein is a receptor protein that sends signals through the <a class="static" href="http://pdb101.rcsb.org/motm/58">G-protein system</a>. It also binds to many structural molecules outside cells, such as heparin and laminin, so it may play a role in cell adhesion. <br/><br/> APP is also broken into several functional fragments by a set of dedicated proteases, termed secretases. These proteases cut on either side of the small peptide shown here in green. The large piece on top is then released outside the cell, where it helps control nerve growth, and the small piece at the bottom is released inside the cell, where it interacts with the protein-synthesis machinery in the nucleus. The little peptide remaining in the middle is the portion that has received the most study, since it is a central player in Alzheimer's disease.</div>
+<h4>Perilous Peptides</h4>
+<div>This little peptide is termed the amyloid-beta peptide, and it causes damage all out of proportion to its small size. In the full-length protein, it extends through the membrane, anchoring the protein. But as a free peptide, it leaves the membrane, changes shape and aggregates into long fibrils. These tough fibrils form dense plaques on nerve cells. The gradual accumulation of these plaques, along with the accumulation of a second protein inside nerve cells, leads to the onset of dementia as the brain slowly loses normal function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Beta-secretase with an inhibitor (green) in the active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/79/79_1fkn.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Beta-secretase with an inhibitor (green) in the active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/79/79-Amyloid-betaPrecursorProtein-1fkn.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Clipping APP</h4>
+<div>Several secretase enzymes break amyloid-beta precursor protein into its component parts. <a href="http://pdb101.rcsb.org/motm/115">Beta-secretase</a>, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fkn" target="_blank">1fkn <i class="fa fa-external-link"> </i></a></span>, makes the cut that releases the large portion outside the cell. It is a typical aspartyl protease, similar to the <a class="static" href="http://pdb101.rcsb.org/motm/12">pepsin</a> that digests proteins in your stomach. This structure has a small peptide in the active site, colored green here, and the enzyme is normally found tethered to the cell surface by a short extension, not seen in the crystal structure. Gamma-secretase, not shown, makes the cut at the bottom of the amyloid-beta peptide. It is a particularly unusual enzyme because it can cut a protein chain inside a membrane.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>APP Fibrils</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/79/APP_JSmol-jmol.jpg"/></div>
+<p>Following its cleavage from APP, the amyloid-beta peptide can form fibrils that are associated with diseases such as Alzheimer’s. The structure on the right (PDB entry <a href="https://www.rcsb.org/structure/1iyt" target="_blank">1iyt</a>) shows the peptide in an alpha-helical rich state, as it might look when interacting with the cell membrane. The structure on the left (PDB entry <a href="https://www.rcsb.org/structure/2beg" target="_blank">2beg</a>) shows how these peptides self-assemble into amyloid-beta fibrils. Each beta strand, or amyloid-beta monomer, interacts with neighboring strands to form parallel beta sheets. The beta sheet structure is stabilized through interactions of the abundance of hydrophobic residues (yellow) in amyloid-beta peptides. Additionally, inter-strand salt bridges connect the positively-charged lysine (blue) and the negatively-charged aspartic acid (pink). The bridges are formed through electrostatic attractions and hydrogen bonding between the side chains. <br/><br/> Select the JSmol tab to explore these structures in an interactive view. <br/><br/><b>This JSmol was designed and illustrated by Xinyi Christine Zhang.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. R. Turner, K. O'Conner, W. P. Tate &amp; W. C. Abraham (2003) Roles of amyloid precursor protein and its fragments in regulating neural activity, plasticity and memory. Progress in Neurobiology 70, 1-32.</li>
+<li>C. Morgan, M. Colombres, M. T. Nunez &amp; N. C. Inestrosa (2004) Structure and function of amyloid in Alzheimer's disease. Progress in Neurobiology 74, 323-349.</li>
+<li>C. Reinhard, S. S. Hebert &amp; B. de Strooper (2005) The amyloid-beta precursor protein: integrating structure with biological function. EMBO Journal 24, 3996-4006.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2006, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2006_7">http://doi.org/10.2210/rcsb_pdb/mom_2006_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

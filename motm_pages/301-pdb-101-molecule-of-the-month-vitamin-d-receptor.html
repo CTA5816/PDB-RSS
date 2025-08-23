@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Vitamin D Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Vitamin D Receptor" property="og:title"/>
+<meta content="Vitamin D helps regulate the use of calcium throughout the body" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_VDRcryo.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/155" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Vitamin D Receptor" name="twitter:title"/>
+<meta content="Vitamin D helps regulate the use of calcium throughout the body" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_VDRcryo.jpg" name="twitter:image"/>
+<meta content="Vitamin D helps regulate the use of calcium throughout the body" name="description"/>
+<meta content="calcium,hormones,nuclear hormone receptors,rickets,vitamins,1dkf,1db1,1ynw,2nll,3c6g,1j78,3m7r" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 155
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 155 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Vitamin D Receptor</h1>
+<p><i>Vitamin D helps regulate the use of calcium throughout the body</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Vitamins are exotic molecules that are essential for the proper function of cells, but somewhere along the process of evolution, our bodies have lost the ability to make them. So instead, we need to obtain them in our diet, or in a daily multivitamin tablet. These include vitamin A, which is used to build the light sensors in our eyes, a host of B vitamins used to build specialized tools for chemical reactions, and vitamin C, which plays an essential role in construction of collagen. Vitamin D is an exceptional case: our cells can make it, but only if there is enough sunlight. The ultraviolet rays in sunlight break down a form of cholesterol in our skin to make the vitamin. In cloudy climates, however, people can go for months without sun, and the vitamin must instead be obtained in the diet.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Vitamin D receptor bound to DNA, with vitamin D shown in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_VDRcryo.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Vitamin D receptor bound to DNA, with vitamin D shown in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_VDRcryo.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Controlling Calcium</h4>
+<div>Vitamin D plays an essential role in regulating the levels of calcium and phosphate in the body. It is converted into a hormone that is secreted by the kidneys and travels through the body. It has major effects on intestinal cells, where it helps control the uptake of calcium, and bone cells, where it helps control the formation and maintenance of the skeleton.</div>
+<h4>Hormone Reception</h4>
+<div>The vitamin D hormone binds to receptors in its target cells, controlling the synthesis of many different proteins involved in calcium transport and utilization. The receptor is composed of two domains: a domain that binds to the hormone and a domain that binds to DNA. It pairs up with a similar protein, 9-cis retinoic acid receptor (RXR), and together they bind to the DNA, activating synthesis in some cases and repressing it in others. The illustration shown here is created from a structure from cryoelectron microscopy. Four atomic structures were used to build the model: structures of the ligand-binding domains from PDB entries <span class="rcsb_id_tag" title="RAR/RXR ligand-binding domains"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dkf" target="_blank">1dkf <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="VDR ligand-binding domain"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1db1" target="_blank">1db1 <i class="fa fa-external-link"> </i></a></span>, and structures of the DNA-binding domains from PDB entries <span class="rcsb_id_tag" title="VDR/RXR DNA-binding domains"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ynw" target="_blank">1ynw <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="RXR/TR DNA-binding domains"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2nll" target="_blank">2nll <i class="fa fa-external-link"> </i></a></span>. You can take a look at the electron micrograph data at the <a href="http://emsearch.rutgers.edu/atlas/1985_summary.html" target="_blank">EMDataBank.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Hormone Maintenance</h4>
+<div>Vitamin D is not active as a hormone--instead, a few chemical changes must be made. These are performed by enzymes that add hydroxyl groups to vitamin D. One of the enzymes is shown here at the top (PDB entry <span class="rcsb_id_tag" title="CYP2R1"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3c6g" target="_blank">3c6g <i class="fa fa-external-link"> </i></a></span>). It uses a heme group to perform the reaction. Once the hormone is made, it must be delivered to its target cells. This is a challenge, since it is not particularly soluble in water. So, a special vitamin D binding protein, shown here on the bottom (PDB entry <span class="rcsb_id_tag" title="Vitamin D Binding Protein"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j78" target="_blank">1j78 <i class="fa fa-external-link"> </i></a></span>), is used to chaperone individual molecules of the hormone to their sites of action.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cytochrome P450 2R1 (top) and vitamin D binding protein (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_3c6g_1j78.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cytochrome P450 2R1 (top) and vitamin D binding protein (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_3c6g_1j78.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Vitamin D Receptor (PDB entries 1db1 and 3m7r)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/155/155-VitaminDReceptor_1db1_3m7r_jmol.jpg"/></div>
+<p>Vitamin deficiencies often cause disease, such as night blindness from lack of vitamin A or scurvy from lack of vitamin C. Vitamin D deficiency in young people can lead to rickets, causing the formation of weak bone structure. This can be caused in several ways: vitamin D can be missing from the diet, or the machinery for processing and sensing vitamin D hormone can be faulty. PDB entry <span class="rcsb_id_tag" title="Vitamin D Receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3m7r" target="_blank">3m7r <i class="fa fa-external-link"> </i></a></span> includes the hormone-binding domain of a mutant receptor that binds only weakly to the hormone, leading to a hereditary form of rickets. To compare this mutant receptor with the native receptor, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Researchers are working to develop molecules similar to vitamin D to use as drugs to cure vitamin D related diseases. You can find structures of many of these experimental molecules in the PDB.</li>
+<li>The vitamin D receptor is similar to other nuclear hormone receptors, such as the estrogen receptor. You can use the Compare Structures tool at the PDB to look for these similarities. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-evolution">Molecular Evolution</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>I. Orlov, N. Rochel, D. Moras and B. P. Klaholz (2012) Structure of the full human RXR/VDR nuclear receptor heterodimer complex with its DR3 target DNA. EMBO Journal 31, 291-300.</li>
+<li>J. W. Pike, M. B. Meyer and K. A. Bishop (2012) Regulation of target gene expression by the vitamin D receptor - an update on mechanisms. Review of Endocrinology and Metabolic Disorders 13, 45-55.</li>
+<li>J. Zhu and H. F. DeLuca (2012) Vitamin D 25-hydroxylase - four decades of searching, are we there yet? Archives of Biochemistry and Biophysics 523, 30-36.</li>
+<li>M. R. Haussler, C. A. Haussler, L. Bartik, G. K. Whitfield, J. C. Hsieh, S. Slater and P. W. Jurutka (2008) Vitamin D receptor: molecular signaling and actions of nutritional ligands in disease prevention. Nutrition Reviews 66, S98-S112. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_11">http://doi.org/10.2210/rcsb_pdb/mom_2012_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

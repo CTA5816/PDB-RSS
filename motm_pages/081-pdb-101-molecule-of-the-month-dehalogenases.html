@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Dehalogenases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Dehalogenases" property="og:title"/>
+<meta content="Bacteria destroy toxic environmental pollutants that include chlorine or bromine atoms." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-4ur0.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/220" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Dehalogenases" name="twitter:title"/>
+<meta content="Bacteria destroy toxic environmental pollutants that include chlorine or bromine atoms." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-4ur0.jpg" name="twitter:image"/>
+<meta content="Bacteria destroy toxic environmental pollutants that include chlorine or bromine atoms." name="description"/>
+<meta content="pollution,pollutant,remediation,carcinogen,bromine,chlorine,dehalogenase,environment,halogenated,4ur0,2dhc,1jud,5m2g,5m92,5m8u" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 220
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 220 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Dehalogenases</h1>
+<p><i>Bacteria destroy toxic environmental pollutants that include chlorine or bromine atoms.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Reductive dehalogenase. Another protein subunit, shown here schematically, tethers the complex to the membrane. The chlorine-containing compound is in green, the cobamide cofactor is in turquoise, and the iron-sulfur clusters are in red and yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-4ur0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Reductive dehalogenase. Another protein subunit, shown here schematically, tethers the complex to the membrane. The chlorine-containing compound is in green, the cobamide cofactor is in turquoise, and the iron-sulfur clusters are in red and yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-4ur0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Halogens (fluorine, chlorine, bromine, and iodine) play essential roles in our lives. For example, several thyroid hormones must include iodine atoms for proper function. Chloride ions, which are obtained from the salt we eat, play diverse roles in basic cellular function and nerve transmission, and are shuttled from place to place by specialized <a href="https://pdb101.rcsb.org/motm/191">chloride channels</a>. However, halogens are highly reactive, so they often pose grave dangers. Industrial halogenated compounds are commonly used as solvents (for example in dry cleaning) and as pesticides (such as <a href="https://pdb101.rcsb.org/motm/212">DDT</a>). Unfortunately, many are toxic or carcinogenic, and cause problems when they escape and pollute the environment.</div>
+<h4>Nature</h4>
+<div>Many bacteria detoxify and clean up these dangerous compounds, using dehalogenases to remove the halogen atoms, producing simpler compounds that may be further broken down for energy. The one shown here, from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ur0" target="_blank">4ur0</a>, is a reductive dehalogenase. It has an added advantage: it uses the chloride-separating reaction as a source of energy, similar to the way that oxygen is used by <a href="https://pdb101.rcsb.org/motm/5">cytochrome c oxidase</a> in our own electron-transport chain. Researchers are exploring these bacteria as a way to clean up areas polluted with halogenated compounds.</div>
+<h4>Molecular Toolbox</h4>
+<div>This dehalogenase uses several molecular tools in its reaction. During the reduction reaction, it needs to feed two electrons into the halogenated molecule. These are delivered by two iron-sulfur clusters. The reductive reaction also requires a cofactor similar to vitamin B12, which has a cobalt atom in the center. Together, the enzyme and these cofactors position the halogenated compound, add electrons, and replace the halogen atom with a hydrogen atom.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two dehalogenases and two of the reactions they perform." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-dehalogenases.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two dehalogenases and two of the reactions they perform.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-dehalogenases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Hydrolysis</h4>
+<div>Other dehalogenases don’t try to couple the reaction with energy production, and instead simply use a water molecule to split off the halogen. Two examples are shown here, which perform successive reactions in breaking down small compounds like dichloroethane. The first is a haloalkane dehalogenase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2dhc" target="_blank">2dhc</a>), which removes one chlorine atom and replaces it with a hydroxyl. Then two other enzymes convert the hydroxyl into an acid (not shown). Finally a haloacid dehalogenase (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jud" target="_blank">1jud</a>) removes the chlorine atom.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Reductive Dehalogenase</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/220/220-Dehalogenases-4ur0_JSmol.jpg"/></div>
+<p>Three structures of a reductive dehalogenase (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5m2g" target="_blank">5m2g</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5m92" target="_blank">5m92</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5m8u" target="_blank">5m8u</a>) capture the enzyme as it successively removes bromine atoms from a brominated compound. The cobamide cofactor (light blue) helps position the molecule by interacting with a hydroxyl group, and six tryptophan and tyrosine amino acids (dark blue) make a cage around the active site to interact with the halogen atoms. The structure with tribromophenol (carbon in white, bromine in pink, and oxygen in red) is shown here. Click on the image to explore this and the other structures in more detail.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>There are many structures of dehalogenases with different halogenated compounds—try searching for “dehalogenases” to see them. There are also many enzymes that add halogen atoms to compounds. Search for “halogenases” to explore the structures of some of them.</li>
+<li>You can use the Ligand page to explore the properties of the <a href="http://www.rcsb.org/ligand/BVQ"> cobamide cofactor</a> and <a href="http://www.rcsb.org/ligand/B12"> vitamin B12</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M Fincker &amp; AM Spormann (2017) Biochemistry of reductive dehalogenation. Annual Review of Biochemistry 86, 357-386.</li>
+<li>5m2g, 5m92, 5m8u: C Kunze, M Bommer, WR Hagen, M Uksa, H Dobbek, T Schubert &amp; G Diekert (2017) Cobamide-mediated enzymatic reductive dehalogenation via long-range electron transfer. Nature Communications 8, 15858.</li>
+<li>4ur0: M Bommer, C Kunze, J Fesseler, T Schubert, G Diekert &amp; H Dobbek (2014) Structural basis for organohalide respiration. Science 346, 455-458.</li>
+<li>1jud: T Hisano, Y Hata, T Fujii, JQ Liu, T Kurihara, N Esaki &amp; K Soda (1996) Crystal structure of L-2-haloacid dehalogenase from Pseudomonas sp YL. An alpha/beta hydrolase structure that is different from the alpha/beta hydrolase fold. Journal of Biological Chemistry 271, 20322-20330.</li>
+<li>DB Janssen, F Pries &amp; JR van der Ploeg (1994) Genetics and biochemistry of dehalogenating enzymes. Annual Review of Microbiology 48, 163-191.</li>
+<li>2dhc: KH Verschueren, F Seljee, HJ Rozeboom, KH Kalk &amp; BW Dijkstra (1993) Crystallographic analysis of the catalytic mechanism of haloalkane dehalogenase. Nature 363, 693-698.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2018, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2018_4">http://doi.org/10.2210/rcsb_pdb/mom_2018_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

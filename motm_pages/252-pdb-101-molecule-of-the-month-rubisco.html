@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Rubisco</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Rubisco" property="og:title"/>
+<meta content="Rubisco fixes atmospheric carbon dioxide into bioavailable sugar molecules" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/11/1rcx.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/11" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Rubisco" name="twitter:title"/>
+<meta content="Rubisco fixes atmospheric carbon dioxide into bioavailable sugar molecules" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/11/1rcx.gif" name="twitter:image"/>
+<meta content="Rubisco fixes atmospheric carbon dioxide into bioavailable sugar molecules" name="description"/>
+<meta content="carbon fixation,chloroplast,photorespiration,photosynthesis,ribulose bisphosphate carboxylaase/oxygenase,1rcx,1rcx,1rlc,9rub,8ruc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 11
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 11 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Rubisco</h1>
+<p><i>Rubisco fixes atmospheric carbon dioxide into bioavailable sugar molecules</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ribulose bisphosphate carboxylase/oxygenase (Rubisco)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/11/1rcx.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ribulose bisphosphate carboxylase/oxygenase (Rubisco).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/11/11-Rubisco-1rcx.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fixing Carbon</h4>
+<div>Carbon is essential to life. All of our molecular machines are built around a central scaffolding of organic carbon. Unfortunately, carbon in the earth and atmosphere is locked in highly oxidized forms, such as carbonate minerals and carbon dioxide gas. In order to be useful, this oxidized carbon must be "fixed" into more organic forms, rich in carbon-carbon bonds and decorated with hydrogen atoms. Powered by the energy of sunlight, plants perform this central task of carbon fixation. <br/><br/> Inside plant cells, the enzyme ribulose bisphosphate carboxylase/oxygenase (rubisco, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rcx" target="_blank">1rcx <i class="fa fa-external-link"> </i></a></span>) forms the bridge between life and the lifeless, creating organic carbon from the inorganic carbon dioxide in the air. Rubisco takes carbon dioxide and attaches it to ribulose bisphosphate, a short sugar chain with five carbon atoms. Rubisco then clips the lengthened chain into two identical phosphoglycerate pieces, each with three carbon atoms. Phosphoglycerates are familiar molecules in the cell, and many pathways are available to use it. Most of the phosphoglycerate made by rubisco is recycled to build more ribulose bisphosphate, which is needed to feed the carbon-fixing cycle. But one out of every six molecules is skimmed off and used to make sucrose (table sugar) to feed the rest of the plant, or stored away in the form of starch for later use.</div>
+<h4>Slow and Steady</h4>
+<div>In spite of its central role, rubisco is remarkably inefficient. As enzymes go, it is painfully slow. Typical enzymes can process a thousand molecules per second, but rubisco fixes only about three carbon dioxide molecules per second. Plant cells compensate for this slow rate by building lots of the enzyme. Chloroplasts are filled with rubisco, which comprises half of the protein. This makes rubisco the most plentiful single enzyme on the Earth. <br/><br/> Rubisco also shows an embarrassing lack of specificity. Unfortunately, oxygen molecules and carbon dioxide molecules are similar in shape and chemical properties. In proteins that bind oxygen, like myoglobin, carbon dioxide is easily excluded because carbon dioxide is slightly larger. But in rubisco, an oxygen molecule can bind comfortably in the site designed to bind to carbon dioxide. Rubisco then attaches the oxygen to the sugar chain, forming a faulty oxygenated product. The plant cell must then perform a costly series of salvage reactions to correct the mistake.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Rubisco from spinach (left) and photosynthetic bacteria (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/11/two-forms.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Rubisco from spinach (left) and photosynthetic bacteria (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/11/11-Rubisco-two-forms.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Sixteen Chains in One</h4>
+<div>Plants and algae build a large, complex form of rubisco (shown on the left), composed of eight copies of a large protein chain (shown in orange and yellow) and eight copies of a smaller chain (shown in blue and purple). The protein shown here is taken from spinach leaves (coordinates may be found in the PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rcx" target="_blank">1rcx <i class="fa fa-external-link"> </i></a></span>; the tobacco enzyme may be found in <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rlc" target="_blank">1rlc <i class="fa fa-external-link"> </i></a></span>). Many enzymes form similar symmetrical complexes. Often, the interactions between the different chains are used to regulate the activity of the enzyme in the process known as allostery. Rubisco, however, seems to be rigid as a rock, with each of the active sites acting independently of one another. In fact, photosynthetic bacteria build a smaller rubisco (shown on the right, taken from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=9rub" target="_blank">9rub <i class="fa fa-external-link"> </i></a></span>) composed of only two chains, which performs its catalytic task just as well. So, why do plants build a large complex? The answer might lie in the crowded conditions under which rubisco performs its job. By packing many chains together into a tight complex, the protein reduces the surface that must be wetted by the surrounding water. This allows more protein chains, and thus more active sites, to be packed into the same space.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Rubisco in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/11/MoM-2-Rubisco_Figure_v3-jmol.jpg"/></div>
+<p>The active site of rubisco is centered on a magnesium ion (green). It is held tightly by three amino acids: an asparagine, glutamic acid, and a modified form of lysine. The carbon dioxide molecule (left, dotted outline) attached to this lysine serves as an activator in the carbon fixing reaction. This activator carbon dioxide is different from the carbon dioxide molecule that is fixed to the sugar. During the day, the activator carbon dioxide is attached to rubisco, and removed at night to turn the enzyme "off." When rubisco is active, the exposed side of the magnesium ion is free to bind to the sugar molecule and catalyze the reaction with a substrate carbon dioxide. In this structure (PDB ID <a href="https://www.rcsb.org/structure/8ruc" target="_blank">8ruc</a>), the carbon dioxide is already attached to the sugar (right, dotted outline), giving a snapshot of rubisco in action. <br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/><b> This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_11">http://doi.org/10.2210/rcsb_pdb/mom_2000_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

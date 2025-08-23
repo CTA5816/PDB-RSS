@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Piezo1 Mechanosensitive Channel</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Piezo1 Mechanosensitive Channel" property="og:title"/>
+<meta content="Mechanosensitive ion channels give our cells a sense of touch." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-6b3r.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/223" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Piezo1 Mechanosensitive Channel" name="twitter:title"/>
+<meta content="Mechanosensitive ion channels give our cells a sense of touch." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-6b3r.jpg" name="twitter:image"/>
+<meta content="Mechanosensitive ion channels give our cells a sense of touch." name="description"/>
+<meta content="mechanosensitive channel,touch,sense,ion channel,cryoelectron microscopy,piezo1,malaria,3jac,6b3r,6bpz,5z10,3um7,5vkq,nobel" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 223
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 223 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Piezo1 Mechanosensitive Channel</h1>
+<p><i>Mechanosensitive ion channels give our cells a sense of touch.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Piezo1, viewed from the inside of the cell." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-6b3r.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Piezo1, viewed from the inside of the cell.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-6b3r.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our senses rely on molecular machines that monitor the environment and generate a signal when something interesting happens. For things like taste, this is fairly straight-forward: taste sensors just need to recognize characteristic molecules that we eat, like sour acids or sweet sugars. Touch, however, is much trickier. For that, the sensor needs to monitor the shape of a cell surface. Several recent structures are revealing how this is accomplished in cells.</div>
+<h4>Putting Pressure on Piezos</h4>
+<div>Two similar Piezo proteins give our cells a sense of touch. Piezo2 is found in sensory neurons, where it controls gentle touch sensations. Piezo1, on the other hand, is found in non-sensory tissues, where it helps cells sense local changes in fluid pressure. This is important, for example, in processes like blood flow, and also helps give us our ongoing feeling for how all our limbs are positioned. Changes in the tension of membranes cause these Piezo proteins to open up and allow positively-charged ions like calcium to enter the cell. This change in ion concentration triggers the sensory response of the cell.</div>
+<h4>Piezo1 in the Microscope</h4>
+<div>Structures have recently been determined for Piezo1 using cryoelectron microscopy: a low-resolution structure was determined in 2015 (PDB entry<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3jac" target="_blank"> 3jac</a>) and three more detailed structures have just been released (PDB entries<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6b3r" target="_blank"> 6b3r,</a><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6bpz" target="_blank"> 6bpz,</a><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5z10" target="_blank"> 5z10</a>). They all reveal a complex molecular machine composed of three identical protein subunits. The subunits come together in the center to form a membrane-spanning ion channel, and three curving blades extend away from the channel. The blades are thought to probe the state of the surrounding membrane, opening the channel when the membrane is distorted.</div>
+<h4>Piezo1 and Parasites</h4>
+<div>Piezo proteins are essential in regulating many physiological processes, so embryos with inactive Piezo proteins do not survive long during development. However, a mutant form of Piezo1 protein can have an unusual, beneficial effect. These mutant channels are more active than usual and allow excess calcium to enter red blood cells. This has a domino effect on other channels and ultimately leads to dehydration of the cell. Normally this would be a problem, but in areas of the world plagued with malaria, the mutation is very common because the dehydrated cells are resistant to the malaria parasite.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two mechanosensitive ion channels. The membrane is shown schematically in gray, with the inside of the cell at the bottom." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-3um7_5vkq.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two mechanosensitive ion channels. The membrane is shown schematically in gray, with the inside of the cell at the bottom.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-3um7_5vkq.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Mechanosensitive Channels</h4>
+<div>Bacteria have several small <a href="https://pdb101.rcsb.org/motm/107"> mechanosensitive channels,</a> and higher organisms also have other options for sensing changes in cellular shape. Two are shown here. TRAAK (PDB entry<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3um7" target="_blank"> 3um7</a>) is a potassium channel that is triggered by tension in the membrane and also by temperature. NOMPC (PDB entry<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5vkq" target="_blank"> 5vkq</a>) is thought to be tethered to <a href="https://pdb101.rcsb.org/motm/175">microtubules</a> through its long, spring-shaped domains, opening when it senses motions in the cytoskeleton.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Piezo1</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/223/223-Piezo1_Mechanosensitive_Channel-6b3r_JSmol.jpg"/></div>
+<p>The Piezo1 structures reveal many functional domains within the long protein chains. The blades (blue) are composed of a series of similar domains that are embedded in the membrane. As you can see in the structure, the blades are not flat, but instead bend the membrane into a cup shape. A cluster of acidic amino acids (magenta) in the CED domain (orange) is though to help manage access of calcium ions to the central channel, which is surrounded by three helices (red). A beam (green) connects the blades and the channel, presumably linking changes in the shapes of the blades to opening of the channel. To explore this structure in more detail, click on the image for an interative JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can view the cryoelectron reconstructions for these channels at the EMDataBank, for example, in entry <a href="http://emsearch.rutgers.edu/atlas/7128_summary.html"> EMD-7128.</a></li>
+<li>Other proteins involved in sensing and the nervous system are included in the PDB-101 category <a href="http://pdb101.rcsb.org/browse/cellular-signaling"> “Cellular Signaling”.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Ma, S., Cahalan, S., LaMonte, G., Grubaugh, N.D., Zeng, W., Murthy, S.E., Paytas, E., Gamini, R., Lukacs, V., Whitwam, T., Loud, M., Lohia, R., Berry, L., Khan, S.M., Janse, C.J., Bandell, M., Schmedt, C., Wengelnik, K., Su, A.I., Honore, E., Winseler, E.A., Andersen, K.G., Patapoutian, A. (2018) Common PIEZO1 allele in African populations causes RBC dehydration and attenuates Plasmodium infection. Cell 173, 1-13.</li>
+<li>6bpz: Saotome, K., Murthy, S.E., Kefauver, J.M., Whitwam, T., Patapoutian, A., Ward, A.B. (2018) Structure of the mechanically activated ion channel Piezo1. Nature 554: 481-486</li>
+<li>5z10: Zhao, Q., Zhou, H., Chi, S., Wang, Y., Wang, J., Geng, J., Wu, K., Liu, W., Zhang, T., Dong, M.Q., Wang, J., Li, X., Xiao, B. (2018) Structure and mechanogating mechanism of the Piezo1 channel. Nature 554: 487-492</li>
+<li>6b3r: Guo, Y.R., MacKinnon, R. (2017) Structure-based membrane dome mechanism for Piezo mechanosensitivity. eLIFE 6: e33660.</li>
+<li>5vkq: Jin, P., Bulkley, D., Guo, Y., Zhang, W., Guo, Z., Huynh, W., Wu, S., Meltzer, S., Cheng, T., Jan, L.Y., Jan, Y.N., Cheng, Y. (2017) Electron cryo-microscopy structure of the mechanotransduction channel NOMPC. Nature 547: 118-122</li>
+<li>Wu, J., Lewis, A. H., Grandl, J. (2017) Touch, tension, and transduction – the function and regulation of Piezo ion channels. Trends Biochem. Sci. 42, 57-71.</li>
+<li>3jac: Ge, J., Li, W., Zhao, Q., Li, N., Chen, M., Zhi, P., Li, R., Gao, N., Xiao, B., Yang, M. (2015) Architecture of the mammalian mechanosensitive Piezo1 channel. Nature 527: 64-69</li>
+<li>3um7: Brohawn, S.G., del Marmol, J., MacKinnon, R. (2012) Crystal structure of the human K2P TRAAK, a lipid- and mechano-sensitive K+ ion channel. Science 335: 436-441</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2018, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2018_7">http://doi.org/10.2210/rcsb_pdb/mom_2018_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

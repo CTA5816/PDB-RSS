@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: ATM and ATR Kinases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: ATM and ATR Kinases" property="og:title"/>
+<meta content="Dividing cells use ATM and ATR kinases to respond to DNA damage." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/284/ATM_ATR.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/284" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: ATM and ATR Kinases" name="twitter:title"/>
+<meta content="Dividing cells use ATM and ATR kinases to respond to DNA damage." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/284/ATM_ATR.jpg" name="twitter:image"/>
+<meta content="Dividing cells use ATM and ATR kinases to respond to DNA damage." name="description"/>
+<meta content="DNA damage and repair,DNA,cell cycle,kinase,ATM,ATR,replication protein A,RPA,cancer 5np0,7ni5,5yz0,5dny,5gox,4gnx" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 284
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 284 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: ATM and ATR Kinases</h1>
+<p><i>Dividing cells use ATM and ATR kinases to respond to DNA damage.</i></p>
+<div>
+<div><i>This article was written and illustrated by Kamiel Beckley, Sarah McGuinness, Asya Polat and Kayla Puebla as part of a <a href="https://iqb.rutgers.edu/node/263">week-long boot camp</a> for undergraduate and graduate students hosted by the Rutgers Institute for Quantitative Biomedicine. The article is presented as part of the 2023-2024 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="ATM and ATR, with kinase domains in magenta, other domains in shades of purple, and ATR-interacting protein (ATRIP) in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/284/ATM_ATR.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ATM and ATR, with kinase domains in magenta, other domains in shades of purple, and ATR-interacting protein (ATRIP) in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/284/ATM_ATR.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>As cells divide, they must ensure that their DNA is completely and accurately copied. Environmental dangers like UV radiation and toxic chemicals can damage DNA, and even normal cellular processes like DNA replication can have problems that lead to damage. Altogether, each cell has tens of thousands of sites of DNA damage every day. Failure to find and fix this DNA damage often leads to cancer. Our cells have checkpoints for recognizing broken DNA and pausing cell division until it is repaired. The protein kinases ATM (Ataxia-telangiectasia mutated) and ATR (Ataxia telangiectasia and Rad3-related protein) are crucial regulators of these DNA repair checkpoints. These proteins were identified while studying Ataxia telangiectasia, a complex neurodegenerative disease with immune system dysfunction, increased sensitivity to radiations, and predisposition to cancer. When DNA damage is identified, ATM and ATR work together to temporarily arrest the cell cycle and recruit proteins to repair it.</div>
+<h4>Signaling for Help</h4>
+<div>ATM and ATR notify the cell about different common types of DNA damage. While ATM focuses on double-strand breaks, which pose grave dangers to cells, ATR identifies single-stranded DNA, where a single unrepaired break may be enough to kill a cell. Single-stranded regions are normally formed during DNA replication, but if DNA polymerase stalls, helicases can continue unwinding the double helix, forming dangerously long single-stranded segments. Single-stranded DNA is also created at the ends of broken DNA during the process of repair, as the ends are trimmed before they are reconnected. When ATM and ATR find DNA damage, they phosphorylate and activate hundreds of proteins involved in management of the cell cycle and DNA repair. These include proteins such as <a href="https://pdb101.rcsb.org/motm/31">p53 tumor suppressor</a> and proteins such as <a href="https://pdb101.rcsb.org/motm/172">RAD51</a> of the homologous recombination pathway, a high-fidelity DNA repair process that uses an intact copy of the chromosome to repair and restore the damaged chromosome.</div>
+<h4>Called to Action</h4>
+<div>The basis of ATM and ATR signaling is now being revealed by cryoelectron microscopy. The 3D structure of human ATM is seen in PDB ID <a href="https://www.rcsb.org/structure/5np0" target="_blank">5np0</a> and that of ATR is seen in PDB ID <a href="https://www.rcsb.org/structure/5yz0" target="_blank">5yz0</a>, bound to ATRIP, a protein that helps mediate the interaction of ATR with proteins that bind to single-stranded DNA. ATM and ATR are members of the same protein family and both form huge butterfly-shaped complexes with several functional parts. The kinase domains (shown here in magenta) perform the phosphorylation reaction. The rest of the protein has several domains that are thought to mediate interactions with both specific sensors of damaged DNA and with the diverse proteins that are activated by phosphorylation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Proteins that sense damaged DNA. Rad50 and Mre11 are bound to a broken double-stranded DNA and replication protein A (RPA) is bound to single-stranded DNA. DNA is shown in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/284/DNADamageSensors.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Proteins that sense damaged DNA. Rad50 and Mre11 are bound to a broken double-stranded DNA and replication protein A (RPA) is bound to single-stranded DNA. DNA is shown in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/284/DNADamageSensors.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Heroes of the DNA Damage Response</h4>
+<div>ATM and ATR are key messengers in the DNA damage response. They rely on other proteins to find and recognize damaged DNA. Two examples are included here: a complex of Mre11 and Rad50 (PDB ID <a href="https://www.rcsb.org/structure/5dny" target="_blank">5dny</a> and <a href="https://www.rcsb.org/structure/5gox" target="_blank">5gox</a>) binds to double-strand breaks, and replication protein A (RPA, PDB ID <a href="https://www.rcsb.org/structure/4gnx" target="_blank">4gnx</a>) binds to single-stranded DNA. These proteins then interact with ATM and ATR respectively, activating their kinase domains and allowing them to activate, in turn, the many proteins downstream in the cell cycle and repair pathways.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>ATM Complexes</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/284/Jmol-jmol.jpg"/></div>
+<p>Given their central roles in DNA repair, it is not surprising that ATM and ATR are intimately involved in development of cancer. Cancer cells often have mutated ATM and ATR that fail to stop cell division in cells with damaged genomes. Researchers are taking advantage of this last symptom to design drugs to block ATM. They are now looking for inhibitors to block ATM for use in cancer therapy. Although this may sound paradoxical, these drugs may be injected into tumors to make them more susceptible to radiation therapies. PDB ID <a href="https://www.rcsb.org/structure/7ni5" target="_blank">7ni5</a> includes one of these experimental drugs bound to the kinase domain of ATM. The drug (green) binds in the same place as ATP (yellow, from PDB ID <a href="https://www.rcsb.org/structure/7ni6" target="_blank">7ni6</a>) would bind, near three amino acids that catalyze the phosphorylation reaction (white). In the presence of the inhibitor, the enzyme does not bind ATP and cannot perform its kinase activity. <br/> To explore these structures in more detail, click on the image for an interactive JSmol view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>ATM and ATR have been given different names in different organisms. For example, take a look at the yeast protein Tel1 (PDB ID <a href="https://www.rcsb.org/structure/6s8f" target="_blank">6s8f</a>) and Mec1-Ddc2 (PDB ID <a href="https://www.rcsb.org/structure/6z3a" target="_blank">6z3a</a>).</li>
+<li>You can use the sequence browser to explore the domain structure of these large proteins, which is available in a tab at the top of each Structure Summary Page. For example, <a href="https://www.rcsb.org/sequence/5NP0"> here’s the page for ATM.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Phan, L. M., Rezaeian, A. H. (2021) ATM: Main features, signaling pathways, and its diverse toles in DNA damage response, tumor suppression, and cancer development. Genes 12, 845. </li>
+<li>7ni5, 7ni6: Stakyte, K., Rotheneder, M., Lammens, K., Bartho, J. D., Gradler, U., Fuchs, T., Pehl, U., Alt, A., van de Logt, E., Hopfner, K. P. (2021) Molecular basis of human ATM kinase inhibition. Nat Struct Mol Biol 28, 789–798.</li>
+<li>6z3a: Tannous, E.A., Yates, L.A., Zhang, X., Burgers, P. M. (2021) Mechanism of auto-inhibition and activation of Mec1ATR checkpoint kinase. Nat Struct Mol Biol 28, 50–61.</li>
+<li>Williams, R. M., Yates, L. A., Zhang, X. (2020) Structures and regulations of ATM and ATR, master kinases in genome integrity. Curr Opin Struct Bio 61, 98–105.</li>
+<li>Sun, Y., McCorvie, T. J., Yates, L. A., Zhang, X. (2019) Structural basis of homologous recombination. Cell Molec Life Sci 77, 3–18.</li>
+<li>5np0: Baretic, D., Pollard, H.K., Fisher, D.I., Johnson, C.M., Santhanam, B., Truman, C.M., Kouba, T., Fersht, A.R., Phillips, C., Williams, R.L. (2017) Structures of closed and open conformations of dimeric human ATM. Sci Adv 3: e1700933-e1700933.</li>
+<li>5gox: Park, Y.B., Hohl, M., Padjasek, M., Jeong, E., Jin, K.S., Krezel, A., Petrini, J.H.J., Cho, Y. (2017) Eukaryotic Rad50 functions as a rod-shaped dimer. Nat Struct Mol Biol 24: 248-257.</li>
+<li>Rao, Q., Liu, M., Tian, Y., Wu, Z., Hao, Y., Song, L., Qin, Z., Ding, C., Wang, H.-W., Wang, J., Xu, Y. (2017) Cryo-EM structure of human ATR-ATRIP complex. Cell Research 28, 143–156.</li>
+<li>5dny: Liu, Y., Sung, S., Kim, Y., Li, F., Gwon, G., Jo, A., Kim, A.K., Kim, T., Song, O.K., Lee, S.E., Cho, Y. (2016) ATP-dependent DNA binding, unwinding, and resection by the Mre11/Rad50 complex. EMBO J 35: 743-758.</li>
+<li>Weber, A. M., Ryan, A. J. (2015) ATM and ATR as therapeutic targets in cancer. Pharmacology &amp; therapeutics, 149, 124–138.</li>
+<li>Maréchal, A., Zou, L. (2013) DNA damage sensing by the ATM and ATR kinases. Cold Spring Harbor Persp Biol 5, a012716. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2023, Kamiel Beckley, Sarah McGuinness, Asya Polat, Kayla Puebla, David S. Goodsell, Shuchismita Dutta</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_8">http://doi.org/10.2210/rcsb_pdb/mom_2023_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

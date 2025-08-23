@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: HIV Reverse Transcriptase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: HIV Reverse Transcriptase" property="og:title"/>
+<meta content="HIV builds a DNA copy of its RNA genome, providing a unique target for drug therapy" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/33/3hvt.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/33" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: HIV Reverse Transcriptase" name="twitter:title"/>
+<meta content="HIV builds a DNA copy of its RNA genome, providing a unique target for drug therapy" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/33/3hvt.gif" name="twitter:image"/>
+<meta content="HIV builds a DNA copy of its RNA genome, providing a unique target for drug therapy" name="description"/>
+<meta content="AIDS,azidothymidine,AZT,HIV,human immunodeficiency virus,nevirapine,reverse transcriptase inhibitors,ribonuclease H activity,RNA-dependent DNA replication,3hvt,2hmi,1jlb" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 33
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 33 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: HIV Reverse Transcriptase</h1>
+<p><i>HIV builds a DNA copy of its RNA genome, providing a unique target for drug therapy</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="HIV reverse transcriptase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/33/3hvt.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>HIV reverse transcriptase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/33/33-ReverseTranscriptase-3hvt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses are tricky. They use all sorts of unusual mechanisms during their attacks on cells. HIV is no exception. It is a retrovirus, which means that it has the ability to insert its genetic material into the genome of the cells that it infects. But, infectious HIV particles carry their genome in RNA strands. Somehow, during infection, the virus needs to make a DNA copy of its RNA genome. This is very unusual, because all of the normal cellular machinery is designed to make RNA copies from DNA, but not the reverse. DNA is normally only created using other DNA strands as a template. This tricky reversal of synthesis is performed by the enzyme reverse transcriptase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3hvt" target="_blank">3hvt <i class="fa fa-external-link"> </i></a></span>. Inside its large, claw-shaped active site, it copies the HIV RNA and creates a double-stranded DNA version of the viral genome. This then integrates into the cell's DNA, and later instructs the cell to make additional copies of the virus.</div>
+<h4>Tiny Genomes</h4>
+<div>Viruses are tiny. They only carry enough genetic material to encode a few proteins. Many viruses, such as poliovirus and rhinovirus, carry the bare minimum--just enough to specify their own structure and get synthesis started once they get inside cells. The genome of HIV, on the other hand, carries instructions for building a few enzymes that are used in the reproduction of the virus. Reverse transcriptase is one of these enzymes. But, space in the HIV genome is still at a premium, so reverse transcriptase is encoded in a tricky way. It is composed of two different subunits, but both are encoded by the same gene. After the protein is made, one of the subunits is clipped to a smaller size (shown in yellow here) so that it can form the proper mate with one full-sized subunit (shown in red).</div>
+<h4>A Sloppy Enzyme</h4>
+<div>Reverse transcriptase performs a remarkable feat, reversing the normal flow of genetic information, but it is rather sloppy in its job. The polymerases used to make DNA and RNA in cells are very accurate and make very few mistakes. This is essential because they are the caretakers of our genetic information, and mistakes may be passed on to our offspring. Reverse transcriptase, on the other hand, makes lots of mistakes, up to about one in every 2,000 bases that it copies (if this same error rate occurred in the "Molecule of the Month," there would be two typos in this month's installment). You might think that this would cause severe problems. But, in fact, this high error rate turns out to be an advantage for the virus in this era of drug treatment. The errors allow HIV to mutate rapidly, finding drug resistant strains in a matter of weeks after treatment begins. Fortunately, the recent development of treatments that combine several drugs are often effective in combating this problem. Since the virus is simultaneously attacked by several different drugs, it cannot mutate to evade all of them at the same time.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="HIV reverse transcriptase with a short piece of DNA bound in the active sites." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/33/2hmi-label.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>HIV reverse transcriptase with a short piece of DNA bound in the active sites.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/33/33-ReverseTranscriptase-2hmi-label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Two Enzymes in One</h4>
+<div>Reverse transcriptase performs several different functions. As indicated by the name, it can build DNA strands based on an RNA template. This reaction is performed in the polymerase active site, which is formed by two sets of arms that surround the RNA and DNA. The polymerase site is at the top in this illustration, taken from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hmi" target="_blank">2hmi <i class="fa fa-external-link"> </i></a></span>. After building the DNA strand, the enzyme then removes the original RNA strand by cleaving it into pieces. This is performed by a nuclease active site, which is located at the opposite end of the enzyme. Finally, it builds a second DNA strand matched to the one that was just created to form the final DNA double helix. This reaction is also performed by the polymerase site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/33/1jlb-rasmol.gif"/></div>
+<div>The current collection of highly-effective drugs for fighting HIV infection are a major success of modern drug design. Two types of drugs are used for blocking the action of reverse transcriptase and stopping HIV infection. One type is a modified nucleotide with a missing connector, such as the drug AZT. These are used by the enzyme like normal nucleotides and added to the growing chain. But, since they are missing a site for connecting the next nucleotide, the synthesis of the DNA chain is stopped. The other type of drug binds on the back side of the enzyme and changes the shape of the active site, blocking its action. The drug Nevirapine, shown here in white from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jlb" target="_blank">1jlb <i class="fa fa-external-link"> </i></a></span>, is an example of this type of drug. Notice how it is located just under the floor of the active site, below the big groove that binds to DNA and RNA. To explore this structure in more detail, click on the accession code and choose one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li><a href="https://cdn.rcsb.org/pdb101/learn/resources/structural-biology-of-hiv/index.html" target="_blank">An on-line animation</a> is available on PDB-101 for exploring more about the structural biology of HIV.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV and AIDS</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Frankel, A. D. and Young, J. A. T. (1998): HIV-1: Fifteen Proteins and an RNA. <i>Annual Review of Biochemistry</i> <b>67</b>, pp. 1-25.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_9">http://doi.org/10.2210/rcsb_pdb/mom_2002_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

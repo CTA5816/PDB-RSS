@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: GFP-like Proteins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: GFP-like Proteins" property="og:title"/>
+<meta content="GFP-like proteins found in nature or engineered in the laboratory now span every color of the rainbow " property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_1g7k.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/174" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: GFP-like Proteins" name="twitter:title"/>
+<meta content="GFP-like proteins found in nature or engineered in the laboratory now span every color of the rainbow " name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_1g7k.jpg" name="twitter:image"/>
+<meta content="GFP-like proteins found in nature or engineered in the laboratory now span every color of the rainbow " name="description"/>
+<meta content="fluorescence microscopy,Green fluorescent protein,protein engineering,bioluminescence,1g7k,3m24,2q57,4ar7,2y0g,1huy,2h5o,2h5q,4kf5" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 174
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 174 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: GFP-like Proteins</h1>
+<p><i>GFP-like proteins found in nature or engineered in the laboratory now span every color of the rainbow </i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Red fluorescent protein dsRED, with chromophores in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_1g7k.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Red fluorescent protein dsRED, with chromophores in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_1g7k.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Twenty years ago, <a href="https://pdb101.rcsb.org/motm/42">green fluorescent protein (GFP)</a> was first used to reveal the location of proteins inside living cells, and since then, it has emerged as an invaluable tool for cell biologists. GFP is a small, stable, and brightly fluorescent protein. A gene encoding GFP can be added to a cell and used to synthesize GFP, which then creates its own internal chromophore that fluoresces when illuminated with ultraviolet light, without consuming cellular energy. And perhaps most importantly, GFP can be fused to another protein without perturbing its normal function, creating a highly visible tag that allows the protein of interest to be tracked throughout the cell.</div>
+<h4>Expanding the Palette</h4>
+<div>Once the power of GFP became apparent, scientists quickly looked for ways to improve and extend it. The main goal of this effort has been to change the color of fluorescence, so that distinct proteins in a cell can be visualized with different colors. Scientists first looked to nature, and fluorescent proteins producing light of different colors were found in different organisms. The one shown here is dsRED (PDB entry <span class="rcsb_id_tag" title="dsRed"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1g7k" target="_blank">1g7k <i class="fa fa-external-link"> </i></a></span>), which was discovered in a species of coral. As the name implies, it emits red light.</div>
+<h4>Terrible Tetramers</h4>
+<div>The initial discovery of GFP from jellyfish was entirely serendipitous--it is one of the few naturally occurring fluorescent proteins that functions as a monomer under typical conditions. This behavior is perfect for cell biologists, since they don't want to worry about a fluorescent label causing unwanted aggregation. dsRED, however, is a tetramer. If it were attached to actin, for example, it would bring together four actin subunits, creating a messy tangle inside the cell. This shortcoming of dsRED inspired an intensive research campaign to modify the natural tetrameric fluorescent proteins to allow them to function as monomers, while still retaining bright fluorescence of the desired color.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Examples of monomeric fluorescent proteins in rainbow colors." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_GFP-like_Proteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Examples of monomeric fluorescent proteins in rainbow colors.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_GFP-like_Proteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Rainbow of Fluorescence</h4>
+<div>Fortunately, the search for monomeric fluorescent proteins has been remarkably successful, and researchers can now choose from across the rainbow. The illustration above includes a sampler of the fluorescent proteins that are currently available in the PDB archive (<span class="rcsb_id_tag" title="TagBFP"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3m24" target="_blank">3m24 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="Cerulean"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2q57" target="_blank">2q57 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="mTurquoise"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ar7" target="_blank">4ar7 <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="EGFP"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2y0g" target="_blank">2y0g <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="Citrine"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1huy" target="_blank">1huy <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="mOrange"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2h5o" target="_blank">2h5o <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="mCherry"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2h5q" target="_blank">2h5q <i class="fa fa-external-link"> </i></a></span>). All of these proteins are similar to GFP, with the familiar beta barrel fold surrounding a self-assembled chromophore threaded through the center of the molecule. The variously colored chromophores, however, differ slightly from one another and the amino acids surrounding the chromophore further tune the light that is emitted.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Split GFP (PDB entry 4kf5)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/174/174-GFPLikeProteins_4kf5_jsmol.jpg"/></div>
+<p>Researchers have used these fluorescent proteins in many clever ways. For example, to study protein interactions, they can split GFP into two pieces and attach one piece to each protein. Then, if the two proteins get close to one another in the cell, the GFP will assemble and light up. PDB entry <span class="rcsb_id_tag" title="Split GFP"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4kf5" target="_blank">4kf5 <i class="fa fa-external-link"> </i></a></span> shows an example of a split GFP, in this case, used as a method to assist crystallization of proteins for structure determination. Two beta strand segments of GFP are fused to a protein of interest (in this case, sfCherry, colored red here), and a version of GFP is created that lacks these two strands (colored green). When the two engineered proteins are mixed together and interact with one another, the two portions of GFP assemble into a functionally fluorescent protein, with the cargo of sfCherry. To explore this engineered complex in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures for several proteins fused with GFP are available in the PDB archive, for instance, PDB entry <span class="rcsb_id_tag" title="GFP-myosin">4anj</span> has GFP fused with myosin.</li>
+<li>Be sure to look around the internet for micrograph images of cells with GFP-labeled proteins--for particularly beautiful images, try searching for "brainbow" or "fluoresence micrograph cytoskeleton"</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/bioluminescence-and-fluorescence">Bioluminescence and Fluorescence</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. M. Chudakov, M. V. Matz, S. Lukyanov &amp; K. A. Lukyanov (2010) Fluorescent proteins and their applications in imaging living cells and tissues. Physiological Reviews 90, 1103-1163.</li>
+<li>4kf5: H. B. Nguyen, L. W. Hung, T. O. Yeates, T. C. Terwilliger &amp; G. S. Waldo (2013) Split green fluorescent protein as a modular binding partner for protein crystallization. Acta Crystallographica Section D 69, 2513-2523.</li>
+<li>4ar7: D. Von Stetten, M. Noirclerc-Savoye, J. Goedhart, T. W. J. J. Gadella &amp; A. Royant (2012) Structure of a fluorescent protein from Aequorea victoria bearing the obligate- monomer mutation A206K. Acta Crystallographical Section F 68, 878.</li>
+<li>2y0g: A. Royant &amp; M. Noirclerc-Savoye (2011) Stabilizing role of glutamic acid 222 in the structure of enhanced green fluorescent protein. Journal of Structural Biology 174, 385-390.</li>
+<li>3m24: O. M. Subach, V. N. Malashkevich, W. D. Zencheck, K. S. Morozova, K. D. Piatkevich, S. C. Almo &amp; V. V. Verkhusha (2010) Structural characterization of acylimine-containing blue and red chromophores in mTagBFP and TagRFP fluorescent proteins. Chemistry &amp; Biology 17, 333-341</li>
+<li>2q57: G. D. Malo, L. J. Pouwels, M. Wang, A. Weichsel, W. R. Montfort, M. A. Rizzo, D. W. Piston &amp; R. M. Wachter (2007) X-ray structure of Cerulean GFP: a tryptophan- based chromophore useful for fluorescence lifetime imaging. Biochemistry 46, 9865- 9873.</li>
+<li>2h5o, 2h5q: X. Shu, N. C. Shaner, C. A. Yarbrough, R. Y. Tsien &amp; S. J. Remington (2006) Novel chromophores and buried charges control color in mFruits. Biochemistry 45, 9639-9647.</li>
+<li>1huy: O. Griesbeck, G. S. Baird, R E., Campbell, D. A. Zacharias &amp; R. Y. Tsien (2001) Reducing the environmental sensitivity of yellow fluorescent protein. Journal of Biological Chemistry 276, 29188-29194.</li>
+<li>1g7k: D. Yarbrough, R. M. Wachter, K. Kallio, M. V. Matz &amp; S. J. Remington (2001) Refines crystal structure of DsRed, a red fluorescent protein from coral, at 2.0-A resolution. PNAS USA 98, 462-467.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2014, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2014_6">http://doi.org/10.2210/rcsb_pdb/mom_2014_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nuclear Pore Complex</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nuclear Pore Complex" property="og:title"/>
+<meta content="The nuclear pore complex is the gateway between the nucleus and cytoplasm." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5a9q_5ijn.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/205" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nuclear Pore Complex" name="twitter:title"/>
+<meta content="The nuclear pore complex is the gateway between the nucleus and cytoplasm." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5a9q_5ijn.jpg" name="twitter:image"/>
+<meta content="The nuclear pore complex is the gateway between the nucleus and cytoplasm." name="description"/>
+<meta content="nuclear pore complex,nucleoporin,transport,karyopherin,NPC,nucleus,5a9q,5ijn,5dis,4xmm" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 205
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 205 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nuclear Pore Complex</h1>
+<p><i>The nuclear pore complex is the gateway between the nucleus and cytoplasm.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Core of the nuclear pore complex. Several portions are not included in the structures (shown here schematically), including a tangle of unstructured chains that fill the central pore, proteins that interact with the nuclear membrane and chains that extend upwards and downwards on either side of the complex." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5a9q_5ijn.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Core of the nuclear pore complex. Several portions are not included in the structures (shown here schematically), including a tangle of unstructured chains that fill the central pore, proteins that interact with the nuclear membrane and chains that extend upwards and downwards on either side of the complex.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5a9q_5ijn.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Bacterial cells are built for speed, but our cells are built for complexity. Because we have so many types of cells, with so many different functions, our cells need more levels of regulation than bacteria. To achieve this, our cells separate the process of protein synthesis into two compartments: DNA is transcribed to mRNA in the nucleus, while mRNA is translated to protein in the cytoplasm. This separation allows additional regulatory steps to be added to the process, such as capping and splicing of the mRNA. The nuclear pore complex (NPC), a huge channel embedded in the nuclear envelope, connects these two separated processes, providing two-way transport of nucleic acids and proteins between the nucleus and cytoplasm.</div>
+<h4>NPC Anatomy</h4>
+<div>The NPC is a huge molecular complex composed of hundreds of nucleoporin proteins. The symmetric core structure is composed of two outer rings that provide support and an inner ring that forms the transport channel. Other less symmetric structures manage molecules on both sides of the pore. The entire structure can transport about 1,000 molecules every second, ranging from proteins to entire ribosomal subunits.</div>
+<h4>Studying the NPC</h4>
+<div>Because the structure of the entire NPC is so large and dynamic, a “divide-and-conquer” approach has been used to study it. Atomic-resolution crystal structures of single nucleoporins and their subcomplexes have been determined individually, and maps of the entire NPC scaffold, detailed enough to see proteins but not individual atoms, have been determined using electron microscopy. This information has been integrated by docking the atomic structures into the electron density maps to elucidate the overall structure. The illustration included here combines two of these integrative structures to give a view of the core infrastructure of the pore, including the outer ring from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5a9q" target="_blank">5a9q</a> and the inner channel ring from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5ijn" target="_blank">5ijn</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A short piece of the nucleoporin Nup214 (turquoise, with FG repeats in green) is bound to the nuclear export protein CRM1 (orange), which is carrying the protein SPN1 as cargo. Ran (pink) binds to GTP and regulates the transporter." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5dis.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A short piece of the nucleoporin Nup214 (turquoise, with FG repeats in green) is bound to the nuclear export protein CRM1 (orange), which is carrying the protein SPN1 as cargo. Ran (pink) binds to GTP and regulates the transporter.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-5dis.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Transport</h4>
+<div>The diffusion channel at the center of the NPC controls passage of molecules between the nucleus and cytoplasm. Small molecules can freely pass through the pore, but large molecules need to be actively transported. Transport proteins, called <a href="https://pdb101.rcsb.org/motm/85">karyopherins</a>, interact with unstructured nucleoporin chains that extend into the transport channel, as seen in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5dis" target="_blank">5dis</a>. They bind to a phenylalanine-glycine sequence that is repeated many times along the nucleoporin chain. Through transient interactions with these FG repeats, karyopherins migrate through the channel, taking their cargo with them.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Coat Nucleoporin Complex</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/205/205-Nuclear_Pore_Complex-4xmm-JSmol.jpg"/></div>
+<p>The coat nucleoporin complex is part of the symmetric core of the NPC. In yeast, coat nucleoporins assemble to form a Y-shaped complex, as seen here at the top from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4xmm" target="_blank">4xmm</a>. Many coat nucleoporin complexes then associate to form four eight-membered rings, as seen in the human complex shown at the bottom. The arms of the Y-shaped complexes grip their neighbors to lock the entire ring together. To explore the yeast complex in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the Group Sequence view to explore portions of the nucleoporin proteins that aren’t included in the structures. For instance, take a look at the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P35658"> view of Nup214</a> and notice that it has long unstructured regions with many FG repeats.</li>
+<li>Structures for many individual nucleoporins are included in the PDB archive—try searching for “nucleoporin” to find them.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. Hoelz, J. S. Glavy &amp; M. Beck (2016) Toward the atomic structure of the nuclear pore complex: when top down meets bottom up. Nature Structural &amp; Molecular Biology 23, 624-630.</li>
+<li>5ijn: J. Kosinski, S. Mosalaganti, A. von Appen, R. Teimer, A. L. DiGuilio, W. Wan, K. H. Bui, W. J. Hagen, J. A. Briggs, J. S. Glavy, E. Hurt &amp; M. Beck (2016) Molecular architecture of the inner ring scaffold of the human nuclear pore complex. Science 352, 363-365.</li>
+<li>D. H. Lin, T. Stuwe, S. Schilbach, E. J. Rundlet, T. Perriches, G. Mobbs, Y. Fan, K. Thierbach, F. M. Huber, L. N. Collins, A. M. Davenport, Y. E. Jeon &amp; A. Hoelz (2016) Architecture of the symmetric core of the nuclear pore complex. Science 352, aaf1015.</li>
+<li>T. U. Schwartz (2016) The structure inventory of the nuclear pore complex. Journal of Molecular Biology 428, 1986-2000.</li>
+<li>5dis: S. A. Port, T. Monecke, A. Dickmanns, C. Spillner, R. Hofele, H. Urlaub, R. Ficner &amp; R. H. Kehlenback (2015) Structural and functional characterization of CRM1-Nup214 interactions reveals multiple FG-binding sites involved in nuclear export. Cell Reports 13, 690-702.</li>
+<li>T. Stuwe, C. J. Bley, K. Thierbach, S. Petrovic, S. Schilbach, D. J. Mayo, T. Perriches, E J. Rundlet, Y. E. Jeon, L. N. Collins, F. M. Huber, D. H. Lin, M. Paduch, A. Koide, V. Lu, J. Fischer, E. Hurt, S. Koide, A. A. Kossiakoff &amp; A. Hoelz (2015) Architecture of the fungal nuclear pore inner ring complex. Science 350, 56-64.</li>
+<li>4xmm: T. Stuwe, A. R. Correia, D. H. Lin, M. Paduch, V. T. Lu, A. A. Kossiakoff &amp; A. Hoelz (2015) Nuclear pores. Architecture of the nuclear pore complex. Science 347, 1148-1152.</li>
+<li>5a9q: A. von Appen, J. Kosinski, L. Sparks, A. Ori, A. L. DeGuilio, B. Vollmer, M. T. Mackmull, N. Banterle, L. Parca, P. Kastritis, K. Buczak, S. Mosalaganti, W. Hagan, A. Andres-Pons, E. A. Lemke, P. Bork, W. Antonin, J. S. Glavy, K. H. Bui &amp; M. Beck (2015) In situ structural analysis of the human nuclear pore complex. Nature 526, 140-143.</li>
+<li>A. Hoelz, E. W. Debler &amp; G. Blobel (2011) The structure of the nuclear pore complex. Annual Review of Biochemistry 80, 613-643.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2017, David Goodsell, Christopher Markosian</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_1">http://doi.org/10.2210/rcsb_pdb/mom_2017_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

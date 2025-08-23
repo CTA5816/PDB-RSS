@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cisplatin and DNA</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cisplatin and DNA" property="og:title"/>
+<meta content="Cisplatin treats cancer by causing damage to the DNA of cancer cells." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig1-2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/255" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cisplatin and DNA" name="twitter:title"/>
+<meta content="Cisplatin treats cancer by causing damage to the DNA of cancer cells." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig1-2.jpg" name="twitter:image"/>
+<meta content="Cisplatin treats cancer by causing damage to the DNA of cancer cells." name="description"/>
+<meta content="Apoptosis,Cancer,Chemoresistance,Chemotherapeutic,Cisplatin,Cytotoxic,DNA,Genotoxic,HMG,Lesions,Nucleotide Excision Repair,Oxaliplatin,Platinum,Replication,RNA Polymerase,Testicular Cancer,Transcription,1CKT,3DNB,3LPV,5A39,2R7Z,2R8K,6BS1" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 255
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 255 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cisplatin and DNA</h1>
+<p><i>Cisplatin treats cancer by causing damage to the DNA of cancer cells.</i></p>
+<div>
+<div><i>This article was written and illustrated by Helen Gao, Samuel G. Shrem and Saai Suryanarayanan as part of a week-long boot camp on <a href="https://iqb.rutgers.edu/node/220">"Science Communication in Biology and Medicine"</a> for undergraduate and graduate students hosted by the <a href="https://iqb.rutgers.edu">Rutgers Institute for Quantitative Biomedicine</a> in January 2021. </i></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The DNA double helix (top left) bends when cisplatin binds (top right, with cisplatin in red) and attracts an HMG protein (bottom, with the protein in blue) to the site of bending." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig1-2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The DNA double helix (top left) bends when cisplatin binds (top right, with cisplatin in red) and attracts an HMG protein (bottom, with the protein in blue) to the site of bending.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Wonder Drug, Cisplatin</h4>
+<div>Imagine a drug that increases cure rates for a disease from 5% to 80%. Cisplatin, a tiny molecule with platinum bound to two amines and two chlorides, is exactly this type of game changer: in the mid-1970s, is was found to be highly effective in treating testicular cancers. Cisplatin crosslinks DNA by binding adjacent guanine bases on a strand. These crosslinks kink the DNA, hampering its normal function and damaging the cell and its genome. Besides testicular cancer, cisplatin is also one of the earliest FDA-approved drugs to treat ovarian cancers and tumors of connective tissue, and head and neck.</div>
+<h4>Cisplatin in Action</h4>
+<div>Cisplatin affects the cell by changing the conformation of the DNA, and thus, changing how it interacts with proteins. As seen here, the normal DNA (PDB ID <a href="https://www.rcsb.org/structure/3dnb" target="_blank">3dnb</a>) is straight, but the cisplatin-bound DNA (PDB ID <a href="https://www.rcsb.org/structure/3lpv" target="_blank">3lpv</a>) is bent at the site of the chemical modification. Proteins of the <i>high mobility group DNA-binding</i> family (HMG-domain proteins) prefer to bind to bent DNA, and thus bind to bent cisplatin-bound DNA, as seen in PDB ID <a href="https://www.rcsb.org/structure/1ckt" target="_blank">1ckt</a>. The HMG protein then shields the cisplatin-damaged DNA from other proteins involved in DNA replication, repair, and transcription. These events collectively trigger apoptosis or programmed cell death.</div>
+<h4>Cells Resist the Cure?</h4>
+<div>Cisplatin is very effective in treating several types of human cancer. However, tumors can develop resistance to cisplatin treatment by several ways, including changing the traffic of cisplatin across the cell membrane and down-regulating mechanisms that cause cell death. Structural studies have been pivotal in discovering drugs that overcome resistance and have even greater potency and reduced toxicity. For example, a chemical cousin to cisplatin, oxaliplatin, has proven to be effective in treating some tumors with acquired cisplatin resistance.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Nucleotide excision repair protein XPA (top) bound to each side of the damaged DNA helix and RNA polymerase II (bottom) stalled at the cisplatin-bound site in DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nucleotide excision repair protein XPA (top) bound to each side of the damaged DNA helix and RNA polymerase II (bottom) stalled at the cisplatin-bound site in DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Disrupting Proteins</h4>
+<div>Cisplatin-bound DNA impairs the normal functions of proteins involved in DNA repair and transcription. The nucleotide excision repair (NER) process typically removes bulky abnormalities caused by chemicals or radiation (often called lesions) by cutting out the damaged region of DNA. For example, NER protein XPA binds to the bent DNA from both sides of the damaged helix, as seen in PDB entry <a href="https://www.rcsb.org/structure/5a39" target="_blank">5a39</a>. Then, XPA inserts a loop into each strand of the DNA, separating the DNA into single strands in those regions. This allows other NER proteins to bind and remove the entire lesion. However, these defenses may be blocked when HMG proteins bind to the cisplatin-DNA complex, allowing the damage to persist. The cisplatin-bound DNA may also prevent <a href="https://pdb101.rcsb.org/motm/40">RNA polymerase II</a> (PDB ID <a href="https://www.rcsb.org/structure/2r7z" target="_blank">2r7z</a>) from transcribing the cell’s DNA to RNA. When cisplatin is bound to DNA, the bulky lesion gets stuck in the enzyme and cannot move to the active site where transcription occurs.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="DNA polymerase eta (top) and DNA polymerase kappa (bottom), with incoming nucleotides in orange. Cancer cells can use these polymerases to replicate DNA through the lesion." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>DNA polymerase eta (top) and DNA polymerase kappa (bottom), with incoming nucleotides in orange. Cancer cells can use these polymerases to replicate DNA through the lesion.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-Fig3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Polymerases: Friend or Foe?</h4>
+<div>Eukaryotes use specialized DNA polymerases to bypass lesions like cisplatin and other damage, such as <a href="https://pdb101.rcsb.org/motm/91">crosslinks formed by UV radiation</a>. However, cancer cells can hijack these mechanisms to gain resistance to cisplatin. One example is DNA polymerase eta (PDB ID <a href="https://www.rcsb.org/structure/2r8k" target="_blank">2r8k</a>), a repair polymerase that normally helps cells to survive exposure to UV radiation. Cancer cells may use this enzyme to replicate their DNA across the cross-linked lesion. DNA polymerase kappa may also help bypass the cisplatin-DNA lesion (PDB ID <a href="https://www.rcsb.org/structure/6bs1" target="_blank">6bs1</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cisplatin and HMG protein bound to DNA</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/255/255-Cisplatin_and_DNA-1ckt_jmol2.jpg"/></div>
+<p>Cisplatin bends DNA by forming covalent bonds between its central platinum and two adjacent guanine bases. PDB entry <a href="https://www.rcsb.org/structure/1ckt" target="_blank">1ckt</a> includes a short DNA duplex, a cisplatin lesion and the DNA-binding domain of an HMG protein. HMG proteins also bend the DNA when they bind. Notice how the HMG protein intercalates a phenylalanine (cyan) into the DNA helix at the site of the cisplatin-induced bend. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Cisplatin triggers rapid degradation of Copper Transporter 1, reducing influx of cisplatin and increasing resistance to it. Explore the transporter in PDB ID <a href="https://www.rcsb.org/structure/6m97" target="_blank">6m97</a>.</li>
+<li>Glutathione transferase (GST) P1-1 is a cisplatin-binding protein that can inactivate cisplatin. Explore it in PDB ID <a href="https://www.rcsb.org/structure/5djl" target="_blank">5djl</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>5djl: De Luca, A., Parker, L.J., Ang, W.H., Rodolfo, C., Gabbarini, V., Hancock, N.C., Palone, F., Mazzetti, A.P., Menin, L., Morton, C.J., Parker, M.W., Lo Bello, M., Dyson, P.J. (2019) A structure-based mechanism of cisplatin resistance mediated by Glutathione Transferase P1-1. Proc Natl Acad Sci U S A 116, 13943-13951</li>
+<li>6m97: Ren, F., Logeman, B.L., Zhang, X., Liu, Y., Thiele, D.J., Yuan, P. (2019) X-ray structures of the high-affinity copper transporter Ctr1. Nat Commun 10: 1386-1386 </li>
+<li>6bs1: Jha, V., Ling, V. (2018) Structural basis for human DNA polymerase kappa to bypass cisplatin intrastrand cross-link (Pt-GG) lesion as an efficient and accurate extender, J Mol Biol 430: 1577-1589</li>
+<li>5a39: Koch, S.C., Kuper, J., Gasteiger, K.L., Simon, N., Strasser, R., Eisen, D., Geiger, S., Schneider, S., Kisker, C., Carell, T. (2015) Structural insights into the recognition of cisplatin and Aaf-Dg lesion by Rad14 (Xpa). Proc Natl Acad Sci U S A 112: 8272-8277</li>
+<li>Dasari S., Tchounwou P.B. (2014) Cisplatin in cancer therapy: molecular mechanisms of action. Eur J Pharmacol. 740: 364-378</li>
+<li>Shen, D. W., Pouliot, L. M., Hall, M. D., Gottesman, M. M. (2012). Cisplatin resistance: a cellular self-defense mechanism resulting from multiple epigenetic and genetic changes. Pharmacol Rev 64: 706–721</li>
+<li>3lpv: Todd, R.C., Lippard, S.J. (2010) Structure of duplex DNA containing the cisplatin 1,2-{Pt(NH(3))(2)}(2+)-d(GpG) cross-link at 1.77A resolution. J Inorg Biochem 104: 902-908</li>
+<li>2r8k: Alt A., Lammens K., Chiocchini C., Lammens A., Pieck J.C., Kuch D., Hopfner K.P., Carell T. (2007) Bypass of DNA lesions generated during anticancer treatment with cisplatin by DNA polymerase eta. Science. 318: 967-970 </li>
+<li>2r7z: Damsma, G.E., Alt, A., Brueckner, F., Carell, T., Cramer, P. (2007) Mechanism of transcriptional stalling at cisplatin-damaged DNA. Nat Struct Mol Biol 14, 1127–1133</li>
+<li>Cohen, S.M., Lippard, S.J. (2001). Cisplatin: from DNA damage to cancer chemotherapy. Prog Nucl Acid Res Mol Biol 67, 93-130</li>
+<li>Kelland, L. (2007) The resurgence of platinum-based cancer chemotherapy. Nat Rev Cancer 7: 573–584 </li>
+<li>1ckt: Ohndorf, U.-M., Rould, M.A., Pabo, C.O., Lippard, S.J. (1999) Basis for recognition of cisplatin-modified DNA by high-mobility-group proteins. Nature 399: 708–712</li>
+<li>Takahara P.M., Rosenzweig A.C., Frederick C.A., Lippard S.J. (1995) Crystal structure of double-stranded DNA containing the major adduct of the anticancer drug cisplatin. Nature 377: 649-52</li>
+<li>3dnb: Prive, G.G., Yanagi, K., Dickerson, R.E. (1991) Structure of the B-DNA decamer C-C-A-A-C-G-T-T-G-G and comparison with isomorphous decamers C-C-A-A-G-A-T-T-G-G and C-C-A-G-G-C-C-T-G-G. J Mol Biol 217: 177-199</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2021, Helen Gao, Samuel G. Shrem, Saai Suryanarayanan, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_3">http://doi.org/10.2210/rcsb_pdb/mom_2021_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

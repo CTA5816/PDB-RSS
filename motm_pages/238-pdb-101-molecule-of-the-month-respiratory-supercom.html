@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Respiratory Supercomplex</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Respiratory Supercomplex" property="og:title"/>
+<meta content="In our mitochondria, three electron-transport complexes assemble into a supercomplex." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/273/Figure1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/273" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Respiratory Supercomplex" name="twitter:title"/>
+<meta content="In our mitochondria, three electron-transport complexes assemble into a supercomplex." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/273/Figure1.jpg" name="twitter:image"/>
+<meta content="In our mitochondria, three electron-transport complexes assemble into a supercomplex." name="description"/>
+<meta content="electron transport,mitochondria,aerobic energy,ubiquinone,cytochrome c,1zoy,3zcf,5xth,7o37,electron transport,mitochondria,aerobic energy,ubiquinone,cytochrome c,1zoy,3zcf,5xth,7o37" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 273
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 273 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Respiratory Supercomplex</h1>
+<p><i>In our mitochondria, three electron-transport complexes assemble into a supercomplex.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Respirasome composed of complex I (red), complex III (blue), and complex IV (yellow), with the small carrier molecules ubiquinone (taken from PDB ID 7v2c) and cytochrome c (PDB ID 3zcf). The mitochondria-encoded protein subunits are shown in brighter colors in the three complexes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/273/Figure1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Respirasome composed of complex I (red), complex III (blue), and complex IV (yellow), with the small carrier molecules ubiquinone (taken from PDB ID <a href="https://www.rcsb.org/structure/7v2c" target="_blank">7v2c</a>) and <a href="https://pdb101.rcsb.org/motm/36">cytochrome c</a> (PDB ID <a href="https://www.rcsb.org/structure/3zcf" target="_blank">3zcf</a>). The mitochondria-encoded protein subunits are shown in brighter colors in the three complexes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/273/Figure1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Researchers have been wondering for decades if proteins team up into large functional complexes inside cells. Some, such as hypothetical glycosomes that bring together all the <a href="https://pdb101.rcsb.org/motm/50">glycolytic enzymes</a>, still elude detection. But many have been observed, such as the multisynthetase complex that includes eight <a href="https://pdb101.rcsb.org/motm/16">aminoacyl-tRNA synthases</a> and huge supercomplexes of <a href="https://pdb101.rcsb.org/motm/244">photosynthetic reaction centers and antenna proteins</a>. Respiratory supercomplexes are a recent addition to this group. The "respirasome" (PDB entry <a href="https://www.rcsb.org/structure/5xth" target="_blank">5xth</a>) is composed of three membrane-bound members of the electron transport chain: <a href="https://pdb101.rcsb.org/motm/144">complex I</a>, dimeric <a href="https://pdb101.rcsb.org/motm/137">complex III</a>, and <a href="https://pdb101.rcsb.org/motm/5">complex IV</a>. Inside mitochondria, it takes electrons produced by the citric acid cycle (delivered by the carrier molecule NADH) and uses them to create the electrochemical gradient that powers ATP synthase. As described below, other respiratory supercomplexes perform related tasks.</div>
+<h4>Why Team Up?</h4>
+<div>It is still a bit of a mystery why these molecular machines assemble into supercomplexes. The most obvious advantage is that it brings the three close together, so that the little molecules that carry electrons between them, ubiquinone and cytochrome c, don’t have to go far. However, this type of substrate channeling has been difficult to observe in experiments. Intriguingly, researchers have found that the supercomplex reduces production of reactive forms of oxygen, which are generated as a dangerous side product of the normal use of oxygen as the final resting place for the electrons.</div>
+<h4>Evolution of Mitochondria</h4>
+<div>Looking more closely at the three complexes in the respirasome, we can get a snapshot of the early evolution of eukaryotic cells. These complexes are composed of dozens of subunits, and a few of them are encoded by the small DNA genome that is found inside mitochondria. The mitochondrial genome is thought to date back to the early days of the formation of eukaryotic cells, when a symbiotic cell took up residence inside another cell, so this may show us what the earliest forms of the complexes looked like. This idea is also supported by comparing the mitochondrial complexes with similar proteins in bacteria. They all share a set of “core” protein subunits, decorated by many “supernumerary” subunits that help customize the function for each cell type. As you might expect, all of the mitochondria-encoded subunits are also core subunits.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complex III and complex IV held together with SCAF1 (green), and complex II (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/273/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex III and complex IV held together with SCAF1 (green), and complex II (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/273/Figure2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Complex Complexity</h4>
+<div>In mitochondria, the respiratory complexes are found in many states: as individual complexes and as several different supercomplexes. The supercomplex shown here is composed of only complex III and complex IV, glued together with the small protein SCAF1 (PDB ID <a href="https://www.rcsb.org/structure/7o37" target="_blank">7o37</a>). Since its discovery, researchers have hypothesized that this supercomplex makes complex III more accessible to ubiquinone produced by respiratory complex II, shown here from PDB ID <a href="https://www.rcsb.org/structure/1zoy" target="_blank">1zoy</a>. Complex II, or succinate dehydrogenase, works as part of the <a href="https://pdb101.rcsb.org/motm/154">citric acid cycle</a> but also passes electrons to the electron transport chain.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Four Views of Respirasome Structure</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/273/JSmol-jmol.jpg"/></div>
+<p>The resolution revolution of cryoelectron microscopy is now making it possible to see these enormous supercomplexes in detail. Four different coloring schemes are used here to reveal different functional features of the respirasome. The first view colors the complexes by hydrophobicity to reveal the belt of carbon-rich amino acids (yellow) that localize the complexes in the mitochondrial membrane. Another view shows the many cofactors that shuttle electrons through the complexes and ultimately place them on oxygen molecules. The two at the bottom show the mitochondria-encoded subunits and the core subunits, which form the central structure of each complex. To explore these views in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Even larger respiratory supercomplexes have also been observed. For example, take a look at the “megacomplex” in PDB ID <a href="https://www.rcsb.org/structure/5xti" target="_blank">5xti</a>.</li>
+<li>You can explore the cryoEM map for these supercomplexes at the Electron Microscopy Data Bank. For example, take a look at the <a href="https://www.ebi.ac.uk/emdb/EMD-6775">map for the respirasome.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Vercellino, I., Sazanov, L.A. (2022) The assembly, regulation and function of the mitochondrial respiratory chain. Nat Rev Mol Cell Biol 23: 141-161</li>
+<li>7o37: Vercellino, I., Sazanov, L.A. (2021) Structure and assembly of the mammalian mitochondrial supercomplex CIII2CIV. Nature 598: 364-367</li>
+<li>5xth: Guo, R., Zong, S., Wu, M., Gu, J., Yang, M. (2017) Architecture of Human Mitochondrial Respiratory Megacomplex I2III2IV2. Cell 170: 1247-1257.e12</li>
+<li>1zoy: Sun, F., Huo, X., Zhai, Y., Wang, A., Xu, J., Su, D., Bartlam, M., Rao, Z. (2005) Crystal Structure of Mitochondrial Respiratory Membrane Protein Complex II. Cell 121: 1043-1057</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_9">http://doi.org/10.2210/rcsb_pdb/mom_2022_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

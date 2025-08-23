@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Collagen</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Collagen" property="og:title"/>
+<meta content="Sturdy fibers of collagen give structure to our bodies" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/4/collagen.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/4" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Collagen" name="twitter:title"/>
+<meta content="Sturdy fibers of collagen give structure to our bodies" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/4/collagen.gif" name="twitter:image"/>
+<meta content="Sturdy fibers of collagen give structure to our bodies" name="description"/>
+<meta content="collagen fibril,collagen triple helix,hydroxyproline,vitamin C,1cag,1bkv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 4
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 4 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Collagen</h1>
+<p><i>Sturdy fibers of collagen give structure to our bodies</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A small portion of collagen, colored by atom (left) and colored to highlight the three chains (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/4/collagen.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A small portion of collagen, colored by atom (left) and colored to highlight the three chains (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/4/4-Collagen.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Your Most Plentiful Protein</h4>
+<div>About one quarter of all of the protein in your body is collagen. Collagen is a major structural protein, forming molecular cables that strengthen the tendons and resilient sheets that support the skin and internal organs. Bones and teeth are made by adding mineral crystals to collagen. Collagen provides structure to our bodies, protecting and supporting the softer tissues and connecting them with the skeleton. But, in spite of its critical function in the body, collagen is a relatively simple protein.</div>
+<h4>The Collagen Triple Helix</h4>
+<div>Collagen is composed of three chains, wound together in a tight triple helix. The illustration included here shows only a small segment of the entire molecule--each chain is over 1400 amino acids long and only about 20 are shown here. A repeated sequence of three amino acids forms this sturdy structure. Every third amino acid is glycine, a small amino acid that fits perfectly inside the helix. Many of the remaining positions in the chain are filled by two unexpected amino acids: proline and a modified version of proline, hydroxyproline. We wouldn't expect proline to be this common, because it forms a kink in the polypeptide chain that is difficult to accommodate in typical globular proteins. But, as you can see in the examples below, it seems to be just the right shape for this structural protein.</div>
+<h4>Vitamin C</h4>
+<div>Hydroxyproline, which is critical for collagen stability, is created by modifying normal proline amino acids after the collagen chain is built. The reaction requires vitamin C to assist in the addition of oxygen. Unfortunately, we cannot make vitamin C within our bodies, and if we don't get enough in our diet, the results can be disastrous. Vitamin C deficiency slows the production of hydroxyproline and stops the construction of new collagen, ultimately causing scurvy. The symptoms of scurvy--loss of teeth and easy bruising--are caused by the lack of collagen to repair the wear-and-tear caused by everyday activities.</div>
+<h4>Collagen on the Grocery Shelf</h4>
+<div>Collagen from livestock animals is a familiar ingredient for cooking. Like most proteins, when collagen is heated, it loses all of its structure. The triple helix unwinds and the chains separate. Then, when this denatured mass of tangled chains cools down, it soaks up all of the surrounding water like a sponge, forming gelatin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Illustration of basement membrane, with collagen in shades of blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/4/painting.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Illustration of basement membrane, with collagen in shades of blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/4/4-Collagen-painting_large.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Ropes and Ladders</h4>
+<div>We make many different kinds of collagen, which form long ropes and tough sheets that are used for structural support in mature animals and as pathways for cellular movement during development. All contain a long stretch of triple helix connected to different types of ends. The simplest is merely a long triple helix, with blunt ends. These "type I" collagen molecules associate side-by-side, like fibers in a rope, to form tough fibrils. These fibrils crisscross the space between nearly every one of our cells.<br/><br/> This illustration depicts a basement membrane, which forms a tough surface that supports the skin and many organs. A different collagen--"type IV"--forms the structural basis of this membrane. Type IV collagen has a globular head at one end and an extra tail at the other. The heads bind strongly together, head-to-head, and four collagen molecules associate together through their tails, forming an X-shaped complex. Using these two types of interactions, type IV collagen forms an extended network, shown here in light blue. Two other molecules--cross-shaped laminin (blue-green) and long, snaky proteoglycans (green)--fill in the spaces, forming a dense sheet.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Collagen Triple Helix</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/4/4-Collagen-1cag_1bkv_rasmol.jpg"/></div>
+<p>A special amino acid sequence makes the tight collagen triple helix particularly stable. Every third amino acid is a glycine, and many of the remaining amino acids are proline or hydroxyproline. A classic triple helix is shown here on the left, and may be viewed in the PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cag" target="_blank">1cag <i class="fa fa-external-link"> </i></a></span>. Notice how the glycine forms a tiny elbow packed inside the helix and the proline and hydroxyproline smoothly bend the chain back around the helix. In this structure, the researchers placed a larger alanine amino acid in the position normally occupied by glycine, showing that it crowds the neighboring chains. <br/><br/> The collagen helix shown on the right contains a segment of human collagen, and may be viewed in the PDB file <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bkv" target="_blank">1bkv <i class="fa fa-external-link"> </i></a></span>. Notice that the top half is very uniform, where the sequence is the ideal mixture of glycine and prolines. At the bottom, the helix is less regular, because many different amino acids are placed between the equally-spaced glycines. Click on the image for an interactive JSmol view of this structure.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1cag: Bella, J., Eaton, M., Brodsky, B., Berman, H.M. (1994) Crystal and molecular structure of a collagen-like peptide at 1.9 A resolution. Science 266: 75-81</li>
+<li>1bkv: Kramer, R.Z., Bella, J., Mayville, P., Brodsky, B., Berman, H.M. (1999) Sequence dependent conformational variations of collagen triple-helical structure. Nature Structural and Molecular Biology 6: 454-457</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_4">http://doi.org/10.2210/rcsb_pdb/mom_2000_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

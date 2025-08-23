@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Siderocalin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Siderocalin" property="og:title"/>
+<meta content="Our innate immune system starves bacteria of iron using siderocalin." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-3cmp_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/193" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Siderocalin" name="twitter:title"/>
+<meta content="Our innate immune system starves bacteria of iron using siderocalin." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-3cmp_composite.jpg" name="twitter:image"/>
+<meta content="Our innate immune system starves bacteria of iron using siderocalin." name="description"/>
+<meta content="24p3,antimicrobial protein,innate immunity,iron transport,lipocalin,NGAL,Scn,siderocalin,siderophore,3cmp,1lfg,3eyc,4zhd,3fw4,24p3,antimicrobial protein,innate immunity,iron transport,lipocalin,NGAL,Scn,siderocalin,siderophore,3cmp,1lfg,3eyc,4zhd,3fw4" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 193
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 193 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Siderocalin</h1>
+<p><i>Our innate immune system starves bacteria of iron using siderocalin.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="On the left, siderocalin is in blue, bound to the siderophore enterobactin in red. The bound iron ion is shown with an orange sphere at right." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-3cmp_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>On the left, siderocalin is in blue, bound to the siderophore enterobactin in red. The bound iron ion is shown with an orange sphere at right.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-3cmp_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Since its beginning, humankind has been under constant attack by bacteria. To counter this attack, our distant ancestors evolved a manifold collection of molecules for protection. Many of these are hard-wired to fight the most common foes, and make up our "innate" immune system. Many attack weak points of the bacterial cell wall, for instance, <a href="http://pdb101.rcsb.org/motm/9">lysozyme</a> breaks down the protective coat of peptidoglycan and <a href="http://pdb101.rcsb.org/motm/162">dermcidin</a> pierces their cell membranes. Siderocalin attacks an entirely different weak point of bacteria: their need for iron.</div>
+<h4>Iron for Strong Bodies</h4>
+<div>Iron is abundant in the environment, but locked up in forms that are difficult for cells to use. Soluble iron ions, on the other hand, are rather rare. We get most of ours from the food that we eat, conveniently prepackaged in meat and vegetable proteins. Free-living organisms like bacteria, however, need to scavenge for iron and grab it when they find it. Many bacteria build molecules that wrap tightly around iron ions, called siderophores. They secrete these siderophores into the surrounding environment, where they search for trace iron ions. Then, the bacterium gathers up the siderophores and pries out their precious cargo of iron.</div>
+<h4>Starving Bacteria</h4>
+<div>Our innate immune system blocks this process sequestering the siderophores before the bacteria get a chance to find them. We build a protein called siderocalin that has a pocket (fancifully called the "calyx" by structural researchers) that binds extremely tightly to siderophores. The structure shown here (PDB entry <span class="rcsb_id_tag" title="Siderocalin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cmp" target="_blank">3cmp <i class="fa fa-external-link"> </i></a></span>) includes a common siderophore called enterobactin trapped in siderocalin.</div>
+<h4>Bacteria Fight Back</h4>
+<div>Of course, bacterial populations are constantly evolving, and some have discovered ways to circumvent our protection by siderocalin. They do this by creating new "stealth" siderophores that still have the ability to gather iron, but which do not bind to siderocalin (see, for instance, an <a href="https://pdb101.rcsb.org/learn/structural-biology-highlights/anthrax-stealth-siderophores">article on stealth siderophores made by anthrax bacteria</a>). Remarkably, the bacterium that causes Lyme disease has taken an even more drastic approach, and has evolved a proteome that completely removes any need for iron.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Lactoferrin, with iron (yellow) and carbonate ions (red and white), and tear lipocalin, with a small organic compound (red) in the binding site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-1lfg_3eyc.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Lactoferrin, with iron (yellow) and carbonate ions (red and white), and tear lipocalin, with a small organic compound (red) in the binding site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-1lfg_3eyc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Iron Wars</h4>
+<div>The battle for iron is so important that we have also evolved other proteins that participate. Two are shown here. Lactoferrin (PDB entry <span class="rcsb_id_tag" title="Lactoferrin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1lfg" target="_blank">1lfg <i class="fa fa-external-link"> </i></a></span>), takes a different approach, ensuring that the level of free iron ions is so low that bacteria can't find them. It binds to two iron ions, along with carbonate ions, similarly to transferrin, which transports iron in our blood. Lactoferrin, as the name implies, is found in milk and other secreted body fluids, and is also released by white blood cells to soak up all the iron around an infection. Tear lipocalin (PDB entry <span class="rcsb_id_tag" title="Tear Lipocalin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3eyc" target="_blank">3eyc <i class="fa fa-external-link"> </i></a></span>) is the second most plentiful protein in tears (second only to lysozyme), where it plays a number of defensive roles, including binding to molecules such as siderophores.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Siderocalin (PDB entries 3cmp, 4zhd &amp; 3fw4)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/193/193-Siderocalin-4zhd_3fw4.jpg"/></div>
+<p>Structural biologists have discovered several interesting wrinkles on the siderocalin story. Recently, in PDB entry <span class="rcsb_id_tag" title="Siderocalin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4zhd" target="_blank">4zhd <i class="fa fa-external-link"> </i></a></span>, it was discovered that it binds to plutonium and may play a role in the trafficking of toxic radioactive ions in the body. Scientists have also been looking for endogenous siderophores, which would be made naturally by our bodies and help traffic iron ions inside cells. PDB entry <span class="rcsb_id_tag" title="Siderocalin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3fw4" target="_blank">3fw4 <i class="fa fa-external-link"> </i></a></span> includes one candidate, catechol, bound to an iron ion. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Siderocalin is a member of a large group of lipocalins, which have a cup-shaped binding site for molecules. You can explore other members by searching for "lipocalin".</li>
+<li>Iron is used for many functions in cells, for instance, to transport oxygen in hemoglobin and as electron carriers in proteins of the electron transport chain. Try doing an advanced search with the chemical formula "FE" to get a listing of the PDB entries that include iron.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>4zhd: B. E. Allred, P. B. Rupert, S. S. Gauny, D. D. An, C. Y. Ralston, M. Sturzbecher- Hoehne, R. K. Strong &amp; R. J. Abergel (2015) Siderocalin-mediated recognition, sensitization, and cellular uptake of actinides. Proceedings of the National Academy of Science USA 112, 10342-10347.</li>
+<li>A. K. Sia, B. E. Allred &amp; K. N. Raymond (2013) Siderocalins: siderophore binding proteins evolved for primary pathogen host defenses. Current Opinion in Chemical Biology 17, 150-157.</li>
+<li>C. Correnti &amp; R. K. Strong (2012) Mammalian siderophores, siderophore-binding lipocalins, and the labile iron pool. Journal of Biological Chemistry 287, 13524- 13531.</li>
+<li>3fw4: G. Bao, M. Clifton, T. M. Hoette, K. Mori, S. X. Deng, A. Qiu, M. Viltard, D. Williams, N. Paragas, T. Leete, R. Kulkarni, X. Li, B. Lee, A. Kalandadze, A. J. Ratner, J. C. Pizarro, K. M. Schmidt-Ott, D. W. Landry, K. N. Raymond, R. K. Strong &amp; J. Barasch (2010) Iron traffics in circulation bound to a siderocalin (Ngal)-catechol complex. Nature Chemical Biology 6, 602-609.</li>
+<li>3eyc: D. A. Breustedt, L. Chatwell &amp; A. Skerra (2009) A new crystal form of human tear lipocalin reveals high flexibility in the loop region and induced fit in the ligand cavity. Acta Crystallographica Section D 65, 1118-1125.</li>
+<li>1lfg: M. Haridas, B. F. Anderson &amp; E. N. Baker (1995) Structure of human diferric lactoferrin refined at 2.2 A resolution. Acta Crystallographica Section D 51, 629-646.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_1">http://doi.org/10.2210/rcsb_pdb/mom_2016_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

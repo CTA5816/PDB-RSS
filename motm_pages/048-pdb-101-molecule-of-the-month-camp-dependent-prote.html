@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: cAMP-dependent Protein Kinase (PKA)</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: cAMP-dependent Protein Kinase (PKA)" property="og:title"/>
+<meta content="PKA delivers cellular signals by adding phosphates to proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_PKA.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/152" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: cAMP-dependent Protein Kinase (PKA)" name="twitter:title"/>
+<meta content="PKA delivers cellular signals by adding phosphates to proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_PKA.jpg" name="twitter:image"/>
+<meta content="PKA delivers cellular signals by adding phosphates to proteins" name="description"/>
+<meta content="cyclic AMP,energy metabolism,kinases,PKA,protein kinase A,signal transduction,3tnp,1j3h,2h9r,1xp0,1j3h,2cpk,1atp,1jlu,1bx6" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 152
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 152 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: cAMP-dependent Protein Kinase (PKA)</h1>
+<p><i>PKA delivers cellular signals by adding phosphates to proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Inactive (top) and active (bottom) forms of cAMP-dependent protein kinase. Flexible portions of the protein are shown schematically with dots." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_PKA.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Inactive (top) and active (bottom) forms of cAMP-dependent protein kinase. Flexible portions of the protein are shown schematically with dots.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_PKA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Phosphate groups are perfect chemical groups for modifying the function of proteins: they have a strong negative charge, they are fairly bulky, and they can form multiple hydrogen bonds. When a phosphate group is attached or removed to a protein, it may modify the shape and flexibility of the protein chain, or provide a readily-visible handle for recognition by other proteins. Cells take full advantage of these possibilities, and in a typical cell, phosphate groups are used to regulate the function of about one third of their proteins.</div>
+<h4>Adding Phosphates</h4>
+<div>Protein kinases are used to add phosphate groups to proteins. The one shown here is cAMP-dependent protein kinase, also known as protein kinase A or PKA (PDB entries <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3tnp" target="_blank">3tnp <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j3h" target="_blank">1j3h <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2h9r" target="_blank">2h9r <i class="fa fa-external-link"> </i></a></span>). It is composed of two types of subunits. The catalytic subunit, shown here in pink, performs the phosphate-adding reaction. The regulatory subunit, shown in blue, senses the level of cyclic AMP, and turns the catalytic subunits on or off based on that level. When cAMP levels are low, a dimer of the regulatory subunits binds to two copies of the catalytic subunit, forming an inactive complex (shown at the top). When cAMP levels rise, it binds to the regulatory subunit, releasing the catalytic subunit in an active form (shown at the bottom).</div>
+<h4>Second Messengers</h4>
+<div>PKA is an essential link in a cascade of messages that control energy utilization in cells. Receptors such as the beta-adrenergic receptor and the glucagon receptor stimulate the production of cyclic AMP. This activates PKA, which then phosphorylates many proteins involved in generation of cellular energy, regulating proteins like glycogen synthase and pyruvate kinase directly and also changing the synthesis of proteins by phosphorylating key transcription factors.</div>
+<h4>Regulating Kinase</h4>
+<div>As you can imagine, these kinases must be carefully regulated to make sure they add phosphates at the proper time and in the proper place. Several types of regulatory subunits for PKA are built by our cells. By mixing and matching these subunits, different types of cells can tune the function of PKA for their needs. In addition, the regulatory subunits form complexes with other scaffolding proteins, known as AKAP proteins. These scaffolds hold PKA close to its partners in the signaling cascade, further tuning its function. A short peptide from an AKAP is shown in the illustration in green.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Phosphodiesterase 5A with Levitra." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_1xp0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phosphodiesterase 5A with Levitra.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_1xp0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Stopping the Signal</h4>
+<div>Cells also need a method to stop the signal carried by cAMP. Specialized phosphodiesterases break the unusual cyclic phosphate bond in cAMP, forming AMP and making it inactive as a signaling molecule. Cells make many types of phosphodiesterases to tailor cAMP signaling for the needs of particular types of cells. Caffeine (the stimulant in coffee) and theophylline (the stimulant in tea) inhibit many forms of this enzyme, prolonging the energetic messages carried by cAMP. Drugs like Levitra and Viagra, on the other hand, inhibit only one type of phosphodiesterase (shown here from PDB entry <span class="rcsb_id_tag" title="phosphodiesterase 5A"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xp0" target="_blank">1xp0 <i class="fa fa-external-link"> </i></a></span>), and have a more targeted effect.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>cAMP-dependent Protein Kinase (PDB entries 1j3h, 2cpk, 1atp, 1jlu and 1bx6)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/152/152-cAMP-dependentProteinKinase_1atp_jmol.jpg"/></div>
+<p>he catalytic subunit of PKA is very flexible, opening and closing during its phosphate-adding reaction. Like many enzymes that use ATP, the active site is buried deep inside the enzyme, and several metal ions are used to position ATP in the proper place. Crystallographers have determined the structure of many steps in this reaction. To explore some of these structures, click on the image for an interactive Jmol that shows PDB entries <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j3h" target="_blank">1j3h <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2cpk" target="_blank">2cpk <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1atp" target="_blank">1atp <i class="fa fa-external-link"> </i></a></span>, <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jlu" target="_blank">1jlu <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="PKA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bx6" target="_blank">1bx6 <i class="fa fa-external-link"> </i></a></span>.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>To look at the interactions that hold ATP and similar molecules in the active site of PKA, try viewing <a href="https://www.rcsb.org/3d-view/1ATP/1">1atp in Mol*,</a> and click on the ATP molecule.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>D. A. Johnson, P. Akamine, E. Radzio-Andzelm, Madhusudan &amp; S. S. Taylor (2001) </li>
+<li>Dynamics of cAMP-dependent protein kinase. Chemical Reviews 101, 2243-2270.</li>
+<li>S. S. Taylor, C. Kim, D. Vigil, N. M. Haste, J. Yang, J. Wu &amp; G. S. Anand (2005) Dynamics </li>
+<li>of signaling by PKA. Biochimica et Biophysica Acta 1754, 25-37.</li>
+<li>S. H. Francis, M. A. Blount &amp; J. D. Corbin (2011) Mammalian cyclic nucleotide </li>
+<li>phosphodiesterases: molecular mechanisms and physiological functions. </li>
+<li>Physiological Reviews 91. 651-690.</li>
+<li>S. S. Taylor, R. Ilouz, P. Zhang and A. P. Kornev (2012) Assembly of </li>
+<li>allosteric macromolecular switches: lessons from PKA. Nature Reviews </li>
+<li>Molecular and Cellular Biology 13, 646-658.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_8">http://doi.org/10.2210/rcsb_pdb/mom_2012_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

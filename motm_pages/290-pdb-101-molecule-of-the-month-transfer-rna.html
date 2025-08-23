@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Transfer RNA</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Transfer RNA" property="og:title"/>
+<meta content="Transfer RNA translates the language of the genome into the language of proteins" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/15/4tna-figure.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/15" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Transfer RNA" name="twitter:title"/>
+<meta content="Transfer RNA translates the language of the genome into the language of proteins" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/15/4tna-figure.gif" name="twitter:image"/>
+<meta content="Transfer RNA translates the language of the genome into the language of proteins" name="description"/>
+<meta content="aminoacyl-tRNA,anticodon,genetic code,protein synthesis,protein translation,RNA structure,tRNA,4tna,2tra,1yfg,4tna,6tna" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 15
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 15 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Transfer RNA</h1>
+<p><i>Transfer RNA translates the language of the genome into the language of proteins</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Phenylalanine transfer RNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/15/4tna-figure.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phenylalanine transfer RNA.</i></div>
+</div>
+</div>
+</div>
+<div>Since the process of DNA-directed protein synthesis was discovered, scientists and philosophers have searched, more or less seriously, for a relationship between the triplet nucleic acid codons and the chemical nature of the amino acids. These attempts have been uniformly unsuccessful, but remain an occasional topic of speculation because of their possible insights into the origins of life. There does not appear to be a specific interaction between the codons and the amino acids themselves. Instead, the match is made by transfer RNA, the Rosetta Stone that translates the nucleotide language of codons into the amino acid language of proteins. This translation is physical and direct: at one end of each tRNA is an anticodon that recognizes the genetic code, and at the other end is the appropriate amino acid for that code.</div>
+<h4>High Fidelity</h4>
+<div>Errors in the production of proteins can occur at both ends of the tRNA. The proper amino acid must be added to the tip of tRNA, ready to be added to a growing protein chain. A battery of enzymes, termed amino-acyl tRNA synthases, are in charge of this job. They generally make a mistake in about one out of every ten thousand tRNA molecules that they charge with an amino acid. We'll look more carefully at these fascinating proteins in the <a href="http://pdb101.rcsb.org/motm/16">next Molecule of the Month</a>. Errors may also occur at the other end of the tRNA, when the anticodon matches up with a codon. It may simply match improperly--this happens about one time in five hundred. Or, because each codon is three nucleotides long, it may associate in a shifted position, instead of the proper reading frame. This will throw off the rest of the protein, as each successive tRNA lines up in the wrong position after the shifted one. Fortunately, when genetic sequences are read in the wrong frame, they are filled with STOP codons, so the protein synthesis will be aborted after a few dozen more amino acids are added.</div>
+<h4>Making the Most of a Bad Situation</h4>
+<div>Biological evolution is remarkable in its ability to benefit from shortcomings. If there is any way that a problem can be made into an asset, the process of natural selection will find it eventually. Errors in protein synthesis are no exception. Both the mismatch of codon with anticodon and the shifting of reading frames play special functional roles in certain organisms. In many places, different codons are used as START signals. The codons may be GUG, UUG, or AUU, but all use the same methionine tRNA, which normally recognizes the codon AUG. In order for these proteins to be made, the methionine tRNA must pair with these erroneous codons. Shifting of the reading frame is essential in the lifecycle of HIV. When making the long polyprotein, which contains all of the proteins that are found inside the virus, ribosomes make a mistake in one place about 5% of the time, aligning a tRNA incorrectly and shifting the reading frame. This causes the ribosome to miss the normal STOP codon, so a much longer protein is made. These occasional errors are critical for the life of the virus, because the longer proteins contain the enzymes that transcribe the viral genome.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Phenyalanine and aspartate tRNA. The attached amino acids are shown with arrows and the anticodons are shown at the bottom." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/15/two-trna-figure.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phenyalanine and aspartate tRNA. The attached amino acids are shown with arrows and the anticodons are shown at the bottom.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/15/15-TransferRNA-two-trna.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Transfer RNA Structure</h4>
+<div>Transfer RNA molecules are composed of one short chain of RNA, 70-90 nucleotides in length, folded into a trefoil shape. Two different molecules are shown here, phenylalanine tRNA (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4tna" target="_blank">4tna <i class="fa fa-external-link"> </i></a></span>) and aspartate tRNA (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2tra" target="_blank">2tra <i class="fa fa-external-link"> </i></a></span>). The two ends of the RNA chain are close to one another at the pointed end of the L-shaped structure, at the top in this illustration. The amino acid is added here, at the position shown by the arrows. The center of the chain forms the rounded leg of the L, shown here at the bottom, exposing the three nucleotides that form the anticodon. The other two loops of the trefoil are bundled into the elbow, where they provide structure to the whole molecule. The four normal RNA bases-adenine, uracil, guanine and cytosine-- obviously do not provide enough latitude to form a sturdy structure, because many of the bases are modified to enhance their structures. To see two particularly exotic examples, look at the base next to the anticodon, number 37, in the initiator methionine tRNA (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1yfg" target="_blank">1yfg <i class="fa fa-external-link"> </i></a></span>) or the phenylalanine tRNA (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4tna" target="_blank">4tna <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6tna" target="_blank">6tna <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Codon-Anticodon Interaction</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/15/MoM-15-tRNA_Figure_v4-jmol.jpg"/></div>
+<p>PDB ID <a href="https://www.rcsb.org/structure/4v5d" target="_blank">4v5d</a> shows how transfer RNA (blue) translates the nucleotide sequence in messenger RNA (red) into a sequence of amino acids in a new protein. The structure includes a ribosome, three transfer RNA and a messenger RNA. The ribosome isn’t shown here, but you can see it in the <a href="https://pdb101.rcsb.org/motm/121">Molecule of the Month on Ribosomes.</a> In this structure, three transfer RNA are bound to the message: an incoming one at the right and two at the left that are performing the peptide-forming reaction between two phenylalanine amino acids (yellow). The anticodon of these phenylalanine transfer RNAs pair with two complementary codons in the messenger RNA that encode this amino acid, as seen in the close-up on the right. <br/><br/>Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>John G. Arnez and Dino Moras (1999) Transfer RNA. In "Oxford Handbook of Nucleic Acid Structure" (Stephen Neidle, Editor) Oxford University Press. Pages 603-651.</li>
+<li>Alexander Rich and Sung Hou Kim (1978) The Three-dimensional Structure of Transfer RNA. Scientific American 238 (No. 1), 52-62.</li>
+<li>Jack Parker (1989) Errors and Alternatives in Reading the Universal Genetic Code. Microbiological Reviews 53, 273-298.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_3">http://doi.org/10.2210/rcsb_pdb/mom_2001_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

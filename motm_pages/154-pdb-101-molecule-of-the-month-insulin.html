@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Insulin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Insulin" property="og:title"/>
+<meta content="The hormone insulin helps control the level of glucose in the blood" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-4ins.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/14" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Insulin" name="twitter:title"/>
+<meta content="The hormone insulin helps control the level of glucose in the blood" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-4ins.jpg" name="twitter:image"/>
+<meta content="The hormone insulin helps control the level of glucose in the blood" name="description"/>
+<meta content="biotechnology,blood physiology,diabetes mellitus,glucose metabolic process,hormone,4ins,4ins,2hiu,1trz" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 14
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 14 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Insulin</h1>
+<p><i>The hormone insulin helps control the level of glucose in the blood</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Insulin and proinsulin, with A-chain in green, B-chain in blue and disulfide linkages in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-4ins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Insulin and proinsulin, with A-chain in green, B-chain in blue and disulfide linkages in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-2kqp_4ins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Molecular Messenger</h4>
+<div>Our cells communicate using a molecular postal system: the blood is the postal service and hormones are the letters. Insulin is one of the most important hormones, carrying messages that describe the amount of sugar that is available from moment to moment in the blood. Insulin is made in the pancreas and added to the blood after meals when sugar levels are high. This signal then spreads throughout the body, binding to <a href="http://pdb101.rcsb.org/motm/182" target="_blank"> insulin receptors</a> on the surface of liver, muscle and fat cells. Insulin tells these organs to take glucose out of the blood and store it, in the form of glycogen or fat.</div>
+<h4>Folding Tiny Proteins</h4>
+<div>Insulin is a tiny protein. It moves quickly through the blood and is easily captured by receptors on cell surfaces, delivering its message. Small proteins pose a challenge to cells: it is difficult to make a small protein that will fold into a stable structure. Our cells solve this problem by synthesizing a longer protein chain, which folds into the proper structure. Then, the extra piece is clipped away, leaving two small chains in the mature form. These two chains are shown in the lower diagram in blue and green, for insulin from pigs (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ins" target="_blank">4ins <i class="fa fa-external-link"> </i></a></span>). The structure is further stabilized by three disulfide bridges, one of which is seen in yellow in each illustration.</div>
+<h4>Diabetes Mellitus</h4>
+<div>When insulin function is impaired, either by damage to the pancreas or by the rigors of aging, glucose levels in the blood rise dangerously, leading to diabetes mellitus. For people totally deficient in insulin, such as children that develop diabetes early in life, this can be acutely dangerous. High glucose levels lead to dehydration, as the body attempts to flush out the excess sugar in urine, and life-threatening changes in blood pH, as the body turns to other acidic molecules for delivery of energy. Diabetes mellitus has severe long-term effects as well. It is one of the major chronic diseases in the industrialized world. Lowered levels of insulin that may occur as we age allow elevated levels of sugar in the blood over extended periods of time. Sugar molecules attach to proteins throughout the body, compromising their function, and sugars derived from glucose build up, distorting and clogging cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Porcine (left) and human (right) insulin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-4ins_2hiu.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Porcine (left) and human (right) insulin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-4ins_2hiu.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Insulin Therapy</h4>
+<div>Diabetes mellitus may be treated by manually replacing the insulin that is missing in the blood. Of course, we need a plentiful source of insulin for use in these treatments. Fortunately, insulin from pigs (at left, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ins" target="_blank">4ins <i class="fa fa-external-link"> </i></a></span>) differs from human insulin (at right, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hiu" target="_blank">2hiu <i class="fa fa-external-link"> </i></a></span>) by only one amino acid: a threonine at the end of the chain in human insulin is replaced by alanine in pig insulin. Insulin from cows is also very similar, differing in only three positions. Because of their similarity, these forms of insulin are also recognized by our own cells and may be used in therapy. Today, the biotech industry makes human insulin for use in treatment, by engineering bacteria or yeast to produce a protein identical to our own. Researchers have also designed new insulins with enhanced properties, as described in the <a href="http://pdb101.rcsb.org/motm/194" target="_blank">Molecule of the Month on Designer Insulins.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Insulin (PDB entry 1trz)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/14/14-Insulin-1trz_JSmol.jpg"/></div>
+<p>Insulin is a perfect molecule for exploring protein structure. It is small enough that you can display all of the atoms and still have a picture that is not too confusing. Human insulin is pictured here, using entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1trz" target="_blank">1trz</a>. This structure, like many other insulin structures, includes a hexameric complex of the hormone, and only one monomer (composed of one A-chain and one B-chain) is shown here. In the structure, you can see many of the key features that stabilize protein structure. Carbon-rich amino acids, like leucine and isoleucine, cluster in the middle of the molecule, forming a hydrophobic core, and the surface is covered with charged amino acids like arginine and glutamate that interact favorably with the surrounding water. Also notice the three disulfide bridges between cysteine amino acids, which stabilize this tiny protein. To explore these features in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>A paper model is available on PDB-101 to explore the folding of the two insulin chains, including a <a href="https://cdn.rcsb.org/pdb101/learn/resources/insulin-activity-assets/insulin-activity.pdf">template for the model</a> and an <a href="http://pdb101.rcsb.org/learn/paper-models/insulin">activity page.</a></li>
+<li>The hexameric complex of insulin is used to store the hormone before release. For more information, look at the <a href="http://pdb101.rcsb.org/motm/194" target="_blank">Molecule of the Month on Designer Insulins.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/diabetes">Diabetes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecules">Biomolecules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>C. W. Ward &amp; M. C. Lawrence (2011) Landmarks in insulin research. Frontiers in Endocrinology 2, 76.</li>
+<li>2hiu: Q. X. Hua, S. N. Gozani, R. E. Chance, J. A. Hoffmann, B. H. Frank &amp; M. A. Weiss (1995) Structure of a protein in a kinetic trap. Nature Structural Biology 2, 129-138.</li>
+<li>1trz: Ciszak, E. &amp; G. D. Smith (1994) Crystallographic evidence for dual coordination around zinc in the T3R3 human insulin hexamer. Biochemistry 33, 1512-1517.</li>
+<li>4ins: E. N. Baker, T. L. Blundell, J. F. Cutfield, S. M. Cutfield, E. J. Dodson, G. G. Dodson, D. M. Hodgkin, R. E. Hubbard, N. W. Isaacs, C. D. Reynolds, K. Sakabe, N. Sakabe &amp; N. M. Vijayan (1988) The structure of 2Zn pig insulin at 1.5 A resolution. Philosophical Transactions of the Royal Society of London B, 319, 369-456.</li>
+<li>T. Blundell, G. Dodson, D. Hodgkin &amp; D. Mercola (1972) Insulin: the structure in the crystal and it reflection in chemistry and biology. Advances in Protein Chemistry 26, 279-402.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_2">http://doi.org/10.2210/rcsb_pdb/mom_2001_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

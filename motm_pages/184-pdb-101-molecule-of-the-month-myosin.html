@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Myosin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Myosin" property="og:title"/>
+<meta content="Molecular motors fueled by ATP power the contraction of muscles" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/18/1b7t.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/18" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Myosin" name="twitter:title"/>
+<meta content="Molecular motors fueled by ATP power the contraction of muscles" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/18/1b7t.gif" name="twitter:image"/>
+<meta content="Molecular motors fueled by ATP power the contraction of muscles" name="description"/>
+<meta content="actin,actomyosin,molecular motor activity,muscle contraction,power stroke,sarcomere,1b7t,1br1,1atn,2mys" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 18
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 18 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Myosin</h1>
+<p><i>Molecular motors fueled by ATP power the contraction of muscles</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Motor domains of myosin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/18/1b7t.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Motor domains of myosin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/18/18-Myosin-1b7t.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Molecular Motion</h4>
+<div>All of the different movements that you are making right now--your fingers on the computer keys, the scanning of your eyes across the screen, the isometric contraction of muscles in your back and abdomen that allow you to sit comfortably--are powered by myosin. Myosin is a molecule-sized muscle that uses chemical energy to perform a deliberate motion. Myosin captures a molecule of ATP, the molecule used to transfer energy in cells, and breaks it, using the energy to perform a "power stroke." For all of your voluntary motions, when you flex your biceps or blink your eyes, and for all of your involuntary motions, each time your heart beats, myosin is providing the power.</div>
+<h4>Sprinting with Myosin</h4>
+<div>Myosin requires huge amounts of ATP when muscles are exerted. When you start running, the supply of ATP in your muscles lasts only about a second. Then, the muscle cells shift to phosphocreatine, a backup source of energy, which can be converted quickly into about 10 seconds worth of ATP. Then, if you are still running full tilt, your muscles start using glycogen, a molecule that stores glucose. This lasts for a minute or two, building up toxic acids as the sugar is used up. Then, the sprint is over and you have pushed your muscles to the limit. If, however, you slow down and pace yourself, your muscles can perform much longer. The blood vessels will dilate and your heart rate will increase, bringing twenty times as much blood through the muscles. Your muscle cells can then use this extra oxygen to produce far more ATP from the sugar in glycogen. Instead of collapsing after a short sprint, you now have the resources for a mountain hike or a marathon.</div>
+<h4>Anatomy of a Molecular Muscle</h4>
+<div>Myosin is composed of several protein chains: two large "heavy" chains and four small "light" chains. The structures available in the PDB, such as the one shown above, contain only part of the myosin molecule. In the illustration above, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1b7t" target="_blank">1b7t <i class="fa fa-external-link"> </i></a></span>, atoms in the heavy chain are colored red on the left-hand side, and atoms in the light chains are colored orange and yellow. The whole molecule is much larger, as shown on the next page, with a long tail that has been clipped off to allow the molecule to be studied. Fortunately, the crystal structures include most of the "motor" domain, the part of the molecule that performs the power stroke, so we can look at this process in detail.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Illustration of myosin filaments in the muscle sarcomere." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/18/myosin-painting.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Illustration of myosin filaments in the muscle sarcomere.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/18/18-Myosin-painting.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Power in Numbers</h4>
+<div>Each myosin performs only a tiny molecular motion. It takes about 2 trillion myosin molecules to provide the force to hold up a baseball. Our biceps have a million times this many, so only a fraction of the myosin molecules need to be exerting themselves at any given time. By working together, the tiny individual power stroke of each myosin is summed to provide macroscopic power in our familiar world. The painting shows how myosin is arranged inside muscle cells. About 300 myosin molecules bind together, with all of the long tails bound tightly together into a large "thick filament." A short segment of a thick filament is shown in red, next to a scale drawing of a single myosin molecule. The many myosin heads extending from the thick filament then reach over to <a href="http://pdb101.rcsb.org/motm/19">actin filaments</a>, shown in blue and green, and together climb their way up.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Power stroke of myosin: pre-power stroke state (left) and rigor state (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/18/powerstroke.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Power stroke of myosin: pre-power stroke state (left) and rigor state (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/18/18-Myosin-powerstroke.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Power Stroke</h4>
+<div>ATP contains a key phosphate-phosphate bond that is difficult to create and is used to power many processes inside cells. You might be surprised to find, however, that breakage of this phosphate-phosphate bond is not directly responsible for the power stroke in myosin. Instead, it is release of the phosphate left over after ATP is cleaved that powers the stroke. Think of myosin like an arm that can flex towards you or push away. The cleavage of ATP is used in a priming step. When ATP is cleaved, myosin adopts a bent, flexed form, like in the structure on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1br1" target="_blank">1br1 <i class="fa fa-external-link"> </i></a></span>). This prepares myosin for the power stroke. The flexed myosin then grabs the actin filament (shown in green and blue, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1atn" target="_blank">1atn <i class="fa fa-external-link"> </i></a></span>) and release of phosphate snaps it into the straight "rigor" form, as shown on the right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2mys" target="_blank">2mys <i class="fa fa-external-link"> </i></a></span>). This power stroke pushes the myosin molecule along the actin filament. When finished, the remaining ADP is replaced by a new ATP, the myosin lets go of the actin filament. Then, it is ready for the next stroke.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Myosin in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/18/jmol_image-jmol.jpg"/></div>
+<p>Myosin has several functional domains that perform different jobs. The actin-binding domain interacts with actin and contains a site for binding a nucleotide. As the nucleotide cycles through different states, from ATP to ADP/phosphate to ADP alone, it changes the way that myosin interacts with actin. When the phosphate is released, the "converter" domain changes position, and this motion is amplified by the long "lever arm" to move the thick filament. Two structures are shown here: a straight rigor state from PDB ID <a href="https://www.rcsb.org/structure/2mys" target="_blank">2mys</a> and a bent state bound to an analog of ATP from PDB ID <a href="https://www.rcsb.org/structure/1br1" target="_blank">1br1</a>. Click on the image to explore this structural transition in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Ronald D. Vale and Ronald A. Milligan (2000) The Way Things Move: Looking Under the Hood of Molecular Motor Proteins. Science 288, 88-95.	</li>
+<li>John M. Squire (1997) Architecture and Function in the Muscle Sarcomere. Current Opinion in Structural Biology 7, 247-257.	</li>
+<li>Ivan Rayment and Hazel M. Holden (1994) The Three-dimensional Structure of a Molecular Motor. Trends in Biochemical Sciences 19, 129-134.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2001, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2001_6">http://doi.org/10.2210/rcsb_pdb/mom_2001_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

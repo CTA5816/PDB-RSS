@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Coronavirus Proteases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Coronavirus Proteases" property="og:title"/>
+<meta content="Coronavirus proteases are attractive targets for the design of antiviral drugs." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-6lu7.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/242" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Coronavirus Proteases" name="twitter:title"/>
+<meta content="Coronavirus proteases are attractive targets for the design of antiviral drugs." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-6lu7.jpg" name="twitter:image"/>
+<meta content="Coronavirus proteases are attractive targets for the design of antiviral drugs." name="description"/>
+<meta content="coronavirus,cysteine protease,Wuhan,SARS,MERS,antiviral drug,1q2w,4ow0,4yoi,6lu7,COVID-19" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 242
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 242 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Coronavirus Proteases</h1>
+<p><i>Coronavirus proteases are attractive targets for the design of antiviral drugs.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="SARS-CoV-2 (2019-nCoV) coronavirus main protease, with inhibitor in turquoise." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-6lu7.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>SARS-CoV-2 (2019-nCoV) coronavirus main protease, with inhibitor in turquoise.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-6lu7.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>In this world of fast and easy travel, emerging viruses are increasingly becoming a major danger to world health. Coronaviruses are a notable example. Particularly virulent forms have emerged from their natural animal hosts and pose a threat to human communities. In 2003, the SARS virus emerged in China from bat populations, moving to civets and finally to humans. Ten years later, the MERS virus also emerged from bats, transferring in the Middle East to dromedary camels and then to humans. Recently, another coronavirus has emerged in China by way of animals in a live market. Structural biology is helping us understand these dangerous foes, and hopefully will help us develop new ways to fight them.</div>
+<h4>Coronavirus Code</h4>
+<div>Coronaviruses contain a genome composed of a long RNA strand—one of the largest of all RNA viruses. This genome acts just like a messenger RNA when it infects a cell, and directs the synthesis of two long polyproteins that include the machinery that the virus needs to replicate new viruses. These proteins include a replication/transcription complex that makes more RNA, several structural proteins that construct new virions, and two proteases. The proteases play essential roles in cutting the polyproteins into all of these functional pieces.</div>
+<h4>Main Protease</h4>
+<div>The main protease of coronavirus makes most of these cuts. The one shown here (PDB entry <a href="https://www.rcsb.org/structure/6lu7" target="_blank">6lu7</a>) is from the SARS-CoV-2 (2019-nCoV) coronavirus that is currently posing dangers in Wuhan. It is a dimer of two identical subunits that together form two active sites. The protein fold is similar to serine proteases like <a href="https://pdb101.rcsb.org/motm/46">trypsin</a>, but a cysteine amino acid and a nearby histidine perform the protein-cutting reaction and an extra domain stabilizes the dimer. This structure has a peptide-like inhibitor bound in the active site.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="SARS main protease (top) and papain-like protease (bottom), with inhibitor in turquoise." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-1q2w_4ow0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>SARS main protease (top) and papain-like protease (bottom), with inhibitor in turquoise.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-1q2w_4ow0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>SARS Proteases</h4>
+<div>The two proteases from SARS are shown here. The main protease (PDB entry <a href="https://www.rcsb.org/structure/1q2w" target="_blank">1q2w</a>) is similar to the COVID-19 one, and cleaves at 11 sites in the polyproteins. The papain-like protease (PDB entry <a href="https://www.rcsb.org/structure/4ow0" target="_blank">4ow0</a>) has single subunit and also uses a cysteine in the reaction. It makes three specific cuts in the SARS polyproteins, and also clips several proteins in the infected cell, including removing <a href="https://pdb101.rcsb.org/motm/60">ubiquitin</a> from ubiquitinated proteins. One of the consequences of this deubiquitination is that it interferes with production of <a href="https://pdb101.rcsb.org/motm/128"> interferons </a>in the innate immune system, short-circuiting some of our defenses against the virus.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Bat Coronavirus Main Protease with Inhibitor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/242/243-Coronavirus_Proteases-4yoi_jmol.jpg"/></div>
+<p>Researchers are actively using these structures to search for compounds that block the action of the proteases, for use as antiviral drugs. The diversity of coronaviruses poses a great challenge with this effort: coronaviruses have been classified into four separate genera, and sequence and structural studies have shown that the proteases of these viruses can be very different, so drugs designed to fight one may not be effective against others. One possible way to address this challenge is to try to design a broad-spectrum inhibitor targeted against the progenitor bat coronavirus, such as the one shown here from PDB entry <a href="https://www.rcsb.org/structure/4yoi" target="_blank">4yoi</a>, which may then provide a head-start for discovering inhibitors against newly emerging viruses. The active site cysteine and histidine are shown in the illustration, with an inhibitor in turquoise. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>An unusual octameric form of the main protease may be involved in its maturation. You can see it in PDB entry <a href="https://www.rcsb.org/structure/3iwm" target="_blank">3iwm</a>.</li>
+<li>You can compare the folds of coronavirus main proteases and serine proteases using the Pairwise Structure Alignment tool. Try using <a href="https://www.rcsb.org/alignment?request-body=eJydjj0LwjAQhv%2FLzRG0QsVunVwcdZJSYnrWQD5qckVLyX%2F3UkFwdbvcc%2B%2BTd4bHiGGCagY%2FkPYu5jEgjcG1ERk6hW0nSUJ1kyZiEqC8I3xRPrS%2BQ6hgkDo8dUQQYJHuvsvMSZsZ2ZU0unfAyUhhVKxG%2FuUyAzoKU6v5GsrjecfpiAZVrpEFMk72Q2tGV%2BxzoWWxEZztvs%2FtukxJ%2FPiK06H%2B21cU%2B5QaVsJNm6Vrk94WE2TB&amp;response-body=eJzdV01v2zgQ%2FS8%2B24ZIfVDqTZAsWhDFlUQuA6EoDDdWUwOx3bXl7gZB%2FvsOnTSlhNpyvbdNLqGGb2bIeW84eR6tt192ow%2FPo%2BNxvRp9GAXIu288Zzn50mAycVaOP1l%2BboLJ56CxfMtZEuz6o%2FHo0C7b4wH2R3%2FkBZvJ2ehlPNo07VK7Wj6uH7abZtsuNrtVA5u%2BLdf7v9eHBoCGrWm%2F7nTIdjM5fdUu9s3h%2BNiC44%2FPEGN%2FvG%2BP8Om0BMz%2BaXFK0mN%2FEp1E89jct%2Bvd9hT08LR5tYZg%2Btw8LA7NX6cPaAzY1fvStryXl3HHH5Y0vNkfxsHLy6fxz3QX72c85b1vHsClPsPHi16d1%2FV6u2r%2BgWUwHj0224f26%2BhDoNM9j8ReB2mjn0jkX4Z6qAP1iAEdQLodJDGC2u5lKLK6UZFt%2FQQ7Q1ivh3WvThlZQQ%2FrG1hrAIx7SXtG0ogMgO1e5MC86KEju6QDxsg88tCZvW5kbLIjANpe5qR%2FKyd1Sc9wcoCSvatyrOtr5Fpn2TxQILd7UOJfr4Mu0jeR%2BDLU75HCCq6%2BpKBXGGSEHVRfT0G6fbxLdwCLrNuVi9zbldsn4m8p17EuKHfoxF5XfMgn15%2BY9LCm6vFAmbBFLgoXHpx2v9wevuz2m2X744FBY%2Bvt95d%2FgdytKcEO9qzA8d3xxJoiByPf87Hj6ZVHHGJ5boD1flh5JPBhaWub5ViuYwfEdcBEbNdyLd%2F1YKP2YoOTwLdfvQR%2BYFkBcuBRAJjn%2BeDWdrTPiYunhHgexPeJOyZ4ioh2RLwgGBMytR3fgvo4EAPpIx6Om81y%2F6Tf48P97sck8H35eISxwp5q6rZP3%2FSIUeUiHukrfTNaUwe9G2U%2BOcG7G7Te3jbArR%2Bb7X0zWa%2Fg2V63TyP9om%2FhJd8uIOp6dWwWeog5aL0E2qInm8dm9cOqE4PBYoyxrdOGImoo1AvS9C099mwX97vvzX75APE%2BwmW4%2FqfXseEt9NmpYWAUMRueIeQBXtvO2S5rD%2FRKgm7tlQTf3iud23slvrlXBuR8q8RDnQP32o4b%2FMab36vPb7Udu%2F9qm7z4L%2FPCUJGQ36UGBhkbYE%2FT%2FWH57ZXUxj6DfJ6OYA4OQY9dJvP606pp648qHfJYF4zogleE7d5baRqdoP8omVZi98vfqRHqkdK8Rtwvvml0TL%2FI7ChQIUGTKsvDpBA0UzMa5apUMqJSSsYpu2NxrFQdFdVcpZEUszhnvOD1LGYsrTLB5zxhqgwpVyWrVErnIi95pFjGMhXLkBeZLLI6S1SVlgUtZSIUC6OaUwEBVV1GYV4VPJFpRkUCEUVEhaIJT%2BM6jpRIojqfz%2FMZKyRV85DKmM0oT2paJCquShmWof4oZSoVB893rA5DlXIaV3fgrkpO54gTzlSYZzUkXjBZxnMVp4wWTISlpGmoWJxHoWDZjLGS05zTSoJdhIzN4lkiiwQuoSojyFgm5emJuK75dptDn8SXBNrVp3N9770w4Q4I2%2B11bVPWztAEFfR0bf4HYgfnZO31WrRhcs3wfc17%2FnmRYYQuaOEX%2FcYQg4rhJ0sVpTVoIORSFXWpBOOC1vMkolSwlIvyTikRhvOozgRNS1UxOot5yhXoh8%2FKJBWhyESq5oWoueBAQB6nOUtBEwDT3ioVilQAqQXQDghcRiwV9I5ymQlBpaiLGCQUsSwsUiZiISJA1qCfVAqeJ1FIa9ABzWIRlTQWlBZKATszVtJUiTsqaBSWGc8KkJjMVMRr%2BJpmpUxDwU%2BDy%2F9%2BbHr5F3MrzS8%3D&amp;encoded=true">trypsinogen (PDB entry 2tga)</a>, so that the whole enzyme is one chain for the alignment.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Cui, J., Li, F., Shi, Z.L. (2019) Origin and evolution of pathogenic coronaviruses. Nat. Rev. Microbiol. 17, 181-192.</li>
+<li>4yoi: St John, S.E., Tomar, S., Stauffer, S.R., Mesecar, A.D. (2015) Targeting zoonotic viruses: Structure-based inhibition of the 3C-like protease from bat coronavirus HKU4-The likely reservoir host to the human coronavirus that causes Middle East Respiratory Syndrome (MERS). Bioorg.Med.Chem. 23: 6036-6048</li>
+<li>4ow0: Baez-Santos, Y.M., Barraza, S.J., Wilson, M.W., Agius, M.P., Mielech, A.M., Davis, N.M., Baker, S.C., Larsen, S.D., Mesecar, A.D. (2014) X-ray Structural and Biological Evaluation of a Series of Potent and Highly Selective Inhibitors of Human Coronavirus Papain-like Proteases. J.Med.Chem. 57: 2393-2412</li>
+<li>Hilgenfeld, R. (2014) From SARS to MERS: crystallographic studies on coronaviral proteases enable antiviral drug design. FEBS J. 281,4085-4096</li>
+<li>1q2w: Pollack, A. (2003) Company says it mapped part of SARS virus. New York Times, July 30, section C, page 2.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_2">http://doi.org/10.2210/rcsb_pdb/mom_2020_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

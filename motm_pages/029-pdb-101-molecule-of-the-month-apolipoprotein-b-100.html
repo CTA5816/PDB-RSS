@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Apolipoprotein B-100 and LDL Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Apolipoprotein B-100 and LDL Receptor" property="og:title"/>
+<meta content="Insights into how LDL is removed from the bloodstream" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/304/9BDTdimer_1000px.png" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/304" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Apolipoprotein B-100 and LDL Receptor" name="twitter:title"/>
+<meta content="Insights into how LDL is removed from the bloodstream" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/304/9BDTdimer_1000px.png" name="twitter:image"/>
+<meta content="Insights into how LDL is removed from the bloodstream" name="description"/>
+<meta content="LDL,ApoB100,cholesterol,lipoprotein" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 304
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 304 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Apolipoprotein B-100 and LDL Receptor</h1>
+<p><i>Insights into how LDL is removed from the bloodstream</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="ApoB100 (orange) wraps around the LDL particle like a belt. LDL receptors (pink and purple) bind to multiple locations on ApoB100 (PDB 9BDT)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/304/9BDTdimer_1000px.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ApoB100 (orange) wraps around the LDL particle like a belt. LDL receptors (pink and purple) bind to multiple locations on ApoB100 (PDB <a href="https://www.rcsb.org/structure/9BDT" target="_blank">9BDT</a>).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/304/9BDTdimer.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Lipoproteins are protein-lipid particles that travel in the bloodstream and act as delivery vehicles for diverse lipids including triglycerides, cholesterol, and phospholipids. These fats are needed by tissues throughout the body to maintain essential functions, such as building and maintaining lipid bilayers. However, the levels of lipoprotein particles in circulation must be carefully regulated; a diversity of health issues can arise if lipoproteins are allowed to accumulate.</div>
+<h4>A Fat Delivery System</h4>
+<div>The journey of most lipoproteins begins in the liver, where specialized cells produce and release particles known as very low-density lipoproteins (VLDLs) that are packed with triglycerides, cholesterol (and cholesterol derivatives) and phospholipids, and proteins known as apolipoproteins. As VLDL circulates in the bloodstream, cells in various tissues extract triglycerides for energy or storage, gradually shrinking and altering the particle's composition. This process ultimately transforms VLDL into a low-density lipoprotein (LDL), which is enriched in cholesterol relative to VLDLs. The protein composition of the lipoprotein also changes, with different apolipoproteins being exchanged or removed from the particle during circulation. Apolipoprotein B-100 (or ApoB100), however, which is a large amphipathic protein that forms a belt-like structure (shown in orange in the image to the right, PDB <a href="https://www.rcsb.org/structure/9BDT" target="_blank">9BDT</a>), remains tightly bound to the particle throughout its journey from VLDL to LDL.</div>
+<h4> </h4>
+<div>Circulating LDL eventually returns to the liver, where it is absorbed and broken down by liver cells. These cells express specialized LDL receptors (shown in purple and pink) that recognize and bind to ApoB100. Once bound, the LDL particle is engulfed by the cell through a process called endocytosis.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Under acidic conditions (shown as pink background), the LDL receptor folds in on itself (right, PDB 1N7D). This is thought to release the LDL particle (yellow, PDB 9BDT ) into the endosome lumen." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/304/LDLR_comparison_1000px.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Under acidic conditions (shown as pink background), the LDL receptor folds in on itself (right, PDB <a href="https://www.rcsb.org/structure/1N7D" target="_blank">1N7D</a>). This is thought to release the LDL particle (yellow, PDB <a href="https://www.rcsb.org/structure/9BDT" target="_blank">9BDT</a> ) into the endosome lumen.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/304/LDLR_comparison.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Letting Go of LDL</h4>
+<div>The acidic environment of the endosome triggers release of the LDL particle. This process is thought to occur through the protonation of the LDL receptor, which decreases its affinity for the LDL particle and increases its affinity for itself. The LDL receptor folds back on itself, as shown in the figure on the right (PDB <a href="https://www.rcsb.org/structure/1N7D" target="_blank">1N7D</a>), and releases the LDL particle into the vesicle lumen. The LDL particle is then trafficked to the lysosome or other cellular compartments, while the LDL receptor is recycled back to the plasma membrane.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A full-length model of ApoB100 (PDB 9EAG) is shown here in two different orientations.
+" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/304/ApoB100_9EAG_1000px.png"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A full-length model of ApoB100 (PDB <a href="https://www.rcsb.org/structure/9EAG" target="_blank">9EAG</a>) is shown here in two different orientations.
+</i></div><a href="https://cdn.rcsb.org/pdb101/motm/304/ApoB100_9EAG.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Adjusting for Size</h4>
+<div>When VLDL is first released by liver cells, it measures around 30–60 nm in diameter and is packed with triglycerides. By the time it is transformed into LDL and endocytosed, its size has shrunk to about 20 nm. Remarkably, throughout this journey, ApoB100 remains tightly wrapped around the lipoprotein, flexibly adapting to its changing size. Recent insights from an integrative modeling approach—combining data from cryo-EM, structural predictions, and molecular dynamics simulations—reveal how this flexibility is achieved. The central beta belt of ApoB100 can adjust by tightening or loosening, with its ends sliding past one another to accommodate the particle as it shrinks. Flexible interstrand inserts within ApoB100 can bend and contact other ApoB100 segments when the particle is at its smallest, but can easily accommodate larger particles by straightening bent regions and releasing contacts. This structural adaptability allows ApoB100 to remain wrapped around the lipoprotein as it changes in size and composition.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Mutations Causing Familial Hypercholesterolemia</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/304/jMol_snapshot-jmol.PNG"/></div>
+<p>If excess cholesterol is allowed to circulate in the bloodstream for an extended period of time, cholesterol-rich plaques can form in and on the walls of arteries, a disease known as atherosclerosis. Over time, arteries can become narrow or blocked, causing strokes or heart attacks. Familial hypercholesterolemia is a hereditary disorder that is characterized by high levels of circulating LDL. In many cases, this disease is caused by mutations in the genes encoding ApoB100 or the LDL receptor. You can take a closer look at mutations that have been localized to the binding interface between ApoB100 and LDL receptor by clicking on the JSmol tab.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Explore how apolipoproteins inspired the engineering of <a href="https://pdb101.rcsb.org/motm/237">nanodiscs</a>, a key tool for the structural study of membrane proteins.</li>
+<li>Take a closer look at how lipids are stored in <a href="https://pdb101.rcsb.org/sci-art/goodsell-gallery/lipid-droplets">lipid droplets</a> in cells. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>9BDT: Reimund M, Dearborn AD, Graziano G, Lei H, Ciancone AM, Kumar A, Holewinski R, Neufeld EB, O'Reilly FJ, Remaley AT, Marcotrigiano J. Structure of apolipoprotein B100 bound to the low-density lipoprotein receptor. Nature. 2024 Dec 11; 638:829-835.</li>
+<li>1N7D: Rudenko G, Henry L, Henderson K, Ichtchenko K, Brown MS, Goldstein JL, Deisenhofer J. Structure of the LDL receptor extracellular domain at endosomal pH. Science. 2002 Dec 20;298(5602):2353-8.</li>
+<li>9EAG: Berndsen ZT, Cassidy CK. The structure of apolipoprotein B100 from human low-density lipoprotein. Nature. 2024 Dec 11; 638:836-843.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2025, Janet Iwasa</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2025_4">http://doi.org/10.2210/rcsb_pdb/mom_2025_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The <a href="https://pdb101.rcsb.org/motm/motm-about">Molecule of the Month</a> series presents short accounts on selected topics from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details. The series is currently created by Janet Iwasa (University of Utah).</small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

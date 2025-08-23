@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Microtubules</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Microtubules" property="og:title"/>
+<meta content="The largest filaments of the cytoskeleton provide tracks for transport throughout the cell" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_3j2u.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/175" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Microtubules" name="twitter:title"/>
+<meta content="The largest filaments of the cytoskeleton provide tracks for transport throughout the cell" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_3j2u.jpg" name="twitter:image"/>
+<meta content="The largest filaments of the cytoskeleton provide tracks for transport throughout the cell" name="description"/>
+<meta content="anticancer drug,cell division,cholchicine,cytoskeleton,paclitaxel,Taxol,Tubulin,vinblastine,1tub,3j2u,1ffx,1z2b,1jff" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 175
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 175 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Microtubules</h1>
+<p><i>The largest filaments of the cytoskeleton provide tracks for transport throughout the cell</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Tubulin assembled into a short microtubule." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_3j2u.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Tubulin assembled into a short microtubule.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_3j2u.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Microtubules are the railways of the cell. They are huge, sturdy filaments that extend through the cytoplasm, providing support and providing tracks for the motion of two types of protein motors: kinesin and dynein. These motors pull many types of cargo through the cell, ranging from small vesicles to entire mitochondria. They also play a starring role in the process of cell division, separating the duplicated chromosomes into two daughter cells.</div>
+<h4>Tubulin Tubules</h4>
+<div>Microtubules are composed of a cylindrical shell of the protein tubulin. This tubulin comes in two similar forms, called alpha and beta tubulin, which form a tight dimeric complex. They then stack side-by-side to form the cylindrical tubule. The first structure of tubulin, from PDB entry <span class="rcsb_id_tag" title="Tubulin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tub" target="_blank">1tub <i class="fa fa-external-link"> </i></a></span> (not shown), was solved by studying flat sheets of tubulin by electron crystallography. The structure shown here, from PDB entry <span class="rcsb_id_tag" title="Tubulin &amp; Kinesin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3j2u" target="_blank">3j2u <i class="fa fa-external-link"> </i></a></span>, was solved using a crystal structure of a tubulin dimer to interpret a reconstruction of the whole filament (complexed with kinesin) from electron microscopy. Only a short piece of the filament is shown--in the cell, microtubules are much longer, with thousands of tubulin subunits.</div>
+<h4>Dynamic Instability</h4>
+<div>Microtubules are in a constant state of growth and shrinkage, in a process called dynamic instability. This is controlled by a molecule of GTP that is bound to the beta subunit of tubulin. Free tubulin dimers have GTP bound, and this forms a stable complex when it adds to a growing filament. But later, the GTP is cleaved to GDP, and the GDP-bound tubulin is less stable in the filament. If the GDP-bound tubulin is at the end of the filament, it can start a process of disassembly. If, however, a new GTP-bound tubulin binds to the shrinking end, it stops the process and the microtubule starts growing again.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Stathmin (magenta) destabilizes microtubules by binding to tubulin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_1ffx.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Stathmin (magenta) destabilizes microtubules by binding to tubulin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_1ffx.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Assisting Tubulin</h4>
+<div>A diverse collection of proteins assist microtubules in the many tasks that they perform, forming a variety of linkers, nucleators, and regulators. The protein shown here in magenta is stathmin, a microtubule-destabilizing protein (PDB entry <span class="rcsb_id_tag" title="Tubulin &amp; Stathmin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ffx" target="_blank">1ffx <i class="fa fa-external-link"> </i></a></span>). It binds to two dimers of tubulin, and acts by either locking up the dimers and preventing assembly, or promoting disassembly of an existing microtubule. Stathmin as been very useful to scientists. Tubulin has been difficult to study by crystallography, since it typically forms microtubules instead of crystals. The complex with stathmin, on the other hand, can be crystallized and used to determine the atomic structure.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Tubulin Drugs (PDB entries 1jff and 1z2b)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/175/175-Microtubules_1z2b_1jff_JSmol.jpg"/></div>
+<p>Given their central role in cell division, microtubules are the target of many important toxins and drugs. For instance, some anticancer drugs act this way: they are designed to block the malignantly rapid growth of the cancer cells by blocking the normal dynamics of microtubules. Three molecules that block microtubule action, all produced by plants, are shown here: colchicine and vinblastine block the assembly of microtubules, and the anticancer drug paclitaxel (Taxol) promotes the assembly, binding so tightly that disassembly is virtually impossible (PDB entries <span class="rcsb_id_tag" title="Tubulin, Stathmin, Colchicine &amp; Vinblastine"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1z2b" target="_blank">1z2b <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Tubulin &amp; Paclitaxel"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jff" target="_blank">1jff <i class="fa fa-external-link"> </i></a></span>). To look at these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The use of stathmin has allowed the determination of the structures of many different inhibitors bound to tubulin. You can use the Ligand Explorer to explore the ways these inhibitors are bound.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>3j2u: A. B. Asenjo, C. Chatterjee, D. Tan, V. Depaoli, W. J. Rice, R. Diaz-Avalos, M. Silvestry &amp; H. Sosa (2013) Structural model for tubulin recognition and deformation by kinesin-13 microtubule depolymerases. Cell Reports 3, 759-768.</li>
+<li>L. A. Amos (2011) What tubulin drugs tell us about microtubule structure and dynamics. Seminars in Cell &amp; Developmental Biology 22, 916-926.</li>
+<li>R. H. Wade (2009) On and around microtubules: an overview. Molecular Biotechnology 43, 177-191.</li>
+<li>1z2b: B. Gigante, C. Wang, R. B. Ravelli, F. Roussi, M. O. Steinmetz, P. A. Curmi, A. Sobel &amp; M. Knossow (2005) Structural basis for the regulation of tubulin by vinblastine. Nature 435, 519-522.</li>
+<li>1jff: J. Lowe, H. Li, K. H. Downing &amp; E. Nogales (2001) Refined structure of alpha beta-tubulin at 3.5 A resolution. Journal of Molecular Biology 313, 1045-1057.</li>
+<li>1ffx: B. Gigant, P. A. Curmi, C. Martin-Barbey, E. Charbaut, S. Lachkar, L. Lebeau, S. Siavoshian, A. Sobel &amp; M. Knossow (2000) The 4 A structure of a tubulin:stathmin-like domain complex. Cell 102, 809-816.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2014, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2014_7">http://doi.org/10.2210/rcsb_pdb/mom_2014_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

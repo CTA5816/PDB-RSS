@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Importins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Importins" property="og:title"/>
+<meta content="Importins deliver proteins into the nucleus through the nuclear pore complex" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/85/85_1qgk-composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/85" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Importins" name="twitter:title"/>
+<meta content="Importins deliver proteins into the nucleus through the nuclear pore complex" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/85/85_1qgk-composite.jpg" name="twitter:image"/>
+<meta content="Importins deliver proteins into the nucleus through the nuclear pore complex" name="description"/>
+<meta content="active transport,cell nucleus,karyopherins,nuclear localization sequence binding,protein import into nucleus,ran GTP-binding protein,1qgk,1ee5,1k5j,2bku),1wa5,2bpt" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 85
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 85 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Importins</h1>
+<p><i>Importins deliver proteins into the nucleus through the nuclear pore complex</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Complex of importin-beta (blue), importin-alpha (green), and the cargo nucleoplasmin (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/85/85_1qgk-composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of importin-beta (blue), importin-alpha (green), and the cargo nucleoplasmin (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/85/85-Importins-1qgk-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Inside your cells, the process of protein synthesis is separated into two compartments. The first half of the job, when DNA is transcribed into RNA, is performed in the nucleus. The second half is then performed outside the nucleus, when ribosomes translate the RNA to construct proteins in the cytoplasm. This separation requires a continuous traffic of molecules: new RNA molecules must be transported out of the nucleus and nuclear proteins, such as newly-synthesized histones or polymerases, must be transported back into the nucleus. Huge tube-shaped nuclear pores act as the highway connecting the nucleus and the cytoplasm, and importins and exportins (collectively known as karyopherins) ferry molecules back and forth through the pore.</div>
+<h4>Special Delivery</h4>
+<div>Importins transport thousands of different proteins into the nucleus to perform the many tasks of storing, reading, and repairing the genome. However, it would be far too costly to design a special importin to carry each one inside. Instead, many nuclear proteins are built with a special tag—a short sequence called the nuclear localization signal—that tells the transport machinery to carry the protein into the nucleus. Importins recognize this signal, bind to the protein, and transport it through the nuclear pore.</div>
+<h4>The Import Business</h4>
+<div>The importin complex shown here (built from three separate PDB entries) transports proteins with nuclear localization signals. At the top in blue is importin-beta (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1qgk" target="_blank">1qgk <i class="fa fa-external-link"> </i></a></span>). It is the engine of the complex, recognizing nuclear pores and moving through them. It wraps around the end of importin-alpha, shown at the center in green (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ee5" target="_blank">1ee5 <i class="fa fa-external-link"> </i></a></span>). Importin-alpha is an adapter molecule that connects importin-beta with the cargo. In this picture, the cargo is nucleoplasmin, shown at the bottom in yellow (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k5j" target="_blank">1k5j <i class="fa fa-external-link"> </i></a></span>), a chaperone protein that is important in nucleosome assembly. Notice how the extended nuclear localization signal of this cargo is gripped by importin-alpha.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Importin-beta and Ran (left), and exportin Cse1p complexed with Kap60p and Ran (right)" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/85/85_2bku-1wa5.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Importin-beta and Ran (left), and exportin Cse1p complexed with Kap60p and Ran (right)</i></div><a href="https://cdn.rcsb.org/pdb101/motm/85/85-Importins-2bku-1wa5.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Exit Strategy</h4>
+<div>Once the importin-beta/importin-alpha/cargo complex gets inside the nucleus, the cargo must be released and the importins must be recycled back to the cytoplasm. The Ran protein, shown here in light red, is responsible for releasing the cargo. It binds to importin-beta and causes a significant change in shape, leading to the release of importin-alpha and the cargo. Then, the complex of importin-beta and Ran (shown on the left, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2bku)" target="_blank">2bku) <i class="fa fa-external-link"> </i></a></span> travels back through the pore. Outside, a GTP molecule in Ran (shown in bright red) is cleaved and the Ran dissociates, leaving importin-beta ready to carry the next cargo protein inside. Importin-alpha can't get back to the cytoplasm by itself, so it gets some help from CAS (a nuclear export factor), shown here on the right in purple (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1wa5" target="_blank">1wa5 <i class="fa fa-external-link"> </i></a></span>). CAS is similar to importin-beta, but moves through the nuclear pore in the opposite direction. It binds to importin-alpha and Ran and carries them out of the nucleus. Then, a similar cleavage of the GTP in Ran releases importin-alpha for another round of transport.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/85/85_2bpt-rasmol.jpg"/></div>
+<div>The actual mechanisms that importins use to pull molecules through the nuclear pore are still a subject of active debate, but PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2bpt" target="_blank">2bpt <i class="fa fa-external-link"> </i></a></span> gives some hints of how it might be done. The thousands of proteins that make up the nuclear pore are covered with special amino acid sequences that are flexible and that contain many phenylalanines. One side of importin-beta binds to these special sequences. The structure shown here includes the full importin-beta (in rainbow-colored cylinders) and a few short pieces from the nuclear pore proteins (shown in spheres at the bottom, with the phenylalanine amino acids in red). Notice that the phenylalanines bind in pockets on the outer surface of the importin. Importin-beta may jump from site to site through the nuclear pore, guided by these special sequences. <br/><br/> As you take a look at these structures yourself, take a moment to explore the unusual fold of the chain. Importin-beta is folded like a spring, which then wraps into a big spiral that traps its binding partners inside.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. Stewart (2006) Structural basis of the nuclear protein import cycle. Biochemical Society Transactions 34, 701-704.</li>
+<li>E. Conti, C. W. Muller and M. Stewart (2006) Karyopherin flexibility in nucleocytoplasmic transport. Current Opinion in Structural Biology 16, 237-244.</li>
+<li>D. S. Goldfarb, A. H. Corbett, D. A. Mason, M. T. Harreman and S. A. Adam (2004) Importin alpha: a multipurpose nuclear-transport receptor. Trends in Cell Biology 14, 505-514.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_1">http://doi.org/10.2210/rcsb_pdb/mom_2007_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

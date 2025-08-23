@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glycolytic Enzymes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glycolytic Enzymes" property="og:title"/>
+<meta content="The ten enzymes of glycolysis break down sugar in our diet" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/50/glycolysis.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/50" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glycolytic Enzymes" name="twitter:title"/>
+<meta content="The ten enzymes of glycolysis break down sugar in our diet" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/50/glycolysis.gif" name="twitter:image"/>
+<meta content="The ten enzymes of glycolysis break down sugar in our diet" name="description"/>
+<meta content="carbohydrate metabolic process,enolase,fructose 1,6-bisphosphate aldolase,glyceraldehyde-3-phosphate dehydrogenase,glycolysis,hexokinase,phosphofructokinase,phosphoglucose isomerase,phosphoglycerate kinase,phosphoglycerate mutase,pyruvate kinase,triose phosphate isomerase,2yhx,1hkg,1ig8,1bdg,1dgk,1hox,4pfk,4pfk,6pfk,4ald,1j4e,1zen,1ojx,2ypi,3gpd,1nqo,1nqo,3pgk,1vpe,3pgm,1eqj,1e58,2one,1e0u,1a3w" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 50
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 50 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glycolytic Enzymes</h1>
+<p><i>The ten enzymes of glycolysis break down sugar in our diet</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glycolytic enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/glycolysis.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glycolytic enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-glycolysis.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Glucose powers cells throughout your body. Glucose is a convenient fuel molecule because it is stable and soluble, so it is easy to transport through the blood from places where it is stored to places where it is needed. Glucose is packed with chemical energy, ready for the taking. In a test tube, you can burn glucose, forming carbon dioxide and water and a lot of light and heat. Our cells also burn glucose, but they do it in many small, well-controlled steps, so that they can capture the energy in more useable forms, such as ATP (adenosine triphosphate). Glycolysis (sugar-breaking) is the first process in the cellular combustion of glucose.</div>
+<h4>Sugar Breaking</h4>
+<div>Glycolysis starts with a molecule of glucose and then performs ten stepwise chemical transformations. During this process, the sugar molecule is primed with two phosphates (using up two ATP molecules), then broken into two pieces, and finally reshaped and dehydrated, forming four ATP molecules in the process. Overall, glycolysis builds two new ATP molecules using the energy of this partial breakdown of sugar. The ATP may then be used to power molecular processes throughout the cell. In addition, one step in glycolysis also extracts four hydrogen atoms from the sugar molecule, which may be used for biosynthesis or to create additional chemical energy.</div>
+<h4>After Glycolysis</h4>
+<div>The sixth enzyme in glycolysis removes several hydrogen atoms from the sugar, transferring them to the small carrier molecule NAD (nicotinamide adenine dinucleotide). These would build up if glycolysis was the only process under way, so cells have developed several different ways of dealing with them and balancing the books. Many cells, including most of our own, eventually combine them with oxygen to form water, building a lot of additional ATP in the process (see the <i>Molecule of the Month</i> on <a class="mom_big" href="https://pdb101.rcsb.org/motm/5">cytochrome c oxidase</a>). Yeast cells use another enzyme (see the <i>Molecule of the Month</i> on <a class="mom_big" href="https://pdb101.rcsb.org/motm/13">alcohol dehydrogenase</a>) to add the hydrogen atoms back to the broken sugar molecule, forming alcohol, which is excreted from the cell. Every time you drink a beer or have a glass of wine, you are drinking alcohol produced in this way. Overworked muscles, which are contracting too fast for enough oxygen to enter, add the hydrogen atoms back in a different way to form lactic acid. During anaerobic exercise, this lactic acid builds up and must be broken down later when oxygen becomes available.</div>
+<h4>A Perfect Ten</h4>
+<div>Glycolysis is endlessly fascinating. In these ten enzymes, you can find examples of many of the important molecular processes that animate our cells. They have been perfected by evolution to perform their diverse chemical tasks quickly and efficiently--adding, removing, and shifting atoms without making mistakes. The pathway is carefully regulated, so that glucose is only broken down when energy is needed. Within glycolysis, you will find examples of allosteric enzymes that change shape during their function; enzymes that form covalent bonds to their substrates during the reaction; and enzymes that use metal ions or organic molecules to assist. Some of these enzymes are so efficient that they work faster than sugar molecules can get to them. The entire pathway is orchestrated so that each step proceeds smoothly, but not uncontrollably, towards the goal of capturing the energy as sugar is broken.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Human hexokinase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/01-1dgk.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human hexokinase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-01-1dgk.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Induced fit motion in yeast hexokinase: open form (left) and closed form (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/01-1hkg-2yhx.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Induced fit motion in yeast hexokinase: open form (left) and closed form (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-01-1hkg-2yhx.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Hexokinase</h4>
+<div>Hexokinase performs the first step in glycolysis, using an ATP molecule to start the process. It transfers a phosphate from ATP to glucose, forming glucose-6-phosphate. Daniel Koshland realized, a decade before the structure was known, that this chemical reaction must be shielded from water, to keep the phosphate from being simply cleaved off of ATP by a water molecule. So he proposed that hexokinase performs an <i>induced fit</i>, closing around ATP and glucose once they are bound. When several structures of yeast hexokinase were solved in the 1970's, this was shown to be true. Hexokinase is shaped like a clamp, with a big groove in one side (shown in the figure with an arrow). The structure without glucose (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2yhx" target="_blank">2yhx <i class="fa fa-external-link"> </i></a></span>) is open, allowing access to the active site. But when glucose binds (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hkg" target="_blank">1hkg <i class="fa fa-external-link"> </i></a></span>), it closes down, surrounding the molecule. These two structures were solved before the amino acid sequence was known, so the structures are incomplete. For an updated view, take a look at entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ig8" target="_blank">1ig8 <i class="fa fa-external-link"> </i></a></span> for the open form, and entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bdg" target="_blank">1bdg <i class="fa fa-external-link"> </i></a></span> (which is a similar form from a blood fluke) for the glucose-bound form. <br/><br/> As is often the case, when you look at the human form, things get more complicated. We build several types of hexokinase, made for the slightly different needs of different types of cells. The one shown here is from brain cells, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dgk" target="_blank">1dgk <i class="fa fa-external-link"> </i></a></span>. It is twice as big as yeast hexokinase, and is amazingly constructed like two yeast enzymes strung together head-to-tail. Both halves have a nearly identical active site. But, the lower one has specialized in the catalytic reaction, while the upper one has specialized in regulation and does not perform the phosphate-transfer reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Phosphoglucose isomerase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/02-1hox.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phosphoglucose isomerase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-02-1hox.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Phosphoglucose Isomerase</h4>
+<div>The second step in glycolysis is an isomerization: a reaction that changes the shape of a single molecule, but doesn't permanently add or remove any atoms. The enzyme phosphoglucose isomerase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1hox" target="_blank">1hox <i class="fa fa-external-link"> </i></a></span>, takes glucose-6-phosphate and shuffles a few atoms, forming fructose-6-phosphate, shown here in yellow. The enzyme can do this reaction in either direction. So when glucose-6-phosphate is plentiful in the cell, it converts it to fructose-6-phosphate, and when fructose-6-phosphate is more common, the enzyme converts it back. <br/><br/> Recently, researchers have discovered that this protein also plays other important roles outside of cells, acting not as an enzyme but rather as a molecular messenger. It is secreted by white blood cells and helps control the growth and motion of many types of cells. As researchers delve deeper and deeper into the human genome, they are discovering numerous examples of other "moonlighting" proteins that have one function in one place in the body and an entirely different function somewhere else.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial phosphofructokinase. Sugar molecules are in orange, ADP is in red and magnesium in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/03-4pfk.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial phosphofructokinase. Sugar molecules are in orange, ADP is in red and magnesium in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-03-4pfk.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Allosteric motions in phosphofructokinase: active state (left) and inactive state (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/03-4pfk-6pfk.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Allosteric motions in phosphofructokinase: active state (left) and inactive state (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-03-4pfk-6pfk.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Phosphofructokinase</h4>
+<div>At the third step of glycolysis, we reach the major point of regulation. Glucose-6-phosphate and fructose-6-phosphate, formed in the first two steps of glycolysis, are used by other cellular processes. But when phosphofructokinase adds a second phosphate to the sugar, it is committed for complete breakdown. Phosphofructokinase is like a miniature molecular computer that senses the levels of different molecules and decides if the time is right for breakdown of sugar. For instance, when ADP and AMP are common, the cell needs to make ATP, so the enzyme turns on. Phosphfructokinase is a mechanical computer, with moving parts. The bacterial enzyme (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4pfk" target="_blank">4pfk <i class="fa fa-external-link"> </i></a></span>) is composed of four identical subunits, but the forms in our own cells are even larger and more complex. Each active site is composed of two different subunits that close around either side of the sugar and ATP molecules. The whole enzyme shifts when ADP and other molecules bind to regulatory sites between the subunits, shown here with asterisks. Structures have been determined for the active state (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4pfk" target="_blank">4pfk <i class="fa fa-external-link"> </i></a></span>) and an inactive structure (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=6pfk" target="_blank">6pfk <i class="fa fa-external-link"> </i></a></span>), revealing that when the enzyme shifts, the shape of the active site is changed and the enzyme switches on and off. <br/><br/> A hint: when you are looking at the structures of phosphofructokinase in the PDB, be sure to download the entire biological assembly, which contains four subunits!</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Fructose 1,6-bisphosphate aldolase, with a close up of a substrate bound in the active site (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/04-4ald-1j4e.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Fructose 1,6-bisphosphate aldolase, with a close up of a substrate bound in the active site (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-04-4ald-1j4e.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Fructose 1,6-bisphosphate Aldolase</h4>
+<div>At this stage in glycolysis, the sugar molecule is primed and the cell is ready to start breaking it up. The fourth enzyme, fructose 1,6-bisphosphate aldolase, cuts the molecule in the middle, producing two similar pieces, each with a single phosphate attached. The enzyme also readily performs the reverse reaction, connecting these two smaller molecules to reform the phosphorylated fructose. In fact, the enzyme is named for this reverse reaction, which is an aldol condensation. The enzyme shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4ald" target="_blank">4ald <i class="fa fa-external-link"> </i></a></span>, is found in our muscle cells. It contains four identical subunits, each with its own active site. The active site uses a special lysine, number 229 in this particular form, to attack the sugar chain. As seen in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j4e" target="_blank">1j4e <i class="fa fa-external-link"> </i></a></span>, this lysine forms a covalent bond with molecule during the cleavage reaction. This structure is frozen at a stage when the sugar molecule (with red oxygen, white carbon, and yellow phosphorus) has been cleaved and only half is left in the active site. <br/><br/> The aldolase enzyme used by most bacteria is different than the aldolases that we have in our cells. It uses two metal ions instead of a special lysine amino acid. You can look at an example of a bacterial aldolase in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1zen" target="_blank">1zen <i class="fa fa-external-link"> </i></a></span>. Be sure to look for the metal ions! Also, take a look at the unusual enzyme made by hot-spring archaebacteria, in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ojx" target="_blank">1ojx <i class="fa fa-external-link"> </i></a></span>. It uses a lysine in the active site, like our enzyme, but is composed of ten chains in a huge molecular complex.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Triose phosphate isomerase, with a close up of a substrate bound in the active site (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/05-2ypi.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Triose phosphate isomerase, with a close up of a substrate bound in the active site (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-05-2ypi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cartoon representation of triose phosphate isomerase, drawn by Jane S. Richardson." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/05-richardson.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cartoon representation of triose phosphate isomerase, drawn by Jane S. Richardson.</i></div>
+</div>
+</div>
+</div>
+<h4>Triose Phosphate Isomerase</h4>
+<div>At this stage in glycolysis, the cell has broken the sugar into two different pieces. For economy, it would be ideal to proceed along a single path, instead of requiring a separate path for each of the pieces. The fifth step makes this possible by interconverting the two pieces. Triose phosphate isomerase, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2ypi" target="_blank">2ypi <i class="fa fa-external-link"> </i></a></span>, pulls a hydrogen atom off one carbon atom and replaces it on a neighboring carbon atom. A special glutamate amino acid performs the transfer. Triose phosphate isomerase has been described as a perfect enzyme. It performs its reaction billions of times faster than would happen without it. It is so fast that the rate of the reaction is determined by how fast the molecules can get to the enzyme. <br/><br/> When you are looking at this structure yourself, also notice that the active site is in the middle of a "beta barrel:" a cylindrical arrangement of extended strands, all colored green in the close-up picture here. The cartoon picture, drawn by Jane Richardson, shows the folding of the chain in the protein, with an inner ring of extended beta strands surrounded by an outer ring of alpha helices. Notice how each of the helices connects two neighboring strands in the barrel. As you are exploring the structures of the ten glycolytic enzymes, notice that several other enzymes are also constructed with this beautiful folding pattern.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Glyceraldehyde-3-phosphate dehydrogenase, with a close-up of the active site (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/06-3gpd-1nqo.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glyceraldehyde-3-phosphate dehydrogenase, with a close-up of the active site (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-06-3gpd-1nqo.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Glyceraldehyde-3-Phosphate Dehydrogenase</h4>
+<div>Halfway through glycolysis, the cell is finally ready to start extracting some energy. In the sixth and seventh steps, the cell will add a new phosphate to each of the molecules, and then use it to make two new ATP molecules. Glyceraldehyde-3-phosphate dehydrogenase takes a phosphate ion and connects it to the molecule. In the process, it also extracts two hydrogen atoms using the hydrogen-carrier molecule NAD, colored magenta here. As mentioned on the first page, these hydrogen atoms may be used to create even more energy using aerobic pathways, or recycled in several ways back onto the broken sugar molecule. <br/><br/> Glyceraldehyde-3-phosphate dehydrogenase is composed of four identical subunits. Many of the structures of this enzyme in the PDB, such as the human form shown here on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3gpd" target="_blank">3gpd <i class="fa fa-external-link"> </i></a></span>, have NAD bound in all four active sites, as well as two phosphate or sulfate ions. One ion is bound in the site occupied by the phosphate group in the sugar molecule, and the other is thought to correspond to the site that positions the incoming phosphate ion for the reaction. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nqo" target="_blank">1nqo <i class="fa fa-external-link"> </i></a></span> captures the first step in the reaction, when the substrate molecule binds. A nearby cysteine amino acid will then attack the molecule, forming a bond with one carbon atom. The bond is then broken when the phosphate is attached. In this structure, the cysteine is changed to a less active serine to allow study. A nearby histidine also assists in the reaction. <br/><br/> When you are looking at the <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nqo" target="_blank">1nqo <i class="fa fa-external-link"> </i></a></span> structure, be sure to download the proper biological unit. The primary PDB file contains four chains, but they are not the proper biological tetramer.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Induced fit motion in phosphoglycerate kinase: open form (left) and closed, reactive form (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/07-3pgk-1vpe.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Induced fit motion in phosphoglycerate kinase: open form (left) and closed, reactive form (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-07-3pgk-1vpe.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Phosphoglycerate Kinase</h4>
+<div>Now, at the seventh step of glycolysis, the cell is ready to make some ATP. The glucose has been split into two halves, each of which now has two phosphates attached. Phosphoglycerate kinase takes these molecules and transfers one of the phosphates to ADP, creating a new ATP molecule. As with the first enzyme of glycolysis, this process must be shielded from water to ensure that the phosphate gets transferred correctly. Phosphoglycerate kinase uses the same approach taken by hexokinase: it closes around the reaction, protecting it away from interfering water molecules. The enzyme is composed of two lobes connected by a flexible linker. The upper lobe binds to ADP and the lower one has a pocket for the glucose fragment. Then it hinges close and performs the transfer. The PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pgk" target="_blank">3pgk <i class="fa fa-external-link"> </i></a></span>, shown on the left, is in the open form with ADP bound, and PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1vpe" target="_blank">1vpe <i class="fa fa-external-link"> </i></a></span>, on the right, shows a closed form.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Phosphoglycerate mutase from yeast (left) and bacteria (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/08-3pgm-1eqj.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phosphoglycerate mutase from yeast (left) and bacteria (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-08-3pgm-1eqj.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Close-up of the active site histidine in bacterial phosphoglycerate mutase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/08-1e58-rasmol.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Close-up of the active site histidine in bacterial phosphoglycerate mutase.</i></div>
+</div>
+</div>
+</div>
+<h4>Phosphoglycerate Mutase</h4>
+<div>The last three steps of glycolysis will remove the remaining phosphates from the two pieces, and use them to make two more molecules of ATP. Phosphoglycerate mutase begins this final capture of energy by shifting the phosphate from the end of the molecule to a strategic place in the center. This enzyme comes in several forms: the yeast enzyme (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3pgm" target="_blank">3pgm <i class="fa fa-external-link"> </i></a></span>) is composed of four identical subunits. Our enzyme is similar, but only contains two subunits. Plants and many bacteria build an entirely different type that uses manganese ions for the reaction (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1eqj" target="_blank">1eqj <i class="fa fa-external-link"> </i></a></span>). <br/><br/> The enzyme in our cells uses a special histidine amino acid, like the one shown here from a bacterial enzyme in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e58" target="_blank">1e58 <i class="fa fa-external-link"> </i></a></span>. This histidine extracts the phosphate and places it back in a different place. Actually, the enzyme does the reverse of this: it first places a phosphate on the molecule, so that two are attached, then it takes off the other one. In order to do this, the enzyme must be charged with this extra phosphate molecule before it can perform its reaction. A small intermediate molecule--2,3- bisphosphoglycerate--delivers these reactive phosphates to the enzyme. After the enzyme is charged, it remains active for a minute or two (busily performing its reaction many times) before the phosphate falls off and has to be replaced.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Enolase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/09-2one.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Enolase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-09-2one.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Active site of enolase. The left image shows the molecule before the reaction has started and the right image shows the molecule after the water has been removed." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/09-2one-rasmol.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Active site of enolase. The left image shows the molecule before the reaction has started and the right image shows the molecule after the water has been removed.</i></div>
+</div>
+</div>
+</div>
+<h4>Enolase</h4>
+<div>In the ninth step of glycolysis, the cell places the phosphate in an uncomfortable position, making it easy to remove to form ATP. The enzyme enolase removes a water molecule, forming a new double bond in an awkward place in the carbon skeleton of the molecule. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2one" target="_blank">2one <i class="fa fa-external-link"> </i></a></span> is a remarkable structure that shows both sides of this reaction, before and after the water is removed. The enzyme contains two identical active sites and the crystal structure has captured a different state in each of the active sites. Enolase uses two metal ions in its reaction. The first is a magnesium ion in this structure, colored light blue here. It anchors the molecule to the enzyme, holding it in the proper place. The second ion then binds and assists with the catalysis. In this structure, a lithium ion was found in one of the active sites in this location. A perfectly-placed histidine also assists in the reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Allosteric motions in pyruvate kinase: inactive state (left) and active state (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/50/10-1e0u-1a3w.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Allosteric motions in pyruvate kinase: inactive state (left) and active state (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/50/50-TheGlycolyticEnzymes-10-1e0u-1a3w.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Pyruvate Kinase</h4>
+<div>In the last step of glycolysis, the cell is finally ready to make a net gain in ATP production. Pyruvate kinase removes the remaining phosphates and places them on ADP, to create new ATP molecules. This allows the unstable little sugar fragments to rearrange into stable pyruvate molecules. These pyruvates leave glycolysis and are subsequently burned up completely into carbon dioxide and water, or converted into throw-away molecules like alcohol or lactic acid. <br/><br/> The exit gate of glycolysis is guarded by a pyruvate kinase, ensuring that ATP is made only when needed. Like hemoglobin, it is progressively activated as the levels of its starting materials rise. It is also activated by the presence of phosphorylated sugars, which indicate that plenty of raw materials are available. Conversely, it is inhibited by molecules that are plentiful when the cell has enough energy, such as ATP and amino acids. Pyruvate kinase is an allosteric enzyme that senses the levels of all of these molecules and changes shape based on the result. It is composed of four flexible subunits arranged in a diamond shape. The whole complex flexes as different molecules bind. The active site is shown near the top and bottom here, and a separate regulatory site is more towards the center. The bacterial structure shown on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1e0u" target="_blank">1e0u <i class="fa fa-external-link"> </i></a></span>, is in the inactive state. The yeast structure on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1a3w" target="_blank">1a3w <i class="fa fa-external-link"> </i></a></span>, has a molecule bound in the regulatory site, shown in magenta, and has flexed into the active shape. The active site contains two metal ions, a potassium ion and a manganese ion shown here in green, that assist with the reaction.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Hexokinase Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/50/MoM-50-Hexokinase_Figure-jmol.jpg"/></div>
+<p>Many of the glycolytic enzymes are allosteric enzymes, meaning they change their shape when binding to their ligand. Hexokinase, the enzyme that starts glycolysis, is no exception. Structure <a href="https://www.rcsb.org/structure/1ig8" target="_blank">1ig8</a> shows how hexokinase is open in the absence of its substrate, leaving its binding pocket exposed. Conversely, structure <a href="https://www.rcsb.org/structure/3b8a" target="_blank">3b8a</a> demonstrates how hexokinase closes around its bound substrate.<br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/> <b>This JSmol was designed and illustrated by Ryan Nini.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_2">http://doi.org/10.2210/rcsb_pdb/mom_2004_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

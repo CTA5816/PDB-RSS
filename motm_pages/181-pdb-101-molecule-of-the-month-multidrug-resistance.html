@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Multidrug Resistance Transporters</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Multidrug Resistance Transporters" property="og:title"/>
+<meta content="Many bacteria use multidrug resistance transporters to pump drugs and poisons out of the cell" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/95/95_2onj.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/95" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Multidrug Resistance Transporters" name="twitter:title"/>
+<meta content="Many bacteria use multidrug resistance transporters to pump drugs and poisons out of the cell" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/95/95_2onj.jpg" name="twitter:image"/>
+<meta content="Many bacteria use multidrug resistance transporters to pump drugs and poisons out of the cell" name="description"/>
+<meta content="drug resistance,multidrug efflux pump activity,multidrug transport,P-glycoprotein,2onj,2gfp,1iwg,1ek9,2f1m,2drd,1oy8,1oyd" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 95
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 95 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Multidrug Resistance Transporters</h1>
+<p><i>Many bacteria use multidrug resistance transporters to pump drugs and poisons out of the cell</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Multidrug resistance transporter Sav1866. The cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/95/95_2onj.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Multidrug resistance transporter Sav1866. The cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/95/95-MultidrugResistanceTransporter-2onj.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Ever since the discovery of penicillin, we have lived our lives with far less fear of infectious disease. In the decades since then, a wide variety of drugs have been isolated from natural sources or synthesized by chemists, giving our doctors a large arsenal of antibiotics to fight infection. Bacteria, however, are dynamic evolving organisms, and they have developed many methods to fight back. In some cases, they develop ways to destroy antibiotic drugs directly, for instance, some bacteria make <a class="static" href="http://pdb101.rcsb.org/motm/187">beta-lactamase</a> enzymes that break down penicillin. In other cases, the bacteria change their own molecular machinery, making it invulnerable to the drugs. For instance, methicillin-resistant <i>Staphylococcus</i> bacteria use new, resistant enzymes to build their cell walls. If these methods don't work, bacteria also have a more general method. They build special pumps that transport many different antibiotics out of the cell before they can do their job.</div>
+<h4>Drug Pump</h4>
+<div>Multidrug resistance transporters find drugs that try to gain entry through a cell membrane and they transport them back outside. The one shown here, Sav1866 from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2onj" target="_blank">2onj <i class="fa fa-external-link"> </i></a></span>, is found in <i>Staphylococcus</i> bacteria. The protein is composed of two identical subunits with a tunnel in between. Drugs enter the tunnel, and then cleavage of ATP in the large portion at the bottom causes a scissoring motion, opening the tunnel on the outer side and releasing the drug. This structure captures the protein in this final state, ready to release drugs upwards towards the outside of the cell membrane.</div>
+<h4>Defending Cells</h4>
+<div>We have a very similar molecule, called <a href="http://pdb101.rcsb.org/motm/123">P-glycoprotein</a>, that transports drug-like molecules out of our cells. It is found on the surface of cells in the digestive system, where it protects us from toxic molecules in our diet, and on the inner surface of blood vessels in the brain, where it forms a second line of defense that protects our brain. It is similar to the <i>Staphylococcus</i> transporter, but it is composed of one long protein chain instead of two identical subunits. It transports a wide variety of drugs, such as cyclosporin A, steroids like hydrocortisone, and protease inhibitors used to treat HIV infections. It also transports many anticancer drugs, which can cause serious problems for patients with cancer. Cancer cells, like bacteria, are constantly changing and mutating, and if they develop ways to overexpress the transporter, they can become resistant to chemotherapy.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Bacterial multidrug resistance transporters." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/95/95_multidrugtransporters.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Bacterial multidrug resistance transporters.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/95/95-MultridrigResistanceTransporter-multidrugtransporters.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Transporters of All Shapes and Sizes </h4>
+<div>Bacteria have developed many different types of multidrug resistance transporters to protect themselves from natural and therapeutic antibiotics. Some use the ATP-powered scissoring motion like Sav1866, which is similar to transporters that move other molecules, such as lipids and vitamins, across cell membranes. Some are simpler, such as EmrD from <i>Escherichia coli</i> (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2gfp" target="_blank">2gfp <i class="fa fa-external-link"> </i></a></span>) which forms a small membrane pump that is powered by the flow of hydrogen ions through the protein. Some are very much more complex. The AcrB transporter (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1iwg" target="_blank">1iwg <i class="fa fa-external-link"> </i></a></span>) pumps drugs out of the inner membrane of <i>Escherichia coli</i> and into a tube formed by TolC (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ek9" target="_blank">1ek9 <i class="fa fa-external-link"> </i></a></span>), which directs the drugs all the way out through the outer membrane of the cell. The protein AcrA (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2f1m" target="_blank">2f1m <i class="fa fa-external-link"> </i></a></span>) is thought to form a ring that connects AcrB and TolC, linking the entire complex into a closed tube.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/95/95_2drd-rasmol.jpg"/></div>
+<div>The AcrB transporter is currently thought to use an unusual cyclic mechanism to pump drugs out of the cell. The protein is composed of three identical subunits, and in recent crystal structures, the three subunits have slightly different conformations. The structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2drd" target="_blank">2drd <i class="fa fa-external-link"> </i></a></span>, has the antibiotic minocycline bound in one subunit. The picture on the left shows a backbone diagram of the whole protein, with the drug in green. If you cut away the bottom half of the protein at the red line, and then look at the slice that is left, you get the picture on the right. It shows all three binding sites. The first site (marked 1) has the drug bound, shown in green. The second side (marked 2) has shifted to a new conformation that has opened pathways to the pore at the middle of the complex. The final site (marked 3) is in a third conformation that connects to the membrane (not seen in this picture) and can thus bind to new drug molecules. By cycling through these three conformations, the transporter pulls drugs out of the membrane and then pushes them outside. <br/><br/> You can also take a look at several earlier structures of AcrB (such as PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oy8" target="_blank">1oy8 <i class="fa fa-external-link"> </i></a></span> or <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1oyd" target="_blank">1oyd <i class="fa fa-external-link"> </i></a></span>) that have drugs bound in a different place, in a central pore formed by all three subunits. These structures might show a different mechanism, where drugs are taken out of the cytoplasm and then pumped across the membrane. <br/><br/> These pictures were created with RasMol. You can make similar pictures by clicking on the accession codes here and choosing one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/antimicrobial-resistance">Antimicrobial Resistance</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>C. F. Higgins (2007) Multiple molecular mechanisms for multidrug resistance transporters. Nature 446, 749-757.</li>
+<li>M. Hennessy and J. P. Spiers (2007) A primer on the mechanics of P-glycoprotein the multidrug transporter. Pharmacological Research 55, 1-15.</li>
+<li>M. N. Alekshun and S. B. Levy (2007) Molecular mechanisms of antibacterial drug resistance. Cell 128, 1037-1050.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_11">http://doi.org/10.2210/rcsb_pdb/mom_2007_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

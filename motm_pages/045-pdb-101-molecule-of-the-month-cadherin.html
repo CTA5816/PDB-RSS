@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cadherin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cadherin" property="og:title"/>
+<meta content="Adhesive cadherin proteins hold neighboring cells together" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/99/99_1l3w-1i7x.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/99" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cadherin" name="twitter:title"/>
+<meta content="Adhesive cadherin proteins hold neighboring cells together" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/99/99_1l3w-1i7x.jpg" name="twitter:image"/>
+<meta content="Adhesive cadherin proteins hold neighboring cells together" name="description"/>
+<meta content="adherens junctions,beta-catenin,cadherin,cell adhesion,1l3w,1i7x,1l3w,1q5a,1q5c,1nci" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 99
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 99 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cadherin</h1>
+<p><i>Adhesive cadherin proteins hold neighboring cells together</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cadherin (red) and beta-catenin (blue). The portion spanning the membrane is not included in the structures and is shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/99/99_1l3w-1i7x.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cadherin (red) and beta-catenin (blue). The portion spanning the membrane is not included in the structures and is shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/99/99-Cadherin-1l3w-1i7x.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Your body is composed of trillions of cells, all working together to keep you alive. As you might imagine, this requires a massive infrastructure to hold everything together. This infrastructure is built at many levels. Huge structures, like bones and tendons, are built to support and move the entire body. Many of the spaces between cells are supported by connective tissue, which is built from a collection of sturdy molecular cables and sheets. Finally, an intimate, molecule-sized infrastructure is used to adhere cells directly to their neighbors.</div>
+<h4>Adhesive Proteins</h4>
+<div>Cadherins are one of the many molecules that glue cells together. They are long proteins that extend from the surface of the cell. The outer portion (shown at the top here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l3w" target="_blank">1l3w <i class="fa fa-external-link"> </i></a></span>) is composed of a series of folded domains arranged one after the next, and calcium ions bind between each domain, rigidifying the whole structure. If calcium is removed, however, the chain becomes floppy and is easily destroyed by protein-cutting enzymes. The tip of the chain has a special tryptophan amino acid, colored red here, that binds to cadherins on neighboring cells, adhering the two cells together. <br/><br/> The tail of the cadherin chain crosses the cell membrane (shown schematically in gray) and is linked to the cytoskeleton by catenin proteins. Beta-catenin (shown here in blue from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1i7x" target="_blank">1i7x <i class="fa fa-external-link"> </i></a></span>) binds to the small tail of cadherin that hangs inside the cell. Alpha-catenin (not shown) then binds to beta-catenin and actin filaments.</div>
+<h4>Selective Stickiness</h4>
+<div>There are many different types of cadherins, made by different types of cells. Each one is slightly different and sticks only to its proper partners. For instance, the one shown here is made by epidermal cells. These different cadherins play an important role in the development of embryos. They allow the growing cells to find their proper tissues and fix themselves in place. The attachments are much weaker in embryos, as they are sorting themselves into their proper places, and then the attachments are strengthened as the tissue matures.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Interaction of cadherin molecules based a crystallographic structure (left) and electron microscopy (center and right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/99/99_1l3w-1q5a-1q5c.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Interaction of cadherin molecules based a crystallographic structure (left) and electron microscopy (center and right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/99/99-Cadherin-1l3w-1q5a-1q5c.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Gluing Cells Together</h4>
+<div>Cadherin molecules assemble side-by-side into a large patch, called an adherens junction, that glues cells together. There is still some controversy about how cadherins are arranged in these junctions. When researchers look at them in the electron microscope, they often look different depending on how the samples were prepared. Some techniques show a highly ordered arrangement, with all the cadherins aligned symmetrically side-by-side, attached to a similar array on the neighboring cell. Other techniques show a big tangle of chains, all reaching across and connecting to whatever neighboring chain they can find. The structures shown here are representative of both views. On the left is a structure from X-ray crystallography; it shows a symmetrical structure (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l3w" target="_blank">1l3w <i class="fa fa-external-link"> </i></a></span>). The structures in the middle and on the right are models obtained by fitting an atomic structure to an electron micrograph (PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1q5a" target="_blank">1q5a <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1q5c" target="_blank">1q5c <i class="fa fa-external-link"> </i></a></span>). These models show a much more random arrangement of the chains.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cadherin Interaction (PDB entry 1lw3)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/99/99-Cadherin-99_1l3w-rasmol.jpg"/></div>
+<p>The adhesive contact between two cadherin proteins is formed when a tryptophan on one protein extends over and binds in a pocket on the other protein. The contact is shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1l3w" target="_blank">1l3w <i class="fa fa-external-link"> </i></a></span>. Notice the three calcium ions (in green) between the domains, which rigidify the whole structure. If you want to explore this interaction yourself, PDB entry 1l3w is a tricky structure to use, since you have to perform a crystallographic transformation to get the second protein structure (the transformation is a 180 degree rotation around the Y axis, which may be obtained with coordinates -x, y, -z). You can easily see the interaction, though, by looking at PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1nci" target="_blank">1nci <i class="fa fa-external-link"> </i></a></span>, which only includes the last domain in each cadherin chain, but has two proteins in the PDB file. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>S. Pokutta and W. I. Weis (2007) Structure and Mechanism of Cadherins and Catenins in Cell-Cell Contacts. Annual Review of Cell and Developmental Biology 23, 237-261.</li>
+<li>J. M. Gooding, K. L. Yap and M. Ikura (2004) The Cadherin-Catenin Complex as a Focal Point of Cell Adhesion and Signalling: New Insights from Three-dimensional Structures. BioEssays 26, 497-511.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_3">http://doi.org/10.2210/rcsb_pdb/mom_2008_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

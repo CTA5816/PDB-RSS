@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Injectisome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Injectisome" property="og:title"/>
+<meta content="Salmonella bacteria inject a cocktail of effector proteins into cells to disable their defenses." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/294/7ah9_2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/294" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Injectisome" name="twitter:title"/>
+<meta content="Salmonella bacteria inject a cocktail of effector proteins into cells to disable their defenses." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/294/7ah9_2.jpg" name="twitter:image"/>
+<meta content="Salmonella bacteria inject a cocktail of effector proteins into cells to disable their defenses." name="description"/>
+<meta content="injectisome,needle complex,effector protein,secretion,typhoid fever,Salmonella,virulence,7ah9,6pep,6ggr,1le4" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 294
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 294 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Injectisome</h1>
+<p><i>Salmonella bacteria inject a cocktail of effector proteins into cells to disable their defenses.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Needle complex of the Salmonella injectisome. A small portion of the effector protein SptP can be seen in red at the top, inside the narrow tube of the needle." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/294/7ah9_2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Needle complex of the Salmonella injectisome. A small portion of the effector protein SptP can be seen in red at the top, inside the narrow tube of the needle.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/294/7ah9_2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>We live in symbiosis with a vast community of bacteria. This interaction is most often friendly. Bacteria in the environment degrade wastes and dead plants and animals. Bacteria in our bodies help us process our food and provide essential nutrients. Sometimes, however, the interaction is less amenable. For example, Salmonella bacteria invade our cells and reproduce inside, causing life-threatening diseases like typhoid fever. As part of their pathogenic strategy, these bacteria inject several dozen types of <i>effector proteins</i> using a molecular needle called the <i>injectisome.</i> These injected proteins disable the cell’s defenses and rewire the cell’s metabolism to assist with the growth of the bacteria inside the cell.</div>
+<h4>Injecting Effectors</h4>
+<div>PDB entry <a href="https://www.rcsb.org/structure/7ah9" target="_blank">7ah9</a> includes the central needle portion of the Salmonella injectisome. It includes a thin needle with a central pore just large enough to deliver an unfolded protein chain. A molecular gate, shown in more detail in the JSMol image below, controls passage of effector proteins through the needle. The structure also includes several large rings of proteins that anchor the needle in the bacterial cell wall, allowing the bacterium to position several of them against a cell that it’s trying to infect. <br/><br/> The full injectisome also includes a large sorting platform inside the bacterium, which is not included in this structure. This platform selects only the appropriate effector proteins and manages the order in which they are injected. They are secreted in three stages. First, the components of the injectosome itself are secreted, building the needle and other components. Then a collection of proteins are secreted that create a translocon through the infected cell’s membrane. Finally, the injectosome docks with this translocon and injects the remaining effector proteins into the infected cell’s cytoplasm.</div>
+<h4>Freezing the Action</h4>
+<div>This structure was determined by cryoelectron microscopy and includes the effector protein SptP, an enzyme that removes phosphates from tyrosines on cellular proteins and also inactivates several proteins that are controlled by GTP. Researchers had to play some experimental games to get a view of the protein in transit, since effector proteins typically take less than a second to pass through the needle. To do this, they engineered SptP with <a href="https://pdb101.rcsb.org/motm/42">green fluorescent protein</a> attached at the end. The injectosome is unable to unfold GFP, so it forms an anchor that can’t fit through the needle, trapping the complex so it can be studied at leisure.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="(Left) NF-κB transcription factor complex with p50 and p65 bound to DNA. (Right) Salmonella effector protein GtgA cleaving p65." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/294/Figure_gtgA.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Left) NF-κB transcription factor complex with p50 and p65 bound to DNA. (Right) Salmonella effector protein GtgA cleaving p65.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/294/Figure_gtgA.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Effective Effectors</h4>
+<div>Dozens of effector proteins are injected by Salmonella bacteria. Many of them interrupt the action of cellular proteins by adding or removing phosphates, ribosyl groups, and other chemical modifications. Other effectors deliver key cellular proteins to the <a href="https://pdb101.rcsb.org/motm/60">ubiquitination system</a> for disposal. The effector protein shown here, GtgA, is a protease that cuts a specific transcription factor, p65 (PDB entry <a href="https://www.rcsb.org/structure/6ggr" target="_blank">6ggr</a>). This transcription factor is part of the <a href="https://pdb101.rcsb.org/motm/122">NF-κB</a> signaling pathway that controls many processes related to inflammation and the immune system. The NF-κB complex shown here is a heterodimer of p65 and p50 (PDB entry <a href="https://www.rcsb.org/structure/1le5" target="_blank">1le5</a>) bound to DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Methionine Gate</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/294/jmol-jmol.jpg"/></div>
+<p>The entry to the secretory needle is guarded by a <i>methionine gate.</i> As seen in PDB ID <a href="https://www.rcsb.org/structure/6pep" target="_blank">6pep</a>, a cluster of methionines (yellow), assisted by one phenylalanine (white), form a watertight barrier when the needle is not being used. Then, when effector proteins are selected for injection, the methionines smoothly separate to allow passage of the narrow protein chain (red), as seen in PDB ID <a href="https://www.rcsb.org/structure/7ah9" target="_blank">7ah9</a>.<br/> To explore these two structures in more detail, click on the JSmol tab for an interactive view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can search for “Salmonella effector” to see structures of other effector proteins that are transported through injectisomes.</li>
+<li>The needle complex includes several symmetrical rings composed of many copies of a single type of protein. In Mol* you can give each ring a consistent color using Set Color--&gt;Chain Property--&gt;Entity ID. This option is available by clicking the three dots in the Mol* Polymer panel.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Pillay, T.D., Hettiarachchi, S.U., Gan, J., Diaz-Del-Olmo, I., Yu, X.J., Meunch, J.H., Thurston, T.L.M., Pearson, J.S. (2023) Speaking the host language: how Salmonella effector proteins manipulate the host. Microbiology 169: 001342</li>
+<li>7ah9: Miletic, S., Fahrenkamp, D., Goessweiner-Mohr, N., Wald, J., Pantel, M., Vesper, O., Kotov, V., Marlovits, T.C. (2021) Substrate-engaged type III secretion system structures reveal gating mechanism for unfolded protein translocation. Nat Commun 12: 1546</li>
+<li>6pep: Hu, J., Worrall, L.J., Vuckovic, M., Hong, C., Deng, W., Atkinson, C.E., Brett Finlay, B., Yu, Z., Strynadka, N.C.J. (2019) T3S injectisome needle complex structures in four distinct states reveal the basis of membrane coupling and assembly. Nat Microbiol 4: 2010-2019</li>
+<li>6ggr: Jennings, E., Esposito, D., Rittinger, K., Thurston, T.L.M. (2018) Structure-function analyses of the bacterial zinc metalloprotease effector protein GtgA uncover key residues required for deactivating NF-kappa B. J Biol Chem 293: 15316-15329</li>
+<li>1le5: Berkowitz, B., Huang, D.B., Chen-Park, F.E., Sigler, P.B., Ghosh, G. (2002) The X-ray crystal structure of the NF-kB p50/p65 heterodimer bound to the Interferon beta-kB site. J Biol Chem 277: 24694-24700</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2024, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2024_6">http://doi.org/10.2210/rcsb_pdb/mom_2024_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

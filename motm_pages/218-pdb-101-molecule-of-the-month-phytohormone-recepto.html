@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Phytohormone Receptor DWARF14</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Phytohormone Receptor DWARF14" property="og:title"/>
+<meta content="Some phytohormones mobilize the cell’s protein degradation machinery to regulate plant growth and development." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/274/5hzg_figure.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/274" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Phytohormone Receptor DWARF14" name="twitter:title"/>
+<meta content="Some phytohormones mobilize the cell’s protein degradation machinery to regulate plant growth and development." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/274/5hzg_figure.jpg" name="twitter:image"/>
+<meta content="Some phytohormones mobilize the cell’s protein degradation machinery to regulate plant growth and development." name="description"/>
+<meta content="phytohormone,growth,regulation,hormone,receptor,ubiquitin,ubiquitination,proteasome,plants,strigolactone,karrikin,fire,3wo4,4iha,5dj5,5hzg,4jym" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 274
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 274 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Phytohormone Receptor DWARF14</h1>
+<p><i>Some phytohormones mobilize the cell’s protein degradation machinery to regulate plant growth and development.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Complex of activated D14 with a MAX2 protein and a SKP1 protein. Note that in different organisms, these proteins have different names, so in this PDB entry, the MAX2-type protein is called D3 and the SKP1-type protein is called SKP1A or ASK1." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/274/5hzg_figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complex of activated D14 with a MAX2 protein and a SKP1 protein. Note that in different organisms, these proteins have different names, so in this PDB entry, the MAX2-type protein is called D3 and the SKP1-type protein is called SKP1A or ASK1.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/274/5hzg_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Many hormones deliver their signals by binding to receptors on cell surfaces, launching a cascade of signaling enzymes inside the cell. Familiar examples include <a href="https://pdb101.rcsb.org/motm/182">insulin</a> and <a href="https://pdb101.rcsb.org/motm/184">glucagon</a>, the hormones that help regulate blood sugar. Steroid hormones like <a href="https://pdb101.rcsb.org/motm/45">estrogen</a> and <a href="https://pdb101.rcsb.org/motm/92">testosterone</a> travel inside a cell and bind to receptor proteins, which then bind to DNA and regulate gene expression. Some of the phytohormones used by plants have an entirely different mode of action. These phytohormones bind to an enzyme in the cell, which then activates the <a href="https://pdb101.rcsb.org/motm/60">ubiquitin</a>/<a href="https://pdb101.rcsb.org/motm/166">proteasome</a> system, regulating key proteins involved in growth by destroying them.</div>
+<h4>Phytohormone Action</h4>
+<div>Strigolactones are small molecules synthesized in plant cells from carotenoids. They bind to a receptor called DWARF14 (D14 for short), so named because mutations in the gene produce smaller plants with more branching. D14 is an enzyme that breaks strigolactones into pieces. In the process, one piece remains attached to the enzyme, blocking its enzymatic action but activating it as a receptor (see the Jmol interactive below). The activated D14 then binds to the MAX2 protein, which then binds to a subunit of the ubiquitination machinery, SKP1. Ultimately, this will create an active <a href="https://pdb101.rcsb.org/motm/60">ubiquitination complex</a> that will proceed to degrade the relevant regulatory proteins.</div>
+<h4>D14 in Action</h4>
+<div>PDB ID <a href="https://www.rcsb.org/structure/5hzg" target="_blank">5hzg</a> captures the process after strigolactone has been bound and cleaved, and the MAX2 and SKP1 proteins have been bound. The result is a large complex poised to bring together the ubiquitination machinery and proteins that are its targets. D14 may also be a one-shot enzyme. Once it cleaves a strigolactone molecule and builds this complex, it may no longer be effective as an enzyme and will itself be degraded after it’s finished delivering its messages.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Karrikins are chemically similar to part of strigolactone phytohormones, as shown on the left, and bind to KAI2, as shown on the right." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/274/4jym_Figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Karrikins are chemically similar to part of strigolactone phytohormones, as shown on the left, and bind to KAI2, as shown on the right.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/274/4jym_Figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Rise from the Ashes</h4>
+<div>Compounds created during forest fires act as plant growth regulators in a similar way. Karrikins are formed by the burning of cellulose and sugars, and fall to the ground in smoke particles. Later, they are washed into the soil by rain, they enter buried seeds, and bind to a receptor called KAI2. This receptor helps control the germination of seeds, so binding of karrikins can help spur sprouting of new plants after an area is burned. As shown in the figure, karrikins are similar to one end of the larger strigolactone phytohormones, and mimic the portion that ends up being covalently connected to the receptor. KAI2 is very similar to D14, and is shown here from PDB ID <a href="https://www.rcsb.org/structure/4jym" target="_blank">4jym</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Structure of D14</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/274/Jmol-jmol.jpg"/></div>
+<p>D14 uses a classic catalytic triad of serine-histidine-aspartate amino acids to perform its cleavage reaction, similar to the triad found in <a href="https://pdb101.rcsb.org/motm/46">serine proteases</a>. Structures have been determined for several steps in the process. Three structures are included in this interactive JSmol: PDB entry <a href="https://www.rcsb.org/structure/3w04" target="_blank">3w04</a> (not shown in the illustration) is the enzyme alone, PDB entry <a href="https://www.rcsb.org/structure/5dj5" target="_blank">5dj5</a> has a phytohormone bound in the active site, and PDB entry <a href="https://www.rcsb.org/structure/4iha" target="_blank">4iha</a> captures the enzyme after cleavage with part of the phytohormone covalently connected to the serine. To explore these structures in more detail, click on the image for an interactive version.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can get more information about <a href="https://models-dev.rcsb.org/ligand/GR2">strigolactone</a> and <a href="https://models-dev.rcsb.org/ligand/KKN">karrikin</a> on the RCSB ligand pages.</li>
+<li>You always need to be critical of structures in the archive. For example, the ligand in PDB entry <a href="https://www.rcsb.org/structure/5dj5" target="_blank">5dj5</a>, shown in the interactive JSmol, has only weak electron density. The "Ligand Structure Quality Assessment" display on the RCSB Structure Summary pages can help you assess the quality of each structure.</li>
+<li>You can compare D14 and KAI2 structures using the Pairwise Structure Alignment Tool. For example, try the <a href="https://rcsb.org/alignment?response-body=eJytVe9vozgQ%2FV%2F4TCIMxkC%2FWTEYbwwHGLlCVRXRhGaR8mM3IXtXVf3fb0w227TaVnenE1IC9puZN4835tnqd4976%2BbZOp36lXVj4RAhb%2FnwOAlWHZrgaPk4iR7QarJy24fIdwlBxLVs6zi0w%2BkI%2BNkfWSHjOrZebGvbDa1J1W769W7b7YbFdr%2FqAPSt7Q9%2F9scOAq%2F2uuHr3pR8bIdlO0wO%2FRoYQJpDdzxtBkh%2B9wx1DqflcIKl8RHiDk%2BLkajPvviGSLfplkO%2F342Fj0%2Fb8y61Xl7sN3j8pck%2Bx9%2Fbr%2BUWv3iOdQ%2FdGkIMh7u3Ubb10K0Xx%2B77uOCdH%2FvdqvvLunFsa9Pt1sNX68YlPqT%2FNNb9KBYRbFr5OBKR4E0sIv5VtINe7qGz4dDujo%2F7w7YdLp0g2%2Fl5%2FfYO%2BE6caRi4cCEvDIIQRZDZmbpO6KIIYQS%2FJMIOhjWMkR9EyHMDL0QumAQyQDQGSBR6kCFySBjgwCwGAfGxH7jI9xxMUDgCSRASSIhR6ITId3zDYepiH4fAgDgIiiNkkH6ECXFCHwMrBHkBBvn80CEEY%2BJ4yAc%2BthsB0HdDn3hm1XE9e0KcKYpcx3c8F55RaJbw1PMwCAg5I9%2BLCLRtbHDabtvDk7HIcbm%2FmO9HuzmBmwM%2FnEJ%2F1vD0zXj72G%2F7TXvoh6fJiLXMy%2FoJRVPH%2FQWsMsUsY7IdmGu3gKz96tQtzGwczw4ZHdh9P3W75ccG%2FE%2F%2B%2Bx88ZFvr9tuZwBscvsJdNwBFFKdzKUshc11pzRWP4U9LlfKE16xU9FZVWhaNrCuWwpZsmNQzypXOC5YmLKmqhuWS0UYzJiUVcCsrUVQzmmieKq1oJriQVImqKphMoJyWglNVVInMmWJNynkSyzgWZakTRjNO8wbq0po3tJBUc8p0Qaku40RVtUzyDBIJJVM9K2udzGsmK64lz3RFixmwL2sgqxUEKU1pI%2Bc0lZxXda3jRJZ1zFNZpFLRQgHhUsuqopJWzeiKf%2FYSPzwI4PB9J3DGtY5jmuZ6roXRl9YCyF701bfzVGqgA%2FI1Z31zUIDXNejbgL6salQuY96ohEkB%2BsZMzkWsZuJKXw36ynzUV82FzoQy%2BjY6Z5o1pdG3hLC8lElMRaXyZk5vZ5InZ305y5gS7wWmUmle1iIpFcsqcEiR6FoXs1RIoD1nEFmA2CpuZEpzyWexgk61KBQzApdSqYIpeNZCVqmockiZjcP16eiiKfLfzePrsMLR8rp5EXnSr2AEYbjfIoPfIF8PgmvsvzgtnGn0CqyzC%2BCTE8PsmE%2Fspltddk2%2FYBTbJcHZK2MoWGj0j%2Fn%2B7hbL%2FY%2Fu0K6hzB1yHDuK7uHoefkbMy9uxw%3D%3D&amp;encoded=true">alignment of PDB ID 5dj5 and 4jym.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>De Cuyper, C., Struk, S., Braen, L., Gevaert, K., De Jaeger, G., Goormachtig, S. (2017) Strigolactones, karrikins and beyond. Plant, Cell and Environment 40: 1691-1703</li>
+<li>Morffy, N., Faure, L., Nelsen, D.C. (2016) Smoke and hormone mirrors: Action and evolution of karrikin and strigolactone signaling. Trends Genetics 32: 176-188</li>
+<li>5hzg: Yao, R., Ming, Z., Yan, L., Li, S., Wang, F., Ma, S., Yu, C., Yang, M., Chen, L., Chen, L., Li, Y., Yan, C., Miao, D., Sun, Z., Yan, J., Sun, Y., Wang, L., Chu, J., Fan, S., He, W., Deng, H., Nan, F., Li, J., Rao, Z., Lou, Z., Xie, D. (2016) DWARF14 is a non-canonical hormone receptor for strigolactone. Nature 536: 469-473</li>
+<li>5dj5: Zhao, L.H., Zhou, X.E., Yi, W., Wu, Z., Liu, Y., Kang, Y., Hou, L., de Waal, P.W., Li, S., Jiang, Y., Scaffidi, A., Flematti, G.R., Smith, S.M., Lam, V.Q., Griffin, P.R., Wang, Y., Li, J., Melcher, K., Xu, H.E. (2015) Destabilization of strigolactone receptor DWARF14 by binding of ligand and E3-ligase signaling effector DWARF3. Cell Res 25: 1219-1236</li>
+<li>4jym: Guo, Y., Zheng, Z., La Clair, J.J., Chory, J., Noel, J.P. (2013) Smoke-derived karrikin perception by the alpha/beta-hydrolase KAI2 from Arabidopsis. Proc Natl Acad Sci U S A 110: 8284-8289</li>
+<li>3w04: Kagiyama, M., Hirano, Y., Mori, T., Kim, S.Y., Kyozuka, J., Seto, Y., Yamaguchi, S., Hakoshima, T. (2013) Structures of D14 and D14L in the strigolactone and karrikin signaling pathways. Genes Cells 18: 147-160</li>
+<li>4iha: Zhao, L.H., Zhou, X.E., Wu, Z.S., Yi, W., Xu, Y., Li, S., Xu, T.H., Liu, Y., Chen, R.Z., Kovach, A., Kang, Y., Hou, L., He, Y., Xie, C., Song, W., Zhong, D., Xu, Y., Wang, Y., Li, J., Zhang, C., Melcher, K., Xu, H.E. (2013) Crystal structures of two phytohormone signal-transducing alpha / beta hydrolases: karrikin-signaling KAI2 and strigolactone-signaling DWARF14. Cell Res 23: 436-439</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2022, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2022_10">http://doi.org/10.2210/rcsb_pdb/mom_2022_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

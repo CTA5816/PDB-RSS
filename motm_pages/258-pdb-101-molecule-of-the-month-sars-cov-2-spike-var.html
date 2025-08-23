@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SARS-CoV-2 Spike Variants</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike Variants" property="og:title"/>
+<meta content="SARS-CoV-2 is constantly changing, posing new challenges during the COVID19 pandemic" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/264/SWISSmodel_7kj2_label.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/264" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike Variants" name="twitter:title"/>
+<meta content="SARS-CoV-2 is constantly changing, posing new challenges during the COVID19 pandemic" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/264/SWISSmodel_7kj2_label.jpg" name="twitter:image"/>
+<meta content="SARS-CoV-2 is constantly changing, posing new challenges during the COVID19 pandemic" name="description"/>
+<meta content="SARS-CoV-2,pandemic,COVID-19,virus,variant,mutation,evolution,coronavirus,infection,6vyb,7lwv,7lyo,7v7q,7v7e,7kj2" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 264
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 264 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SARS-CoV-2 Spike Variants</h1>
+<p><i>SARS-CoV-2 is constantly changing, posing new challenges during the COVID19 pandemic</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Sites of variation in SARS-CoV-2 spike protein. Amino acids in bright red have variations in many individuals, pink amino acids vary in fewer individuals, and white amino acids show very few variants." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/264/SWISSmodel_7kj2_label.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Sites of variation in SARS-CoV-2 spike protein. Amino acids in bright red have variations in many individuals, pink amino acids vary in fewer individuals, and white amino acids show very few variants.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/264/SWISSmodel_7kj2_label.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses, in their own mindless way, are masters of evolution. Two aspects of viral biology make them particularly successful. First, huge populations of viruses are generated as they infect cells and replicate. For example, during peak infection by SARS-CoV-2, there may be 1-100 billion viruses in an infected individual. Second, their molecular machinery for replication is often sloppy, introducing occasional errors in progeny. This is the perfect combination for rapid evolution. During an infection, many variants of the virus may be produced in these populations. Most sequence variations will damage the virus or will be neutral with little change for better or worse, but occasional variants will enhance some aspect of the viral life cycle. These rare advantageous variants have emerged multiple times in SARS-CoV-2, and have caused new waves of infection in the ongoing COVID-19 pandemic.</div>
+<h4>Assessing Variation</h4>
+<div>Scientists around the world have studied the evolution of SARS-CoV-2 to understand its capabilities and help plan for the future. The illustration shown here maps the major sites of variation on the <a href="https://pdb101.rcsb.org/motm/246">spike protein</a>, based on over 3 million samples that have been sequenced and deposited in the <a href="https://www.gisaid.org/">GISAID</a> database. The structure is based on PDB ID <a href="https://www.rcsb.org/structure/7kj2" target="_blank">7kj2</a>, but coordinates were taken from <a href="https://swissmodel.expasy.org/repository/uniprot/P0DTC2">SWISSMODEL</a> since the original PDB entry does not have atomic coordinates for several flexible loops. Also, the glycosylation is not shown in this illustration, to make the protein variation easier to see, so you have to imagine the protein covered with multiple carbohydrate chains.</div>
+<h4>Functional Improvements</h4>
+<div>As you can see, the sites of variation are scattered throughout the three-dimensional structure. Scientists are still sorting out the functions of each of these changes, but a few of the most common sites of variation are becoming clear. The most common mutation (at least currently) is at position 614. It is thought to control the stability of the upper portion of the spike, as described below. Another common mutation, 681, is found in a flexible loop that is clipped by the cellular protease furin, breaking the chain into two pieces. The upper part (S1) recognizes the host cell and the bottom portion (S2) directs fusion and entry into the cell. Researchers have found that this cleavage makes the virus more infectious with respiratory tract cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Important variants of SARS-CoV-2 spike with mutations in red and deletions in magenta. The active spike is cleaved into two functional pieces, S1 and S2, shown in turquoise and blue. S1 is composed of several functional domains: the N-terminal domain (NTD), the receptor-binding domain (RBD), and two C-terminal domains (CTD)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/264/Variants_new.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Important variants of SARS-CoV-2 spike with mutations in red and deletions in magenta. The active spike is cleaved into two functional pieces, S1 and S2, shown in turquoise and blue. S1 is composed of several functional domains: the N-terminal domain (NTD), the receptor-binding domain (RBD), and two C-terminal domains (CTD).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/264/Variants_new.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Variant Structures</h4>
+<div>During the COVID-19 pandemic, SARS-CoV-2 has spread across the world, and variants have emerged by chance in different countries and rapidly spread from there. Structures of recent variants are shown here (PDB ID <a href="https://www.rcsb.org/structure/7lwv" target="_blank">7lwv</a>, <a href="https://www.rcsb.org/structure/7lyo" target="_blank">7lyo</a>, <a href="https://www.rcsb.org/structure/7v7q" target="_blank">7v7q</a>, <a href="https://www.rcsb.org/structure/7v7e" target="_blank">7v7e</a>, <a href="https://www.rcsb.org/structure/7t9k" target="_blank">7t9k</a>). They all have multiple changes, including sites where an amino acid has mutated (shown in red) and sites where amino acids have been deleted from the chain (shown in magenta). All include the two common changes mentioned above, along with other changes scattered across the entire structure. These may benefit the virus in many ways: mutations in the receptor-binding domain and C-terminal domains can improve recognition and attachment to cells, changes in the N-terminal domain can help evade the immune system, and mutations in the S2 region can enhance the process of fusion and entry into cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Spike Variation at Position 614</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/264/JSmol_label-jmol.jpg"/></div>
+<p>The mutation of aspartate to glycine at position 614 (shown in red) removes an interaction with threonine 859 (turquoise) on a neighboring subunit in the trimeric spike. This is thought to loosen up the structure, making it easier to transition into the active conformation with extended receptor-binding domains. To compare the native structure with aspartate at position 614 (PDB ID <a href="https://www.rcsb.org/structure/6vyb" target="_blank">6vyb</a>) and the mutated delta variant structure with glycine (PDB ID <a href="https://www.rcsb.org/structure/7v7q" target="_blank">7v7q</a>), click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Hundreds of structures of SARS-CoV-2 spike protein are available in the archive. An easy way to generate a full list is to go to the structure summary page of one example, such as <a href="https://www.rcsb.org/structure/6VXX">PDB ID 6vxx</a>, and then click on “Find proteins for P0DTC2”  in the “Macromolecules/UniProt" section.</li>
+<li>See <a href="https://www.rcsb.org/news?year=2020&amp;article=5e74d55d2d410731e9944f52&amp;feature=true">“COVID-19/SARS-CoV-2 Resources”</a> for a listing of useful materials for exploring the virus and pandemic.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7lwt, 7lyo: Gobeil, S.M., et al. (2021) Effect of natural mutations of SARS-CoV-2 on spike structure, conformation, and antigenicity. Biorxiv DOI: 10.1101/2021.03.11.435037</li>
+<li>Harvey, W.T., et al. (2021) SARS-CoV-2 variants, spike mutations and immune escape. Nat Rev Microbiol 19, 409-424</li>
+<li>Johnson, B.A., et al. (2021) Loss of furin cleavage sites attenuates SARS-CoV-2 pathogenesis. Nat 591, 293-299</li>
+<li>Lubin, J.H., et al. (2021) Evolution of the SARS-CoV-2 proteome in three dimension (3D) during the first 6 months of the COVID-19 pandemic. Prot Struc Func Genet doi: 10.1002/prot.26250</li>
+<li>Sender, R., et al. (2021) The total number and mass of SARS-CoV-2 virions. Proc Natl Acad Sci USA 118, e2024815118</li>
+<li>7kj2: Xiao, T., et al. (2021) A trimeric human angiotensin-converting enzyme 2 as an anti-SARS-CoV-2 agent. Nat Struct Mol Biol 28: 202-209</li>
+<li>6vyb: Walls, A.C., et al. (2020) Structure, Function, and Antigenicity of the SARS-CoV-2 Spike Glycoprotein. Cell 181: 281</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_12">http://doi.org/10.2210/rcsb_pdb/mom_2021_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: T-Cell Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: T-Cell Receptor" property="og:title"/>
+<meta content="Lymphocytes use T-cell receptors to patrol the body for foreign molecules" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/63/Figure1.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/63" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: T-Cell Receptor" name="twitter:title"/>
+<meta content="Lymphocytes use T-cell receptors to patrol the body for foreign molecules" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/63/Figure1.jpg" name="twitter:image"/>
+<meta content="Lymphocytes use T-cell receptors to patrol the body for foreign molecules" name="description"/>
+<meta content="AIDS,antigen processing and presentation,cellular immunity,HIV,immune response,major histocompatibility complex,T-cell activation,T-cell receptor,T-lymphocytes,1tcr,1akj,1bd2,1fyt,1jl4,1wio,2ckb" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 63
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 63 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: T-Cell Receptor</h1>
+<p><i>Lymphocytes use T-cell receptors to patrol the body for foreign molecules</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="T-cell receptor. The portion crossing the cell membrane is not included in the structure, and is shown here schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/63/Figure1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>T-cell receptor. The portion crossing the cell membrane is not included in the structure, and is shown here schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/63/63-T-CellReceptor-1tcr.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Viruses are one of the major dangers that we face in everyday life, so our immune system has powerful methods to fight them. Our cells call for help when they become infected, by displaying little pieces of the viruses on their surface. When the immune system finds these viral peptides, it quickly kills the infected cell and the viruses inside. Two proteins coordinate this process: infected cells display viral peptides using <a class="mom_big_bold" href="http://pdb101.rcsb.org/motm/62">MHC</a> and T-cell receptors on cells of the immune system recognize these displayed viral peptides.</div>
+<h4>Virus Patrol</h4>
+<div>Cytotoxic T-cells are the police force that patrols the body looking for infected cells. T-cell receptors on the surface of T-cells bind tightly to viral peptides displayed in MHC. Each T-cell has its own type of T-cell receptor, which recognizes its own type of peptide. The immune system creates a diverse collection of different of T-cells, each with a different receptor, so we are protected from many different types of infection. These different types of T-cells are created as the T-cells mature. As a stem cell changes into a T-cell, it shuffles around its genes to form a random, unique T-cell receptor. Then, through a process of selection in the thymus, all of the T-cells that happen to recognize our own normal proteins are destroyed, leaving only those that recognize foreign objects.</div>
+<h4>Antibody Arms</h4>
+<div>T-cell receptors, like the one shown here from PDB entry <a href="https://www.rcsb.org/structure/1tcr" target="_blank">1tcr</a>, are similar to one arm of an <a class="mom_big_bold" href="http://pdb101.rcsb.org/motm/21">antibody</a>. Like antibodies, they are composed of two chains. The binding site is at the tip of the molecule, and is formed of by several loops of the protein chains. The amino acids in these loops are very different in different T-cell receptors, so they are often called hypervariable loops. Each chain also includes a segment at one end that crosses through the membrane, connecting the receptor to the cell surface. These portions are shown schematically here, since they were removed when the crystal structure was solved.</div>
+<h4>T-Cells and AIDS</h4>
+<div>The importance of this system becomes clear when we look at what happens when it is gone. HIV preferentially infects T-cells, attacking the very system that protects us from viruses. Without treatment, the virus steadily attacks T-cells, depleting the immune system. When the number of T-cells gets too low, the infected individual progresses into AIDS. Then they are susceptible to many infections, since the immune system is no longer strong enough to fight off the invaders.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Interaction of CD and TCR proteins with MHC." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/63/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Interaction of CD and TCR proteins with MHC.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/63/63-T-CellReceptor-MHC.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Molecular Handshake</h4>
+<div>An elaborate handshake is performed between a T-cell and an infected cell to make sure that the death sentence is warranted. The primary contact is between the T-cell receptor and the MHC-peptide complex (the peptide is in bright red here). Then, CD molecules bind to other portions of the MHC, strengthening the interaction. Two types of interaction are shown here. MHC class I, which is found on the surface of most of our cells, interacts with T-cell receptors and CD8 on cell-killing T-cells. MHC class II is found primarily on cells that specialize in finding dangerous proteins. It interacts with T-cell receptors and CD4 on other T-cells that stimulate the immune system. All of these proteins are connected to the cell membranes by flexible chains and hinges, so that they can move around and form this complex interaction. This illustration was created using several PDB entries: <a href="https://www.rcsb.org/structure/1akj" target="_blank">1akj</a>, <a href="https://www.rcsb.org/structure/1bd2" target="_blank">1bd2</a>, <a href="https://www.rcsb.org/structure/1fyt" target="_blank">1fyt</a>, <a href="https://www.rcsb.org/structure/1jl4" target="_blank">1jl4</a> and <a href="https://www.rcsb.org/structure/1wio" target="_blank">1wio</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Complex of T-cell Receptor with Peptides and MHC I</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/63/Jmol-jmol.jpg"/></div>
+<p>Several structures are available that show the interaction of T-cell receptors with an MHC-peptide complex. Two early structures, from PDB entries <a href="https://www.rcsb.org/structure/1bd2" target="_blank">1bd2</a> and <a href="https://www.rcsb.org/structure/2ckb" target="_blank">2ckb</a>, are shown here, from studies that explored the strong binding of T-cell receptor to a viral peptide and weaker binding to a self-antigen peptide from a normal cell protein. The T-cell receptor is at the top, MHC is at the bottom, and the peptide is shown with spacefilling spheres in red and magenta the middle. The T-cell receptor interacts with the peptide and with the upper face of the MHC protein. Click on the image to explore these structures in an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV and AIDS</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>P. Anton van der Merwe and S. J. Davis (2003) Molecular Interactions Mediating T Cell Antigen Recognition. Annual Review of Immunology 21, 659-684.</li>
+<li>J. Hennecke and D. C. Wiley (2001) T Cell Receptor-MHC Interactions Up Close. Cell 104, 1-4.</li>
+<li>A. W. Goldrath and M. J. Bevan (1999) Selecting and Maintaining a Diverse T-cell Repertoire. Nature 402, 255-262.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_3">http://doi.org/10.2210/rcsb_pdb/mom_2005_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

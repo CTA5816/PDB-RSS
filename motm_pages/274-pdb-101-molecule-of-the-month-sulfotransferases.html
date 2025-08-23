@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Sulfotransferases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Sulfotransferases" property="og:title"/>
+<meta content="Sulfotransferases transfer sulfuryl groups in enzymatic reactions " property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/116/sulfotransferases.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/116" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Sulfotransferases" name="twitter:title"/>
+<meta content="Sulfotransferases transfer sulfuryl groups in enzymatic reactions " name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/116/sulfotransferases.jpg" name="twitter:image"/>
+<meta content="Sulfotransferases transfer sulfuryl groups in enzymatic reactions " name="description"/>
+<meta content="arylsulfotransferase,metabolic detoxication,drug,phosphoadenosine phosphosulfate,sulfotransferase activity,1aqu,1t8u,3ets,1g8h,1m7g,1xnj,2zyv,3ets" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 116
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 116 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Sulfotransferases</h1>
+<p><i>Sulfotransferases transfer sulfuryl groups in enzymatic reactions </i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Several different sulfotransferase enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/116/sulfotransferases.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Several different sulfotransferase enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/116/116-Sulfotransferases_sulfotransferases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>Cells are master chemists. They perform all manner of chemical reactions to build and modify their molecules. One of the chemical tricks used by many cells is to add sulfuryl groups to a molecule. Under typical cellular conditions, sulfuryl groups carry a negative charge, and they have lots of oxygen atoms that accept hydrogen bonds from other molecules. This makes sulfurylated molecules much more soluble and easy to recognize. To build molecules with sulfuryl groups, cells use a diverse collection of sulfotransferases. These enzymes take a sulfuryl group from the convenient carrier molecule PAPS (3'-phosphoadenosine-5'-phosphosulfate), and transfer it to the target molecule.</div>
+<h4>Sulfonation in the Cytoplasm</h4>
+<div>In the cell cytoplasm, there are many different sulfotransferases that act on small molecules. These enzymes play several important functional roles. Some play a key role in detoxification. Many toxic molecules are small and insoluble, so sulfotransferases transfer a sulfuryl groups to these molecules and make them easier to eject out of the cell and ultimately out of the body. In some cases this system works perfectly. For instance, when we take acetaminophen for a headache, its effects wear off in a few hours because the molecules are sulfurylated in our cells, and then rapidly excreted. In other cases, however, the added sulfuryl may change a relatively harmless molecule into a powerful carcinogen, or in the case of minoxidil, may convert a neutral molecule into an active drug. Sulfotransferases also play a role in the normal trafficking of insoluble molecules around the body. For instance, the sulfotransferase shown at the top left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1aqu" target="_blank">1aqu <i class="fa fa-external-link"> </i></a></span>) adds sulfuryl groups to estrogen, creating a soluble form that circulates through the blood. When it reaches target cells, the sulfuryl group is removed by another enzyme to form the active hormone.</div>
+<h4>...and in the Golgi</h4>
+<div>A different set of sulfotransferases are found in the Golgi, where they add sulfuryl groups to the proteins and carbohydrates that will be exported from the cell. These enzymes have a larger active site than the cytoplasmic sulfotransferases, since they act on much larger targets. These enzymes are very specific, creating a distinctive coding of sulfuryl groups on proteins and carbohydrates. The enzyme shown at top right (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1t8u" target="_blank">1t8u <i class="fa fa-external-link"> </i></a></span>) adds sulfuryl groups to heparin, a large carbohydrate that is found between cells in our body. The different arrangements of sulfuryl groups on heparin control its interaction with over 100 proteins as well as enhancing the solubility of the molecule.</div>
+<h4>An Exceptional Enzyme</h4>
+<div>Most sulfotransferases use PAPS as the source of the sulfuryl group, but as is often the case when looking at biology, there are exceptions. The bacterial sulfotransferase shown at the bottom (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ets" target="_blank">3ets <i class="fa fa-external-link"> </i></a></span>) transfers sulfuryl groups from a different carrier, such as p-nitrophenylsulfate, to its targets. It is found in the periplasmic space between the two membranes that form the cell wall of the bacterium. The exact function of this enzyme is not known, but may be important for the many sulfurylated molecules that are used in communication between cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="ATP sulfurase (left) and APS kinase (center) from fungi, and the human form with both enzymes together in PAPS synthetase 1 (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/116/APSenzymes.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>ATP sulfurase (left) and APS kinase (center) from fungi, and the human form with both enzymes together in PAPS synthetase 1 (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/116/116-Sulfotransferases_APSenzymes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Capturing Sulfate</h4>
+<div>Sulfate is commonly found in the diet as sulfate ions, which must be captured in PAPS before they can be used by sulfotransferases. Two enzymes perform this job. First, ATP sulfurylase attaches sulfate to the adenosine nucleotide, then APS kinase adds an additional phosphoryl group to create PAPS. In bacteria and yeast, these reactions are performed by two separate enzymes. Yeast ATP sulfurylase is shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1g8h" target="_blank">1g8h <i class="fa fa-external-link"> </i></a></span>, and APS kinase from <i>Penicillium</i> mold is shown in the middle from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1m7g" target="_blank">1m7g <i class="fa fa-external-link"> </i></a></span>. In our cells, however, both of these enzymes are fused into a single protein chain, as shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1xnj" target="_blank">1xnj <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<script>
+            for (var n = 0; n < 2; n++) {
+                jmols[n] = {};
+                jmols[n].loaded = false;
+            }
+          </script>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab-1" onclick="loadIframeById(1);">JSmol 1</a></li>
+<li><a data-toggle="tab" href="#tabs-3" id="jmol-tab-2" onclick="loadIframeById(2);">JSmol 2</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Sulfotransferase mSULT1D1 (PDB entry 2zyv)</h5>
+<div class="jmol-image"><img class="img-responsive" onclick="clickJmolTab(0);" src="https://cdn.rcsb.org/pdb101/motm/116/sulfotransferases_jmol.jpg"/></div>
+<p>Most sulfotransferases transfer sulfuryl groups from PAPS to their target molecules. PAPS is a very convenient molecule for this task, because it carries an activated form of the sulfuryl group, and it also contains several phosphoryl groups that are easy to recognize and bind in the active site. The structure shown on the left (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2zyv" target="_blank">2zyv <i class="fa fa-external-link"> </i></a></span>) contains PAPS bound to a mouse sulfotransferase, along with two molecules that are ready to accept sulfuryl groups. The bacterial enzyme shown on the right uses a different mechanism. It performs the reaction in two steps. First, the sulfuryl group is transferred from a phenol carrier to a histidine amino acid in the enzyme, then, it is transferred from the protein to the target molecule. This structure (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ets" target="_blank">3ets <i class="fa fa-external-link"> </i></a></span>) has captured the enzyme in the middle of this process, with the sulfuryl group attached to the histidine.</p>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe_1" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+<div class="tab-pane" id="tabs-3">
+<iframe frameborder="0" id="iframe_2" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many examples of cytosolic sulfotransferases are available in the PDB. Use the Ligand Explorer to look for differences in the active sites that explain their different substrate preferences.</li>
+<li>The active site of many sulfotransferases is buried inside the protein, covered by a flexible loop of protein. Notice that this loop is disordered in many sulfotransferase structures, and is typically only seen when there are substrates bound in the active site. </li>
+<li>Many examples of cytosolic sulfotransferases are available in the PDB. Use the Ligand Explorer to look for differences in the active sites that explain their different substrate preferences.</li>
+<li>The active site of many sulfotransferases is buried inside the protein, covered by a flexible loop of protein. Notice that this loop is disordered in many sulfotransferase structures, and is typically only seen when there are substrates bound in the active site. </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>E. Chapman, M. D. Best, S. R. Hanson and C. H. Wong (2004) Sulfotransferases: structure, mechanism, biological activity, inhibition and synthetic utility. Angewandte Chemie 43, 3526-3548.</li>
+<li>N. Gamage, A. Barnett, N. Hempel, R. G. Duggleby, K. F. Windmill, J. L. Martin and M. E. McManus (2006) Human sulfotransferases and their role in chemical metabolism. Toxicological Sciences 90, 5-22.</li>
+<li>J. Liu and L. C. Pedersen (2007) Anticoagulant heparan sulfate: structural specificity and biosynthesis. Applied Microbiology and Biotechnology 74, 263-272.</li>
+<li>G. Malojcic, R. L. Owen, J. P. A. Grimshaw, M. S. Brozzo, H. Dreher-Teo and R. Glockshuber (2008) A structural and biochemical basis for PAPS-independent sulfuryl transfer by aryl sulfotransferase from uropathogenic Escherichia coli. Proceedings of the National Academy of Sciences USA 105, 19217-19222.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2009, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2009_8">http://doi.org/10.2210/rcsb_pdb/mom_2009_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          for (var i = 1; i <= jmols.length; i++) {
+              $('#iframe_' + i).load(function () {
+                  $(this).height($(this).contents().find('body').height() + 30);
+              });
+          }
+          
+        </script>
+</div>
+</body>
+</html>

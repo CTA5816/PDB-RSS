@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cascade and CRISPR</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cascade and CRISPR" property="og:title"/>
+<meta content="Cascade and CRISPR help bacteria remember how to fight viral infection" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_1vy8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/181" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cascade and CRISPR" name="twitter:title"/>
+<meta content="Cascade and CRISPR help bacteria remember how to fight viral infection" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_1vy8.jpg" name="twitter:image"/>
+<meta content="Cascade and CRISPR help bacteria remember how to fight viral infection" name="description"/>
+<meta content="adaptive immune system,Cas3,Cas9,CRISPR-associated proteins,HIV cure,4tvx,4u7u,4p6i,4qqw,4un3,4oo8,4qyz,Nobel" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 181
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 181 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cascade and CRISPR</h1>
+<p><i>Cascade and CRISPR help bacteria remember how to fight viral infection</i></p>
+<div>
+<h4>Introduction</h4>
+<div>Living organisms are under constant attack by viruses and have evolved an effective set of weapons to fight them. Bacteria and archaea take several approaches. They have several hardwired systems that fight the most common attackers. For instance, restriction enzymes stand ready to cut up the DNA of invading viruses. They also have a more adaptive system, akin to our own immune system, that can be tuned to protect against the viruses that are present at any given time. This system, termed CRISPR-Cas, stores information on current threats and provides the weapons to destroy them.</div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cascade protein (blue) with bound CRISPR RNA (red)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_1vy8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cascade protein (blue) with bound CRISPR RNA (red).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_1vy8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Archive of Infection</h4>
+<div>Bacteria use CRISPR sequences, stored in their genome, to identify attacking viruses. The name stands for "clustered regularly interspaced short palindromic repeats," which refers to the unusual pattern of sequences found in CRISPR DNA. They are composed of many small pieces of viral DNA harvested from viruses that attacked in the past, separated by a distinctive repeated sequence used to create the archive. Remarkably, new sequences are added at the beginning of this collection, so we can read the CRISPR sequence to get a history of viruses that have attacked the bacterial population in the past.</div>
+<h4>Standing Watch</h4>
+<div>A system of Cas proteins (short for "CRISPR-associated proteins") use this stored information to fight the viruses if they try to infect the bacteria again. The center of this system is the large complex Cascade. It carries an RNA transcript of the CRISPR sequence and searches through the cell for matching viral DNA from an infection. If it finds viral DNA, it unwinds it and mobilizes nucleases to cut it up. The structure shown here includes the Cascade surveillance complex composed of 6 different types of proteins (in different shades of blue) along with the RNA transcript (red) (PDB entries <span class="rcsb_id_tag" title="Cascade"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4tvx" target="_blank">4tvx <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Cascade"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4u7u" target="_blank">4u7u <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Cas Proteins</h4>
+<div>Cascade works with a team of proteins to build the CRISPR archive and use it to protect against viruses. First, recruiting proteins like Cas1 and Cas2 (PDB entry <span class="rcsb_id_tag" title="Cas1 and Cas2"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4p6i" target="_blank">4p6i <i class="fa fa-external-link"> </i></a></span>) are needed to chop up viruses during an infection and save appropriately-sized bits in the CRISPR. These pieces are then displayed by Cascade to search for later infections by the virus. If the virus is found, Cas3 (PDB entry <span class="rcsb_id_tag" title="Cas3"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4qqw" target="_blank">4qqw <i class="fa fa-external-link"> </i></a></span>) is the executioner, taking the infecting viral DNA found by Cascade and destroying it. As you're exploring the structures of Cas proteins in the PDB archive, notice that many have been determined by the 2020 Nobel Prize winners: Jennifer Doudna and Emmanuelle Charpentier.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cas proteins, with bound DNA in orange." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_CasProteins.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cas proteins, with bound DNA in orange.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_CasProteins.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<h4>Cas9 and Cures</h4>
+<div>Different bacteria and archaea have evolved a number of variations on this general theme. The Cascade complex, termed Type I, displays CRISPR RNA and recruits the executioner Cas3 to chop up the viral DNA. Type III complexes, on the other hand, have the DNA-cutting enzyme as part of the complex. Type II CRISPR systems, such as Cas9 (PDB entries <span class="rcsb_id_tag" title="Cas9"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4un3" target="_blank">4un3 <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Cas9"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4oo8" target="_blank">4oo8 <i class="fa fa-external-link"> </i></a></span>) have a surveillance protein and executioner all wrapped up in a single protein chain. The complex shown here includes the CRISPR RNA (red) along with a piece of an attacking viral DNA (yellow). This molecule has recently been used in an experimental approach to curing latent HIV infection. An engineered virus was used to insert Cas9 and an anti-HIV CRISPR into HIV-infected cells, which then chopped up the integrated viral DNA.</div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cas9 protein bound to CRISPR RNA (red) and a target viral DNA (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_4un3.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cas9 protein bound to CRISPR RNA (red) and a target viral DNA (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_4un3.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cascade (PDB entry 4qyz)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/181/181-CascadeAndCRISPR_4qyz_JSmol.jpg"/></div>
+<p>PDB entry <span class="rcsb_id_tag" title="Cascade and Viral DNA"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4qyz" target="_blank">4qyz <i class="fa fa-external-link"> </i></a></span> captures Cascade in action. The structure includes the strand of CRISPR RNA (red) and a short piece of the viral DNA (yellow) after it has been unwound and recognized. The structure revealed a surprising but very logical structure for the RNA and DNA. The RNA is stretched open in a long spiral groove in Cascade, and the DNA binds side-by-side, instead of in the classical double helix. To explore this amazing structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>When reading articles about CRISPR sequences, watch out for some of the terminology, because it can be confusing. For instance, the term "spacer" is often used to refer to the short pieces of viral DNA that are stored in the CRISPR, and "repeat" is used to refer to the short repeated sequences separating each piece of viral DNA.</li>
+<li>Many of these large CRISPR/Cas complexes have been characterized by electron microscopy. For instance, to see the structure of a type III complex (which is different from type I Cascade and type II Cas9) take a look at the <a href="http://emsearch.rutgers.edu/atlas/5740_summary.html">EMDataBank.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nanotechnology">Nanotechnology</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/hiv-and-aids">HIV and AIDS</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biotechnology">Biotechnology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. van der Oost, E. R. Westra, R. N. Jackson &amp; B. Wiedenheft (2014) Unravelling the structural and mechanistic basis of CRISPR-Cas systems. Nature Reviews Microbiology 12, 479-492.</li>
+<li>H. Ebina, N. Misawa, Y. Kanemura &amp; Y. Koyanagi (2013) Harnessing the CRISPR/Cas9 system to disrupt latent HIV-1 provirus. Scientific Reports 3, 2510.</li>
+<li>4qqw: Y. Huo, K. H. Nam, F. Ding, H. Lee, L. Wu, Y. Xiao, M. D. Farchione, S. Zhou, K. Rajashankar, I. Kurinov, R. Zhang &amp; A. Ke (2014) Structures of CRISPR Cas3 offer mechanistic insights into Cascade-activated DNA unwinding and degradation. Nature Structural &amp; Molecular Biology 21, 771-777.</li>
+<li>4un3: C. Anders, O. Niewoehner, A. Duerst &amp; M. Jinek (2014) Structural basis of PAM-dependent target DNA recognition by the Cas9 endonuclease. Nature 513, 569-573.</li>
+<li>4tvx: R. N. Jackson, S. M. Golden, P. B. G. van Erg, J. Carter, E. R. Westra, S. J. J. Brouns, J. van der Oost, T. C. Terwilliger, R. J. Read &amp; B. Wiedenheft. (2014) Crystal structure of the CRISPR RNA-guided surveillance complex from Escherichia coli. Science 345, 1473-1479.</li>
+<li>4qyz: S. Mulepati, A. Heroux &amp; S. Bailey (2014) Crystal structure of a CRISPR RNA-guided surveillance complex bound to a ssFNA target. Science 345, 1479-1484.</li>
+<li>4p6i: J. K. Nunez, P. J. Kranzusch, J. Noeske, A. V. Wright, C. W. Davies &amp; J. A. Doudna (2014) Cas1-Cas2 complex formation mediates spacer acquisition during CRISPR-Cas adaptive immunity. Nature Structural &amp; Molecular Biology 21, 528-534.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_1">http://doi.org/10.2210/rcsb_pdb/mom_2015_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Acetohydroxyacid Synthase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Acetohydroxyacid Synthase" property="og:title"/>
+<meta content="In plants, AHAS performs the first step in synthesis of three essential amino acids, making it an effective target for herbicides." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/263/6vz8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/263" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Acetohydroxyacid Synthase" name="twitter:title"/>
+<meta content="In plants, AHAS performs the first step in synthesis of three essential amino acids, making it an effective target for herbicides." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/263/6vz8.jpg" name="twitter:image"/>
+<meta content="In plants, AHAS performs the first step in synthesis of three essential amino acids, making it an effective target for herbicides." name="description"/>
+<meta content="biosynthesis,amino acid,valine,leucine,isoleucine,branched chain amino acid,herbicide,plant,6vz8,6u9d,6lpi,5wkc,6bd9,6bd3" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 263
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 263 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Acetohydroxyacid Synthase</h1>
+<p><i>In plants, AHAS performs the first step in synthesis of three essential amino acids, making it an effective target for herbicides.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Acetohydroxyacid synthase (AHAS) from a plant, with catalytic subunits in blue and regulatory subunits in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/263/6vz8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Acetohydroxyacid synthase (AHAS) from a plant, with catalytic subunits in blue and regulatory subunits in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/263/6vz8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Over the course of the evolution of life, biochemical and biological functions are gained and lost. This happens at the level of the whole organism: for example, natural selection has resulted in butterflies that look exactly like leaves, gaining perfect camouflage against predators, whereas cave-dwelling animals have gradually lost their coloration, and the ability to see it, over the course of evolution and natural selection in their dark environment. Similarly, evolution happens at the level of molecules. Plants have the molecular machinery needed to build all of their amino acids from scratch, using simple nutrients from the environment. Animals, however, have lost this ability over the course of evolution. Since we get a steady supply of amino acids in the plants (and animals) that we eat, our cells don’t need to be able to create them all. Instead, our cells can invest the energy needed to make these amino acids towards other functions required for survival. Somewhere in the distant past, our cells lost the ability to make nine types of amino acids, and today, these are classified as “essential” amino acids that are required in our diet.</div>
+<h4>Building Amino Acids</h4>
+<div>Leucine, valine, and isoleucine are three of the amino acids that are “essential” in our diet. They all have a sidechain solely composed of carbon and hydrogen atoms with a short branch, and are collectively called “branched-chain amino acids.” Plants, bacteria and fungi can make these amino acids using pyruvate created by <a href="https://pdb101.rcsb.org/motm/50">glycolysis</a>. The enzyme acetohydroxyacid synthase (AHAS, shown here from PDB ID <a href="https://www.rcsb.org/structure/6vz8" target="_blank">6vz8</a>) performs the first step in the synthesis. To make valine, it takes two molecules of pyruvate, pulls carbon dioxide off of one, and connects the remaining part to the second pyruvate to create an amino-acid-sized precursor. Then, three other enzymes shuffle atoms around and add the “amino” group to form the amino acid. Similarly, a few additional enzymes are needed to make leucine, and isoleucine synthesis begins by using a slightly larger molecule in place of the second pyruvate in the AHAS reaction.</div>
+<h4>Synthetic Pathways</h4>
+<div>We often think of these biosynthetic enzymes as being conceptually arranged into “pathways” where molecules are modified step-by-step as they encounter one enzyme after the next. Often, there are key enzymes in these pathways that perform a “committed” step. For example, AHAS performs the first step for synthesis of valine and leucine, and once the two pyruvate molecules are linked together, they are committed to the production of these amino acids. Committed steps are often the place where the processes of biosynthesis are regulated, as described in the following section. Also, they are vulnerable places for blocking synthetic pathways with inhibitors. AHAS is the target of dozens of widely-used commercial herbicides. It is an attractive target because these herbicides are highly effective, since they block an essential function, and they are safe for use, since AHAS is not found in our cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Acetohydroxyacid synthases from a plant, yeast, and a bacterium, with catalytic subunits in blue and regulatory subunits in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/263/AHAS.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Acetohydroxyacid synthases from a plant, yeast, and a bacterium, with catalytic subunits in blue and regulatory subunits in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/263/AHAS.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Getting Feedback</h4>
+<div>Since AHAS performs a committed step in the synthesis of amino acids, it’s a good candidate for regulating the activity of the enzyme. AHAS enzymes typically have two subunits: a catalytic subunit that performs the reaction and a regulatory subunit that controls its action. When valine is plentiful, it binds to the regulatory subunit, which then shifts the catalytic subunit to a less active form, slowing production of branched-chain amino acids. However, when valine levels are low, there isn’t enough to bind to the regulatory subunit, and the complex shifts back to its fully active form. Looking at different organisms, we find that the catalytic subunits are quite similar, but the regulatory subunits are variable. Three are shown here: a plant AHAS (PDB ID <a href="https://www.rcsb.org/structure/6vz8" target="_blank">6vz8</a>) has four large regulatory subunits, a fungal AHAS (PDB ID <a href="https://www.rcsb.org/structure/6u9d" target="_blank">6u9d</a>) has eight regulatory subunits that are each half the size of the plant subunits, and a bacterial AHAS (PDB ID <a href="https://www.rcsb.org/structure/6lpi" target="_blank">6lpi</a>) has two regulatory subunits in a smaller overall assembly.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>AHAS in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/263/AHAS_jmol-jmol.jpg"/></div>
+<p>Several crystallographic structures of yeast AHAS reveal steps of the catalytic reaction, and how herbicides block it. The active site uses several cofactors to assist with the reaction. A thiamine cofactor (TPP, shown in yellow with the reactive ring in orange) performs the central reaction that removes carbon dioxide. A magnesium ion (Mg, turquoise) positions the cofactor. AHAS also binds to FAD (magenta), which must be in the reduced state in the active enzyme, and several oxygen molecules of unknown function (not shown here). PDB ID <a href="https://www.rcsb.org/structure/6bd9" target="_blank">6bd9</a> includes two pyruvate molecules (red and pink) entering the active site and PDB ID <a href="https://www.rcsb.org/structure/6bd3" target="_blank">6bd3</a> captures the enzyme after one of these has attached to the thiamine cofactor and carbon dioxide has been removed. PDB ID <a href="https://www.rcsb.org/structure/5wkc" target="_blank">5wkc</a> has a herbicide molecule (penoxsulam, in green) that blocks the entryway into the active site. It also leads to additional problems: in this structure, the attached substrate molecule has been converted into a reactive oxygenated molecule. In another subunit in this PDB entry, the reactive molecule (ethaneperoxoic acid) has been released, leaving a damaged thiamine cofactor with a broken ring. Ethaneperoxoic acid can also oxidize the FAD, further inhibiting the action of the enzyme. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several different classes of herbicides block the action of AHAS. They all block entry of substrates into the active site, but have different structures and bind in slightly different ways. Try searching for “AHAS” at the main RCSB site to explore these structures. </li>
+<li>Note that when you’re exploring the many AHAS structures in the PDB archive, you’ll encounter complexes with many shapes and sizes. For example, many of these structures include only a dimer of the catalytic subunits, which often associate to form tetramers when herbicides are bound, so you won’t see the characteristic cross-shaped assembly found in the structures in this article.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6vz8, 6u9d: Lonhienne, T., Low, Y.S., Garcia, M.D., Croll, T., Gao, Y., Wang, Q., Brillault, L., Williams, C.M., Fraser, J.A., McGeary, R.P., West, N.P., Landsberg, M.J., Rao, Z., Schenk, G., Guddat, L.W. (2020) Structures of fungal and plant acetohydroxyacid synthases. Nature 586: 317-321</li>
+<li>6lpi: Zhang, Y., Li, Y., Liu, X., Sun, J., Li, X., Lin, J., Yang, X., Xi, Z., Shen, Y. (2020) Molecular architecture of the acetohydroxyacid synthase holoenzyme. Biochem J 477: 2439-2449</li>
+<li>5wkc: Lonhienne, T., Garcia, M.D., Pierens, G., Mobli, M., Nouwens, A., Guddat, L.W. (2018) Structural insights into the mechanism of inhibition of AHAS by herbicides. Proc Natl Acad Sci U S A 115: E1945-E1954</li>
+<li>6bd9, 6bd3: Lonhienne, T., Garcia, M.D., Noble, C., Harmer, J., Fraser, J.A., Williams, C.M., Guddat, L.W. (2017) High resolution crystal structures of the acetohydroxyacid synthase-pyruvate complex provide new insights into its catalytic mechanism. ChemistrySelect, DOI: 10.1002/slct.201702128</li>
+<li>Liu, Y., Li, Y., Wang, X. (2016) Acetohydroxyacid synthases: evolution, structure, and function. Appl Microbiol Biotechnol 100: 8633-8649</li>
+<li>Gutiérrez-Preciado, A., Romero, H., Peimbert, M. (2010) An evolutionary perspective on amino acids. Nature Education 3(9):29</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_11">http://doi.org/10.2210/rcsb_pdb/mom_2021_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Amyloids</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Amyloids" property="og:title"/>
+<meta content="Alzheimer's disease and prion diseases are linked to unnatural aggregation of proteins into amyloid fibrils." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_2m4j.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/189" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Amyloids" name="twitter:title"/>
+<meta content="Alzheimer's disease and prion diseases are linked to unnatural aggregation of proteins into amyloid fibrils." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_2m4j.jpg" name="twitter:image"/>
+<meta content="Alzheimer's disease and prion diseases are linked to unnatural aggregation of proteins into amyloid fibrils." name="description"/>
+<meta content="Alzheimer's disease,amyloid fibril,hybrid methods,prion,solid state NMR,2m4j,3nhc,2kj3,3zpk,2lmn,2lmp" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 189
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 189 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Amyloids</h1>
+<p><i>Alzheimer's disease and prion diseases are linked to unnatural aggregation of proteins into amyloid fibrils.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Amyloid-beta fibril from a patient with Alzheimer's disease." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_2m4j.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Amyloid-beta fibril from a patient with Alzheimer's disease.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_2m4j.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Proteins have evolved to fold into a functional shape, or in cases where a flexible tether is needed, to remain consistently unfolded. In some cases, however, proteins aggregate to form unwanted structures, which can have dangerous consequences. The <a href="http://pdb101.rcsb.org/motm/79"> amyloid-beta precursor protein</a> is a perfect example. In its normal form, it is a membrane-bound protein with folded regions connected by flexible tethers. But if the protein chain is broken, some of the resulting peptides aggregate into long fibrils, termed "amyloids," that can gum up the proper working of cells.</div>
+<h4>Cross Beta</h4>
+<div>When these fibrils are studied by x-ray diffraction, they show a distinctive pattern, termed the "cross-beta pattern." This is caused by the way that the many small peptides in the fibril stack upon one another, forming individual beta strands that hydrogen bond with their neighbors to form a huge, extended beta sheet. This results in a very sturdy structure that rivals the strength of steel or spider silk.</div>
+<h4>Amyloids and Disease</h4>
+<div>When these fibrils are formed in the brain, they contribute to the development of Alzheimer's disease. The amyloid fibril shown here, PDB entry <span class="rcsb_id_tag" title="Amyloid-beta fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2m4j" target="_blank">2m4j <i class="fa fa-external-link"> </i></a></span>, was isolated from a patient with Alzheimer's disease and shows how many small peptides stack to form a three-fold-symmetric fibril. Some amyloid structures are also infectious. Prion diseases, such as mad cow disease or kuru, can be caused when the amyloid form of a protein is eaten. The amyloids then act as a template to nucleate the misfolding and aggregation of normal proteins in the body, leading to the formation of many more amyloid fibrils.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Amyloid fibrils of a peptide from human prion protein (left), yeast prion HET-s (center), and a peptide from transthyretin (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_amyloids.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Amyloid fibrils of a peptide from human prion protein (left), yeast prion HET-s (center), and a peptide from transthyretin (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_amyloids.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Studying Amyloids</h4>
+<div>Since amyloid structures are so large and fibrillar, they have been difficult to study by traditional structure determination methods. Several approaches have been taken. Scientists have cut the amyloid proteins into even smaller pieces, which are able to form crystals. For instance, the crystallographic structure shown on the left (PDB entry <span class="rcsb_id_tag" title="Human prion fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3nhc" target="_blank">3nhc <i class="fa fa-external-link"> </i></a></span>) is a peptide with six amino acids from a human prion protein. These types of structures have been used to discover the many different ways that amyloid proteins stack into an extended beta sheet. Hybrid methods, which combine several experimental techniques, have been used to determine many structures, including a yeast prion (center, PDB entry <span class="rcsb_id_tag" title="Yeast prion fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2kj3" target="_blank">2kj3 <i class="fa fa-external-link"> </i></a></span>), a fragment of transthyretin (right, PDB entry <span class="rcsb_id_tag" title="Transthyretin fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3zpk" target="_blank">3zpk <i class="fa fa-external-link"> </i></a></span>), and the amyloid-beta structure shown above. In these structures, solid state NMR is used to determine local conformational features, beta-sheet structure, and long range contacts between atoms. Electron microscopy is used to determine the overall dimensions of the fibril and the number of subunits. Finally, molecular modeling is used to find structures that are consistent with this data.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Beta-Amyloid Fibrils (PDB entries 2lmn and 2lmp)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/189/189-Amyloids_2lmn_2lmp_JSmol.jpg"/></div>
+<p>Another aspect of amyloids has also made them difficult to study: they are often highly polymorphic, forming many different types of fibrils. Two structures of amyloid-beta fibrils are shown here (PDB entries <span class="rcsb_id_tag" title="Amyloid-beta fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2lmn" target="_blank">2lmn <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title="Amyloid-beta fibril"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2lmp" target="_blank">2lmp <i class="fa fa-external-link"> </i></a></span>), with the peptide forming a two-fold and a three-fold fibril. Both have very similar interactions when the chains stack into the long beta sheet, but the lateral interactions between chains are different. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P05067"> Group Sequence view of amyloid-beta precursor protein</a> to see how the fibril-forming portions fit into the entire protein sequence. </li>
+<li>The beta strands in amyloid fibrils associate in many different ways, sometimes forming fibrils where the neighboring beta strands are parallel, and sometimes forming fibrils where neighboring strands have opposite orientations. For instance, compare PDB entries 2lmn and 2lnq, and use a cartoon representation to display the direction of the beta strands.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>R. Tycko (2015) Amyloid polymorphism: structural basis and neurobiological relevance. Neuron 86, 632-645.</li>
+<li>3zpk: A. W. P. Fitzpatrick, G. T. Debelouchina, M. J. Bayro, D. K. Clare, M. A. Caporini, V. S. Bajaj, C. P. Jaroniec, L. Wang, V. Ladizhansky, S. A. Muller, C. E. MacPhee, C. A. Waudby, H. R. Mott, A. De Simone, T. P. J. Knowles, H. R. Saibil, M. Vendruscolo, E. V. Orlova, R. G. Griffin &amp; C. M. Dobson (2013) Atomic structure and hierarchical assembly of a cross-beta amyloid fibril. Proceedings of the National Academy of Science USA 110, 5468-5473.</li>
+<li>2m4j: J. X. Lu, W. Qiang, W. M. Yau, C. D. Schwieters, S. C. Meredith &amp; R. Tycko (2013) Molecular structure of beta-amyloid fibrils in Alzheimer's disease brain tissue. Cell 154, 1257-1268.</li>
+<li>Tycko, R. &amp; Wickner, R. B. (2013) Molecular structures of amyloid and prion fibrils: consensus versus controversy. Accounts of Chemical Research 46, 1487-1496.</li>
+<li>D. Eisenberg &amp; M. Jucker (2012) The amyloid state of proteins in human diseases. Cell 148, 1188-1203.</li>
+<li>3nhc: M. I. Apostol, M. R. Sawaya, D. Cascio &amp; D. Eisenberg (2010) Crystallographic studies of prion protein (PrP) segments suggest how structural changes encoded by polymorphism at residue 129 modulate susceptibility to human prion disease. Journal of Biological Chemistry 285, 29671-29675.</li>
+<li>2kj3: H. Van Melckebeke, C. Wasmer, A. Lange, E. AB, A. Loquet, A. Bockmann &amp; B. H. Meier (2010) Atomic-resolution three-dimensional structure of HET-s(218-289) amyloid fibrils by solid-state NMR spectroscopy. Journal of the American Chemical Society 132, 13765-13775.</li>
+<li>2lmp: A. Paravastu, R. Leapman, W. Yau &amp; R. Tycko (2008) Molecular structural basis for polymorphism in Alzheimer's beta-amyloid fibrils. Proceedings of the National Academy of Science USA 105, 18349-18354.</li>
+<li>2lmn: A. Petkova, W. Yau &amp; R. Tycko (2006) Experimental constraints on quaternary structure in Alzheimer's beta-amyloid fibrils. Biochemistry 45, 498-512.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2015, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2015_9">http://doi.org/10.2210/rcsb_pdb/mom_2015_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

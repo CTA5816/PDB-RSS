@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Toll-like Receptors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Toll-like Receptors" property="og:title"/>
+<meta content="Toll-like receptors warn us about bacterial and viral infection" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3fxi_2j67.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/143" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Toll-like Receptors" name="twitter:title"/>
+<meta content="Toll-like receptors warn us about bacterial and viral infection" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3fxi_2j67.jpg" name="twitter:image"/>
+<meta content="Toll-like receptors warn us about bacterial and viral infection" name="description"/>
+<meta content="cell-surface receptor,innate immune system,lipopolysaccharide,lipoprotein,TLR,3fxi,2j67,3ciy,1dfj,2z7x" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 143
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 143 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Toll-like Receptors</h1>
+<p><i>Toll-like receptors warn us about bacterial and viral infection</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Toll-like receptor 4 (blue) bound to bacterial lipopolysaccharide (red). The portion that crosses the cell membrane is shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3fxi_2j67.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Toll-like receptor 4 (blue) bound to bacterial lipopolysaccharide (red). The portion that crosses the cell membrane is shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3fxi_2j67.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>The world is filled with bacteria and viruses, all eager to infect our cells. We have two lines of defense against this constant assault. Our first defense is the innate immune system, which stands guard against the most common attackers and mounts a quick defense when they are found. This innate system is found widely in animals, plants, and fungi, and for most, is their only line of defense. Vertebrate animals, however, have a second line of defense: the adaptive immune system. It is brought to bear if the problem is more severe, using custom-built antibodies and a powerful force of white blood cells to battle the invaders.</div>
+<h4>Dedicated Defenses</h4>
+<div>The innate immune system is hard-wired to battle common foes: for instance, the Toll protein in fruit flies specializes in recognizing bacterial and fungal infections. Our own cells contain 10 proteins similar to Toll, called "Toll-like receptors," that each recognize distinctive molecules from bacteria and viruses. The one shown here recognizes lipopolysaccharide (shown in red), a molecule that is found in many bacterial cell walls. When they find these foreign molecules, Toll-like receptors mobilize an inflammatory response that fights the pathogens. This response is very important: for instance, mice that are deficient in one step of the Toll-like receptor signaling pathway often die of infections from the normal bacteria found in their mouths.</div>
+<h4>Sending the Signal</h4>
+<div>Like many receptors on the cell surface, Toll-like receptors transmit their signal into the cell by forming a dimer. The receptor spans the cell membrane, with a large horseshoe-shaped portion outside and a smaller domain inside. The pathogenic molecule, such as lipopolysaccharide, brings together two copies of the horseshoe-shaped portion outside the cell (shown here from PDB entry <span class="rcsb_id_tag" title="Toll-like receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3fxi" target="_blank">3fxi <i class="fa fa-external-link"> </i></a></span>), bringing together the cytoplasmic domains (shown here from PDB entry <span class="rcsb_id_tag" title="Toll-like receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2j67" target="_blank">2j67 <i class="fa fa-external-link"> </i></a></span>) and? initiating a cascade of signals inside the cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Extracellular domains of toll-like receptor 3 bound to DNA." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3ciy.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Extracellular domains of toll-like receptor 3 bound to DNA.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_3ciy.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Friend or Foe</h4>
+<div>The trick, of course, is to have Toll-like receptors that recognize unfriendly molecules but not our own molecules. Structures have been solved for several different types. The one shown here, from PDB entry <span class="rcsb_id_tag" title="Toll-like receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3ciy" target="_blank">3ciy <i class="fa fa-external-link"> </i></a></span> and including only the extracellular portion of the receptor, recognizes segments of double-stranded RNA that are at least 35 nucleotides long. Long pieces of double-stranded RNA are rare in our cells: transfer RNA and microRNA typically have shorter double-stranded regions. So, a long RNA double helix is a strong signal that a virus is present.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Toll-like Receptor (PDB entry 2z7x)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/143/143-TollLikeReceptors_2z7x_jmol.jpg"/></div>
+<p>The distinctive horseshoe shape of Toll-like receptors is formed by a repeating amino acid sequence, termed a "leucine-rich repeat." This motif is used in many other proteins, and particularly in proteins that bind to other proteins. In some cases, such as ribonuclease inhibitor (PDB entry <span class="rcsb_id_tag" title="Ribonuclease inhibitor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1dfj" target="_blank">1dfj <i class="fa fa-external-link"> </i></a></span>, not shown here), the protein binds where you might expect: inside the horseshoe. In the Toll-like receptors, however, the target molecules bind in a pocket on the side of the horseshoe. This is particularly apparent in the Toll-like receptors that recognize bacterial lipoproteins, shown here from PDB entry <span class="rcsb_id_tag" title="Toll-like receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2z7x" target="_blank">2z7x <i class="fa fa-external-link"> </i></a></span>, where a deep pocket in the receptor encloses the lipid chains. To take a closer look at this structure, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several structures are available for the monomeric form of Toll-like receptors, before they have encountered their target ligands. For instance, compare the monomeric form of TLR2 in PDB entry <a href="https://www.rcsb.org/structure/3a7c" target="_blank">3a7c</a> with the active dimer in PDB entry <a href="https://www.rcsb.org/structure/2z7x" target="_blank">2z7x</a>.</li>
+<li>Ribonuclease inhibitor also contains leucine-rich repeats that form a horseshoe-shaped protein. However, the curve is much tighter in ribonuclease inhibitor. Use a cartoon or backbone representation to compare the secondary structure of TLR2 in <a href="https://www.rcsb.org/structure/3a7c" target="_blank">3a7c</a> and ribonuclease inhibitor in <a href="https://www.rcsb.org/structure/1dfj" target="_blank">1dfj</a>, and notice how the alpha helices on the outer edge force the protein into a tighter curve.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>I. Botos, D. M. Segal and D. R. Davies (2011) The structural biology of Toll-like receptors. Structure 19, 447-459.</li>
+<li>B. Beutler, S. Jiang, P. Georgel, K. Crozat, B. Croker, S. Rutschmann, X. Du and K. Hoebe (2006) Genetic analysis of host resistance: Toll-like receptor signaling and immunity at large. Annual Review of Immunology 24, 353-389.</li>
+<li>J. A. Hoffmann and J. M. Reichhart (2002) Drosophila innate immunity: an evolutionary perspective. Nature Immunology 3, 121-126.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2011, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2011_11">http://doi.org/10.2210/rcsb_pdb/mom_2011_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

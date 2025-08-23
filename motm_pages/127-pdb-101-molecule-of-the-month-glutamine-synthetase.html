@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Glutamine Synthetase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Glutamine Synthetase" property="og:title"/>
+<meta content="Glutamine synthetase monitors the levels of nitrogen-rich amino acids and decides when to make more" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/30/1fpy-twoviews.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/30" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Glutamine Synthetase" name="twitter:title"/>
+<meta content="Glutamine synthetase monitors the levels of nitrogen-rich amino acids and decides when to make more" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/30/1fpy-twoviews.gif" name="twitter:image"/>
+<meta content="Glutamine synthetase monitors the levels of nitrogen-rich amino acids and decides when to make more" name="description"/>
+<meta content="glutamine biosynthetic process,glutamine-ammonia ligase activity,nitrogen fixation,oligomeric protein,1fpy,1fpy,2gls" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 30
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 30 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Glutamine Synthetase</h1>
+<p><i>Glutamine synthetase monitors the levels of nitrogen-rich amino acids and decides when to make more</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Glutamine synthetase. The site of modification by ADP ribosylation is shown with an arrow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/30/1fpy-twoviews.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Glutamine synthetase. The site of modification by ADP ribosylation is shown with an arrow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/30/30-GlutamineSynthetase-1fpy-twoviews.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our cells are continually faced with a changing environment. Think about what you eat. Some days you might eat a lot of protein, other days you might eat a lot of carbohydrate. Sometimes you may eat nothing but chocolate. Your body must be able to respond to these different foods, producing the proper enzymes for capturing the nutrients in each. The same is doubly true for small organisms like bacteria, which do not have as many options in choosing their diet. They must eat whatever food happens to be close by, and then mobilize the enzymes needed to use it.</div>
+<h4>A Molecular Computer</h4>
+<div>The enzyme glutamine synthetase is a key enzyme controlling the use of nitrogen inside cells. Glutamine, as well as being used to build proteins, delivers nitrogen atoms to enzymes that build nitrogen-rich molecules, such as DNA bases and amino acids. So, glutamine synthetase, the enzyme that builds glutamine, must be carefully controlled. When nitrogen is needed, it must be turned on so that the cell does not starve. But when the cell has enough nitrogen, it needs to be turned off to avoid a glut. <br/><br/> Glutamine synthetase acts like a tiny molecular computer, monitoring the amounts of nitrogen-rich molecules. It watches levels of amino acids like glycine, alanine, histidine and tryptophan, and levels of nucleotides like AMP and CTP. If too much of one of these molecules is made, glutamine synthetase senses this and slows production slightly. But as levels of all of these nucleotides and amino acids rise, together they slow glutamine synthetase more and more. Eventually, the enzyme grinds to a halt when the supply meets the demand.</div>
+<h4>Communication Between Many Active Sites</h4>
+<div>The glutamine synthetase molecule shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fpy" target="_blank">1fpy <i class="fa fa-external-link"> </i></a></span>) is from bacteria. It is composed of twelve identical subunits, each of which has an active site for the production of glutamine. When performing its reaction, the active site binds to glutamate and ammonia, and also to an ATP molecule that powers the reaction. But, the active sites also bind weakly to other amino acids and nucleotides, partially blocking the action of the enzyme. All of the many sites communicate with one another, and as the concentrations of competing molecules rise, more and more of the sites are blocked, eventually shutting down the whole enzyme. The cell has a more direct approach when it wants to shut down the enzyme. At a key tyrosine next to the active site, colored yellow here and shown by the arrow, an ADP molecule can be attached to the protein, completely blocking its action.</div>
+<h4>Lack of Control</h4>
+<div>We make several versions of glutamine synthetase in our own cells. Most of our cells make a version similar to the bacterial one shown here, but with eight subunits instead of twelve. Like the bacterial enzyme, it is controlled by the nitrogen-rich compounds down the synthetic pipeline. We also make a second glutamine synthetase in our brain. There, glutamate is used as a neurotransmitter, and glutamine synthetase is used when the glutamate is recycled after a nerve impulse is delivered. In the brain, glutamine synthetase is in constant action, so a highly-regulated version is not appropriate. Instead, the alternate form is active all the time, continually performing its essential duty.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Active sites of glutamine synthetase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/30/1fpy-ligands.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Active sites of glutamine synthetase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/30/30-GlutamineSynthetase-1fpy-ligands.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Two Doors</h4>
+<div>Each of the twelve active sites of glutamine synthetase has two metal ions, either magnesium or manganese (shown here in purple), bound at the center of a tunnel. The substrates enter from two sides of the tunnel: ATP enters on the exposed faces on the top and bottom of the enzyme (ATP is easily seen in the upper picture on the previous page) and glutamate and ammonia squeeze through an opening between the upper ring of subunits and the lower ring. This structure, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fpy" target="_blank">1fpy <i class="fa fa-external-link"> </i></a></span>, contains a ADP molecule bound in the ATP site, two manganese ions (which bind tighter than magnesium, but make the enzyme slightly slower), and an inhibitor that is about the same size and shape as glutamine.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/30/2gls-rasmol.gif"/></div>
+<div>Glutamine synthetase is a huge enzyme. The PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2gls" target="_blank">2gls <i class="fa fa-external-link"> </i></a></span> is a good place to start when exploring the structure. Try using a backbone diagram like the one shown here to show the interaction between the subunits. Since the regulation of glutamine synthetase relies on communication between subunits, the subunits are tied tightly together. The end of each chain threads its way up into the middle of the neighboring subunit in the opposite ring--notice how the subunit colored red is poking up into the blue subunit. <br/><br/> This illustration was created with RasMol. You can create similar illustrations by clicking on the accession codes and choosing one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>David S. Eisenberg, Harindarpal S. Gill, Gaston M.U. Pfluegl and Sergio H. Rothstein (2000): Structure-function relationships of glutamine synthetases. <i>Biochimica et Biophysica Acta</i> <b>1477</b>, pp. 122-145.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2002, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2002_6">http://doi.org/10.2210/rcsb_pdb/mom_2002_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

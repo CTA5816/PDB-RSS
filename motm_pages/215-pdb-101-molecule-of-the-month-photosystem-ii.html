@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Photosystem II</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Photosystem II" property="og:title"/>
+<meta content="Photosystem II captures the energy from sunlight and uses it to extract electrons from water molecules" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/59/1s5l-membrane.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/59" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Photosystem II" name="twitter:title"/>
+<meta content="Photosystem II captures the energy from sunlight and uses it to extract electrons from water molecules" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/59/1s5l-membrane.gif" name="twitter:image"/>
+<meta content="Photosystem II captures the energy from sunlight and uses it to extract electrons from water molecules" name="description"/>
+<meta content="chlorophyll binding,light reaction,light-harvesting complex,oxidation reduction,photosynthesis,photosystem,1s5l,1s5l,1rwt" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 59
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 59 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Photosystem II</h1>
+<p><i>Photosystem II captures the energy from sunlight and uses it to extract electrons from water molecules</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Photosystem II from cyanobacteria. The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/59/1s5l-membrane.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem II from cyanobacteria. The membrane is shown schematically in gray.</i></div>
+</div>
+</div>
+</div>
+<div>Three billion years ago, our world changed completely. Before then, life on Earth relied on the limited natural resources found in the local environment, such as the organic molecules made by lightning, hot springs, and other geochemical sources. However, these resources were rapidly being used up. Everything changed when these tiny cells discovered a way to capture light and use it to power their internal processes. The discovery of photosynthesis opened up vast new possibilities for growth and expansion, and life on the earth boomed. With this new discovery, cells could take carbon dioxide out of the air and combine it with water to create the raw materials and energy needed for growth. Today, photosynthesis is the foundation of life on Earth, providing (with a few exotic exceptions) the food and energy that keeps every organism alive.</div>
+<h4>The Colors of Photosynthesis</h4>
+<div>Modern cells capture light using photosystem proteins, such as the one pictured here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1s5l" target="_blank">1s5l <i class="fa fa-external-link"> </i></a></span>. These photosystems use a collection of highly-colored molecules to capture light. These light-absorbing molecules include green chlorophylls, which are composed of a flat organic molecule surrounding a magnesium ion, and orange carotenoids, which have a long string of carbon-carbon double bonds. These molecules absorb light and use it to energize electrons. The high-energy electrons are then harnessed to power the cell.</div>
+<h4>Energetic Electrons</h4>
+<div>Photosystem II is the first link in the chain of photosynthesis. It captures photons and uses the energy to extract electrons from water molecules. These electrons are used in several ways. First, when the electrons are removed, the water molecule is broken into oxygen gas, which bubbles away, and hydrogen ions, which are used to power ATP synthesis. This is the source of all of the oxygen that we breathe. Second, the electrons are passed down a chain of electron-carrying proteins, getting an additional boost along the way from <a class="mom_big_bold" href="https://pdb101.rcsb.org/motm/22">photosystem I</a>. As these electrons flow down the chain, they are used to pump hydrogen ions across the membrane, providing even more power for ATP synthesis. Finally, the electrons are placed on a carrier molecule, NADPH, which delivers them to enzymes that build sugar from water and carbon dioxide.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The reaction center of photosystem II." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/59/1s5l-chain.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The reaction center of photosystem II.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/59/59-PhotosystemII-1s5l-chain.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Reaction Center</h4>
+<div>The heart of photosystem II is the reaction center, where the energy of light is converted into the motion of energized electrons. At the center is a key chlorophyll molecule. When it absorbs light, one of its electrons is promoted to a higher energy. This energized electron then hops downward, through several other pigmented molecules, on to plastoquinone A, and finally over to plastoquinone B. When it gets enough electrons, this small quinone is released from the photosystem, and it delivers its electrons to the next link in the electron-transfer chain. Of course, this leaves the original chlorophyll without an electron. The upper half of the reaction center has the job of replacing this electron with a low-energy electron from water. The oxygen-evolving center strips an electron from water and passes it to a tyrosine amino acid, which then delivers it to the chlorophyll, making it ready to absorb another photon.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Antenna proteins (small triangular proteins at top and bottom) associated with photosystem II. The central chlorophyll molecule of the reaction center is shown with an arrow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/59/antenna.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antenna proteins (small triangular proteins at top and bottom) associated with photosystem II. The central chlorophyll molecule of the reaction center is shown with an arrow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/59/59-PhotosystemII-antenna.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Harvesting Light</h4>
+<div>Of course, this whole process wouldn't be very efficient if plants had to wait for photons to hit that one special chlorophyll in the reaction center. Fortunately, the energy from a light-excited electron is easily transferred through the process of resonance energy transfer. Thanks to the mysteries of quantum mechanics, the energy can jump from molecule to molecule, as long they are close enough to each other. To take advantage of this property, photosystems have large antennas of light-absorbing molecules that harvest light and transfer their energy inwards to the reaction center. Plants even build special light-harvesting proteins that sit next to the photosystems and assist with light collection. The picture shows a top view of photosystem II (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1s5l" target="_blank">1s5l <i class="fa fa-external-link"> </i></a></span>), showing all of the light-absorbing molecules inside. The central chlorophyll molecule of the reaction center is shown with the arrow (notice the second reaction center in the bottom half--photosystem II is composed of two identical halves). The little triangular molecules at top and bottom, stuffed full of chlorophyll and carotenoids, are light-harvesting proteins (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1rwt" target="_blank">1rwt <i class="fa fa-external-link"> </i></a></span>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/59/1s5l-rasmol.gif"/></div>
+<div>The oxygen-evolving center of photosystem II is a complicated cluster of manganese ions (magenta), calcium (blue green) and oxygen atoms (red). It grips two water molecules and removes four electrons, forming oxygen gas and four hydrogen ions. The actual binding site of the two water molecules is not known for certain, but in the PDB structure <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1s5l" target="_blank">1s5l <i class="fa fa-external-link"> </i></a></span> a bicarbonate ion is bound to the cluster, providing a clue for location of the active site. The picture shows two oxygen atoms from this ion (colored blue): one is bound to a manganese ion, the other is bound to the calcium ion. Notice that the oxygen-evolving center is surrounded by histidines, aspartates and glutamates, which hold it in place. The tyrosine shown in the middle forms a perfect bridge between the water site and the light-capturing chlorophyll. <br/><br/> This picture was created with RasMol. You can create similar pictures by clicking on the accession codes here, and picking one of the options for 3D viewing. When you go to explore this fascinating molecule, be prepared for a challenge. It is very complex and you will need to spend some time to make sense of it. If you want to look at just the reaction center, try displaying non-protein residue numbers 1-8, 40, and 41, along with tyrosine 161 of chain A.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecules-for-a-sustainable-future">Molecules for a Sustainable Future</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>J. Barber (2003) Photosystem II: the Engine of Life. Quarterly Reviews of Biophysics 36, 71-89.</li>
+<li>K.N. Ferreira, T.M. Iverson, K. Maghlaoui, J. Barber and S. Iwata (2004) Architecture of the Photosynthetic Oxygen-Evolving Center. Science 303, 1831-1838. The Perspective by A.W. Rutherford and A. Boussac in this same issue (pages 1782-1784) is also very useful.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_11">http://doi.org/10.2210/rcsb_pdb/mom_2004_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

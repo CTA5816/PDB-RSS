@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Calmodulin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Calmodulin" property="og:title"/>
+<meta content="Calcium ions rapidly deliver signals to control processes such as muscle contraction, nerve signaling, and fertilization" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/44/3cln.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/44" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Calmodulin" name="twitter:title"/>
+<meta content="Calcium ions rapidly deliver signals to control processes such as muscle contraction, nerve signaling, and fertilization" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/44/3cln.gif" name="twitter:image"/>
+<meta content="Calcium ions rapidly deliver signals to control processes such as muscle contraction, nerve signaling, and fertilization" name="description"/>
+<meta content="calcium ion binding,cell signaling,signal transduction,troponin C,3cln,1tcf,1cfd,1cll,1cm1,2bbm,1k93" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 44
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 44 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Calmodulin</h1>
+<p><i>Calcium ions rapidly deliver signals to control processes such as muscle contraction, nerve signaling, and fertilization</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Calmodulin, with bound calcium in turquoise." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/44/3cln.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Calmodulin, with bound calcium in turquoise.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/44/44-Calmodulin-3cln.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Structures and Signals</h4>
+<div>Calcium is the most plentiful mineral element found in your body, with phosphorous coming in second. This probably doesn't come as a surprise, since your bones are strengthened and supported by about two kilograms of calcium and phosphorous. Your body also uses a small amount of calcium, in the form of calcium ions, to perform more active duties. Calcium ions play essential roles in cell signaling, helping to control processes such as muscle contraction, nerve signaling, fertilization and cell division. Through the action of calcium pumps and several kinds of calcium binding proteins, cells keep their internal calcium levels 1000-10,000 times lower than the calcium levels in the blood. Thus when calcium is released into cells, it can interact with calcium sensing proteins and trigger different biological effects, causing a muscle to contract, releasing insulin from the pancreas, or blocking the entry of additional sperm cells once an egg has been fertilized.</div>
+<h4>Sensing Calcium</h4>
+<div>As its name suggests, calmodulin is a CALcium MODULated proteIN. It is abundant in the cytoplasm of all higher cells and has been highly conserved through evolution. Calmodulin acts as an intermediary protein that senses calcium levels and relays signals to various calcium-sensitive enzymes, ion channels and other proteins. Calmodulin is a small dumbbell-shaped protein composed of two globular domains connected together by a flexible linker. Each end binds to two calcium ions. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3cln" target="_blank">3cln <i class="fa fa-external-link"> </i></a></span>, shown here, has all four sites filled with calcium ions and the linker has formed a long alpha helix separating the two calcium-binding domains.</div>
+<h4>Calmodulin Look-alikes</h4>
+<div>Many different proteins are sensitive to calcium levels inside (and outside) cells. In the late 1960's, before the discovery of calmodulin, troponin C (see, for instance, PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1tcf" target="_blank">1tcf <i class="fa fa-external-link"> </i></a></span>) was the first protein shown to be sensitive to calcium. Troponin C senses rising calcium levels and triggers muscle contraction. The structures of troponin C and calmodulin are remarkably similar, the major difference being the length of the linker connecting the two calcium-binding globular domains. The calcium-binding region of the protein, shown in detail in a later section, is almost identical. This motif has since been found in dozens of other calcium-sensitive proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Protein motion in calmodulin: without calcium (left) and with calcium (right). Sites that bind to target proteins are shown with stars." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/44/1cfd-1cll.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Protein motion in calmodulin: without calcium (left) and with calcium (right). Sites that bind to target proteins are shown with stars.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/44/44-Calmodulin-1cfd-1cll.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Functionally Versatile Molecule</h4>
+<div>Calmodulin's target proteins come in various shapes, sizes and sequences and are involved in a wide array of functions. For example, calcium-bound calmodulin forms a critical subunit for the regulatory enzyme phosphorylase kinase, which in turn is a regulator for glycogen breakdown. Calmodulin also binds and activates other kinases and phosphatases that play significant roles in cell signaling, ion transport and cell death. One common theme in the contact between calmodulin and its different target proteins is the use of non-polar interactions, in particular, through the interactions with the unusually abundant methionines of calmodulin. Calcium binding exposes these non-polar surfaces of calmodulin, which then bind to non-polar regions on the target proteins. The structure shown on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cfd" target="_blank">1cfd <i class="fa fa-external-link"> </i></a></span>, shows calmodulin without calcium, and the structure on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cll" target="_blank">1cll <i class="fa fa-external-link"> </i></a></span>, shows calmodulin after calcium binds. The key nonpolar areas are colored with carbon atoms in green and the many methionine sulfur atoms in yellow. Notice how these non-polar amino acids form two neat grooves (shown with red stars) when calcium binds, waiting to grip the target protein. Because these non-polar grooves are generic in shape, calmodulin acts as a versatile regulatory protein and its targets are not required to possess any specific amino acid sequence or structural binding motifs.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Complexes of calmodulin with target proteins: with peptides from calmodulin-dependent protein kinase II-alpha (top left) and myosin light chain kinase (top right), and with anthrax edema factor (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/44/complexes.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Complexes of calmodulin with target proteins: with peptides from calmodulin-dependent protein kinase II-alpha (top left) and myosin light chain kinase (top right), and with anthrax edema factor (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/44/44-Calmodulin-complexes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Flexibility of Calmodulin</h4>
+<div>NMR studies clearly show that the connector between the two calcium binding globular domains is flexible even when it is not bound to its target proteins. However, the full range of flexibility can be seen in calmodulin's interactions with its target proteins. Calmodulin typically wraps around its target, with the two globular domains gripping either side of it. The two structures on the left show calmodulin bound to two different target enzymes: calmodulin-dependent protein kinase II-alpha at the top (from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cm1" target="_blank">1cm1 <i class="fa fa-external-link"> </i></a></span>) and myosin light chain kinase on the bottom (from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2bbm" target="_blank">2bbm <i class="fa fa-external-link"> </i></a></span>). In both cases, only a small piece of the target protein chain (shown in red) is included in the crystal structure. Notice how the flexible linker of calmodulin, shown in purple, allows calmodulin to conform to the slightly different shapes of these two targets. A different binding geometry is seen in the edema factor toxin from the anthrax bacteria, shown here on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1k93" target="_blank">1k93 <i class="fa fa-external-link"> </i></a></span>. The toxin is shown in red. Once calmodulin binds to the toxin, a conformational change in the toxin activates its adenylyl cyclase activity, which then depletes the host cell's energy stores. Since calmodulin is absent in bacteria, the anthrax bacteria have cleverly evolved to exploit the abundance of calmodulin in their hosts in order to trigger the toxin and take control of their cellular machinery.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Calmodulin in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/44/Jmol_image-jmol.png"/></div>
+<p>Calmodulin changes shape when it binds to calcium and can activate over 300 essential proteins. Each of its four high-affinity calcium binding sites, called EF-hands, contains a characteristic loop flanked by two alpha helices. The bottom image illustrates calcium ion coordination in the fourth EF-hand, where the positively-charged calcium ion forms seven bonds with negatively-charged oxygen atoms from three aspartates, one glutamate, one backbone carbonyl, and one water molecule. After all four calcium ions bind, calmodulin shifts from a closed shape (PDB entry <a href="https://www.rcsb.org/structure/1cfd" target="_blank">1cfd</a>, left) to an open shape (PDB entry <a href="https://www.rcsb.org/structure/1cll" target="_blank">1cll</a>, middle). Its newly-exposed central alpha helix (pink) can wrap around target proteins like myosin light chain kinase (PDB entry <a href="https://www.rcsb.org/structure/2bbm" target="_blank">2bbm</a>, right), facilitating interaction between hydrophobic amino acids on the protein surface, including numerous methionines (shown in bright orange). <br/><br/> Select the JSmol tab to explore these structures in an interactive view.<br/><br/><b> This JSmol was designed and illustrated by Xinyi Christine Zhang.</b></p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Vetter, S.W. and Leclerc, E. (2003): Novel aspects of calmodulin target recognition and activation. <i>Eur. J. Biochem.</i> <b>270</b>, pp. 404-414.</li>
+<li>Liddington, R.C. (2002): A molecular full nelson. <i>Nature</i> <b>415</b>, pp. 373-374.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2003, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2003_8">http://doi.org/10.2210/rcsb_pdb/mom_2003_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

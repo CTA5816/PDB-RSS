@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Odorant Receptors</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Odorant Receptors" property="og:title"/>
+<meta content="Our sense of smell relies on odorant receptors that recognize specific scents." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/282/8f76_Figure.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/282" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Odorant Receptors" name="twitter:title"/>
+<meta content="Our sense of smell relies on odorant receptors that recognize specific scents." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/282/8f76_Figure.jpg" name="twitter:image"/>
+<meta content="Our sense of smell relies on odorant receptors that recognize specific scents." name="description"/>
+<meta content="smell,odorant,GPCR,G-protein,receptor,sense,nerve cell,1e00,3n7h,8f78" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 282
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 282 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Odorant Receptors</h1>
+<p><i>Our sense of smell relies on odorant receptors that recognize specific scents.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Olfactory odorant receptor (magenta) and G-protein (blue and green). The odorant propionate is shown at the top." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/282/8f76_Figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Olfactory odorant receptor (magenta) and G-protein (blue and green). The odorant propionate is shown at the top.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/282/8f76_Figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Take a moment to breathe, and notice all the things you can smell. Right now, in my office, I can smell many things. A yeasty smell tells me that a lab down the hall is autoclaving bacterial growth media. The unique smell of old books reveals that I haven't entirely moved to digital media yet, but a faint whiff of dust reveals how long it's been since I've read them. The mug of tea on my desk provides a comforting scent throughout the day, and on other days, is replaced by the stronger scent of coffee. The sense of smell keeps us continually informed about our surroundings, giving us clues about what is happening close by and at longer distances. These many scents are recognized by a collection of olfactory odorant receptors that monitor the air we breathe and tell us when interesting molecules are nearby.</div>
+<h4>Odorants and Receptors</h4>
+<div>Odorants are typically small molecules that waft through the air and reach our nose, and have chemical properties that allow them to enter our mucous membranes and reach odorant receptors. The number of possible odorants has been tricky to pin down, with estimates ranging from 10,000 to 40 billion different molecules. Looking in our genome, we find that our noses contain about 400 different odorant receptors. These receptors are monitored by specialized nerve cells in the nose, typically with each individual nerve cell containing only one type of odorant receptor. The richness of our sense of smell, however, is achieved by combinatorics. Each odorant receptor typically binds to several similar types of odorant molecules, and each type of odorant will bind to multiple types of odorant receptors. The brain then sorts out all the combinations to identify specific scents.</div>
+<h4>Stinky Is Not Always Bad</h4>
+<div>The odorant receptor pictured here (PDB ID <a href="https://www.rcsb.org/structure/8f76" target="_blank">8f76</a>) recognizes the odorant molecule propionate. Pure propionate has a pungent, unpleasant smell. However, the makers of swiss cheese carefully cultivate special bacteria that make propionate, and in small amounts, it adds an appealing tang to the cheese. This receptor also recognizes acetate, a slightly smaller molecule that gives vinegar its sharp odor. It is a G-protein-coupled receptor similar to light-sensing <a href="https://pdb101.rcsb.org/motm/147">rhodopsins</a> and neurotransmitter receptors such as the <a href="https://pdb101.rcsb.org/motm/100">adrenergic</a> and <a href="https://pdb101.rcsb.org/motm/164">serotonin</a> receptors. As with other GPCRs, an odorant molecule binds to a specific extracellular site on the receptor, causing a change of shape in the receptor that is sensed by <a href="https://pdb101.rcsb.org/motm/58">G-proteins</a> inside the cell, ultimately stimulating the nerve cell.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Odorant-binding proteins from pig and mosquito. Molecules bound in the odorant site are in yellow and orange, and the mosquito-repellent DEET is in green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/282/OBP.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Odorant-binding proteins from pig and mosquito. Molecules bound in the odorant site are in yellow and orange, and the mosquito-repellent DEET is in green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/282/OBP.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Delivering Odorants</h4>
+<div>Many animals also build small proteins that capture odorant molecules and deliver them to odorant receptors. We only build a few of these, which are primarily involved in capture of pheromones. A similar protein from pigs is shown here from PDB ID <a href="https://www.rcsb.org/structure/1e00" target="_blank">1e00</a>. Insects, however, often build many types of odorant-binding proteins, which help them capture odorants in their antenna and other sensory organs. Looking in the PDB archive, you can find many structures of odorant-binding proteins that moths use to find mates and mosquitoes use to find people to bite. The one pictured here, from PDB ID <a href="https://www.rcsb.org/structure/3n7h" target="_blank">3n7h</a>, has the mosquito repellent DEET bound to it, blocking a tunnel where odorants normally enter. Notice that the mammalian and insect proteins have entirely different protein folds, giving evidence that they evolved separately to perform a similar function.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Odorant Receptor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/282/jmol_figure-jmol.jpg"/></div>
+<p>As seen in PDB ID <a href="https://www.rcsb.org/structure/8f76" target="_blank">8f76</a>, the binding site of this odorant receptor surrounds propionate and uses specific amino acids to recognize it and similar small acidic molecules. Propionate has a negatively-charged acidic group at one end, so the receptor uses a positively-charged arginine to capture it, and glutamine and serine to form stabilizing hydrogen bonds with it. The other end of propionate includes two hydrophobic carbon atoms that are surrounded by a small pocket of hydrophobic amino acids in the receptor. Acetate, which has one fewer carbon atom, also fits nicely into this pocket, but larger acids do not. To explore this structure in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Mammals use GPCRs to sense odorants, but insects use odorant-gated ion channels. To see one in action, take a look at PDB ID <a href="https://www.rcsb.org/structure/7lid" target="_blank">7lid</a>.</li>
+<li>Most mammalian odorant-binding proteins act as monomers, but one from cows forms a domain-swapped dimer. You can find it in PDB ID <a href="https://www.rcsb.org/structure/1pbo" target="_blank">1pbo</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>8f76: Billesbolle, C.B., de March, C.A., van der Velden, W.J.C., Ma, N., Tewari, J., Del Torrent, C.L., Li, L., Faust, B., Vaidehi, N., Matsunami, H., Manglik, A. (2023) Structural basis of odorant recognition by a human odorant receptor. Nature 615: 742-749</li>
+<li>Mayhew, E.J., Arayata, C.J., Gerkin, R.C., Lee, B.K., Magill, J.M., Snyder, L.L., Little, K.A., Yu, C.W., Mainland, J.D. (2022) Transport features predict if a molecule is odorous. Proc Natl Acad Sci USA 119: e2116576119</li>
+<li>Pelosi, P., Knoll, W. (2022) Odorant-binding proteins of mammals. Biol Rev 97:20-44</li>
+<li>3n7h: Tsitsanou, K.E., Thireou, T., Drakou, C.E., Koussis, K., Keramioti, M.V., Leonidas, D.D., Eliopoulos, E., Iatrou, K., Zographos, S.E. (2012) Anopheles gambiae odorant binding protein crystal complex with the synthetic repellent DEET: implications for structure-based design of novel mosquito repellents. Cell Mol Life Sci 69: 283-297</li>
+<li>1e00: Vincent, F., Spinelli, S., Ramoni, R., Grolli, S., Pelosi, P., Cambillau, C., Tegoni, M. (2000) Complexes of porcine odorant binding protein with odorant molecules belonging to different chemical classes. J Mol Biol 300: 127-139</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_6">http://doi.org/10.2210/rcsb_pdb/mom_2023_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

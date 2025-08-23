@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: SARS-CoV-2 Spike and Antibodies</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike and Antibodies" property="og:title"/>
+<meta content="Structural biologists are revealing the many ways that antibodies recognize SARS-CoV-2" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-Spike_Antibodies.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/256" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: SARS-CoV-2 Spike and Antibodies" name="twitter:title"/>
+<meta content="Structural biologists are revealing the many ways that antibodies recognize SARS-CoV-2" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-Spike_Antibodies.jpg" name="twitter:image"/>
+<meta content="Structural biologists are revealing the many ways that antibodies recognize SARS-CoV-2" name="description"/>
+<meta content="SARS-CoV-2,COVID-19,coronavirus,spike,antibody,vaccine,immunity,pandemic,7cwn,7cwu,6zdh,6zxn,7c2l,7k43,7kkl,7l06" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 256
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 256 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: SARS-CoV-2 Spike and Antibodies</h1>
+<p><i>Structural biologists are revealing the many ways that antibodies recognize SARS-CoV-2</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Structures of antibody Fab fragments (yellow) bound to SARS-CoV-2 spike protein (magenta). All structures include the variable domains of the antibodies, and some of the structures also include constant domains." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-Spike_Antibodies.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Structures of antibody Fab fragments (yellow) bound to SARS-CoV-2 spike protein (magenta). All structures include the variable domains of the antibodies, and some of the structures also include constant domains.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-Spike_Antibodies.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The structural biology community has mobilized its forces in the fight against the COVID-19 pandemic. Laboratories around the world have studied virtually every aspect of the virus, looking for weak points that can be targeted to fight infection. The <a href="https://pdb101.rcsb.org/motm/246">spike protein</a> has been a major focus of this effort, because it plays an essential role in the viral life cycle, and it is the major target for protection by our immune system. In the year or so since this virus emerged, hundreds of structures of the spike protein have been determined, revealing details of its flexibility and interaction with the cellular receptor ACE2, and the way the immune system blocks it with <a href="https://pdb101.rcsb.org/motm/170">neutralizing antibodies.</a></div>
+<h4>Amazing Antibodies</h4>
+<div>A small selection of spike-antibody structures is shown here, highlighting the some of the many ways that antibodies recognize the protein. Four of these antibodies were isolated from patients infected with SARS-CoV-2. The three at the top recognize the receptor-binding domain of the spike, but in different ways. Antibody fragment C002 (PDB ID <a href="https://www.rcsb.org/structure/7k8t" target="_blank">7k8t</a>) binds to the site that recognizes ACE2 and binds to receptor-binding domains in both the active up and inactive down conformations. S2M11 (PDB ID <a href="https://www.rcsb.org/structure/7k43" target="_blank">7k43</a>) binds in a different way, locking the receptor-binding domains in the down position, and EY6A (PDB ID <a href="https://www.rcsb.org/structure/6zdh" target="_blank">6zdh</a>) binds further down the domain. The two antibodies at the bottom show entirely different modes of binding. 4A8 (PDB ID <a href="https://www.rcsb.org/structure/7c2l" target="_blank">7c2l</a>) binds to an adjacent domain but still neutralizes the action of the spike. 2G12 (PDB ID <a href="https://www.rcsb.org/structure/7l06" target="_blank">7l06</a>) is an unusual antibody elicited by infection with HIV-1, which also binds to SARS-CoV-2 but doesn't neutralize it. It contains two domain-swapped antibodies that together recognize sugars on the spike surface.</div>
+<h4>Combining Forces</h4>
+<div>Of course, the major goal of all this work is to develop new ways to protect people from infection and to treat infected individuals. One major insight that is driving much of this work is the diversity of ways that antibodies recognize the spike. This insight opens the door to combination therapies, where people are treated with a cocktail of antibodies, or vaccines are designed to elicit many types of antibodies. By targeting the spike in many ways, combination approaches may help control the emergence of resistant strains. As seen in HIV-1 therapy, it is far more difficult for the virus to evolve resistance if has to mutate to evade multiple drugs at the same time.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Structures of nanobodies (green) bound to SARS-CoV-2 spike protein (magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-nanobodies2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Structures of nanobodies (green) bound to SARS-CoV-2 spike protein (magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-nanobodies2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Nanobodies</h4>
+<div>Researchers are also exploring approaches to engineer smaller forms of antibodies, termed <a href="https://pdb101.rcsb.org/motm/136">nanobodies,</a> for use in treatment of the disease. Two examples are shown here. The Ty1 (PDB ID <a href="https://www.rcsb.org/structure/6zxn" target="_blank">6zxn</a>) single-chain antibody was discovered by immunizing alpacas with the viral spike. It binds to the receptor-binding domain in the up and down conformations, and blocks binding to the ACE2 receptor. The nanobody mNb6 (PDB ID <a href="https://www.rcsb.org/structure/7kkl" target="_blank">7kkl</a>) was selected from a library of synthetic nanobodies, and then optimized by making many small changes in the portions that interact with the spike and selecting the tightest binders. It binds to the receptor-binding domains in the inactive down position.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>SARS-CoV-2 Spike and Antibody Cocktails</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/256/256-SARSCoV2_Spike_and_Antibodies-7cwu_7cwn_jmol.jpg"/></div>
+<p>Structural biologists are now exploring how cocktails of antibodies could work together to block the virus. Two examples are shown here. On the left, from PDB ID <a href="https://www.rcsb.org/structure/7cwu" target="_blank">7cwu</a>, P17 blocks the receptor-binding site and FC05 binds to the N-terminal domain. On the right, from PDB ID <a href="https://www.rcsb.org/structure/7cwn" target="_blank">7cwn</a>, P17 is combined with H014, which binds to the lower site on the receptor-binding domain. To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many additional structures of antibodies bound to spike and to spike domains, as well as structures of antibodies and spike by themselves, can be found in the PDB archive.</li>
+<li>While you’re exploring these structures, you need to use some imagination. As noted in the first figure, all of these structures include the variable domains of the antibodies, but only some modeled coordinates for the constant domains. In addition, the membrane-spanning portions of the spike are missing, and typically only the first few sugars are included at the many sites of glycosylation.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/coronavirus">Coronavirus</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>7k8t: Barnes, C.O., Jette, C.A., Abernathy, M.E., Dam, K.A., Esswein, S.R., Gristick, H.B., Malyutin, A.G., Sharaf, N.G., Huey-Tubman, K.E., Lee, Y.E., Robbiani, D.F., Nussenzweig, M.C., West Jr., A.P., Bjorkman, P.J. (2020) SARS-CoV-2 neutralizing antibody structures inform therapeutic strategies. Nature 588: 682-687</li>
+<li>7c2l: Chi, X., Yan, R., Zhang, J., Zhang, G., Zhang, Y., Hao, M., Zhang, Z., Fan, P., Dong, Y., Yang, Y., Chen, Z., Guo, Y., Zhang, J., Li, Y., Song, X., Chen, Y., Xia, L., Fu, L., Hou, L., Xu, J., Yu, C., Li, J., Zhou, Q., Chen, W. (2020) A neutralizing human antibody binds to the N-terminal domain of the Spike protein of SARS-CoV-2. Science 369: 650-655</li>
+<li>6zxn: Hanke, L., Vidakovics Perez, L., Sheward, D.J., Das, H., Schulte, T., Moliner-Morro, A., Corcoran, M., Achour, A., Karlsson Hedestam, G.B., Hallberg, B.M., Murrell, B., McInerney, G.M. (2020) An alpaca nanobody neutralizes SARS-CoV-2 by blocking receptor interaction. Nat Commun 11: 4420-4420</li>
+<li>7kkl: Schoof, M., Faust, B., Saunders, R.A., Sangwan, S., Rezelj, V., Hoppe, N., Boone, M., Billesbolle, C.B., Puchades, C., Azumaya, C.M., Kratochvil, H.T., Zimanyi, M., Deshpande, I., Liang, J., Dickinson, S., Nguyen, H.C., Chio, C.M., Merz, G.E., Thompson, M.C., Diwanji, D., Schaefer, K., Anand, A.A., Dobzinski, N., Zha, B.S., Simoneau, C.R., Leon, K., White, K.M., Chio, U.S., Gupta, M., Jin, M., Li, F., Liu, Y., Zhang, K., Bulkley, D., Sun, M., Smith, A.M., Rizo, A.N., Moss, F., Brilot, A.F., Pourmal, S., Trenker, R., Pospiech, T., Gupta, S., Barsi-Rhyne, B., Belyy, V., Barile-Hill, A.W., Nock, S., Liu, Y., Krogan, N.J., Ralston, C.Y., Swaney, D.L., Garcia-Sastre, A., Ott, M., Vignuzzi, M., QCRG Structural Biology Consortium, Walter, P., Manglik, A. (2020) An ultrapotent synthetic nanobody neutralizes SARS-CoV-2 by stabilizing inactive Spike. Science 370: 1473-1479</li>
+<li>7k43: Tortorici, M.A., Beltramello, M., Lempp, F.A., Pinto, D., Dang, H.V., Rosen, L.E., McCallum, M., Bowen, J., Minola, A., Jaconi, S., Zatta, F., De Marco, A., Guarino, B., Bianchi, S., Lauron, E.J., Tucker, H., Zhou, J., Peter, A., Havenar-Daughton, C., Wojcechowskyj, J.A., Case, J.B., Chen, R.E., Kaiser, H., Montiel-Ruiz, M., Meury, M., Czudnochowski, N., Spreafico, R., Dillen, J., Ng, C., Sprugasci, N., Culap, K., Benigni, F., Abdelnabi, R., Foo, S.C., Schmid, M.A., Cameroni, E., Riva, A., Gabrieli, A., Galli, M., Pizzuto, M.S., Neyts, J., Diamond, M.S., Virgin, H.W., Snell, G., Corti, D., Fink, K., Veesler, D. (2020) Ultrapotent human antibodies protect against SARS-CoV-2 challenge via multiple mechanisms. Science 370: 950-957</li>
+<li>6zdh: Zhou, D., Duyvesteyn, H.M.E., Chen, C.P., Huang, C.G., Chen, T.H., Shih, S.R., Lin, Y.C., Cheng, C.Y., Cheng, S.H., Huang, Y.C., Lin, T.Y., Ma, C., Huo, J., Carrique, L., Malinauskas, T., Ruza, R.R., Shah, P.N.M., Tan, T.K., Rijal, P., Donat, R.F., Godwin, K., Buttigieg, K.R., Tree, J.A., Radecke, J., Paterson, N.G., Supasa, P., Mongkolsapaya, J., Screaton, G.R., Carroll, M.W., Gilbert-Jaramillo, J., Knight, M.L., James, W., Owens, R.J., Naismith, J.H., Townsend, A.R., Fry, E.E., Zhao, Y., Ren, J., Stuart, D.I., Huang, K.A. (2020) Structural basis for the neutralization of SARS-CoV-2 by an antibody from a convalescent patient. Nat Struct Mol Biol 27: 950-958</li>
+<li>7cws: Wang, N., Sun, Y., Feng, R., Wang, Y., Guo, Y., Zhang, L., Deng, Y.Q., Wang, L., Cui, Z., Cao, L., Zhang, Y.J., Li, W., Zhu, F.C., Qin, C.F., Wang, X. (2021) Structure-based development of human antibody cocktails against SARS-CoV-2. Cell Res 31: 101-103</li>
+<li>7cwn: Yao, H., Sun, Y., Deng, Y.Q., Wang, N., Tan, Y., Zhang, N.N., Li, X.F., Kong, C., Xu, Y.P., Chen, Q., Cao, T.S., Zhao, H., Yan, X., Cao, L., Lv, Z., Zhu, D., Feng, R., Wu, N., Zhang, W., Hu, Y., Chen, K., Zhang, R.R., Lv, Q., Sun, S., Zhou, Y., Yan, R., Yang, G., Sun, X., Liu, C., Lu, X., Cheng, L., Qiu, H., Huang, X.Y., Weng, T., Shi, D., Jiang, W., Shao, J., Wang, L., Zhang, J., Jiang, T., Lang, G., Qin, C.F., Li, L., Wang, X. (2021) Rational development of a human antibody cocktail that deploys multiple functions to confer Pan-SARS-CoVs protection. Cell Res 31: 25-36</li>
+<li>7l06: Acharya, P., Williams, W., Henderson, R., Janowska, K., Manne, K., Parks, R., Deyton, M., Sprenz, J., Stalls, V., Kopp, M., Mansouri, K., Edwards, R.J., Meyerhoff, R.R., Oguin, T., Sempowski, G., Saunders, K., Haynes, B.F. (2020) Biorxiv DOI: 10.1101/2020.06.30.178897</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>April 2021, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2021_4">http://doi.org/10.2210/rcsb_pdb/mom_2021_4</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

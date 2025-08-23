@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Twenty Years of Molecules</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Twenty Years of Molecules" property="og:title"/>
+<meta content="Celebrating the structural biology revolution" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6j4y.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/241" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Twenty Years of Molecules" name="twitter:title"/>
+<meta content="Celebrating the structural biology revolution" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6j4y.jpg" name="twitter:image"/>
+<meta content="Celebrating the structural biology revolution" name="description"/>
+<meta content="structural biology,crystallography,NMR spectroscopy,cryoEM microscopy,6j4y,3nir,5j7v,6mam,6by7,3j2u,6cfz,1plq,2az8,2az9,2azc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 241
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 241 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Twenty Years of Molecules</h1>
+<p><i>Celebrating the structural biology revolution</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="RNA polymerase (blue) stalled while unwinding a nucleosome (orange, with DNA in red). Several elongation factors are in green, and a little piece of the transcribed RNA is seen poking out in magenta." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6j4y.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>RNA polymerase (blue) stalled while unwinding a nucleosome (orange, with DNA in red). Several elongation factors are in green, and a little piece of the transcribed RNA is seen poking out in magenta.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6j4y.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Every month, I feel lucky to be a scientist (and a scientific artist) at this point in history. Structural biology is in the middle of a revolution that is revealing the atom-level workings of living cells. It all started with the structure of <a href="https://pdb101.rcsb.org/motm/1">myoglobin</a>, and today, you can find structures for everything from <a href="https://pdb101.rcsb.org/motm/19">actin</a> to <a href="https://pdb101.rcsb.org/motm/197">zika</a>. I’m happy to report that as of this month, I’ve been exploring the PDB archive for 20 years and sharing some of what I find in these Molecule of the Month columns. Here are a few thoughts as I look back over my 20 years of molecules.</div>
+<h4>The Structural Biology Revolution</h4>
+<div>Structural biology has come a long way since the pioneering work of Kendrew, Perutz, Watson and Crick. Methods are more efficient and successful in a wider variety of systems, so scientists are increasingly empowered to explore all aspects of cellular life. The structural genomics effort streamlined crystallographic structure determination, and methods like XFEL are opening new doors on the time dimension. NMR spectroscopy provides orthogonal views of biological systems and their dynamics that are inaccessible to other techniques. CryoEM microscopy is revealing the structures of enormous assemblies that were completely intractable before, and is promising to be the go-to technique for the next decade of structural biology.</div>
+<h4>Molecular Stories</h4>
+<div>Every structure has a story to tell, giving us a new look at the inner workings of life. Some structures add a new piece to a growing puzzle, for example, filling out the entire <a href="https://pdb101.rcsb.org/motm/50">glycolytic pathway</a>. Other structures are a story all unto themselves. The one shown here captures a moment when <a href="https://pdb101.rcsb.org/motm/40">RNA polymerase</a> is transcribing RNA, and stalls when it hits a <a href="https://pdb101.rcsb.org/motm/7">nucleosome</a> (PDB entry <a href="https://www.rcsb.org/structure/6j4y" target="_blank">6j4y</a>). Several elongation factors help the polymerase unwind the <a href="https://pdb101.rcsb.org/motm/23">DNA</a> from the nucleosome, so that it can continue. The structure shows the complex when the nucleosome is about half way unwound.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Faustovirus (left) and a tyrosine from crambin (right) showing electron density." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-records.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Faustovirus (left) and a tyrosine from crambin (right) showing electron density.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-records.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Biggest and Best</h4>
+<div>When I started writing these columns, there were already 13500 entries in the PDB archive, and now, 20 years later, there are more than ten times as many. One thing you might want to do is to find the biggest and best structures in the archive. Of course, this is a tricky endeavor, because you need to find a metric to evaluate what you mean by “best.” For example, you could look to the <a href="http://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prize</a> to identify subjects with high impact in the scientific community. Here, I’ve chosen two easily quantified metrics: the highest crystallographic resolution, currently for a structure of crambin (<a href="https://www.rcsb.org/structure/3nir" target="_blank">3nir</a>), and the assembly with the largest number of chains, currently faustovirus (<a href="https://www.rcsb.org/structure/5j7v" target="_blank">5j7v</a>) with 8280 chains. To look at some other interesting features of the entire body of PDB holdings, take a look at the <a href="http://www.rcsb.org/stats">PDB Statistics</a> page.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Two views of phage repressor 434 bound to its DNA operator." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-2or1.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two views of phage repressor 434 bound to its DNA operator.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-2or1.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Picturing Molecules</h4>
+<div>For me, the fun really begins when I start drawing pictures of molecules. There are so many choices to make: picking a representation that highlights the features I want to show, finding the perfect view, and choosing colors that are both appealing and informative. Fortunately, there are many effective programs for molecular visualization, so I can focus my effort on getting a nice image. For this picture, I created two views of a classic DNA-protein complex showing my favorite approaches. On the left, I used NGL to get a quick, easy look at the molecule, to figure out what's where in the structure. You can do similar visualization by going to the summary page for PDB entry <a href="https://www.rcsb.org/structure/2or1" target="_blank">2or1</a> and choosing "3D View: Structure." Notice that the cartoon representation nicely shows off the characteristic alpha helices that pack into the grooves of the DNA. Then I moved to <a href="https://ccsb.scripps.edu/illustrate">my illustration program</a> to create an picture that shows all the atoms, highlighting how the protein hugs the surface of the DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Antibody Fab fragments (blue) bound to an ebola glycoprotein (orange and red).
+" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6mam.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Antibody Fab fragments (blue) bound to an ebola glycoprotein (orange and red).
+</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6mam.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Global Health</h4>
+<div>Arguably the major impetus for structural biology is to discover new ways to improve our health. Biomolecular structures provide a unique resource for understanding the atomic basis of our bodies and to make targeted interventions when things go wrong. Structure-aided design is the most direct approach, for example, using structures of <a href="https://pdb101.rcsb.org/motm/6">HIV protease</a> to discover new drugs to fight HIV infection or using structural insights to engineer new forms of <a href="https://pdb101.rcsb.org/motm/194">insulin</a> to treat <a href="http://pdb101-beta.rcsb.org/global-health/diabetes-mellitus/about/what-is-diabetes">diabetes</a>. Researchers are also harnessing biomolecular processes to do their bidding, for example, engineering <a href="https://pdb101.rcsb.org/motm/181">CRISPR</a> molecules to do specific gene-editing tasks in diseased cells. Vaccines are also one of the miracles of modern medicine, and have essentially removed the danger of polio and smallpox from the world. Researchers are now using structures of <a href="https://pdb101.rcsb.org/motm/21">antibodies</a> with their viral targets to attempt to extend these successes to more challenging targets such as <a href="https://cdn.rcsb.org/pdb101/learn/resources/structural-biology-of-hiv/index.html">HIV</a> and <a href="https://pdb101.rcsb.org/motm/178">ebola</a> (shown here from PDB entry <a href="https://www.rcsb.org/structure/6mam" target="_blank">6mam</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="A nanoscale box made by DNA origami.
+" class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6by7.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A nanoscale box made by DNA origami.
+</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-6by7.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Harnessing Biology</h4>
+<div>Biomolecules are working nanomachines, so of course researchers are interested in building their own. Many clever approaches have been successful. Some use <a href="https://pdb101.rcsb.org/motm/228">directed evolution</a> to tune the function of existing enzymes, creating a desired function. Others have taken a cut-and-paste approach, for example, connecting together existing proteins to build <a href="https://pdb101.rcsb.org/motm/165">self-assembling nanocontainers</a>. In DNA origami, bioengineers use the exquisite specificity of DNA base-pairing to build nanostructures with custom shapes, such as the little box shown here that includes single-stranded regions for use as functional tethers (PDB entry <a href="https://www.rcsb.org/structure/6by7" target="_blank">6by7</a>).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="A kinetochore ring (yellow and red) surrounding a kinesin-microtubule complex (green and blue), and PCNA (turquoise) surrounding DNA (red, at center)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-CyclicBeauty.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>A kinetochore ring (yellow and red) surrounding a kinesin-microtubule complex (green and blue), and PCNA (turquoise) surrounding DNA (red, at center).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-CyclicBeauty.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Functional Symmetry</h4>
+<div>Biomolecules have a unique beauty that is all their own, and in the case of symmetrical biomolecules, it is beauty with a purpose. Ever since graduate school, I’ve had a fascination with biological symmetry (due, I’m certain, to my training as a crystallographer). Biomolecules provide many interesting examples of functions that rely on symmetry to build up functional assemblies from many individual modular subunits. For example, virus capsids are built with perfect symmetry, or with approximate <a href="https://pdb101.rcsb.org/motm/200">quasisymmetries</a> if even larger containers are needed. I have included two examples here where a ring-shaped molecules is built using cyclic symmetry, with the function of surrounding a fibrous biomolecule with helical symmetry. These include a kinetochore (<a href="https://www.rcsb.org/structure/6cfz" target="_blank">6cfz</a>) surrounding <a href="https://pdb101.rcsb.org/motm/175">microtubule</a>/kinesin (<a href="https://www.rcsb.org/structure/3j2u" target="_blank">3j2u</a>), and the processivity factor PCNA (<a href="https://www.rcsb.org/structure/1plq" target="_blank">1plq</a>) surrounding DNA.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Evolution in Action</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/241/241-Twenty_Years_of_Molecules-HIVprotease_jmol.png"/></div>
+<p>Theodosius Dobzhansky famously said that "Nothing in biology makes sense except in the light of evolution,” and the PDB archive has many examples where you can see that connection first hand. Some evolution happens over millenia--for example, by comparing the sequences of proteins such as <a href="https://pdb101.rcsb.org/motm/206">globins</a>, we can discover the detailed pedigrees of related organisms. In <a href="https://cdn.rcsb.org/pdb101/learn/resources/superbugs/index.html">bacterial drug resistance</a>, we can see evolution that happens in years, as bacteria evolve new methods for evading drugs through mutation and selection of their existing biomachinery. <br/><br/>The structures shown here reveal evolution happening in a matter of days. Researchers subjected a culture of HIV-infected cells to an HIV protease inhibitor, and watched as increasingly resistant versions evolved through mutation and selection. The wild type enzyme at the top (PDB entry <a href="https://www.rcsb.org/structure/2az8" target="_blank"> 2az8</a>) is strongly blocked by the inhibitor. By switching a leucine to a smaller alanine, the center enzyme (PDB entry <a href="https://www.rcsb.org/structure/2az9" target="_blank"> 2az9</a>) removes a favorable interaction and is 4-fold resistant to the inhibitor. The one at the bottom (PDB entry <a href="https://www.rcsb.org/structure/2azc" target="_blank"> 2azc</a>) further tunes the activity of the enzyme with five more sites of mutation and is 30-fold resistant. To explore these structures in more detail, click on the image for an interactive JSMol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>What is your favorite molecule?</li>
+<li>If you're interested in reading about my goals and methods for these Molecule of the Month columns, take a look at this <a href="http://cdn.rcsb.org/rcsb-pdb/general_information/news_publications/newsletters/2017q3/corner.html"> article in the RCSB newsletter</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biomolecular-structural-biology">Biomolecular Structural Biology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>6j4y: Ehara, H., Kujirai, T., Fujino, Y., Shirouzu, M., Kurumizaka, H., Sekine, S.I. (2019) Structural insight into nucleosome transcription by RNA polymerase II with elongation factors. Science 363: 744-747</li>
+<li>6mam: West, B.R., Wec, A.Z., Moyer, C.L., Fusco, M.L., Ilinykh, P.A., Huang, K., Wirchnianski, A.S., James, R.M., Herbert, A.S., Hui, S., Goodwin, E., Howell, K.A., Kailasan, S., Aman, M.J., Walker, L.M., Dye, J.M., Bukreyev, A., Chandran, K., Saphire, E.O. (2019) Structural basis of broad ebolavirus neutralization by a human survivor antibody. Nat. Struct. Mol. Biol. 26: 204-212</li>
+<li>6by7:  Dong, Y., Chen, S., Zhang, S., Sodroski, J., Yang, Z., Liu, D., Mao, Y. (2018) Folding DNA into a Lipid-Conjugated Nanobarrel for Controlled Reconstitution of Membrane Proteins. Angew. Chem. Int. Ed. Engl. 57: 2072-2076</li>
+<li>6cfz: Jenni, S., Harrison, S.C. (2018) Structure of the DASH/Dam1 complex shows its role at the yeast kinetochore-microtubule interface. Science 360: 552-558</li>
+<li>5j7v: Klose, T., Reteno, D.G., Benamar, S., Hollerbach, A., Colson, P., La Scola, B., Rossmann, M.G. (2016) Structure of faustovirus, a large dsDNA virus. Proc.Natl.Acad.Sci.USA 113: 6206-6211</li>
+<li>3j2u: Asenjo, A.B., Chatterjee, C., Tan, D., Depaoli, V., Rice, W.J., Diaz-Avalos, R., Silvestry, M., Sosa, H. (2013) Structural model for tubulin recognition and deformation by Kinesin-13 microtubule depolymerases. Cell Rep 3: 759-768</li>
+<li>3nir: Schmidt, A., Teeter, M., Weckert, E., Lamzin, V.S. (2011) Crystal structure of small protein crambin at 0.48 A resolution. Acta Crystallogr.,Sect.F 67: 424-429</li>
+<li>2az8, 2az9, 2acz: Heaslet, H., Kutilek, V., Morris, G.M., Lin, Y.-C., Elder, J.H., Torbett, B.E., Stout, C.D. (2006) Structural Insights into the Mechanisms of Drug Resistance in HIV-1 Protease NL4-3. J.Mol.Biol. 356: 967-981</li>
+<li>1plq: Krishna, T.S., Kong, X.P., Gary, S., Burgers, P.M., Kuriyan, J. (1994) Crystal structure of the eukaryotic DNA polymerase processivity factor PCNA. Cell 79: 1233-1243</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2020, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2020_1">http://doi.org/10.2210/rcsb_pdb/mom_2020_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

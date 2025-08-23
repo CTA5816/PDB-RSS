@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Histone Deacetylases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Histone Deacetylases" property="og:title"/>
+<meta content="Histone deacetylases regulate access to genetic information by modifying histones" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/285/HDACs.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/285" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Histone Deacetylases" name="twitter:title"/>
+<meta content="Histone deacetylases regulate access to genetic information by modifying histones" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/285/HDACs.jpg" name="twitter:image"/>
+<meta content="Histone deacetylases regulate access to genetic information by modifying histones" name="description"/>
+<meta content="1t64,1t69,3c10,5edu,3v5w,6z6p,histone deacetylation,nucleosome,DNA,trichostatin,HDAC6,HDAC7,HDAC8,HDAC,gene regulation,cancer,chemotherapy" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 285
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 285 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Histone Deacetylases</h1>
+<p><i>Histone deacetylases regulate access to genetic information by modifying histones</i></p>
+<div>
+<div><i>This article was written and illustrated by Jessica Damanski, Paloma Munguía Salazar, Mihika Shah and Rajiv Snape as part of a <a href="https://iqb.rutgers.edu/node/263">week-long boot camp</a> for undergraduate and graduate students hosted by the Rutgers Institute for Quantitative Biomedicine. The article is presented as part of the 2023-2024 PDB-101 health focus on “Cancer Biology and Therapeutics.”</i><br/><br/></div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Three human HDACs (blue) inhibited by trichostatin A (green). " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/285/HDACs.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three human HDACs (blue) inhibited by trichostatin A (green). </i></div><a href="https://cdn.rcsb.org/pdb101/motm/285/HDACs.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>The human genome contains much of the information needed for every cell in the body to function. However, different types of cells often need different types of information. For example, neurons need to build <a href="https://pdb101.rcsb.org/motm/243">voltage-gated ion channels</a> and muscle cells need to build lots of <a href="https://pdb101.rcsb.org/motm/19">actin</a>, <a href="https://pdb101.rcsb.org/motm/18">myosin</a> and <a href="https://pdb101.rcsb.org/motm/185">titin</a>. Cells get their unique characteristics by selectively expressing the genes that they need. Access to DNA is controlled in part by how tightly it is wrapped around <a href="https://pdb101.rcsb.org/motm/7">histones in nucleosomes</a>. The affinity of histones towards DNA is tuned by the addition and removal of charged groups such as acetyl groups on histone tails, determining where transcription factors can bind and begin expression of particular genes.</div>
+<h4>The Deacetylation Supervisor</h4>
+<div>Histone deacetylases (HDACs), typically found in the nucleus, catalyze removal of acetyl groups from histone tails. There are two structurally distinctive families of these enzymes: the histone deacetylase family shown here depends on a zinc cofactor, whereas <a href="https://pdb101.rcsb.org/motm/213">sirtuins</a> use a NAD cofactor to catalyze the chemical reaction. When the acetyl group is removed by an HDAC, histones become more positively charged and wrap around the negatively-charged DNA more tightly. This gives transcription factors less access to the DNA and represses nearby gene expression. Acetylation and HDACs are also used to modulate the function of many other proteins, such as <a href="https://pdb101.rcsb.org/motm/31">p53 tumor suppressor</a> and <a href="https://pdb101.rcsb.org/motm/175">microtubules</a>, and even charged molecules such as polyamides.</div>
+<h4>Targeting HDAC</h4>
+<div>HDACs play a role in the development and progression of several different types of cancer by affecting transcription of oncogenes and tumor suppressor genes. Typically, high levels of HDACs correlate with poor outcomes in cancer patients, so HDAC inhibitors are attractive candidates for use as antitumor drugs. A bacterial molecule, trichostatin A, provided a place to start for development of HDAC-blocking drugs. It binds in the active sites of many HDACs, as shown in the structures of HDAC8, HDAC7, and HDAC6 (PDB ID <a href="https://www.rcsb.org/structure/1t64" target="_blank">1t64</a>, <a href="https://www.rcsb.org/structure/3c10" target="_blank">3c10</a>, and <a href="https://www.rcsb.org/structure/5edu" target="_blank">5edu</a>). Several anticancer drugs were developed that improve the action of trichostatin A, and are currently in use to treat patients.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Yeast HDAC complex (green and blue) bound to a nucleosome (histone proteins in red; DNA in yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/285/6z6p_figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Yeast HDAC complex (green and blue) bound to a nucleosome (histone proteins in red; DNA in yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/285/6z6p_figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Working as a Team</h4>
+<div>As with many proteins involved in gene regulation, HDACs don't work alone. They work as part of multiprotein complexes with variable composition, depending on the cell type and surrounding environment. The proteins in these complexes are recruited by transcription factors and help HDACs find the proper sites for regulation. These proteins have diverse roles such as regulating the activity of HDACs, improving their catalytic activity, and acting as bridges for binding to other enzymes and proteins. The complex shown here, from yeast cells (PDB ID <a href="https://www.rcsb.org/structure/6z6p" target="_blank">6z6p</a>), includes several Hda enzymes similar to human HDAC enzymes. Hda2 and Hda3 are non-catalytic and form a V-shaped clamp that holds a Hda1-Hda1’ dimer. In this assembly, Hda1 is activated and positioned to remove acetyl group from histone tails.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>HDAC8 with Substrate and Inhibitors</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/285/HDAC_JSmol-jmol.jpg"/></div>
+<p>Various HDAC inhibitors are currently being used as anticancer drugs. They act by mimicking the natural target of HDACs: an acetylated lysine amino acid. PDB ID <a href="https://www.rcsb.org/structure/2v5w" target="_blank">2v5w</a> shows how HDAC8 recognizes the lysine. A zinc ion coordinates the acetyl group (in yellow), positioning the molecule next to several amino acids (shown in magenta here) and a water molecule (turquoise) that help with the deacetylation reaction. The inhibitors have a chemical group that mimics both the acetyl group and the water, clamping the molecule tightly to the zinc ion, as seen in the structure of trichostatin A (PDB ID <a href="https://www.rcsb.org/structure/1t64" target="_blank">1t64</a>), a natural product isolated from <i>Streptomyces hygroscopicus</i>, and the US-FDA approved anticancer drug Vorinostat (PDB ID <a href="https://www.rcsb.org/structure/1t69" target="_blank">1t69</a>). To explore these structures in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can use the <a href="https://www.rcsb.org/alignment?response-body=eJztmFtv2zgWgP%2BLn51AFKlb3wiRoghSWkrk0hAGReBJ3IyBXGYSZ3aLQf%2F7HjrTRnLGVpousLvApi3QiDw8h%2BS5ffxjsb37dL%2F48Mfi6Wl7tfiwuCSbq4xc4TNUXF6ekavi6mz9c5GcJfmnT%2FjqU3aZk2ixXDzu1runR5hf%2Fq0xmju%2B%2BLJc3G5267DU%2BmZ7fXe7udtd3N5fbWDSr%2Bvtwz%2B2jxsQHI1tdr%2FcB5Wf1rvL9e7sYXsNFsAyD5vHp5sdLP7TH6Dn4ely9wSf9r%2BC3MPni72hyKUkGLK52Vzutvd3e8WPn2%2BfR%2Bniy5flZD4uUXR6%2Fsfli7qLb3bu9T5srkEk2PDTVGq5%2BHlzffG4%2BW3%2FAZHn37d3V5t%2FLj5Ey8XN5u5698viQxasOS4YJxNBhF4kU3RaNC8mogUeiZ6WLNKp0oi8iMY4Pi2MSTaRxmn2Ik1mZJPpdnGWjDXDRZw8ZZwfO2U0s%2BN0ej94JJrM7BfF2dFzntkuwlO1xeik5rQSdPyO0IxnoAQfeFX6IozxjHA%2B3S9KRoeFoxl3RlOnRHk8Ek7mYmHqHTHKR%2BeVzwgfmB2PzSYzB4aDQ4yFx5cczwkn8dS5UPL208Z5%2Fv5oOojjV9EEeW33sL57%2FHT%2FcLvefc1jaBn9%2Becv%2FwcxeBad44xEKIaUn5EiyiHw4FueRkVaRGmaEYxTgpcwjZCMIEKiPM9JFoODwxrnOcpiTNIc4yQtUrAKhEmO4P9xBI6cQQqJcfiIUYqzoohgPkFpDMkwiBOckwQXCUKgJ0v2imAiiUiCUgJ6SBrFQU2OMzCFZChDBcqCcFKcw0rwB%2BSjBJQlyzQ5jxKSJgWKcITSZIlAQZEVIEwKhIu4yGHToQQ83d6uHz6H8vB4ef%2B18Py%2BvnmCSobO4Z52n38NRa1vLFuEq%2FlzLEOwk5fhx%2B3t9mb9sN19Ptuvswj15Q7qyt0FLLq9etpchLL4GJwDPxefzW9Pm7vL47XnfaUnnglWfCIpzoTqidozU%2FBO1Z7ZvBZlP5DXSPT%2BvIay6AfyWvQjeQ3j9%2Be1OCPvz2txkRzPa3ko1ovr9a%2FP7jnWMS7L%2B2MdDebjJQ7GUBQdpL7JVY8k0eEgKU4M5tFB1Z1cRXZcMibpcYPiAh1fFqOxV49DHM654dzAX8qs6Kz2xg9ysIYP3jYls5oqaVRPbeNrqyWnA9W16ppeemWUh%2B%2BcN9RVtWN00F2tO%2BVtxwVjrDbMSj4ILQZWGuq4kBUbKKVSCOqko7QrtWSiKWEd2a6sEKu6pkoxTq2oykG3jHotpO5136uK91IPnmmm61ow4Tmjla2cVb5x3oJVlTWiqoxwgnnLPChWoh8G61tvZMcE%2FONqGDpZcuu14n7oaNUaRb3XnRaUOUkFM01pq7ZxxgspVKnVIHW36jR1WmoBP0OraetoX67coJ3w8FU5bS2XhtW8qhwdhGGD11w6Y8vesL7lpu5l10ndDlKJVqva%2B33OfltSPd5pzqQ3cryfz2d61JPdYjLXC5zqIzA6FqyHzcZ4hWRkO%2FTXUycWtqedtYZSQ6221IBD2472Hu7Fcmdo77SpnBNaDsz6Bi6gK20pWGv72vCaCrgeK1e21x3vhe5tV%2FJS96JXsB7nurPg%2F7yvvdaDcK3RMFNp1gqlqdCadn1TwbKmFMILzxz40qrlura2pbRfUSqsd0zTKsRMz7VqRQV%2B1xsjwOdZbR1twOerqrUQDLTsO911nQXtSmrp2Yp58PpWuK5z1dAxAx48SPD6vmZMtMHtraCecS9AleCiasHt6YoKoZkxDfg1HzSlFQSub4ykPYdwYdprb6moGKVc1IYa8PChhk%2BqrMTQgDbdgLtDwEKMUM2FqJl2VJaMWk5LT6nWou09gwPhXKxUp0yrWyp7ODXqZQ%2BnpoaVKJuu19Tue4%2BTjc1s8%2FLS5%2BDz4M5HmqDoPH4Z%2FOooZ9sraGZgselM8nrii97p1Kz4Ntc1b%2Binwkh4e7jZXH0dDduFdnWJc%2Fzsw3tR8OzQQefhYeLu4vL%2B983D%2BhrU%2FAR5Pc8%2B7h8R%2Fn1vEAlnf%2F%2FPvUHkMw0KiqawOSltcw3Kq%2FeAV1XzFDpNm5s9Sr3kvPn3gOLYlud6X4IO2qpxwY5mzE7QNNkijN7eSibJAdmnI9V4pkYkB2k%2BjkaaZ245Oejn4mjchs68R6QHW47HW07nhPPpluNivOWZiprF0YF%2FjZq9OH0%2F5UIeSvIsCTCLAUqzBKd7qCQYxSmJiojkMY4DpkZ5mhUowSRPEcJZnO8xNQaMLFAMV4IRIHLyPBVaP4DNlBAckwL677AmUHMM0AwDqEgj%2FCckJ4DNKUpyiD4Snj4CJKcJLBTFEcyPw0MMfIuBWgHBiyIN6hDeYy4BO2OSwUwYCN%2By%2FByMiIGrYXKA5mVynuUEwLoA%2BwhOAI%2FfQrnZ8QwPS52j4j2YS%2BL%2FIsydRvpcT3YIjd8T6a%2Bg8XsiPY7Sd0d6jND7I%2F0VcH5PpB8y4yTS38aMr8hv%2FC7xCu7S8X0cIlp0QnJ%2Fvkex8JTOCUT%2FH%2B7%2BF%2BHuaNuQFzNtQzYtg5NOabaSoYMHlXGnNPN6dbIKzjzkZPE0Hbzusv4yKPPieIDgeJRR0OFLDk4mTy4HESKsrfc%2FvNVD1QkALiAZpb1cyVYwBS4hNAWuUuClijkhlXeeQwAoAENVmQ4oCLwS3ELKakVr1lfgR4CjgQuDmzBFqw5mD0CgK%2FD6fgjYKOkAGOY51RB6Q6uY1qY1RrkVB2ejmimgRKqEslQ3VQtcagaQNyBIWVBQqYHDQgOTigXmbKmgCmDUVRoCSapW1U0Lfs8GKykH9GuV4ICZDrZlVnRlW8lCgLWDgA1p4yolOmOVqWA1YGghAV2tacEOqnileTto7RgXgezAXgWwSD3Vyg6chznM9GCba3hLO1AlG9NK0zWWVqsBdu2AB8OKou%2BcB%2BAEGqWdgy8AxADmfmBd2zRtXbZ6xeBODPemg7TQy6bsA4PDNYi%2B1E4704eUQznYU9aWQj4Tte7hk2qUA7quew7gXUGKGmRprKtoSUOQCwpkreHMYX%2BCe93Ch28QzjswqvwG4XCrfQ0GSitqCkZMKbxuKs6eKTykp35gtXCQnwC0uaDWdlL0AP1OVG7P4XDkPYxRFiB8VYMRGm5%2F4JCi%2BAjCe0hRkIfKzkOWhjuutau1bmDncGwSbAgIDjnKWWm5bcBeB6StQcoYOAwNBwMkLuBsrXTcyc7XfT%2BsYE4%2Fz96huXsbM%2BPz%2BAR5E%2FIXkPwdjdt3sPmJHu8EekNb%2Bgq9s%2Bw1epMlCej98cu%2FAI8I8lM%3D&amp;encoded=true">structure comparison tool</a> to explore the similarities and differences between different HDACs, such as HDAC6 (<a href="https://www.rcsb.org/structure/5edu" target="_blank">5edu</a>), HDAC7 (<a href="https://www.rcsb.org/structure/3c10" target="_blank">3c10</a>), and HDAC8 (<a href="https://www.rcsb.org/structure/1t64" target="_blank">1t64</a>). </li>
+<li>The histone tails are very flexible, so coordinates for them are not usually included in the atomic coordinate files stored in the PDB. You can use the <a href="https://www.rcsb.org/groups/sequence/polymer_entity/P84233">sequence view</a> to determine what parts of the protein are represented in each PDB files, for example, the page for histone H3.2. Take a look at PDB ID <a href="https://www.rcsb.org/structure/1kx5" target="_blank">1kx5</a> for a particularly complete structure.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cancer">Cancer</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/central-dogma">Central Dogma</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drug-action">Drug Action</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>1t64, 1t69: Somoza, J. R., Skene, R. J., Katz, B. A., Mol, C., Ho, D. J., Jennings, A. J., Luong, C., Arvai, A., Buggy, J. J., Chi, E., Tang, J., Sang, B., Verner, E., Wynands, R., Leahy, E. M., Dougan, D. R., Snell, G., Navre, M., Knuth, M. W., Swanson, R. V., McRee, D. E., Tari, L. W. (2004) Structural snapshots of human HDAC8 provide insights into the Class I histone deacetylases. Structure 12: 1325–1334.</li>
+<li>2v5w: Vannini, A., Volpari, C., Gallinari, P., Jones, P., Mattu, M., Carfi, A., Defrancesco, R., Steinkuhler, C., Di Marco, S. (2007) Substrate binding to histone deacetylases as revealed by crystal structure of Hdac8-substrate complex. EMBO Rep 8: 879-884.</li>
+<li>3c10: Min, J., Schuetz, A., Loppnau, P., Weigelt, J., Sundstrom, M., Arrowsmith, C.H., Edwards, A.M., Bochkarev, A., Plotnikov, A.N., Structural Genomics Consortium (SGC) (2008) Crystal structure of catalytic domain of human histone deacetylase HDAC7 in complex with trichostatin A (TSA). J Biol Chem 283: 11355-11363.</li>
+<li>5edu: Hai, Y., Christianson, D.W. (2016) Crystal structure of human histone deacetylase 6 catalytic domain 2 in complex with trichostatin A. Nat Chem Biol 12: 741-747.</li>
+<li>6z6p: Lee, J.-H., Bollschweiler, D., Schafer, T., Huber, R. (2021) Structural basis for the regulation of nucleosome recognition and HDAC activity by histone deacetylase assemblies. Sci Adv 7: eabd4413.</li>
+<li>Delcuve, G. P., Khan, D. H., Davie, J. R. (2012). Roles of histone deacetylases in epigenetic regulation: emerging paradigms from studies with inhibitors. Clin Epigenetics 4:5.</li>
+<li>Kim, E., Bisson, W.H., Lohr, C.V., Williams, D.E., Ho, E., Dashwood, R.H., Rajendran, P. (2016) Histone and non-histone targets of dietary deacetylase inhibitors. Curr Top Med Chem 16, 714-731.</li>
+<li>Li, Y., Seto, E. (2016) HDACs and HDAC Inhibitors in cancer development and therapy. Cold Spring Harb Perspect Med 6: a026831.</li>
+<li>Hai, Y., Shinsky, S.A., Porter, N. J., Christianson, D.W. (2017) Histone deacetylase 10 structure and molecular function as a polyamine deacetylase. Nat Comm 8:15368.</li>
+<li>Milazzo, G., Mercatelli, D., Di Muzio, G., Triboli, L., De Rosa, P., Perini, G., Giorgi, F. M. (2020) Histone deacetylases (HDACs): Evolution, specificity, role in transcriptional complexes, and pharmacological actionability. Genes (Basel) 11: 556.</li>
+<li>Park, S., Kim, J. (2020) A short guide to histone deacetylases including recent progress on class II enzymes. Exp Mol Med 52: 204–212.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>September 2023, Jessica Damanski, Paloma Munguía Salazar, Mihika Shah, Rajiv Snape, David S. Goodsell, Stephen K. Burley</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_9">http://doi.org/10.2210/rcsb_pdb/mom_2023_9</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Mechanosensitive Channels</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Mechanosensitive Channels" property="og:title"/>
+<meta content="Pressure-sensitive channels open when the internal pressure of a cell gets too high" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/107/2oau_composite_400.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/107" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Mechanosensitive Channels" name="twitter:title"/>
+<meta content="Pressure-sensitive channels open when the internal pressure of a cell gets too high" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/107/2oau_composite_400.jpg" name="twitter:image"/>
+<meta content="Pressure-sensitive channels open when the internal pressure of a cell gets too high" name="description"/>
+<meta content="ion channels,mechanosensitive channel,osmotic pressure,2oau,2oar,2vv5" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 107
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 107 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Mechanosensitive Channels</h1>
+<p><i>Pressure-sensitive channels open when the internal pressure of a cell gets too high</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Mechanosensitive channel of small conductance (MscS). The membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/107/2oau_composite_400.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Mechanosensitive channel of small conductance (MscS). The membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/107/107-MechanosensitiveChannels-2oau_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>We are remarkably resistant to changes in our surrounding environment. Our bulky bodies allow us to weather extremes of heat and cold, and our skin protects us if we go for a swim in fresh water or salty water. If things get too uncomfortable, we can always get up and walk away, finding a warmer or cooler or drier place. Bacteria don't have as many options. They are tiny and they are immersed in water, so changes in the environment can pose life-threatening challenges. For instance, if it rains they may be suddenly surrounded by fresh water. This is dangerous because the water seeps into the cell through osmosis and increases the pressure inside. At other times, the bacterium may be shifted suddenly to salty conditions, which pulls water out and dehydrates the cell. Bacteria have methods for resisting these changes, so they can keep a steady, comfortable osmotic pressure inside.</div>
+<h4>Under Pressure</h4>
+<div>Bacteria control their internal pressure by changing the concentration of molecules inside. If they are placed in salty conditions, they resist dehydration by transporting ions into the cell and by synthesizing more small molecules. However, if they are placed in pure water, they must reduce their inner concentration of ions and small molecules. In that case, they use mechanosensitive channels that open and allow small molecules to leak out. For instance, in laboratory tests, cells that are placed in fresh water rapidly lose more than 95% of small molecules like amino acids, sugars, and potassium ions. However, they keep their proteins or ribosomes safely inside, so they recover quickly and can start up protein synthesis minutes after the conditions return to normal.</div>
+<h4>Pressure Valve</h4>
+<div>Mechanosensitive channels respond to pressure inside the cell, opening when it gets to dangerous levels. They sense this pressure by sensing changes in the properties of the membrane. When the membrane is stretched by high internal pressures, it triggers the conformational change that opens the channel. The cell has several different channels that open at different levels of pressure. The MscS channel shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2oau" target="_blank">2oau <i class="fa fa-external-link"> </i></a></span>) opens at low and moderate pressures, and the one on the following page opens at higher pressures.</div>
+<h4>Small Channel</h4>
+<div>MscS, the mechanosensitive channel of small conductance, is composed of seven identical chains arranged to form a tube. A portion of it crosses the membrane and forms a pressure-sensitive pore about 13 Angstroms in diameter. This is just big enough to pass small molecules and ions. The cytoplasmic portion (shown at the bottom here) forms a cap over the pore, creating an antechamber that limits the size of molecules that can reach the pore when it opens.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Closed conformation of the mechanosensitive channel of large conductance (MscL)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/107/2oar_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Closed conformation of the mechanosensitive channel of large conductance (MscL).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/107/107-MechanosensitiveChannels-2oar_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Large Channel</h4>
+<div>MscL, the mechanosensitive channel of large conductance (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2oar" target="_blank">2oar <i class="fa fa-external-link"> </i></a></span>), comes into play in dire emergencies, when the pressure gets so high that the cell might burst. It opens to form a larger pore than the MscS channel with an opening of 30-40 Angstroms. It is composed of five identical chains that open like a camera iris when the cell membrane is stretched tightly. The structure shown here is the closed form.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>MscS (PDB entries 2oau and 2vv5) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/107/107-Mechanosensitive_Channels-MscS_jmol.jpg"/></div>
+<p>You can see MscS in action in two PDB files: the closed form is shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2oau" target="_blank">2oau <i class="fa fa-external-link"> </i></a></span>, and the open form is shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2vv5" target="_blank">2vv5 <i class="fa fa-external-link"> </i></a></span>. In both pictures, we are looking down the pore. Two leucine amino acids in each chain, shown in white, form a circular gate that blocks passage in the closed form. It may look like this ring of amino acids is open enough to allow passage, but since these amino acids are so hydrophobic, they actually block the movement of water molecules. This ring has been termed a "vapor seal" because of this resistance to wetting by water. You can click on the pictures here for an interactive Jmol version.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Several other membrane channels are composed of identical protein subunits arranged to form a tube. Can you find other examples in the PDB?</li>
+<li>The potassium channel is highly specific, allowing passage of potassium ions, whereas mechanosensitive channels allow passage of many types of ions and small molecules. What aspects of these structures lead to these different functional characteristics?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>C.S. Gandhi and D.C.Rees (2008) Opening the molecular floodgates. Science 321, 1166-1167. </li>
+<li>I.R. Booth, M.D. Edwards, S. Black, U. Schumann and S. Miller (2007) Mechanosensitive channels in bacteria: signs of closure? Nature Reviews Microbiology 5, 431-440. </li>
+<li>A. Anishkin and C. Kung (2005) Microbial mechanosensation. Current Opinion in Neurobiology 15, 397-405. </li>
+<li>C. Kung (2005) A possible unifying principle for mechanosensation. Nature 436, 647-654. </li>
+<li>E. Perozo and D. C. Rees (2003) Structure and mechanism in prokaryotic mechanosensitive channels. Current Opinion in Structural Biology 13, 432-442. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_11">http://doi.org/10.2210/rcsb_pdb/mom_2008_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Phenylalanine Hydroxylase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Phenylalanine Hydroxylase" property="og:title"/>
+<meta content="An unusual cofactor is used in the synthesis of aromatic amino acids" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/61/2pah-1phz.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/61" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Phenylalanine Hydroxylase" name="twitter:title"/>
+<meta content="An unusual cofactor is used in the synthesis of aromatic amino acids" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/61/2pah-1phz.gif" name="twitter:image"/>
+<meta content="An unusual cofactor is used in the synthesis of aromatic amino acids" name="description"/>
+<meta content="L-phenylalanine catabolic process,phenylalanine 4-monooxygenase activity,phenylketonuria,tetrahydrobiopterin,tyrosine biosynthetic process,tyrosine hydroxylase,2pah,1phz,1pah,2toh,1mlw,1j8u,rare disease" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 61
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 61 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Phenylalanine Hydroxylase</h1>
+<p><i>An unusual cofactor is used in the synthesis of aromatic amino acids</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Phenylalanine hydroxylase." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/61/2pah-1phz.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phenylalanine hydroxylase.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/61/61-PhenylalanineHydroxylase-2pah-1phz.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>The Protein Alphabet</h4>
+<div>The proteins that make up the skin, muscle, hair, bones and other organs in your body are primarily composed of a set of 20 building blocks, called amino acids. Amino acids are the alphabet in the protein language: when combined in a specific order, they make up meaningful structures (proteins) with varied and specific functions. Amino acids have distinct shapes, sizes, charges and other characteristics. Many amino acids are synthesized in your body from breakdown products of sugars and fats, or are converted from other amino acids by the action of specific enzymes. However, a few of them, called essential amino acids, cannot be synthesized or converted in your body and have to be obtained from the food you eat. Phenylalanine is one such essential amino acid. It is closely related to another amino acid, tyrosine, which just has an additional hydroxyl (OH) group. Liver cells contain an enzyme called phenylalanine hydroxylase, which can add this group and convert phenylalanine to tyrosine. Thus as long as this enzyme is functional and there is a reasonable supply of phenylalanine, tyrosine can be synthesized in your body and does not have to be included in the food that you eat.</div>
+<h4>Phenylalanine Hydroxylase</h4>
+<div>Four molecules of phenylalanine hydroxylase interact to form a tetramer, which is the functional unit for this enzyme. Each molecule in the tetramer is organized into three domains: a regulatory domain, a catalytic domain where the enzyme activity resides and a tetramerization domain that assembles four chains into the tetramer. At the heart of each catalytic domain is an iron ion that plays an important role in the enzyme action. A model structure of the complete enzyme tetramer is shown here. This is composed of two PDB files: PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2pah" target="_blank">2pah <i class="fa fa-external-link"> </i></a></span>, which includes the structure of the catalytic and tetramerization domains of the enzyme, and PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1phz" target="_blank">1phz <i class="fa fa-external-link"> </i></a></span>, which includes the regulatory domain flexibly attached to the catalytic domain.</div>
+<h4>Phenylketonuria</h4>
+<div>Surprisingly, we usually get too much phenylalanine in our diet, and this can cause problems. Normally, phenylalanine hydroxylase regulates the clearance of about 75% of the excess phenylalanine from our body by converting it to tyrosine. But in 1934, a Norwegian doctor, Asbjorn Folling, showed that the urine of two of his young mentally handicapped patients had a high level of phenylalanine. These were the first diagnosed cases of phenylketonuria. Within the next few years it was shown that the absence or malfunction of phenylalanine hydroxylase leads to this serious genetic disorder. However, it was not until the early 1950s that this information was put to use. A child suffering from phenylketonuria was treated with a diet low in the amino acid phenylalanine, showing that many of the symptoms of this disease could be reversed if treated early. Presently, in many places, newborn children are routinely screened for phenylketonuria and placed on a low phenylalanine diet if diagnosed. As these children grow up, they are also recommended to avoid the sweetener Aspartame, since it contains phenylalanine. In a few cases, lack of the <a href="http://pdb101.rcsb.org/motm/188">tetrahydrobiopterin</a>, an essential cofactor for the enzyme, or an inability to regenerate it can also lead to phenylketonuria. These cases may be treated with tetrahydrobiopterin supplements.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Phenylalanine hydroxylase (left) and tyrosine hydroxylase (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/61/hydroxylases.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Phenylalanine hydroxylase (left) and tyrosine hydroxylase (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/61/61-PhenylalanineHydroxylase-hydroxylases.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>An Aromatic Alliance</h4>
+<div>The tyrosine synthesized by the action of phenylalanine hydroxylase is required for the synthesis of various neurotransmitters that act on the nervous system and also control key functions like respiration and heart rate. During the synthesis of these neurotransmitters, tyrosine is further hydroxylated by the enzyme tyrosine hydroxylase. Interestingly, phenylalanine hydroxylase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1pah" target="_blank">1pah <i class="fa fa-external-link"> </i></a></span>, shown on the left) and tyrosine hydroxylase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2toh" target="_blank">2toh <i class="fa fa-external-link"> </i></a></span>, shown on the right) are structurally and functionally very similar to each other and also to tryptophan hydroxylase (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mlw" target="_blank">1mlw <i class="fa fa-external-link"> </i></a></span>). The last enzyme acts on the related amino acid tryptophan. All three enzymes use an iron ion, function as tetramers and have similar domain architecture. Since phenylalanine, tyrosine and tryptophan all have aromatic ring structures, these hydroxylases are together called aromatic amino acid hydroxylases.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/61/1j8u-rasmol.gif"/></div>
+<div>The hydroxylation of phenylalanine requires free oxygen and a helper molecule (cofactor), <a href="http://pdb101.rcsb.org/motm/188">tetrahydrobiopterin</a>. Although the exact mechanism of the enzyme action is not known, it is clear that the cofactor interacts with a few conserved residues in the enzyme and the primary function of the iron ion is to stabilize this cofactor. The backbone structure of the catalytic domain of phenylalanine hydroxylase is shown here (PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1j8u" target="_blank">1j8u <i class="fa fa-external-link"> </i></a></span>) with the tetrahydrobiopterin cofactor (colored green) and the iron ion (yellow sphere). During the course of the reaction the cofactor loses two of its hydrogen atoms to form dihydrobiopterin (as can be seen in PDB entry <a class="mom_big_bold" href="http:/pdb/explore.do?structureId=1dmw">1dmw</a>). Yet another enzyme acts on dihydrobiopterin to restore the original form of the cofactor, which is then used in another cycle of hydroxylation. <br/><br/> Mutations in phenylalanine hydroxylase can block the conversion of phenylalanine to tyrosine. Several hundred mutations have been documented in this enzyme. Many of these mutations destroy the enzyme activity and lead to phenylketonuria. A few examples are shown here in red. These mutations disrupt the interaction of the enzyme with either the cofactor or the iron ion, reducing or stopping the enzyme activity. Other serious mutations (not shown here) are found in amino acids that stabilize the structure of the enzyme, on the face that forms the enzyme tetramer or in regions that interact with the regulatory domain. <br/><br/> This illustration was created with RasMol. You can create similar pictures of phenylalanine hydroxylase by clicking on the accession codes here, and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Erlandsen, H. and Stevens, R.C. (1999) The structural basis of phenylketonuria. Molecular Genetics and Metabolism 68, 103-25.</li>
+<li>Phenylalanine Hydroxylase Locus Knowledgebase web site (<a class="mom_big_bold" href="http://www.pahdb.mcgill.ca/" target="external">http://www.pahdb.mcgill.ca/</a>)</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>January 2005, Shuchismita Dutta, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_1">http://doi.org/10.2210/rcsb_pdb/mom_2005_1</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

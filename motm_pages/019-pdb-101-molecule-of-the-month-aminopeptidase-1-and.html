@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Aminopeptidase 1 and Autophagy</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Aminopeptidase 1 and Autophagy" property="og:title"/>
+<meta content="Aminopeptidase 1 is delivered inside the cell using the machinery of autophagy" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/203/203-Aminopeptidase_1_and_Autophagy-Selective_Autophagy_2016.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/203" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Aminopeptidase 1 and Autophagy" name="twitter:title"/>
+<meta content="Aminopeptidase 1 is delivered inside the cell using the machinery of autophagy" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/203/203-Aminopeptidase_1_and_Autophagy-Selective_Autophagy_2016.jpg" name="twitter:image"/>
+<meta content="Aminopeptidase 1 is delivered inside the cell using the machinery of autophagy" name="description"/>
+<meta content="Aminopeptidase 1,Ape1,autophagy,phagophore,Atg8,Atg3,Atg7,Nobel Prize,5jh9,4r8f,4gsl,3rui" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 203
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 203 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Aminopeptidase 1 and Autophagy</h1>
+<p><i>Aminopeptidase 1 is delivered inside the cell using the machinery of autophagy</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The phagophore is formed by shaping a double layer of membrane (green) around the cargo, as shown at the top. In this case, the cargo is an complex of vacuolar enzymes such as aminopeptidase 1 (pink) and alpha-mannosidase (magenta). The phagophore then fuses with the vacuole membrane, as shown at the bottom, and breakdown of the inner membrane releases the enzymes inside. " class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/203/203-Aminopeptidase_1_and_Autophagy-Selective_Autophagy_2016.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The phagophore is formed by shaping a double layer of membrane (green) around the cargo, as shown at the top. In this case, the cargo is an complex of vacuolar enzymes such as aminopeptidase 1 (pink) and alpha-mannosidase (magenta). The phagophore then fuses with the vacuole membrane, as shown at the bottom, and breakdown of the inner membrane releases the enzymes inside. </i></div><a href="https://cdn.rcsb.org/pdb101/motm/203/203-Aminopeptidase_1_and_Autophagy-Selective_Autophagy_2016.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Cells are constantly changing, building new molecules when needed and breaking down others when they are finished with them. The <a href="https://pdb101.rcsb.org/motm/166">proteasome</a> and <a href="https://pdb101.rcsb.org/motm/86">exosome</a> systems recycle biomolecules one at a time, but the cell also has a system for bulk recycling, termed <i>autophagy.</i> The name means “self-eating,” and that’s just what the cell does. It packages up the waste and delivers it to its internal digestive system, lysosomes, where everything is broken down by a soup of digestive enzymes.</div>
+<h4>Autophagy in Action</h4>
+<div>Autophagy plays many essential roles in cells. When cells are starved, they use autophagy to engulf and digest portions of their own cytoplasm, sustaining themselves by internal cannibalism. Autophagy can also be more selective, surrounding and discarding entire mitochondria or other organelles when they are damaged or no longer needed. Selective autophagy is also used in a biosynthetic mode, to deliver digestive enzymes from the cytoplasm to the lysosome. Researchers are interested in autophagy because of many connections with disease, for instance, faults in autophagy contribute to degenerative diseases whereas cancer cells upregulate autophagy to promote their own survival.</div>
+<h4>Cytoplasm to Vacuole</h4>
+<div>The process of selective autophagy has been widely studied in yeast cells, where a large vacuole at the center of the cell plays the role of the lysosome. The enzyme aminopeptidase 1 is delivered to the yeast vacuole in a package surrounded by two membranes, termed a <i>phagophore.</i> With the assistance of dozens of autophagy proteins, this double membrane is constructed closely around an aggregate of the enzyme, as shown in the illustration. The outer membrane of the phagophore then fuses with the vacuole membrane, and lipases in the vacuole break down the inner membrane, releasing the enzymes.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Precursor and active forms of aminopeptidase 1." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/203/204-Aminopeptidase_1_and_Autophagy-5jh9_4r8f.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Precursor and active forms of aminopeptidase 1.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/203/204-Aminopeptidase_1_and_Autophagy-5jh9_4r8f.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Activating Aminopeptidase</h4>
+<div>Aminopeptidase 1 is built as an inactive precursor, with a small “propeptide” extension at one end, as seen here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5jh9" target="_blank">5jh9</a>. This propeptide interacts with neighboring molecules to form the aggregate, and it also interacts with specific autophagy receptor proteins, ensuring that the phagophore is built around the aggregate and doesn’t also capture much of the surrounding cytoplasm. Once the enzyme is inside the vacuole, the propeptide is clipped off, activating the enzyme, as seen here from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4r8f" target="_blank">4r8f</a>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Interaction of Atg8 with Atg7 and Atg3</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/203/204-Aminopeptidase_1_and_Autophagy-4gsl_3rui_JSmol.jpg"/></div>
+<p>Dozens of proteins orchestrate the building of the phagophore and its fusion with lysosomes or yeast vacuoles. The proteins shown here are involved with activating one of the receptor proteins that tether aminopeptidase 1 to the phagophore membrane (PDB entries <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4gsl" target="_blank">4gsl</a> and <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3rui" target="_blank">3rui</a>). In yeast, these proteins are given the name “Atg” for “Autophagy-related proteins”. In these structures, Atg8 is the protein found in the phagophore membrane, and Atg7 and Atg3 are part of the machinery that activates it by attaching a lipid to it. To explore this complex in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Many other autophagy-related proteins are available in the PDB. For instance, an unusual S-shaped complex of several Atg proteins, PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4p1w" target="_blank">4p1w</a>, is involved in getting the whole process started. Try searching for “autophagy” to see some of these proteins.</li>
+<li>A 2016 Nobel Prize was awarded to Yoshinori Ohsumi for his discoveries of mechanisms for autophagy. You can search on his name to see some of the structures determined in his laboratory.</li>
+<li>The enzyme alpha-mannosidase is also delivered along with aminopeptidase 1 in the phagophore—you can see its structure in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5jm0" target="_blank">5jm0</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/transport">Transport</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nobel-prizes-and-pdb-structures">Nobel Prizes and PDB structures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>H. Suzuki, T. Osawa, Y. Fujioka &amp; N. N. Noda (2017) Structural biology of the core autophagy machinery. Current Opinion in Structural Biology 43, 10-17.</li>
+<li>5jm0: C. Bertipaglia, S. Schneider, A. J. Jakobi, A. K. Tarafder, Y. S. Bykov, A. Picco, W. Kukulski, J. Kosinski, W. J. Hagen, A. C. Ravichandran, M. Wilmanns, M. Kaksonen, J. A. Briggs &amp; C. Sachse (2016) Higher-order assemblies of oligomeric cargo receptor complexes form the membrane scaffold of the Cvt vesicle. Embo Reports 17, 1044-1060.</li>
+<li>X. Wen &amp; D. J. Klionsky (2016) An overview of macroautophagy in yeast. Journal of Molecular Biology 428, 1681-1699.</li>
+<li>5jh9: A. Yamasaki, Y. Watanabe, W. Adachi, K. Suzuki, K. Matoba, H. Kirisako, H. Kumeta, H. Nakatogawa, Y. Ohsumi, F. Inagaki &amp; N. N. Noda (2016) Structural basis for receptor-mediated selective autophagy of aminopeptidase 1 aggregates. Cell Reports 16, 19-27.</li>
+<li>4r8f: M. Y. Su, W. H. Peng, M. R. Ho, S. C. Su, Y. C. Chang, G. C. Chen &amp; C. I. Chang (2015) Structure of yeast Ape1 and its role in autophagic vesicle formation. Autophagy 11, 1580-1593.</li>
+<li>4p1w: Y. Fujioka, S. W. Suzuki, H. Yamamoto, C. Kondo-Kakuta, Y. Kimura, H. Hirano, R. Akada, F. Inagaki, Y. Ohsumi &amp; N. N. Noda (2014) Structural basis of starvation-induced assembly of the autophagy initiation complex. Nature Structural and Molecular Biology 21, 513-521.</li>
+<li>4gsl: S. E. Kaiser, K. Mao, A. M. Taherbhoy, S. Yu, J. L. Olszewski, D. M. Duda, I. Kurinov, A. Deng, T. D. Fenn, D. J. Klionsky &amp; B. A. Schulman (2012) Noncanonical E2 recruitment by the autophagy E1 revealed by Atg7-Atg3 and Atg7-Atg10 structures. Nature Structural and Molecular Biology 19, 1242-1249.</li>
+<li>3rui: S. B. Hong, B. W. Kim, K. E. Lee, S. W. Kim, H. Jeon, J. Kim &amp; H. K. Song (2011) Insights into noncanonical E1 enzyme activation from the structure of autophagic E1 Atg7 with Atg8. Nature Structural and Molecular Biology 18, 1323-1330.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2016, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2016_11">http://doi.org/10.2210/rcsb_pdb/mom_2016_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

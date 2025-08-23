@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Neurotrophins</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Neurotrophins" property="og:title"/>
+<meta content="Neurotrophins guide the development of the nervous system" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/68/1bet.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/68" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Neurotrophins" name="twitter:title"/>
+<meta content="Neurotrophins guide the development of the nervous system" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/68/1bet.gif" name="twitter:image"/>
+<meta content="Neurotrophins guide the development of the nervous system" name="description"/>
+<meta content="growth factor activity,nerve growth factor,nervous system development,neurotrophin receptor,receptor signaling protein activity,NGF,1bet,1www,1sg1,1b98" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 68
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 68 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Neurotrophins</h1>
+<p><i>Neurotrophins guide the development of the nervous system</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Nerve growth factor." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/68/1bet.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nerve growth factor.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/68/68-Neurotrophins-1bet.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Your brain is composed of 85 billion interconnected neurons. Individually, each neuron receives signals from its many neighbors, and based on these signals, decides whether to dispatch its own signal to other nerve cells. Together, the combined action of all of these neurons allows us to sense the surrounding world, think about what we see, and make appropriate actions. Remarkably, this complicated structure is formed in nine short months as an embryo grows into a baby. Nerve cells start as typical, compact cells, but then they send out long axons and dendrites, connecting to other cells in the brain or even to entirely different parts of the body. Neurons in the growing brain test the connections with their neighbors, looking for the proper wiring. Half of the neurons are discarded during this process, in areas that get too crowded. The half that remain become the nervous system. Throughout the rest of life, these neurons typically do not reproduce, although they do send out more dendrites to neighboring cells as the nervous system grows or repairs damaged areas.</div>
+<h4>Life or Death Decisions</h4>
+<div>During this process of nerve development, neurotrophins help nerve cells decide if they are going to live or die. Neurotrophins are small proteins secreted in the nervous system. A steady low level of a neurotrophin is needed to keep nerve cells alive. However, in certain contexts, presence of a neurotrophin can have the opposite effect, initiating the controlled death of the cell. During development of the nervous system, the local levels of neurotrophins control the pruning of unwanted nerve cells. Later in life, neurotrophins are used to stimulate the growth of new dendrites into areas that need them, and to cause unwanted dendrites to die back from crowded areas.</div>
+<h4>Types of Neurotrophins</h4>
+<div>Four types of neurotrophins have been discovered: nerve growth factor, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bet" target="_blank">1bet <i class="fa fa-external-link"> </i></a></span>, brain-derived growth factor, neutrotrophin 3 and neurotrophin 4. They each have slightly different properties, acting differently on their particular range of nerve cells. All have a similar structure, composed of two identical chains, so similar that in some cases, one can substitute for the other.</div>
+<h4>Neurotrophins in Disease and Medicine</h4>
+<div>A number of debilitating diseases, such as Alzheimer's disease, stroke, and cancer, may cause neural damage in part through the misfunction of neurotrophins. A current therapeutic strategy to fight these problems is to add neurotrophins to help control any loss of nerve function. Unfortunately, neurotrophins do not last very long in the body when used as drugs and they show significant side effects. So now, researchers are looking for drugs that fool cells into thinking that they are receiving signals from neurotrophins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Receptors for nerve growth factor. Portions of the receptors that are not included in the structures are shown schematically." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/68/receptors.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Receptors for nerve growth factor. Portions of the receptors that are not included in the structures are shown schematically.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/68/68-Neurotrophins-receptors.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Neurotrophin Receptors</h4>
+<div>Two types of receptors on nerve cell surfaces sense the level of neurotrophins and make a decision about the life or death of the cell. The TRK receptors bind to neurotrophins and typically send a positive signal to the cell, promoting survival or growth. These receptors are large proteins found embedded in the nerve cell membrane, with the neurotrophin-binding portion on the outside of the cell and a tyrosine kinase portion in the inside of the cell. The structure in PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1www" target="_blank">1www <i class="fa fa-external-link"> </i></a></span>, shown on the left, contains a domain from the outer portion of the receptor (the other domains are shown schematically). Notice that two receptors (shown in blue) bind on either side of the neurotrophin. A second receptor, termed p75 neurotrophin receptor, typically has the opposite result. When it binds to neurotrophins, it promotes death of the cell. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1sg1" target="_blank">1sg1 <i class="fa fa-external-link"> </i></a></span>, shown on the right, includes the neurotrophin-binding portion of this receptor.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/68/neurotrophins-rasmol.gif"/></div>
+<div>Neurotrophins must be stable in the environment outside of cells. To help with this stability, all four neurotrophins have an unusual collection of three disulfide bridges that glue each chain into its folded conformation. Two neurotrophins are shown here: nerve growth factor on the left, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1bet" target="_blank">1bet <i class="fa fa-external-link"> </i></a></span>, and neurotrophin-4 on the right, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1b98" target="_blank">1b98 <i class="fa fa-external-link"> </i></a></span>. As you examine these proteins yourself, notice that both ends of the chain are immobilized by these disulfide linkages. <br/><br/> These images were created with RasMol. You can explore the structure by clicking on the accession codes here and picking one of the options for 3D viewing. Note that you need to use the biological assembly file for entry 1bet--the crystallographic file only contains one of the two chains.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>M. Pattarawarapan and K. Burgess (2003) Molecular basis of Neurotrophin-Receptor Interactions. Journal of Medicinal Chemistry 46, 5277-5291.</li>
+<li>M. Bibel and Y.-A. Barde (2000) Neurotrophins: Key Regulators of Cell Fate and Cell Shape in the Vertebrate Nervous System. Genes and Development 14, 2919-2937. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>August 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_8">http://doi.org/10.2210/rcsb_pdb/mom_2005_8</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

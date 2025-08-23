@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Nucleosome</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Nucleosome" property="og:title"/>
+<meta content="The cell's genome is stored and protected by nucleosomes" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/7/1aoi.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/7" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Nucleosome" name="twitter:title"/>
+<meta content="The cell's genome is stored and protected by nucleosomes" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/7/1aoi.gif" name="twitter:image"/>
+<meta content="The cell's genome is stored and protected by nucleosomes" name="description"/>
+<meta content="DNA compaction,DNA packaging,histones,nucleosome core,nucleus,1aoi" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 7
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 7 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Nucleosome</h1>
+<p><i>The cell's genome is stored and protected by nucleosomes</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Nucleosome, with DNA in orange and histone proteins in blue." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/7/1aoi.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nucleosome, with DNA in orange and histone proteins in blue.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/7/7-Nucleosome-1aoi.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>A Molecular Librarian</h4>
+<div>This is an auspicious time for molecular biology. A wave of knowledge began in 1944 with Avery's discovery of DNA as the genetic material, leading naturally to the atomic model of DNA proposed by Watson and Crick, continuing through detailed experiments to determine the genetic code, and finally cresting with the release of the first draft of the human genome. This molecular text, written through billions of years of evolution, is providing untold insights into the molecular processes that underlie every aspect of our lives. Each of our cells (or more correctly, nearly all of our cells) contain a copy of this genome, encoded in three billion base pairs of DNA. This information is precious and must be carefully guarded. Inside our cells, a collection of repair enzymes corrects chemical changes inflicted on the strands by environmental insults. But the delicate strands must also be protected from physical damage. This is the job of nucleosomes.</div>
+<h4>A Paradox</h4>
+<div>The job of the nucleosome is paradoxical, requiring it to perform two opposite functions simultaneously. On one hand, nucleosomes must be stable, forming tight, sheltering structures that compact the DNA and keep it from harm. On the other hand, nucleosomes must be labile enough to allow the information in the DNA to be used. Polymerases must be allowed access to the DNA, both to transcribe messenger RNA for building new proteins and to replicate the DNA when the cell divides. The method by which nucleosomes solve these opposed needs is not well understood, but may involve a partial unfolding of the DNA from around the nucleosome, one loop at a time, as the information in the DNA is read.</div>
+<h4>Wagging Tails</h4>
+<div>Apart from their function of safely packaging DNA, nucleosomes also modify the activity of the genes that they store. Each nucleosome is composed of eight "histone" proteins bundled tightly together at the center (shown here in blue), encircled by two loops of DNA (shown here in orange). The histone proteins, however, are not completely globular like most other proteins. They have long tails, which comprise nearly a quarter of their length. The tails extend outward from the compact nucleosome, reaching out to neighboring nucleosomes and binding them tightly together. The nucleus contains regulatory enzymes that chemically modify these tails to weaken their interactions. In this way, the cell makes particular genes more accessible to polymerases, allowing their particular information to be copied and used to build new proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Nucleosome histone proteins (left) and DNA (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/7/nucleosome.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nucleosome histone proteins (left) and DNA (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/7/7-Nucleosome.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Opposites Attract</h4>
+<div>The histone proteins are perfectly designed for their jobs, so much so that histones are nearly identical in all non-bacterial organisms. Even slight modifications can be lethal. The surface of the histone octamer, shown on the left, is decorated with positively charged amino acids, shown with bright blue nitrogen atoms. These interact strongly with the negatively-charged phosphate groups on the DNA, shown at the right with bright yellow phosphorous and bright red oxygen atoms. This serves to glue the DNA strand to the protein core. This is no simple task. DNA is normally a long, straight molecule, but in nucleosomes the DNA must be forcably bent into these two tight circles.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/7/1aoi_rasmol.gif"/></div>
+<div>An intact nucleosome may be viewed in the PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1aoi" target="_blank">1aoi <i class="fa fa-external-link"> </i></a></span>. The picture here shows the eight histone proteins as tubes that follow the protein chain, and shows the DNA as thinner tubes that follow the two strands as they circle around the protein octamer. The tails of the eight protein chains, seen extending outward from the center, are actually longer in reality. But, since they are so long and flexible, they are disordered in the crystal and cannot be seen. The one long chain at lower left gives a good indication of what the others might look like, if we were able to see the nucleosome inside a cell. Keep in mind that this structure only includes a short piece of DNA. In reality, these little nucleosomes are arrayed by the millions along long strands of DNA.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/nucleic-acids">Nucleic Acids</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2000, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2000_7">http://doi.org/10.2210/rcsb_pdb/mom_2000_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

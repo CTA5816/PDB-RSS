@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Leptin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Leptin" property="og:title"/>
+<meta content="Problems with the appetite-controlling hormone leptin can lead to obesity" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ax8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/149" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Leptin" name="twitter:title"/>
+<meta content="Problems with the appetite-controlling hormone leptin can lead to obesity" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ax8.jpg" name="twitter:image"/>
+<meta content="Problems with the appetite-controlling hormone leptin can lead to obesity" name="description"/>
+<meta content="appetite,energy homeostasis,neuropeptide Y,obesity,1ax8,1ron,3v6o" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 149
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 149 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Leptin</h1>
+<p><i>Problems with the appetite-controlling hormone leptin can lead to obesity</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Leptin." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ax8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Leptin.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ax8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Introduction</h4>
+<div>The delivery of nutrients to cells throughout the body is controlled by a complex network of signaling molecules. Some of these signals happen without us really noticing, for instance, when insulin and glucagon control the level of glucose that is delivered through the blood after we eat. The signaling protein leptin, however, has a more apparent effect, acting within the system that makes us hungry when we need food.</div>
+<h4>Obese Mice</h4>
+<div>Leptin, shown here from PDB entry <span class="rcsb_id_tag" title="Leptin"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ax8" target="_blank">1ax8 <i class="fa fa-external-link"> </i></a></span>, was discovered through the study of a strain of mutant mice that are chronically obese. By looking carefully at these mice, researchers discovered that they had an inactive form of leptin, and went on to discover that leptin is at the center of the signals that tell us when we should stop eating. Leptin is produced by fat cells and sent through the blood to special neurons in the brain that control hunger. Then, in the brain, leptin suppresses the appetite. Leptin is also important when food is scarce: in starvation, the amounts of leptin made by fat cells drops, sending a signal to the body to conserve energy and focus only on vital functions.</div>
+<h4>Appetite and Obesity</h4>
+<div>As you can imagine, there are problems when this system is compromised. Some people are born with faulty forms of leptin, and are highly prone to obesity. This has been treated successfully with doses of leptin, restoring the normal controls on appetite. Surprisingly, however, most obese people have normal leptin, and in fact they often show elevated levels of it. In these cases, the leptin system has become resistant, and the typical levels of leptin are not enough to provide effective control of appetite. This is difficult to treat, since the resistance may be happening at many different places, such as the delivery of leptin from the blood to the brain, or the binding of leptin to its receptor.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Neuropeptide Y." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ron.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Neuropeptide Y.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_1ron.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Hungry Cell</h4>
+<div>The neurons that control hunger communicate with small neurotransmitters when they are computing the appropriate level of appetite for any given moment. Neuropeptide Y, shown here from PDB entry <span class="rcsb_id_tag" title="Neuropeptide Y"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ron" target="_blank">1ron <i class="fa fa-external-link"> </i></a></span>, is one of the major orexogenic (appetite-inducing) neuropeptides, as well as being important in other processes like heart activity and emotional regulation. Surprisingly, however, if you knock out the production of neuropeptide Y in mice, they are quite normal and not prone to weight gain or loss, indicating that the peptide is part of a larger redundant network of signals.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Leptin receptor binding (PDB entry 3v6o)</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/149/149-Leptin_3v6o_jmol.jpg"/></div>
+<p>Leptin is recognized by receptors on the surface of the hunger-controlling neurons, as well as by other cells throughout the body. It is a large protein with many domains, and is thought to bind one-to-one with leptin, then dimerize to transmit the signal into the cell. The structure shown here, from PDB entry <span class="rcsb_id_tag" title="Leptin receptor"><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3v6o" target="_blank">3v6o <i class="fa fa-external-link"> </i></a></span>, includes the leptin-binding portion of the receptor (blue) along with an antibody (red). The antibody has been shown to block the binding of leptin, and the authors used this information and other biochemical results to predict the location of leptin binding (green). To take a closer look at this structure, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>The leptin structure in PDB entry <span class="rcsb_id_tag" title="Leptin">1ax8</span> has a mutation at position 100, changing a tryptophan on the surface to glutamate. Why do you think this was necessary?</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/peak-performance">Peak Performance</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>C. S. Mantzoros, F. Magkos, M. Brinkoetter, E. Sienkiewicz, T. A. Dardeno, S. Y. Kim, O. P. R. Hamnvik &amp; A. Koniaris (2011) Leptin in human physiology and pathophysiology. American Journal of Physiology, Endocrinology and Metabolism 301, E567-E584.</li>
+<li>R. Mercer, M. J. S. Chee &amp; W. F. Colmers (2011) The role of NPY in hypothalamic mediated food intake. Frontiers in Neuroendocrinology 32, 398-415.</li>
+<li>S. P. Brothers &amp; C. Wahlestedt (2010) Therapeutic potential of neuropeptide Y (NPY) receptor ligands. EMBO Molecular Medicine 2, 429-439.</li>
+<li>D. L. Morris &amp; L. Rui (2009) Recent advances in understanding leptin signaling and leptin resistance. American Journal of Physiology, Endocrinology and Metabolism 297, E1247-E1259.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2012, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2012_5">http://doi.org/10.2210/rcsb_pdb/mom_2012_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Ubiquitin</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Ubiquitin" property="og:title"/>
+<meta content="Ubiquitin is used to tag obsolete proteins for destruction" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/60/ubiquitin.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/60" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Ubiquitin" name="twitter:title"/>
+<meta content="Ubiquitin is used to tag obsolete proteins for destruction" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/60/ubiquitin.gif" name="twitter:image"/>
+<meta content="Ubiquitin is used to tag obsolete proteins for destruction" name="description"/>
+<meta content="proteasome,protein catabolism,protein ubiquitination,ubiquitin cyle,ubiquitin ligase complex,1ubq,2src,1r4n,1fxt,1ldk,1fqv,1fnt,1f9j" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 60
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 60 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Ubiquitin</h1>
+<p><i>Ubiquitin is used to tag obsolete proteins for destruction</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Ubiquitin (top) and a chain of four ubiquitin molecules bound to a protein (bottom)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/60/ubiquitin.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Ubiquitin (top) and a chain of four ubiquitin molecules bound to a protein (bottom).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/60/60-Ubiquitin-ubiquitin.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nothing lasts forever. Many proteins, in fact, don't last more than a few minutes. Our cells are continually building proteins, using them for a single task, and then discarding them. For instance, proteins that are used for signaling or control, such as transcription regulators and the cyclins that control division of cells, lead very brief lives, carrying their messages and then being thrown away. Specialized enzymes are also built just when they are needed, allowing cells to keep up with their minute-by-minute synthetic needs. This approach of planned obsolescence may seem wasteful, but it allows each cell to respond quickly to its constantly changing requirements.</div>
+<h4>Out with the Old</h4>
+<div>Of course, cells need to control the destruction of their own proteins, making sure that they remove only proteins that aren't needed any more. The small protein ubiquitin plays a central role in this job. Ubiquitin is attached to obsolete proteins, signaling to the cell that they are ready to be disassembled. As shown in the figure, a string of ubiquitin molecules (colored pink and tan here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ubq" target="_blank">1ubq <i class="fa fa-external-link"> </i></a></span>) is attached to old proteins, such as the src protein shown here (colored blue, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2src" target="_blank">2src <i class="fa fa-external-link"> </i></a></span>). The ubiquitin is then recognized by the destruction machinery of the cell.</div>
+<h4>Ubiquitous Ubiquitin</h4>
+<div>As its name implies, ubiquitin is found in all eukaryotic cells and in cells throughout your body. The 2004 Nobel Prize in Chemistry was awarded to three researchers who discovered its essential function in 1980. In the subsequent years, it has become apparent that apart from its role in protein disposal, ubiquitin is also used for other tasks, such as directing the transport of proteins in and out of the cell. By connecting ubiquitin together in short or long chains, or using different types of linkages between the molecules, many different signals may be encoded. Because of the important roles it plays, ubiquitin has changed very little over the evolution of life, so you can find a similar form in yeast cells, plant cells, and in our own cells.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three enzymes involved in ubiquitination of proteins." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/60/enzymes.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three enzymes involved in ubiquitination of proteins.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/60/60-Ubiquitin-enzymes.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Ubiquitination</h4>
+<div>The tricky part of this whole process is making sure that ubiquitin is attached only to the proper proteins. Several specialized enzymes sort through the proteins in the cell and pick only the right ones. There are three types of these enzymes, called E1, E2, and E3. The E1 enzyme, shown at the top here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1r4n" target="_blank">1r4n <i class="fa fa-external-link"> </i></a></span>, is the ubiquitin-activating enzyme that starts the process. Powered by ATP (shown in red), it attaches the tail end of ubiquitin (shown here in light orange) to one of its own cysteine amino acids (shown in green--note, in this structure, the cysteine is mutated to alanine). Then, E1 passes the activated ubiquitin to one of several E2 enzymes, the ubiquitin-conjugating enzymes, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fxt" target="_blank">1fxt <i class="fa fa-external-link"> </i></a></span>. These E2 enzymes then work with a large number of different E3 enzymes to recognize obsolete proteins and attach the ubiquitin to them. The E3 enzyme shown here, from PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1ldk" target="_blank">1ldk <i class="fa fa-external-link"> </i></a></span> and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fqv" target="_blank">1fqv <i class="fa fa-external-link"> </i></a></span>, is shaped like a big clamp. The target protein binds in the gap (shown with the star). The left side of the enzyme recognizes the protein and the right side positions E2 to allow transfer of its ubiquitin.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Proteasome (red) with proteasome activators (yellow)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/60/1fnt.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Proteasome (red) with proteasome activators (yellow).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/60/60-Ubiquitin-1fnt.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Total Destruction</h4>
+<div>Once obsolete proteins are tagged with at least four ubiquitin molecules, they are destroyed by <a href="http://pdb101.rcsb.org/motm/166">proteasomes</a>. Proteasomes are voracious protein shredders, but the destructive machinery is carefully protected so that it can't attack all of the normal proteins in the cell. The proteasome, shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fnt" target="_blank">1fnt <i class="fa fa-external-link"> </i></a></span>, is shaped like a cylinder, with its active sites sheltered inside the tube. The caps on the ends regulate entry into the destructive chamber, where the protein is chopped into pieces 3 to 23 amino acids long.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/60/1f9j-rasmol.gif"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f9j" target="_blank">1f9j <i class="fa fa-external-link"> </i></a></span> shows how ubiquitin molecules are strung together into chains. The crystal was grown with tetraubiquitin (four proteins strung together), but the connection was only observed between two ubiquitin molecules in the structure. If you look closely, you can see the unusual connection between the last glycine amino acid in chain A and the sidechain of lysine number 148 in the middle of chain B. <br/><br/> This illustration was created with RasMol. You can create similar illustrations by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>A. P. VanDemark and C. P. Hill (2002) Structural Basis of Ubiquitylation. Current Opinion in Structural Biology 12, 822-830.</li>
+<li>M. H. Glickman and A. Ciechanover (2002) The Ubiquitin-Proteasome Proteolytic Pathway: Destruction for the Sake of Construction. Physiological Reviews 82, 373-428.</li>
+<li>C. M. Pickart (2000) Ubiquitin in Chains. Trends in Biochemical Sciences 25, 544-548.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2004, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2004_12">http://doi.org/10.2210/rcsb_pdb/mom_2004_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

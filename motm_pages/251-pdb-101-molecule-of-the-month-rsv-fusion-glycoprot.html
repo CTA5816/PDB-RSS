@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: RSV Fusion Glycoprotein</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: RSV Fusion Glycoprotein" property="og:title"/>
+<meta content="Structures of the fusion glycoprotein from respiratory syncytial virus (RSV) were used to engineer effective vaccines to fight viral infection." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/286/4jhw_3rrr.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/286" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: RSV Fusion Glycoprotein" name="twitter:title"/>
+<meta content="Structures of the fusion glycoprotein from respiratory syncytial virus (RSV) were used to engineer effective vaccines to fight viral infection." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/286/4jhw_3rrr.jpg" name="twitter:image"/>
+<meta content="Structures of the fusion glycoprotein from respiratory syncytial virus (RSV) were used to engineer effective vaccines to fight viral infection." name="description"/>
+<meta content="RSV,respiratory syncytial virus,fusion glycoprotein,spike,antibody,vaccine,immune system,4jhw,3rrr,5udc,4mmv" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 286
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 286 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: RSV Fusion Glycoprotein</h1>
+<p><i>Structures of the fusion glycoprotein from respiratory syncytial virus (RSV) were used to engineer effective vaccines to fight viral infection.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="(Left) Prefusion form of RSV fusion glycoprotein bound to antibodies (yellow). The major antigenic sites are in bright red. (Right) Postfusion form." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/286/4jhw_3rrr.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>(Left) Prefusion form of RSV fusion glycoprotein bound to antibodies (yellow). The major antigenic sites are in bright red. (Right) Postfusion form.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/286/4jhw_3rrr.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Vaccines are one of the most powerful tools in the medical community’s fight against viral diseases. Vaccines work by challenging us with pieces of a virus, which stimulate the immune system to build antibodies to recognize these pieces and ultimately prepare us for when the actual virus attacks. Often, however, the success of a vaccine is critically dependent on the choice of the virus molecules that are used. The first vaccines, such as the <a href="https://pdb101.rcsb.org/motm/20">polio</a> and smallpox vaccines, took a simple approach, using inactivated whole viruses or less dangerous relatives of the virus. Current approaches are more targeted, choosing only the most effective portion of the virus to create the vaccine. Structural biology helps tune these vaccine molecules for maximal effectiveness.</div>
+<h4>RSV Fusion Glycoprotein</h4>
+<div>Researchers have been working for many years to create a vaccine to fight infection by RSV (respiratory syncytial virus). RSV causes respiratory tract infections that can be life threatening in infants and in elderly people. Much of this vaccine development focused on the fusion glycoprotein of the virus. This glycoprotein forms spikes on the surface of the virus that allow it to find and enter the cells that it infects. Fusion glycoprotein is an attractive choice for a vaccine since it is readily accessible to antibodies, and by blocking it, we can block attachment of the virus to cells. It is a challenging target, however, because it undergoes enormous structural transitions during the process of infection. As seen in PDB ID <a href="https://www.rcsb.org/structure/4jhw" target="_blank">4jhw</a>, the “prefusion” form on the surface of the virus is a compact trimer. Several loops on the upper side (colored bright red here) are readily accessible to antibodies and comprise the major antigenic site. When the virus attaches to the cell, the trimer pops open and inserts into the cellular membrane, bridging the virus to the cell. The whole protein then undergoes a massive rearrangement, ending up in the form seen in PDB ID <a href="https://www.rcsb.org/structure/3rrr" target="_blank">3rrr</a>, the “postfusion” form. As seen in the structure, everything is in a different place, and the major antigenic sites are buried in the middle of the protein, mostly inaccessible to antibodies.</div>
+<h4>Vaccine Design</h4>
+<div>The breakthrough in design of an RSV vaccine came when researchers used these structures to engineer a form of the fusion glycoprotein that is glued into the prefusion shape. This engineered protein mimics the shape that is found on infectious viruses, and thus stimulates the immune system to focus on the virus. This idea led to the creation of RSV vaccines (Arexvy and Abrysvo) that have just received approval from the US Food and Drug Administration to protect older people from RSV infection and for use during pregnancy to protect newborn infants from infection. A similar approach was used in the <a href="https://pdb101.rcsb.org/learn/resources-to-fight-the-covid-19-pandemic/sars-cov-2-mrna-vaccine">mRNA vaccines</a> that are currently protecting us from infection by SARS-CoV-2, which challenge the immune system with prefusion-stabilized versions of the <a href="https://pdb101.rcsb.org/motm/246">viral spike protein.</a></div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Therapeutic antibody nirsevimab (yellow) bound to RSV fusion glycoprotein (three chains in shades of pink, and glycosylation in magenta)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/286/5udc.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Therapeutic antibody nirsevimab (yellow) bound to RSV fusion glycoprotein (three chains in shades of pink, and glycosylation in magenta).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/286/5udc.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Assisting the Immune System</h4>
+<div>The medical community is using a complementary approach to protect particularly susceptible infants from RSV infection. In these cases, anti-RSV antibodies are administered to provide a front-line barrier against the viruses. These antibodies are similar to the ones that are elicited by the vaccine, binding to the prefusion form of the fusion glycoprotein on the surface of the virus. PDB ID <a href="https://www.rcsb.org/structure/5udc" target="_blank">5udc</a> shows the antibody therapy nirsevimab in action.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>RSV Fusion Glycoprotein Engineered for the Prefusion State</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/286/4mmv_Jmol-jmol.jpg"/></div>
+<p>PDB ID <a href="https://www.rcsb.org/structure/4mmv" target="_blank">4mmv</a> includes the proof-of-principle study for the engineering of prefusion-stabilized RSV fusion glycoprotein. The protein includes several changes that stabilize the protein. A disulfide linkage was added between two amino acids that are very close to one another in the prefusion form but on opposite sides of the protein in the postfusion form. Several amino acids were modified to fill small pockets, further stabilizing the prefusion form. Finally, a short segment was added to the end of the chain to create a “foldon” that tightly associates the three chains. To explore this structure in more detail, select the Jmol option for an interactive view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>To learn more about RSV and treatments to fight it, visit the <a href="https://www.cdc.gov/rsv/"> page at the US Center for Disease Control.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/viruses">Viruses</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/immune-system">Immune System</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/vaccines">Vaccines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Goodsell, D.S, Burley, S.K. (2021) RCSB Protein Data Bank resources for structure-facilitated design of mRNA vaccines for existing and emerging viral pathogens. Structure 29, 1-14</li>
+<li>5udc: Zhu, Q., McLellan, J.S., Kallewaard, N.L., Ulbrandt, N.D., Palaszynski, S., Zhang, J., Moldt, B., Khan, A., Svabek, C., McAuliffe, J.M., Wrapp, D., Patel, N.K., Cook, K.E., Richter, B.W.M., Ryan, P.C., Yuan, A.Q., Suzich, J.A. (2017) A highly potent extended half-life antibody as a potential RSV vaccine surrogate for all infants. Sci Transl Med 9: eaak1928</li>
+<li>4mmv: McLellan, J.S., Chen, M., Joyce, M.G., Sastry, M., Stewart-Jones, G.B., Yang, Y., Zhang, B., Chen, L., Srivatsan, S., Zheng, A., Zhou, T., Graepel, K.W., Kumar, A., Moin, S., Boyington, J.C., Chuang, G.Y., Soto, C., Baxa, U., Bakker, A.Q., Spits, H., Beaumont, T., Zheng, Z., Xia, N., Ko, S.Y., Todd, J.P., Rao, S., Graham, B.S., Kwong, P.D. (2013) Structure-based design of a fusion glycoprotein vaccine for respiratory syncytial virus. Science 342: 592-598</li>
+<li>4jhw: McLellan, J.S., Chen, M., Leung, S., Graepel, K.W., Du, X., Yang, Y., Zhou, T., Baxa, U., Yasuda, E., Beaumont, T., Kumar, A., Modjarrad, K., Zheng, Z., Zhao, M., Xia, N., Kwong, P.D., Graham, B.S. (2013) Structure of RSV fusion glycoprotein trimer bound to a prefusion-specific neutralizing antibody. Science 340: 1113-1117</li>
+<li>3rrr: McLellan, J.S., Yang, Y., Graham, B.S., Kwong, P.D. (2011) Structure of respiratory syncytial virus fusion glycoprotein in the postfusion conformation reveals preservation of neutralizing epitopes. J Virol 85: 7788-7796</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_10">http://doi.org/10.2210/rcsb_pdb/mom_2023_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

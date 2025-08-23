@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Cellulases and Bioenergy</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Cellulases and Bioenergy" property="og:title"/>
+<meta content="Powerful fungal enzymes break down cellulose during industrial production of ethanol from plant material." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/281/Cel7A.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/281" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Cellulases and Bioenergy" name="twitter:title"/>
+<meta content="Powerful fungal enzymes break down cellulose during industrial production of ethanol from plant material." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/281/Cel7A.jpg" name="twitter:image"/>
+<meta content="Powerful fungal enzymes break down cellulose during industrial production of ethanol from plant material." name="description"/>
+<meta content="cellulase,bioenergy,ethanol,fuel,renewable energy,cellulose,glucose,fermentation,green energy,7cel,4c4c,1eg1,2mwk,3zyz,2vtc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 281
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 281 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Cellulases and Bioenergy</h1>
+<p><i>Powerful fungal enzymes break down cellulose during industrial production of ethanol from plant material.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Cel7A from Trichoderma reesei contains a carbohydrate-binding module (top) and a catalytic domain (bottom, with cellulose in tan) connected by a flexible linker. The carbohydrate-binding module contains several tyrosines (turquoise) and glycosylation (tan) that grip the surface of a cellulose fiber." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/281/Cel7A.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cel7A from Trichoderma reesei contains a carbohydrate-binding module (top) and a catalytic domain (bottom, with cellulose in tan) connected by a flexible linker. The carbohydrate-binding module contains several tyrosines (turquoise) and glycosylation (tan) that grip the surface of a cellulose fiber.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/281/Cel7A.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Petroleum-based fuels are diminishing and are a major contributor to climate change, so bioenergy researchers are looking to Nature to generate cleaner, renewable fuels to power our world. Ethanol is emerging as an attractive solution, both as a fuel and as an intermediate to produce sustainable aviation fuel. Alcoholic beverages have been produced since before recorded history by fermentation of sugars, and now, the same technology is being used to produce ethanol for use as fuel. Today, corn and sugar cane provide most of these sugars, but this is not an ideal process since it co-opts land that is amenable for food production and these crops are energy intensive to produce. Instead, bioenergy researchers are looking for ways to convert the cellulose in hardier non-food crops, such as switchgrass, poplar and cornstalks, into ethanol.</div>
+<h4>Disassembling Cellulose</h4>
+<div>Cellulose is composed of glucose molecules, however, they are locked together tightly into a tough, stable strand. It is created by <a href="https://pdb101.rcsb.org/motm/254">cellulose synthase,</a> which layers many cellulose strands into an even tougher fibril. So, industrial processes need to separate these strands and cut them into sugars before they can be fermented into ethanol. Typically, plant material is pretreated with aggressive processes such as chemicals and "steam explosion" that disrupt the plant cell walls and provide access to cellulose fibers. Then, a concoction of cellulase enzymes breaks the cellulose strands into individual sugars. The fungus <i>Trichoderma reesei</i> (also known as <i>Hypocrea jecorina</i>) is a common source of these cellulase enzymes. It was found in the Solomon Islands during World War II, growing on cotton canvas. Today it is widely used for bioethanol production, and for other tasks such as softening up denim in stonewashed jeans.</div>
+<h4>Science of Cellulases</h4>
+<div>Some cellulases contain two domains to help them degrade sturdy cellulose fibers, shown here from PDB entries <a href="https://www.rcsb.org/structure/7cel" target="_blank">7cel</a> and <a href="https://www.rcsb.org/structure/2mwk" target="_blank">2mwk</a>. One domain has a long groove that is form-fitted to bind to the cellulose chain, straining one glucose-glucose bond and positioning it against the catalytic machinery for cleavage. The other domain binds to cellulose and ensures that the enzyme is always in the right place, allowing it to perform many cleavage reactions in rapid succession.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Cel61B, with tyrosine in turquoise, glycosylation in tan, and metal ion in magenta, and beta-glucosidase, with a sugar molecule in red in the active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/281/Figure2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Cel61B, with tyrosine in turquoise, glycosylation in tan, and metal ion in magenta, and beta-glucosidase, with a sugar molecule in red in the active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/281/Figure2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Cellulase Cocktails</h4>
+<div>Fungi like <i>Trichoderma reesei</i> secrete a complex cocktail of cellulose-degrading enzymes that work together to attack cellulose fibers. Two examples are included here, and structures of many others are available in the PDB archive. Cel61B, also known as endoglucanase 7, takes an aggressive approach, using a metal ion to generate reactive forms of oxygen that attack cellulose (PDB ID <a href="https://www.rcsb.org/structure/2vtc" target="_blank">2vtc</a>). Similar to the cellulose-binding domain of Cel7A, it has several tyrosines and glycosylation to help glue it to the cellulose fiber. Beta-glucosidase (PDB ID <a href="https://www.rcsb.org/structure/3zyz" target="_blank">3zyz</a>) works later in the process to clip short fragments of cellulose into individual glucose sugars.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Cellulases</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/281/Jmol-jmol.jpg"/></div>
+<p>Cellulases use many molecular tricks to streamline their function. As seen above, they often have domains or surfaces that bind to the surface of cellulose fibers. The shape of the cellulose-binding site is also tuned to perform a specialized function. In Cel7A (PDB ID <a href="https://www.rcsb.org/structure/4c4c" target="_blank">4c4c</a>), several loops embrace the cellulose strand, forming a tunnel with the active site at one end. Because of this, Cel7A cleaves small two-sugar fragments from the end of the cellulose fiber. However, Cel7B (endogluconase EG-1, PDB ID <a href="https://www.rcsb.org/structure/1eg1" target="_blank">1eg1</a>) is missing these loops and has an open groove that can bind to cellulose chains anywhere along their length, allowing it to cleave cellulose in the middle of a chain. The close-up picture at right shows another molecular trick: these enzymes often distort one sugar ring (shown here in brighter pinks) into a less-stable conformation. This distortion helps activate the connecting oxygen (in red) for the cleavage reaction catalyzed by two glutamates (turquoise). Click on the image to explore these structures in an interactive JSmol. Note that the cellulose chain from PDB ID <a href="https://www.rcsb.org/structure/4c4c" target="_blank">4c4c</a> is displayed for both proteins.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>You can find many other structures of cellulases by using the EC number in the <a href="https://www.rcsb.org/search/browse/ec"> Annotation Browser</a> for <a href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_polymer_entity.rcsb_ec_lineage.id%22%2C%22operator%22%3A%22in%22%2C%22value%22%3A%5B%223.2.1.4%22%5D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22polymer_entity%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22f85f22416c592065e42b884c4888c119%22%7D%7D">3.2.1.4 (cellulases)</a> and <a href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_polymer_entity.rcsb_ec_lineage.id%22%2C%22operator%22%3A%22in%22%2C%22value%22%3A%5B%223.2.1.91%22%5D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22polymer_entity%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22357aed11efb55d8f6c8ba42a85d24360%22%7D%7D">3.2.1.91 (cellulose 1,4-beta-cellobiosidases).</a></li>
+<li>To see the flexible loop that connects the two domains in Cel7A, look at <a href="https://www.rcsb.org/structure/AF_AFP62694F1" target="_blank">AF_AFP62694F1</a>, the structure predicted by AlphaFold2. Notice that there are several prolines at the ends of the linker, to help with flexibility, and many threonines and serines that may be glycosylated.</li>
+<li>A quick warning about the science of cellulases: there are many different types of cellulases and scientists love to classify and name things. So, you’ll often find many different names for the same enzyme. For example, the short name Cel7A is based on a large-scale classification of cellulase families, and longer names like 1,4-beta-D-glucan cellobiohydrolase I or cellulose 1,4-beta cellobiosidase or exoglucanase I describe its action of cutting two-sugar units from the end of a cellulose strand.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biological-energy">Biological Energy</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/renewable-energy">Renewable Energy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Robak, K., Balcerek, M. (2020) Current state-of-the-art in ethanol production from lignocellulosic feedstocks. Microbiol Res 240: 126534</li>
+<li>2mwk: Happs, R.M., Guan, X., Resch, M.G., Davis, M.F., Beckham, G.T., Tan, Z., Crowley, M.F. (2015) O-glycosylation effects on family 1 carbohydrate-binding module solution structures. FEBS J 282: 4341-4356</li>
+<li>Payne, C.M., Knott, B.C., Mayes, H.B., Hansson, H., Himmel, M.E., Sandgren, M., Stahlberg, J., Beckham, G.T. (2015) Fungal cellulases. Chem Rev 115: 1308-1448</li>
+<li>3zyz: Karkehabadi, S., Helmich, K.E., Kaper, T., Hansson, H., Mikkelsen, N.E., Gudmundsson, M., Piens, K., Fujdala, M., Banerjee, G., Scott-Craig, J.S., Walton, J.D., Phillips, G.N.J., Sandgren, M. (2014) Biochemical Characterization and Crystal Structures of a Fungal Family 3 Beta-Glucosidase, Cel3A from Hypocrea Jecorina. J Biol Chem 289: 31624-31637</li>
+<li>4c4c: Knott, B.C., Haddad Momeni, M., Crowley, M.F., Mackenzie, L.F., Gotz, A.W., Sandgren, M., Withers, S.G., Stahlberg, J., Beckham, G.T. (2014) The Mechanism of Cellulose Hydrolysis by a Two-Step, Retaining Cellobiohydrolase Elucidated by Structural and Transition Path Sampling Studies. J Am Chem Soc 136: 321-329</li>
+<li>2vtc: Karkehabadi, S., Hansson, H., Kim, S., Piens, K., Mitchinson, C., Sandgren, M. (2008) The First Structure of a Glycoside Hydrolase Family 61 Member, Cel61B from the Hypocrea Jecorina, at 1.6 A Resolution. J Mol Biol 383: 144-154</li>
+<li>7cel: Divne, C., Stahlberg, J., Teeri, T.T., Jones, T.A. (1998) High-resolution crystal structures reveal how a cellulose chain is bound in the 50 A long tunnel of cellobiohydrolase I from Trichoderma reesei. J Mol Biol 275: 309-325</li>
+<li>1eg1: Kleywegt, G.J., Zou, J.Y., Divne, C., Davies, G.J., Sinning, I., Stahlberg, J., Reinikainen, T., Srisodsuk, M., Teeri, T.T., Jones, T.A. (1997) The crystal structure of the catalytic core domain of endoglucanase I from Trichoderma reesei at 3.6 A resolution, and a comparison with related enzymes. J Mol Biol 272: 383-397</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>May 2023, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2023_5">http://doi.org/10.2210/rcsb_pdb/mom_2023_5</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

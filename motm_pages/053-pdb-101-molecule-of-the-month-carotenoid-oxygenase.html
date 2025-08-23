@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Carotenoid Oxygenase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Carotenoid Oxygenase" property="og:title"/>
+<meta content="Light-sensing retinal molecules are built from colorful carotenoids in our diet" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/66/2biw-composite.gif" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/66" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Carotenoid Oxygenase" name="twitter:title"/>
+<meta content="Light-sensing retinal molecules are built from colorful carotenoids in our diet" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/66/2biw-composite.gif" name="twitter:image"/>
+<meta content="Light-sensing retinal molecules are built from colorful carotenoids in our diet" name="description"/>
+<meta content="beta-carotene,carotenoid-cleaving dioxygenase,retinal,vitamin A,2biw,1jb0,1f88" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 66
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 66 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Carotenoid Oxygenase</h1>
+<p><i>Light-sensing retinal molecules are built from colorful carotenoids in our diet</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Carotenoid oxygenase, with a carotenoid molecule in orange, iron in pink, and two water molecules in red." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/66/2biw-composite.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Carotenoid oxygenase, with a carotenoid molecule in orange, iron in pink, and two water molecules in red.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/66/66-CarotenoidOxygenase-2biw-composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Eat your carrots or you'll go blind! The biochemical reason for this childhood warning is that we need retinal, vitamin A, to form the pigment that absorbs light in our eyes. Unfortunately, our cells cannot make it for themselves, so we have to obtain it in our diet. We typically get our daily dose of vitamin A in two different ways. Retinal, or molecules similar to it, may be obtained directly when we eat meat. Alternatively, we can eat molecules that are easily transformed into retinal. This is where the carrots enter the story. They are full of beta-carotene, which our cells break in half to form two molecules of retinal.</div>
+<h4>Colorful Carotenoids</h4>
+<div>The bright color of carrots and many other orange and yellow vegetables is caused by carotenoid molecules such as beta-carotene. Carotenoids are long, thin molecules with a string of carbon-carbon double bonds in a row. These bonds absorb light and give carotenoids their characteristic yellow color. Hundreds of different types have been discovered in different plants, where they color flowers, leaves, fruits, and even the roots. Carotenoids are remarkably useful, both for the plant and for the people eating the plant. In plants, carotenoids assist the chlorophyll molecules that absorb light in photosynthesis. Carotenoids also absorb excess light when it reaches dangerous levels. Our retinas contain carotenoids such as lutein that protect us from excess light that might damage our eyes. Carotenoids also are antioxidants that scavenge reactive forms of oxygen, destroying them before they damage our molecular machinery.</div>
+<h4>Carotenoids in Pieces</h4>
+<div>Carotenoids provide the starting material for construction of many useful compounds. In plants, carotenoids are broken into small pieces that act as hormones and also form small, volatile compounds with pleasing floral scents. In your cells, you break carotenoids into vitamin A, or retinal, which is used to build visual pigments and is also used as a signaling molecule to control growth and specialization of cells in our tissues. Many of these breakage reactions are performed by carotenoid oxygenases, enzymes that use a molecule of oxygen to perform the cut.</div>
+<h4>Cutting Carotenoids</h4>
+<div>Carotenoid oxygenases trap a carotenoid molecule inside a deep pocket and break it into two pieces using oxygen. An iron ion assists in the reaction, positioning the oxygen at the proper place and activating it. The enzyme shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2biw" target="_blank">2biw <i class="fa fa-external-link"> </i></a></span>, is from a cyanobacterium. It breaks a variety of carotenoids at a bond at the center. Our own enzyme breaks beta-carotene in the center, forming two molecules of retinal.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Photosystem I (left) and rhodopsin (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/66/1jb0-1f88.gif"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Photosystem I (left) and rhodopsin (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/66/66-CartenoidOxygenase-1jb0-1f88.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Carotene and Retinal in Action</h4>
+<div>You can see carotenoids and their products at work in several structures in the PDB. Many molecules of beta-carotene may be found in the large photosystems used to capture light in photosynthesis. The example shown on the left is photosystem I from a cyanobacterium, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1jb0" target="_blank">1jb0 <i class="fa fa-external-link"> </i></a></span>. Several beta-carotene molecules can be seen around the edge, shown here in orange. Retinal is half the size of beta-carotene, and may be found in light-sensing proteins such as rhodopsin, shown here on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f88" target="_blank">1f88 <i class="fa fa-external-link"> </i></a></span>. The retinal, shown here in purple, is buried deep inside the protein, attached to a lysine amino acid.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/66/2biw-rasmol.gif"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2biw" target="_blank">2biw <i class="fa fa-external-link"> </i></a></span> is the first structure of a carotenoid oxygenase, revealing the mechanistic details of this important class of enzymes. The picture shown here is a close-up of the active site. The carotenoid, shown in orange, is held close to an iron atom, in pink. Two water molecules, shown here with red spheres, are thought to be positioned approximately where the oxygen will be bound when the cleavage reaction is performed. Notice that the iron atom is gripped by four perfectly-positioned histidine amino acids. <br/><br/> This picture was created using RasMol. You can create similar illustrations by clicking on the accession codes here and picking one of the options for 3D viewing. When you go to look at this structure, notice that the PDB file contains four separate molecules of the enzyme. You will probably want to look at just one of the chains.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/biology-of-plants">Biology of Plants</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>G. Giuliano, S. Al-Babili and J. von Lintig (2003) Carotenoid oxygenases: cleave it or leaveit. Trends in Plant Science 8, 145-149.</li>
+<li>G. E. Bartley and P. A. Scolnik (1995) Plant carotenoids: pigments for photoprotection, visual attraction, and human health. The Plant Cell 7, 1027-1038.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>June 2005, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2005_6">http://doi.org/10.2210/rcsb_pdb/mom_2005_6</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

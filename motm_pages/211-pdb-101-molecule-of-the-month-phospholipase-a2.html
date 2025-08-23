@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Phospholipase A2</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Phospholipase A2" property="og:title"/>
+<meta content="Phospholipase A2 breaks membrane lipids, forming molecules that contribute to inflammation and pain signaling." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/239" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Phospholipase A2" name="twitter:title"/>
+<meta content="Phospholipase A2 breaks membrane lipids, forming molecules that contribute to inflammation and pain signaling." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2.jpg" name="twitter:image"/>
+<meta content="Phospholipase A2 breaks membrane lipids, forming molecules that contribute to inflammation and pain signaling." name="description"/>
+<meta content="Phospholipase A2,inflammation,atherosclerosis,Crohn’s disease,1bp2,1cjy,1pob,1poc" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 239
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 239 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Phospholipase A2</h1>
+<p><i>Phospholipase A2 breaks membrane lipids, forming molecules that contribute to inflammation and pain signaling.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Pancreatic phospholipase A2, with calcium in green and cysteine sulfur atoms in yellow." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Pancreatic phospholipase A2, with calcium in green and cysteine sulfur atoms in yellow.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Over 100 years ago, scientists discovered that an enzyme in snake venom breaks the lipid molecules in cellular membranes. Since then, scientists have discovered similar enzymes in many other places. Some types of phospholipase A2 are secreted, such as the phospholipases made by the pancreas for use in digestion. Others are made inside cells, where they help with creation of signaling molecules. All of them share a similar function of chopping off one of the tails of phospholipids.</div>
+<h4>Small and Steady</h4>
+<div>Snake venom phospholipases and pancreatic phospholipases are small enzymes that can withstand the unfriendly environment when they are secreted (or injected) outside of cells. They are glued together by a collection of disulfide linkages that stabilize the folded structure. The one shown here, from cow pancreas (PDB entry <a href="https://www.rcsb.org/structure/1bp2" target="_blank">1bp2</a>), has seven crosslinks. The active site is a pocket on one side of the protein, with a calcium ion that assists with the cleavage reaction.</div>
+<h4>Inflammatory Response</h4>
+<div>Some of the lipid tails that are released by phospholipase A2 are used to build signaling molecules involved in inflammation and pain. Because of this action, disorders in phospholipase action can contribute to important diseases such as atherosclerosis and Crohn’s disease. The research community is currently using the structures of phospholipases to discover new drugs to fight these diseases by blocking the action of the enzyme.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Pancreatic and cytosolic phospholipase A2. A membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2_1cjy.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Pancreatic and cytosolic phospholipase A2. A membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1bp2_1cjy.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Inside and Out</h4>
+<div>Many different forms of phospholipase A2 are made for different functions. Secreted phospholipase A2 is small, whereas the cytoplasmic enzymes are larger, with separate domains that are involved with interaction with membranes and catalyzing the cleavage reaction (shown here from PDB entry <a href="https://www.rcsb.org/structure/1cjy" target="_blank">1cjy</a>). These enzymes all have regions on their surface that interact with the face of a membrane, allowing the enzyme to extract lipids for cleavage.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Venom Phospholipase A2</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/239/239-Phospholipase_A2-1pob_1poc_Jmol.jpg"/></div>
+<p>Two venom phospholipases are shown here, one from bee venom (PDB entry <a href="https://www.rcsb.org/structure/1poc" target="_blank">1poc</a>) and one from cobra venom (<a href="https://www.rcsb.org/structure/1pob" target="_blank">1pob</a>). The structures of these two enzymes are quite different, but they share a very similar collection of active site amino acids, including a histidine that attacks the lipid bond that is cleaved and an aspartate that coordinates the calcium ion. These structures have an analog of the phospholipid bound in the active site, showing how everything lines up to perform the reaction in these two different enzymes. To explore these structures in more detail, click on the image for an interactive Jmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Some forms of phospholipase A2 associate into larger assemblies, although it is not known if these have a biological function. Take a look at entry <a href="https://www.rcsb.org/structure/1psh" target="_blank">1psh</a> to see a trimeric form of cobra toxin.</li>
+<li>Structures of many types of phospholipase are available in the PDB archive, including some with trial inhibitors. Try searching for “Phospholipase A2” in the <a href="https://www.rcsb.org">main PDB site.</a></li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/toxins-and-poisons">Toxins and Poisons</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Dennis, E.A., Cao, J., Hsu, Y.-H., Magrioti, V., Kokotos, G. (2011) Phospholipase A2 enzymes: physical structure, biological function, disease implication, chemical inhibition, and therapeutic intervention. Chem. Rev. 111: 6130-6185.</li>
+<li>1c1j: Zhang, H.-l., Zhang, Y.-Q., Song, S.-Y., Zhou, Y., Lin, Z.-J. (1999) Structure of Cadmium-substituted Phospholipase A2 from Agkistrodon halys Pallas at 2.8 Angstroms Resolution. Protein Pept. Lett. 6: 185-193.</li>
+<li>1pob, 1poc: Scott, D.L., Otwinowski, Z., Gelb, M.H., Sigler, P.B. (1990) Crystal structure of bee-venom phospholipase A2 in a complex with a transition-state analogue. Science 250: 1563-1566.</li>
+<li>1bp2: Dijkstra, B.W., Kalk, K.H., Hol, W.G., Drenth, J. (1981) Structure of bovine pancreatic phospholipase A2 at 1.7A resolution. J. Mol. Biol. 147: 97-123.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>November 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_11">http://doi.org/10.2210/rcsb_pdb/mom_2019_11</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

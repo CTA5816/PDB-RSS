@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: AMPA Receptor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: AMPA Receptor" property="og:title"/>
+<meta content="Receptors for the neurotransmitter glutamate in our brain come in several shapes and sizes." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-3kg2_composite.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/235" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: AMPA Receptor" name="twitter:title"/>
+<meta content="Receptors for the neurotransmitter glutamate in our brain come in several shapes and sizes." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-3kg2_composite.jpg" name="twitter:image"/>
+<meta content="Receptors for the neurotransmitter glutamate in our brain come in several shapes and sizes." name="description"/>
+<meta content="ionotropic glutamate receptor,neurotransmitter,brain,nerve,synapse,AMPA,NMDA,3kg2,5weo,4pe5,5kuf,4u5c" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 235
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 235 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: AMPA Receptor</h1>
+<p><i>Receptors for the neurotransmitter glutamate in our brain come in several shapes and sizes.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="AMPA receptor, with an inhibitor (red) bound to the glutamate-binding domains. The location of the cell membrane is shown schematically in gray." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-3kg2_composite.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>AMPA receptor, with an inhibitor (red) bound to the glutamate-binding domains. The location of the cell membrane is shown schematically in gray.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-3kg2_composite.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Nerve cells in our brain communicate with one another using small neurotransmitter molecules. These come in many shapes and sizes, such as <a href="https://pdb101.rcsb.org/motm/71">acetylcholine</a>, <a href="https://pdb101.rcsb.org/motm/164">serotonin</a> and <a href="https://pdb101.rcsb.org/motm/217">endorphins</a>, allowing the nervous system to shape the way neurons talk to one another. The amino acid glutamate is one of the most common neurotransmitters used to carry excitatory signals. It is released by neurons into synapses, where they stimulate neighboring neurons by binding to glutamate-specific receptors (an illustration of an excitatory synapse is included at PDB-101 in the gallery of <a href="http://pdb101.rcsb.org/sci-art/goodsell-gallery/excitatory-and-inhibitory-synapses"> Molecular Landscapes).</a></div>
+<h4>AMPA Action</h4>
+<div>AMPA receptors (shown here from PDB entry <a href="https://www.rcsb.org/structure/3kg2" target="_blank">3kg2</a>) are the most common excitatory glutamate receptors in the brain. They have modular structures, and each part has a specific task. The portion at the top recognizes and binds to glutamate (and similar neurotransmitters), and the portion at the bottom forms an ion channel through the membrane. When glutamate binds, it causes a change in shape that tugs on the channel, causing it to open and allow ions to flood through the membrane. There is also an additional tail at the bottom of the receptor, which is not seen in this structure because it is so flexible. It interacts with scaffolding proteins that organize the structure of the neuronal synapse.</div>
+<h4>Learning and Memory</h4>
+<div>Communication between neurons is highly complex, to capture the many subtle shades of thought and memory. At the simplest level, AMPA receptors each have four chains, each with a separate binding site for glutamate, so the response isn't simply on or off. Also, AMPA receptors close very quickly after receiving a message, becoming desensitized for a time against additional messages. Layers of complexity are added to these simple actions to store memories, by adding more receptors to a synapse or taking them away, or by modifying amino acids in individual receptors to tune their action.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Three types of ionotropic glutamate receptors. An accessory protein is shown in green bound to the ion channel portion of the AMPA receptor." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-iGluR.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Three types of ionotropic glutamate receptors. An accessory protein is shown in green bound to the ion channel portion of the AMPA receptor.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-iGluR.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Layers of Complexity</h4>
+<div>To make things even more complex, our brains have additional options for tailoring glutamate signaling. Several accessory proteins bind to AMPA receptors, such as the TARP protein shown here from PDB entry <a href="https://www.rcsb.org/structure/5weo" target="_blank">5weo</a>. Each receptor can also be composed of different combinations of several similar forms of the protein. Additionally, there are two other classes of glutamate receptors with slightly different actions, known as NMDA receptors (shown here from PDB entry <a href="https://www.rcsb.org/structure/4pe5" target="_blank">4pe5</a>) and kainate receptors (PDB entry <a href="https://www.rcsb.org/structure/5kuf" target="_blank">5kuf</a>), both named after inhibitor molecules that were crucial for their discovery. Together, they help build up the rich environment of signaling that controls our inner world of thought.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>AMPA Receptor</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/235/235-AMPA_Receptor-4u5c_jmol.jpg"/></div>
+<p>This structure (PDB entry <a href="https://www.rcsb.org/structure/4u5c" target="_blank">4u5c</a>) shows how things can go wrong. Some cone snails make a small protein toxin that they use to paralyze their prey. It binds in the middle of the glutamate-binding portion of the receptor, corrupting its action. To explore this structure in more detail, click on the image for an interactive JSmol. As you look at this structure, notice that there is a mismatch of symmetry between the different parts: the ion channel forms a typical four-fold structure, but the glutamate-binding portions are two side-by-side dimers.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Ionotropic glutamate receptors are quite flexible--as you look at these structures, notice the many different arrangements of the transmembrane domains relative to the glutamate-binding domains.</li>
+<li>These structures are all missing portions of the receptors, which are not observed because they are so flexible. You can use the Protein Feature View to determine which portions of the protein chain are included in the structure entries.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/drugs-and-the-brain">Drugs and the Brain</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/cellular-signaling">Cellular Signaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>Chen, S., Gouaux, E. (2019) Structure and mechanism of AMPA receptor -- auxiliary protein complexes. Current Opinion in Structural Biology 54: 104-111.</li>
+<li>Zhu, S., Gouaux, E. (2017) Structure and symmetry inform gating principles of ionotropic glutamate receptors. Neuropharmacology 112: 11-15.</li>
+<li>5weo: Twomey, E.C., Yelshanskaya, M.V., Grassucci, R.A., Frank, J., Sobolevsky, A.I. (2017) Channel opening and gating mechanism in AMPA-subtype glutamate receptors. Nature 549: 60-65.</li>
+<li>5kuf: Meyerson, J.R., Chittori, S., Merk, A., Rao, P., Han, T.H., Serpe, M., Mayer, M.L., Subramaniam, S. (2016) Structural basis of kainate subtype glutamate receptor desensitization. Nature 537: 567-571.</li>
+<li>4u5c: Chen, L., Durr, K.L., Gouaux, E. (2014) X-ray structures of AMPA receptor-cone snail toxin complexes illuminate activation mechanism. Science 345: 1021-1026.</li>
+<li>4pe5: Karakas, E., Furukawa, H. (2014) Crystal structure of a heterotetrameric NMDA receptor ion channel. Science 344: 992-997.</li>
+<li>Yokoi, N., Fukata, M., Fukata, Y. (2012) Synaptic plasticity regulated by protein-protein interactions and posttranslational modifications. International Review of Cell and Molecular Biology 297:1-43.</li>
+<li>3kg2: Sobolevsky, A.I., Rosconi, M.P., Gouaux, E. (2009) X-ray structure, symmetry and mechanism of an AMPA-subtype glutamate receptor. Nature 462: 745-756.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2019, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2019_7">http://doi.org/10.2210/rcsb_pdb/mom_2019_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

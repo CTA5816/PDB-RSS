@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Poly(A) Polymerase</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Poly(A) Polymerase" property="og:title"/>
+<meta content="Poly(A) polymerase adds a long tail of adenine nucleotides at the end of messenger RNA" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/106/106_1fa0.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/106" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Poly(A) Polymerase" name="twitter:title"/>
+<meta content="Poly(A) polymerase adds a long tail of adenine nucleotides at the end of messenger RNA" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/106/106_1fa0.jpg" name="twitter:image"/>
+<meta content="Poly(A) polymerase adds a long tail of adenine nucleotides at the end of messenger RNA" name="description"/>
+<meta content="mRNA processing,poly(A) RNA binding,polynucleotide adenylyltransferase activity,RNA polyadenylation,1f5a,1fa0,1cvj,2q66" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 106
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 106 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Poly(A) Polymerase</h1>
+<p><i>Poly(A) polymerase adds a long tail of adenine nucleotides at the end of messenger RNA</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Poly(A) polymerase with ATP (red) in the active site." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/106/106_1fa0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Poly(A) polymerase with ATP (red) in the active site.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/106/106-Poly-A-Polymerase-1fa0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Most of the RNA found in our cells is built using our DNA genome as a template. In special cases, however, our cells also build RNA strands without a template. For instance, the end of (almost) every messenger RNA strand is composed of a long string of repeated adenosine nucleotides. These long poly(A) tails are not encoded in the genome. Instead, they are added after RNA polymerase finishes its normal process of transcription. After RNA polymerase releases the RNA strand, other enzymes add the finishing touches, editing out introns, adding a cap to the front end, and building the long poly(A) tail at the other end.</div>
+<h4>The Tail End</h4>
+<div>A complex of over a dozen enzymes oversees the creation of a poly(A) tail on messenger RNA molecules. Several special sequences at the end of the RNA recruit this complex to the proper place. Then the RNA strand is cleaved, and about 250 adenosine nucleotides are added to the new end. The enzyme poly(A) polymerase, in PDB entries <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1f5a" target="_blank">1f5a <i class="fa fa-external-link"> </i></a></span> (cow) and <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1fa0" target="_blank">1fa0 <i class="fa fa-external-link"> </i></a></span> (yeast, shown here), is responsible for the creation of the poly(A) tail. With the help of two magnesium ions, it binds to the messenger RNA and adds adenosine nucleotides one at a time to the end of the strand.</div>
+<h4>Heads and Tails</h4>
+<div>The poly(A) tail plays several important roles in the function of messenger RNA molecules. With the help of poly(A)-binding protein (shown on the next page), it protects the end of the RNA strand, shielding it from RNA-cutting nucleases. It also assists with the transport of the messenger RNA out of the nucleus through nuclear pores. Surprisingly, the poly(A) tail, which is at the end the messenger RNA, also stimulates the start of protein synthesis by helping to recruit translation initiation factors at the front end of the RNA. Some researchers actually think that poly(A)-binding protein links the RNA strand into a big circle. This could have a very useful consequence: since the beginning of the messenger RNA is so close to the end, ribosomes that have just finished making a protein could jump immediately to the beginning and start again.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two domains from poly(A)-binding protein bound to a short piece of RNA (orange)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/106/106_1cvj.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two domains from poly(A)-binding protein bound to a short piece of RNA (orange).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/106/106-Poly-A-Polymerase-1cvj.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Poly(A)-binding Protein</h4>
+<div>Poly(A)-binding proteins bind to poly(A) tails as soon as they are synthesized in the nucleus, and then they chaperone the messenger RNA throughout its life. The protein is composed of four similar domains, which bind to a stretch of about 27 RNA nucleotides. The structure shown here, from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1cvj" target="_blank">1cvj <i class="fa fa-external-link"> </i></a></span>, contains only the first two domains and a small piece of RNA (in orange).</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Poly(A) Polymerase (PDB entry 2q66) </h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/106/106-PolyA_Polymerase-106_2q66_jmol.jpg"/></div>
+<p>Poly(A) polymerase is highly specific for ATP, but it will use this ATP to build a poly(A) tail on nearly any RNA strand. PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2q66" target="_blank">2q66 <i class="fa fa-external-link"> </i></a></span> captures the enzyme in the middle of building a tail. The enzyme is clamped around a short stretch of poly(A) RNA, shown in yellow. An ATP molecule is shown in red, positioned perfectly by a magnesium ion, shown in green. The enzyme in this structure, however, has been mutated so that it cannot perform the reaction. Position 154 is normally an aspartate that coordinates another magnesium ion, which performs the reaction. In this structure, the aspartate has been changed to an alanine, shown in magenta, so the catalytic magnesium is missing. <br/><br/> You can click on the image for an interactive Jmol view. To look more closely at the structural basis of adenine recognition in the active site, take a look at the page at <a class="static" href="http://www.proteopedia.org/wiki/index.php/Poly%28A%29_Polymerase" target="_blank">Proteopedia</a>.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Poly(A) polymerase is highly flexible, opening and closing while it performs its job. For instance, compare the open forms on the first page of this Molecule of the Month with the closed form on this page. Why is this flexibility important, and what structural features of the protein allow it to be flexible? </li>
+<li>Do you see any structural or functional similarities between this template-independent polymerase and polymerases that use templates, such as DNA polymerase and RNA polymerase? </li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>G. M. Gilmartin (2005) Eukaryotic mRNA 3' processing: a common means to different ends. Genes and Development 19, 2517-2521. </li>
+<li>M. Edmonds (2002) A history of poly A sequences: from formation to factors to function. Progress in Nucleic Acid Research and Molecular Biology 71, 285-389. </li>
+<li>J. Zhao, L. Hyman and C. Moore (1999) Formation of mRNA 3' ends in eukaryotes: mechanism, regulation, and interrelationships with other steps in mRNA synthesis. Microbiology and Molecular Biology Reviews 63, 405-445. </li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>October 2008, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2008_10">http://doi.org/10.2210/rcsb_pdb/mom_2008_10</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

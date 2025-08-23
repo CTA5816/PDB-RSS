@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Flagellar Motor</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Flagellar Motor" property="og:title"/>
+<meta content="Bidirectional motors power the swimming of many bacterial cells." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/300/cw.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/300" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Flagellar Motor" name="twitter:title"/>
+<meta content="Bidirectional motors power the swimming of many bacterial cells." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/300/cw.jpg" name="twitter:image"/>
+<meta content="Bidirectional motors power the swimming of many bacterial cells." name="description"/>
+<meta content="flagellar motor,rotary motor,CheY,chemosensing,bacterial motility,8ucs,8upl,8uox,7cgo,6ykm,2zvy,1f4v" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 300
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 300 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Flagellar Motor</h1>
+<p><i>Bidirectional motors power the swimming of many bacterial cells.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Flagellar motor of Salmonella bacteria. The two membranes and peptidoglycan are shown schematically in gray and green." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/300/cw.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Flagellar motor of <i>Salmonella</i> bacteria. The two membranes and peptidoglycan are shown schematically in gray and green.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/300/cw.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>In this 300th installment of the Molecule of the Month, we’ll explore newly revealed atomic details of one of the wonders of the biomolecular world. Flagellar motors have fascinated biologists for decades. They are huge molecular assemblies composed of about 20 types of proteins, which together form rotary motors. These motors are strong enough to turn long corkscrew-shaped flagella many times the length of the cell. The <i>Salmonella</i> motor shown here turns at a speed of about 18,000 revolutions per minute. Other bacteria have motors that spin even faster.</div>
+<h4>Changing Course</h4>
+<div>Remarkably, bacteria steer their swimming direction by reversing the rotation of their flagellar motors. <i>Salmonella</i> and <i>Escherichia coli</i> bacteria have about ten flagella scattered around the surface of the cell. When the motor turns counterclockwise, all of the flagella bundle together and power the cell forward in one direction. If, however, the cell decides that it’s not going the right direction, it switches the motor to the clockwise direction. This causes all the flagella to separate and the cell tumbles randomly in place. Then it switches the motor back to the counterclockwise direction, the flagella bundle up again, and the cell swims in a new, hopefully better, direction.</div>
+<h4>Moving Parts</h4>
+<div>Flagellar motors have many moving parts that have been studied separately using X-ray crystallography and cryo-electron microscopy. This image shows the clockwise form of the motor, combining several PDB entries (<a href="https://www.rcsb.org/structure/8ucs" target="_blank">8ucs</a>, <a href="https://www.rcsb.org/structure/8upl" target="_blank">8upl</a>, <a href="https://www.rcsb.org/structure/7cgo" target="_blank">7cgo</a>, <a href="https://www.rcsb.org/structure/2zvy" target="_blank">2zvy</a>, <a href="https://www.rcsb.org/structure/1f4v" target="_blank">1f4v</a>). At the top, the hook connects the motor to the long flagellum. The LP ring surrounds the central axle and reduces friction with the outer membrane and peptidoglycan. Power is generated by about 11 rotary motors, termed <i>stators.</i> They are themselves individual rotary motors driven by flow of hydrogen ions across the inner membrane. These small motors together turn the large C-ring, which turns the central axle and the flagellum. CheY proteins determine the direction of the rotation.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="The direction of rotation is determined by the position of the stator around the C-ring." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/300/CRing_Figure.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The direction of rotation is determined by the position of the stator around the C-ring.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/300/CRing_Figure.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Switching Direction</h4>
+<div>The motor switches rotation with a direct approach that is quite similar to machines in our macroscale world. The C-ring acts like a large gear and the stators act like smaller gears. In the counterclockwise state, shown here at the top from PDB ID <a href="https://www.rcsb.org/structure/8uox" target="_blank">8uox</a> and <a href="https://www.rcsb.org/structure/8ucs" target="_blank">8ucs</a>, the stators are positioned outside the C-ring, and when the gears mesh the C-ring is driven in the opposite direction from the stator rotation. When CheY binds, the shape of the C-ring changes slightly and the stator binds on the inside of the ring (PDB ID <a href="https://www.rcsb.org/structure/8upl" target="_blank">8upl</a>, <a href="https://www.rcsb.org/structure/8ucs" target="_blank">8ucs</a>, <a href="https://www.rcsb.org/structure/1f4v" target="_blank">1f4v</a>). In that position, the C-ring is driven in the same direction as the rotation of the stator.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Stator MotAB</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/300/jsmol-jmol.jpg"/></div>
+<p>Atomic structures of the stator confirmed the hypothesis that it is a small rotary motor. It is composed of a ring of five MotA subunits that rotate around a pair of MotB subunits, as seen here in PDB ID <a href="https://www.rcsb.org/structure/6ykm" target="_blank">6ykm</a>. A key aspartate amino acid on MotB (D22 in this structure and D32 in <i>E. coli</i>) is thought to manage the hydrogen ions that power the rotation. MotB also includes an additional domain not included in this structure. It reaches up and binds to the peptidoglycan layer in the bacterial cell wall, fixing the stator in place within the overall flagellar motor assembly. To explore this structure in more detail, click on the JSmol tab for an interactive view.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>To see the flagellar motor in the context of the whole cell, see the illustration of a portion of an <a href="https://pdb101.rcsb.org/sci-art/goodsell-gallery/escherichia-coli-bacterium"><i>Escherichia coli</i> cell</a>.</li>
+<li>Some flagellar motors are driven by flow of sodium ions rather than hydrogen ions. To see the stator of one of these motors, take a look at PDB ID <a href="https://www.rcsb.org/structure/8brd" target="_blank">8brd</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>8ucs, 8uox, 8upl: Johnson, S., Deme, J.C., Furlong, E.J., Caesar, J.J.E., Chevance, F.F.V., Hughes, K.T., Lea, S.M. (2024) Structural basis of directional switching by the bacterial flagellum. Nat Microbiol 9: 1282-1292</li>
+<li>Johnson, S., Furlong, E.J., Deme, J.C., Nord, A.L., Caesar, J.J.E., Chevance, F.F.V., Berry, R.M., Hughes, K.T., Lea, S.M. (2021) Molecular structure of the intact bacterial flagellar basal body. Nat Microbiol 6: 712-721</li>
+<li>7cgo: Tan, J., Zhang, X., Wang, X., Xu, C., Chang, S., Wu, H., Wang, T., Liang, H., Gao, H., Zhou, Y., Zhu, Y. (2021) Structural basis of assembly and torque transmission of the bacterial flagellar motor. Cell 184: 2665-2679.e19</li>
+<li>Deme, J.C., Johnson, S., Vickery, O., Aron, A., Monkhouse, H., Griffiths, T., James, R.H., Berks, B.C., Coulton, J.W., Stansfeld, P.J., Lea, S.M. (2020) Structures of the stator complex that drives rotation of the bacterial flagellum. Nat Microbiol 5: 1553-1564</li>
+<li>6ykm: Santiveri, M., Roa-Eguiara, A., Kuhne, C., Wadhwa, N., Hu, H., Berg, H.C., Erhardt, M., Taylor, N.M.I. (2020) Structure and function of stator units of the bacterial flagellar motor. Cell 183: 244-257.e16</li>
+<li>2zvy: Kojima, S., Imada, K., Sakuma, M., Sudo, Y., Kojima, C., Minamino, T., Homma, M., Namba, K. (2009) Stator assembly and activation mechanism of the flagellar motor by the periplasmic region of MotB. Mol Microbiol 73: 710-718</li>
+<li>Reid, S.W., Leake, M.C., Chandler, J.H., Lo, C.H., Armitage, J.P., Berry, R.M. (2006) The maximum number of torque-generating units in the flagellar motor of Escherichia coli is at least 11. Proc Natl Acad Sci USA 103: 8066-8071</li>
+<li>1f4v: Lee, S.Y., Cho, H.S., Pelton, J.G., Yan, D., Henderson, R.K., King, D.S., Huang, L., Kustu, S., Berry, E.A., Wemmer, D.E. (2001) Crystal structure of an activated response regulator bound to its target. Nat Struct Biol 8: 52-56</li>
+<li>DeRosier, D.J. (1998) The turn of the screw: the bacterial flagellar motor. Cell 93: 17-20.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>December 2024, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2024_12">http://doi.org/10.2210/rcsb_pdb/mom_2024_12</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

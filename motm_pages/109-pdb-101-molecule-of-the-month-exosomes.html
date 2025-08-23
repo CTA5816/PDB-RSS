@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Exosomes</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Exosomes" property="og:title"/>
+<meta content="Exosomes destroy messenger RNA molecules after they have finished their jobs" property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/86/86_2nn6.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/86" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Exosomes" name="twitter:title"/>
+<meta content="Exosomes destroy messenger RNA molecules after they have finished their jobs" name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/86/86_2nn6.jpg" name="twitter:image"/>
+<meta content="Exosomes destroy messenger RNA molecules after they have finished their jobs" name="description"/>
+<meta content="3'-5'-exoribonuclease activity,mRNA catabolic process,nuclear exosome,RNA processing,2nn6,2a1s,1st0,2c37" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 86
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 86 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Exosomes</h1>
+<p><i>Exosomes destroy messenger RNA molecules after they have finished their jobs</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Human RNA exosome." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/86/86_2nn6.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human RNA exosome.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/86/86-Exosomes-2nn6.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our genetic information is stored safely inside the nucleus of each cell. However, most of the action in a typical cell occurs outside the nucleus: proteins are built in the cytoplasm, energy is produced in the mitochondria, and interactions with the environment occur at the cell surface. So, the nucleus needs a way to communicate with the rest of the cell. RNA molecules perform this job. They are the messengers that deliver genetic information from the nucleus to places where it is needed for synthesis and control.</div>
+<h4>Special Delivery</h4>
+<div>In most cases, RNA molecules are disposable messages. Information is copied from DNA to RNA in the nucleus, the message is delivered to the proper location, and then the RNA is destroyed with its component nucleotides recycled for the next message. In bacteria, a typical messenger RNA may last only a few minutes, but some of our more useful messages may last hours. Of course, this process must be carefully controlled--you don't want to destroy RNA molecules that are still useful. So an elaborate collection of RNA destruction machinery sifts through the RNA molecules, picks the ones that are obsolete, and systematically breaks them apart.</div>
+<h4>Total Destruction</h4>
+<div>The exosome, like the human one shown here from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2nn6" target="_blank">2nn6 <i class="fa fa-external-link"> </i></a></span>, is one of the molecules that dismantles obsolete RNA. The central machinery of exosome is shaped like a barrel, with its RNA cleavage machinery sheltered in a groove inside. This barrel is composed of six different subunits, shown in blue and purple here. The three additional subunits shown in green help to ensure that only the proper RNA molecules are fed into the hungry mouth of the complex. The use of a barrel-shaped molecule to control destruction might sound familiar to you—a similar shape is used in the <a class="static" href="http://pdb101.rcsb.org/motm/60">proteasomes</a> that dismantle obsolete proteins.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Nuclease domain of poly(A)-specific ribonuclease (left) and scavenger decapping enzyme DcpS (right)." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/86/86_2a1s-1st0.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Nuclease domain of poly(A)-specific ribonuclease (left) and scavenger decapping enzyme DcpS (right).</i></div><a href="https://cdn.rcsb.org/pdb101/motm/86/86-Exosomes-2a1s-1st0.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Preparing for Destruction</h4>
+<div>Before the exosome gets to work on a messenger RNA, several other enzymes attack the strand and prepare it for complete breakdown. The first step is typically to remove the long string of adenine nucleotides that protect the end of most messenger RNA molecules. These are removed by special deadenylation ribonucleases, such as the one shown on the left from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2a1s" target="_blank">2a1s <i class="fa fa-external-link"> </i></a></span>. Messenger RNA molecules also have a protective cap at the other end, composed of a guanine nucleotide attached backwards. This is removed by one of several decapping enzymes, like the one shown on the right from PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1st0" target="_blank">1st0 <i class="fa fa-external-link"> </i></a></span>.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/86/86_2c37-rasmol.jpg"/></div>
+<div>PDB entry <span class="rcsb_id_tag" title=""><a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2c37" target="_blank">2c37 <i class="fa fa-external-link"> </i></a></span> shows an exosome from an archaebacterial cell. Composed of a ring of six subunits of two similar types, it is simpler than the ones in our cells. This structure includes two small pieces of RNA in two of the active sites. Notice how the active sites face into the central channel. When you go to look at this structure yourself, be sure to get the file for the biological assembly, because the full PDB file includes four of these big rings! <br/><br/> This illustration was created with RasMol. You can create similar pictures by clicking on the accession codes here and picking one of the options for 3D viewing.</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/enzymes">Enzymes</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/protein-synthesis">Protein Synthesis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>K. Buttner, K. Wenig and K.-P. Hopfner (2006) The exosome: a macromolecular cage for controlled RNA degradation. Molecular Microbiology 61, 1372-1379.</li>
+<li>E. Lorentzen and E. Conti (2006) The exosome and the proteosome: nano-compartments for degradation. Cell 125, 651-654.</li>
+<li>M. J. Moore (2005) From birth to death: the complex lives of eukaryotic mRNAs. Science 309, 1514-1518.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>February 2007, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2007_2">http://doi.org/10.2210/rcsb_pdb/mom_2007_2</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Hyaluronidases</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Hyaluronidases" property="og:title"/>
+<meta content="Long carbohydrate chains are used to make our bodies flexible and resilient." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/291/hyal.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/291" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Hyaluronidases" name="twitter:title"/>
+<meta content="Long carbohydrate chains are used to make our bodies flexible and resilient." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/291/hyal.jpg" name="twitter:image"/>
+<meta content="Long carbohydrate chains are used to make our bodies flexible and resilient." name="description"/>
+<meta content="hyaluronate,hyaluronic acid,lysosome,PH-20,bee,venom,connective tissue,acne,fertilization,sperm,2pe4,8fnx,8fyg,1png" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 291
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 291 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Hyaluronidases</h1>
+<p><i>Long carbohydrate chains are used to make our bodies flexible and resilient.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="Human hyaluronidases. The catalytic glutamate amino acid is shown in brighter turquoise and two sites of glycosylation are shown in green in hyaluronidase-1. A short four-sugar fragment of hyaluronan is shown based on a similar enzyme from bee venom (see below). This fragment is the final product of the cleavage reaction. Hyaluronidase-2 is shown from a computed structure model." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/291/hyal.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Human hyaluronidases. The catalytic glutamate amino acid is shown in brighter turquoise and two sites of glycosylation are shown in green in hyaluronidase-1. A short four-sugar fragment of hyaluronan is shown based on a similar enzyme from bee venom (see below). This fragment is the final product of the cleavage reaction. Hyaluronidase-2 is shown from a computed structure model.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/291/hyal.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Our bodies are built of trillions of cells, all working together to perform the many biological tasks of daily life. These cells are not connected rigidly like bricks and mortar. Instead, a tough but flexible layer of connective tissue ties them together, allowing our bodies the freedom to move and breathe, and repair themselves if damaged. Hyaluronan is a key component of this connective tissue. It is a long carbohydrate chain composed of two simple types of sugars. Like many carbohydrates, it can sop up a thousand times its own weight of water to form gluey, flexible aggregates. In connective tissue these are combined in different proportions with more rigid elements, like <a href="https://pdb101.rcsb.org/motm/4">collagen</a>, to create everything from resilient sheets that bind cells together to slippery liquids that lubricate joints.</div>
+<h4>Clipping Carbohydrates</h4>
+<div>Our cells make several types of enzymes that break down hyaluronan chains when they are no longer needed. Hyaluronidase-2 (shown from a predicted computational model, <a href="https://www.rcsb.org/structure/AF_AFQ12891F1" target="_blank">AF_AFQ12891F1</a>) begins by breaking the long chains into manageable pieces. Hyaluronidase-1 (PDB ID <a href="https://www.rcsb.org/structure/2pe4" target="_blank">2pe4</a>) then breaks these down into small fragments with four sugars. Finally, two other enzymes break these fragments into individual sugars.</div>
+<h4>It Pays to Recycle</h4>
+<div>Amazingly, about a third of our hyaluronan chains are recycled every day as they respond to the changing needs of our bodies. They play many roles in our health. They assist with the developing interactions between dividing cells as embryos grow. They help wounds heal and help motile cells push their way through the body. As shown below, they also assist sperm cells in fertilizing an egg. Unfortunately, they also have a darker side, since they may be used by cancer cells to assist with metastasizing from a tumor to other parts of the body.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Two related bacterial hyaluronate lyases. The catalytic amino acids are shown in red, and differences in the amino acid sequence are shown in blue on HylA. One particular amino acid, shown in magenta, has been found to control the different types of hyaluronan fragments produced by the enzymes." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/291/8fnx_8fyg.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Two related bacterial hyaluronate lyases. The catalytic amino acids are shown in red, and differences in the amino acid sequence are shown in blue on HylA. One particular amino acid, shown in magenta, has been found to control the different types of hyaluronan fragments produced by the enzymes.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/291/8fnx_8fyg.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Inflammatory Response</h4>
+<div>Bacteria contain slightly different enzymes that degrade hyaluronan, termed hyaluronate lyases. The immune system is always on the lookout for stray hyaluronan fragments, since they could be a sign of bacterial infection. For example, the enzymes shown here are from the bacterium <i>Cutibacterium acnes,</i> which is important in the formation of acne. They produce fragments of hyaluronan and the immune system mounts an inflammatory response against them. This response is very selective, however. Researchers have found that some strains of these bacteria cause acne, and others don’t. The difference lies in their slightly different hyaluronidases, HylA and HylB, which cleave hyaluronan in different ways. HylA (PDB ID <a href="https://www.rcsb.org/structure/8fyg" target="_blank">8fyg</a>) chops hyaluronan into large fragments that promote inflammation and cause acne, but HyaB (PDB ID <a href="https://www.rcsb.org/structure/8fnx" target="_blank">8fnx</a>) chops it into tiny two-sugar fragments that aren’t sensed as strongly by the immune system.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Hyaluronidases</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/291/Jmol-jmol.jpg"/></div>
+<p>The venom of many animals, including snakes, spiders, scorpions, and stinging insects, often contains hyaluronidases. The one included here (PDB ID <a href="https://www.rcsb.org/structure/1fcv" target="_blank">1fcv</a>) is from bee venom. Hyaluronidase is not toxic by itself, but in the venom it helps degrade connective tissue around the sting, so the toxic components of the venom can spread. It is very similar to our own hyaluronidases, including hyaluronidase-1 (PDB ID <a href="https://www.rcsb.org/structure/2pe4" target="_blank">2pe4</a>) and PH-20 (computed model <a href="https://www.rcsb.org/structure/AF_AFP38567F1" target="_blank">AF_AFP38567F1</a>). PH-20 is bound to the surface of sperm cells through an attached lipid (not included in the structure). It helps the sperm burrow through the protective coating around egg cells, assisting with the process of fertilization.<br/>Click on the JSmol Tab to explore these structures in more detail.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>Structures of hyaluronan were determined in the 1970’s by fiber diffraction, for example, in PDB ID <a href="https://www.rcsb.org/structure/2hya" target="_blank">2hya</a>.</li>
+<li>Some bacteriophages make unusual hyaluronan-cleaving enzymes. For example, take a look at the tail fiber protein in PDB ID <a href="https://www.rcsb.org/structure/2c3f" target="_blank">2c3f</a>. Leeches also make a different type of hyaluronidase to help them feed, which can be found in <a href="https://www.rcsb.org/structure/7eyo" target="_blank">7eyo</a>.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/you-and-your-health">You and Your Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>8fnx, 8fyg: Hajam, I.A., Katiki, M., McNally, R., Lazaro-Diez, M., Kolar, S., Chatterjee, A., Gonzalez, C., Paulchakrabarti, M., Choudhury, B., Caldera, J.R., Desmond, T., Tsai, C.M., Du, X., Li, H., Murali, R., Liu, G.Y. (2023) Functional divergence of a bacterial enzyme promotes healthy or acneic skin. Nat Commun 14: 8061-8061</li>
+<li>Sindelar, M., Jilkova, J., Kubala, L., Velebny, V., Turkova, K. (2021) Hyaluronidases and hyaluronate lyases: From humans to bacteriophages. Colloids Surf. B Biointerfaces 208:112095</li>
+<li>Garantziotis, S., Savani, R. C. (2019) Hyaluronan biology: A complex balancing act of structure, function, location and context. Matrix Biol. 78-79: 1-10</li>
+<li>2pe4: Chao, K.L., Muthukumar, L., Herzberg, O. (2007) Structure of Human Hyaluronidase-1, a Hyaluronan Hydrolyzing Enzyme Involved in Tumor Growth and Angiogenesis. Biochemistry 46: 6911-6920</li>
+<li>1fcv: Markovic-Housley, Z., Miglierini, G., Soldatova, L., Rizkallah, P.J., Muller, U., Schirmer, T. (2000) Crystal structure of hyaluronidase, a major allergen of bee venom. Structure 8: 1025-1035</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>March 2024, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2024_3">http://doi.org/10.2210/rcsb_pdb/mom_2024_3</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>

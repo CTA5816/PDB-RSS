@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPQ9202NVY"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      //- gtag('config', 'UA-71059016-1');
+      gtag('config', 'G-EPQ9202NVY');
+      
+    </script>
+<title>PDB-101: Molecule of the Month: Pilus Machine</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PDB101: Molecule of the Month: Pilus Machine" property="og:title"/>
+<meta content="A molecular machine with a rotary motor builds a long protein filament involved in bacterial motility and attachment." property="og:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8.jpg" property="og:image"/>
+<meta content="http://pdb101.rcsb.org/motm/211" property="og:url"/>
+<meta content="RCSB: PDB-101" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="PDB101: Molecule of the Month: Pilus Machine" name="twitter:title"/>
+<meta content="A molecular machine with a rotary motor builds a long protein filament involved in bacterial motility and attachment." name="twitter:description"/>
+<meta content="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8.jpg" name="twitter:image"/>
+<meta content="A molecular machine with a rotary motor builds a long protein filament involved in bacterial motility and attachment." name="description"/>
+<meta content="pilin,pilus,type IV pilus,molecular motor,biofilm,bacteria,bacterial motility,3jc8,2hil" name="keywords"/>
+<!-- associate with our Google Analytics-->
+<meta content="A8M31jAX8SUgQYzbnF5r-wgykna2i5Hp4J9fziVD9Sg" name="google-site-verification"/>
+<link href="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/fontawesome/fontawesome-free-6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/javascript/timeline3/css/timeline.css" rel="stylesheet"/>
+<link href="https://pdb101.rcsb.org/css/style.css?v=20171201" rel="stylesheet"/>
+<link href="https://cdn.rcsb.org/jira-feedback/css/jira-fdbck.css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://cdn.rcsb.org/javascript/jquery/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rcsb.org/pdb101/common/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.rcsb.org/javascript/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="https://pdb101.rcsb.org/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="https://pdb101.rcsb.org/js/common.js"></script>
+<script src="https://cdn.rcsb.org/jira-feedback/js/jira-fdbck.min.js"></script>
+</head>
+<body>
+<div class="container" id="main_content">
+<style>
+          #jmolTabs {
+              margin: 20px 0;
+          }
+          
+          .motm-hr {
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+          }
+          
+          .jmolText {
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 14px;
+          }
+          
+          /* over-write bootstrap values */
+          .nav-tabs {
+              background: linear-gradient(to bottom, #fff, #ddd);
+          }
+          
+          .tab-content {
+              border-left: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+              border-bottom-right-radius: 4px;
+              border-bottom-left-radius: 4px;
+              padding: 15px;
+          }
+          .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+              background-color: #fff;
+              color: #333;
+          }
+          
+          .tab-pane {
+              padding-bottom: 10px;
+          }
+          
+          #tabs-1 img {
+              cursor: pointer;
+          }
+          
+          .fa-cloud-download { margin-left:10px; }
+          /* customize div.img-with-caption in style.css */
+          div.img-with-caption {
+              max-width: 50%;
+              margin-top: 10px;
+          }
+          div.float-right { float: right; margin-left: 20px; }
+          div.float-left { float: left; margin-right: 20px; }
+          
+          .link-motm {
+              background-color: #d9ebd294;
+              padding: 10px;
+              border-radius: 4px;
+              border: 1px solid #bcedbd;
+              overflow-wrap: break-word;
+          }
+          div.jmol-image { margin-bottom: 5px; }
+          
+        </style>
+<script>
+          // jmol script
+          var jmolLoaded = false
+          function loadIframe() {
+              if (jmolLoaded == false) {
+                  var src = '/motm/jmol/?id=' + 211
+                  console.log('src=' + src)
+                  $("#iframe").attr('src', src)
+                  jmolLoaded = true
+              }
+          }
+          function clickJmolTab() {
+              $('#jmol-tab').trigger('click')
+          }
+          
+          // jmol script for legacy motms with multiple jmols
+          var jmols = [];
+          function loadIframeById(jmolId) {
+              var jmol = jmols[jmolId - 1]
+              if (jmol.loaded == false) {
+                  var src = '/motm/jmol/?id=' + 211 + '&jmolId=' + jmolId
+                  $("#iframe_" + jmolId).attr('src', src)
+                  jmol.loaded = true
+              }
+          }
+          function clickJmolTab(i) {
+              var j = i + 1
+              $('#jmol-tab-' + j).trigger('click')
+          }
+          
+        </script>
+<div id="sub-navbar">
+<div class="row hidden-print">
+<div class="col-xs-12 col-sm-6 sub-navbar">
+<h4>Molecule of the Month</h4>
+</div>
+<div class="col-xs-12 col-sm-6 text-right sub-navbar">
+<table>
+<tr>
+<td onclick='location.href="/motm/motm-by-category"'>By Category</td>
+<td onclick='location.href="/motm/motm-by-date"'>By Date</td>
+<td onclick='location.href="/motm/motm-by-title"'>By Title</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div data-elastic-include="">
+<h1>Molecule of the Month: Pilus Machine</h1>
+<p><i>A molecular machine with a rotary motor builds a long protein filament involved in bacterial motility and attachment.</i></p>
+<div>
+<div class="img-with-caption float-right">
+<div class="img-with-caption-table"><img alt="The type IVa pilus machine. Portions of the collar embedded in the outer membrane are not included in the coordinate set and are shown schematically here." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>The type IVa pilus machine. Portions of the collar embedded in the outer membrane are not included in the coordinate set and are shown schematically here.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<div>Bacteria live in complex ecologies, filled with competitors, environmental dangers, and defensive hosts. They face these challenges in many ways: by gathering together into tough biofilm communities, by sharing genetic information encoding useful proteins, and by picking up and moving when things look better elsewhere. Pili play an important role in all of these responses. Pili are long, thin protein filaments that help bacteria adhere to their local environment. They come in many shapes and sizes, and are deployed from the cell surface by complex assembly machines.</div>
+<h4>Constructing Pili</h4>
+<div>The molecular machine shown here, from PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3jc8" target="_blank">3jc8</a>, builds one of most widespread forms of pili, termed a type IVa pilus. The pilus is extended from the center of the machine, often to lengths that rival the size of the cell. The machine spans the entire cell wall: a rotary motor embedded in the cytoplasmic membrane adds new subunits, a collar guides the growing pilus through the outer membrane, and a ring of proteins anchors the whole thing to the peptidoglycan layer that fills the space between the two membranes. The structure was modeled by fitting atomic structures of the individual proteins into a cryo-EM tomograph (<a href="https://www.emdataresource.org/EMD-3247">EMD-3247</a>) that shows overall morphology.</div>
+<h4>Cells in Motion</h4>
+<div>This pilus machine is built by a predatory soil bacterium that forms swarms of cells that search for bacterial prey. These cells use the pilus machine like a grappling hook to crawl, by extending a pilus, attaching it to a surface, then reeling it back in. Since it requires a lot of force to drag the entire cell, these assembly machines are among the most powerful molecular motors known.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<div>
+<div class="img-with-caption float-left">
+<div class="img-with-caption-table"><img alt="Close-up on the rotary motor of the pilus machine." class="img-responsive" src="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8_action.jpg"/>
+<div class="img-caption">
+<div style="margin-bottom:10px;"><i>Close-up on the rotary motor of the pilus machine.</i></div><a href="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-3jc8_action.tif"><small>Download high quality TIFF image<span class="fa fa-cloud-download"></span></small></a>
+</div>
+</div>
+</div>
+<h4>Rotary Motor</h4>
+<div>The motor is thought to control whether the pilus is being extended or contracted at any moment. Individual pilin subunits are embedded in the membrane. A small asymmetric protein in the motor, termed PilC (colored red in the illustrations), has a cavity on one side that cups the end of the filament. Researchers have proposed that as the motor turns, PilC forces the filament up, opening space for a new pilin subunit to associate. To shorten the filament, the motor appears to switch direction, popping pilin subunits one at a time back into the membrane.</div>
+</div>
+<div class="clearfix"></div>
+<hr class="motm-hr"/>
+<h4>Exploring the Structure</h4>
+<div class="jmolText" id="jmolTabs">
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#tabs-1">Image</a></li>
+<li><a data-toggle="tab" href="#tabs-2" id="jmol-tab" onclick="loadIframe();">JSmol</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabs-1">
+<h5>Type IV Pilus</h5>
+<div class="img-with-caption float-left" style="margin-top:0;"><img class="img-responsive" onclick="clickJmolTab();" src="https://cdn.rcsb.org/pdb101/motm/211/211-Pilus_Machine-2hil_JSmol.jpg"/></div>
+<p>The pilin subunit has a distinctive structure. It has a globular head that is covered with charged, water-soluble amino acids (shown here in magenta), and a long alpha-helical tail that is mostly hydrophobic (shown in white). The hydrophobic tail plays two roles: it embeds the individual pilin subunits into the bacterial membrane, and it forms a tight bundle with other pilin subunits to stabilize the filament. To explore of pilin and the filament (PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hil" target="_blank">2hil</a>) in more detail, click on the image for an interactive JSmol.</p>
+<div class="clearfix"></div>
+</div>
+<div class="tab-pane" id="tabs-2">
+<iframe frameborder="0" id="iframe" marginheight="0" marginwidth="0" scrolling="yes" width="100%"></iframe>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<h4>Topics for Further Discussion</h4>
+<ol>
+<li>A structural model was also obtained for an empty form of the machine, before it starts construction of the pilus. You can view it in PDB entry <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=3jc9" target="_blank">3jc9</a>.</li>
+<li>Structures for many other types of pili are available in the PDB archive—try searching for “pilus” to find them.</li>
+</ol>
+<div data-elastic-exclude="">
+<div class="col-xs-12 link-motm">
+<h4>Related PDB-101 Resources</h4>
+<ul>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-motors">Molecular Motors</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/molecular-infrastructure">Molecular Infrastructure</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/integrative-hybrid-methods">Integrative/Hybrid Methods</a></li>
+<li>Browse <a href="https://pdb101.rcsb.org/browse/infectious-disease">Infectious Disease</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6" style="border-left:1px dashed #ddd;">
+<h4>References</h4>
+<ol>
+<li>MK Hospenthal, TRD Costa &amp; G Waksman (2017) A comprehensive guide to pilus biogenesis in gram-negative bacteria. Nature Reviews Microbiology 15, 365-379.</li>
+<li>M McCallum, S Tammam, A Khan, LL Burrows &amp; PL Howell (2017) The molecular mechanism of the type IVa pilus motors. Nature Communications 8, 15091.</li>
+<li>3jc8: YW Chang, LA Rettberg, A Treuner-Lange, J Iwasa, L Sogaard-Andersen &amp; GJ Jensen (2016) Architecture of the type IVa pilus machine. Science 351, aad2001.</li>
+<li>2hil: L Craig, N Volkmann, AS Arvai, ME Pique, M Yeager, EH Egelman &amp; JA Tainer (2006) Type IV pilus structure by cryo-electron microscopy and crystallography: implications for pilus assembly and functions. Molecular Cell 23, 651-662.</li>
+</ol>
+</div>
+</div>
+<hr class="motm-hr"/>
+<p>July 2017, David Goodsell</p> <a href="http://doi.org/10.2210/rcsb_pdb/mom_2017_7">http://doi.org/10.2210/rcsb_pdb/mom_2017_7</a>
+</div>
+<div class="row hidden-print" style="margin-top:20px;">
+<div class="col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">About Molecule of the Month</div>
+<div class="panel-body"><small>
+                   
+                  The RCSB PDB Molecule of the Month by David S. Goodsell (The Scripps Research Institute and the RCSB PDB) presents short accounts on selected molecules from the Protein Data Bank. Each installment includes an introduction to the structure and function of the molecule, a discussion of the relevance of the molecule to human health and welfare, and suggestions for how visitors might view these structures and access further details.<a href="https://pdb101.rcsb.org/motm/motm-about">More</a></small>
+</div>
+</div>
+</div>
+</div>
+<script>
+          $('#iframe').load(function () {
+              $(this).height($(this).contents().find('body').height() + 30);
+          });
+        </script>
+</div>
+</body>
+</html>
