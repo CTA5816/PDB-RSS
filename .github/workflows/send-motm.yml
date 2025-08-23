@@ -33,4 +33,4 @@ jobs:
           subject: "Molecule of the Day"
           to: canderson5816@gmail.com
           from: ${{ secrets.SMTP_USER }}
-          html_body: file://motm_pages/001-pdb-101-molecule-of-the-month-aaa-proteases.html
+          html_body: file://${{ env.FILE }}
