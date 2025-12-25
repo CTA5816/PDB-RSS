@@ -31,6 +31,6 @@ jobs:
           username: ${{ secrets.SMTP_USER }}
           password: ${{ secrets.SMTP_PASS }}
           subject: "Molecule of the Day"
-          to: canderson5816@gmail.com
+          to: canderson5816@gmail.com, katherinea@mindspring.com, mary.alberg@gmail.com
           from: ${{ secrets.SMTP_USER }}
           html_body: file://${{ env.FILE }}
